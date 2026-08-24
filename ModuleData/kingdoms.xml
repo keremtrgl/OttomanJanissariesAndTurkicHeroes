@@ -15,7 +15,7 @@
            color2="0xFFD4AF37"
            settlement_banner_mesh="encounter_flag_a"
            flag_mesh="info_screen_flags_b"
-           initial_home_settlement="Settlement.town_K1"
+           initial_home_settlement="Settlement.town_ES1"
            text="{=seljuk_faction_desc}Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir.">
     <relationships>
       <relationship kingdom="Kingdom.empire" value="-20" />
