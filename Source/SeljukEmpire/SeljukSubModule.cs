@@ -1,6 +1,7 @@
 using System;
 using SeljukEmpire.Administration;
 using SeljukEmpire.CharacterCreation;
+using SeljukEmpire.Culture;
 using SeljukEmpire.Economy;
 using SeljukEmpire.Immersion;
 using SeljukEmpire.Optimization;
@@ -118,6 +119,18 @@ namespace SeljukEmpire
                 {
                     // 7. Register Seljuk Historical Dialogue & Greetings System
                     campaignStarter.AddBehavior(new SeljukDialogueBehavior());
+                }
+                catch (Exception) { }
+
+                try
+                {
+                    // 8. Register Seljuk Culture Passive Bonus/Debuff Models
+                    //    (-10% mounted-troop wage, +10% construction speed, -15% siege engine speed,
+                    //     +15% caravan trade profit)
+                    campaignStarter.AddModel(new SeljukWageModel());
+                    campaignStarter.AddModel(new SeljukConstructionSpeedModel());
+                    campaignStarter.AddModel(new SeljukSiegeEngineeringModel());
+                    campaignStarter.AddModel(new SeljukCaravanTradeModel());
                 }
                 catch (Exception) { }
 

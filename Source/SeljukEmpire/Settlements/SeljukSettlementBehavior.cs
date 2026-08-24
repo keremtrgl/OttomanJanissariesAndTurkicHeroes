@@ -117,61 +117,32 @@ namespace SeljukEmpire.Settlements
                 // =====================================================================
                 // 1. TOWNS (ŞEHİRLER)
                 // =====================================================================
-                SetupTown("town_K1", "clan_seljuk_royal", "{=seljuk_town_rey}Rey-i Saltanat", 8200f);
-                SetupTown("town_K4", "clan_danismend", "{=seljuk_town_kayseri}Kayseriyye", 7100f);
-                SetupTown("town_ES4", "clan_artuk", "{=seljuk_town_diyarbekir}Diyarbekir", 6800f);
-                SetupTown("town_ES2", "clan_mengucek", "{=seljuk_town_divrigi}Divriği", 6200f);
-                SetupTown("town_K6", "clan_caka", "{=seljuk_town_alaiye}Alâiye", 7400f);
-                SetupTown("town_A4", "clan_karaman", "{=seljuk_town_larenede}Lârende", 6900f);
+                SetupTown("town_ES1", "clan_seljuk_royal", "{=seljuk_town_danustica}Danustica", 7800f);
+                SetupTown("town_A2", "clan_kayi_oguz", "{=seljuk_town_husnfulq}Husn Fulq", 6600f);
 
                 // =====================================================================
                 // 2. CASTLES (KALELER)
                 // =====================================================================
-                SetupCastle("castle_K2", "clan_seljuk_royal", "{=seljuk_castle_alamut}Deylem Hisarı");
-                SetupCastle("castle_K5", "clan_danismend", "{=seljuk_castle_niksar}Niksar Kalesi");
-                SetupCastle("castle_K1", "clan_artuk", "{=seljuk_castle_hasankeyf}Hasankeyf Kalesi");
-                SetupCastle("castle_A8", "clan_saltuk", "{=seljuk_castle_erzurum}Erzurum Hisarı");
-                SetupCastle("castle_ES3", "clan_kayi_oguz", "{=seljuk_castle_sogut}Söğüt Uç Kalesi");
+                SetupCastle("castle_ES4", "clan_danismend", "{=seljuk_castle_lavenia}Lavenia Kalesi");
+                SetupCastle("castle_A6", "clan_artuk", "{=seljuk_castle_shibalzumr}Şibal Zümr Kalesi");
+                SetupCastle("castle_ES5", "clan_ahlatsah", "{=seljuk_castle_morenia}Morenia Kalesi");
 
                 // =====================================================================
                 // 3. VILLAGES (KÖYLER)
                 // =====================================================================
-                // Rey Villages
-                SetupVillage("village_K1_1", "{=seljuk_vil_damgan}Damğan");
-                SetupVillage("village_K1_2", "{=seljuk_vil_varamin}Varamin");
-                SetupVillage("village_K1_3", "{=seljuk_vil_harakani}Harakani");
+                // Danustica Villages
+                SetupVillage("village_ES1_2", "{=seljuk_vil_polisia}Polisia");
+                SetupVillage("village_ES1_3", "{=seljuk_vil_tegresos}Tegresos");
+                SetupVillage("village_ES1_4", "{=seljuk_vil_erebulos}Erebulos");
 
-                // Kayseriyye Villages
-                SetupVillage("village_K4_1", "{=seljuk_vil_talas}Talas");
-                SetupVillage("village_K4_2", "{=seljuk_vil_develi}Develi");
-                SetupVillage("village_K4_3", "{=seljuk_vil_incesu}İncesu");
-
-                // Diyarbekir Villages
-                SetupVillage("village_ES4_1", "{=seljuk_vil_silvan}Meyyafarikin");
-                SetupVillage("village_ES4_2", "{=seljuk_vil_ergani}Ergani");
-                SetupVillage("village_ES4_3", "{=seljuk_vil_cermik}Çermik");
-
-                // Divriği Villages
-                SetupVillage("village_ES2_1", "{=seljuk_vil_kemah}Kemah");
-                SetupVillage("village_ES2_2", "{=seljuk_vil_ilisik}İliç");
-                SetupVillage("village_ES2_3", "{=seljuk_vil_arapgir}Arapgir");
-
-                // Alâiye Villages
-                SetupVillage("village_K6_1", "{=seljuk_vil_anamur}Anamur");
-                SetupVillage("village_K6_2", "{=seljuk_vil_gazipasa}Selinti");
-                SetupVillage("village_K6_3", "{=seljuk_vil_manavgat}Manavgat");
-
-                // Lârende Villages
-                SetupVillage("village_A4_1", "{=seljuk_vil_mut}Mut");
-                SetupVillage("village_A4_2", "{=seljuk_vil_ermenek}Ermenek");
-                SetupVillage("village_A4_3", "{=seljuk_vil_eregli}Ereğli");
+                // Husn Fulq Villages
+                SetupVillage("village_A2_2", "{=seljuk_vil_abukhih}Abu Khih");
+                SetupVillage("village_A2_3", "{=seljuk_vil_hoqqa}Hoqqa");
 
                 // Castle Villages
-                SetupVillage("castle_village_K2_1", "{=seljuk_vil_rudbar}Rudbar");
-                SetupVillage("castle_village_K5_1", "{=seljuk_vil_erbaa}Erbaa");
-                SetupVillage("castle_village_K1_1", "{=seljuk_vil_cizre}Cizre");
-                SetupVillage("castle_village_A8_1", "{=seljuk_vil_tortum}Tortum");
-                SetupVillage("castle_village_ES3_1", "{=seljuk_vil_domanic}Domaniç");
+                SetupVillage("castle_village_ES4_1", "{=seljuk_vil_lavenia}Lavenia");
+                SetupVillage("castle_village_A6_1", "{=seljuk_vil_shibalzumr}Şibal Zümr");
+                SetupVillage("castle_village_ES5_1", "{=seljuk_vil_morenia}Morenia");
             }
             catch (Exception)
             {
