@@ -709,7 +709,7 @@
   
 
   
-  <NPCCharacter id="acemi_janissary" default_group="Infantry" level="11" name="{=acemi_janissary_name}Acemi Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="acemi_janissary" default_group="Infantry" level="11" name="{=acemi_janissary_name}Acemi Janissary" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -859,7 +859,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="ottoman_scout" default_group="Cavalry" level="11" name="{=ottoman_scout_name}Ottoman Scout Cavalry" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="ottoman_scout" default_group="Cavalry" level="11" name="{=ottoman_scout_name}Ottoman Scout Cavalry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -1103,7 +1103,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="azap_recruit" default_group="Infantry" level="6" name="{=azap_recruit_name}Azap Recruit" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="azap_recruit" default_group="Infantry" level="6" name="{=azap_recruit_name}Azap Recruit" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
