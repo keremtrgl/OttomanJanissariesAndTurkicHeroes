@@ -18,7 +18,7 @@
            initial_home_settlement="Settlement.town_ES1"
            text="{=seljuk_faction_desc}Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir.">
     <relationships>
-      <relationship kingdom="Kingdom.empire" value="-20" />
+      <relationship kingdom="Kingdom.empire" value="0" />
       <relationship kingdom="Kingdom.aserai" value="10" />
       <relationship kingdom="Kingdom.khuzait" value="15" />
     </relationships>
