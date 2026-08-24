@@ -125,9 +125,12 @@ namespace SeljukEmpire
                 try
                 {
                     // 8. Register Seljuk Culture Passive Bonus/Debuff Models
-                    //    (-10% mounted-troop wage, +10% construction speed / -15% military-project speed)
+                    //    (-10% mounted-troop wage, +10% construction speed, -15% siege engine speed,
+                    //     +15% caravan trade profit)
                     campaignStarter.AddModel(new SeljukWageModel());
                     campaignStarter.AddModel(new SeljukConstructionSpeedModel());
+                    campaignStarter.AddModel(new SeljukSiegeEngineeringModel());
+                    campaignStarter.AddModel(new SeljukCaravanTradeModel());
                 }
                 catch (Exception) { }
 
