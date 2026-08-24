@@ -747,15 +747,15 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="veteran_janissary" default_group="Infantry" level="21" name="{=veteran_janissary_name}Veteran Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="veteran_janissary" default_group="Infantry" level="16" name="{=veteran_janissary_name}Veteran Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="145" />
-      <skill id="TwoHanded" value="125" />
-      <skill id="Polearm" value="100" />
-      <skill id="Bow" value="145" />
-      <skill id="Athletics" value="130" />
+      <skill id="OneHanded" value="110" />
+      <skill id="TwoHanded" value="95" />
+      <skill id="Polearm" value="75" />
+      <skill id="Bow" value="110" />
+      <skill id="Athletics" value="100" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -785,15 +785,15 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="guard_janissary" default_group="Infantry" level="26" name="{=guard_janissary_name}Guard Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="guard_janissary" default_group="Infantry" level="21" name="{=guard_janissary_name}Guard Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="185" />
-      <skill id="TwoHanded" value="180" />
-      <skill id="Polearm" value="160" />
-      <skill id="Bow" value="180" />
-      <skill id="Athletics" value="160" />
+      <skill id="OneHanded" value="150" />
+      <skill id="TwoHanded" value="145" />
+      <skill id="Polearm" value="130" />
+      <skill id="Bow" value="145" />
+      <skill id="Athletics" value="130" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -823,15 +823,15 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="imperial_janissary" default_group="Infantry" level="31" name="{=imperial_janissary_name}Imperial Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="imperial_janissary" default_group="Infantry" level="26" name="{=imperial_janissary_name}Imperial Janissary" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="240" />
-      <skill id="TwoHanded" value="235" />
-      <skill id="Polearm" value="210" />
-      <skill id="Bow" value="230" />
-      <skill id="Athletics" value="200" />
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="195" />
+      <skill id="Polearm" value="175" />
+      <skill id="Bow" value="195" />
+      <skill id="Athletics" value="170" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -898,15 +898,15 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="21" name="{=ottoman_akinji_name}Ottoman Akinji Raider" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="16" name="{=ottoman_akinji_name}Ottoman Akinji Raider" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="130" />
-      <skill id="Polearm" value="120" />
-      <skill id="Bow" value="140" />
-      <skill id="Riding" value="145" />
-      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Polearm" value="90" />
+      <skill id="Bow" value="105" />
+      <skill id="Riding" value="110" />
+      <skill id="Athletics" value="85" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -941,14 +941,14 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="timarli_sipahi" default_group="Cavalry" level="26" name="{=timarli_sipahi_name}Timarli Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="timarli_sipahi" default_group="Cavalry" level="21" name="{=timarli_sipahi_name}Timarli Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="175" />
-      <skill id="Polearm" value="180" />
-      <skill id="Riding" value="180" />
-      <skill id="Athletics" value="130" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Polearm" value="145" />
+      <skill id="Riding" value="145" />
+      <skill id="Athletics" value="105" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -982,14 +982,14 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="kapikulu_sipahi" default_group="Cavalry" level="31" name="{=kapikulu_sipahi_name}Imperial Kapikulu Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="kapikulu_sipahi" default_group="Cavalry" level="26" name="{=kapikulu_sipahi_name}Imperial Kapikulu Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="230" />
-      <skill id="Polearm" value="240" />
-      <skill id="Riding" value="230" />
-      <skill id="Athletics" value="170" />
+      <skill id="OneHanded" value="195" />
+      <skill id="Polearm" value="200" />
+      <skill id="Riding" value="195" />
+      <skill id="Athletics" value="145" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1021,15 +1021,15 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="deli_cavalry" default_group="Cavalry" level="26" name="{=deli_cavalry_name}Deli Shock Cavalry" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="deli_cavalry" default_group="Cavalry" level="21" name="{=deli_cavalry_name}Deli Shock Cavalry" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="170" />
-      <skill id="TwoHanded" value="190" />
-      <skill id="Throwing" value="160" />
-      <skill id="Riding" value="195" />
-      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="135" />
+      <skill id="TwoHanded" value="155" />
+      <skill id="Throwing" value="130" />
+      <skill id="Riding" value="160" />
+      <skill id="Athletics" value="145" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1063,15 +1063,15 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="deli_serbazi" default_group="Cavalry" level="31" name="{=deli_serbazi_name}Serdengecti Deli Captain" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="deli_serbazi" default_group="Cavalry" level="26" name="{=deli_serbazi_name}Serdengecti Deli Captain" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="220" />
-      <skill id="TwoHanded" value="250" />
-      <skill id="Throwing" value="210" />
-      <skill id="Riding" value="240" />
-      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="185" />
+      <skill id="TwoHanded" value="210" />
+      <skill id="Throwing" value="175" />
+      <skill id="Riding" value="200" />
+      <skill id="Athletics" value="175" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1137,13 +1137,13 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="azap_fighter" default_group="Infantry" level="21" name="{=azap_fighter_name}Azap Warrior" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="azap_fighter" default_group="Infantry" level="11" name="{=azap_fighter_name}Azap Warrior" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="135" />
-      <skill id="Throwing" value="130" />
-      <skill id="Athletics" value="135" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Throwing" value="70" />
+      <skill id="Athletics" value="70" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1174,14 +1174,14 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="azap_heavy_infantry" default_group="Infantry" level="26" name="{=azap_heavy_name}Armored Azap Guard" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="azap_heavy_infantry" default_group="Infantry" level="16" name="{=azap_heavy_name}Armored Azap Guard" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="175" />
-      <skill id="TwoHanded" value="160" />
-      <skill id="Throwing" value="165" />
-      <skill id="Athletics" value="160" />
+      <skill id="OneHanded" value="110" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Throwing" value="100" />
+      <skill id="Athletics" value="100" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1211,14 +1211,14 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="azap_champion" default_group="Infantry" level="31" name="{=azap_champion_name}Azap Vanguard Champion" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="azap_champion" default_group="Infantry" level="21" name="{=azap_champion_name}Azap Vanguard Champion" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="230" />
-      <skill id="TwoHanded" value="210" />
-      <skill id="Throwing" value="220" />
-      <skill id="Athletics" value="200" />
+      <skill id="OneHanded" value="155" />
+      <skill id="TwoHanded" value="140" />
+      <skill id="Throwing" value="150" />
+      <skill id="Athletics" value="135" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1246,13 +1246,13 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="solak_archer" default_group="Ranged" level="26" name="{=solak_archer_name}Solak Royal Archer" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="solak_archer" default_group="Ranged" level="16" name="{=solak_archer_name}Solak Royal Archer" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="140" />
-      <skill id="Bow" value="195" />
-      <skill id="Athletics" value="150" />
+      <skill id="OneHanded" value="85" />
+      <skill id="Bow" value="120" />
+      <skill id="Athletics" value="90" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1282,13 +1282,13 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="solak_master_archer" default_group="Ranged" level="31" name="{=solak_master_name}Master Solak Sharpshooter" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="solak_master_archer" default_group="Ranged" level="21" name="{=solak_master_name}Master Solak Sharpshooter" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="180" />
-      <skill id="Bow" value="255" />
-      <skill id="Athletics" value="190" />
+      <skill id="OneHanded" value="120" />
+      <skill id="Bow" value="175" />
+      <skill id="Athletics" value="130" />
     </skills>
     <Equipments>
       <EquipmentRoster>
