@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8'?>
+<base type="string">
+  <tags>
+    <tag language="Türkçe" />
+  </tags>
+  <strings>
+    <string id="acemi_janissary_name" text="Acemi Yeniçeri" />
+    <string id="azap_champion_name" text="Serdengeçti Azap Ağası" />
+    <string id="azap_fighter_name" text="Muharip Azap" />
+    <string id="azap_heavy_name" text="Zırhlı Azap Başı" />
+    <string id="azap_recruit_name" text="Azap Neferi" />
+    <string id="cc_car_ahi_desc" text="Esnafın hakkını savunan, şehir kuşatmasında halkı teşkilatlandıran yiğitbaşı kuşağını bağladın." />
+    <string id="cc_car_ahi_name" text="Ahi Evran Ocağı Yiğitbaşısı Oldun" />
+    <string id="cc_car_caka_desc" text="Alâiye tersanesinde inşa edilen gemilerle Ege ve Akdeniz sahillerinde düşman donanmalarını vurdun." />
+    <string id="cc_car_caka_name" text="Çaka Bey'in Deniz Akıncısı Oldun" />
+    <string id="cc_car_danismend_desc" text="Kayseri ve Sivas dağlarında Bizans sınır kalelerine yapılan gaza seferlerinde ön safta çarpıştın." />
+    <string id="cc_car_danismend_name" text="Danişmend Gazi Emrinde Uç Alpi Oldun" />
+    <string id="cc_car_ghulam_desc" text="Üstün savaş yeteneklerin sayesinde Sultan Alp Arslan'ın şahsi muhafız alayına kabul edildin." />
+    <string id="cc_car_ghulam_name" text="Sultanın Hassa Gulam Kıtasına Seçildin" />
+    <string id="cc_cat_career" text="İlk Hizmet ve Meslek" />
+    <string id="cc_cat_childhood" text="Çocukluk Çağı Hatıraları" />
+    <string id="cc_cat_deed" text="Yiğitlik ve Şöhret Hikayen" />
+    <string id="cc_cat_heritage" text="Selçuklu Soy ve Aile Kökeni" />
+    <string id="cc_cat_youth" text="Gençlik ve Tahsil Yılları" />
+    <string id="cc_child_ahi_desc" text="Ocağın ateşini harladın, demirci ustalarının elinde şekillenen çeliğin sırrına vakıf oldun." />
+    <string id="cc_child_ahi_name" text="Ahi Ocağında Körük Çektin" />
+    <string id="cc_child_caravan_desc" text="Kervansaraylarda konaklayan tüccarların hikayelerini dinledin, çöl ve bozkır yollarını ezberledin." />
+    <string id="cc_child_caravan_name" text="İpek Yolu Kervanlarında Yıldızları İzledin" />
+    <string id="cc_child_ikta_desc" text="Köydeki İkta askerleriyle talim alanlarında güreştin, tahta kılıçlarla ilk vuruş tekniklerini kavradın." />
+    <string id="cc_child_ikta_name" text="İkta Kışlasında Güreş ve Kılıç Eğitimi" />
+    <string id="cc_child_steppes_desc" text="Henüz yürümeyi öğrenmeden ata bindin; bozkır rüzgarı sana eyer üstünde dengeyi ve yay çekmeyi öğretti." />
+    <string id="cc_child_steppes_name" text="Bozkırda At Üstünde Büyüdün" />
+    <string id="cc_deed_banner_desc" text="Ok yağmuru altında düşman başkumandanının muhafızlarını yarıp sancağını yere serdin." />
+    <string id="cc_deed_banner_name" text="Meydan Savaşında Düşman Sancağını Devirdin" />
+    <string id="cc_deed_innocent_desc" text="Harami çetesinin bastığı bir Türkmen obasını tek başına cansiperane müdafaa ettin." />
+    <string id="cc_deed_innocent_name" text="Mazlumları Zulümden Kurtardın" />
+    <string id="cc_deed_siege_desc" text="Düşmanın etrafını sardığı kaleden gece karanlığında gizlice sızıp Sultanın ordusuna imdat çağrısı götürdün." />
+    <string id="cc_deed_siege_name" text="Kuşatmayı Yarıp Orduya Haber Ulaştırdın" />
+    <string id="cc_opt_ahi_desc" text="Kayseri ve Konya'nın usta Ahi demircileri arasında, çeliğe su vermeyi ve helal rızkı öğrenerek büyüdün." />
+    <string id="cc_opt_ahi_name" text="Ahi Demir Ustası Çırağı" />
+    <string id="cc_opt_bey_desc" text="Bozkırın soylu Türkmen beylerinin soyundan geliyorsun. Çocukluğun beylik otağında töre, at ve kılıç eğitimiyle geçti." />
+    <string id="cc_opt_bey_name" text="Oğuz Boyu Beyzadesi" />
+    <string id="cc_opt_ghulam_desc" text="Baban saray kışlasında Sultanın sadık Demir Maskeli Hassa süvarilerindendi. Kanında askeri disiplin var." />
+    <string id="cc_opt_ghulam_name" text="Sultan Hassa Gulamı Soyu" />
+    <string id="cc_opt_nomad_desc" text="Toroslar ve Erzurum yaylalarında keçi güdüp şahin uçurarak doğanın içinde çetin şartlarda yetiştin." />
+    <string id="cc_opt_nomad_name" text="Uç Boyu Türkmen Göçeri" />
+    <string id="cc_opt_scholar_desc" text="Ailen Nizamiye medreselerinde fıkıh, idare ve devlet nizamı öğreten saygın alimlerdendir." />
+    <string id="cc_opt_scholar_name" text="Nizamiye Müderrisi Evladı" />
+    <string id="cc_youth_akinji_desc" text="Danişmend ve Artuk beylerinin sınır akınlarında düşman karakollarını yıpratan öncü süvarisi oldun." />
+    <string id="cc_youth_akinji_name" text="Uç Beyliği Akıncı Çerisine Katıldın" />
+    <string id="cc_youth_caravan_desc" text="Diyarbekir'den Alâiye limanına uzanan güzergahta haydutlara karşı kervanları korudun." />
+    <string id="cc_youth_caravan_name" text="İpek Yolu Kervan Muhafızlığı Yaptın" />
+    <string id="cc_youth_nizamiye_desc" text="Bağdat ve İsfahan'daki Nizamiye medreselerinde Siyasetname, fıkıh ve diplomasi okudun." />
+    <string id="cc_youth_nizamiye_name" text="Nizamiye Medresesi'nde İlim Tahsil Ettin" />
+    <string id="cc_youth_subasi_desc" text="Konya ve Sivas sokaklarında nizamı sağladın, mızrak ve kalkan talimlerinde öne çıktın." />
+    <string id="cc_youth_subasi_name" text="Şehir Subaşısı Emrinde Asayişi Korudun" />
+    <string id="clan_kayi_name" text="Kayı Boyu" />
+    <string id="clan_kayi_short_name" text="Kayı" />
+    <string id="clan_kayi_title" text="Bey" />
+    <string id="clan_seljuk_1" text="Âl-i Selçuk" />
+    <string id="clan_seljuk_1_short" text="Selçuklu" />
+    <string id="clan_seljuk_1_title" text="Sultan" />
+    <string id="clan_seljuk_2" text="Danişmendliler" />
+    <string id="clan_seljuk_2_short" text="Danişmend" />
+    <string id="clan_seljuk_2_title" text="Melik" />
+    <string id="clan_seljuk_3" text="Artuklular" />
+    <string id="clan_seljuk_3_short" text="Artuk" />
+    <string id="clan_seljuk_3_title" text="Emir" />
+    <string id="clan_seljuk_4" text="Mengücekliler" />
+    <string id="clan_seljuk_4_short" text="Mengücek" />
+    <string id="clan_seljuk_4_title" text="Gazi" />
+    <string id="clan_seljuk_5" text="Saltuklular" />
+    <string id="clan_seljuk_5_short" text="Saltuk" />
+    <string id="clan_seljuk_5_title" text="Emir" />
+    <string id="clan_seljuk_6" text="Ahi Evran Ocağı" />
+    <string id="clan_seljuk_6_short" text="Ahiler" />
+    <string id="clan_seljuk_6_title" text="Ahi Şeyhi" />
+    <string id="clan_seljuk_ahi" text="Ahilik Teşkilatı" />
+    <string id="clan_seljuk_ahi_short" text="Ahi" />
+    <string id="clan_seljuk_ahlatsah" text="Ahlatşahlar" />
+    <string id="clan_seljuk_ahlatsah_short" text="Ahlatşah" />
+    <string id="clan_seljuk_ahlatsah_title" text="Melik" />
+    <string id="clan_seljuk_caka" text="Çaka Beyliği" />
+    <string id="clan_seljuk_caka_short" text="Çaka" />
+    <string id="clan_seljuk_caka_title" text="Bey" />
+    <string id="clan_seljuk_karaman" text="Karamanoğulları" />
+    <string id="clan_seljuk_karaman_short" text="Karaman" />
+    <string id="clan_seljuk_karaman_title" text="Bey" />
+    <string id="clan_seljuk_kayi" text="Kayı Boyu" />
+    <string id="clan_seljuk_kayi_short" text="Kayı" />
+    <string id="clan_seljuk_nizamiye" text="Nizamiye Vezirler Divanı" />
+    <string id="clan_seljuk_nizamiye_short" text="Nizamiye" />
+    <string id="clan_seljuk_nizamiye_title" text="Veziriazam" />
+    <string id="deli_cavalry_name" text="Deli Süvarisi" />
+    <string id="deli_serbazi_name" text="Serdengeçti Deli Başı" />
+    <string id="guard_janissary_name" text="Hassa Yeniçeri Muhafızı" />
+    <string id="hero_abdurrahman_name" text="Abdurrahman Gazi" />
+    <string id="hero_akcakoca_name" text="Akçakoca" />
+    <string id="hero_bamsi_name" text="Bamsı Beyrek" />
+    <string id="hero_dundar_name" text="Dündar Alp" />
+    <string id="hero_ertugrul_name" text="Ertuğrul Gazi" />
+    <string id="hero_gundogdu_name" text="Gündoğdu Bey" />
+    <string id="hero_gunduz_name" text="Gündüz Alp" />
+    <string id="hero_halime_name" text="Halime Hatun" />
+    <string id="hero_hayme_ana_name" text="Hayme Ana" />
+    <string id="hero_osman_name" text="Osman Gazi" />
+    <string id="hero_savci_name" text="Savcı Bey" />
+    <string id="hero_sungur_name" text="Sungur Tekin" />
+    <string id="hero_turgut_name" text="Turgut Alp" />
+    <string id="imperial_janissary_name" text="Kapıkulu Yeniçerisi" />
+    <string id="item_seljuk_armor_name" text="Sultanlık Lameller Plaka Zırhı" />
+    <string id="item_seljuk_axe_name" text="Mengücek Gazi'nin Çelik Teberi" />
+    <string id="item_seljuk_barda_name" text="Selçuklu Hassa Barda Koşumu" />
+    <string id="item_seljuk_bow_name" text="Danişmend Gazi'nin Efsanevi Bozkır Yayı" />
+    <string id="item_seljuk_crossbow_name" text="Çaka Bey'in Kundaklı Yayı" />
+    <string id="item_seljuk_dagger_name" text="Ahi Evran Fütüvvet Hançeri" />
+    <string id="item_seljuk_helm_name" text="Demir Maskeli Selçuklu Tolgası" />
+    <string id="item_seljuk_lance_name" text="Artuk Bey'in Şok Kargısı" />
+    <string id="item_seljuk_mace_name" text="Sultan Alp Arslan'ın Altın Başlı Şeşperi" />
+    <string id="item_seljuk_robe_name" text="Nizamiye Şeref Kaftanı" />
+    <string id="item_seljuk_shield_name" text="Çift Başlı Selçuklu Kartalı Kalkanı" />
+    <string id="item_seljuk_sword_name" text="Melikşah'ın Çift Su Verilmiş Şemşiri" />
+    <string id="kapikulu_sipahi_name" text="Kapıkulu Ağır Sipahisi" />
+    <string id="lord_ahi_evran" text="Ahi Evran" />
+    <string id="lord_alp_arslan" text="Sultan Alp Arslan" />
+    <string id="lord_artuk" text="Artuk Bey" />
+    <string id="lord_caka_bey" text="Çaka Bey" />
+    <string id="lord_danismend" text="Melik Danişmend Gazi" />
+    <string id="lord_emir_saltuk" text="Emir Saltuk" />
+    <string id="lord_ilgazi" text="Necmeddin İlgazi" />
+    <string id="lord_karaman_bey" text="Kerimüddin Karaman Bey" />
+    <string id="lord_meliksah" text="Melikşah" />
+    <string id="lord_mengucek" text="Mengücek Gazi" />
+    <string id="lord_mesud" text="Şehzade Mesud" />
+    <string id="lord_nizamulmulk" text="Hâce Nizamülmülk" />
+    <string id="lord_sokmen_bey" text="Sökmen el-Kutbî" />
+    <string id="lord_terken_hatun" text="Terken Hatun" />
+    <string id="ottoman_akinji_name" text="Osmanlı Akıncısı" />
+    <string id="ottoman_scout_name" text="Osmanlı Atlı Gözcüsü" />
+    <string id="policy_ahi_desc" text="Şehir esnafı ve zanaatkarlar denetlenir. Şehir atölye gelirleri %25 artar, kervan ticareti vergi getirisi yükselir, şehir kuşatmalarında halk doğrudan milis olarak surlara koşar." />
+    <string id="policy_ahi_name" text="Ahilik Esnaf ve Lonca Tüzüğü" />
+    <string id="policy_caravan_desc" text="Tüm ticaret yolları boyunca kervansaraylar ve derbentler inşa edilir. Kervanların haydutlar tarafından soyulma ihtimali ortadan kalkar, ticaret geliri %30 artar." />
+    <string id="policy_caravan_name" text="Kervansaray ve Derbent Muhafızlığı" />
+    <string id="policy_divan_desc" text="Halkın şikayetlerinin bizzat Sultan ve Vezir tarafından dinlendiği adalet divanı. Şehirlerdeki isyan riski tamamen sıfırlanır, sadakat günlük +2 artar." />
+    <string id="policy_divan_name" text="Divan-ı Saltanat ve Adalet Meclisi" />
+    <string id="policy_gaza_desc" text="Savaş kazanıldığında kazanılan Nüfuz %30 ve ordu morali +15 artar. Gayrimüslim veya düşman topraklara yapılan seferlerde ordu hızı yükselir." />
+    <string id="policy_gaza_name" text="Gaza ve Fütüvvet Kanunnamesi" />
+    <string id="policy_ghulam_desc" text="Saray ve ordu için profesyonel Gulam süvarileri yetiştirilir. Hassa ve süvari birliklerinin haftalık maaş masrafı %25 azalır, kale garnizon sınırları genişler." />
+    <string id="policy_ghulam_name" text="Gulamhane Teşkilatı Kanunu" />
+    <string id="policy_iqta_desc" text="Tüm eyalet ve köylerde cebelü yetiştirme zorunluluğu getirilir. Köylerin vergi geliri %20, lordların ordu kapasitesi +30 artar; yerel milis garnizonları güçlenir." />
+    <string id="policy_iqta_name" text="İkta ve Cebelü Nizamı" />
+    <string id="policy_nizamiyya_desc" text="Şehirlerde kurulan Nizamiye medreseleri sayesinde şehir asayişi ve refah günlük +1 artar. Lordların İdarecilik ve Liderlik yetenek kazanımı %25 hızlanır." />
+    <string id="policy_nizamiyya_name" text="Nizamiye Medreseleri Fermanı" />
+    <string id="seljuk_atli_okcu_name" text="Selçuklu Atlı Okçusu" />
+    <string id="seljuk_bilesik_yayci_name" text="Bileşik Yaycı" />
+    <string id="seljuk_boy_akinci_name" text="Boy Akıncısı" />
+    <string id="seljuk_bozkir_nisanci_name" text="Usta Bozkır Nişancısı" />
+    <string id="seljuk_castle_ahlat" text="Ahlat Kalesi" />
+    <string id="seljuk_castle_divrigi" text="Divriği Kalesi" />
+    <string id="seljuk_castle_korykos" text="Korykos Kalesi" />
+    <string id="seljuk_castle_malazgirt" text="Malazgirt Kalesi" />
+    <string id="seljuk_ceri_name" text="Çeri Yayak" />
+    <string id="seljuk_emir_muhafizi_name" text="Emîr Muhafızı" />
+    <string id="seljuk_faction_name" text="Büyük Selçuklu Devleti" />
+    <string id="seljuk_faction_short" text="Selçuklular" />
+    <string id="seljuk_faction_title" text="Sultanlık" />
+    <string id="seljuk_ghulam_acemi_name" text="Gulam Acemisi" />
+    <string id="seljuk_gok_nisanci_name" text="Gök Nişancı" />
+    <string id="seljuk_hassa_suvarisi_name" text="Hassa Süvarisi" />
+    <string id="seljuk_menu_insurance_text" text="Selçuklu Kervansaraylar İdaresi ve İpek Yolu Sigorta Divanı'ndasınız. Buradan kervanlarınızı devlet teminatı altına alabilir ve kervansaraylara sermaye yatırarak haftalık kâr ortaklığı kurabilirsiniz." />
+    <string id="seljuk_menu_trade_divan" text="Selçuklu İpek Yolu ve Kervan Sigortası Divanı'na Git" />
+    <string id="seljuk_nizam_name" text="Selçuklu Nizam Piyadesi" />
+    <string id="seljuk_opt_buy_ins" text="Kervanlarını Selçuklu Devlet Sigortası Kapsamına Al (1,500 Dinar)" />
+    <string id="seljuk_opt_invest_10k" text="Bu Şehrin Kervansaray Fonuna 10,000 Dinar Sermaye Yatır (Haftalık Kâr Payı)" />
+    <string id="seljuk_opt_leave" text="Şehir Meydanına Geri Dön" />
+    <string id="seljuk_ruler_title" text="Sultan" />
+    <string id="seljuk_subasi_name" text="Subaşı Ağır Muhafızı" />
+    <string id="seljuk_t1_name" text="İkta Gönüllüsü" />
+    <string id="seljuk_t6_name" text="Demir Maskeli Hassa Bahadırı" />
+    <string id="seljuk_tip_ins_active" text="Kervanlarınız zaten Selçuklu Devlet Sigortası teminatı altındadır." />
+    <string id="seljuk_tip_no_gold" text="Yeterli altınınız yok." />
+    <string id="seljuk_town_alaiye" text="Alâiye (Alanya)" />
+    <string id="seljuk_town_diyarbekir" text="Diyarbekir (Âmid)" />
+    <string id="seljuk_town_erzurum" text="Erzurum (Erzenü'r-Rûm)" />
+    <string id="seljuk_town_kayseri" text="Kayseriyye" />
+    <string id="seljuk_town_konya" text="Konya (Darü'l-Mülk)" />
+    <string id="seljuk_town_sivas" text="Sivas (Darü'l-A'lâ)" />
+    <string id="seljuk_tugrul_akinci_name" text="Tuğrul Ağır Akıncısı" />
+    <string id="seljuk_turkmen_atli_name" text="Türkmen Atlısı" />
+    <string id="seljuk_turkmen_avci_name" text="Türkmen Avcısı" />
+    <string id="seljuk_v_adilcevaz" text="Adilcevaz" />
+    <string id="seljuk_v_aksehir" text="Akşehir" />
+    <string id="seljuk_v_anamur" text="Anamur" />
+    <string id="seljuk_v_bismil" text="Bismil" />
+    <string id="seljuk_v_bulanik" text="Bulanık" />
+    <string id="seljuk_v_cetinkaya" text="Çetinkaya Madeni" />
+    <string id="seljuk_v_develi" text="Develi" />
+    <string id="seljuk_v_ercis" text="Erciş" />
+    <string id="seljuk_v_erciyes" text="Erciyes Ovası" />
+    <string id="seljuk_v_erdemli" text="Erdemli" />
+    <string id="seljuk_v_ergani" text="Ergani" />
+    <string id="seljuk_v_gazipasa" text="Gazipaşa" />
+    <string id="seljuk_v_kangal" text="Kangal" />
+    <string id="seljuk_v_kemaliye" text="Kemaliye" />
+    <string id="seljuk_v_ladik" text="Ladik" />
+    <string id="seljuk_v_manavgat" text="Manavgat" />
+    <string id="seljuk_v_oltu" text="Oltu" />
+    <string id="seljuk_v_pasinler" text="Pasinler" />
+    <string id="seljuk_v_patnos" text="Patnos" />
+    <string id="seljuk_v_silifke" text="Silifke" />
+    <string id="seljuk_v_sille" text="Sille" />
+    <string id="seljuk_v_silvan" text="Silvan" />
+    <string id="seljuk_v_talas" text="Talas" />
+    <string id="seljuk_v_tortum" text="Tortum" />
+    <string id="seljuk_v_yildizeli" text="Yıldızeli" />
+    <string id="seljuk_v_zara" text="Zara" />
+    <string id="seljuk_zirhli_gulam_name" text="Zırhlı Gulam" />
+    <string id="seljuk_zirhli_yayak_name" text="Zırhlı Yayak" />
+    <string id="solak_archer_name" text="Solak Ocağı Okçusu" />
+    <string id="solak_master_name" text="Hassa Solak Başı" />
+    <string id="str_banner_seljuk_group" text="Selçuklu ve Türk Tamgaları" />
+    <string id="str_icon_ahi_scale" text="Ahi Evran Mizan ve Fütüvvet Tamgası" />
+    <string id="str_icon_ahlatsah_dome" text="Ahlatşahlar Kümbet Tamgası" />
+    <string id="str_icon_artuk_sword" text="Zülfikar ve Selçuklu Şemşiri" />
+    <string id="str_icon_caka_naval" text="Çaka Beyliği Denizci Hilali" />
+    <string id="str_icon_double_eagle" text="Çift Başlı Selçuklu Kartalı" />
+    <string id="str_icon_karaman_crescent" text="Karamanoğulları Üç Hilal Tamgası" />
+    <string id="str_icon_kayi_tamga" text="Kayı Boyu (IYI) Damgası" />
+    <string id="str_icon_mengucek_anvil" text="Mengücek Çelik ve İstihkam Tamgası" />
+    <string id="str_icon_saltuk_mountain" text="Saltuklu Dağ ve Bozkır Kurdu Tamgası" />
+    <string id="str_icon_seljuk_star" text="Selçuklu 8 Köşeli Adalet Yıldızı" />
+    <string id="str_icon_tugrul_tamga" text="Tuğrul Bey Ok-Yay Tamgası" />
+    <string id="str_wanderer_backstory_a.bamsi_the_brave" text="Kavmim beni öldü bildi, sahte beyler otağıma göz dikti. Zindanı parçalayıp döndüğümde iki elime aldığım yalın kılıçla hainlerin hesabını bizzat kestim." />
+    <string id="str_wanderer_backstory_a.dundar_the_hawk" text="Ufuktaki tozdan ve gökte süzülen kuşların yönünden, düşman ordusunun kaç kişi olduğunu ve üç gün sonra nereye varacağını bilirim." />
+    <string id="str_wanderer_backstory_a.turgut_the_hammer" text="Bu elimdeki hilal uçlu koca baltayla nice çelik kapıları kırdım, nice süvari hatlarını un ufak ettim. Yiğidin hası surlar sarsılırken belli olur." />
+    <string id="str_wanderer_backstory_b.bamsi_the_brave" text="Bozkırın kurdu hisar duvarlarına hapsedilemez. Cenk meydanında tek kılıç bana yetmez; bir elim intikam, diğer elim hak yolunda biçer." />
+    <string id="str_wanderer_backstory_b.dundar_the_hawk" text="Yorulmak bilmez savaş atım dizginleri çekmeden ne yapacağını anlar. Dörtnala koşarken attığım oklar zırhları delip geçer." />
+    <string id="str_wanderer_backstory_b.turgut_the_hammer" text="Büyük beylerin yanında en ön safta dövüştüm. Başkalarının yanaşmaya korktuğu hisarlara ilk giren hep benim baltam oldu." />
+    <string id="str_wanderer_backstory_c.bamsi_the_brave" text="Şimdi bu topraklarda yüreğinde korku nedir bilmeyen bir yiğit ararım. Altın akçe gözümde puldur; bana yoldaşlık ve nam lazımdır." />
+    <string id="str_wanderer_backstory_c.dundar_the_hawk" text="Benim nöbette olduğum yerde hiçbir ordu pusuya düşmez, arkadan vurulmaz. Orduna bir şahinin gözlerini getiririm." />
+    <string id="str_wanderer_backstory_c.turgut_the_hammer" text="Kalkan duvarı ancak erlerin imanı kadar dayanır. Bu baltayı savurduğumda düşman safları yarılmaz, kökünden biçilir." />
+    <string id="str_wanderer_backstory_d.bamsi_the_brave" text="Elime pusatlarımı ver ve düşmanın en kalabalık safını göster. Andımı çeliğin sesiyle yazacağım." />
+    <string id="str_wanderer_backstory_d.dundar_the_hawk" text="Buyruğunu ver, bozkır bütün sırlarını ordumuzun önüne sersin." />
+    <string id="str_wanderer_backstory_d.turgut_the_hammer" text="Beni hisarların önüne sür komutan! Baltamın önünde hiçbir kapı kapalı kalamaz." />
+    <string id="str_wanderer_prebackstory.bamsi_the_brave" text="Bana bozkırın delisi Bamsı derler. Tam on altı yıl Bayburt Hisarı'nın zindanlarında demir prangalar içinde yattım; lakin pusatıma ve töreme olan andım beni ayakta tuttu." />
+    <string id="str_wanderer_prebackstory.dundar_the_hawk" text="Ben Dündar. Yay kirişini ilk çektiğim günden beri uçsuz bucaksız bozkır ve fısıldayan rüzgarlar benim yoldaşım oldu." />
+    <string id="str_wanderer_prebackstory.turgut_the_hammer" text="Bana Turgut derler. Benim yurdum kılıçların kalkanlara çarptığı, mancınıkların gürlediği cenk meydanlarıdır." />
+    <string id="str_wanderer_response_1.bamsi_the_brave" text="Senin gibi cenk ustası bir alp, ordumuzun baş tacı olur." />
+    <string id="str_wanderer_response_1.dundar_the_hawk" text="Senin gibi keskin bir izci ordumuzu her türlü tehlikeden korur." />
+    <string id="str_wanderer_response_1.turgut_the_hammer" text="Kapı kıracak ve hat yaracak bir öncü komutana ihtiyacım var." />
+    <string id="str_wanderer_response_2.bamsi_the_brave" text="On altı yıl esaretten sonra bile bileğin bükülmemişe benzer." />
+    <string id="str_wanderer_response_2.dundar_the_hawk" text="Hızlı bir at ve şaşmaz bir yay her komutanın aradığı kuvvettir." />
+    <string id="str_wanderer_response_2.turgut_the_hammer" text="Çift elli balta kullanmak büyük bir disiplin ister. Seferimize katılmaya hazır mısın?" />
+    <string id="timarli_sipahi_name" text="Tımarlı Sipahi" />
+    <string id="veteran_janissary_name" text="Kıdemli Yeniçeri" />
+  <string id="seljuk_v_palu" text="Palu" /><string id="seljuk_v_keban" text="Keban" /><string id="seljuk_castle_harep" text="Harput Kalesi" /><string id="item_seljuk_ghulam_armor" text="Selçuklu Gulam Çar-Ayine Zırhı" /><string id="item_seljuk_gazi_armor" text="Danişmendiye Uç Beyi Zırhı" /><string id="item_seljuk_royal_helm" text="Sultan Hassa Şeref Miğferi" /><string id="item_seljuk_spiked_helm" text="Selçuklu Zırhlı Boyunluklu Tolgası" /><string id="item_seljuk_fur_helm" text="Kayı Gazi Kürklü Tolgası" /><string id="item_seljuk_pauldrons" text="Selçuklu Hassa Plaka Omuzlukları" /><string id="item_seljuk_bracers" text="Gazi Şam Çeliği Kolçakları" /><string id="item_seljuk_boots" text="Sahtiyan Selçuklu Süvari Çizmeleri" /><string id="item_seljuk_inf_shield" text="Selçuklu Nizam Piyade Kalkanı" /><string id="item_seljuk_composite_bow" text="Oğuz Atabeg Kompozit Yayı" /><string id="item_seljuk_heavy_arrows" text="Selçuklu Zırh Delen Temren Okları" /><string id="item_seljuk_bolts" text="Selçuklu Çelik Temrenli Kundak Okları" /><string id="item_seljuk_turkoman_horse" text="Asil Türkmen Savaş Atı" /><string id="seljuk_faction_desc" text="Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir." /><string id="policy_futuwwa_nizam_name" text="Fütüvvet Nizamı" /><string id="policy_futuwwa_nizam_desc" text="Şehirlerdeki zanaatkar ocakları ve atölye gelirleri %30 artar, şehir asayişi güçlenir." /><string id="policy_uc_gazileri_name" text="Uç Gazileri Teşkilatı" /><string id="policy_uc_gazileri_desc" text="Sınır boylarında gaziler ve alpler teşkilatlandırılır. Lordların ve klanların birlik kapasitesi +25 asker artar." /><string id="policy_kervansaray_berati_name" text="Kervansaray Beratı" /><string id="policy_kervansaray_berati_desc" text="İpek Yolu üzerindeki kervansaraylara özel sultanlık beratı verilir. Şehirlerin refahı her gün +1 kalıcı olarak yükselir." /><string id="seljuk_bard_opt" text="Bozkır Ozanından Gazavat Destanı Dinle (100 Dinar)" /><string id="seljuk_bard_no_gold" text="Yeterli altınınız yok (100 Dinar gerekli)." /><string id="seljuk_bard_notif" text="Ozanın kopuzundan dökülen Selçuklu gazavat destanı erlerin yüreğini coşturdu! (+15 Ordu Morali)" /><string id="seljuk_alp_arslan_greet" text="Gaza meydanlarının yiğit alpi! Hoş geldin, kılıcın keskin, nizamın daim olsun. Âl-i Selçuk'un fermanı ve himmeti üzerinedir. Ne dilersin?" /><string id="seljuk_ertugrul_greet" text="Ey gaza yoldaşım! Söğüt uç boyundan ve Kayı otağından sana bin selam olsun. Pusatın daim parlasın, ne murat edersin?" /><string id="seljuk_nizam_greet" text="Adaletin ve nizamın kılıcı keskindir evlat. Devlet-i Âliyye'ye hizmetin daim olsun. Buyur, seni dinlerim." /><string id="seljuk_starter_notif" text="Büyük Selçuklu Gazi Başlangıç Paketi envanterinize tanımlandı! (+2.500 Dinar, Asil Türkmen Atı, Kompozit Yay ve Zırh Delen Oklar)" /><string id="clan_seljuk_royal" text="Âl-i Selçuk Hanedanı" /><string id="clan_nizamiye" text="Nizamiye Divanı" /><string id="clan_danismend" text="Danişmendliler Beyliği" /><string id="clan_artuk" text="Artuklular Beyliği" /><string id="clan_mengucek" text="Mengücekliler Melikliği" /><string id="clan_saltuk" text="Saltuklular Beyliği" /><string id="clan_caka" text="Çaka Beyliği" /><string id="clan_ahlatsah" text="Ahlatşahlar Beyliği" /><string id="clan_karaman" text="Karamanoğulları Beyliği" /><string id="clan_kayi_oguz" text="Kayı Boyu Alpleri" /><string id="clan_ahi_order" text="Ahilik Teşkilatı" /></strings>
+</base>

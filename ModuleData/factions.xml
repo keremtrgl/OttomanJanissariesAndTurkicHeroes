@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- ================================================================================= -->
+  <!-- BÜYÜK SELÇUKLU İMPARATORLUĞU 11 TARİHİ BEYLİK VE HANEDAN KLANLARI                  -->
+  <!-- EXPLICIT NOBLE CLANS WITH LEADERS, HOME SETTLEMENTS & HARMONIZED ROYAL COLORS     -->
+  <!-- ================================================================================= -->
+
+  <!-- 1. Âl-i Selçuk Hanedanı (Sultan Alp Arslan) -->
+  <Faction id="clan_seljuk_royal"
+           name="{=clan_seljuk_royal}Âl-i Selçuk Hanedanı"
+           tier="6"
+           owner="Hero.lord_seljuk_alp_arslan"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_K1"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF168B8D"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 2. Nizamiye Divanı ve İdare-i Saltanat (Hâce Nizamülmülk) -->
+  <Faction id="clan_nizamiye"
+           name="{=clan_nizamiye}Nizamiye Divanı"
+           tier="5"
+           owner="Hero.lord_seljuk_nizamulmulk"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_K1"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF0E7490"
+           color2="0xFFEAB308"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.505.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 3. Danişmendliler Gaza Beyliği (Melik Danişmend Gazi) -->
+  <Faction id="clan_danismend"
+           name="{=clan_danismend}Danişmendliler Beyliği"
+           tier="5"
+           owner="Hero.lord_seljuk_danismend_gazi"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_K4"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF0D9488"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.301.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 4. Artuklular Uç Beyliği (Artuk Bey) -->
+  <Faction id="clan_artuk"
+           name="{=clan_artuk}Artuklular Beyliği"
+           tier="5"
+           owner="Hero.lord_seljuk_artuk_bey"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_ES4"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF148899"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.302.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 5. Mengücekliler Melikliği (Mengücek Gazi) -->
+  <Faction id="clan_mengucek"
+           name="{=clan_mengucek}Mengücekliler Melikliği"
+           tier="5"
+           owner="Hero.lord_seljuk_mengucek_gazi"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_ES2"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF0891B2"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.303.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 6. Saltuklular Uç Beyliği (Emir Saltuk) -->
+  <Faction id="clan_saltuk"
+           name="{=clan_saltuk}Saltuklular Beyliği"
+           tier="5"
+           owner="Hero.lord_seljuk_emir_saltuk"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.castle_A8"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF1E3A8A"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.304.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 7. Çaka Beyliği ve Donanma-yı Hümayun (Çaka Bey) -->
+  <Faction id="clan_caka"
+           name="{=clan_caka}Çaka Beyliği"
+           tier="5"
+           owner="Hero.lord_seljuk_caka_bey"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_K6"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF0284C7"
+           color2="0xFFFFFFFF"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.401.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 8. Ahlatşahlar Ermenşahlar Beyliği (Sökmen el-Kutbî) -->
+  <Faction id="clan_ahlatsah"
+           name="{=clan_ahlatsah}Ahlatşahlar Beyliği"
+           tier="5"
+           owner="Hero.lord_seljuk_sokmen_bey"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.castle_K2"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF0F766E"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.305.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 9. Karamanoğulları Türkmen Beyliği (Kerimüddin Karaman Bey) -->
+  <Faction id="clan_karaman"
+           name="{=clan_karaman}Karamanoğulları Beyliği"
+           tier="5"
+           owner="Hero.lord_seljuk_karaman_bey"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.town_A4"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF0369A1"
+           color2="0xFFFFD700"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.306.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 10. Kayı Boyu ve Söğüt Uç Gazileri (Ertuğrul Gazi) -->
+  <Faction id="clan_kayi_oguz"
+           name="{=clan_kayi_oguz}Kayı Boyu Alpleri"
+           tier="6"
+           owner="Hero.ertugrul_gazi"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.castle_ES3"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF1E293B"
+           color2="0xFFFDE047"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.501.143.143.512.512.768.768.1.0.0" />
+
+  <!-- 11. Ahilik Teşkilatı ve Fütüvvet Ocağı (Ahi Evran) -->
+  <Faction id="clan_ahi_order"
+           name="{=clan_ahi_order}Ahilik Teşkilatı"
+           tier="5"
+           owner="Hero.lord_seljuk_ahi_evran"
+           super_faction="Kingdom.kingdom_seljuks"
+           culture="Culture.khuzait"
+           initial_home_settlement="Settlement.castle_K1"
+           is_noble="true"
+           is_clan_type_mercenary="false"
+           settlement_banner_mesh="encounter_flag_a"
+           color="0xFF065F46"
+           color2="0xFFD4AF37"
+           banner_key="11.144.144.1536.1536.768.768.1.0.0.504.143.143.512.512.768.768.1.0.0" />
+</Factions>

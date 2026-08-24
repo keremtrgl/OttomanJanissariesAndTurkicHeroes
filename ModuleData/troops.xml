@@ -1,0 +1,1317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<NPCCharacters>
+  
+  
+  
+
+  
+  <NPCCharacter id="seljuk_peasant" default_group="Infantry" level="6" name="{=seljuk_t1_name}İkta Gönüllüsü" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="50" />
+      <skill id="Polearm" value="60" />
+      <skill id="Bow" value="40" />
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="20" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
+        <equipment slot="Item1" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.steppe_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
+        <equipment slot="Item1" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.desert_cap" />
+        <equipment slot="Body" id="Item.steppe_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_footman" />
+      <upgrade_target id="NPCCharacter.seljuk_hunter" />
+      <upgrade_target id="NPCCharacter.seljuk_horseman" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+
+  
+  <NPCCharacter id="seljuk_footman" default_group="Infantry" level="11" name="{=seljuk_ceri_name}Çeri Yayak" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="85" />
+      <skill id="Polearm" value="95" />
+      <skill id="Athletics" value="90" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Head" id="Item.desert_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_armored_infantry" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_armored_infantry" default_group="Infantry" level="16" name="{=seljuk_zirhli_yayak_name}Zırhlı Yayak" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="120" />
+      <skill id="Polearm" value="130" />
+      <skill id="Athletics" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item2" id="Item.leather_round_shield" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item2" id="Item.leather_round_shield" />
+        <equipment slot="Head" id="Item.seljuk_fur_warrior_helm" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_nizam_infantry" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_nizam_infantry" default_group="Infantry" level="21" name="{=seljuk_nizam_name}Selçuklu Nizam Piyadesi" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="155" />
+      <skill id="TwoHanded" value="140" />
+      <skill id="Polearm" value="160" />
+      <skill id="Throwing" value="120" />
+      <skill id="Athletics" value="145" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item1" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item1" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.seljuk_infantry_shield" />
+        <equipment slot="Item3" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Head" id="Item.seljuk_noble_spiked_helm" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_subasi_guard" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_subasi_guard" default_group="Infantry" level="26" name="{=seljuk_subasi_name}Subaşı Ağır Muhafızı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="190" />
+      <skill id="Polearm" value="200" />
+      <skill id="Athletics" value="180" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item1" id="Item.execution_axe" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Head" id="Item.aserai_lord_helmet_a" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item1" id="Item.execution_axe" />
+        <equipment slot="Item2" id="Item.seljuk_infantry_shield" />
+        <equipment slot="Item3" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Head" id="Item.seljuk_noble_spiked_helm" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+
+  
+
+  
+  <NPCCharacter id="seljuk_hunter" default_group="Ranged" level="11" name="{=seljuk_turkmen_avci_name}Türkmen Avcısı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Bow" value="95" />
+      <skill id="OneHanded" value="75" />
+      <skill id="Athletics" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.hunting_bow" />
+        <equipment slot="Item1" id="Item.steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.steppe_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.hunting_bow" />
+        <equipment slot="Item1" id="Item.steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.steppe_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_composite_archer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_composite_archer" default_group="Ranged" level="16" name="{=seljuk_bilesik_yayci_name}Bileşik Yaycı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Bow" value="135" />
+      <skill id="OneHanded" value="105" />
+      <skill id="Athletics" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_steppe_archer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_steppe_archer" default_group="Ranged" level="21" name="{=seljuk_bozkir_nisanci_name}Usta Bozkır Nişancısı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Bow" value="175" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Athletics" value="140" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_sky_archer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_sky_archer" default_group="Ranged" level="26" name="{=seljuk_gok_nisanci_name}Gök Nişancı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Bow" value="215" />
+      <skill id="OneHanded" value="170" />
+      <skill id="Athletics" value="170" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.noble_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.noble_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+
+  
+
+  
+  <NPCCharacter id="seljuk_horseman" default_group="Cavalry" level="11" name="{=seljuk_turkmen_atli_name}Türkmen Atlısı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Riding" value="100" />
+      <skill id="Polearm" value="90" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Throwing" value="70" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.turban" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_clan_scout" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_clan_scout" default_group="HorseArcher" level="16" name="{=seljuk_boy_akinci_name}Boy Akıncısı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Riding" value="135" />
+      <skill id="Bow" value="130" />
+      <skill id="Polearm" value="120" />
+      <skill id="OneHanded" value="110" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item3" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item3" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.turban" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_horse_archer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_horse_archer" default_group="HorseArcher" level="21" name="{=seljuk_atli_okcu_name}Selçuklu Atlı Okçusu" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Riding" value="170" />
+      <skill id="Bow" value="170" />
+      <skill id="OneHanded" value="140" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.seljuk_fur_warrior_helm" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_heavy_raider" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_heavy_raider" default_group="HorseArcher" level="26" name="{=seljuk_tugrul_akinci_name}Tuğrul Ağır Akıncısı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Riding" value="215" />
+      <skill id="Bow" value="200" />
+      <skill id="Polearm" value="195" />
+      <skill id="OneHanded" value="185" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.noble_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item3" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.noble_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item3" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.seljuk_fur_warrior_helm" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+
+  
+  
+  
+
+  
+  <NPCCharacter id="seljuk_ghulam_recruit" default_group="Cavalry" level="11" name="{=seljuk_ghulam_acemi_name}Gulam Acemisi" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="95" />
+      <skill id="Polearm" value="105" />
+      <skill id="Bow" value="90" />
+      <skill id="Riding" value="105" />
+      <skill id="Athletics" value="80" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item3" id="Item.hunting_bow" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item3" id="Item.hunting_bow" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_armored_ghulam" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_armored_ghulam" default_group="Cavalry" level="16" name="{=seljuk_zirhli_gulam_name}Zırhlı Gulam" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="135" />
+      <skill id="Polearm" value="145" />
+      <skill id="Bow" value="120" />
+      <skill id="Riding" value="140" />
+      <skill id="Athletics" value="110" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.composite_bow" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.composite_bow" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_hassa_cavalry" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_hassa_cavalry" default_group="Cavalry" level="21" name="{=seljuk_hassa_suvarisi_name}Hassa Süvarisi" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="175" />
+      <skill id="Polearm" value="190" />
+      <skill id="Bow" value="150" />
+      <skill id="Riding" value="185" />
+      <skill id="Athletics" value="135" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item2" id="Item.leather_round_shield" />
+        <equipment slot="Item3" id="Item.composite_bow" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item2" id="Item.leather_round_shield" />
+        <equipment slot="Item3" id="Item.composite_bow" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_emir_guard" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_emir_guard" default_group="Cavalry" level="26" name="{=seljuk_emir_muhafizi_name}Emîr Muhafızı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="215" />
+      <skill id="Polearm" value="230" />
+      <skill id="Bow" value="180" />
+      <skill id="Riding" value="220" />
+      <skill id="Athletics" value="165" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_2_t5" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.noble_bow" />
+        <equipment slot="Horse" id="Item.war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_2_t5" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.noble_bow" />
+        <equipment slot="Horse" id="Item.war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.seljuk_iron_mask_ghulam" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="seljuk_iron_mask_ghulam" default_group="Cavalry" level="31" name="{=seljuk_t6_name}Demir Maskeli Hassa Bahadırı" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="220" />
+      <skill id="Polearm" value="265" />
+      <skill id="Bow" value="220" />
+      <skill id="Crossbow" value="10" />
+      <skill id="Throwing" value="130" />
+      <skill id="Riding" value="260" />
+      <skill id="Athletics" value="200" />
+      <skill id="Crafting" value="10" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item2" id="Item.seljuk_eagle_shield" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.seljuk_iron_mask_helm" />
+        <equipment slot="Body" id="Item.seljuk_ghulam_armor" />
+        <equipment slot="Leg" id="Item.seljuk_cavalry_boots" />
+        <equipment slot="Gloves" id="Item.seljuk_damascene_bracers" />
+        <equipment slot="Horse" id="Item.seljuk_turkoman_horse" />
+        <equipment slot="HorseHarness" id="Item.seljuk_barda_horse_armor" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item2" id="Item.seljuk_eagle_shield" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.seljuk_iron_mask_helm" />
+        <equipment slot="Body" id="Item.seljuk_ghulam_armor" />
+        <equipment slot="Leg" id="Item.seljuk_cavalry_boots" />
+        <equipment slot="Gloves" id="Item.seljuk_damascene_bracers" />
+        <equipment slot="Horse" id="Item.seljuk_turkoman_horse" />
+        <equipment slot="HorseHarness" id="Item.seljuk_barda_horse_armor" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+
+  
+  
+  
+
+  
+  <NPCCharacter id="acemi_janissary" default_group="Infantry" level="11" name="{=acemi_janissary_name}Acemi Janissary" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="85" />
+      <skill id="TwoHanded" value="65" />
+      <skill id="Polearm" value="50" />
+      <skill id="Bow" value="75" />
+      <skill id="Athletics" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.hunting_bow" />
+        <equipment slot="Item3" id="Item.steppe_arrows" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.hunting_bow" />
+        <equipment slot="Item3" id="Item.steppe_arrows" />
+        <equipment slot="Head" id="Item.seljuk_iron_mask_helm" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.veteran_janissary" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="veteran_janissary" default_group="Infantry" level="21" name="{=veteran_janissary_name}Veteran Janissary" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="145" />
+      <skill id="TwoHanded" value="125" />
+      <skill id="Polearm" value="100" />
+      <skill id="Bow" value="145" />
+      <skill id="Athletics" value="130" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.composite_bow" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.composite_bow" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.seljuk_iron_mask_helm" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.guard_janissary" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="guard_janissary" default_group="Infantry" level="26" name="{=guard_janissary_name}Guard Janissary" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="185" />
+      <skill id="TwoHanded" value="180" />
+      <skill id="Polearm" value="160" />
+      <skill id="Bow" value="180" />
+      <skill id="Athletics" value="160" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item2" id="Item.composite_bow" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item2" id="Item.composite_bow" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.seljuk_iron_mask_helm" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.imperial_janissary" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="imperial_janissary" default_group="Infantry" level="31" name="{=imperial_janissary_name}Imperial Janissary" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="240" />
+      <skill id="TwoHanded" value="235" />
+      <skill id="Polearm" value="210" />
+      <skill id="Bow" value="230" />
+      <skill id="Athletics" value="200" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item2" id="Item.seljuk_infantry_shield" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.seljuk_ghulam_armor" />
+        <equipment slot="Leg" id="Item.seljuk_cavalry_boots" />
+        <equipment slot="Gloves" id="Item.seljuk_damascene_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item2" id="Item.seljuk_infantry_shield" />
+        <equipment slot="Item3" id="Item.bodkin_arrows_a" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.seljuk_ghulam_armor" />
+        <equipment slot="Leg" id="Item.seljuk_cavalry_boots" />
+        <equipment slot="Gloves" id="Item.seljuk_damascene_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="ottoman_scout" default_group="Cavalry" level="11" name="{=ottoman_scout_name}Ottoman Scout Cavalry" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="75" />
+      <skill id="Riding" value="85" />
+      <skill id="Athletics" value="65" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.turban" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.ottoman_akinji" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="21" name="{=ottoman_akinji_name}Ottoman Akinji Raider" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="120" />
+      <skill id="Bow" value="140" />
+      <skill id="Riding" value="145" />
+      <skill id="Athletics" value="110" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item3" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item3" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.timarli_sipahi" />
+      <upgrade_target id="NPCCharacter.deli_cavalry" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="timarli_sipahi" default_group="Cavalry" level="26" name="{=timarli_sipahi_name}Timarli Sipahi" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="175" />
+      <skill id="Polearm" value="180" />
+      <skill id="Riding" value="180" />
+      <skill id="Athletics" value="130" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.composite_bow" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.composite_bow" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.kapikulu_sipahi" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="kapikulu_sipahi" default_group="Cavalry" level="31" name="{=kapikulu_sipahi_name}Imperial Kapikulu Sipahi" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="230" />
+      <skill id="Polearm" value="240" />
+      <skill id="Riding" value="230" />
+      <skill id="Athletics" value="170" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.noble_bow" />
+        <equipment slot="Horse" id="Item.noble_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.aserai_lord_helmet_a" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
+        <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item3" id="Item.noble_bow" />
+        <equipment slot="Horse" id="Item.noble_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="deli_cavalry" default_group="Cavalry" level="26" name="{=deli_cavalry_name}Deli Shock Cavalry" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="170" />
+      <skill id="TwoHanded" value="190" />
+      <skill id="Throwing" value="160" />
+      <skill id="Riding" value="195" />
+      <skill id="Athletics" value="180" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item2" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Cape" id="Item.wolf_shoulder" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item2" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Cape" id="Item.wolf_shoulder" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.deli_serbazi" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="deli_serbazi" default_group="Cavalry" level="31" name="{=deli_serbazi_name}Serdengecti Deli Captain" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="220" />
+      <skill id="TwoHanded" value="250" />
+      <skill id="Throwing" value="210" />
+      <skill id="Riding" value="240" />
+      <skill id="Athletics" value="210" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item2" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Horse" id="Item.noble_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Cape" id="Item.bearskin" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.execution_axe" />
+        <equipment slot="Item1" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item2" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Horse" id="Item.noble_horse" />
+        <equipment slot="HorseHarness" id="Item.half_scale_barding" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Cape" id="Item.bearskin" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="azap_recruit" default_group="Infantry" level="6" name="{=azap_recruit_name}Azap Recruit" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="80" />
+      <skill id="Throwing" value="75" />
+      <skill id="Athletics" value="90" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.steppe_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Head" id="Item.woven_turban" />
+        <equipment slot="Body" id="Item.steppe_armor" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.azap_fighter" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="azap_fighter" default_group="Infantry" level="21" name="{=azap_fighter_name}Azap Warrior" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="135" />
+      <skill id="Throwing" value="130" />
+      <skill id="Athletics" value="135" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item1" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_4_t4" />
+        <equipment slot="Item1" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Head" id="Item.woven_turban" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.strapped_leather_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.azap_heavy_infantry" />
+      <upgrade_target id="NPCCharacter.solak_archer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="azap_heavy_infantry" default_group="Infantry" level="26" name="{=azap_heavy_name}Armored Azap Guard" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="175" />
+      <skill id="TwoHanded" value="160" />
+      <skill id="Throwing" value="165" />
+      <skill id="Athletics" value="160" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.execution_axe" />
+        <equipment slot="Head" id="Item.closed_desert_helmet" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.execution_axe" />
+        <equipment slot="Head" id="Item.woven_turban" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.azap_champion" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="azap_champion" default_group="Infantry" level="31" name="{=azap_champion_name}Azap Vanguard Champion" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="230" />
+      <skill id="TwoHanded" value="210" />
+      <skill id="Throwing" value="220" />
+      <skill id="Athletics" value="200" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item1" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.execution_axe" />
+        <equipment slot="Head" id="Item.aserai_lord_helmet_a" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item1" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.execution_axe" />
+        <equipment slot="Head" id="Item.woven_turban" />
+        <equipment slot="Body" id="Item.lamellar_with_scale_skirt" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="solak_archer" default_group="Ranged" level="26" name="{=solak_archer_name}Solak Royal Archer" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="195" />
+      <skill id="Athletics" value="150" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_bow" />
+        <equipment slot="Item1" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_sword_7_t5" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.solak_master_archer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  
+  <NPCCharacter id="solak_master_archer" default_group="Ranged" level="31" name="{=solak_master_name}Master Solak Sharpshooter" occupation="Mercenary" culture="Culture.khuzait" is_mercenary="true" age="24" is_female="false" is_hero="false">
+    <face>
+      <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="OneHanded" value="180" />
+      <skill id="Bow" value="255" />
+      <skill id="Athletics" value="190" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.seljuk_composite_bow_legendary" />
+        <equipment slot="Item1" id="Item.seljuk_heavy_arrows" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.seljuk_nizamiye_robe" />
+        <equipment slot="Leg" id="Item.seljuk_cavalry_boots" />
+        <equipment slot="Gloves" id="Item.seljuk_damascene_bracers" />
+      </EquipmentRoster>
+    <EquipmentRoster>
+        <equipment slot="Item0" id="Item.seljuk_composite_bow_legendary" />
+        <equipment slot="Item1" id="Item.seljuk_heavy_arrows" />
+        <equipment slot="Item2" id="Item.bodkin_arrows_a" />
+        <equipment slot="Item3" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Head" id="Item.seljuk_royal_feather_helm" />
+        <equipment slot="Body" id="Item.seljuk_nizamiye_robe" />
+        <equipment slot="Leg" id="Item.seljuk_cavalry_boots" />
+        <equipment slot="Gloves" id="Item.seljuk_damascene_bracers" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets />
+  </NPCCharacter>
+</NPCCharacters>

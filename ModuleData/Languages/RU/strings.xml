@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <tags>
+    <tag language="Русский" />
+  </tags>
+  <strings>
+    <string id="acemi_janissary_name" text="Acemi Janissary" />
+    <string id="azap_champion_name" text="Azap Vanguard Champion" />
+    <string id="azap_fighter_name" text="Azap Warrior" />
+    <string id="azap_heavy_name" text="Armored Azap Guard" />
+    <string id="azap_recruit_name" text="Azap Recruit" />
+    <string id="cc_car_ahi_desc" text="Led urban volunteer watches and safeguarded fair trade across Anatolian markets." />
+    <string id="cc_car_ahi_name" text="Appointed as Yigitbashi in the Ahi Order" />
+    <string id="cc_car_caka_desc" text="Boarded hostile warships across the Aegean and Mediterranean under the First Turkish Admiral." />
+    <string id="cc_car_caka_name" text="Sailed as a Naval Raider with Chaka Bey" />
+    <string id="cc_car_danismend_desc" text="Spearheaded holy campaigns in the rugged highlands, capturing key border forts." />
+    <string id="cc_car_danismend_name" text="Rode as a Frontier Gazi with Danishmend Bey" />
+    <string id="cc_car_ghulam_desc" text="Recognized for exceptional combat prowess and enlisted directly into Sultan Alp Arslan's elite retinue." />
+    <string id="cc_car_ghulam_name" text="Inducted into the Sultan's Imperial Ghulam Guard" />
+    <string id="cc_cat_career" text="First Military Service &amp; Career" />
+    <string id="cc_cat_childhood" text="Childhood Memories" />
+    <string id="cc_cat_deed" text="Your Defining Tale of Valor" />
+    <string id="cc_cat_heritage" text="Seljuk Lineage &amp; Family Heritage" />
+    <string id="cc_cat_youth" text="Adolescence and Education" />
+    <string id="cc_child_ahi_desc" text="Stoked the blazing embers of the anvil, learning trade integrity and metal forging techniques." />
+    <string id="cc_child_ahi_name" text="Pumped the Bellows at the Ahi Forge" />
+    <string id="cc_child_caravan_desc" text="Listened to merchant tales at fortified caravanserais, memorizing secret passes and desert routes." />
+    <string id="cc_child_caravan_name" text="Watched the Stars along the Silk Road" />
+    <string id="cc_child_ikta_desc" text="Sparred with provincial garrison soldiers and learned swordplay fundamentals from veterans." />
+    <string id="cc_child_ikta_name" text="Wrestled in the Iqta Garrison Grounds" />
+    <string id="cc_child_steppes_desc" text="You rode before you could properly walk. The steppe winds taught you perfect balance and composite bow shooting." />
+    <string id="cc_child_steppes_name" text="Rode on Horseback in the Open Steppes" />
+    <string id="cc_deed_banner_desc" text="Charged through arrow fire, cut down the elite bodyguard, and brought down the hostile banner." />
+    <string id="cc_deed_banner_name" text="Captured the Enemy Commander's Standard" />
+    <string id="cc_deed_innocent_desc" text="Single-handedly held a narrow pass against raiders, saving innocent camp families from slaughter." />
+    <string id="cc_deed_innocent_name" text="Defended Defenseless Nomads from Brigands" />
+    <string id="cc_deed_siege_desc" text="Slipped past hostile perimeter sentries in the dead of night to rally the Sultan's relief army." />
+    <string id="cc_deed_siege_name" text="Broke through a Siege to Deliver Crucial Intelligence" />
+    <string id="cc_opt_ahi_desc" text="Grew up in the bustling guilds of Konya and Kayseri, learning the secrets of forged steel and ethical trade." />
+    <string id="cc_opt_ahi_name" text="Ahi Master Blacksmith Apprentice" />
+    <string id="cc_opt_bey_desc" text="Born into noble Turcoman lineage. Your youth was spent in the tribal tent learning horseback riding, leadership, and archery." />
+    <string id="cc_opt_bey_name" text="Son of an Oghuz Steppe Chieftain" />
+    <string id="cc_opt_ghulam_desc" text="Your father was an elite Iron-Masked bodyguard to the Sultan. Rigorous military discipline runs in your blood." />
+    <string id="cc_opt_ghulam_name" text="Scion of an Imperial Ghulam" />
+    <string id="cc_opt_nomad_desc" text="Survived the rugged mountains and vast steppes of Erzurum, learning the cunning ways of survival and scouting." />
+    <string id="cc_opt_nomad_name" text="Border Turcoman Nomad" />
+    <string id="cc_opt_scholar_desc" text="Raised among respected professors and viziers, mastering law, economics, and imperial statecraft." />
+    <string id="cc_opt_scholar_name" text="Child of a Nizamiyya Scholar" />
+    <string id="cc_youth_akinji_desc" text="Rode in dangerous frontier skirmishes, demoralizing hostile outposts with swift arrow volleys." />
+    <string id="cc_youth_akinji_name" text="Joined the Border Akinji Light Cavalry" />
+    <string id="cc_youth_caravan_desc" text="Guarded trade convoys across perilous mountain gorges from bandit ambushes." />
+    <string id="cc_youth_caravan_name" text="Escorted Silk Road Caravans" />
+    <string id="cc_youth_nizamiye_desc" text="Read Nizam al-Mulk's Siyasatnama, mastering rhetoric, logistics, and diplomatic negotiation." />
+    <string id="cc_youth_nizamiye_name" text="Studied Governance at the Nizamiyya Madrasa" />
+    <string id="cc_youth_subasi_desc" text="Patrolled city streets, drilling with heavy spears and organized infantry shield formations." />
+    <string id="cc_youth_subasi_name" text="Maintained Law and Order with City Subashis" />
+    <string id="clan_kayi_name" text="Племя Кайы" />
+    <string id="clan_kayi_short_name" text="Kayı" />
+    <string id="clan_kayi_title" text="Bey" />
+    <string id="clan_seljuk_1" text="Династия Сельджуков" />
+    <string id="clan_seljuk_1_short" text="Seljuk" />
+    <string id="clan_seljuk_1_title" text="Sultan" />
+    <string id="clan_seljuk_2" text="Данишмендиды" />
+    <string id="clan_seljuk_2_short" text="Danishmend" />
+    <string id="clan_seljuk_2_title" text="Melik" />
+    <string id="clan_seljuk_3" text="Артукиды" />
+    <string id="clan_seljuk_3_short" text="Artuqid" />
+    <string id="clan_seljuk_3_title" text="Emir" />
+    <string id="clan_seljuk_4" text="Менгуджекиды" />
+    <string id="clan_seljuk_4_short" text="Mengujek" />
+    <string id="clan_seljuk_4_title" text="Gazi" />
+    <string id="clan_seljuk_5" text="Салтукиды" />
+    <string id="clan_seljuk_5_short" text="Saltukid" />
+    <string id="clan_seljuk_5_title" text="Emir" />
+    <string id="clan_seljuk_6" text="Братство Ахи Эвран" />
+    <string id="clan_seljuk_6_short" text="Ahiler" />
+    <string id="clan_seljuk_6_title" text="Ahi Sheikh" />
+    <string id="clan_seljuk_ahi" text="Ahi Evran Brotherhood" />
+    <string id="clan_seljuk_ahi_short" text="Ahi" />
+    <string id="clan_seljuk_ahlatsah" text="Династия Ахлатшахов" />
+    <string id="clan_seljuk_ahlatsah_short" text="Ahlatshah" />
+    <string id="clan_seljuk_ahlatsah_title" text="Melik" />
+    <string id="clan_seljuk_caka" text="Бейлик Чака-бея" />
+    <string id="clan_seljuk_caka_short" text="Chaka" />
+    <string id="clan_seljuk_caka_title" text="Bey" />
+    <string id="clan_seljuk_karaman" text="Династия Караманидов" />
+    <string id="clan_seljuk_karaman_short" text="Karaman" />
+    <string id="clan_seljuk_karaman_title" text="Bey" />
+    <string id="clan_seljuk_kayi" text="Kayı Tribe" />
+    <string id="clan_seljuk_kayi_short" text="Kayı" />
+    <string id="clan_seljuk_nizamiye" text="Верховный Совет Низамийе" />
+    <string id="clan_seljuk_nizamiye_short" text="Nizamiyya" />
+    <string id="clan_seljuk_nizamiye_title" text="Grand Vizier" />
+    <string id="deli_cavalry_name" text="Deli Shock Cavalry" />
+    <string id="deli_serbazi_name" text="Serdengecti Deli Captain" />
+    <string id="guard_janissary_name" text="Guard Janissary" />
+    <string id="hero_abdurrahman_name" text="Abdurrahman Gazi" />
+    <string id="hero_akcakoca_name" text="Akçakoca" />
+    <string id="hero_bamsi_name" text="Bamsı the Brave" />
+    <string id="hero_dundar_name" text="Dündar the Scout" />
+    <string id="hero_ertugrul_name" text="Ertuğrul Gazi" />
+    <string id="hero_gundogdu_name" text="Gündoğdu Bey" />
+    <string id="hero_gunduz_name" text="Gündüz Alp" />
+    <string id="hero_halime_name" text="Halime Hatun" />
+    <string id="hero_hayme_ana_name" text="Hayme Ana" />
+    <string id="hero_osman_name" text="Osman Gazi" />
+    <string id="hero_savci_name" text="Savcı Bey" />
+    <string id="hero_sungur_name" text="Sungur Tekin" />
+    <string id="hero_turgut_name" text="Turgut the Vanguard" />
+    <string id="imperial_janissary_name" text="Imperial Janissary" />
+    <string id="item_seljuk_armor_name" text="Императорский Позолоченный Ламелляр" />
+    <string id="item_seljuk_axe_name" text="Боевой Топор Менгуджека Гази" />
+    <string id="item_seljuk_barda_name" text="Сельджукская Боевая Броня для Коня" />
+    <string id="item_seljuk_bow_name" text="Степной Лук Данишменда Гази" />
+    <string id="item_seljuk_crossbow_name" text="Морской Арбалет Чака-бея" />
+    <string id="item_seljuk_dagger_name" text="Кинжал Футувва Ахи Эврана" />
+    <string id="item_seljuk_helm_name" text="Сельджукский Шлем с Железной Личиной" />
+    <string id="item_seljuk_lance_name" text="Тяжелое Ударное Копье Артук-бея" />
+    <string id="item_seljuk_mace_name" text="Золотой Шестопер Султана Алп-Арслана" />
+    <string id="item_seljuk_robe_name" text="Почетный Кафтан Низамийе" />
+    <string id="item_seljuk_shield_name" text="Сельджукский Щит с Двуглавым Орлом" />
+    <string id="item_seljuk_sword_name" text="Дамасский Шамшир Мелик-шаха" />
+    <string id="kapikulu_sipahi_name" text="Imperial Kapikulu Sipahi" />
+    <string id="lord_ahi_evran" text="Ahi Evran" />
+    <string id="lord_alp_arslan" text="Султан Алп-Арслан" />
+    <string id="lord_artuk" text="Артук-бей" />
+    <string id="lord_caka_bey" text="Чака-бей" />
+    <string id="lord_danismend" text="Мелик Данишменд Гази" />
+    <string id="lord_emir_saltuk" text="Emir Saltuk" />
+    <string id="lord_ilgazi" text="Najm al-Din Ilghazi" />
+    <string id="lord_karaman_bey" text="Kerimuddin Karaman Bey" />
+    <string id="lord_meliksah" text="Наследный Принц Мелик-шах" />
+    <string id="lord_mengucek" text="Mengujek Gazi" />
+    <string id="lord_mesud" text="Prince Mesud" />
+    <string id="lord_nizamulmulk" text="Визирь Низам аль-Мульк" />
+    <string id="lord_sokmen_bey" text="Sokmen al-Qutbi" />
+    <string id="lord_terken_hatun" text="Теркен Хатун" />
+    <string id="ottoman_akinji_name" text="Ottoman Akinji Raider" />
+    <string id="ottoman_scout_name" text="Ottoman Scout Cavalry" />
+    <string id="policy_ahi_desc" text="Повышает доходы мастерских на 25% и созывает ополчение при осаде городов." />
+    <string id="policy_ahi_name" text="Устав Гильдий и Ремесленников Ахи" />
+    <string id="policy_caravan_desc" text="Охраняет торговые караваны от разбойников и повышает торговые доходы на 30%." />
+    <string id="policy_caravan_name" text="Защита Караван-сараев и Дербентов" />
+    <string id="policy_divan_desc" text="Устраняет риск восстаний и увеличивает верность поселений на +2 ежедневно." />
+    <string id="policy_divan_name" text="Имперский Диван и Совет Справедливости" />
+    <string id="policy_gaza_desc" text="Доктрина священных походов. Увеличивает получение влияния на 30% и мораль армии на +15." />
+    <string id="policy_gaza_name" text="Указ о Газавате и Футувве" />
+    <string id="policy_ghulam_desc" text="Снижает расходы на содержание знатной конницы на 25% и расширяет гарнизоны." />
+    <string id="policy_ghulam_name" text="Указ об Императорском Корпусе Гулямов" />
+    <string id="policy_iqta_desc" text="Обязательная военная подготовка всадников. Увеличивает налоги деревень на 20% и лимит отряда на +30." />
+    <string id="policy_iqta_name" text="Система Икта и Джебелю" />
+    <string id="policy_nizamiyya_desc" text="Ежедневный прирост безопасности и процветания +1. Ускоряет развитие навыков управления на 25%." />
+    <string id="policy_nizamiyya_name" text="Эдикт о Медресе Низамийе" />
+    <string id="seljuk_atli_okcu_name" text="Seljuk Horse Archer" />
+    <string id="seljuk_bilesik_yayci_name" text="Seljuk Composite Bowman" />
+    <string id="seljuk_boy_akinci_name" text="Clan Akinji Raider" />
+    <string id="seljuk_bozkir_nisanci_name" text="Master Steppe Marksman" />
+    <string id="seljuk_castle_ahlat" text="Замок Ахлат" />
+    <string id="seljuk_castle_divrigi" text="Замок Дивриги" />
+    <string id="seljuk_castle_korykos" text="Замок Корикос" />
+    <string id="seljuk_castle_malazgirt" text="Замок Манцикерт" />
+    <string id="seljuk_ceri_name" text="Seljuk Cheri Footman" />
+    <string id="seljuk_emir_muhafizi_name" text="Emir's Bodyguard" />
+    <string id="seljuk_faction_name" text="Великая Сельджукская Империя" />
+    <string id="seljuk_faction_short" text="Сельджуки" />
+    <string id="seljuk_faction_title" text="Султанат" />
+    <string id="seljuk_ghulam_acemi_name" text="Ghulam Recruit" />
+    <string id="seljuk_gok_nisanci_name" text="Celestial Gok Archer" />
+    <string id="seljuk_hassa_suvarisi_name" text="Royal Hassa Cavalry" />
+    <string id="seljuk_menu_insurance_text" text="Welcome to the Seljuk Caravanserai Administration and Silk Road Insurance Divan. Here, you can place your trade caravans under Imperial Treasury guarantee and invest capital into caravanserais to receive regular weekly dividends." />
+    <string id="seljuk_menu_trade_divan" text="Visit the Seljuk Silk Road &amp; Caravan Insurance Divan" />
+    <string id="seljuk_nizam_name" text="Seljuk Regular Nizam Infantry" />
+    <string id="seljuk_opt_buy_ins" text="Insure your caravans under Seljuk State Insurance (1,500 Dinars)" />
+    <string id="seljuk_opt_invest_10k" text="Invest 10,000 Dinars into this city's Caravanserai Fund (Weekly Dividends)" />
+    <string id="seljuk_opt_leave" text="Return to the Town Center" />
+    <string id="seljuk_ruler_title" text="Султан" />
+    <string id="seljuk_subasi_name" text="Subashi Heavy Guard" />
+    <string id="seljuk_t1_name" text="Seljuk Iqta Volunteer" />
+    <string id="seljuk_t6_name" text="Гулям-Бахадур в Железной Личине" />
+    <string id="seljuk_tip_ins_active" text="Your trade caravans are already under Seljuk State Insurance protection." />
+    <string id="seljuk_tip_no_gold" text="You do not have enough gold." />
+    <string id="seljuk_town_alaiye" text="Алайе (Аланья)" />
+    <string id="seljuk_town_diyarbekir" text="Диярбакыр (Амид)" />
+    <string id="seljuk_town_erzurum" text="Эрзурум (Эрзен ар-Рум)" />
+    <string id="seljuk_town_kayseri" text="Кайсери" />
+    <string id="seljuk_town_konya" text="Конья (Дар аль-Мульк)" />
+    <string id="seljuk_town_sivas" text="Сивас (Дар аль-Ала)" />
+    <string id="seljuk_tugrul_akinci_name" text="Tughril Heavy Akinji" />
+    <string id="seljuk_turkmen_atli_name" text="Turcoman Rider" />
+    <string id="seljuk_turkmen_avci_name" text="Turcoman Hunter" />
+    <string id="seljuk_v_adilcevaz" text="Adilcevaz" />
+    <string id="seljuk_v_aksehir" text="Aksehir" />
+    <string id="seljuk_v_anamur" text="Anamur" />
+    <string id="seljuk_v_bismil" text="Bismil" />
+    <string id="seljuk_v_bulanik" text="Bulanik" />
+    <string id="seljuk_v_cetinkaya" text="Cetinkaya Mine" />
+    <string id="seljuk_v_develi" text="Develi" />
+    <string id="seljuk_v_ercis" text="Ercis" />
+    <string id="seljuk_v_erciyes" text="Erciyes Plains" />
+    <string id="seljuk_v_erdemli" text="Erdemli" />
+    <string id="seljuk_v_ergani" text="Ergani" />
+    <string id="seljuk_v_gazipasa" text="Gazipasa" />
+    <string id="seljuk_v_kangal" text="Kangal" />
+    <string id="seljuk_v_kemaliye" text="Kemaliye" />
+    <string id="seljuk_v_ladik" text="Ladik" />
+    <string id="seljuk_v_manavgat" text="Manavgat" />
+    <string id="seljuk_v_oltu" text="Oltu" />
+    <string id="seljuk_v_pasinler" text="Pasinler" />
+    <string id="seljuk_v_patnos" text="Patnos" />
+    <string id="seljuk_v_silifke" text="Silifke" />
+    <string id="seljuk_v_sille" text="Sille" />
+    <string id="seljuk_v_silvan" text="Silvan" />
+    <string id="seljuk_v_talas" text="Talas" />
+    <string id="seljuk_v_tortum" text="Tortum" />
+    <string id="seljuk_v_yildizeli" text="Yildizeli" />
+    <string id="seljuk_v_zara" text="Zara" />
+    <string id="seljuk_zirhli_gulam_name" text="Armored Ghulam" />
+    <string id="seljuk_zirhli_yayak_name" text="Armored Footman" />
+    <string id="solak_archer_name" text="Solak Royal Archer" />
+    <string id="solak_master_name" text="Master Solak Sharpshooter" />
+    <string id="str_banner_seljuk_group" text="Сельджукские и Тюркские Тамги" />
+    <string id="str_icon_ahi_scale" text="Весы Справедливости Ахи Эврана" />
+    <string id="str_icon_ahlatsah_dome" text="Мавзолейный Купол Ахлатшахов" />
+    <string id="str_icon_artuk_sword" text="Зульфикар и Шамшир Артукидов" />
+    <string id="str_icon_caka_naval" text="Морской Полумесяц Чака-бея" />
+    <string id="str_icon_double_eagle" text="Сельджукский Двуглавый Орел" />
+    <string id="str_icon_karaman_crescent" text="Тройной Полумесяц Караманидов" />
+    <string id="str_icon_kayi_tamga" text="Тамга IYI Племени Кайы" />
+    <string id="str_icon_mengucek_anvil" text="Стальная Наковальня Менгуджекидов" />
+    <string id="str_icon_saltuk_mountain" text="Горный Волк Салтукидов" />
+    <string id="str_icon_seljuk_star" text="8-конечная Звезда Справедливости" />
+    <string id="str_icon_tugrul_tamga" text="Тамга Лука и Стрелы Тогрул-бека" />
+    <string id="str_wanderer_backstory_a.bamsi_the_brave" text="My kin thought me dead, and false pretenders sought to claim what was mine. When I returned, with twin blades in hand, I challenged the deceitful and reclaimed my honor." />
+    <string id="str_wanderer_backstory_a.dundar_the_hawk" text="I can tell you the size of an enemy army three days before they arrive by the dust on the horizon and the flight of birds." />
+    <string id="str_wanderer_backstory_a.turgut_the_hammer" text="I have swung this crescent axe against iron-studded fortress gates and shattered ranks of heavy cataphracts. A warrior learns the true measure of men when the stones fall." />
+    <string id="str_wanderer_backstory_b.bamsi_the_brave" text="No fortress wall can cage a wolf of the steppes forever. In battle, I fight with a sword in each hand—one for vengeance, one for justice." />
+    <string id="str_wanderer_backstory_b.dundar_the_hawk" text="My steppe steed knows my intent before I even touch the reins. From horseback, my arrows pierce mail with effortless precision." />
+    <string id="str_wanderer_backstory_b.turgut_the_hammer" text="I served beside great beys, breaching castles where others feared to tread. Treachery took my brethren, but my axe remains steadfast." />
+    <string id="str_wanderer_backstory_c.bamsi_the_brave" text="Now I wander these lands looking for a leader of true courage. Gold is nothing to me; brotherhood and renown are everything." />
+    <string id="str_wanderer_backstory_c.dundar_the_hawk" text="Ambushers and scouts will never catch an army under my watch unawares. I bring the sight of a hawk to your banners." />
+    <string id="str_wanderer_backstory_c.turgut_the_hammer" text="A shield wall is only as strong as its resolve. With this axe, I do not break lines—I obliterate them." />
+    <string id="str_wanderer_backstory_d.bamsi_the_brave" text="Give me a blade and point to the vanguard of the enemy. You shall see my oath carved in steel." />
+    <string id="str_wanderer_backstory_d.dundar_the_hawk" text="Give the order, and the steppes will reveal all their secrets to us." />
+    <string id="str_wanderer_backstory_d.turgut_the_hammer" text="Lead me to the battlements, Commander. The gates will crumble before our advance." />
+    <string id="str_wanderer_prebackstory.bamsi_the_brave" text="I am Bamsı of the steppes. For sixteen long years I languished in the fortress of Bayburt, bound in iron chains, until honor gave me the strength to break them." />
+    <string id="str_wanderer_prebackstory.dundar_the_hawk" text="I am Dündar. The vast plains and whispering winds have been my teachers since I first pulled a bowstring." />
+    <string id="str_wanderer_prebackstory.turgut_the_hammer" text="They call me Turgut. My homeland is wherever the battle lines clash and siege engines roar." />
+    <string id="str_wanderer_response_1.bamsi_the_brave" text="A warrior of such spirit would be an invaluable asset to my company." />
+    <string id="str_wanderer_response_1.dundar_the_hawk" text="A scout of your caliber will keep my army alive in hostile territory." />
+    <string id="str_wanderer_response_1.turgut_the_hammer" text="I need a vanguard who knows how to breach gates and hold the line." />
+    <string id="str_wanderer_response_2.bamsi_the_brave" text="A wild tale, but sixteen years in chains is a long time." />
+    <string id="str_wanderer_response_2.dundar_the_hawk" text="A sharp eye and a swift horse are always welcome in my ranks." />
+    <string id="str_wanderer_response_2.turgut_the_hammer" text="Two-handed axes require fierce discipline. Are you ready to march?" />
+    <string id="timarli_sipahi_name" text="Timarli Sipahi" />
+    <string id="veteran_janissary_name" text="Veteran Janissary" />
+  </strings>
+</base>

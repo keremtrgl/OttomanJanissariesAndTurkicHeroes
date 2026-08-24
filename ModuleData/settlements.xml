@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settlements>
+  <!-- ================================================================================= -->
+  <!-- BÜYÜK SELÇUKLU İMPARATORLUĞU YERLEŞİMLERİ                                         -->
+  <!-- Bu dosya SADECE isim ve kültür override'ı yapar.                                    -->
+  <!-- Sahiplik ve mülkiyet SeljukSettlementBehavior.cs tarafından runtime'da yönetilir.    -->
+  <!-- Buradaki klan atamaları C# behavior ile %100 senkronize olmalıdır.                  -->
+  <!-- ================================================================================= -->
+
+  <!-- ================================================================================= -->
+  <!-- 1. TOWNS (ŞEHİRLER) - C# SetupTown() ile senkronize                                -->
+  <!-- ================================================================================= -->
+
+  <!-- REY-İ SALTANAT (Sultan Alp Arslan - Başkent) -> town_K1 -->
+  <Settlement id="town_K1" name="{=seljuk_town_rey}Rey-i Saltanat" owner="Faction.clan_seljuk_royal" culture="Culture.khuzait">
+    <Components>
+      <Town id="town_comp_K1" is_castle="false" prosperity="8200" />
+    </Components>
+  </Settlement>
+
+  <!-- KAYSERİYYE (Danişmend Gazi Merkezi) -> town_K4 -->
+  <Settlement id="town_K4" name="{=seljuk_town_kayseri}Kayseriyye" owner="Faction.clan_danismend" culture="Culture.khuzait">
+    <Components>
+      <Town id="town_comp_K4" is_castle="false" prosperity="7100" />
+    </Components>
+  </Settlement>
+
+  <!-- DİYARBEKİR / ÂMİD (Artuk Beyliği Merkezi) -> town_ES4 -->
+  <Settlement id="town_ES4" name="{=seljuk_town_diyarbekir}Diyarbekir" owner="Faction.clan_artuk" culture="Culture.khuzait">
+    <Components>
+      <Town id="town_comp_ES4" is_castle="false" prosperity="6800" />
+    </Components>
+  </Settlement>
+
+  <!-- DİVRİĞİ (Mengücekliler Melikliği Merkezi) -> town_ES2 -->
+  <Settlement id="town_ES2" name="{=seljuk_town_divrigi}Divriği" owner="Faction.clan_mengucek" culture="Culture.khuzait">
+    <Components>
+      <Town id="town_comp_ES2" is_castle="false" prosperity="6200" />
+    </Components>
+  </Settlement>
+
+  <!-- ALÂİYE / ALANYA (Çaka Beyliği Akdeniz Limanı) -> town_K6 -->
+  <Settlement id="town_K6" name="{=seljuk_town_alaiye}Alâiye" owner="Faction.clan_caka" culture="Culture.khuzait">
+    <Components>
+      <Town id="town_comp_K6" is_castle="false" prosperity="7400" />
+    </Components>
+  </Settlement>
+
+  <!-- LÂRENDE (Karamanoğulları Türkmen Beyliği Merkezi) -> town_A4 -->
+  <Settlement id="town_A4" name="{=seljuk_town_larenede}Lârende" owner="Faction.clan_karaman" culture="Culture.khuzait">
+    <Components>
+      <Town id="town_comp_A4" is_castle="false" prosperity="6900" />
+    </Components>
+  </Settlement>
+
+  <!-- ================================================================================= -->
+  <!-- 2. CASTLES (KALELER) - C# SetupCastle() ile senkronize                              -->
+  <!-- ================================================================================= -->
+
+  <!-- DEYLEM HİSARI (Âl-i Selçuk Hanedanı) -> castle_K2 -->
+  <Settlement id="castle_K2" name="{=seljuk_castle_alamut}Deylem Hisarı" owner="Faction.clan_seljuk_royal" culture="Culture.khuzait" />
+
+  <!-- NİKSAR KALESİ (Danişmendliler) -> castle_K5 -->
+  <Settlement id="castle_K5" name="{=seljuk_castle_niksar}Niksar Kalesi" owner="Faction.clan_danismend" culture="Culture.khuzait" />
+
+  <!-- HASANKEYF KALESİ (Artuklular) -> castle_K1 -->
+  <Settlement id="castle_K1" name="{=seljuk_castle_hasankeyf}Hasankeyf Kalesi" owner="Faction.clan_artuk" culture="Culture.khuzait" />
+
+  <!-- ERZURUM HİSARI (Saltuklular) -> castle_A8 -->
+  <Settlement id="castle_A8" name="{=seljuk_castle_erzurum}Erzurum Hisarı" owner="Faction.clan_saltuk" culture="Culture.khuzait" />
+
+  <!-- SÖĞÜT UÇ KALESİ (Kayı Boyu) -> castle_ES3 -->
+  <Settlement id="castle_ES3" name="{=seljuk_castle_sogut}Söğüt Uç Kalesi" owner="Faction.clan_kayi_oguz" culture="Culture.khuzait" />
+
+  <!-- ================================================================================= -->
+  <!-- 3. VILLAGES (KÖYLER) - C# SetupVillage() ile senkronize                             -->
+  <!-- ================================================================================= -->
+
+  <!-- Rey Bağlı Köyleri -->
+  <Settlement id="village_K1_1" name="{=seljuk_vil_damgan}Damğan" culture="Culture.khuzait" />
+  <Settlement id="village_K1_2" name="{=seljuk_vil_varamin}Varamin" culture="Culture.khuzait" />
+  <Settlement id="village_K1_3" name="{=seljuk_vil_harakani}Harakani" culture="Culture.khuzait" />
+
+  <!-- Kayseriyye Bağlı Köyleri -->
+  <Settlement id="village_K4_1" name="{=seljuk_vil_talas}Talas" culture="Culture.khuzait" />
+  <Settlement id="village_K4_2" name="{=seljuk_vil_develi}Develi" culture="Culture.khuzait" />
+  <Settlement id="village_K4_3" name="{=seljuk_vil_incesu}İncesu" culture="Culture.khuzait" />
+
+  <!-- Diyarbekir Bağlı Köyleri -->
+  <Settlement id="village_ES4_1" name="{=seljuk_vil_silvan}Meyyafarikin" culture="Culture.khuzait" />
+  <Settlement id="village_ES4_2" name="{=seljuk_vil_ergani}Ergani" culture="Culture.khuzait" />
+  <Settlement id="village_ES4_3" name="{=seljuk_vil_cermik}Çermik" culture="Culture.khuzait" />
+
+  <!-- Divriği Bağlı Köyleri -->
+  <Settlement id="village_ES2_1" name="{=seljuk_vil_kemah}Kemah" culture="Culture.khuzait" />
+  <Settlement id="village_ES2_2" name="{=seljuk_vil_ilisik}İliç" culture="Culture.khuzait" />
+  <Settlement id="village_ES2_3" name="{=seljuk_vil_arapgir}Arapgir" culture="Culture.khuzait" />
+
+  <!-- Alâiye Bağlı Köyleri -->
+  <Settlement id="village_K6_1" name="{=seljuk_vil_anamur}Anamur" culture="Culture.khuzait" />
+  <Settlement id="village_K6_2" name="{=seljuk_vil_gazipasa}Selinti" culture="Culture.khuzait" />
+  <Settlement id="village_K6_3" name="{=seljuk_vil_manavgat}Manavgat" culture="Culture.khuzait" />
+
+  <!-- Lârende Bağlı Köyleri -->
+  <Settlement id="village_A4_1" name="{=seljuk_vil_mut}Mut" culture="Culture.khuzait" />
+  <Settlement id="village_A4_2" name="{=seljuk_vil_ermenek}Ermenek" culture="Culture.khuzait" />
+  <Settlement id="village_A4_3" name="{=seljuk_vil_eregli}Ereğli" culture="Culture.khuzait" />
+
+  <!-- Kale Bağlı Köyleri -->
+  <Settlement id="castle_village_K2_1" name="{=seljuk_vil_rudbar}Rudbar" culture="Culture.khuzait" />
+  <Settlement id="castle_village_K5_1" name="{=seljuk_vil_erbaa}Erbaa" culture="Culture.khuzait" />
+  <Settlement id="castle_village_K1_1" name="{=seljuk_vil_cizre}Cizre" culture="Culture.khuzait" />
+  <Settlement id="castle_village_A8_1" name="{=seljuk_vil_tortum}Tortum" culture="Culture.khuzait" />
+  <Settlement id="castle_village_ES3_1" name="{=seljuk_vil_domanic}Domaniç" culture="Culture.khuzait" />
+</Settlements>

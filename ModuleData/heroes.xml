@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Heroes>
+  <!-- ================================================================================= -->
+  <!-- 1. ÂL-İ SELÇUK HANEDAN SOY AĞACI (ROYAL DYNASTY & FAMILY TREE)                    -->
+  <!-- ================================================================================= -->
+
+  <!-- SULTAN ALP ARSLAN (HÜKÜMDAR & BAŞKOMUTAN) -->
+  <Hero id="lord_seljuk_alp_arslan"
+        alive="true"
+        faction="Faction.clan_seljuk_royal"
+        spouse="Hero.lord_seljuk_terken_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- TERKEN HATUN (BAŞ HATUN & DEVLET YÖNETİCİSİ) -->
+  <Hero id="lord_seljuk_terken_hatun"
+        alive="true"
+        faction="Faction.clan_seljuk_royal"
+        spouse="Hero.lord_seljuk_alp_arslan"
+        preferred_upgrade_formation="HorseArcher" />
+
+  <!-- VELİAHT MELİKŞAH -> ÂL-İ SELÇUK VELİAHT ŞEHZADESİ -->
+  <Hero id="lord_seljuk_meliksah"
+        alive="true"
+        faction="Faction.clan_seljuk_royal"
+        father="Hero.lord_seljuk_alp_arslan"
+        mother="Hero.lord_seljuk_terken_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- ŞEHZADE MESUD -> ŞEHZADE -->
+  <Hero id="lord_seljuk_mesud"
+        alive="true"
+        faction="Faction.clan_seljuk_royal"
+        father="Hero.lord_seljuk_alp_arslan"
+        mother="Hero.lord_seljuk_terken_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- NİZAMÜLMÜLK -> BAŞVEZİR & SİYASETNAME MİMARI -->
+  <Hero id="lord_seljuk_nizamulmulk"
+        alive="true"
+        faction="Faction.clan_nizamiye"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- ================================================================================= -->
+  <!-- 2. ANADOLU VE UÇ BEYLİKLERİ LİDERLERİ (EMİRLER & GAZİLER)                        -->
+  <!-- ================================================================================= -->
+
+  <!-- DANİŞMEND GAZİ -> DANİŞMENDLİLER HÜKÜMDARI -->
+  <Hero id="lord_seljuk_danismend_gazi"
+        alive="true"
+        faction="Faction.clan_danismend"
+        preferred_upgrade_formation="HorseArcher" />
+
+  <!-- ARTUK BEY -> ARTUKLULAR HÜKÜMDARI -->
+  <Hero id="lord_seljuk_artuk_bey"
+        alive="true"
+        faction="Faction.clan_artuk"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- İLGAZİ BEY -> ARTUK BEY'İN OĞLU & KUDÜS/HALEP FATİHİ -->
+  <Hero id="lord_seljuk_ilgazi_bey"
+        alive="true"
+        faction="Faction.clan_artuk"
+        father="Hero.lord_seljuk_artuk_bey"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- MENGÜCEK GAZİ -> MENGÜCEKLİLER HÜKÜMDARI -->
+  <Hero id="lord_seljuk_mengucek_gazi"
+        alive="true"
+        faction="Faction.clan_mengucek"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- EMİR SALTUK -> SALTUKLULAR HÜKÜMDARI -->
+  <Hero id="lord_seljuk_emir_saltuk"
+        alive="true"
+        faction="Faction.clan_saltuk"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- ÇAKA BEY -> İLK TÜRK DENİZCİSİ VE İZMİR BEYİ -->
+  <Hero id="lord_seljuk_caka_bey"
+        alive="true"
+        faction="Faction.clan_caka"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- SÖKMEN BEY -> AHLATŞAHLAR BEYİ -->
+  <Hero id="lord_seljuk_sokmen_bey"
+        alive="true"
+        faction="Faction.clan_ahlatsah"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- KARAMAN BEY -> KARAMANOĞULLARI BEYİ -->
+  <Hero id="lord_seljuk_karaman_bey"
+        alive="true"
+        faction="Faction.clan_karaman"
+        preferred_upgrade_formation="HorseArcher" />
+
+  <!-- AHİ EVRAN -> AHİLİK TEŞKİLATI PİRİ & BİLGİN -->
+  <Hero id="lord_seljuk_ahi_evran"
+        alive="true"
+        faction="Faction.clan_ahi_order"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- ================================================================================= -->
+  <!-- 3. KAYI BOYU SOY AĞACI (OSMANLI KURUCU HANEDAN ÇEKİRDEĞİ)                          -->
+  <!-- ================================================================================= -->
+
+  <!-- HAYME ANA -> KAYI BOYU ULU HATUNU -->
+  <Hero id="hayme_ana"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- ERTUĞRUL GAZİ -> KAYI BOYU BEYİ -->
+  <Hero id="ertugrul_gazi"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        mother="Hero.hayme_ana"
+        spouse="Hero.halime_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- HALİME HATUN -> ERTUĞRUL GAZİ'NİN EŞİ (SELÇUKLU PRENSESİ) -->
+  <Hero id="halime_hatun"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        spouse="Hero.ertugrul_gazi"
+        preferred_upgrade_formation="HorseArcher" />
+
+  <!-- GÜNDOĞDU BEY -> ERTUĞRUL GAZİ'NİN AĞABEYİ -->
+  <Hero id="gundogdu_bey"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        mother="Hero.hayme_ana"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- SUNGUR TEKİN -> ERTUĞRUL GAZİ'NİN KARDEŞİ -->
+  <Hero id="sungur_tekin"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        mother="Hero.hayme_ana"
+        preferred_upgrade_formation="HorseArcher" />
+
+  <!-- GÜNDÜZ ALP -> ERTUĞRUL GAZİ'NİN BÜYÜK OĞLU -->
+  <Hero id="gunduz_alp"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        father="Hero.ertugrul_gazi"
+        mother="Hero.halime_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- SAVCI BEY -> ERTUĞRUL GAZİ'NİN ORTANCA OĞLU -->
+  <Hero id="savci_bey"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        father="Hero.ertugrul_gazi"
+        mother="Hero.halime_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- OSMAN GAZİ -> OSMANLI İMPARATORLUĞU'NUN KURUCUSU -->
+  <Hero id="osman_gazi"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        father="Hero.ertugrul_gazi"
+        mother="Hero.halime_hatun"
+        preferred_upgrade_formation="Cavalry" />
+
+  <!-- ABDURRAHMAN GAZİ -> KAYI BAŞ ALPİ & SANCAKTAR -->
+  <Hero id="abdurrahman_gazi"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- AKÇAKOCA -> OSMAN GAZİ'NİN SİLAH ARKADAŞI & GAZİ ALP -->
+  <Hero id="akcakoca"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- BAMSI BEYREK -> KORKUT ATA YİĞİDİ & KAYI ALPİ -->
+  <Hero id="bamsi_the_brave"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- TURGUT ALP -> ERTUĞRUL GAZİ'NİN BALTALI GAZİ ALPİ -->
+  <Hero id="turgut_the_hammer"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        preferred_upgrade_formation="Infantry" />
+
+  <!-- DÜNDAR ALP -> SÜLEYMAN ŞAH OĞLU & ATLI GÖZCÜ -->
+  <Hero id="dundar_the_hawk"
+        alive="true"
+        faction="Faction.clan_kayi_oguz"
+        mother="Hero.hayme_ana"
+        preferred_upgrade_formation="HorseArcher" />
+
+</Heroes>

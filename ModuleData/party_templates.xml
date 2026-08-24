@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<partyTemplates>
+
+  <!-- ================================================================= -->
+  <!-- 1. ÂL-İ SELÇUK (HANEDAN ORDUSU: AĞIR HASSA & DENGELİ ELİT DÜZEN)  -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_royal_template">
+    <stacks>
+      <!-- Noble / Hassa Birlikleri (%30-35) -->
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.seljuk_iron_mask_ghulam" />
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_emir_guard" />
+      <PartyTemplateStack min_value="10" max_value="16" troop="NPCCharacter.seljuk_hassa_cavalry" />
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.seljuk_armored_ghulam" />
+      <!-- Elit Piyade & Menzil -->
+      <PartyTemplateStack min_value="10" max_value="18" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="10" max_value="16" troop="NPCCharacter.seljuk_sky_archer" />
+      <PartyTemplateStack min_value="12" max_value="18" troop="NPCCharacter.seljuk_heavy_raider" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 2. NİZAMİYE VEZİRLER DİVANI (LOJİSTİK, İDARE & İKMAL ORDUSU)      -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_nizamiye_template">
+    <stacks>
+      <PartyTemplateStack min_value="12" max_value="22" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="16" max_value="28" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="10" max_value="18" troop="NPCCharacter.seljuk_sky_archer" />
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_hassa_cavalry" />
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.seljuk_emir_guard" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 3. DANİŞMENDLİLER (UÇ BEYLİĞİ: ATLI OKÇULAR & AKINCI DOKTRİNİ)    -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_danismend_template">
+    <stacks>
+      <!-- Ağırlıklı Atlı Okçu ve Hızlı Süvari (%60) -->
+      <PartyTemplateStack min_value="14" max_value="24" troop="NPCCharacter.seljuk_heavy_raider" />
+      <PartyTemplateStack min_value="18" max_value="30" troop="NPCCharacter.seljuk_horse_archer" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_clan_scout" />
+      <!-- Destek Okçuları ve Hafif Piyade -->
+      <PartyTemplateStack min_value="10" max_value="18" troop="NPCCharacter.seljuk_sky_archer" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_steppe_archer" />
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_armored_infantry" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 4. ARTUKLULAR (AĞIR ŞOK SÜVARİLERİ & MEYDAN HÜCUMU)               -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_noble_template">
+    <stacks>
+      <!-- Zırhlı Kargıcı Süvariler ve Gulamlar (%50) -->
+      <PartyTemplateStack min_value="6" max_value="10" troop="NPCCharacter.seljuk_iron_mask_ghulam" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_emir_guard" />
+      <PartyTemplateStack min_value="16" max_value="26" troop="NPCCharacter.seljuk_hassa_cavalry" />
+      <PartyTemplateStack min_value="10" max_value="16" troop="NPCCharacter.seljuk_heavy_raider" />
+      <!-- Sağlam Kalkan Duvarı Piyadeleri -->
+      <PartyTemplateStack min_value="14" max_value="22" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="12" max_value="18" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_composite_archer" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 5. MENGÜCEKLİLER (ÇELİK NİZAM PİYADESİ & İSTİHKAM ORDUSU)         -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_infantry_template">
+    <stacks>
+      <!-- Ağır Kalkanlı ve Baltalı Piyade Ağırlıklı (%60) -->
+      <PartyTemplateStack min_value="16" max_value="28" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="20" max_value="34" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="14" max_value="22" troop="NPCCharacter.seljuk_armored_infantry" />
+      <!-- Sur Savunması/Kuşatma Okçuları -->
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_sky_archer" />
+      <PartyTemplateStack min_value="14" max_value="22" troop="NPCCharacter.seljuk_steppe_archer" />
+      <!-- Kanat Koruma Süvarisi -->
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_hassa_cavalry" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 6. SALTUKLULAR (DAĞ SAVAŞÇILARI, PUSU & KEŞİF BİRLİKLERİ)         -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_scout_template">
+    <stacks>
+      <!-- Hızlı Dağ Birlikleri, Ciritçiler ve Okçular -->
+      <PartyTemplateStack min_value="14" max_value="24" troop="NPCCharacter.seljuk_steppe_archer" />
+      <PartyTemplateStack min_value="16" max_value="26" troop="NPCCharacter.seljuk_composite_archer" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_clan_scout" />
+      <PartyTemplateStack min_value="14" max_value="22" troop="NPCCharacter.seljuk_armored_infantry" />
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_heavy_raider" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 7. ÇAKA BEYLİĞİ (SAHİL BASKIN & DENİZCİLİK ORDUSU)                -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_caka_template">
+    <stacks>
+      <PartyTemplateStack min_value="14" max_value="24" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_sky_archer" />
+      <PartyTemplateStack min_value="10" max_value="18" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="8" max_value="16" troop="NPCCharacter.seljuk_heavy_raider" />
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.seljuk_hassa_cavalry" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 8. AHLATŞAHLAR (GULAM SÜVARİLERİ & İSTİHKAM ORDUSU)               -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_ahlatsah_template">
+    <stacks>
+      <PartyTemplateStack min_value="10" max_value="18" troop="NPCCharacter.seljuk_emir_guard" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_hassa_cavalry" />
+      <PartyTemplateStack min_value="14" max_value="24" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="12" max_value="22" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="8" max_value="16" troop="NPCCharacter.seljuk_sky_archer" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 9. KARAMANOĞULLARI (YÖRÜK / TÜRKMEN GERİLLA ORDUSU)               -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_karaman_template">
+    <stacks>
+      <PartyTemplateStack min_value="16" max_value="26" troop="NPCCharacter.seljuk_heavy_raider" />
+      <PartyTemplateStack min_value="18" max_value="30" troop="NPCCharacter.seljuk_horse_archer" />
+      <PartyTemplateStack min_value="14" max_value="22" troop="NPCCharacter.seljuk_clan_scout" />
+      <PartyTemplateStack min_value="12" max_value="20" troop="NPCCharacter.seljuk_steppe_archer" />
+      <PartyTemplateStack min_value="10" max_value="18" troop="NPCCharacter.seljuk_armored_infantry" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 10. KAYI BOYU UÇ BİRLİĞİ (TIER 3 DENGELİ SINIR KLAN ORDUSU)       -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="kayi_clan_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.veteran_janissary" />
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.guard_janissary" />
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.ottoman_akinji" />
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.timarli_sipahi" />
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.azap_fighter" />
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.solak_archer" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 11. AHİ EVRAN TEŞKİLATI (ŞEHİR MİLİSİ, LOJİSTİK & ESNAF ORDUSU)   -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_militia_template">
+    <stacks>
+      <PartyTemplateStack min_value="16" max_value="28" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="20" max_value="32" troop="NPCCharacter.seljuk_armored_infantry" />
+      <PartyTemplateStack min_value="18" max_value="30" troop="NPCCharacter.seljuk_footman" />
+      <PartyTemplateStack min_value="14" max_value="24" troop="NPCCharacter.seljuk_composite_archer" />
+      <PartyTemplateStack min_value="6" max_value="12" troop="NPCCharacter.seljuk_horseman" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 12. SELÇUKLU KERVANLARI (TİCARET VE İAŞE GÜVENLİĞİ)               -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_caravan_template">
+    <stacks>
+      <PartyTemplateStack min_value="6" max_value="10" troop="NPCCharacter.seljuk_heavy_raider" />
+      <PartyTemplateStack min_value="8" max_value="14" troop="NPCCharacter.seljuk_horse_archer" />
+      <PartyTemplateStack min_value="10" max_value="16" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="8" max_value="12" troop="NPCCharacter.seljuk_steppe_archer" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 13. SELÇUKLU KALE / ŞEHİR GARNİZONU (TEMEL SAVUNMA ŞABLONU)       -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="seljuk_garrison_template">
+    <stacks>
+      <PartyTemplateStack min_value="25" max_value="40" troop="NPCCharacter.seljuk_subasi_guard" />
+      <PartyTemplateStack min_value="40" max_value="60" troop="NPCCharacter.seljuk_nizam_infantry" />
+      <PartyTemplateStack min_value="30" max_value="50" troop="NPCCharacter.seljuk_sky_archer" />
+      <PartyTemplateStack min_value="40" max_value="70" troop="NPCCharacter.seljuk_steppe_archer" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- 14. HAN PARALI ASKER GÖNÜLLÜLERİ (MERCENARY VOLUNTEERS)          -->
+  <!-- ================================================================= -->
+  <MBPartyTemplate id="mercenary_volunteers">
+    <stacks>
+      <PartyTemplateStack min_value="2" max_value="5" troop="NPCCharacter.acemi_janissary" />
+      <PartyTemplateStack min_value="2" max_value="5" troop="NPCCharacter.ottoman_scout" />
+      <PartyTemplateStack min_value="2" max_value="5" troop="NPCCharacter.azap_recruit" />
+      <PartyTemplateStack min_value="2" max_value="5" troop="NPCCharacter.seljuk_peasant" />
+      <PartyTemplateStack min_value="2" max_value="5" troop="NPCCharacter.seljuk_ghulam_recruit" />
+    </stacks>
+  </MBPartyTemplate>
+
+</partyTemplates>

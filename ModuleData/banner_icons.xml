@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+  <BannerIconData>
+    <!-- ================================================================================= -->
+    <!-- BÜYÜK SELÇUKLU VE TÜRK SANCAK İKONLARI GRUBU (TURKIC & SELJUK BANNER ICONS)        -->
+    <!-- ================================================================================= -->
+    <BannerIconGroup id="7" name="{=str_banner_seljuk_group}Selçuklu ve Türk Tamgaları" is_pattern="false">
+      <!-- 1. Çift Başlı Selçuklu Kartalı -->
+      <Icon id="103" material_name="custom_banner_icons_01" texture_index="11" />
+
+      <!-- 2. Kayı Boyu (IYI) Damgası -->
+      <Icon id="133" material_name="custom_banner_icons_02" texture_index="7" />
+
+      <!-- 3. Tuğrul Bey & Bozkır Ok-Yay Tamgası -->
+      <Icon id="428" material_name="custom_banner_icons_10" texture_index="10" />
+
+      <!-- 4. Selçuklu 8 Köşeli Adalet Yıldızı -->
+      <Icon id="510" material_name="custom_banner_icons_14" texture_index="12" />
+
+      <!-- 5. Hilal ve Yıldız / Üç Hilal Tamgası -->
+      <Icon id="435" material_name="custom_banner_icons_09" texture_index="13" />
+
+      <!-- 6. Zülfikar ve Şemşir Kılıç Tamgası -->
+      <Icon id="401" material_name="custom_banner_icons_11" texture_index="15" />
+
+      <!-- 7. Çaka Beyliği Sahil & Denizci Hilali -->
+      <Icon id="301" material_name="custom_banner_icons_06" texture_index="13" />
+
+      <!-- 8. Saltuklu Dağ ve Bozkır Kurdu Tamgası -->
+      <Icon id="432" material_name="custom_banner_icons_03" texture_index="9" />
+
+      <!-- 9. Mengücek Çelik, Maden ve İstihkam Tamgası -->
+      <Icon id="434" material_name="custom_banner_icons_04" texture_index="9" />
+
+      <!-- 10. Ahi Evran Mizan ve Fütüvvet Tamgası -->
+      <Icon id="116" material_name="custom_banner_icons_04" texture_index="7" />
+
+      <!-- 11. Hakan Güneş Kursu -->
+      <Icon id="505" material_name="custom_banner_icons_14" texture_index="6" />
+    </BannerIconGroup>
+  </BannerIconData>
+</base>

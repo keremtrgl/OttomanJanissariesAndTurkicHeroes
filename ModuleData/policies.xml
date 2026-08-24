@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Policies>
+  <!-- ================================================================================= -->
+  <!-- BÜYÜK SELÇUKLU DEVLETİ KANUNNAMELERİ VE POLİTİKALARI (POLICIES)                   -->
+  <!-- ================================================================================= -->
+
+  <!-- 1. İkta ve Cebelü Nizamı -->
+  <Policy id="policy_iqta_system" 
+          name="{=policy_iqta_name}İkta ve Cebelü Nizamı" 
+          description="{=policy_iqta_desc}Tüm eyalet ve köylerde cebelü yetiştirme zorunluluğu getirilir. Köylerin vergi geliri %20, lordların ordu kapasitesi +30 artar; yerel milis garnizonları güçlenir." />
+
+  <!-- 2. Gaza ve Fütüvvet Kanunu -->
+  <Policy id="policy_gaza_futuwwa" 
+          name="{=policy_gaza_name}Gaza ve Fütüvvet Kanunnamesi" 
+          description="{=policy_gaza_desc}Savaş kazanıldığında kazanılan Nüfuz (Influence) %30 ve ordu morali +15 artar. Gayrimüslim veya düşman topraklara yapılan seferlerde ordu hızı yükselir." />
+
+  <!-- 3. Nizamiye Medreseleri Fermanı (Nizamülmülk İdare Nizamı) -->
+  <Policy id="policy_nizamiyya" 
+          name="{=policy_nizamiyya_name}Nizamiye Medreseleri Fermanı" 
+          description="{=policy_nizamiyya_desc}Şehirlerde kurulan Nizamiye medreseleri sayesinde şehir asayişi (Security) ve refah (Prosperity) günlük +1 artar. Lordların İdarecilik ve Liderlik yetenek kazanımı %25 hızlanır." />
+
+  <!-- 4. Gulamhane Teşkilatı Kanunu -->
+  <Policy id="policy_ghulam_corps" 
+          name="{=policy_ghulam_name}Gulamhane Teşkilatı Kanunu" 
+          description="{=policy_ghulam_desc}Saray ve ordu için profesyonel Gulam süvarileri yetiştirilir. Hassa ve süvari birliklerinin haftalık maaş masrafı %25 azalır, kale garnizon sınırları genişler." />
+
+  <!-- 5. Ahilik Esnaf Tüzüğü (Ahi Evran Lonca Sistemi) -->
+  <Policy id="policy_ahi_guilds" 
+          name="{=policy_ahi_name}Ahilik Esnaf ve Lonca Tüzüğü" 
+          description="{=policy_ahi_desc}Şehir esnafı ve zanaatkarlar denetlenir. Şehir atölye gelirleri %25 artar, kervan ticareti vergi getirisi yükselir, şehir kuşatmalarında halk doğrudan milis olarak surlara koşar." />
+
+  <!-- 6. Divan-ı Saltanat ve Mezalim Mahkemeleri -->
+  <Policy id="policy_divan_justice" 
+          name="{=policy_divan_name}Divan-ı Saltanat ve Adalet Meclisi" 
+          description="{=policy_divan_desc}Halkın şikayetlerinin bizzat Sultan ve Vezir tarafından dinlendiği adalet divanı. Şehirlerdeki isyan riski tamamen sıfırlanır, sadakat (Loyalty) günlük +2 artar." />
+
+  <!-- 7. Kervansaray ve Derbent Emniyeti -->
+  <Policy id="policy_caravanserai_security" 
+          name="{=policy_caravan_name}Kervansaray ve Derbent Muhafızlığı" 
+          description="{=policy_caravan_desc}Tüm ticaret yolları boyunca kervansaraylar ve derbentler inşa edilir. Kervanların haydutlar tarafından soyulma ihtimali ortadan kalkar, ticaret geliri %30 artar." />
+
+  <!-- 8. Fütüvvet Nizamı (Özel Atölye Kanunu) -->
+  <Policy id="policy_futuwwa_nizam" 
+          name="{=policy_futuwwa_nizam_name}Fütüvvet Nizamı" 
+          description="{=policy_futuwwa_nizam_desc}Şehirlerdeki zanaatkar ocakları ve atölye gelirleri %30 artar, şehir asayişi güçlenir." />
+
+  <!-- 9. Uç Gazileri Teşkilatı -->
+  <Policy id="policy_uc_gazileri" 
+          name="{=policy_uc_gazileri_name}Uç Gazileri Teşkilatı" 
+          description="{=policy_uc_gazileri_desc}Sınır boylarında gaziler ve alpler teşkilatlandırılır. Lordların ve klanların birlik kapasitesi (Party Size) +25 asker artar." />
+
+  <!-- 10. Kervansaray Beratı -->
+  <Policy id="policy_kervansaray_berati" 
+          name="{=policy_kervansaray_berati_name}Kervansaray Beratı" 
+          description="{=policy_kervansaray_berati_desc}İpek Yolu üzerindeki kervansaraylara özel sultanlık beratı verilir. Şehirlerin refahı (Prosperity) her gün +1 kalıcı olarak yükselir." />
+</Policies>
