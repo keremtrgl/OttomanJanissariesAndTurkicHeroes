@@ -3,3 +3,4 @@ Source/SeljukEmpire/obj/
 *.user
 *.suo
 .worktrees/
+.superpowers/
