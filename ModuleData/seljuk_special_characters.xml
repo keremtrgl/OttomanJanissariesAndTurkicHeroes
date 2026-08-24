@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_0"
+		name="{=sdzaip5J}{FIRSTNAME} the Knowing"
+		voice="softspoken"
+		age="28"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_0_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<Traits>
+			<!--
+      <Trait id="CrossbowmanStyle" value="2" />
+      <Trait id="EngineerSkills" value="7" /> -->
+			<Trait
+				id="Generosity"
+				value="-1" />
+			<Trait
+				id="Mercy"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_1"
+		name="{=j2nVPqIX}{FIRSTNAME} the Hawk"
+		voice="curt"
+		age="22"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_1_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<Traits>
+			<!-- <Trait id="HorseArcherFightingSkills" value="4" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="-1" />
+			<!--<Trait id="RuralClanIsNemesis" value="1" />-->
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_2"
+		name="{=agS5lIg7}{FIRSTNAME} the Fatherless"
+		voice="earnest"
+		age="18"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_2_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills></skills>
+		<Traits>
+			<!--
+      <Trait id="HorseArcherFightingSkills" value="3" />
+      <Trait id="Politician" value="8" />
+      <Trait id="Manager" value="6" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Mercy"
+				value="1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_3"
+		name="{=QWbgE4bw}{FIRSTNAME} Ironeye"
+		voice="curt"
+		age="32"
+		default_group="Infantry"
+		is_hero="false"
+		is_template="true"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_3_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills></skills>
+		<Traits>
+			<!--
+      <Trait id="HopliteFightingSkills" value="5" />
+      <Trait id="SergeantCommandSkills" value="5" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="1" />
+			<Trait
+				id="Mercy"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_4"
+		name="{=ykTARD4b}{FIRSTNAME} the Outcast"
+		voice="ironic"
+		age="19"
+		default_group="Infantry"
+		is_hero="false"
+		is_template="true"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_4_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<Traits>
+			<!--
+      <Trait id="HorseArcherFightingSkills" value="3" />
+      <Trait id="Commander" value="6" /> -->
+			<Trait
+				id="Honor"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_5"
+		name="{=q5QjQyde}{FIRSTNAME} the Mad"
+		voice="softspoken"
+		age="18"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_5_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<Traits>
+			<!--<Trait id="GangLeaderIsNemesis" value="1" />-->
+			<!--
+      <Trait id="PeltastFightingSkills" value="3" />
+      <Trait id="RogueSkills" value="6" />-->
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_6"
+		name="{=seS9ZZUW}{FIRSTNAME} the Grey Falcon"
+		voice="curt"
+		age="18"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_6_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills></skills>
+		<Traits>
+			<!-- <Trait id="HorseArcherFightingSkills" value="3" />
+      <Trait id="ScoutSkills" value="5" />
+      <Trait id="Commander" value="3" /> -->
+			<Trait
+				id="Honor"
+				value="1" />
+			<Trait
+				id="Generosity"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_7"
+		name="{=3wzexaA7}{FIRSTNAME} the She-Wolf"
+		voice="curt"
+		age="24"
+		is_female="true"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_7_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<skills></skills>
+		<Traits>
+			<!--
+      <Trait id="HuscarlFightingSkills" value="5" />
+      <Trait id="SergeantCommandSkills" value="4" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_8"
+		name="{=OIXub6bS}{FIRSTNAME} the Alone"
+		voice="curt"
+		age="22"
+		is_female="true"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_8_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<Traits>
+			<!--
+      <Trait id="ArcherFIghtingSkills" value="3" />
+      <Trait id="ScoutSkills" value="5" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="1" />
+			<Trait
+				id="Mercy"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_9"
+		name="{=KY2zbWkj}{FIRSTNAME} the Swift"
+		voice="ironic"
+		age="20"
+		is_female="true"
+		is_hero="false"
+		default_group="Infantry"
+		is_template="true"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_9_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<skills></skills>
+		<Traits>
+			<!--
+      <Trait id="ArcherFIghtingSkills" value="3" />
+      <Trait id="RogueSkills" value="4" />
+      <Trait id="Trader" value="8" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+			<Trait
+				id="Mercy"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_wanderer_seljuk_10"
+		name="{=CQOlMayc}{FIRSTNAME} the Ragged"
+		voice="earnest"
+		age="28"
+		default_group="Infantry"
+		is_template="true"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Wanderer"
+		skill_template="SkillSet.spc_wanderer_khuzait_10_skills">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<skills></skills>
+		<Traits>
+			<!--
+      <Trait id="HopliteFightingSkills" value="4" />
+      <Trait id="Trader" value="5" />
+      <Trait id="Blacksmith" value="3" /> -->
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentRoster>
+				<equipment
+					slot="Item0"
+					id="Item.khuzait_sword_4_t4" />
+				<equipment
+					slot="Head"
+					id="Item.decorated_nomad_cap" />
+				<equipment
+					slot="Body"
+					id="Item.ragged_robes" />
+				<equipment
+					slot="Leg"
+					id="Item.ragged_boots" />
+			</EquipmentRoster>
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="npc_companion_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_merchant_1"
+		name="{=!}Cautious Khuzait merchant"
+		voice="ironic"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_merchant_1"
+		occupation="Merchant">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_merchant_1" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_0b"
+		name="{=!}{FIRSTNAME} the Broker"
+		voice="ironic"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		occupation="Merchant"
+		skill_template="SkillSet.spc_notable_khuzait_0b">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_0b" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Commander"
+				value="4" />
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_0b" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_1"
+		name="{=!}{FIRSTNAME} the Dyer"
+		voice="ironic"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_1"
+		occupation="Merchant">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_1" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_1" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_1b"
+		name="{=!}{FIRSTNAME} the Horsetrader"
+		is_template="true"
+		voice="ironic"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_1b"
+		occupation="Merchant">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_1b" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Commander"
+				value="4" />
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_1b" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_1c"
+		name="{=!}{FIRSTNAME} the Wineseller"
+		is_template="true"
+		voice="ironic"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_1c"
+		occupation="Merchant">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_1c" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Commander"
+				value="4" />
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_1c" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_2"
+		name="{=!}{FIRSTNAME} the Freedwoman"
+		is_template="true"
+		voice="ironic"
+		is_female="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_2"
+		occupation="Merchant">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_2" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_2" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_2b"
+		name="{=!}{FIRSTNAME} the Silkseller"
+		voice="ironic"
+		is_template="true"
+		is_female="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_2b"
+		occupation="Merchant">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_2b" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Commander"
+				value="4" />
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_2b" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_3"
+		name="{=!}Khuzait shaman"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_3"
+		occupation="Preacher">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_3" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Honor"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_3" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_notable_seljuk_4"
+		name="{=!}Female preacher"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_female="true"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_notable_khuzait_4"
+		occupation="Preacher">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<!-- Add skill groups -->
+			<Trait
+				id="Honor"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_notable_khuzait_4" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_gangleader_1"
+		name="{=!}Female gang leader"
+		voice="curt"
+		is_template="true"
+		default_group="Infantry"
+		is_female="true"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_gangleader_1"
+		occupation="GangLeader">
+		<face>
+			<face_key_template
+				value="BodyProperty.townswoman_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_5" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Mercy"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_gangleader_2"
+		name="{=!}Standard male gang leader"
+		voice="ironic"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_gangleader_2"
+		occupation="GangLeader">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_6" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Mercy"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_gangleader_3"
+		name="{=!}Standard male gang leader"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_gangleader_3"
+		occupation="GangLeader">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_6" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+			<Trait
+				id="Mercy"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_khuzait_gangleader_3" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_rural_notable_1"
+		name="{=!}Khuzait craft rural notable"
+		is_template="true"
+		voice="ironic"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_rural_notable_1"
+		occupation="RuralNotable">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_khuzait_rural_notable_1" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<Trait
+				id="Calculating"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_rural_notable_2"
+		name="{=!}Khuzait proud rural notable"
+		voice="earnest"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_rural_notable_2"
+		occupation="RuralNotable">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_khuzait_rural_notable_2" faction="Kingdom.khuzait" />-->
+		<Traits>
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_artisan_1"
+		name="{=!}khuzait rebellious artisan"
+		voice="earnest"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_artisan_1"
+		occupation="Artisan">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_artisan_2"
+		name="{=!}khuzait conservative artisan"
+		voice="curt"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_artisan_2"
+		occupation="Artisan">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_artisan_3"
+		name="{=!}khuzait devious artisan"
+		voice="ironic"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_artisan_3"
+		occupation="Artisan">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_headman_1"
+		name="{=!}khuzait rebellious headman"
+		voice="earnest"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_headman_1"
+		occupation="Headman">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_headman_2"
+		name="{=!}khuzait conservative headman"
+		voice="curt"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_headman_2"
+		occupation="Headman">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Valor"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_headman_3"
+		name="{=!}khuzait devious headman"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_khuzait_headman_3"
+		occupation="Headman">
+		<face>
+			<face_key_template
+				value="BodyProperty.villager_khuzait" />
+		</face>
+		<!--<Hero id="spc_notable_khuzait_4" faction="Kingdom.khuzait" />-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Honor"
+				value="-1" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="npc_armed_wanderer_equipment_template_khuzait" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_lord_template_0"
+		name="{=bpw8fOs5}of the Karakhuzaits"
+		voice="curt"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_karakhuzaits_leader_0"
+		occupation="Lord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<!--<Hero id="spc_karakhuzaits_leader_0" faction="Faction.karakhuzaits" clan="Clan.karakhuzaits"/>-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Honor"
+				value="1" />
+			<Trait
+				id="Valor"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="-1" />
+			<Trait
+				id="Commander"
+				value="12" />
+			<Trait
+				id="HorseArcherFightingSkills"
+				value="7" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="khu_bat_template_medium" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_karakhuzaits_leader_0" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_lord_template_1"
+		name="{=bpw8fOs5}of the Karakhuzaits"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_karakhuzaits_leader_1"
+		occupation="Lord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<!--<Hero id="spc_karakhuzaits_leader_1" faction="Faction.karakhuzaits" clan="Clan.karakhuzaits"/>-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Mercy"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Commander"
+				value="12" />
+			<Trait
+				id="KnightFightingSkills"
+				value="6" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="khu_bat_template_medium" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_karakhuzaits_leader_1" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_lord_template_2"
+		name="{=bpw8fOs5}of the Karakhuzaits"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_karakhuzaits_leader_2"
+		occupation="Lord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<!--<Hero id="spc_karakhuzaits_leader_2" faction="Faction.karakhuzaits" clan="Clan.karakhuzaits"/>-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Mercy"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Commander"
+				value="12" />
+			<Trait
+				id="KnightFightingSkills"
+				value="6" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="khu_bat_template_medium" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_karakhuzaits_leader_2" />
+		</Equipments>
+	</NPCCharacter>
+	<NPCCharacter
+		id="spc_seljuk_lord_template_3"
+		name="{=bpw8fOs5}of the Karakhuzaits"
+		voice="softspoken"
+		is_template="true"
+		default_group="Infantry"
+		is_hero="false"
+		culture="Culture.seljuk"
+		skill_template="SkillSet.spc_karakhuzaits_leader_3"
+		occupation="Lord">
+		<face>
+			<face_key_template
+				value="BodyProperty.fighter_khuzait" />
+		</face>
+		<!--<Hero id="spc_karakhuzaits_leader_3" faction="Faction.karakhuzaits" clan="Clan.karakhuzaits"/>-->
+		<skills></skills>
+		<Traits>
+			<Trait
+				id="Mercy"
+				value="-1" />
+			<Trait
+				id="Generosity"
+				value="1" />
+			<Trait
+				id="Calculating"
+				value="1" />
+			<Trait
+				id="Commander"
+				value="12" />
+			<Trait
+				id="KnightFightingSkills"
+				value="6" />
+		</Traits>
+		<Equipments>
+			<EquipmentSet
+				id="khu_bat_template_medium" />
+			<EquipmentSet
+				id="npc_wanderer_equipment_template_khuzait"
+				equipmentType="Civilian" />
+			<EquipmentSet
+				id="spc_karakhuzaits_leader_3" />
+		</Equipments>
+	</NPCCharacter>
+</NPCCharacters>

@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EquipmentRosters>
+	<EquipmentRoster
+		id="mother_char_creation_retainer_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_retainer_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.eastern_lamellar_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Cape"
+				id="Item.lamellar_shoulders" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="mother_char_creation_merchant_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_merchant_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.merchants_fur_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.strapped_shoes" />
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="mother_char_creation_mercenary_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_mercenary_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Head"
+				id="Item.peaked_fur_hood" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_fortified_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.steppe_leather_vambraces" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="mother_char_creation_farmer_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_farmer_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Head"
+				id="Item.upturned_fur_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.eastern_leather_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="mother_char_creation_healer_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_healer_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.crude_leather_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.scarf" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Head"
+				id="Item.upturned_fur_cap" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="mother_char_creation_herder_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Cape"
+				id="Item.female_scarf" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_herder_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.eastern_leather_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_retainer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_retainer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_retainer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_retainer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_merchant_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_merchant_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.leather_shoes" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_merchant_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.leather_shoes" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_merchant_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.leather_shoes" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_mercenary_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_mercenary_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_mercenary_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_mercenary_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_farmer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_robe" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.peaked_fur_hood" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_farmer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_robe" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.peaked_fur_hood" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_farmer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_robe" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.peaked_fur_hood" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_farmer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.steppe_robe" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.peaked_fur_hood" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_healer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_healer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_healer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_healer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_herder_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.bandit_envelope_dress_v1" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_herder_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.bandit_envelope_dress_v1" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_childhood_age_seljuk_herder_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.bandit_envelope_dress_v1" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_education_age_seljuk_herder_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.bandit_envelope_dress_v1" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_retainer_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.small_flat_heater_shield" />
+			<Equipment
+				slot="Item1"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.western_spear_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_retainer_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.small_flat_heater_shield" />
+			<Equipment
+				slot="Item1"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress_b" />
+			<Equipment
+				slot="Cape"
+				id="Item.female_scarf" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_mercenary_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.small_flat_heater_shield" />
+			<Equipment
+				slot="Item1"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.studded_leather_waistcoat" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Cape"
+				id="Item.scarf" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_mercenary_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.small_flat_heater_shield" />
+			<Equipment
+				slot="Item1"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.studded_leather_waistcoat" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress_b" />
+			<Equipment
+				slot="Cape"
+				id="Item.female_scarf" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_guard_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item1"
+				id="Item.adarga" />
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_mace_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.hunting_bow" />
+			<Equipment
+				slot="Item3"
+				id="Item.default_arrows" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_guard_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item1"
+				id="Item.adarga" />
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_mace_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.hunting_bow" />
+			<Equipment
+				slot="Item3"
+				id="Item.default_arrows" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_hunter_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.default_arrows" />
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.steppe_bow" />
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_hunter_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.default_arrows" />
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.steppe_bow" />
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_infantry_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_infantry_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_skirmisher_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.western_javelin_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.western_javelin_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_skirmisher_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.eastern_javelin_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.eastern_javelin_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_civil_coat_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_bard_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item3"
+				id="Item.eastern_javelin_1_t2" />
+			<Equipment
+				slot="Item0"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Item2"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_bard_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item0"
+				id="Item.eastern_spear_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.eastern_javelin_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_belt_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_6_m"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.khuzait_mace_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.adarga" />
+			<Equipment
+				slot="Body"
+				id="Item.reinforced_suede_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.reinforced_suede_shoulders" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_sword_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.reinforced_suede_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.reinforced_suede_shoulders" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_seljuk_6_f"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.khuzait_mace_1_t2" />
+			<Equipment
+				slot="Item3"
+				id="Item.adarga" />
+			<Equipment
+				slot="Body"
+				id="Item.reinforced_suede_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.reinforced_suede_shoulders" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.sumpter_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.steppe_fur_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.khuzait_mace_1_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.reinforced_suede_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.reinforced_suede_shoulders" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="player_char_creation_show_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.reinforced_suede_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.steppe_leather_boots" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.battania_mace_2_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.northern_leather_vest" />
+			<Equipment
+				slot="Leg"
+				id="Item.wrapped_leather_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="mother_char_creation_none_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Cape"
+				id="Item.female_hood" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsFemaleTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="father_char_creation_none_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Body"
+				id="Item.hemp_tunic" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+		</EquipmentSet>
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="brother_char_creation_seljuk"
+		culture="Culture.seljuk">
+		<EquipmentSet>
+			<Equipment
+				slot="Item2"
+				id="Item.studded_round_shield" />
+			<Equipment
+				slot="Item3"
+				id="Item.battania_mace_2_t2" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_fortified_armor" />
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Horse"
+				id="Item.khuzait_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.light_harness" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Item0"
+				id="Item.hooked_cleaver" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_fortified_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+			<Equipment
+				slot="Horse"
+				id="Item.khuzait_horse" />
+			<Equipment
+				slot="HorseHarness"
+				id="Item.light_harness" />
+		</EquipmentSet>
+	</EquipmentRoster>
+</EquipmentRosters>

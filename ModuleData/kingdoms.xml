@@ -8,7 +8,7 @@
            ruler_title="{=seljuk_ruler_title}Sultan"
            culture="Culture.seljuk"
            owner="Hero.lord_seljuk_alp_arslan"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0"
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0"
            primary_banner_color="0xFF168B8D"
            secondary_banner_color="0xFFD4AF37"
            color="0xFF168B8D"
