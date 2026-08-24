@@ -149,8 +149,11 @@ practice for this kind of "sub-culture" addition):
 
 - New file `ModuleData/seljuk_culture.xml`, registered via
   `<XmlName id="SPCultures" path="seljuk_culture"/>` in `SubModule.xml`.
-- `<Culture id="seljuk" ... can_be_selected_in_character_creation="true">` with its own name,
-  banner, colors, and flavor text.
+- `<Culture id="seljuk" ... is_main_culture="true">` with its own name, banner, colors, and flavor
+  text. Verified against Native `spcultures.xml`: `is_main_culture="true"` (not a
+  "can_be_selected_in_character_creation" flag — that attribute doesn't exist) is exactly what
+  Bannerlord's Heritage screen filters on; all 6 playable Native cultures carry it, all 3 minor/NPC
+  cultures (darshi, vakken, etc.) don't.
 - `basic_troop`/`elite_basic_troop` and the culture's tier-1 recruit references point at this
   mod's own `seljuk_peasant` tree instead of Khuzait's, so playing as this culture and owning
   settlements recruits authentic Seljuk troops.

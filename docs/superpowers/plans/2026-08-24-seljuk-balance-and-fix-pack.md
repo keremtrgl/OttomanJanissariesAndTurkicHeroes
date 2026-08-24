@@ -774,36 +774,27 @@ git commit -m "Point IsSeljukSettlement at the new territory in both recruitment
 ```bash
 dotnet build Source/SeljukEmpire/SeljukTactics.csproj -c Release
 ```
-Expected: `Build succeeded.`, 0 errors. If Task 4's model-override code doesn't compile because the
-actual `TaleWorlds.CampaignSystem` API differs from what was guessed, fix it now using the
-compiler's exact error message (wrong method name/signature) rather than the plan's snippet —
-the plan's C# is a best-effort based on Native's known patterns, not decompiled ground truth.
+Expected: `Build succeeded.`/`Oluşturma başarılı oldu.`, 0 errors. If Task 4's model-override code
+doesn't compile because the actual `TaleWorlds.CampaignSystem` API differs from what was guessed,
+fix it now using the compiler's exact error message (wrong method name/signature) rather than the
+plan's snippet — the plan's C# is a best-effort based on Native's known patterns, not decompiled
+ground truth.
 
-- [ ] **Step 2: Locate the build output and copy it into both `bin/` folders**
+Confirmed by an actual baseline build of this exact `.csproj`: `OutputPath` is already set to
+`..\..\bin\Win64_Shipping_Client\` and there's a post-build `xcopy` step that mirrors the output
+into `..\..\bin\Win64_Shipping_wEditor\` automatically. **No manual copy step is needed** — Step 1
+alone updates both shipped `bin/` folders directly. Do not add a manual find/copy step; if one
+seems necessary, the build configuration has changed and that's worth flagging, not working around.
 
-```bash
-find Source/SeljukEmpire/bin -iname "SeljukTactics.dll" 2>/dev/null
-```
-This finds the freshly-built DLL (likely under `Source/SeljukEmpire/bin/Release/netstandard2.0/` —
-confirm the exact path from the find output, since it depends on the `.csproj`'s configured output
-path). Copy it and its `.pdb` over both existing shipped copies:
-
-```bash
-cp "<path from find above>/SeljukTactics.dll" bin/Win64_Shipping_Client/SeljukTactics.dll
-cp "<path from find above>/SeljukTactics.pdb" bin/Win64_Shipping_Client/SeljukTactics.pdb
-cp "<path from find above>/SeljukTactics.dll" bin/Win64_Shipping_wEditor/SeljukTactics.dll
-cp "<path from find above>/SeljukTactics.pdb" bin/Win64_Shipping_wEditor/SeljukTactics.pdb
-```
-
-- [ ] **Step 3: Sanity-check the copied files**
+- [ ] **Step 2: Sanity-check the build touched both `bin/` folders**
 
 ```bash
-ls -la bin/Win64_Shipping_Client/SeljukTactics.dll bin/Win64_Shipping_wEditor/SeljukTactics.dll
+git status --short bin/
 ```
-Expected: both files exist with a modification timestamp from this step (not the original commit's
-timestamp), confirming the copy happened.
+Expected: `SeljukTactics.dll` and `SeljukTactics.pdb` show modified (` M`) under both
+`bin/Win64_Shipping_Client/` and `bin/Win64_Shipping_wEditor/`.
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 3: Commit**
 
 ```bash
 git add bin/Win64_Shipping_Client/SeljukTactics.dll bin/Win64_Shipping_Client/SeljukTactics.pdb bin/Win64_Shipping_wEditor/SeljukTactics.dll bin/Win64_Shipping_wEditor/SeljukTactics.pdb
