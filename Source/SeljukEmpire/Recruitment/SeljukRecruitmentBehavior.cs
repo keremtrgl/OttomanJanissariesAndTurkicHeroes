@@ -136,15 +136,11 @@ namespace SeljukEmpire.Recruitment
             if (settlement == null) return false;
 
             string sid = settlement.StringId;
-            if (sid.StartsWith("town_K1") || sid.StartsWith("town_K4") || sid.StartsWith("town_ES4") ||
-                sid.StartsWith("town_ES2") || sid.StartsWith("town_K6") || sid.StartsWith("town_A4") ||
-                sid.StartsWith("castle_K2") || sid.StartsWith("castle_K5") || sid.StartsWith("castle_K1") ||
-                sid.StartsWith("castle_A8") || sid.StartsWith("castle_ES3") ||
-                sid.StartsWith("village_K1_") || sid.StartsWith("village_K4_") || sid.StartsWith("village_ES4_") ||
-                sid.StartsWith("village_ES2_") || sid.StartsWith("village_K6_") || sid.StartsWith("village_A4_") ||
-                sid.StartsWith("castle_village_K2_") || sid.StartsWith("castle_village_K5_") ||
-                sid.StartsWith("castle_village_K1_") || sid.StartsWith("castle_village_A8_") ||
-                sid.StartsWith("castle_village_ES3_"))
+            if (sid.StartsWith("town_ES1") || sid.StartsWith("town_A2") ||
+                sid.StartsWith("castle_ES4") || sid.StartsWith("castle_A6") || sid.StartsWith("castle_ES5") ||
+                sid.StartsWith("village_ES1_") || sid.StartsWith("village_A2_") ||
+                sid.StartsWith("castle_village_ES4_") || sid.StartsWith("castle_village_A6_") ||
+                sid.StartsWith("castle_village_ES5_"))
             {
                 return true;
             }
