@@ -161,6 +161,9 @@
     <string id="seljuk_castle_malazgirt" text="Malazgirt Kalesi" />
     <string id="seljuk_culture_name" text="Selçuklu" />
     <string id="seljuk_culture_desc" text="Büyük Selçuklu Devleti'nin ve Anadolu uç beyliklerinin kurduğu Türkmen konfederasyonu. İkta sistemiyle beslenen atlı ordular, Nizamiye medreseleri ve İpek Yolu kervanlarıyla zenginleşen şehirler bu kültürün temelini oluşturur." />
+    <string id="seljuk_bonus_cavalry_wage" text="Selçuklu İkta Süvari Ekonomisi" />
+    <string id="seljuk_bonus_construction" text="Nizamiye İmar Teşkilatı" />
+    <string id="seljuk_debuff_siege_engineering" text="Zayıf Kuşatma Mühendisliği" />
     <string id="seljuk_ceri_name" text="Çeri Yayak" />
     <string id="seljuk_emir_muhafizi_name" text="Emîr Muhafızı" />
     <string id="seljuk_faction_name" text="Büyük Selçuklu Devleti" />

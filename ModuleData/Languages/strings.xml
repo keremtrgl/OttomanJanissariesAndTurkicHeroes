@@ -161,6 +161,9 @@
     <string id="seljuk_castle_malazgirt" text="Manzikert Castle" />
     <string id="seljuk_culture_name" text="Seljuk" />
     <string id="seljuk_culture_desc" text="A Turkmen confederation forged by the Great Seljuk state and the Anatolian frontier beyliks. Cities grow rich on iqta-fed cavalry armies, Nizamiye madrasas, and Silk Road caravans." />
+    <string id="seljuk_bonus_cavalry_wage" text="Seljuk Iqta Cavalry Economy" />
+    <string id="seljuk_bonus_construction" text="Nizamiye Public Works" />
+    <string id="seljuk_debuff_siege_engineering" text="Weak Siege Engineering Tradition" />
     <string id="seljuk_ceri_name" text="Seljuk Cheri Footman" />
     <string id="seljuk_emir_muhafizi_name" text="Emir's Bodyguard" />
     <string id="seljuk_faction_name" text="Great Seljuk Empire" />

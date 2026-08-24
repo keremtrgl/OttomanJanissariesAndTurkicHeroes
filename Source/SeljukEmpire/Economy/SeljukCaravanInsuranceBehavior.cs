@@ -85,6 +85,9 @@ namespace SeljukEmpire.Economy
         {
             if (_totalSilkRoadInvestedGold <= 0 || _settlementInvestments == null || _settlementInvestments.Count == 0) return;
 
+            // Seljuk-culture Silk Road caravan trade nets 15% more profit (Iqta-fed merchant networks)
+            bool isSeljukCaravanCulture = Hero.MainHero?.Clan?.Culture != null && Hero.MainHero.Clan.Culture.StringId == "seljuk";
+
             int totalDividend = 0;
             foreach (var kvp in _settlementInvestments)
             {
@@ -94,6 +97,10 @@ namespace SeljukEmpire.Economy
                     // Town prosperity modulates return on investment
                     float prosperityMultiplier = MBMath.ClampFloat(settlement.Town.Prosperity / 5000f, 0.75f, 1.4f);
                     float weeklyRoi = 0.045f * prosperityMultiplier; // Base ~4.5% weekly return
+                    if (isSeljukCaravanCulture)
+                    {
+                        weeklyRoi *= 1.15f; // Seljuk caravan trade-profit bonus
+                    }
                     int payout = (int)(kvp.Value * weeklyRoi);
                     totalDividend += payout;
                 }
