@@ -2,3 +2,5 @@ Source/SeljukEmpire/obj/
 .vs/
 *.user
 *.suo
+.worktrees/
+.superpowers/

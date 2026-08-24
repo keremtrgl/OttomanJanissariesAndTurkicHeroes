@@ -44,6 +44,14 @@
       </IncludedGameTypes>
     </XmlNode>
     <XmlNode>
+      <XmlName id="SPCultures" path="seljuk_culture"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
       <XmlName id="NPCCharacters" path="troops"/>
       <IncludedGameTypes>
         <GameType value="Campaign"/>
@@ -64,6 +72,14 @@
       <IncludedGameTypes>
         <GameType value="Campaign"/>
         <GameType value="CampaignStoryMode"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="Settlements" path="settlements"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
       </IncludedGameTypes>
     </XmlNode>
     <XmlNode>

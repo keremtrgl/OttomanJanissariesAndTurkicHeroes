@@ -6,7 +6,7 @@
            short_name="{=seljuk_faction_short}Selçuklular"
            title="{=seljuk_faction_title}Sultanlık"
            ruler_title="{=seljuk_ruler_title}Sultan"
-           culture="Culture.khuzait"
+           culture="Culture.seljuk"
            owner="Hero.lord_seljuk_alp_arslan"
            banner_key="11.144.144.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0"
            primary_banner_color="0xFF168B8D"
@@ -15,10 +15,10 @@
            color2="0xFFD4AF37"
            settlement_banner_mesh="encounter_flag_a"
            flag_mesh="info_screen_flags_b"
-           initial_home_settlement="Settlement.town_K1"
+           initial_home_settlement="Settlement.town_ES1"
            text="{=seljuk_faction_desc}Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir.">
     <relationships>
-      <relationship kingdom="Kingdom.empire" value="-20" />
+      <relationship kingdom="Kingdom.empire" value="0" />
       <relationship kingdom="Kingdom.aserai" value="10" />
       <relationship kingdom="Kingdom.khuzait" value="15" />
     </relationships>
