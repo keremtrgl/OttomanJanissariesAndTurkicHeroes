@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <NPCCharacters>
-  <NPCCharacter id="lord_seljuk_alp_arslan" name="{=lord_alp_arslan}Sultan Alp Arslan" age="42" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+  <NPCCharacter id="lord_seljuk_alp_arslan" name="{=lord_alp_arslan}Sultan Alp Arslan" age="46" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="0011880FD13C100D375A76A3977895388783B3188494663232AB272797D235A700068AE6067576B50000037F0000000F00000037049140010000000000781141" age="42" weight="0.75" build="0.85" />
       <hair_tags>
@@ -36,7 +36,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="lord_seljuk_terken_hatun" name="{=lord_terken_hatun}Terken Hatun" age="38" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true" is_female="true">
+  <NPCCharacter id="lord_seljuk_terken_hatun" name="{=lord_terken_hatun}Terken Hatun" age="40" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true" is_female="true">
     <face>
       <BodyProperties version="4" key="001C900580BC3004946A9B5AA87AD8B3C9B53ACB38775717464D46BA9D9767A50004AB1804BB8A6D0000037F0000000F00000037049140010000000001E00000" age="38" weight="0.45" build="0.50" />
       <hair_tags>
@@ -501,7 +501,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="hayme_ana" name="{=hero_hayme_ana_name}Hayme Ana" age="55" voice="softspoken" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true" is_female="true">
+  <NPCCharacter id="hayme_ana" name="{=hero_hayme_ana_name}Hayme Ana" age="74" voice="softspoken" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true" is_female="true">
     <face>
       <BodyProperties version="4" key="001C900580BC3004946A9B5AA87AD8B3C9B53ACB38775717464D46BA9D9767A50004AB1804BB8A6D0000037F0000000F00000037049140010000000001E00000" age="55" weight="0.50" build="0.50" />
       <hair_tags>
@@ -529,7 +529,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="ertugrul_gazi" name="{=hero_ertugrul_name}Ertuğrul Gazi" age="34" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+  <NPCCharacter id="ertugrul_gazi" name="{=hero_ertugrul_name}Ertuğrul Gazi" age="48" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="0005A80E56BC15029267B45D98B68DA6AA3A478AE653CE59797872993A33D5B4000C63B80CD674AA0000037F0000000F00000037049140010000000001907000" age="34" weight="0.75" build="0.85" />
       <hair_tags>
@@ -565,7 +565,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="halime_hatun" name="{=hero_halime_name}Halime Hatun" age="30" voice="softspoken" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true" is_female="true">
+  <NPCCharacter id="halime_hatun" name="{=hero_halime_name}Halime Hatun" age="44" voice="softspoken" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true" is_female="true">
     <face>
       <BodyProperties version="4" key="001C900580BC3004946A9B5AA87AD8B3C9B53ACB38775717464D46BA9D9767A50004AB1804BB8A6D0000037F0000000F00000037049140010000000001E00000" age="30" weight="0.45" build="0.45" />
       <hair_tags>
@@ -598,7 +598,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="gundogdu_bey" name="{=hero_gundogdu_name}Gündoğdu Bey" age="37" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true">
+  <NPCCharacter id="gundogdu_bey" name="{=hero_gundogdu_name}Gündoğdu Bey" age="52" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="0016200140BC140143FBBB8747BD9C66A9446A946C85E738A778E765678CA9B4000BD8350BB5C64C0000037F0000000F00000037049140010000000001903000" age="37" weight="0.75" build="0.85" />
       <hair_tags>
@@ -634,7 +634,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="sungur_tekin" name="{=hero_sungur_name}Sungur Tekin" age="36" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
+  <NPCCharacter id="sungur_tekin" name="{=hero_sungur_name}Sungur Tekin" age="50" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="003F880FC03C314064666A926C75C85988588A453C598D6A663AC7AB7D9B6B7A00035AC80396C8950000037F0000000F00000037049140010000000000283140" age="36" weight="0.70" build="0.80" />
       <hair_tags>
@@ -670,7 +670,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="gunduz_alp" name="{=hero_gunduz_name}Gündüz Alp" age="24" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+  <NPCCharacter id="gunduz_alp" name="{=hero_gunduz_name}Gündüz Alp" age="26" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="0011880FD13C100D375A76A3977895388783B3188494663232AB272797D235A700068AE6067576B50000037F0000000F00000037049140010000000000781141" age="24" weight="0.75" build="0.85" />
       <hair_tags>
@@ -706,7 +706,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="savci_bey" name="{=hero_savci_name}Savcı Bey" age="22" voice="earnest" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+  <NPCCharacter id="savci_bey" name="{=hero_savci_name}Savcı Bey" age="23" voice="earnest" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="000C5C06407C100D445D46A9BA9361467C67A8684A494AB868898A7575D9673300073A37079B6A780000037F0000000F00000037049140010000000000503003" age="22" weight="0.65" build="0.75" />
       <hair_tags>
@@ -742,7 +742,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="osman_gazi" name="{=hero_osman_name}Osman Gazi" age="20" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+  <NPCCharacter id="osman_gazi" name="{=hero_osman_name}Osman Gazi" age="19" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="00055C06407C300D44E41771225C99957C67A8684A494AB868898A7575D9673300076A39079B6A780000037F0000000F00000037049140010000000000503000" age="20" weight="0.75" build="0.85" />
       <hair_tags>
@@ -922,7 +922,7 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="dundar_the_hawk" name="{=hero_dundar_name}Dündar Alp" age="21" voice="earnest" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
+  <NPCCharacter id="dundar_the_hawk" name="{=hero_dundar_name}Dündar Alp" age="46" voice="earnest" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
     <face>
       <BodyProperties version="4" key="000C5C06407C100D445D46A9BA9361467C67A8684A494AB868898A7575D9673300073A37079B6A780000037F0000000F00000037049140010000000000503003" age="21" weight="0.65" build="0.75" />
       <hair_tags>
