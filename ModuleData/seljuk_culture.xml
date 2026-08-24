@@ -4,6 +4,8 @@
 		id="seljuk"
 		name="{=seljuk_culture_name}Selçuklu"
 		is_main_culture="true"
+		start_point_position_x="661.19"
+		start_point_position_y="276.47"
 		color="0xFF168B8D"
 		color2="0xFFD4AF37"
 		elite_basic_troop="NPCCharacter.seljuk_ghulam_recruit"
@@ -22,7 +24,7 @@
 		rebels_party_template="PartyTemplate.rebels_khuzait_template"
 		vassal_reward_party_template="PartyTemplate.vassal_reward_troops_khuzait"
 		encounter_background_mesh="encounter_khuzait"
-		faction_banner_key="11.144.144.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0"
+		faction_banner_key="11.142.142.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0"
 		text="{=seljuk_culture_desc}Büyük Selçuklu Devleti'nin ve Anadolu uç beyliklerinin kurduğu Türkmen konfederasyonu. İkta sistemiyle beslenen atlı ordular, Nizamiye medreseleri ve İpek Yolu kervanlarıyla zenginleşen şehirler bu kültürün temelini oluşturur."
 		tournament_master="NPCCharacter.tournament_master_khuzait"
 		villager="NPCCharacter.villager_khuzait"
@@ -85,5 +87,173 @@
 			<item id="Item.khuzait_sword_1_t2" />
 			<item id="Item.khuzait_sword_2_t3" />
 		</banner_bearer_replacement_weapons>
+		<!--
+		 Every is_main_culture="true" culture in native SandBoxCore/ModuleData/spcultures.xml
+		 (empire, aserai, sturgia, vlandia, battania, khuzait) has notable_templates, lord_templates,
+		 rebellion_hero_templates, male_names, female_names, clan_names and possible_clan_banner_icon_ids
+		 fully populated. Culture.seljuk had none of these, so the engine crashed hard while populating
+		 the world's notable pool right after finishing the native cultures (it has no template list to
+		 draw Seljuk notables/names from). This block fills in that required data.
+		-->
+		<notable_templates>
+			<template name="NPCCharacter.spc_notable_seljuk_merchant_1" />
+			<template name="NPCCharacter.spc_notable_seljuk_0b" />
+			<template name="NPCCharacter.spc_notable_seljuk_1" />
+			<template name="NPCCharacter.spc_notable_seljuk_1b" />
+			<template name="NPCCharacter.spc_notable_seljuk_1c" />
+			<template name="NPCCharacter.spc_notable_seljuk_2" />
+			<template name="NPCCharacter.spc_notable_seljuk_2b" />
+			<template name="NPCCharacter.spc_notable_seljuk_3" />
+			<template name="NPCCharacter.spc_notable_seljuk_4" />
+			<template name="NPCCharacter.spc_seljuk_gangleader_1" />
+			<template name="NPCCharacter.spc_seljuk_gangleader_2" />
+			<template name="NPCCharacter.spc_seljuk_gangleader_3" />
+			<template name="NPCCharacter.spc_seljuk_artisan_1" />
+			<template name="NPCCharacter.spc_seljuk_artisan_2" />
+			<template name="NPCCharacter.spc_seljuk_artisan_3" />
+			<template name="NPCCharacter.spc_seljuk_rural_notable_1" />
+			<template name="NPCCharacter.spc_seljuk_rural_notable_2" />
+			<template name="NPCCharacter.spc_seljuk_headman_1" />
+			<template name="NPCCharacter.spc_seljuk_headman_2" />
+			<template name="NPCCharacter.spc_seljuk_headman_3" />
+		</notable_templates>
+		<lord_templates>
+			<template name="NPCCharacter.spc_seljuk_lord_template_0" />
+			<template name="NPCCharacter.spc_seljuk_lord_template_1" />
+			<template name="NPCCharacter.spc_seljuk_lord_template_2" />
+			<template name="NPCCharacter.spc_seljuk_lord_template_3" />
+		</lord_templates>
+		<rebellion_hero_templates>
+			<template name="NPCCharacter.spc_seljuk_lord_template_0" />
+			<template name="NPCCharacter.spc_seljuk_lord_template_1" />
+			<template name="NPCCharacter.spc_seljuk_lord_template_2" />
+			<template name="NPCCharacter.spc_seljuk_lord_template_3" />
+		</rebellion_hero_templates>
+		<tournament_team_templates_one_participant>
+			<template name="NPCCharacter.tournament_template_khuzait_one_participant_set_v1" />
+			<template name="NPCCharacter.tournament_template_khuzait_one_participant_set_v2" />
+			<template name="NPCCharacter.tournament_template_khuzait_one_participant_set_v3" />
+		</tournament_team_templates_one_participant>
+		<tournament_team_templates_two_participant>
+			<template name="NPCCharacter.tournament_template_khuzait_two_participant_set_v1" />
+			<template name="NPCCharacter.tournament_template_khuzait_two_participant_set_v2" />
+			<template name="NPCCharacter.tournament_template_khuzait_two_participant_set_v3" />
+		</tournament_team_templates_two_participant>
+		<tournament_team_templates_four_participant>
+			<template name="NPCCharacter.tournament_template_khuzait_four_participant_set_v1" />
+			<template name="NPCCharacter.tournament_template_khuzait_four_participant_set_v2" />
+			<template name="NPCCharacter.tournament_template_khuzait_four_participant_set_v3" />
+		</tournament_team_templates_four_participant>
+		<basic_mercenary_troops>
+			<template name="NPCCharacter.eastern_mercenary" />
+			<template name="NPCCharacter.sword_sisters_sister_t3" />
+		</basic_mercenary_troops>
+		<default_policies>
+			<policy id="policy_feudal_inheritance" />
+		</default_policies>
+		<cultural_feats>
+			<feat id="seljuk_cheaper_recruits_mounted" />
+			<feat id="seljuk_increased_construction_speed" />
+			<feat id="seljuk_increased_caravan_profit" />
+		</cultural_feats>
+		<possible_clan_banner_icon_ids>
+			<icon id="900" />
+			<icon id="901" />
+			<icon id="902" />
+			<icon id="903" />
+			<icon id="904" />
+			<icon id="905" />
+			<icon id="906" />
+			<icon id="907" />
+			<icon id="908" />
+			<icon id="909" />
+			<icon id="910" />
+			<icon id="911" />
+			<icon id="912" />
+		</possible_clan_banner_icon_ids>
+		<male_names>
+			<name name="{=seljuk_mn_1}Alparslan" />
+			<name name="{=seljuk_mn_2}Tuğrul" />
+			<name name="{=seljuk_mn_3}Çağrı" />
+			<name name="{=seljuk_mn_4}Süleyman" />
+			<name name="{=seljuk_mn_5}Kılıçarslan" />
+			<name name="{=seljuk_mn_6}Sencer" />
+			<name name="{=seljuk_mn_7}Berkyaruk" />
+			<name name="{=seljuk_mn_8}Mahmud" />
+			<name name="{=seljuk_mn_9}Toğan" />
+			<name name="{=seljuk_mn_10}Bozkurt" />
+			<name name="{=seljuk_mn_11}Ertuğrul" />
+			<name name="{=seljuk_mn_12}Osman" />
+			<name name="{=seljuk_mn_13}Orhan" />
+			<name name="{=seljuk_mn_14}Turgut" />
+			<name name="{=seljuk_mn_15}Yavuz" />
+			<name name="{=seljuk_mn_16}Kutalmış" />
+			<name name="{=seljuk_mn_17}Danişmend" />
+			<name name="{=seljuk_mn_18}Artuk" />
+			<name name="{=seljuk_mn_19}Saltuk" />
+			<name name="{=seljuk_mn_20}Çaka" />
+			<name name="{=seljuk_mn_21}Mengücek" />
+			<name name="{=seljuk_mn_22}Karaman" />
+			<name name="{=seljuk_mn_23}Yusuf" />
+			<name name="{=seljuk_mn_24}İbrahim" />
+			<name name="{=seljuk_mn_25}Hasan" />
+			<name name="{=seljuk_mn_26}Hüseyin" />
+			<name name="{=seljuk_mn_27}Timur" />
+			<name name="{=seljuk_mn_28}Turan" />
+			<name name="{=seljuk_mn_29}Sancar" />
+			<name name="{=seljuk_mn_30}Gazi" />
+		</male_names>
+		<female_names>
+			<name name="{=seljuk_fn_1}Terken" />
+			<name name="{=seljuk_fn_2}Zübeyde" />
+			<name name="{=seljuk_fn_3}Gevher" />
+			<name name="{=seljuk_fn_4}Mahperi" />
+			<name name="{=seljuk_fn_5}Hafsa" />
+			<name name="{=seljuk_fn_6}Halime" />
+			<name name="{=seljuk_fn_7}Ayşe" />
+			<name name="{=seljuk_fn_8}Fatma" />
+			<name name="{=seljuk_fn_9}Hatice" />
+			<name name="{=seljuk_fn_10}Zeynep" />
+			<name name="{=seljuk_fn_11}Emine" />
+			<name name="{=seljuk_fn_12}Ümmühan" />
+			<name name="{=seljuk_fn_13}Nur" />
+			<name name="{=seljuk_fn_14}Kamer" />
+			<name name="{=seljuk_fn_15}Gülnar" />
+			<name name="{=seljuk_fn_16}Şirin" />
+			<name name="{=seljuk_fn_17}Banu" />
+			<name name="{=seljuk_fn_18}Aslı" />
+			<name name="{=seljuk_fn_19}Elif" />
+			<name name="{=seljuk_fn_20}Meryem" />
+			<name name="{=seljuk_fn_21}Rukiye" />
+			<name name="{=seljuk_fn_22}Nefise" />
+			<name name="{=seljuk_fn_23}Devlet" />
+			<name name="{=seljuk_fn_24}Şah" />
+			<name name="{=seljuk_fn_25}Hurşide" />
+		</female_names>
+		<clan_names>
+			<name name="{=seljuk_cn_1}Kayı" />
+			<name name="{=seljuk_cn_2}Bayat" />
+			<name name="{=seljuk_cn_3}Alka Evli" />
+			<name name="{=seljuk_cn_4}Kara Evli" />
+			<name name="{=seljuk_cn_5}Yazır" />
+			<name name="{=seljuk_cn_6}Döğer" />
+			<name name="{=seljuk_cn_7}Dodurga" />
+			<name name="{=seljuk_cn_8}Avşar" />
+			<name name="{=seljuk_cn_9}Kızık" />
+			<name name="{=seljuk_cn_10}Beğdili" />
+			<name name="{=seljuk_cn_11}Karkın" />
+			<name name="{=seljuk_cn_12}Bayındır" />
+			<name name="{=seljuk_cn_13}Peçenek" />
+			<name name="{=seljuk_cn_14}Çavuldur" />
+			<name name="{=seljuk_cn_15}Çepni" />
+			<name name="{=seljuk_cn_16}Salur" />
+			<name name="{=seljuk_cn_17}Eymür" />
+			<name name="{=seljuk_cn_18}Alayundlu" />
+			<name name="{=seljuk_cn_19}Yüreğir" />
+			<name name="{=seljuk_cn_20}İğdir" />
+			<name name="{=seljuk_cn_21}Büğdüz" />
+			<name name="{=seljuk_cn_22}Yıva" />
+			<name name="{=seljuk_cn_23}Kınık" />
+		</clan_names>
 	</Culture>
 </SPCultures>

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EquipmentRosters>
+	<EquipmentRoster
+		id="child_template_seljuk_noble_male"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_steppe_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.tassled_southern_robes" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsChildEquipmentTemplate="true"
+			IsFemaleTemplate="false"
+			IsLordTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="child_template_seljuk_noble_female"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_steppe_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.tassled_southern_robes" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.bandit_envelope_dress_v1" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsChildEquipmentTemplate="true"
+			IsFemaleTemplate="true"
+			IsLordTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="child_template_seljuk_townsman_male"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.tundra_tunic" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_fur_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsChildEquipmentTemplate="true"
+			IsFemaleTemplate="false"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="child_template_seljuk_townsman_female"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_fur_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsChildEquipmentTemplate="true"
+			IsFemaleTemplate="true"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="child_template_seljuk_villager_male"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_fur_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.torn_bandit_clothes" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsChildEquipmentTemplate="true"
+			IsFemaleTemplate="false"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="child_template_seljuk_villager_female"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.fur_armor_with_strap" />
+			<Equipment
+				slot="Leg"
+				id="Item.leather_shoes" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.torn_bandit_clothes" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsChildEquipmentTemplate="true"
+			IsFemaleTemplate="true"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="teenager_template_seljuk_noble_male"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.merchants_fur_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.plumed_fur_lined_helmet" />
+			<Equipment
+				slot="Body"
+				id="Item.leather_lamellar_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.leather_lamellar_shoulders" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.steppe_leather_vambraces" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.eastern_lamellar_armor" />
+			<Equipment
+				slot="Cape"
+				id="Item.lamellar_shoulders" />
+			<Equipment
+				slot="Leg"
+				id="Item.eastern_leather_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.decorated_imperial_gauntlets" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.aserai_civil_a" />
+			<Equipment
+				slot="Leg"
+				id="Item.eastern_leather_boots" />
+		</EquipmentSet>
+		<Flags
+			IsTeenagerEquipmentTemplate="true"
+			IsFemaleTemplate="false"
+			IsLordTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="teenager_template_seljuk_noble_female"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.upturned_fur_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.belted_leather_cuirass" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Cape"
+				id="Item.bolted_leather_strips" />
+		</EquipmentSet>
+		<Flags
+			IsTeenagerEquipmentTemplate="true"
+			IsFemaleTemplate="true"
+			IsLordTemplate="true" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="teenager_template_seljuk_townsman_male"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.aserai_civil_a" />
+			<Equipment
+				slot="Leg"
+				id="Item.eastern_leather_boots" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+			<Equipment
+				slot="Body"
+				id="Item.crude_leather_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.eastern_wrapped_armguards" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.merchants_fur_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+		</EquipmentSet>
+		<Flags
+			IsTeenagerEquipmentTemplate="true"
+			IsFemaleTemplate="false"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="teenager_template_seljuk_townsman_female"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.upturned_fur_cap" />
+			<Equipment
+				slot="Body"
+				id="Item.belted_leather_cuirass" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Cape"
+				id="Item.bolted_leather_strips" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.steppe_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsTeenagerEquipmentTemplate="true"
+			IsFemaleTemplate="true"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="teenager_template_seljuk_villager_male"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.merchants_fur_coat" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Head"
+				id="Item.eastern_cap" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.nomad_padded_hood" />
+			<Equipment
+				slot="Body"
+				id="Item.crude_leather_armor" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.eastern_wrapped_armguards" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_leather_waistcoat" />
+			<Equipment
+				slot="Cape"
+				id="Item.khuzait_leather_pauldron" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.studded_vambraces" />
+		</EquipmentSet>
+		<Flags
+			IsTeenagerEquipmentTemplate="true"
+			IsFemaleTemplate="false"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+	<EquipmentRoster
+		id="teenager_template_seljuk_villager_female"
+		culture="Culture.seljuk">
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Head"
+				id="Item.fur_hat" />
+			<Equipment
+				slot="Body"
+				id="Item.bandit_fur_b" />
+			<Equipment
+				slot="Leg"
+				id="Item.highland_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.strapped_leather_bracers" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.studded_steppe_leather" />
+			<Equipment
+				slot="Leg"
+				id="Item.khuzait_curved_boots" />
+			<Equipment
+				slot="Gloves"
+				id="Item.steppe_leather_vambraces" />
+		</EquipmentSet>
+		<EquipmentSet
+			equipmentType="Civilian">
+			<Equipment
+				slot="Body"
+				id="Item.khuzait_dress" />
+			<Equipment
+				slot="Leg"
+				id="Item.southern_moccasins" />
+		</EquipmentSet>
+		<Flags
+			IsTeenagerEquipmentTemplate="true"
+			IsFemaleTemplate="true"
+			IsLordTemplate="false" />
+	</EquipmentRoster>
+</EquipmentRosters>

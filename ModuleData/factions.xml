@@ -18,7 +18,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF168B8D"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0" />
 
   <!-- 2. Nizamiye Divanı ve İdare-i Saltanat (Hâce Nizamülmülk) -->
   <Faction id="clan_nizamiye"
@@ -33,7 +33,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF0E7490"
            color2="0xFFEAB308"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.505.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.505.143.143.512.512.768.768.1.0.0" />
 
   <!-- 3. Danişmendliler Gaza Beyliği (Melik Danişmend Gazi) -->
   <Faction id="clan_danismend"
@@ -48,7 +48,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF0D9488"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.301.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.301.143.143.512.512.768.768.1.0.0" />
 
   <!-- 4. Artuklular Uç Beyliği (Artuk Bey) -->
   <Faction id="clan_artuk"
@@ -63,7 +63,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF148899"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.302.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.302.143.143.512.512.768.768.1.0.0" />
 
   <!-- 5. Mengücekliler Melikliği (Mengücek Gazi) -->
   <Faction id="clan_mengucek"
@@ -78,7 +78,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF0891B2"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.303.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.303.143.143.512.512.768.768.1.0.0" />
 
   <!-- 6. Saltuklular Uç Beyliği (Emir Saltuk) -->
   <Faction id="clan_saltuk"
@@ -93,7 +93,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF1E3A8A"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.304.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.304.143.143.512.512.768.768.1.0.0" />
 
   <!-- 7. Çaka Beyliği ve Donanma-yı Hümayun (Çaka Bey) -->
   <Faction id="clan_caka"
@@ -108,7 +108,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF0284C7"
            color2="0xFFFFFFFF"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.401.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.401.143.143.512.512.768.768.1.0.0" />
 
   <!-- 8. Ahlatşahlar Ermenşahlar Beyliği (Sökmen el-Kutbî) -->
   <Faction id="clan_ahlatsah"
@@ -123,7 +123,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF0F766E"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.305.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.305.143.143.512.512.768.768.1.0.0" />
 
   <!-- 9. Karamanoğulları Türkmen Beyliği (Kerimüddin Karaman Bey) -->
   <Faction id="clan_karaman"
@@ -138,7 +138,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF0369A1"
            color2="0xFFFFD700"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.306.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.306.143.143.512.512.768.768.1.0.0" />
 
   <!-- 10. Kayı Boyu ve Söğüt Uç Gazileri (Ertuğrul Gazi) -->
   <Faction id="clan_kayi_oguz"
@@ -153,7 +153,7 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF1E293B"
            color2="0xFFFDE047"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.501.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.501.143.143.512.512.768.768.1.0.0" />
 
   <!-- 11. Ahilik Teşkilatı ve Fütüvvet Ocağı (Ahi Evran) -->
   <Faction id="clan_ahi_order"
@@ -168,5 +168,5 @@
            settlement_banner_mesh="encounter_flag_a"
            color="0xFF065F46"
            color2="0xFFD4AF37"
-           banner_key="11.144.144.1536.1536.768.768.1.0.0.504.143.143.512.512.768.768.1.0.0" />
+           banner_key="11.142.142.1536.1536.768.768.1.0.0.504.143.143.512.512.768.768.1.0.0" />
 </Factions>
