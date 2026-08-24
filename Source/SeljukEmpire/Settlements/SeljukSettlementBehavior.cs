@@ -119,6 +119,8 @@ namespace SeljukEmpire.Settlements
                 // =====================================================================
                 SetupTown("town_ES1", "clan_seljuk_royal", "{=seljuk_town_danustica}Danustica", 7800f);
                 SetupTown("town_A2", "clan_kayi_oguz", "{=seljuk_town_husnfulq}Husn Fulq", 6600f);
+                SetupTown("town_ES2", "clan_seljuk_royal", "{=seljuk_town_isfahan}İsfahan", 7200f);
+                SetupTown("town_A4", "clan_seljuk_royal", "{=seljuk_town_nisabur}Nişabur", 6800f);
 
                 // =====================================================================
                 // 2. CASTLES (KALELER)
@@ -126,6 +128,7 @@ namespace SeljukEmpire.Settlements
                 SetupCastle("castle_ES4", "clan_danismend", "{=seljuk_castle_lavenia}Lavenia Kalesi");
                 SetupCastle("castle_A6", "clan_artuk", "{=seljuk_castle_shibalzumr}Şibal Zümr Kalesi");
                 SetupCastle("castle_ES5", "clan_ahlatsah", "{=seljuk_castle_morenia}Morenia Kalesi");
+                SetupCastle("castle_A8", "clan_seljuk_royal", "{=seljuk_castle_rey}Rey Kalesi");
 
                 // =====================================================================
                 // 3. VILLAGES (KÖYLER)
@@ -143,6 +146,20 @@ namespace SeljukEmpire.Settlements
                 SetupVillage("castle_village_ES4_1", "{=seljuk_vil_lavenia}Lavenia");
                 SetupVillage("castle_village_A6_1", "{=seljuk_vil_shibalzumr}Şibal Zümr");
                 SetupVillage("castle_village_ES5_1", "{=seljuk_vil_morenia}Morenia");
+
+                // İsfahan Villages
+                SetupVillage("village_ES2_2", "{=seljuk_vil_cuybare}Cûybâre");
+                SetupVillage("village_ES2_3", "{=seljuk_vil_lenban}Lenban");
+                SetupVillage("village_ES2_4", "{=seljuk_vil_hasanabad}Hasanabad");
+
+                // Nişabur Villages
+                SetupVillage("village_A4_1", "{=seljuk_vil_bostanabad}Bostanabad");
+                SetupVillage("village_A4_2", "{=seljuk_vil_sadyah}Şadyah");
+                SetupVillage("village_A4_4", "{=seljuk_vil_kohandiz}Kohandiz");
+
+                // Rey Kalesi Villages
+                SetupVillage("castle_village_A8_1", "{=seljuk_vil_cesmedeh}Çeşmedeh");
+                SetupVillage("castle_village_A8_2", "{=seljuk_vil_veramin}Veramin");
             }
             catch (Exception)
             {

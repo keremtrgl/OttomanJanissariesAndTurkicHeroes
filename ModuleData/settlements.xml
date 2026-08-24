@@ -37,4 +37,29 @@
   <!-- MORENİA KALESİ (Ahlatşahlar) -->
   <Settlement id="castle_ES5" name="{=seljuk_castle_morenia}Morenia Kalesi" owner="Faction.clan_ahlatsah" culture="Culture.seljuk" />
   <Settlement id="castle_village_ES5_1" name="{=seljuk_vil_morenia}Morenia" culture="Culture.seljuk" />
+
+  <!-- İSFAHAN (Sultanlık Hassa Toprağı - mevcut 5 yerleşkeye kuzeybatıdan bitişik) -->
+  <Settlement id="town_ES2" name="{=seljuk_town_isfahan}İsfahan" owner="Faction.clan_seljuk_royal" culture="Culture.seljuk">
+    <Components>
+      <Town id="town_comp_ES2" is_castle="false" prosperity="7200" />
+    </Components>
+  </Settlement>
+  <Settlement id="village_ES2_2" name="{=seljuk_vil_cuybare}Cûybâre" culture="Culture.seljuk" />
+  <Settlement id="village_ES2_3" name="{=seljuk_vil_lenban}Lenban" culture="Culture.seljuk" />
+  <Settlement id="village_ES2_4" name="{=seljuk_vil_hasanabad}Hasanabad" culture="Culture.seljuk" />
+
+  <!-- REY KALESİ (Sultanlık Hassa Toprağı - mevcut yerleşkelere kuzeyden bitişik) -->
+  <Settlement id="castle_A8" name="{=seljuk_castle_rey}Rey Kalesi" owner="Faction.clan_seljuk_royal" culture="Culture.seljuk" />
+  <Settlement id="castle_village_A8_1" name="{=seljuk_vil_cesmedeh}Çeşmedeh" culture="Culture.seljuk" />
+  <Settlement id="castle_village_A8_2" name="{=seljuk_vil_veramin}Veramin" culture="Culture.seljuk" />
+
+  <!-- NİŞABUR (Sultanlık Hassa Toprağı - Rey Kalesi üzerinden mevcut topraklara bitişik) -->
+  <Settlement id="town_A4" name="{=seljuk_town_nisabur}Nişabur" owner="Faction.clan_seljuk_royal" culture="Culture.seljuk">
+    <Components>
+      <Town id="town_comp_A4" is_castle="false" prosperity="6800" />
+    </Components>
+  </Settlement>
+  <Settlement id="village_A4_1" name="{=seljuk_vil_bostanabad}Bostanabad" culture="Culture.seljuk" />
+  <Settlement id="village_A4_2" name="{=seljuk_vil_sadyah}Şadyah" culture="Culture.seljuk" />
+  <Settlement id="village_A4_4" name="{=seljuk_vil_kohandiz}Kohandiz" culture="Culture.seljuk" />
 </Settlements>
