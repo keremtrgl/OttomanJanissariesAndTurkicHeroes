@@ -36,7 +36,11 @@
            short_name="{=seljuk_byzantine_short}Bizans"
            title="{=seljuk_byzantine_title}Bizans İmparatorluğu"
            ruler_title="{=seljuk_byzantine_ruler}İmparator"
-           text="{=seljuk_byzantine_desc}Malazgirt sonrası Anadolu'da direnen Bizans'ın güney kanadı. Büyük Selçuklu Devleti'nin en amansız rakibi; Konya ve İsfahan'a doğru genişleyen Türkmen boylarına karşı sınır kalelerini elinde tutmaya çalışır.">
+           text="{=seljuk_byzantine_desc}Malazgirt sonrası Anadolu'da direnen Bizans'ın güney kanadı. Büyük Selçuklu Devleti'nin en amansız rakibi; Konya ve İsfahan'a doğru genişleyen Türkmen boylarına karşı sınır kalelerini elinde tutmaya çalışır."
+           primary_banner_color="0xFF5D1A66"
+           secondary_banner_color="0xFFD4AF37"
+           color="0xFF5D1A66"
+           color2="0xFFD4AF37">
   </Kingdom>
 
   <!-- ABBASİ HALİFELİĞİ (Native: Sultanate of the Aserai / aserai) -->

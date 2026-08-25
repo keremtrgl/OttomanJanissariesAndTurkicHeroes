@@ -52,6 +52,14 @@
       </IncludedGameTypes>
     </XmlNode>
     <XmlNode>
+      <XmlName id="SPCultures" path="rival_culture_names"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
       <XmlName id="NPCCharacters" path="troops"/>
       <IncludedGameTypes>
         <GameType value="Campaign"/>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SPCultures>
+  <!-- Character-creation culture-select screen shows the raw Culture name, not the Kingdom
+       name - Culture.aserai/Culture.sturgia each belong to exactly one kingdom of ours, so
+       renaming them here is safe and keeps the two screens consistent. Culture.empire is
+       deliberately NOT touched here: it is shared by empire/empire_s/empire_w (Western/
+       Southern/Northern Empire), and only empire_s was renamed to Byzantine - renaming the
+       shared culture would mislabel the other two successor states as "Byzantine" too. -->
+  <Culture id="aserai" name="{=abb_culture_name}Abbasi" />
+  <Culture id="sturgia" name="{=geo_culture_name}Gürcü" />
+</SPCultures>
