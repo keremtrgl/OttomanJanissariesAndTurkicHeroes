@@ -393,7 +393,9 @@
     <string id="byz_house_argyros" text="House Argyros" />
     <string id="byz_house_tarchaneiotes" text="House Tarchaneiotes" />
     <string id="byz_house_kekaumenos" text="House Kekaumenos" />
-    <string id="byz_ln_romanos_diogenes" text="Romanos Diogenes" />
+    <string id="byz_ln_eudokia" text="Eudokia Makrembolitissa" />
+    <string id="abb_culture_name" text="Abbasid" />
+    <string id="geo_culture_name" text="Georgian" />
     <string id="byz_ln_nikephoros_botaneiates" text="Nikephoros Botaneiates" />
     <string id="byz_ln_andronikos_doukas" text="Andronikos Doukas" />
     <string id="byz_ln_alexios_komnenos" text="Alexios Komnenos" />

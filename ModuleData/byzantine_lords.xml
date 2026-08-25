@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
   <!-- Bizans lordlarinin gercek tarihi isimleri (Manzikert donemi, 1071) - yuz/ekipman/beceri Native, sadece isim degisir -->
-  <NPCCharacter id="lord_1_14" name="{=byz_ln_romanos_diogenes}Romanos Diogenes" />
+  <NPCCharacter id="lord_1_14" name="{=byz_ln_eudokia}Eudokia Makrembolitissa" />
   <NPCCharacter id="lord_1_15" name="{=byz_ln_nikephoros_botaneiates}Nikephoros Botaneiates" />
   <NPCCharacter id="lord_1_16" name="{=byz_ln_maria_alania}Maria of Alania" />
   <NPCCharacter id="lord_1_17" name="{=byz_ln_andronikos_doukas}Andronikos Dukas" />
