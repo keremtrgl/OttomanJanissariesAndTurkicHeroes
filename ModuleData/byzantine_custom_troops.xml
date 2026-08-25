@@ -33,6 +33,11 @@
         <equipment slot="Head" id="Item.laced_cloth_coif" />
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.imperial_spear_t2" />
+        <equipment slot="Head" id="Item.imperial_cloth_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets>
       <upgrade_target id="NPCCharacter.byz2_skutatos" />
@@ -60,6 +65,14 @@
         <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_1_t2" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_b" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_skutatos" /></upgrade_targets>
   </NPCCharacter>
@@ -79,6 +92,13 @@
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
         <equipment slot="Head" id="Item.imperial_leather_coif" />
         <equipment slot="Body" id="Item.imperial_padded_cloth" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.hunting_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.imperial_cloth_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_toxotes" /></upgrade_targets>
@@ -102,6 +122,14 @@
         <equipment slot="Body" id="Item.empire_warrior_padded_armor_c" />
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_d" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_prokoursatores" /></upgrade_targets>
   </NPCCharacter>
@@ -121,6 +149,14 @@
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
         <equipment slot="Head" id="Item.imperial_mail_coif" />
         <equipment slot="Body" id="Item.imperial_mail_over_leather" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.bound_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.imperial_mail_over_stripped_leather" />
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -145,6 +181,14 @@
         <equipment slot="Body" id="Item.imperial_lamellar" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_4_t4" />
+        <equipment slot="Item1" id="Item.heavy_oval_shield" />
+        <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tagmatic_skutatos" /></upgrade_targets>
   </NPCCharacter>
@@ -164,6 +208,13 @@
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
         <equipment slot="Head" id="Item.imperial_open_mail_coif" />
         <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.empire_sword_2_t3" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tagmatic_toxotes" /></upgrade_targets>
@@ -187,6 +238,14 @@
         <equipment slot="Body" id="Item.imperial_scale_armor" />
         <equipment slot="Horse" id="Item.t2_empire_horse" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.imperial_open_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_koursores" /></upgrade_targets>
   </NPCCharacter>
@@ -207,6 +266,15 @@
         <equipment slot="Head" id="Item.imperial_goggled_helmet" />
         <equipment slot="Body" id="Item.imperial_lamellar" />
         <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.ironrim_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
         <equipment slot="Horse" id="Item.t2_empire_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -234,6 +302,17 @@
         <equipment slot="Leg" id="Item.plated_strip_boots" />
         <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.fortified_kite_shield" />
+        <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
+        <equipment slot="Item3" id="Item.imperial_throwing_spear_1_t4_2" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_varangian_guardsman" /></upgrade_targets>
   </NPCCharacter>
@@ -254,6 +333,14 @@
         <equipment slot="Head" id="Item.imperial_open_mail_coif" />
         <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
         <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tzangra_crossbowman" /></upgrade_targets>
@@ -277,6 +364,14 @@
         <equipment slot="Body" id="Item.imperial_scale_armor" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.imperial_open_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_vardariotai" /></upgrade_targets>
   </NPCCharacter>
@@ -297,6 +392,17 @@
         <equipment slot="Head" id="Item.imperial_goggled_helmet" />
         <equipment slot="Body" id="Item.imperial_lamellar" />
         <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.ironrim_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
         <equipment slot="Leg" id="Item.lamellar_plate_boots" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
@@ -326,6 +432,16 @@
         <equipment slot="Leg" id="Item.plated_strip_boots" />
         <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.imperial_axe_t3" />
+        <equipment slot="Item1" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lamellar_plate_gauntlets" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_varangian_huscarl" /></upgrade_targets>
   </NPCCharacter>
@@ -346,6 +462,15 @@
         <equipment slot="Head" id="Item.imperial_open_mail_coif" />
         <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
         <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
     </Equipments>
@@ -369,6 +494,16 @@
         <equipment slot="Head" id="Item.imperial_nasal_helm" />
         <equipment slot="Body" id="Item.imperial_scale_armor" />
         <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.imperial_open_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
       </EquipmentRoster>
@@ -396,6 +531,17 @@
         <equipment slot="Head" id="Item.imperial_goggled_helmet" />
         <equipment slot="Body" id="Item.imperial_lamellar" />
         <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.ironrim_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
         <equipment slot="Leg" id="Item.lamellar_plate_boots" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
@@ -435,6 +581,19 @@
         <equipment slot="Horse" id="Item.t3_empire_horse" />
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.imperial_axe_t3" />
+        <equipment slot="Item1" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item3" id="Item.ironrim_riders_kite_shield" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
@@ -459,6 +618,16 @@
         <equipment slot="Leg" id="Item.lamellar_plate_boots" />
         <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
       </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.imperial_axe_t3" />
+        <equipment slot="Item1" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item2" id="Item.fortified_kite_shield" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+      </EquipmentRoster>
     </Equipments>
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
@@ -479,6 +648,15 @@
         <equipment slot="Head" id="Item.imperial_goggled_helmet" />
         <equipment slot="Body" id="Item.imperial_lamellar" />
         <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
         <equipment slot="Leg" id="Item.lamellar_plate_boots" />
       </EquipmentRoster>
     </Equipments>
