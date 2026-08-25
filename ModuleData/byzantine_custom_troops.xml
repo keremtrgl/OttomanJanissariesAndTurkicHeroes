@@ -52,8 +52,8 @@
         <equipment slot="Item0" id="Item.empire_mace_1_t2" />
         <equipment slot="Item1" id="Item.desert_oval_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
-        <equipment slot="Head" id="Item.laced_cloth_coif" />
-        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
     </Equipments>
@@ -73,8 +73,8 @@
         <equipment slot="Item0" id="Item.hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
-        <equipment slot="Head" id="Item.laced_cloth_coif" />
-        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.imperial_padded_cloth" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_toxotes" /></upgrade_targets>
@@ -94,8 +94,8 @@
         <equipment slot="Item0" id="Item.empire_mace_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
-        <equipment slot="Head" id="Item.laced_cloth_coif" />
-        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Head" id="Item.imperial_cloth_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_c" />
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -115,8 +115,8 @@
         <equipment slot="Item0" id="Item.empire_lance_2_t4" />
         <equipment slot="Item1" id="Item.desert_oval_shield" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
-        <equipment slot="Head" id="Item.laced_cloth_coif" />
-        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Head" id="Item.imperial_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_mail_over_leather" />
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -158,8 +158,8 @@
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
-        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
-        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Head" id="Item.imperial_open_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tagmatic_toxotes" /></upgrade_targets>
@@ -179,8 +179,8 @@
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
-        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
-        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
         <equipment slot="Horse" id="Item.t2_empire_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -247,8 +247,8 @@
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
-        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
-        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Head" id="Item.imperial_open_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
         <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
       </EquipmentRoster>
     </Equipments>
@@ -269,8 +269,8 @@
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
-        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
-        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -339,8 +339,8 @@
         <equipment slot="Item0" id="Item.crossbow_c" />
         <equipment slot="Item1" id="Item.bolt_c" />
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
-        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
-        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Head" id="Item.imperial_open_mail_coif" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
         <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
@@ -362,8 +362,8 @@
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
-        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
-        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
         <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
