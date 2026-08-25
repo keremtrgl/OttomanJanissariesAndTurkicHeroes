@@ -29,8 +29,26 @@ dotnet build Source/SeljukEmpire/SeljukTactics.csproj -c Release
 
 This requires the game to be installed locally, since the project references Bannerlord's managed assemblies from the game's `bin/Win64_Shipping_Client` folder.
 
+## Verifying content changes
+
+Before committing any change to `ModuleData/`, run the integrity checker:
+
+```bash
+python tools/verify_mod.py
+```
+
+It checks XML validity, that every content file is registered in `SubModule.xml`, that no
+id is defined twice across the mod's own files, that every `{=key}` used anywhere has a
+matching localization string in both `strings.xml` and `TR/strings.xml`, and — when a local
+Bannerlord install is found (or passed via `--game-path`) — that every equipped item id and
+troop upgrade target actually exists, and that renamed Native characters keep a consistent
+gender flag. Run with `--quick` to skip the game-install-dependent checks, or `--json` for
+machine-readable output. Every one of these checks has caught a real bug during this mod's
+development at least once.
+
 ## Repository layout
 
 - `ModuleData/` — troops, heroes, kingdoms, factions, settlements, items, localization, etc.
 - `Source/SeljukEmpire/` — the mod's C# gameplay behaviors.
+- `tools/` — `verify_mod.py`, the content integrity checker (see above).
 - `bin/` — prebuilt `SeljukTactics.dll` (already included, so building from source is optional for players).
