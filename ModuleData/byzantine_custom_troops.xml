@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Fully independent Byzantine (Culture.empire) troop tree - new character ids, own
+       upgrade chain, own equipment loadouts. Does NOT reuse or touch Native's imperial_*
+       troops (those stay exactly as Native shipped them; byzantine_troops.xml's rename of
+       them is now vestigial but harmless, kept for Custom Battle/tournament troop lists that
+       still reference the native ids directly). Every equipment item id below is a real,
+       already-shipped Native item (verified against SandBoxCore/spnpccharacters.xml's own
+       imperial_*/aserai_* equipment rosters) - no new Item definitions, so none of the
+       missing-required-field risk found earlier this session for custom items applies here.
+       Tier structure (6/11/16/21/26/31) and per-tier skill-point totals match this mod's own
+       Khuzait-audited Seljuk tree (90/195/360/508/676/835 avg per tier). -->
+
+  <!-- Tier 1 (6): shared recruit -->
+  <NPCCharacter id="byz2_recruit" default_group="Infantry" level="6" name="{=byz2_t_recruit}Byzantine Recruit" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="10" />
+      <skill id="OneHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="10" />
+      <skill id="Throwing" value="10" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.laced_cloth_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+      <equipment slot="Horse" id="Item.sumpter_horse" />
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.byz2_skutatos" />
+      <upgrade_target id="NPCCharacter.byz2_toxotes" />
+      <upgrade_target id="NPCCharacter.byz2_trapezites" />
+      <upgrade_target id="NPCCharacter.byz2_klibanophoros" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 2 (11) -->
+  <NPCCharacter id="byz2_skutatos" default_group="Infantry" level="11" name="{=byz2_t_skutatos}Skutatos" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="55" />
+      <skill id="OneHanded" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Item1" id="Item.desert_oval_shield" />
+        <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
+        <equipment slot="Head" id="Item.laced_cloth_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_skutatos" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_toxotes" default_group="Ranged" level="11" name="{=byz2_t_toxotes}Toxotes" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="45" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.hunting_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.laced_cloth_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_toxotes" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_trapezites" default_group="Cavalry" level="11" name="{=byz2_t_trapezites}Trapezites" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="35" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="55" />
+      <skill id="Bow" value="20" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.laced_cloth_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_prokoursatores" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_klibanophoros" default_group="Cavalry" level="11" name="{=byz2_t_klibanophoros}Klibanophoros" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="65" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="30" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.desert_oval_shield" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.laced_cloth_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_kataphraktos" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 3 (16) -->
+  <NPCCharacter id="byz2_thematic_skutatos" default_group="Infantry" level="16" name="{=byz2_t_thematic_skutatos}Thematic Skutatos" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tagmatic_skutatos" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_thematic_toxotes" default_group="Ranged" level="16" name="{=byz2_t_thematic_toxotes}Thematic Toxotes" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Bow" value="150" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tagmatic_toxotes" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_prokoursatores" default_group="Cavalry" level="16" name="{=byz2_t_prokoursatores}Prokoursatores" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="110" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Bow" value="40" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_koursores" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_kataphraktos" default_group="Cavalry" level="16" name="{=byz2_t_kataphraktos}Kataphraktos" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="50" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_vestiaritai" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 4 (21) -->
+  <NPCCharacter id="byz2_tagmatic_skutatos" default_group="Infantry" level="21" name="{=byz2_t_tagmatic_skutatos}Tagmatic Skutatos" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="155" />
+      <skill id="Polearm" value="140" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
+        <equipment slot="Item3" id="Item.imperial_throwing_spear_1_t4_2" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_varangian_guardsman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_tagmatic_toxotes" default_group="Ranged" level="21" name="{=byz2_t_tagmatic_toxotes}Tagmatic Toxotes" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Bow" value="213" />
+      <skill id="Throwing" value="75" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tzangra_crossbowman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_koursores" default_group="Cavalry" level="21" name="{=byz2_t_koursores}Koursores" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="85" />
+      <skill id="Riding" value="155" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="55" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_vardariotai" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_vestiaritai" default_group="Cavalry" level="21" name="{=byz2_t_vestiaritai}Vestiaritai" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="70" />
+      <skill id="Riding" value="170" />
+      <skill id="OneHanded" value="183" />
+      <skill id="Polearm" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_athanatoi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 5 (26) -->
+  <NPCCharacter id="byz2_varangian_guardsman" default_group="Infantry" level="26" name="{=byz2_t_varangian}Varangian Guardsman" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="210" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="86" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battle_axe_t4" />
+        <equipment slot="Item1" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_tzangra_crossbowman" default_group="Ranged" level="26" name="{=byz2_t_tzangra}Tzangra Crossbowman" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Crossbow" value="280" />
+      <skill id="Throwing" value="116" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_vardariotai" default_group="Cavalry" level="26" name="{=byz2_t_vardariotai}Vardariotai" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="Riding" value="210" />
+      <skill id="OneHanded" value="180" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="96" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_athanatoi" default_group="Cavalry" level="26" name="{=byz2_t_athanatoi}Athanatoi" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="95" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="240" />
+      <skill id="Polearm" value="121" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 6 (31): single top elite, converges from every tier-26 branch -->
+  <NPCCharacter id="byz2_hetaireia_guardsman" default_group="Cavalry" level="31" name="{=byz2_t_hetaireia}Hetaireia Guardsman" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Bow" value="60" />
+      <skill id="Throwing" value="35" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battle_axe_t4" />
+        <equipment slot="Item1" id="Item.empire_lance_2_t4" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item3" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+</NPCCharacters>

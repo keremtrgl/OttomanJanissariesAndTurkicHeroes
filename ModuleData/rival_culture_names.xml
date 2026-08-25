@@ -10,7 +10,12 @@
        Byzantine civilization, so this isn't factually wrong, just broader than only empire_s -
        a real decision, not an oversight). Culture.aserai/Culture.sturgia each belong to exactly
        one kingdom of ours, so no such spillover exists for Abbasid/Georgian. -->
-  <Culture id="empire" name="{=byz_culture_name}Byzantine" />
-  <Culture id="aserai" name="{=abb_culture_name}Abbasi" />
+  <!-- basic_troop/elite_basic_troop redirect Byzantine/Abbasid recruitment to the fully
+       independent troop trees in byzantine_custom_troops.xml/abbasid_custom_troops.xml -
+       every notable/garrison in empire_s or aserai now offers those instead of Native's
+       imperial_recruit/aserai_recruit. Since Culture.empire is shared, this also applies to
+       Northern/Western Empire recruitment (same accepted tradeoff as the name above). -->
+  <Culture id="empire" name="{=byz_culture_name}Byzantine" basic_troop="NPCCharacter.byz2_recruit" elite_basic_troop="NPCCharacter.byz2_klibanophoros" />
+  <Culture id="aserai" name="{=abb_culture_name}Abbasi" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ghulam" />
   <Culture id="sturgia" name="{=geo_culture_name}Gürcü" />
 </SPCultures>
