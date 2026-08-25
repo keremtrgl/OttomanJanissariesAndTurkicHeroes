@@ -634,5 +634,10 @@
     <string id="geo_t_kartli_militia_vet_archer" text="Kartli Kıdemli Milis Okçusu" />
     <string id="geo_t_kartli_militia_spear" text="Kartli Milis Mızrakçısı" />
     <string id="geo_t_kartli_militia_vet_spear" text="Kartli Kıdemli Milis Mızrakçısı" />
+    <string id="abb_ln_arslan_khatun" text="Arslan Hatun" />
+    <string id="geo_ln_gurandukht" text="Gurandukht" />
+    <string id="byz_ln_maria_alania" text="Maria of Alania" />
+    <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
+    <string id="byz_ln_irene_doukaina" text="İrini Dukaina" />
   </strings>
 </base>
