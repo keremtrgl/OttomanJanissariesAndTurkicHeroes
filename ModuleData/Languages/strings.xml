@@ -678,5 +678,113 @@
     <string id="byz_ln_maria_alania" text="Maria of Alania" />
     <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
     <string id="byz_ln_irene_doukaina" text="Irene Doukaina" />
+    <string id="byz_cc_senatorial_name" text="Constantinopolitan Senatorial Family" />
+    <string id="byz_cc_senatorial_desc" text="Your family belongs to the landed dynatoi class of the imperial capital; you learned the intrigue and protocol of the palace from the cradle." />
+    <string id="byz_cc_akritas_name" text="Anatolian Akritai Border Family" />
+    <string id="byz_cc_akritas_desc" text="Your family are akritai warriors who guard the Taurus and Euphrates frontier against Turkoman raids." />
+    <string id="byz_cc_thematic_name" text="Anatolian Thematic Soldier-Landowner Family" />
+    <string id="byz_cc_thematic_desc" text="Your father was a stratiotes, a military landowner who served the thematic army with his own horse and armor." />
+    <string id="byz_cc_merchant_name" text="Thessaloniki Harbor Merchant Family" />
+    <string id="byz_cc_merchant_desc" text="You grew up in a wealthy family trading silk and spices in the port of Thessaloniki, the Empire's second city." />
+    <string id="byz_cc_monastic_name" text="Monastic Library Scribe Family" />
+    <string id="byz_cc_monastic_desc" text="Your family were scribes who copied ancient Greek and Roman works in monastery libraries; learning was your cradle." />
+    <string id="byz_cc_hippodrome_name" text="You Grew Up Watching the Hippodrome Races" />
+    <string id="byz_cc_hippodrome_desc" text="You watched the chariot races at Constantinople's famous Hippodrome and felt the passion of the rival factions." />
+    <string id="byz_cc_akritic_songs_name" text="You Grew Up on Border Songs of the Akritai" />
+    <string id="byz_cc_akritic_songs_desc" text="You grew up on the akritic epics told by the elders of the border villages, and learned to draw a bow early." />
+    <string id="byz_cc_church_school_name" text="You Learned Greek and Scripture at the Church School" />
+    <string id="byz_cc_church_school_desc" text="At the parish church school you memorized the Greek alphabet, sacred texts, and hymns." />
+    <string id="byz_cc_market_name" text="You Learned Trade in the Mese Street Market" />
+    <string id="byz_cc_market_desc" text="In the shops along the Mese, Constantinople's main avenue, you learned the finer points of trade from merchants." />
+    <string id="byz_cc_varangian_name" text="You Trained Alongside the Varangian Guard" />
+    <string id="byz_cc_varangian_desc" text="You trained in axe and sword alongside the Empire's famed Varangian Guard at the imperial palace." />
+    <string id="byz_cc_thematic_army_name" text="You Joined the Anatolian Thematic Army" />
+    <string id="byz_cc_thematic_army_desc" text="You became a hardened soldier in Anatolia's frontier themes, trained in mounted archery and the spear." />
+    <string id="byz_cc_university_name" text="You Studied Rhetoric at the Mangana University" />
+    <string id="byz_cc_university_desc" text="You took lessons in philosophy, law and rhetoric at Constantinople's famed Mangana University." />
+    <string id="byz_cc_kataphraktos_name" text="You Were Chosen for a Kataphraktos Heavy Cavalry Regiment" />
+    <string id="byz_cc_kataphraktos_desc" text="You were accepted into the elite Kataphraktos corps of armored horses and armored riders." />
+    <string id="byz_cc_akritas_officer_name" text="You Became a Border Akritai Commander" />
+    <string id="byz_cc_akritas_officer_desc" text="You commanded akritai units defending the Anatolian frontier against Turkoman raids." />
+    <string id="byz_cc_bureaucrat_name" text="You Became a Clerk in the Imperial Chancery" />
+    <string id="byz_cc_bureaucrat_desc" text="You became a trusted clerk in the palace bureaucracy, keeping tax and land records." />
+    <string id="byz_cc_rally_name" text="You Survived a Battlefield Rout and Rallied the Army" />
+    <string id="byz_cc_rally_desc" text="Amid a great rout you rallied the scattering units and secured an orderly retreat." />
+    <string id="byz_cc_fortress_defense_name" text="You Held a Besieged Fortress to the Very End" />
+    <string id="byz_cc_fortress_defense_desc" text="You defended a besieged frontier fortress with resolve until relief finally arrived." />
+    <string id="byz_cc_diplomat_name" text="You Completed a Perilous Embassy" />
+    <string id="byz_cc_diplomat_desc" text="You skillfully and bravely completed a dangerous peace embassy to an enemy court." />
+    <string id="abb_cc_hashimite_name" text="Sharifian Hashimite Family" />
+    <string id="abb_cc_hashimite_desc" text="You are the child of a sharifian Hashimite family descended from the Prophet's line, respected and influential in Baghdad." />
+    <string id="abb_cc_qadi_name" text="Baghdad Qadi and Ulema Family" />
+    <string id="abb_cc_qadi_desc" text="Your family is a respected line of ulema who produced expert qadis learned in fiqh and sharia." />
+    <string id="abb_cc_bedouin_name" text="Desert Bedouin Tribe" />
+    <string id="abb_cc_bedouin_desc" text="You were born into a Bedouin tribe deep in the Iraqi desert, herding camels and finding your way through sandstorms." />
+    <string id="abb_cc_basra_merchant_name" text="Basra Harbor Merchant Family" />
+    <string id="abb_cc_basra_merchant_desc" text="You come from a wealthy merchant family trading spices and pearls on ships sailing from Basra into the Indian Ocean." />
+    <string id="abb_cc_ghilman_name" text="Line of a Caliphal Ghulam Guardsman" />
+    <string id="abb_cc_ghilman_desc" text="Your father was one of the Turkish-born ghulam guardsmen who stood watch at the Caliph's Dar al-Khilafa." />
+    <string id="abb_cc_desert_name" text="You Learned to Ride Camel and Horse in the Desert" />
+    <string id="abb_cc_desert_desc" text="Among your Bedouin kin you learned to ride camels under the merciless desert sun and navigate by the stars." />
+    <string id="abb_cc_madrasa_name" text="You Memorized the Quran and Fiqh at the Mosque School" />
+    <string id="abb_cc_madrasa_desc" text="From a young age you attended lessons in Quran, hadith and fiqh at Baghdad's great mosques." />
+    <string id="abb_cc_bazaar_name" text="You Learned Trade in the Bazaars of Baghdad" />
+    <string id="abb_cc_bazaar_desc" text="In the labyrinthine streets of the Karkh bazaar you learned bargaining and weighing goods from the merchants." />
+    <string id="abb_cc_wrestling_name" text="You Trained in Wrestling and Swordplay in the Squares" />
+    <string id="abb_cc_wrestling_desc" text="You wrestled with other children in Baghdad's squares and played at swordplay with wooden blades." />
+    <string id="abb_cc_nizamiyya_name" text="You Studied at the Nizamiyya Madrasa of Baghdad" />
+    <string id="abb_cc_nizamiyya_desc" text="At the famous Nizamiyya madrasa founded by Nizam al-Mulk, you studied fiqh, logic, and statecraft." />
+    <string id="abb_cc_caravan_guard_name" text="You Served as a Hajj Caravan Guard" />
+    <string id="abb_cc_caravan_guard_desc" text="You protected pilgrim caravans traveling from Baghdad to Mecca against desert bandits." />
+    <string id="abb_cc_palace_guard_name" text="You Joined the Dar al-Khilafa Guard Regiment" />
+    <string id="abb_cc_palace_guard_desc" text="You received weapons training among the Caliph's disciplined ghulam guardsmen at the palace." />
+    <string id="abb_cc_ghulam_elite_name" text="You Were Chosen for the Caliph's Elite Guard" />
+    <string id="abb_cc_ghulam_elite_desc" text="Your outstanding skill earned you a place in the Caliph's personal Dar al-Khilafa guard unit." />
+    <string id="abb_cc_scholar_name" text="You Served as a Clerk in the Court of Grievances" />
+    <string id="abb_cc_scholar_desc" text="You became a trusted clerk recording cases in the Caliph's court of grievances." />
+    <string id="abb_cc_desert_raider_name" text="You Became a Raider in Desert Campaigns" />
+    <string id="abb_cc_desert_raider_desc" text="You fought on the front line in campaigns to keep order among the desert tribes." />
+    <string id="abb_cc_palace_defense_name" text="You Defended the Caliph During a Siege of the Palace" />
+    <string id="abb_cc_palace_defense_desc" text="During a raid on the Dar al-Khilafa you risked your life and stood out among the Caliph's guard." />
+    <string id="abb_cc_caravan_save_name" text="You Saved a Hajj Caravan from a Raid" />
+    <string id="abb_cc_caravan_save_desc" text="You single-handedly defended a great pilgrim caravan struck by desert bandits, saving the pilgrims." />
+    <string id="abb_cc_justice_name" text="You Defended the Wronged Before the Qadi" />
+    <string id="abb_cc_justice_desc" text="You courageously defended the case of a wronged tradesman before the qadi, securing justice." />
+    <string id="geo_cc_bagrationi_name" text="Distant Branch of the Bagrationi Dynasty" />
+    <string id="geo_cc_bagrationi_desc" text="You come from a distant branch of the royal Bagrationi line; you grew up amid the court's customs and intrigues." />
+    <string id="geo_cc_aznauri_name" text="Aznauri Petty Noble Family" />
+    <string id="geo_cc_aznauri_desc" text="You are the child of a landed petty-noble aznauri family in the Caucasus mountains, raised to ride and wield the spear." />
+    <string id="geo_cc_mountain_name" text="Mountain Valley Warrior Family" />
+    <string id="geo_cc_mountain_desc" text="You grew up in an unreachable Caucasus mountain valley, hardened by wrestling snow and rock." />
+    <string id="geo_cc_tbilisi_merchant_name" text="Tbilisi Silk Road Merchant Family" />
+    <string id="geo_cc_tbilisi_merchant_desc" text="You are the child of a family trading silk and spices in the markets of Tbilisi, where East meets West." />
+    <string id="geo_cc_monastery_name" text="Monastery Academy Scribe Family" />
+    <string id="geo_cc_monastery_desc" text="You were raised in a family of scribes copying theology and philosophy at a renowned monastery academy." />
+    <string id="geo_cc_caucasus_name" text="You Rode Through Caucasus Mountain Passes" />
+    <string id="geo_cc_caucasus_desc" text="In narrow mountain passes, along the edge of cliffs, you learned to ride and balance at a young age." />
+    <string id="geo_cc_falconry_name" text="You Learned Falconry and Archery" />
+    <string id="geo_cc_falconry_desc" text="You learned to hunt in the Caucasus forests by flying falcons and drawing the bow." />
+    <string id="geo_cc_church_name" text="You Sang in the Church Choir and Studied at the Monastery School" />
+    <string id="geo_cc_church_desc" text="You sang hymns in the Orthodox church choir and learned to read and write from prayer books at the monastery school." />
+    <string id="geo_cc_smithy_name" text="You Forged Steel at a Mountain Village Smithy" />
+    <string id="geo_cc_smithy_desc" text="At the village smithy you learned to forge steel and repair armor alongside the master smiths." />
+    <string id="geo_cc_royal_guard_name" text="You Joined the Royal Guard Regiment" />
+    <string id="geo_cc_royal_guard_desc" text="You received disciplined weapons and cavalry training among the king's palace guard." />
+    <string id="geo_cc_mountain_scout_name" text="You Became a Border Scout in the Mountain Passes" />
+    <string id="geo_cc_mountain_scout_desc" text="You joined the vanguard units watching the mountain passes against enemy raids." />
+    <string id="geo_cc_academy_name" text="You Studied Philosophy and Rhetoric at the Monastery Academy" />
+    <string id="geo_cc_academy_desc" text="At the Caucasus's foremost monastery academy you studied theology, philosophy, and statecraft." />
+    <string id="geo_cc_royal_cavalry_name" text="You Were Chosen for the Royal Heavy Cavalry" />
+    <string id="geo_cc_royal_cavalry_desc" text="You joined the elite royal cavalry regiment that fought in campaigns along the Caucasus frontier." />
+    <string id="geo_cc_border_gazi_name" text="You Gained Experience in Border Fortresses" />
+    <string id="geo_cc_border_gazi_desc" text="You stood watch for years at Caucasus border fortresses, gaining experience through many sieges." />
+    <string id="geo_cc_court_name" text="You Served at the Royal Court" />
+    <string id="geo_cc_court_desc" text="You served as an advisor close to the royal family at the court in Tbilisi." />
+    <string id="geo_cc_battle_hero_name" text="You Showed Heroism in a Great Pitched Battle" />
+    <string id="geo_cc_battle_hero_desc" text="In a great pitched battle you cut through enemy ranks and struck down the enemy standard-bearer." />
+    <string id="geo_cc_rescue_name" text="You Saved a Besieged Mountain Fortress" />
+    <string id="geo_cc_rescue_desc" text="You slipped through a secret pass to bring relief to a besieged mountain fortress, saving its people." />
+    <string id="geo_cc_pilgrim_name" text="You Became a Shield for Pilgrims and the Wronged" />
+    <string id="geo_cc_pilgrim_desc" text="You earned renown by protecting pilgrim caravans bound for holy sites from bandits." />
   </strings>
 </base>

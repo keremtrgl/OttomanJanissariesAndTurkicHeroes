@@ -678,5 +678,113 @@
     <string id="byz_ln_maria_alania" text="Maria of Alania" />
     <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
     <string id="byz_ln_irene_doukaina" text="İrini Dukaina" />
+    <string id="byz_cc_senatorial_name" text="Konstantinopolis Senatocu Ailesi" />
+    <string id="byz_cc_senatorial_desc" text="Ailen İmparatorluk başkentinde toprak sahibi dynatoi sınıfındandır; sarayın entrika ve protokolünü beşikten öğrendin." />
+    <string id="byz_cc_akritas_name" text="Anadolu Akritas Sınır Ailesi" />
+    <string id="byz_cc_akritas_desc" text="Toros ve Fırat sınırında İmparatorluğu Türkmen akınlarına karşı koruyan akritai savaşçı ailesindensin." />
+    <string id="byz_cc_thematic_name" text="Anadolu Thema Askeri Toprak Sahibi Ailesi" />
+    <string id="byz_cc_thematic_desc" text="Baban stratiotes olarak thema ordusuna kendi atı ve zırhıyla hizmet eden askeri çiftlik sahibiydi." />
+    <string id="byz_cc_merchant_name" text="Selanik Liman Tüccarı Ailesi" />
+    <string id="byz_cc_merchant_desc" text="İmparatorluğun ikinci büyük şehri Selanik'in limanında ipek ve baharat ticareti yapan zengin bir ailede büyüdün." />
+    <string id="byz_cc_monastic_name" text="Manastır Kütüphanesi Kâtip Ailesi" />
+    <string id="byz_cc_monastic_desc" text="Ailen manastır kütüphanelerinde eski Yunan ve Roma eserlerini istinsah eden kâtiplerdendi; ilim beşiğindi." />
+    <string id="byz_cc_hippodrome_name" text="Hipodrom Yarışlarını İzleyerek Büyüdün" />
+    <string id="byz_cc_hippodrome_desc" text="Konstantinopolis'in ünlü Hipodrom'unda at yarışlarını izleyip mahalle takımlarının tutkusunu içinde hissettin." />
+    <string id="byz_cc_akritic_songs_name" text="Sınırda Akritik Destanlar Dinleyerek Büyüdün" />
+    <string id="byz_cc_akritic_songs_desc" text="Sınır köylerinde yaşlıların anlattığı akritai destanlarıyla büyüdün, ok atmayı erkenden öğrendin." />
+    <string id="byz_cc_church_school_name" text="Kilise Okulunda Yunanca ve İlahiyat Öğrendin" />
+    <string id="byz_cc_church_school_desc" text="Mahalle kilisesinin okulunda Yunan alfabesini, kutsal metinleri ve ilahileri ezberledin." />
+    <string id="byz_cc_market_name" text="Mese Caddesi Pazarında Ticareti Öğrendin" />
+    <string id="byz_cc_market_desc" text="Konstantinopolis'in ana caddesi Mese'deki dükkanlarda tüccarların yanında ticaret inceliklerini öğrendin." />
+    <string id="byz_cc_varangian_name" text="Varanjyalı Muhafızlarla Talim Yaptın" />
+    <string id="byz_cc_varangian_desc" text="İmparatorluk sarayının ünlü Varanjyalı Muhafızları arasında balta ve kılıç talimi gördün." />
+    <string id="byz_cc_thematic_army_name" text="Anadolu Thema Ordusuna Katıldın" />
+    <string id="byz_cc_thematic_army_desc" text="Anadolu'nun sınır themalarında atlı okçuluk ve mızrak talimiyle sertleşen bir asker oldun." />
+    <string id="byz_cc_university_name" text="Manganalar Üniversitesi'nde Retorik Okudun" />
+    <string id="byz_cc_university_desc" text="Konstantinopolis'in ünlü Manganalar Üniversitesi'nde felsefe, hukuk ve retorik dersleri aldın." />
+    <string id="byz_cc_kataphraktos_name" text="Kataphraktos Ağır Süvari Alayına Seçildin" />
+    <string id="byz_cc_kataphraktos_desc" text="Zırhlı atlardan ve zırhlı süvarilerden oluşan seçkin Kataphraktos birliğine kabul edildin." />
+    <string id="byz_cc_akritas_officer_name" text="Sınır Akritas Kumandanı Oldun" />
+    <string id="byz_cc_akritas_officer_desc" text="Türkmen akınlarına karşı Anadolu sınırını savunan akritai birliklerine komuta ettin." />
+    <string id="byz_cc_bureaucrat_name" text="İmparatorluk Divanında Kâtip Oldun" />
+    <string id="byz_cc_bureaucrat_desc" text="Sarayın bürokrasisinde vergi ve arazi kayıtlarını tutan güvenilir bir kâtip oldun." />
+    <string id="byz_cc_rally_name" text="Bir Meydan Savaşından Sağ Çıkıp Orduyu Topladın" />
+    <string id="byz_cc_rally_desc" text="Büyük bir bozgunun ortasında dağılan birlikleri yeniden topladın ve düzenli bir geri çekilme sağladın." />
+    <string id="byz_cc_fortress_defense_name" text="Kuşatılan Bir Kaleyi Son Ana Kadar Savundun" />
+    <string id="byz_cc_fortress_defense_desc" text="Düşman kuşatması altındaki bir sınır kalesini takviye gelene kadar azimle savundun." />
+    <string id="byz_cc_diplomat_name" text="Tehlikeli Bir Elçilik Görevini Başarıyla Tamamladın" />
+    <string id="byz_cc_diplomat_desc" text="Düşman sarayına gönderilen tehlikeli bir barış elçiliğini ustalıkla ve cesaretle tamamladın." />
+    <string id="abb_cc_hashimite_name" text="Haşimî Şerif Ailesi" />
+    <string id="abb_cc_hashimite_desc" text="Peygamber soyundan gelen şerif bir Haşimî ailesinin çocuğusun; Bağdat'ta saygı ve nüfuz sahibisin." />
+    <string id="abb_cc_qadi_name" text="Bağdat Kadı ve Ulema Ailesi" />
+    <string id="abb_cc_qadi_desc" text="Ailen fıkıh ve şeriat ilminde uzman kadılar yetiştiren saygın bir ulema hanedanıdır." />
+    <string id="abb_cc_bedouin_name" text="Sahra Bedevi Kabilesi" />
+    <string id="abb_cc_bedouin_desc" text="Irak çölünün derinliklerinde deve sürüleri güden, kum fırtınalarında yol bulmayı bilen bir Bedevi kabilesinde doğdun." />
+    <string id="abb_cc_basra_merchant_name" text="Basra Liman Tüccarı Ailesi" />
+    <string id="abb_cc_basra_merchant_desc" text="Basra limanından Hint Okyanusu'na açılan gemilerle baharat ve inci ticareti yapan zengin bir tüccar ailesindensin." />
+    <string id="abb_cc_ghilman_name" text="Halife Muhafız Gulamı Soyu" />
+    <string id="abb_cc_ghilman_desc" text="Baban Halifenin Dar-ül Hilafe'sinde nöbet tutan Türk asıllı gulam muhafızlarındandı." />
+    <string id="abb_cc_desert_name" text="Çölde Deve ve At Sürmeyi Öğrendin" />
+    <string id="abb_cc_desert_desc" text="Bedevi akrabalarının yanında çölün acımasız güneşinde deve sürmeyi ve yıldızlarla yön bulmayı öğrendin." />
+    <string id="abb_cc_madrasa_name" text="Cami Medresesinde Kur'an ve Fıkıh Ezberledin" />
+    <string id="abb_cc_madrasa_desc" text="Bağdat'ın büyük camilerinde küçük yaşta Kur'an, hadis ve fıkıh derslerine katıldın." />
+    <string id="abb_cc_bazaar_name" text="Bağdat Çarşısında Ticareti Öğrendin" />
+    <string id="abb_cc_bazaar_desc" text="Kerh çarşısının labirent gibi sokaklarında tüccarların yanında pazarlık ve mal tartmayı öğrendin." />
+    <string id="abb_cc_wrestling_name" text="Meydanlarda Güreş ve Kılıç Talimi Yaptın" />
+    <string id="abb_cc_wrestling_desc" text="Bağdat meydanlarında yaşıtlarınla güreşip tahta kılıçlarla dövüş oyunları oynadın." />
+    <string id="abb_cc_nizamiyya_name" text="Bağdat Nizamiye Medresesi'nde Okudun" />
+    <string id="abb_cc_nizamiyya_desc" text="Nizam-ül Mülk'ün kurduğu ünlü Nizamiye medresesinde fıkıh, mantık ve devlet idaresi okudun." />
+    <string id="abb_cc_caravan_guard_name" text="Hac Kervanı Muhafızlığı Yaptın" />
+    <string id="abb_cc_caravan_guard_desc" text="Bağdat'tan Mekke'ye giden hac kervanlarını çöl haydutlarına karşı korudun." />
+    <string id="abb_cc_palace_guard_name" text="Dar-ül Hilafe Muhafız Alayına Katıldın" />
+    <string id="abb_cc_palace_guard_desc" text="Halifenin sarayında disiplinli gulam muhafızları arasında silah eğitimi aldın." />
+    <string id="abb_cc_ghulam_elite_name" text="Halife Hassa Muhafızına Seçildin" />
+    <string id="abb_cc_ghulam_elite_desc" text="Üstün yeteneğinle Halifenin şahsi Dar-ül Hilafe muhafız birliğine kabul edildin." />
+    <string id="abb_cc_scholar_name" text="Divan-ı Mezalim'de Kâtiplik Yaptın" />
+    <string id="abb_cc_scholar_desc" text="Halifenin adalet divanında davaları kayda geçiren güvenilir bir kâtip oldun." />
+    <string id="abb_cc_desert_raider_name" text="Sahra Seferlerinde Akıncı Oldun" />
+    <string id="abb_cc_desert_raider_desc" text="Çöl kabilelerine karşı düzeni sağlayan seferlerde ön safta çarpıştın." />
+    <string id="abb_cc_palace_defense_name" text="Saray Kuşatmasında Halifeyi Korudun" />
+    <string id="abb_cc_palace_defense_desc" text="Dar-ül Hilafe'ye yapılan bir baskında canını hiçe sayarak Halifenin muhafızları arasında öne çıktın." />
+    <string id="abb_cc_caravan_save_name" text="Hac Kervanını Baskından Kurtardın" />
+    <string id="abb_cc_caravan_save_desc" text="Çöl haydutlarının bastığı büyük bir hac kervanını tek başına savunarak hacıları kurtardın." />
+    <string id="abb_cc_justice_name" text="Mazlumun Hakkını Kadı Önünde Savundun" />
+    <string id="abb_cc_justice_desc" text="Haksızlığa uğrayan bir esnafın davasını kadı huzurunda cesaretle savunarak adalet sağladın." />
+    <string id="geo_cc_bagrationi_name" text="Bagrationi Hanedanı Yan Kolu" />
+    <string id="geo_cc_bagrationi_desc" text="Kraliyet Bagrationi soyunun uzak bir kolundan geliyorsun; sarayın töre ve entrikalarıyla büyüdün." />
+    <string id="geo_cc_aznauri_name" text="Aznauri Küçük Asilzade Ailesi" />
+    <string id="geo_cc_aznauri_desc" text="Kafkas dağlarında toprak sahibi küçük asilzade sınıfından bir ailenin çocuğusun; ata biner, mızrak kullanırdın." />
+    <string id="geo_cc_mountain_name" text="Dağlık Vadi Savaşçısı Ailesi" />
+    <string id="geo_cc_mountain_desc" text="Kafkasların ulaşılmaz dağ vadilerinde, kar ve kayalarla boğuşarak sertleşen bir dağ ailesinde büyüdün." />
+    <string id="geo_cc_tbilisi_merchant_name" text="Tiflis İpek Yolu Tüccarı Ailesi" />
+    <string id="geo_cc_tbilisi_merchant_desc" text="Doğu ile Batı'yı birbirine bağlayan Tiflis pazarlarında ipek ve baharat ticareti yapan bir ailenin evladısın." />
+    <string id="geo_cc_monastery_name" text="Manastır Akademisi Kâtip Ailesi" />
+    <string id="geo_cc_monastery_desc" text="Ünlü bir manastır akademisinde teoloji ve felsefe kopyalayan kâtip bir ailede yetiştin." />
+    <string id="geo_cc_caucasus_name" text="Kafkas Geçitlerinde At Sürdün" />
+    <string id="geo_cc_caucasus_desc" text="Dar dağ geçitlerinde, uçurumların kenarında ata binmeyi ve dengeyi küçük yaşta öğrendin." />
+    <string id="geo_cc_falconry_name" text="Şahin Eğitimi ve Ok Atışı Öğrendin" />
+    <string id="geo_cc_falconry_desc" text="Kafkas ormanlarında şahin uçurup yay çekerek avlanmayı öğrendin." />
+    <string id="geo_cc_church_name" text="Kilise Korosunda ve Manastır Okulunda Okudun" />
+    <string id="geo_cc_church_desc" text="Ortodoks kilise korosunda ilahiler söyledin, manastır okulunda okuma yazma ve dua kitaplarını öğrendin." />
+    <string id="geo_cc_smithy_name" text="Dağ Köyü Demirci Ocağında Çelik Dövdün" />
+    <string id="geo_cc_smithy_desc" text="Dağ köyünün demirci ocağında ustaların yanında çelik dövmeyi ve zırh onarmayı öğrendin." />
+    <string id="geo_cc_royal_guard_name" text="Kraliyet Muhafız Alayına Katıldın" />
+    <string id="geo_cc_royal_guard_desc" text="Kralın saray muhafızları arasında disiplinli silah ve süvari eğitimi gördün." />
+    <string id="geo_cc_mountain_scout_name" text="Dağ Geçitlerinde Sınır Gözcüsü Oldun" />
+    <string id="geo_cc_mountain_scout_desc" text="Düşman akınlarına karşı dağ geçitlerini gözetleyen öncü birliklere katıldın." />
+    <string id="geo_cc_academy_name" text="Manastır Akademisi'nde Felsefe ve Retorik Okudun" />
+    <string id="geo_cc_academy_desc" text="Kafkasların önde gelen manastır akademisinde teoloji, felsefe ve devlet yönetimi üzerine eğitim aldın." />
+    <string id="geo_cc_royal_cavalry_name" text="Kraliyet Ağır Süvarisine Seçildin" />
+    <string id="geo_cc_royal_cavalry_desc" text="Kafkas sınırındaki seferlerde savaşan seçkin kraliyet süvari alayına katıldın." />
+    <string id="geo_cc_border_gazi_name" text="Sınır Kalelerinde Deneyim Kazandın" />
+    <string id="geo_cc_border_gazi_desc" text="Kafkas sınır kalelerinde yıllarca düşmana karşı nöbet tuttun, kuşatmalarda tecrübe kazandın." />
+    <string id="geo_cc_court_name" text="Kraliyet Sarayında Hizmet Ettin" />
+    <string id="geo_cc_court_desc" text="Tiflis sarayında kraliyet ailesine yakın bir danışman olarak görev aldın." />
+    <string id="geo_cc_battle_hero_name" text="Büyük Bir Meydan Savaşında Kahramanlık Gösterdin" />
+    <string id="geo_cc_battle_hero_desc" text="Büyük bir meydan savaşında düşman saflarını yararak sancaktarı devirdin." />
+    <string id="geo_cc_rescue_name" text="Kuşatılan Dağ Kalesini Kurtardın" />
+    <string id="geo_cc_rescue_desc" text="Muhasara altındaki bir dağ kalesine gizli bir geçitten yardım ulaştırıp halkı kurtardın." />
+    <string id="geo_cc_pilgrim_name" text="Hacılara ve Mazlumlara Kalkan Oldun" />
+    <string id="geo_cc_pilgrim_desc" text="Kutsal topraklara giden hacı kervanlarını haydutlardan koruyarak ün kazandın." />
   </strings>
 </base>

@@ -52,6 +52,11 @@ namespace SeljukEmpire
                         var handler = new SeljukCharacterCreationContentHandler();
                         ccState.CharacterCreationManager.RegisterCharacterCreationContentHandler(handler, 100);
                         handler.InjectSeljukNarratives(ccState.CharacterCreationManager);
+
+                        var rivalHandler = new RivalCultureCharacterCreationContentHandler();
+                        ccState.CharacterCreationManager.RegisterCharacterCreationContentHandler(rivalHandler, 100);
+                        rivalHandler.InjectRivalNarratives(ccState.CharacterCreationManager);
+
                         _isCharacterCreationHooked = true;
                     }
                 }
