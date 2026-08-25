@@ -141,7 +141,7 @@
   </Item>
 
   <!-- Ağır Delici Selçuklu Zırh Delen Okları -->
-  <Item id="seljuk_heavy_arrows" name="{=item_seljuk_heavy_arrows}Selçuklu Zırh Delen Temren Okları" mesh="arrow_bl_f" culture="Culture.khuzait" weight="2.5" value="6500" is_merchandise="true" Type="Arrows" item_holsters="quiver_back_top:quiver_back_2">
+  <Item id="seljuk_heavy_arrows" name="{=item_seljuk_heavy_arrows}Selçuklu Zırh Delen Temren Okları" body_name="bo_capsule_arrow" holster_body_name="bo_axe_short" mesh="arrow_bl_f" holster_mesh="arrow_bl_f_quiver" holster_mesh_with_weapon="arrow_bl_f_quiver" flying_mesh="arrow_bl_flying" culture="Culture.khuzait" weight="2.5" value="6500" is_merchandise="true" Type="Arrows" item_holsters="quiver_back_top:quiver_back_2">
     <ItemComponent>
       <Weapon weapon_class="Arrow" stack_amount="32" thrust_damage="5" thrust_damage_type="Pierce" physics_material="missile" item_usage="arrow_right">
         <WeaponFlags Consumable="true" />
@@ -159,7 +159,7 @@
   </Item>
 
   <!-- Selçuklu Deniz Akıncısı Kundak Temrenleri -->
-  <Item id="seljuk_crossbow_bolts" name="{=item_seljuk_bolts}Selçuklu Çelik Temrenli Kundak Okları" mesh="bolt_bl_a" culture="Culture.khuzait" weight="2.8" value="5500" is_merchandise="true" Type="Bolts" item_holsters="quiver_bolts">
+  <Item id="seljuk_crossbow_bolts" name="{=item_seljuk_bolts}Selçuklu Çelik Temrenli Kundak Okları" body_name="bo_capsule_arrow" holster_body_name="bo_axe_short" mesh="bolt_bl_a" holster_mesh="bolt_bl_a_quiver" holster_mesh_with_weapon="bolt_bl_a_quiver" flying_mesh="bolt_bl_flying" culture="Culture.khuzait" weight="2.8" value="5500" is_merchandise="true" Type="Bolts" item_holsters="quiver_bolts">
     <ItemComponent>
       <Weapon weapon_class="Bolt" stack_amount="26" thrust_damage="6" thrust_damage_type="Pierce" physics_material="missile" item_usage="bolts">
         <WeaponFlags Consumable="true" />
@@ -174,7 +174,7 @@
   <!-- Asil Türkmen Savaş Atı -->
   <Item id="seljuk_turkoman_horse" name="{=item_seljuk_turkoman_horse}Asil Türkmen Savaş Atı" mesh="horse_brown" culture="Culture.khuzait" weight="450" value="18000" is_merchandise="true" Type="Horse">
     <ItemComponent>
-      <Horse speed="58" maneuver="72" charge_damage="26" hit_points="280" modifier_group="horse" monster="Monster.horse" />
+      <Horse speed="58" maneuver="72" charge_damage="26" body_length="104" is_mountable="true" extra_health="30" skeleton_scale="khuzait_horse" monster="Monster.horse" />
     </ItemComponent>
     <Flags Mount="true" />
   </Item>
@@ -182,7 +182,7 @@
   <!-- Selçuklu Hassa Barda Koşumu -->
   <Item id="seljuk_barda_horse_armor" name="{=item_seljuk_barda_name}Selçuklu Hassa Barda Koşumu" mesh="horse_harness_khuzait_c_clotest" culture="Culture.khuzait" weight="24.0" value="22000" appearance="1" is_merchandise="true" Type="HorseHarness">
     <ItemComponent>
-      <Armor body_armor="70" material_type="Plate" modifier_group="plate" />
+      <Armor body_armor="70" mane_cover_type="none" family_type="1" reins_mesh="horse_harness_khuzait_c_rein" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 </Items>
