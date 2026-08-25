@@ -480,6 +480,71 @@
     <string id="byz_c_caesarea" text="Caesarea Castle" />
     <string id="byz_v_tyana" text="Tyana" />
     <string id="byz_v_nazianzus" text="Nazianzus" />
+    <string id="byz_n_house_palaiologos" text="House Palaiologos" />
+    <string id="byz_n_house_angelos" text="House Angelos" />
+    <string id="byz_n_house_kantakouzenos" text="House Kantakouzenos" />
+    <string id="byz_n_house_phokas" text="House Phokas" />
+    <string id="byz_n_house_skleros" text="House Skleros" />
+    <string id="byz_n_house_kourkouas" text="House Kourkouas" />
+    <string id="byz_n_house_xiphilinos" text="House Xiphilinos" />
+    <string id="byz_n_house_vatatzes" text="House Vatatzes" />
+    <string id="byz_n_house_gabras" text="House Gabras" />
+    <string id="byz_n_ln_georgios_palaiologos" text="Georgios Palaiologos" />
+    <string id="byz_n_ln_konstantinos_angelos" text="Konstantinos Angelos" />
+    <string id="byz_n_ln_ioannes_kantakouzenos" text="Ioannes Kantakouzenos" />
+    <string id="byz_n_ln_bardas_phokas" text="Bardas Phokas" />
+    <string id="byz_n_ln_romanos_skleros" text="Romanos Skleros" />
+    <string id="byz_n_ln_leon_kourkouas" text="Leon Kourkouas" />
+    <string id="byz_n_ln_michael_xiphilinos" text="Michael Xiphilinos" />
+    <string id="byz_n_ln_nikephoros_vatatzes" text="Nikephoros Vatatzes" />
+    <string id="byz_n_ln_theodoros_gabras" text="Theodoros Gabras" />
+    <string id="byz_n_s_amorium" text="Amorium" />
+    <string id="byz_n_v_pessinus" text="Pessinus" />
+    <string id="byz_n_v_synnada" text="Synnada" />
+    <string id="byz_n_v_docimium" text="Docimium" />
+    <string id="byz_n_s_sardis" text="Sardis" />
+    <string id="byz_n_v_philadelphia" text="Philadelphia" />
+    <string id="byz_n_v_tralles" text="Tralles" />
+    <string id="byz_n_s_melitene" text="Melitene" />
+    <string id="byz_n_v_arabissus" text="Arabissus" />
+    <string id="byz_n_v_ariaramneia" text="Ariaramneia" />
+    <string id="byz_n_s_theodosiopolis" text="Theodosiopolis" />
+    <string id="byz_n_v_satala" text="Satala" />
+    <string id="byz_n_v_sper" text="Sper" />
+    <string id="byz_n_s_edessa" text="Edessa" />
+    <string id="byz_n_v_samosata" text="Samosata" />
+    <string id="byz_n_v_perrhe" text="Perrhe" />
+    <string id="byz_n_v_germanicia" text="Germanicia" />
+    <string id="byz_n_s_tarsus" text="Tarsus" />
+    <string id="byz_n_v_adana" text="Adana" />
+    <string id="byz_n_v_anazarbus" text="Anazarbus" />
+    <string id="byz_n_c_arsamosata" text="Arsamosata Castle" />
+    <string id="byz_n_v_citharizon" text="Citharizon" />
+    <string id="byz_n_v_romanoupolis" text="Romanoupolis" />
+    <string id="byz_n_c_zela" text="Zela Castle" />
+    <string id="byz_n_v_amisos" text="Amisos" />
+    <string id="byz_n_v_themiscyra" text="Themiscyra" />
+    <string id="byz_n_c_sinope" text="Sinope Castle" />
+    <string id="byz_n_v_tavium" text="Tavium" />
+    <string id="byz_n_v_cotyaeum" text="Cotyaeum" />
+    <string id="byz_n_c_loulon" text="Loulon Castle" />
+    <string id="byz_n_v_zapetra" text="Zapetra" />
+    <string id="byz_n_v_charsianon" text="Charsianon" />
+    <string id="byz_n_c_aezani" text="Aezani Castle" />
+    <string id="byz_n_v_cadi" text="Cadi" />
+    <string id="byz_n_v_apameia" text="Apameia" />
+    <string id="byz_n_c_cyzicus" text="Cyzicus Castle" />
+    <string id="byz_n_v_lampsacus" text="Lampsacus" />
+    <string id="byz_n_v_abydos" text="Abydos" />
+    <string id="byz_n_c_ephesus" text="Ephesus Castle" />
+    <string id="byz_n_v_miletus" text="Miletus" />
+    <string id="byz_n_v_priene" text="Priene" />
+    <string id="byz_n_c_pergamon" text="Pergamon Castle" />
+    <string id="byz_n_v_adramyttium" text="Adramyttium" />
+    <string id="byz_n_v_assos" text="Assos" />
+    <string id="byz_n_c_smyrna" text="Smyrna Castle" />
+    <string id="byz_n_v_magnesia" text="Magnesia" />
+    <string id="byz_n_v_thyatira" text="Thyatira" />
     <string id="byz_t_recruit" text="Byzantine Recruit" />
     <string id="byz_t_skutatos" text="Skutatos" />
     <string id="byz_t_vigla_recruit" text="Vigla Recruit" />
