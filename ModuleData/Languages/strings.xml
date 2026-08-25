@@ -394,6 +394,7 @@
     <string id="byz_house_tarchaneiotes" text="House Tarchaneiotes" />
     <string id="byz_house_kekaumenos" text="House Kekaumenos" />
     <string id="byz_ln_eudokia" text="Eudokia Makrembolitissa" />
+    <string id="byz_culture_name" text="Byzantine" />
     <string id="abb_culture_name" text="Abbasid" />
     <string id="geo_culture_name" text="Georgian" />
     <string id="byz_ln_nikephoros_botaneiates" text="Nikephoros Botaneiates" />

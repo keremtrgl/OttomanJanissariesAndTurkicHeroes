@@ -394,6 +394,7 @@
     <string id="byz_house_tarchaneiotes" text="Tarhaniotes Hanedanı" />
     <string id="byz_house_kekaumenos" text="Kekavmenos Hanedanı" />
     <string id="byz_ln_eudokia" text="Eudokia Makrembolitissa" />
+    <string id="byz_culture_name" text="Bizans" />
     <string id="abb_culture_name" text="Abbasi" />
     <string id="geo_culture_name" text="Gürcü" />
     <string id="byz_ln_nikephoros_botaneiates" text="Nikephoros Botaneiates" />

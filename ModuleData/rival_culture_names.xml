@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SPCultures>
   <!-- Character-creation culture-select screen shows the raw Culture name, not the Kingdom
-       name - Culture.aserai/Culture.sturgia each belong to exactly one kingdom of ours, so
-       renaming them here is safe and keeps the two screens consistent. Culture.empire is
-       deliberately NOT touched here: it is shared by empire/empire_s/empire_w (Western/
-       Southern/Northern Empire), and only empire_s was renamed to Byzantine - renaming the
-       shared culture would mislabel the other two successor states as "Byzantine" too. -->
+       name - renamed here so a new character can be created directly as Byzantine/Abbasid/
+       Georgian, matching their kingdom names. Culture.empire is shared by empire/empire_s/
+       empire_w (Western/Southern/Northern Empire successor states) - only empire_s is renamed
+       to "Byzantine Empire" as a kingdom, so Northern/Western Empire will also display the
+       Culture name "Byzantine" at character creation and anywhere else Culture.name is shown
+       (confirmed acceptable: historically all three successor states were the same Roman/
+       Byzantine civilization, so this isn't factually wrong, just broader than only empire_s -
+       a real decision, not an oversight). Culture.aserai/Culture.sturgia each belong to exactly
+       one kingdom of ours, so no such spillover exists for Abbasid/Georgian. -->
+  <Culture id="empire" name="{=byz_culture_name}Byzantine" />
   <Culture id="aserai" name="{=abb_culture_name}Abbasi" />
   <Culture id="sturgia" name="{=geo_culture_name}Gürcü" />
 </SPCultures>
