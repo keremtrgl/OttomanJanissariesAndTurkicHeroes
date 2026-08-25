@@ -115,13 +115,14 @@ namespace SeljukEmpire.Recruitment
         {
             if (settlement == null) return false;
 
-            // Direct check for historic Seljuk towns, castles, and villages
+            // Fast-path prefix check for our own core settlements; the Kingdom check afterwards is
+            // the authoritative one and already covers every Seljuk-owned settlement, including
+            // future territory changes.
             string sid = settlement.StringId;
-            if (sid.StartsWith("town_ES1") || sid.StartsWith("town_A2") ||
-                sid.StartsWith("castle_ES4") || sid.StartsWith("castle_A6") || sid.StartsWith("castle_ES5") ||
-                sid.StartsWith("village_ES1_") || sid.StartsWith("village_A2_") ||
-                sid.StartsWith("castle_village_ES4_") || sid.StartsWith("castle_village_A6_") ||
-                sid.StartsWith("castle_village_ES5_"))
+            if (sid.StartsWith("town_ES1") || sid.StartsWith("town_A2") || sid.StartsWith("town_ES2") || sid.StartsWith("town_A4") ||
+                sid.StartsWith("castle_ES4") || sid.StartsWith("castle_A6") || sid.StartsWith("castle_ES5") || sid.StartsWith("castle_A8") ||
+                sid.StartsWith("village_ES1_") || sid.StartsWith("village_A2_") || sid.StartsWith("village_ES2_") || sid.StartsWith("village_A4_") ||
+                sid.StartsWith("castle_village_ES4_") || sid.StartsWith("castle_village_A6_") || sid.StartsWith("castle_village_ES5_") || sid.StartsWith("castle_village_A8_"))
             {
                 return true;
             }

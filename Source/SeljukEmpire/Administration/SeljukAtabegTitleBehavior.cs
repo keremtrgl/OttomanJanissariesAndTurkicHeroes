@@ -84,16 +84,13 @@ namespace SeljukEmpire.Administration
         private static bool IsSeljukFief(Settlement settlement)
         {
             if (settlement == null) return false;
-            if (settlement.StringId == "town_K1" || settlement.StringId == "town_K4" ||
-                settlement.StringId == "town_ES4" || settlement.StringId == "town_ES2" ||
-                settlement.StringId == "town_K6" || settlement.StringId == "town_A4" ||
-                settlement.StringId == "castle_K2" || settlement.StringId == "castle_K5" ||
-                settlement.StringId == "castle_K1" || settlement.StringId == "castle_A8" ||
-                settlement.StringId == "castle_ES3")
-            {
-                return true;
-            }
 
+            // Kingdom-based check only. The previous hardcoded settlement-id whitelist
+            // (town_K1/K4/K6, castle_K1/K2/K5, ...) predated the contiguous-territory rewrite and
+            // the Byzantine reskin: castle_ES3 is now the Byzantine fortress of Chonae, so that
+            // whitelist was incorrectly granting our daily loyalty/food/security stabilization to a
+            // rival kingdom's castle. The Kingdom check below already covers every fief we actually
+            // own and stays correct as territory changes.
             return settlement.OwnerClan?.Kingdom != null && settlement.OwnerClan.Kingdom.StringId == "kingdom_seljuks";
         }
     }
