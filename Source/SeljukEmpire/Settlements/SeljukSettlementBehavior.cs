@@ -355,6 +355,25 @@ namespace SeljukEmpire.Settlements
                 // Rey Kalesi Villages
                 SetupVillage("castle_village_A8_1", "{=seljuk_vil_cesmedeh}Çeşmedeh");
                 SetupVillage("castle_village_A8_2", "{=seljuk_vil_veramin}Veramin");
+
+                // =====================================================================
+                // 4. THIN-CLAN İKTÂ FIEFS (5 landless frontier beyliks each get 1 village)
+                // =====================================================================
+                // clan_mengucek/saltuk/caka/karaman/ahi_order were tier-3 clans with a lord and
+                // an initial_home_settlement pointing at Konya but no owned settlement at all -
+                // "own no actual settlement" per this mod's own dev roadmap (Work stream C).
+                // clan_seljuk_royal alone held all 11 villages across its 4 towns/castles; this
+                // grants one village each to the five landless beys from that royal domain,
+                // mirroring the real Seljuk iqta/timar practice of the Sultan rewarding loyal
+                // frontier commanders with crown-land revenue grants (not necessarily their own
+                // beylik's home region - iqta assignment usually wasn't tied to a bey's ancestral
+                // territory). clan_seljuk_royal keeps 6 of its 11 villages, still the largest
+                // holder by a wide margin.
+                AssignThinClanVillage("village_ES1_3", "clan_ahi_order");   // Sille (Konya)
+                AssignThinClanVillage("village_ES1_4", "clan_karaman");    // Karatay (Konya) - Karamanids later succeeded the Seljuks in this exact region
+                AssignThinClanVillage("village_ES2_4", "clan_mengucek");   // Hasanabad (İsfahan)
+                AssignThinClanVillage("village_A4_2", "clan_saltuk");      // Şadyah (Nişabur)
+                AssignThinClanVillage("castle_village_A8_2", "clan_caka"); // Veramin (Rey Kalesi)
             }
             catch (Exception)
             {
@@ -430,6 +449,25 @@ namespace SeljukEmpire.Settlements
                         village.Village.Hearth = 650f;
                     }
                     RenameSettlement(village, newNameTextKey);
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void AssignThinClanVillage(string villageId, string clanId)
+        {
+            try
+            {
+                Settlement village = Settlement.Find(villageId);
+                Clan clan = Clan.FindFirst(c => c.StringId == clanId);
+
+                if (village != null && village.IsVillage && clan != null)
+                {
+                    Hero owner = clan.Leader ?? clan.Heroes.Find(h => h.IsAlive);
+                    if (owner != null && village.OwnerClan != clan)
+                    {
+                        ChangeOwnerOfSettlementAction.ApplyByDefault(owner, village);
+                    }
                 }
             }
             catch (Exception) { }
