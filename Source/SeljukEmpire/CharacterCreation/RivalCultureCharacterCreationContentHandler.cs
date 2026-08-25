@@ -1,5 +1,5 @@
 using System;
-using System.Reflection;
+using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
@@ -23,7 +23,13 @@ namespace SeljukEmpire.CharacterCreation
     /// </remarks>
     public class RivalCultureCharacterCreationContentHandler : CampaignBehaviorBase, ICharacterCreationContentHandler
     {
-        private static readonly PropertyInfo GoldProp = typeof(NarrativeMenuOptionArgs).GetProperty("GoldToAdd", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        // See SeljukCharacterCreationContentHandler's comment on this field: NarrativeMenuOptionArgs.
+        // GoldToAdd has no public setter, and setting it via reflection from the per-option preview
+        // callback (fired on every hover/click while browsing, not just the option kept) was granting
+        // gold and popping a notification before the player had actually chosen anything. Gold bonuses
+        // are tracked here and granted once, for whichever option is still selected when character
+        // creation finishes (OnCharacterCreationFinalize).
+        private readonly Dictionary<string, int> _goldBonusByOptionId = new Dictionary<string, int>();
         private bool _isOptionsInjected;
 
         public override void RegisterEvents()
@@ -381,7 +387,7 @@ namespace SeljukEmpire.CharacterCreation
             catch (Exception) { }
         }
 
-        private static void AddOption(
+        private void AddOption(
             NarrativeMenu menu,
             string stringId,
             string titleKey,
@@ -396,6 +402,11 @@ namespace SeljukEmpire.CharacterCreation
             NarrativeMenuOptionOnSelectDelegate onSelect)
         {
             if (menu == null) return;
+
+            if (goldToAdd > 0)
+            {
+                _goldBonusByOptionId[stringId] = goldToAdd;
+            }
 
             var option = new NarrativeMenuOption(
                 stringId,
@@ -418,17 +429,6 @@ namespace SeljukEmpire.CharacterCreation
                     {
                         args.SetRenownToAdd(renownToAdd);
                     }
-                    if (goldToAdd > 0)
-                    {
-                        try
-                        {
-                            if (GoldProp != null && GoldProp.CanWrite)
-                            {
-                                GoldProp.SetValue(args, goldToAdd, null);
-                            }
-                        }
-                        catch (Exception) { }
-                    }
                 },
                 mgr => visibilityPredicate(mgr),
                 onSelect,
@@ -438,6 +438,31 @@ namespace SeljukEmpire.CharacterCreation
         }
 
         public void OnStageCompleted(CharacterCreationStageBase stage) { }
-        public void OnCharacterCreationFinalize(CharacterCreationManager characterCreationManager) { }
+
+        public void OnCharacterCreationFinalize(CharacterCreationManager characterCreationManager)
+        {
+            try
+            {
+                if (Hero.MainHero == null || characterCreationManager?.SelectedOptions == null) return;
+
+                int totalGold = 0;
+                foreach (var selectedOption in characterCreationManager.SelectedOptions.Values)
+                {
+                    if (selectedOption != null && _goldBonusByOptionId.TryGetValue(selectedOption.StringId, out int gold))
+                    {
+                        totalGold += gold;
+                    }
+                }
+
+                if (totalGold > 0)
+                {
+                    Hero.MainHero.Gold += totalGold;
+                }
+            }
+            catch (Exception)
+            {
+                // Safety
+            }
+        }
     }
 }
