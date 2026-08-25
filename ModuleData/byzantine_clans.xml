@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- Bizans imparatorluk hanedanları (Native clan_empire_south_1..9 reskin - klan verisi/lordlar/toprak Native, sadece kimlik degisir) -->
+  <Faction id="clan_empire_south_1" name="{=byz_house_diogenes}Diogenes Hanedanı" />
+  <Faction id="clan_empire_south_2" name="{=byz_house_botaneiates}Botaneiates Hanedanı" />
+  <Faction id="clan_empire_south_3" name="{=byz_house_doukas}Dukas Hanedanı" />
+  <Faction id="clan_empire_south_4" name="{=byz_house_komnenos}Komnenos Hanedanı" />
+  <Faction id="clan_empire_south_5" name="{=byz_house_bryennios}Bryennios Hanedanı" />
+  <Faction id="clan_empire_south_6" name="{=byz_house_melissenos}Melissenos Hanedanı" />
+  <Faction id="clan_empire_south_7" name="{=byz_house_argyros}Argyros Hanedanı" />
+  <Faction id="clan_empire_south_8" name="{=byz_house_tarchaneiotes}Tarhaniotes Hanedanı" />
+  <Faction id="clan_empire_south_9" name="{=byz_house_kekaumenos}Kekavmenos Hanedanı" />
+</Factions>
