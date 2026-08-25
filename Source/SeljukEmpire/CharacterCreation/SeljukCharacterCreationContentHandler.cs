@@ -133,6 +133,18 @@ namespace SeljukEmpire.CharacterCreation
             }
         }
 
+        private static bool IsSeljukCultureSelected(CharacterCreationManager manager)
+        {
+            try
+            {
+                return manager?.CharacterCreationContent?.SelectedCulture?.StringId == "seljuk";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         private static void SetParentOccupation(CharacterCreationManager manager, string occupation)
         {
             try
@@ -193,7 +205,7 @@ namespace SeljukEmpire.CharacterCreation
                         catch (Exception) { }
                     }
                 },
-                mgr => true, // Visible on all Turkic/Khuzait narrative choices
+                IsSeljukCultureSelected, // Only visible when the player has picked Culture.seljuk
                 onSelect,
                 null); // Let Native's ApplyFinalEffects apply Args cleanly without duplicate crash
 
