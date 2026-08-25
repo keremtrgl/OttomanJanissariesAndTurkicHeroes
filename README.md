@@ -46,6 +46,30 @@ gender flag. Run with `--quick` to skip the game-install-dependent checks, or `-
 machine-readable output. Every one of these checks has caught a real bug during this mod's
 development at least once.
 
+### Save compatibility (id order)
+
+Bannerlord assigns every `NPCCharacter`/`Item`/`Faction`/`Settlement`/`Kingdom`/`Culture` a
+save-file identity by **registration order** during XML load, not by its string id (confirmed
+by decompiling `TroopRosterElement`'s serialization). Appending new ids at the very end — of
+both a file's own element list and `SubModule.xml`'s `<XmlNode>` list — is safe. Inserting,
+removing, or reordering anything *before* an already-shipped id silently shifts every later
+id's assigned identity, so an existing save's roster or inventory can resolve to a
+**different, wrong** troop or item on load — not a crash, a silent mismatch that's much
+harder to notice and diagnose.
+
+`verify_mod.py` guards against this by comparing the current order against a frozen snapshot,
+`tools/shipped_ids_baseline.json`. Only advance that snapshot once you've confirmed the
+current state is actually safe to ship (typically: right after a release goes out):
+
+```bash
+python tools/verify_mod.py --update-baseline
+```
+
+Do **not** run `--update-baseline` to silence a failure you haven't understood — that defeats
+the point of the check. If it fails, either move your change so it only appends after the
+existing entries, or, if breaking existing saves for this change is a deliberate, accepted
+tradeoff, update the baseline knowingly.
+
 ## Repository layout
 
 - `ModuleData/` — troops, heroes, kingdoms, factions, settlements, items, localization, etc.
