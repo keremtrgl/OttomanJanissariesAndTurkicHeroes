@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SeljukEmpire;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.GameMenus;
@@ -132,7 +133,7 @@ namespace SeljukEmpire.Economy
                 {
                     args.optionLeaveType = GameMenuOption.LeaveType.Trade;
                     Settlement s = Settlement.CurrentSettlement;
-                    return s != null && s.IsTown && (IsSeljukTown(s));
+                    return s != null && s.IsTown && SeljukFactionUtility.IsSeljukSettlement(s);
                 },
                 args => GameMenu.SwitchToMenu("seljuk_caravan_insurance_menu"),
                 false, 4);
@@ -209,18 +210,5 @@ namespace SeljukEmpire.Economy
                 args => GameMenu.SwitchToMenu("town"));
         }
 
-        private static bool IsSeljukTown(Settlement settlement)
-        {
-            if (settlement == null) return false;
-            // Recognized Seljuk Hubs
-            if (settlement.StringId == "town_K1" || settlement.StringId == "town_K4" ||
-                settlement.StringId == "town_ES4" || settlement.StringId == "town_ES2" ||
-                settlement.StringId == "town_K6" || settlement.StringId == "town_A4")
-            {
-                return true;
-            }
-
-            return settlement.OwnerClan?.Kingdom != null && settlement.OwnerClan.Kingdom.StringId == "kingdom_seljuks";
-        }
     }
 }

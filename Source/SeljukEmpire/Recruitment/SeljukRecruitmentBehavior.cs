@@ -1,4 +1,5 @@
 using System;
+using SeljukEmpire;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.Settlements;
@@ -31,7 +32,7 @@ namespace SeljukEmpire.Recruitment
 
         private void OnDailyTickSettlement(Settlement settlement)
         {
-            if (settlement != null && IsSeljukSettlement(settlement))
+            if (settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
             {
                 RefreshSettlementNotables(settlement);
             }
@@ -39,7 +40,7 @@ namespace SeljukEmpire.Recruitment
 
         private void OnSettlementEntered(MobileParty party, Settlement settlement, Hero hero)
         {
-            if (party != null && party.IsMainParty && settlement != null && IsSeljukSettlement(settlement))
+            if (party != null && party.IsMainParty && settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
             {
                 RefreshSettlementNotables(settlement);
             }
@@ -53,7 +54,7 @@ namespace SeljukEmpire.Recruitment
 
                 foreach (var settlement in Settlement.All)
                 {
-                    if (IsSeljukSettlement(settlement))
+                    if (SeljukFactionUtility.IsSeljukSettlement(settlement))
                     {
                         RefreshSettlementNotables(settlement);
                     }
@@ -131,31 +132,5 @@ namespace SeljukEmpire.Recruitment
             }
         }
 
-        private static bool IsSeljukSettlement(Settlement settlement)
-        {
-            if (settlement == null) return false;
-
-            string sid = settlement.StringId;
-            if (sid.StartsWith("town_ES1") || sid.StartsWith("town_A2") ||
-                sid.StartsWith("castle_ES4") || sid.StartsWith("castle_A6") || sid.StartsWith("castle_ES5") ||
-                sid.StartsWith("village_ES1_") || sid.StartsWith("village_A2_") ||
-                sid.StartsWith("castle_village_ES4_") || sid.StartsWith("castle_village_A6_") ||
-                sid.StartsWith("castle_village_ES5_"))
-            {
-                return true;
-            }
-
-            if (settlement.OwnerClan?.Kingdom != null && settlement.OwnerClan.Kingdom.StringId == "kingdom_seljuks")
-            {
-                return true;
-            }
-
-            if (settlement.Village?.Bound?.OwnerClan?.Kingdom != null && settlement.Village.Bound.OwnerClan.Kingdom.StringId == "kingdom_seljuks")
-            {
-                return true;
-            }
-
-            return false;
-        }
     }
 }
