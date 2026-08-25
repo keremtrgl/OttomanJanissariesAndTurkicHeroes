@@ -9,11 +9,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="50" />
-      <skill id="Polearm" value="60" />
-      <skill id="Bow" value="40" />
-      <skill id="Athletics" value="60" />
-      <skill id="Riding" value="20" />
+      <skill id="OneHanded" value="29" />
+      <skill id="Polearm" value="34" />
+      <skill id="Bow" value="23" />
+      <skill id="Athletics" value="34" />
+      <skill id="Riding" value="11" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -47,9 +47,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="85" />
-      <skill id="Polearm" value="95" />
-      <skill id="Athletics" value="90" />
+      <skill id="OneHanded" value="59" />
+      <skill id="Polearm" value="66" />
+      <skill id="Athletics" value="62" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -81,9 +81,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="120" />
-      <skill id="Polearm" value="130" />
-      <skill id="Athletics" value="115" />
+      <skill id="OneHanded" value="87" />
+      <skill id="Polearm" value="94" />
+      <skill id="Athletics" value="83" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -115,11 +115,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="155" />
-      <skill id="TwoHanded" value="140" />
-      <skill id="Polearm" value="160" />
-      <skill id="Throwing" value="120" />
-      <skill id="Athletics" value="145" />
+      <skill id="OneHanded" value="123" />
+      <skill id="TwoHanded" value="111" />
+      <skill id="Polearm" value="127" />
+      <skill id="Throwing" value="95" />
+      <skill id="Athletics" value="115" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -153,10 +153,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="200" />
-      <skill id="TwoHanded" value="190" />
-      <skill id="Polearm" value="200" />
-      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="184" />
+      <skill id="TwoHanded" value="174" />
+      <skill id="Polearm" value="184" />
+      <skill id="Athletics" value="165" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -191,9 +191,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="Bow" value="95" />
-      <skill id="OneHanded" value="75" />
-      <skill id="Athletics" value="85" />
+      <skill id="Bow" value="68" />
+      <skill id="OneHanded" value="54" />
+      <skill id="Athletics" value="61" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -225,9 +225,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="Bow" value="135" />
-      <skill id="OneHanded" value="105" />
-      <skill id="Athletics" value="115" />
+      <skill id="Bow" value="99" />
+      <skill id="OneHanded" value="77" />
+      <skill id="Athletics" value="85" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -332,10 +332,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="Riding" value="100" />
-      <skill id="Polearm" value="90" />
-      <skill id="OneHanded" value="80" />
-      <skill id="Throwing" value="70" />
+      <skill id="Riding" value="61" />
+      <skill id="Polearm" value="55" />
+      <skill id="OneHanded" value="49" />
+      <skill id="Throwing" value="43" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -371,10 +371,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="Riding" value="135" />
-      <skill id="Bow" value="130" />
-      <skill id="Polearm" value="120" />
-      <skill id="OneHanded" value="110" />
+      <skill id="Riding" value="83" />
+      <skill id="Bow" value="80" />
+      <skill id="Polearm" value="73" />
+      <skill id="OneHanded" value="67" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -452,10 +452,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="Riding" value="215" />
-      <skill id="Bow" value="200" />
-      <skill id="Polearm" value="195" />
-      <skill id="OneHanded" value="185" />
+      <skill id="Riding" value="193" />
+      <skill id="Bow" value="180" />
+      <skill id="Polearm" value="175" />
+      <skill id="OneHanded" value="166" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -496,11 +496,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="95" />
-      <skill id="Polearm" value="105" />
-      <skill id="Bow" value="90" />
-      <skill id="Riding" value="105" />
-      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="50" />
+      <skill id="Polearm" value="55" />
+      <skill id="Bow" value="47" />
+      <skill id="Riding" value="55" />
+      <skill id="Athletics" value="42" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -538,11 +538,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="135" />
-      <skill id="Polearm" value="145" />
-      <skill id="Bow" value="120" />
-      <skill id="Riding" value="140" />
-      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="73" />
+      <skill id="Polearm" value="78" />
+      <skill id="Bow" value="65" />
+      <skill id="Riding" value="75" />
+      <skill id="Athletics" value="59" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -580,11 +580,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="175" />
-      <skill id="Polearm" value="190" />
-      <skill id="Bow" value="150" />
-      <skill id="Riding" value="185" />
-      <skill id="Athletics" value="135" />
+      <skill id="OneHanded" value="127" />
+      <skill id="Polearm" value="138" />
+      <skill id="Bow" value="109" />
+      <skill id="Riding" value="134" />
+      <skill id="Athletics" value="98" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -622,11 +622,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="215" />
-      <skill id="Polearm" value="230" />
-      <skill id="Bow" value="180" />
-      <skill id="Riding" value="220" />
-      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="166" />
+      <skill id="Polearm" value="177" />
+      <skill id="Bow" value="139" />
+      <skill id="Riding" value="170" />
+      <skill id="Athletics" value="127" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -664,15 +664,15 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="250" />
-      <skill id="TwoHanded" value="220" />
-      <skill id="Polearm" value="265" />
-      <skill id="Bow" value="220" />
-      <skill id="Crossbow" value="10" />
-      <skill id="Throwing" value="130" />
-      <skill id="Riding" value="260" />
-      <skill id="Athletics" value="200" />
-      <skill id="Crafting" value="10" />
+      <skill id="OneHanded" value="166" />
+      <skill id="TwoHanded" value="146" />
+      <skill id="Polearm" value="176" />
+      <skill id="Bow" value="146" />
+      <skill id="Crossbow" value="7" />
+      <skill id="Throwing" value="86" />
+      <skill id="Riding" value="172" />
+      <skill id="Athletics" value="133" />
+      <skill id="Crafting" value="7" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -713,11 +713,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="85" />
-      <skill id="TwoHanded" value="65" />
-      <skill id="Polearm" value="50" />
-      <skill id="Bow" value="75" />
-      <skill id="Athletics" value="85" />
+      <skill id="OneHanded" value="51" />
+      <skill id="TwoHanded" value="39" />
+      <skill id="Polearm" value="30" />
+      <skill id="Bow" value="45" />
+      <skill id="Athletics" value="51" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -751,11 +751,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="110" />
-      <skill id="TwoHanded" value="95" />
-      <skill id="Polearm" value="75" />
-      <skill id="Bow" value="110" />
-      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="68" />
+      <skill id="TwoHanded" value="58" />
+      <skill id="Polearm" value="46" />
+      <skill id="Bow" value="68" />
+      <skill id="Athletics" value="62" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -789,11 +789,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="150" />
-      <skill id="TwoHanded" value="145" />
-      <skill id="Polearm" value="130" />
-      <skill id="Bow" value="145" />
-      <skill id="Athletics" value="130" />
+      <skill id="OneHanded" value="121" />
+      <skill id="TwoHanded" value="117" />
+      <skill id="Polearm" value="105" />
+      <skill id="Bow" value="117" />
+      <skill id="Athletics" value="105" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -827,11 +827,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="200" />
-      <skill id="TwoHanded" value="195" />
-      <skill id="Polearm" value="175" />
-      <skill id="Bow" value="195" />
-      <skill id="Athletics" value="170" />
+      <skill id="OneHanded" value="162" />
+      <skill id="TwoHanded" value="158" />
+      <skill id="Polearm" value="142" />
+      <skill id="Bow" value="158" />
+      <skill id="Athletics" value="138" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -863,10 +863,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="70" />
-      <skill id="Polearm" value="75" />
-      <skill id="Riding" value="85" />
-      <skill id="Athletics" value="65" />
+      <skill id="OneHanded" value="46" />
+      <skill id="Polearm" value="50" />
+      <skill id="Riding" value="56" />
+      <skill id="Athletics" value="43" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -902,11 +902,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="100" />
-      <skill id="Polearm" value="90" />
-      <skill id="Bow" value="105" />
-      <skill id="Riding" value="110" />
-      <skill id="Athletics" value="85" />
+      <skill id="OneHanded" value="62" />
+      <skill id="Polearm" value="55" />
+      <skill id="Bow" value="65" />
+      <skill id="Riding" value="68" />
+      <skill id="Athletics" value="52" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -945,10 +945,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="140" />
-      <skill id="Polearm" value="145" />
-      <skill id="Riding" value="145" />
-      <skill id="Athletics" value="105" />
+      <skill id="OneHanded" value="135" />
+      <skill id="Polearm" value="140" />
+      <skill id="Riding" value="140" />
+      <skill id="Athletics" value="101" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -986,10 +986,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="195" />
-      <skill id="Polearm" value="200" />
-      <skill id="Riding" value="195" />
-      <skill id="Athletics" value="145" />
+      <skill id="OneHanded" value="185" />
+      <skill id="Polearm" value="190" />
+      <skill id="Riding" value="185" />
+      <skill id="Athletics" value="137" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1025,11 +1025,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="135" />
-      <skill id="TwoHanded" value="155" />
-      <skill id="Throwing" value="130" />
-      <skill id="Riding" value="160" />
-      <skill id="Athletics" value="145" />
+      <skill id="OneHanded" value="107" />
+      <skill id="TwoHanded" value="123" />
+      <skill id="Throwing" value="103" />
+      <skill id="Riding" value="126" />
+      <skill id="Athletics" value="115" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1067,11 +1067,11 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="185" />
-      <skill id="TwoHanded" value="210" />
-      <skill id="Throwing" value="175" />
-      <skill id="Riding" value="200" />
-      <skill id="Athletics" value="175" />
+      <skill id="OneHanded" value="149" />
+      <skill id="TwoHanded" value="169" />
+      <skill id="Throwing" value="141" />
+      <skill id="Riding" value="161" />
+      <skill id="Athletics" value="141" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1107,9 +1107,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="80" />
-      <skill id="Throwing" value="75" />
-      <skill id="Athletics" value="90" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Throwing" value="42" />
+      <skill id="Athletics" value="50" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1141,9 +1141,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="70" />
-      <skill id="Throwing" value="70" />
-      <skill id="Athletics" value="70" />
+      <skill id="OneHanded" value="56" />
+      <skill id="Throwing" value="56" />
+      <skill id="Athletics" value="56" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1178,10 +1178,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="110" />
-      <skill id="TwoHanded" value="100" />
-      <skill id="Throwing" value="100" />
-      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="74" />
+      <skill id="TwoHanded" value="68" />
+      <skill id="Throwing" value="68" />
+      <skill id="Athletics" value="68" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1215,10 +1215,10 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="155" />
-      <skill id="TwoHanded" value="140" />
-      <skill id="Throwing" value="150" />
-      <skill id="Athletics" value="135" />
+      <skill id="OneHanded" value="142" />
+      <skill id="TwoHanded" value="128" />
+      <skill id="Throwing" value="137" />
+      <skill id="Athletics" value="123" />
     </skills>
     <Equipments>
       <EquipmentRoster>
@@ -1250,9 +1250,9 @@
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
-      <skill id="OneHanded" value="85" />
-      <skill id="Bow" value="120" />
-      <skill id="Athletics" value="90" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Bow" value="99" />
+      <skill id="Athletics" value="74" />
     </skills>
     <Equipments>
       <EquipmentRoster>

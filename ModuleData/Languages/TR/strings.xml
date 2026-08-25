@@ -376,5 +376,13 @@
     <string id="seljuk_georgia_title" text="Gürcistan Krallığı" />
     <string id="seljuk_georgia_ruler" text="Kral" />
     <string id="seljuk_georgia_desc" text="Kafkas dağlarının eteklerinde hüküm süren Hristiyan krallık. Büyük Selçuklu akıncılarıyla sınır boylarında sık sık çatışan, bağımsızlığını korumakta kararlı bir kuzey komşusu." />
+    <string id="lord_fahrulmulk" text="Fahrülmülk" />
+    <string id="lord_emir_gazi" text="Emîr Gazi" />
+    <string id="lord_ishak_mengucek" text="İshak Mengücek" />
+    <string id="lord_ali_saltuk" text="Ali Saltuk" />
+    <string id="lord_yusuf_caka" text="Yusuf Çaka" />
+    <string id="lord_ibrahim_ahlatsah" text="İbrahim el-Ahlatî" />
+    <string id="lord_mahmud_karaman" text="Mahmud Karamanoğlu" />
+    <string id="lord_nasiruddin_halife" text="Şeyh Nasirüddin" />
   </strings>
 </base>

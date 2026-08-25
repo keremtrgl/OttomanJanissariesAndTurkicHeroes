@@ -958,4 +958,293 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
+
+  <NPCCharacter id="lord_seljuk_fahrulmulk" name="{=lord_fahrulmulk}Fahrülmülk" age="28" voice="softspoken" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="0016200140BC140143FBBB8747BD9C66A9446A946C85E738A778E765678CA9B4000BD8350BB5C64C0000037F0000000F00000037049140010000000001903000" age="28" weight="0.4" build="0.45000000000000007" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Calculating" value="2" /><Trait id="Honor" value="2" /><Trait id="Mercy" value="2" /><Trait id="Generosity" value="2" /><Trait id="Commander" value="2" /></Traits><skills><skill id="OneHanded" value="78" /><skill id="TwoHanded" value="42" /><skill id="Polearm" value="66" /><skill id="Bow" value="72" /><skill id="Riding" value="102" /><skill id="Athletics" value="78" /><skill id="Tactics" value="174" /><skill id="Leadership" value="180" /><skill id="Charm" value="180" /><skill id="Steward" value="180" /><skill id="Medicine" value="132" /><skill id="Engineering" value="168" /><skill id="Scouting" value="114" /><skill id="Trade" value="180" /><skill id="Crafting" value="96" /><skill id="Throwing" value="42" /><skill id="Crossbow" value="48" /><skill id="Roguery" value="66" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Item1" id="Item.shishpar_mace_t4" />
+        <equipment slot="Item2" id="Item.seljuk_eagle_shield" />
+        <equipment slot="Item3" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Horse" id="Item.noble_horse_eastern" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+        <equipment slot="Head" id="Item.khuzait_crown" />
+        <equipment slot="Cape" id="Item.desert_scale_shoulders" />
+        <equipment slot="Body" id="Item.seljuk_nizamiye_robe" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.aserai_noble_sword_4_t5" />
+        <equipment slot="Head" id="Item.khuzait_crown" />
+        <equipment slot="Body" id="Item.seljuk_nizamiye_robe" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_emir_gazi" name="{=lord_emir_gazi}Emîr Gazi" age="24" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="0005A80E56BC15029267B45D98B68DA6AA3A478AE653CE59797872993A33D5B4000C63B80CD674AA0000037F0000000F00000037049140010000000001907000" age="24" weight="0.5499999999999999" build="0.7000000000000001" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Valor" value="2" /><Trait id="Honor" value="2" /><Trait id="Commander" value="2" /><Trait id="Generosity" value="1" /></Traits><skills><skill id="OneHanded" value="150" /><skill id="TwoHanded" value="102" /><skill id="Polearm" value="156" /><skill id="Bow" value="180" /><skill id="Riding" value="180" /><skill id="Athletics" value="138" /><skill id="Tactics" value="174" /><skill id="Leadership" value="168" /><skill id="Charm" value="132" /><skill id="Steward" value="138" /><skill id="Medicine" value="90" /><skill id="Engineering" value="96" /><skill id="Scouting" value="162" /><skill id="Trade" value="90" /><skill id="Crafting" value="84" /><skill id="Throwing" value="102" /><skill id="Crossbow" value="78" /><skill id="Roguery" value="48" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.seljuk_danismend_bow" />
+        <equipment slot="Item1" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Item2" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Item3" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Cape" id="Item.brass_lamellar_shoulder" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.khuzait_civil_coat_b" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_ishak_mengucek" name="{=lord_ishak_mengucek}İshak Mengücek" age="24" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="000C5C06407C100D445D46A9BA9361467C67A8684A494AB868898A7575D9673300073A37079B6A780000037F0000000F00000037049140010000000000503003" age="24" weight="0.65" build="0.8" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Valor" value="2" /><Trait id="Honor" value="2" /><Trait id="Commander" value="1" /></Traits><skills><skill id="OneHanded" value="162" /><skill id="TwoHanded" value="180" /><skill id="Polearm" value="150" /><skill id="Bow" value="120" /><skill id="Riding" value="156" /><skill id="Athletics" value="162" /><skill id="Tactics" value="162" /><skill id="Leadership" value="150" /><skill id="Charm" value="114" /><skill id="Steward" value="126" /><skill id="Medicine" value="78" /><skill id="Engineering" value="114" /><skill id="Scouting" value="120" /><skill id="Trade" value="84" /><skill id="Crafting" value="102" /><skill id="Throwing" value="126" /><skill id="Crossbow" value="60" /><skill id="Roguery" value="42" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_polearm_2_t5" />
+        <equipment slot="Item1" id="Item.khuzait_noble_sword_2_t5" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item3" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Cape" id="Item.brass_lamellar_shoulder" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.khuzait_civil_coat_b" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_ali_saltuk" name="{=lord_ali_saltuk}Ali Saltuk" age="24" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="0005A80E56BC15029267B45D98B68DA6AA3A478AE653CE59797872993A33D5B4000C63B80CD674AA0000037F0000000F00000037049140010000000001907000" age="24" weight="0.6" build="0.75" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Valor" value="2" /><Trait id="Honor" value="2" /><Trait id="Commander" value="1" /></Traits><skills><skill id="OneHanded" value="174" /><skill id="TwoHanded" value="126" /><skill id="Polearm" value="162" /><skill id="Bow" value="126" /><skill id="Riding" value="162" /><skill id="Athletics" value="156" /><skill id="Tactics" value="162" /><skill id="Leadership" value="150" /><skill id="Charm" value="120" /><skill id="Steward" value="132" /><skill id="Medicine" value="84" /><skill id="Engineering" value="108" /><skill id="Scouting" value="132" /><skill id="Trade" value="90" /><skill id="Crafting" value="96" /><skill id="Throwing" value="108" /><skill id="Crossbow" value="66" /><skill id="Roguery" value="42" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item3" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+        <equipment slot="Head" id="Item.spiked_helmet_with_facemask" />
+        <equipment slot="Cape" id="Item.brass_lamellar_shoulder" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.khuzait_civil_coat_b" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_yusuf_caka" name="{=lord_yusuf_caka}Yusuf Çaka" age="22" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="0016200140BC140143FBBB8747BD9C66A9446A946C85E738A778E765678CA9B4000BD8350BB5C64C0000037F0000000F00000037049140010000000001903000" age="22" weight="0.5499999999999999" build="0.7000000000000001" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Valor" value="2" /><Trait id="Calculating" value="2" /><Trait id="Commander" value="2" /><Trait id="Honor" value="1" /></Traits><skills><skill id="OneHanded" value="174" /><skill id="TwoHanded" value="102" /><skill id="Polearm" value="144" /><skill id="Bow" value="114" /><skill id="Riding" value="150" /><skill id="Athletics" value="174" /><skill id="Tactics" value="180" /><skill id="Leadership" value="174" /><skill id="Charm" value="138" /><skill id="Steward" value="156" /><skill id="Medicine" value="90" /><skill id="Engineering" value="150" /><skill id="Scouting" value="156" /><skill id="Trade" value="144" /><skill id="Crafting" value="108" /><skill id="Throwing" value="120" /><skill id="Crossbow" value="180" /><skill id="Roguery" value="90" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_2_t5" />
+        <equipment slot="Item1" id="Item.seljuk_caka_crossbow" />
+        <equipment slot="Item2" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Item3" id="Item.decorated_steppe_shield" />
+        <equipment slot="Horse" id="Item.noble_horse_eastern" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Cape" id="Item.brass_lamellar_shoulder" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.khuzait_civil_coat_b" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_ibrahim_ahlatsah" name="{=lord_ibrahim_ahlatsah}İbrahim el-Ahlatî" age="23" voice="ironok" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Cavalry" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="003F880FC03C314064666A926C75C85988588A453C598D6A663AC7AB7D9B6B7A00035AC80396C8950000037F0000000F00000037049140010000000000283140" age="23" weight="0.6" build="0.7000000000000001" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Valor" value="2" /><Trait id="Honor" value="2" /><Trait id="Generosity" value="1" /></Traits><skills><skill id="OneHanded" value="156" /><skill id="TwoHanded" value="108" /><skill id="Polearm" value="168" /><skill id="Bow" value="132" /><skill id="Riding" value="168" /><skill id="Athletics" value="144" /><skill id="Tactics" value="156" /><skill id="Leadership" value="150" /><skill id="Charm" value="120" /><skill id="Steward" value="138" /><skill id="Medicine" value="78" /><skill id="Engineering" value="114" /><skill id="Scouting" value="126" /><skill id="Trade" value="96" /><skill id="Crafting" value="84" /><skill id="Throwing" value="96" /><skill id="Crossbow" value="60" /><skill id="Roguery" value="42" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item3" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Cape" id="Item.brass_lamellar_shoulder" />
+        <equipment slot="Body" id="Item.brass_lamellar_over_mail" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.khuzait_civil_coat" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_mahmud_karaman" name="{=lord_mahmud_karaman}Mahmud Karamanoğlu" age="21" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="0011880FD13C100D375A76A3977895388783B3188494663232AB272797D235A700068AE6067576B50000037F0000000F00000037049140010000000000781141" age="21" weight="0.5499999999999999" build="0.7000000000000001" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Valor" value="2" /><Trait id="Honor" value="2" /><Trait id="Commander" value="1" /></Traits><skills><skill id="OneHanded" value="162" /><skill id="TwoHanded" value="120" /><skill id="Polearm" value="156" /><skill id="Bow" value="180" /><skill id="Riding" value="174" /><skill id="Athletics" value="150" /><skill id="Tactics" value="168" /><skill id="Leadership" value="162" /><skill id="Charm" value="126" /><skill id="Steward" value="138" /><skill id="Medicine" value="84" /><skill id="Engineering" value="102" /><skill id="Scouting" value="156" /><skill id="Trade" value="90" /><skill id="Crafting" value="90" /><skill id="Throwing" value="102" /><skill id="Crossbow" value="66" /><skill id="Roguery" value="48" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_noble_sword_2_t5" />
+        <equipment slot="Item3" id="Item.decorated_steppe_shield" />
+        <equipment slot="Horse" id="Item.steppe_war_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
+        <equipment slot="Cape" id="Item.brass_lamellar_shoulder" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.khuzait_civil_coat_b" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
+  <NPCCharacter id="lord_seljuk_nasiruddin_halife" name="{=lord_nasiruddin_halife}Şeyh Nasirüddin" age="28" voice="softspoken" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="Infantry" face_mesh_cache="true">
+    <face>
+      <BodyProperties version="4" key="000C5C06407C100D445D46A9BA9361467C67A8684A494AB868898A7575D9673300073A37079B6A780000037F0000000F00000037049140010000000000503003" age="28" weight="0.5" build="0.6" />
+      <hair_tags>
+        <hair_tag name="khuzait" />
+      </hair_tags>
+      <beard_tags>
+        <beard_tag name="khuzait" />
+      </beard_tags>
+      <tattoo_tags>
+        <tattoo_tag name="Cleanface" />
+      </tattoo_tags>
+    </face>
+    <Traits><Trait id="Honor" value="2" /><Trait id="Generosity" value="2" /><Trait id="Calculating" value="2" /><Trait id="Mercy" value="2" /></Traits><skills><skill id="OneHanded" value="126" /><skill id="TwoHanded" value="96" /><skill id="Polearm" value="96" /><skill id="Bow" value="84" /><skill id="Riding" value="120" /><skill id="Athletics" value="138" /><skill id="Tactics" value="144" /><skill id="Leadership" value="168" /><skill id="Charm" value="180" /><skill id="Steward" value="180" /><skill id="Medicine" value="144" /><skill id="Engineering" value="144" /><skill id="Scouting" value="102" /><skill id="Trade" value="180" /><skill id="Crafting" value="180" /><skill id="Throwing" value="66" /><skill id="Crossbow" value="66" /><skill id="Roguery" value="36" /></skills><Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Item1" id="Item.shishpar_mace_t4" />
+        <equipment slot="Item2" id="Item.seljuk_eagle_shield" />
+        <equipment slot="Item3" id="Item.heavy_steppe_arrows" />
+        <equipment slot="Horse" id="Item.noble_horse_eastern" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+        <equipment slot="Head" id="Item.khuzait_crown" />
+        <equipment slot="Cape" id="Item.desert_scale_shoulders" />
+        <equipment slot="Body" id="Item.seljuk_nizamiye_robe" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster civilian="true">
+        <equipment slot="Item0" id="Item.khuzait_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.khuzait_crown" />
+        <equipment slot="Body" id="Item.seljuk_nizamiye_robe" />
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+  </NPCCharacter>
 </NPCCharacters>
