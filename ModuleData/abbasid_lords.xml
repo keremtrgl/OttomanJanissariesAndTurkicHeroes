@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Abbasi lordlarinin gercek tarihi isimleri (Halife el-Kaim/el-Muktedi donemi, 1031-1094) - yuz/ekipman/beceri Native, sadece isim degisir -->
+  <NPCCharacter id="lord_3_1" name="{=abb_ln_alqaim}el-Kâim Biemrillâh" />
+  <NPCCharacter id="lord_3_3" name="{=abb_ln_ibnjahir}Fahrüddevle İbn Cehîr" />
+  <NPCCharacter id="lord_3_5" name="{=abb_ln_ibnalmuslima}İbnü'l-Müslime" />
+  <NPCCharacter id="lord_3_16" name="{=abb_ln_tirad}Tirâd ez-Zeynebî" />
+  <NPCCharacter id="lord_3_17" name="{=abb_ln_damaghani}Ebû Abdullah ed-Damegânî" />
+  <NPCCharacter id="lord_3_18" name="{=abb_ln_hilal}Hilâl es-Sâbî" />
+  <NPCCharacter id="lord_3_19" name="{=abb_ln_quraysh}Kureyş bin Bedran" />
+  <NPCCharacter id="lord_3_22" name="{=abb_ln_ibnayyub}İbn Eyyûb" />
+  <NPCCharacter id="lord_A9_l" name="{=abb_ln_ibndarust}İbn Derûst" />
+</NPCCharacters>

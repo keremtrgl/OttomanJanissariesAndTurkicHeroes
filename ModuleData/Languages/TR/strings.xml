@@ -459,5 +459,180 @@
     <string id="byz_t_thema_militia_vet_archer" text="Thema Milis Kıdemli Okçusu" />
     <string id="byz_t_thema_militia_spearman" text="Thema Milis Mızrakçısı" />
     <string id="byz_t_thema_militia_vet_spearman" text="Thema Milis Kıdemli Mızrakçısı" />
+    <string id="abb_house_abbas" text="Benî Abbas" />
+    <string id="abb_house_jahir" text="Benî Cehîr" />
+    <string id="abb_house_muslima" text="Benî Müslime" />
+    <string id="abb_house_zaynabi" text="Benî Zeynebî" />
+    <string id="abb_house_damaghani" text="Benî Damegânî" />
+    <string id="abb_house_sabi" text="Benî Sâbî" />
+    <string id="abb_house_uqayl" text="Benî Ukayl" />
+    <string id="abb_house_ayyub" text="Benî Eyyûb" />
+    <string id="abb_house_darust" text="Benî Derûst" />
+    <string id="abb_ln_alqaim" text="el-Kâim Biemrillâh" />
+    <string id="abb_ln_ibnjahir" text="Fahrüddevle İbn Cehîr" />
+    <string id="abb_ln_ibnalmuslima" text="İbnü'l-Müslime" />
+    <string id="abb_ln_tirad" text="Tirâd ez-Zeynebî" />
+    <string id="abb_ln_damaghani" text="Ebû Abdullah ed-Damegânî" />
+    <string id="abb_ln_hilal" text="Hilâl es-Sâbî" />
+    <string id="abb_ln_quraysh" text="Kureyş bin Bedran" />
+    <string id="abb_ln_ibnayyub" text="İbn Eyyûb" />
+    <string id="abb_ln_ibndarust" text="İbn Derûst" />
+    <string id="abb_s_baghdad" text="Bağdat" />
+    <string id="abb_v_qutrabbul" text="Kutrabbul" />
+    <string id="abb_v_babalsham" text="Bâbüşşâm" />
+    <string id="abb_v_awana" text="Avâna" />
+    <string id="abb_s_basra" text="Basra" />
+    <string id="abb_v_ubulla" text="Übülle" />
+    <string id="abb_v_abbadan" text="Abbâdân" />
+    <string id="abb_s_kufa" text="Küfe" />
+    <string id="abb_v_hira" text="Hîre" />
+    <string id="abb_v_najaf" text="Necef" />
+    <string id="abb_v_qadisiyyah" text="Kâdisiye" />
+    <string id="abb_s_mosul" text="Musul" />
+    <string id="abb_v_sinjar" text="Sincar" />
+    <string id="abb_v_balad" text="Balad" />
+    <string id="abb_v_tellafar" text="Tell Afer" />
+    <string id="abb_v_nineveh" text="Ninova" />
+    <string id="abb_s_wasit" text="Vâsıt" />
+    <string id="abb_v_numaniyya" text="Nu'mâniye" />
+    <string id="abb_v_jarjaraya" text="Cercerâyâ" />
+    <string id="abb_v_dayralaqul" text="Deyrü'l-Akûl" />
+    <string id="abb_s_samarra" text="Sâmerrâ" />
+    <string id="abb_v_daquqa" text="Dakûka" />
+    <string id="abb_v_harba" text="Harbâ" />
+    <string id="abb_c_anbar" text="Enbâr Kalesi" />
+    <string id="abb_v_falluja" text="Fellûce" />
+    <string id="abb_v_sura" text="Sûrâ" />
+    <string id="abb_c_hit" text="Hît Kalesi" />
+    <string id="abb_v_hadithah" text="Hadîse" />
+    <string id="abb_v_alus" text="Âlûs" />
+    <string id="abb_c_tikrit" text="Tikrît Kalesi" />
+    <string id="abb_v_dur" text="Ed-Devr" />
+    <string id="abb_v_sinn" text="Sinn Barîmmâ" />
+    <string id="abb_c_rahba" text="Rahbe Kalesi" />
+    <string id="abb_v_raqqa" text="Rakka" />
+    <string id="abb_v_qarqisiya" text="Karkîsiyâ" />
+    <string id="abb_c_ana" text="Âne Kalesi" />
+    <string id="abb_v_rawa" text="Râve" />
+    <string id="abb_v_baqubah" text="Bakuba" />
+    <string id="abb_c_nahrawan" text="Nehrevân Kalesi" />
+    <string id="abb_v_jalula" text="Celûlâ" />
+    <string id="abb_v_khaniqin" text="Hanikin" />
+    <string id="abb_c_ukbara" text="Ukbera Kalesi" />
+    <string id="abb_v_dujayl" text="Dûceyl" />
+    <string id="abb_v_maskin" text="Maskin" />
+    <string id="abb_t_recruit" text="Abbasi Acemisi" />
+    <string id="abb_t_tribesman" text="Bedevi Kabile Eri" />
+    <string id="abb_t_ayyar" text="Ayyâr" />
+    <string id="abb_t_skirmisher" text="Bedevi Avcı Okçusu" />
+    <string id="abb_t_qawwas" text="Kavvâs" />
+    <string id="abb_t_master_qawwas" text="Usta Kavvâs" />
+    <string id="abb_t_hashimiyya" text="Hâşimiyye Piyadesi" />
+    <string id="abb_t_veteran_hashimiyya" text="Kıdemli Hâşimiyye Piyadesi" />
+    <string id="abb_t_ghulam" text="Gulâm" />
+    <string id="abb_t_ghulam_regular" text="Gulâm Eri" />
+    <string id="abb_t_ghulam_horseman" text="Gulâm Süvarisi" />
+    <string id="abb_t_ghulam_lancer" text="Gulâm Mızraklı Süvari" />
+    <string id="abb_t_ghulam_axeman" text="Gulâm Baltacısı" />
+    <string id="abb_t_hujariyya" text="Hucâriyye Muhafızı" />
+    <string id="abb_t_dar_alkhilafa" text="Dârü'l-Hilâfe Muhafızı" />
+    <string id="abb_t_ghilman" text="Gılmân Acemisi" />
+    <string id="abb_t_bedouin_horseman" text="Bedevi Atlısı" />
+    <string id="abb_t_faris" text="Fâris" />
+    <string id="abb_t_veteran_faris" text="Kıdemli Fâris" />
+    <string id="abb_t_vanguard_faris" text="Fâris el-Mukaddime" />
+    <string id="abb_t_militia_archer" text="Bağdat Milis Okçusu" />
+    <string id="abb_t_militia_vet_archer" text="Bağdat Kıdemli Milis Okçusu" />
+    <string id="abb_t_militia_spearman" text="Bağdat Milis Mızrakçısı" />
+    <string id="abb_t_militia_vet_spearman" text="Bağdat Kıdemli Milis Mızrakçısı" />
+    <string id="geo_house_bagrationi" text="Bagrationi Hanedanı" />
+    <string id="geo_house_baghvashi" text="Bagvaşi Hanedanı" />
+    <string id="geo_house_orbeli" text="Orbeli Hanedanı" />
+    <string id="geo_house_kvirikiani" text="Kvirikiani Hanedanı" />
+    <string id="geo_house_arishiani" text="Arişiani Hanedanı" />
+    <string id="geo_house_chqondideli" text="Çkondideli Hanedanı" />
+    <string id="geo_house_baramisdze" text="Baramisdze Hanedanı" />
+    <string id="geo_house_kakhaberisdze" text="Kahaberisdze Hanedanı" />
+    <string id="geo_house_eristavi" text="Eristavi Hanedanı" />
+    <string id="geo_ln_david" text="IV. David Ağmaşenebeli" />
+    <string id="geo_ln_liparit" text="Liparit Bagvaşi" />
+    <string id="geo_ln_ivane" text="İvane Orbeli" />
+    <string id="geo_ln_aghsartan" text="II. Ağsartan" />
+    <string id="geo_ln_arishiani" text="Arişiani" />
+    <string id="geo_ln_giorgi_chqondideli" text="Çkondideli Giorgi" />
+    <string id="geo_ln_kavtar" text="Kavtar Baramisdze" />
+    <string id="geo_ln_kakhaber" text="Kahaber Kahaberisdze" />
+    <string id="geo_ln_grigol" text="Grigol Eristavi" />
+    <string id="geo_s_kutaisi" text="Kutaisi" />
+    <string id="geo_v_nokalakevi" text="Nokalakevi" />
+    <string id="geo_v_vardtsikhe" text="Vardtsihe" />
+    <string id="geo_s_tbilisi" text="Tiflis" />
+    <string id="geo_v_mtskheta" text="Mtsheta" />
+    <string id="geo_v_rustavi" text="Rustavi" />
+    <string id="geo_s_kldekari" text="Kldekari" />
+    <string id="geo_v_trialeti" text="Trialeti" />
+    <string id="geo_v_manglisi" text="Manglisi" />
+    <string id="geo_s_telavi" text="Telavi" />
+    <string id="geo_v_ikalto" text="İkalto" />
+    <string id="geo_v_alaverdi" text="Alaverdi" />
+    <string id="geo_v_nekresi" text="Nekresi" />
+    <string id="geo_s_lore" text="Lore" />
+    <string id="geo_v_kaladzori" text="Kaladzori" />
+    <string id="geo_v_tashir" text="Taşir" />
+    <string id="geo_s_chqondidi" text="Çkondidi" />
+    <string id="geo_v_anakopia" text="Anakopya" />
+    <string id="geo_v_bichvinta" text="Bıçvinta" />
+    <string id="geo_v_sokhumi" text="Sohumi" />
+    <string id="geo_s_khornabuji" text="Hornabuci" />
+    <string id="geo_v_bodbe" text="Bodbe" />
+    <string id="geo_v_vejini" text="Vejini" />
+    <string id="geo_c_gori" text="Gori Kalesi" />
+    <string id="geo_v_ateni" text="Ateni" />
+    <string id="geo_v_uplistsikhe" text="Uplistsihe" />
+    <string id="geo_c_dmanisi" text="Dmanisi Kalesi" />
+    <string id="geo_v_bolnisi" text="Bolnisi" />
+    <string id="geo_v_tsalka" text="Tsalka" />
+    <string id="geo_c_samshvilde" text="Samşvilde Kalesi" />
+    <string id="geo_v_orbeti" text="Orbeti" />
+    <string id="geo_v_tsintskaro" text="Tsintskaro" />
+    <string id="geo_c_zedazeni" text="Zedazeni Kalesi" />
+    <string id="geo_v_mukhrani" text="Muhrani" />
+    <string id="geo_v_tsromi" text="Tsromi" />
+    <string id="geo_c_manavi" text="Manavi Kalesi" />
+    <string id="geo_v_kvareli" text="Kvareli" />
+    <string id="geo_v_akhmeta" text="Ahmeta" />
+    <string id="geo_c_kojori" text="Kojori Kalesi" />
+    <string id="geo_v_betania" text="Betania" />
+    <string id="geo_v_tabakhmela" text="Tabahmela" />
+    <string id="geo_c_artanuji" text="Artanuci Kalesi" />
+    <string id="geo_v_oltisi" text="Oltisi" />
+    <string id="geo_v_shavsheti" text="Şavşeti" />
+    <string id="geo_c_tmogvi" text="Tmogvi Kalesi" />
+    <string id="geo_v_akhaltsikhe" text="Ahaltsihe" />
+    <string id="geo_v_khertvisi" text="Hertvisi" />
+    <string id="geo_t_recruit" text="Glehi Leventi" />
+    <string id="geo_t_aznauri_warrior" text="Aznauri Savaşçısı" />
+    <string id="geo_t_msakhuri" text="Msahuri Eri" />
+    <string id="geo_t_didebuli_spear" text="Didebuli Mızrakçısı" />
+    <string id="geo_t_didebuli_axe" text="Didebuli Baltacısı" />
+    <string id="geo_t_aznauri_squire" text="Aznauri Silahtarı" />
+    <string id="geo_t_monaspa" text="Monaspa Muhafızı" />
+    <string id="geo_t_alan_horseguard" text="Alan Atlı Muhafızı" />
+    <string id="geo_t_frankish_maa" text="Frenk Silahlı Şövalyesi" />
+    <string id="geo_t_frankish_knight" text="Kıdemli Frenk Şövalyesi" />
+    <string id="geo_t_mtiuli_woodsman" text="Mtiuli Ormancısı" />
+    <string id="geo_t_mtiuli_hunter" text="Mtiuli Avcısı" />
+    <string id="geo_t_mtiuli_archer" text="Mtiuli Okçusu" />
+    <string id="geo_t_mtiuli_vet_bowman" text="Kıdemli Mtiuli Okçusu" />
+    <string id="geo_t_khevsur_raider" text="Hevsur Akıncısı" />
+    <string id="geo_t_khevsur_hardened" text="Sertleşmiş Hevsur Akıncısı" />
+    <string id="geo_t_khevsur_horse" text="Hevsur Atlı Akıncısı" />
+    <string id="geo_t_svan_linebreaker" text="Svan Saf Yarıcısı" />
+    <string id="geo_t_svan_spearman" text="Svan Mızrakçısı" />
+    <string id="geo_t_svan_heroic" text="Kahraman Svan Saf Yarıcısı" />
+    <string id="geo_t_kartli_militia_archer" text="Kartli Milis Okçusu" />
+    <string id="geo_t_kartli_militia_vet_archer" text="Kartli Kıdemli Milis Okçusu" />
+    <string id="geo_t_kartli_militia_spear" text="Kartli Milis Mızrakçısı" />
+    <string id="geo_t_kartli_militia_vet_spear" text="Kartli Kıdemli Milis Mızrakçısı" />
   </strings>
 </base>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settlements>
+  <!-- Abbasi (Aserai) sehirleri gercek Abbasi-donemi Irak/Cezire yer adlarina cevrildi. -->
+  <!-- Sahiplik/kultur Native (Culture.aserai, ilgili klan) - sadece isim degisir. -->
+  <!-- town_A2/A4 ve castle_A6/A8 (Sogut/Nisabur/Sibal Zumr/Rey Kalesi) zaten Selcuklu toprraklarimizdir, buraya dahil edilmedi. -->
+  <Settlement id="town_A1" name="{=abb_s_baghdad}Bağdat" />
+  <Settlement id="village_A1_1" name="{=abb_v_qutrabbul}Kutrabbul" />
+  <Settlement id="village_A1_2" name="{=abb_v_babalsham}Bâbüşşâm" />
+  <Settlement id="village_A1_4" name="{=abb_v_awana}Avâna" />
+
+  <Settlement id="town_A3" name="{=abb_s_basra}Basra" />
+  <Settlement id="village_A3_1" name="{=abb_v_ubulla}Übülle" />
+  <Settlement id="village_A3_3" name="{=abb_v_abbadan}Abbâdân" />
+
+  <Settlement id="town_A5" name="{=abb_s_kufa}Küfe" />
+  <Settlement id="village_A5_1" name="{=abb_v_hira}Hîre" />
+  <Settlement id="village_A5_2" name="{=abb_v_najaf}Necef" />
+  <Settlement id="village_A5_3" name="{=abb_v_qadisiyyah}Kâdisiye" />
+
+  <Settlement id="town_A6" name="{=abb_s_mosul}Musul" />
+  <Settlement id="village_A6_1" name="{=abb_v_sinjar}Sincar" />
+  <Settlement id="village_A6_2" name="{=abb_v_balad}Balad" />
+  <Settlement id="village_A6_3" name="{=abb_v_tellafar}Tell Afer" />
+  <Settlement id="village_A6_4" name="{=abb_v_nineveh}Ninova" />
+
+  <Settlement id="town_A7" name="{=abb_s_wasit}Vâsıt" />
+  <Settlement id="village_A7_2" name="{=abb_v_numaniyya}Nu'mâniye" />
+  <Settlement id="village_A7_3" name="{=abb_v_jarjaraya}Cercerâyâ" />
+  <Settlement id="village_A7_4" name="{=abb_v_dayralaqul}Deyrü'l-Akûl" />
+
+  <Settlement id="town_A8" name="{=abb_s_samarra}Sâmerrâ" />
+  <Settlement id="village_A8_1" name="{=abb_v_daquqa}Dakûka" />
+  <Settlement id="village_A8_2" name="{=abb_v_harba}Harbâ" />
+
+  <Settlement id="castle_A1" name="{=abb_c_anbar}Enbâr Kalesi" />
+  <Settlement id="castle_village_A1_1" name="{=abb_v_falluja}Fellûce" />
+  <Settlement id="castle_village_A1_2" name="{=abb_v_sura}Sûrâ" />
+
+  <Settlement id="castle_A2" name="{=abb_c_hit}Hît Kalesi" />
+  <Settlement id="castle_village_A2_1" name="{=abb_v_hadithah}Hadîse" />
+  <Settlement id="castle_village_A2_2" name="{=abb_v_alus}Âlûs" />
+
+  <Settlement id="castle_A3" name="{=abb_c_tikrit}Tikrît Kalesi" />
+  <Settlement id="castle_village_A3_1" name="{=abb_v_dur}Ed-Devr" />
+  <Settlement id="castle_village_A3_2" name="{=abb_v_sinn}Sinn Barîmmâ" />
+
+  <Settlement id="castle_A4" name="{=abb_c_rahba}Rahbe Kalesi" />
+  <Settlement id="castle_village_A4_1" name="{=abb_v_raqqa}Rakka" />
+  <Settlement id="castle_village_A4_2" name="{=abb_v_qarqisiya}Karkîsiyâ" />
+
+  <Settlement id="castle_A5" name="{=abb_c_ana}Âne Kalesi" />
+  <Settlement id="castle_village_A5_1" name="{=abb_v_rawa}Râve" />
+  <Settlement id="castle_village_A5_2" name="{=abb_v_baqubah}Bakuba" />
+
+  <Settlement id="castle_A7" name="{=abb_c_nahrawan}Nehrevân Kalesi" />
+  <Settlement id="castle_village_A7_1" name="{=abb_v_jalula}Celûlâ" />
+  <Settlement id="castle_village_A7_2" name="{=abb_v_khaniqin}Hanikin" />
+
+  <Settlement id="castle_A9" name="{=abb_c_ukbara}Ukbera Kalesi" />
+  <Settlement id="castle_village_A9_1" name="{=abb_v_dujayl}Dûceyl" />
+  <Settlement id="castle_village_A9_2" name="{=abb_v_maskin}Maskin" />
+</Settlements>
