@@ -459,5 +459,180 @@
     <string id="byz_t_thema_militia_vet_archer" text="Thema Militia Veteran Archer" />
     <string id="byz_t_thema_militia_spearman" text="Thema Militia Spearman" />
     <string id="byz_t_thema_militia_vet_spearman" text="Thema Militia Veteran Spearman" />
+    <string id="abb_house_abbas" text="Banu Abbas" />
+    <string id="abb_house_jahir" text="Banu Jahir" />
+    <string id="abb_house_muslima" text="Banu al-Muslima" />
+    <string id="abb_house_zaynabi" text="Banu al-Zaynabi" />
+    <string id="abb_house_damaghani" text="Banu al-Damaghani" />
+    <string id="abb_house_sabi" text="Banu al-Sabi" />
+    <string id="abb_house_uqayl" text="Banu Uqayl" />
+    <string id="abb_house_ayyub" text="Banu Ayyub" />
+    <string id="abb_house_darust" text="Banu Darust" />
+    <string id="abb_ln_alqaim" text="Al-Qa'im bi-Amr Allah" />
+    <string id="abb_ln_ibnjahir" text="Fakhr al-Dawla ibn Jahir" />
+    <string id="abb_ln_ibnalmuslima" text="Ibn al-Muslima" />
+    <string id="abb_ln_tirad" text="Tirad al-Zaynabi" />
+    <string id="abb_ln_damaghani" text="Abu Abdallah al-Damaghani" />
+    <string id="abb_ln_hilal" text="Hilal al-Sabi" />
+    <string id="abb_ln_quraysh" text="Quraysh ibn Badran" />
+    <string id="abb_ln_ibnayyub" text="Ibn Ayyub" />
+    <string id="abb_ln_ibndarust" text="Ibn Darust" />
+    <string id="abb_s_baghdad" text="Baghdad" />
+    <string id="abb_v_qutrabbul" text="Qutrabbul" />
+    <string id="abb_v_babalsham" text="Bab al-Sham" />
+    <string id="abb_v_awana" text="Awana" />
+    <string id="abb_s_basra" text="Basra" />
+    <string id="abb_v_ubulla" text="Ubulla" />
+    <string id="abb_v_abbadan" text="Abbadan" />
+    <string id="abb_s_kufa" text="Kufa" />
+    <string id="abb_v_hira" text="Hira" />
+    <string id="abb_v_najaf" text="Najaf" />
+    <string id="abb_v_qadisiyyah" text="Qadisiyyah" />
+    <string id="abb_s_mosul" text="Mosul" />
+    <string id="abb_v_sinjar" text="Sinjar" />
+    <string id="abb_v_balad" text="Balad" />
+    <string id="abb_v_tellafar" text="Tell Afar" />
+    <string id="abb_v_nineveh" text="Nineveh" />
+    <string id="abb_s_wasit" text="Wasit" />
+    <string id="abb_v_numaniyya" text="Nu'maniyya" />
+    <string id="abb_v_jarjaraya" text="Jarjaraya" />
+    <string id="abb_v_dayralaqul" text="Dayr al-Aqul" />
+    <string id="abb_s_samarra" text="Samarra" />
+    <string id="abb_v_daquqa" text="Daquqa" />
+    <string id="abb_v_harba" text="Harba" />
+    <string id="abb_c_anbar" text="Anbar Castle" />
+    <string id="abb_v_falluja" text="Falluja" />
+    <string id="abb_v_sura" text="Sura" />
+    <string id="abb_c_hit" text="Hit Castle" />
+    <string id="abb_v_hadithah" text="Hadithah" />
+    <string id="abb_v_alus" text="Alus" />
+    <string id="abb_c_tikrit" text="Tikrit Castle" />
+    <string id="abb_v_dur" text="Ad-Dur" />
+    <string id="abb_v_sinn" text="Sinn Barimma" />
+    <string id="abb_c_rahba" text="Rahba Castle" />
+    <string id="abb_v_raqqa" text="Raqqa" />
+    <string id="abb_v_qarqisiya" text="Qarqisiya" />
+    <string id="abb_c_ana" text="Ana Castle" />
+    <string id="abb_v_rawa" text="Rawa" />
+    <string id="abb_v_baqubah" text="Baqubah" />
+    <string id="abb_c_nahrawan" text="Nahrawan Castle" />
+    <string id="abb_v_jalula" text="Jalula" />
+    <string id="abb_v_khaniqin" text="Khaniqin" />
+    <string id="abb_c_ukbara" text="Ukbara Castle" />
+    <string id="abb_v_dujayl" text="Dujayl" />
+    <string id="abb_v_maskin" text="Maskin" />
+    <string id="abb_t_recruit" text="Abbasid Recruit" />
+    <string id="abb_t_tribesman" text="Bedouin Tribesman" />
+    <string id="abb_t_ayyar" text="Ayyar" />
+    <string id="abb_t_skirmisher" text="Bedouin Skirmisher" />
+    <string id="abb_t_qawwas" text="Qawwas" />
+    <string id="abb_t_master_qawwas" text="Master Qawwas" />
+    <string id="abb_t_hashimiyya" text="Hashimiyya Infantry" />
+    <string id="abb_t_veteran_hashimiyya" text="Veteran Hashimiyya" />
+    <string id="abb_t_ghulam" text="Ghulam" />
+    <string id="abb_t_ghulam_regular" text="Ghulam Regular" />
+    <string id="abb_t_ghulam_horseman" text="Ghulam Horseman" />
+    <string id="abb_t_ghulam_lancer" text="Ghulam Lancer" />
+    <string id="abb_t_ghulam_axeman" text="Ghulam Axeman" />
+    <string id="abb_t_hujariyya" text="Hujariyya Guard" />
+    <string id="abb_t_dar_alkhilafa" text="Dar al-Khilafa Guard" />
+    <string id="abb_t_ghilman" text="Ghilman Recruit" />
+    <string id="abb_t_bedouin_horseman" text="Bedouin Horseman" />
+    <string id="abb_t_faris" text="Faris" />
+    <string id="abb_t_veteran_faris" text="Veteran Faris" />
+    <string id="abb_t_vanguard_faris" text="Faris al-Muqaddima" />
+    <string id="abb_t_militia_archer" text="Baghdad Militia Archer" />
+    <string id="abb_t_militia_vet_archer" text="Baghdad Veteran Militia Archer" />
+    <string id="abb_t_militia_spearman" text="Baghdad Militia Spearman" />
+    <string id="abb_t_militia_vet_spearman" text="Baghdad Veteran Militia Spearman" />
+    <string id="geo_house_bagrationi" text="House Bagrationi" />
+    <string id="geo_house_baghvashi" text="House Baghvashi" />
+    <string id="geo_house_orbeli" text="House Orbeli" />
+    <string id="geo_house_kvirikiani" text="House Kvirikiani" />
+    <string id="geo_house_arishiani" text="House Arishiani" />
+    <string id="geo_house_chqondideli" text="House Chqondideli" />
+    <string id="geo_house_baramisdze" text="House Baramisdze" />
+    <string id="geo_house_kakhaberisdze" text="House Kakhaberisdze" />
+    <string id="geo_house_eristavi" text="House Eristavi" />
+    <string id="geo_ln_david" text="David IV the Builder" />
+    <string id="geo_ln_liparit" text="Liparit Baghvashi" />
+    <string id="geo_ln_ivane" text="Ivane Orbeli" />
+    <string id="geo_ln_aghsartan" text="Aghsartan II" />
+    <string id="geo_ln_arishiani" text="Arishiani" />
+    <string id="geo_ln_giorgi_chqondideli" text="Giorgi of Chqondidi" />
+    <string id="geo_ln_kavtar" text="Kavtar Baramisdze" />
+    <string id="geo_ln_kakhaber" text="Kakhaber Kakhaberisdze" />
+    <string id="geo_ln_grigol" text="Grigol Eristavi" />
+    <string id="geo_s_kutaisi" text="Kutaisi" />
+    <string id="geo_v_nokalakevi" text="Nokalakevi" />
+    <string id="geo_v_vardtsikhe" text="Vardtsikhe" />
+    <string id="geo_s_tbilisi" text="Tbilisi" />
+    <string id="geo_v_mtskheta" text="Mtskheta" />
+    <string id="geo_v_rustavi" text="Rustavi" />
+    <string id="geo_s_kldekari" text="Kldekari" />
+    <string id="geo_v_trialeti" text="Trialeti" />
+    <string id="geo_v_manglisi" text="Manglisi" />
+    <string id="geo_s_telavi" text="Telavi" />
+    <string id="geo_v_ikalto" text="Ikalto" />
+    <string id="geo_v_alaverdi" text="Alaverdi" />
+    <string id="geo_v_nekresi" text="Nekresi" />
+    <string id="geo_s_lore" text="Lore" />
+    <string id="geo_v_kaladzori" text="Kaladzori" />
+    <string id="geo_v_tashir" text="Tashir" />
+    <string id="geo_s_chqondidi" text="Chqondidi" />
+    <string id="geo_v_anakopia" text="Anakopia" />
+    <string id="geo_v_bichvinta" text="Bichvinta" />
+    <string id="geo_v_sokhumi" text="Sokhumi" />
+    <string id="geo_s_khornabuji" text="Khornabuji" />
+    <string id="geo_v_bodbe" text="Bodbe" />
+    <string id="geo_v_vejini" text="Vejini" />
+    <string id="geo_c_gori" text="Gori Castle" />
+    <string id="geo_v_ateni" text="Ateni" />
+    <string id="geo_v_uplistsikhe" text="Uplistsikhe" />
+    <string id="geo_c_dmanisi" text="Dmanisi Castle" />
+    <string id="geo_v_bolnisi" text="Bolnisi" />
+    <string id="geo_v_tsalka" text="Tsalka" />
+    <string id="geo_c_samshvilde" text="Samshvilde Castle" />
+    <string id="geo_v_orbeti" text="Orbeti" />
+    <string id="geo_v_tsintskaro" text="Tsintskaro" />
+    <string id="geo_c_zedazeni" text="Zedazeni Castle" />
+    <string id="geo_v_mukhrani" text="Mukhrani" />
+    <string id="geo_v_tsromi" text="Tsromi" />
+    <string id="geo_c_manavi" text="Manavi Castle" />
+    <string id="geo_v_kvareli" text="Kvareli" />
+    <string id="geo_v_akhmeta" text="Akhmeta" />
+    <string id="geo_c_kojori" text="Kojori Castle" />
+    <string id="geo_v_betania" text="Betania" />
+    <string id="geo_v_tabakhmela" text="Tabakhmela" />
+    <string id="geo_c_artanuji" text="Artanuji Castle" />
+    <string id="geo_v_oltisi" text="Oltisi" />
+    <string id="geo_v_shavsheti" text="Shavsheti" />
+    <string id="geo_c_tmogvi" text="Tmogvi Castle" />
+    <string id="geo_v_akhaltsikhe" text="Akhaltsikhe" />
+    <string id="geo_v_khertvisi" text="Khertvisi" />
+    <string id="geo_t_recruit" text="Georgian Levy" />
+    <string id="geo_t_aznauri_warrior" text="Aznauri Warrior" />
+    <string id="geo_t_msakhuri" text="Msakhuri Soldier" />
+    <string id="geo_t_didebuli_spear" text="Didebuli Spearman" />
+    <string id="geo_t_didebuli_axe" text="Didebuli Axeman" />
+    <string id="geo_t_aznauri_squire" text="Aznauri Squire" />
+    <string id="geo_t_monaspa" text="Monaspa Guardsman" />
+    <string id="geo_t_alan_horseguard" text="Alan Horse-Guard" />
+    <string id="geo_t_frankish_maa" text="Frankish Man-at-Arms" />
+    <string id="geo_t_frankish_knight" text="Frankish Knight" />
+    <string id="geo_t_mtiuli_woodsman" text="Mtiuli Woodsman" />
+    <string id="geo_t_mtiuli_hunter" text="Mtiuli Hunter" />
+    <string id="geo_t_mtiuli_archer" text="Mtiuli Archer" />
+    <string id="geo_t_mtiuli_vet_bowman" text="Mtiuli Veteran Bowman" />
+    <string id="geo_t_khevsur_raider" text="Khevsur Raider" />
+    <string id="geo_t_khevsur_hardened" text="Khevsur Hardened Raider" />
+    <string id="geo_t_khevsur_horse" text="Khevsur Horse Raider" />
+    <string id="geo_t_svan_linebreaker" text="Svan Line Breaker" />
+    <string id="geo_t_svan_spearman" text="Svan Spearman" />
+    <string id="geo_t_svan_heroic" text="Svan Heroic Line Breaker" />
+    <string id="geo_t_kartli_militia_archer" text="Kartli Militia Archer" />
+    <string id="geo_t_kartli_militia_vet_archer" text="Kartli Veteran Militia Archer" />
+    <string id="geo_t_kartli_militia_spear" text="Kartli Militia Spearman" />
+    <string id="geo_t_kartli_militia_vet_spear" text="Kartli Veteran Militia Spearman" />
   </strings>
 </base>

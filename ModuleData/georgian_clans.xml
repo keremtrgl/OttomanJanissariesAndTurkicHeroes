@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- Gurcistan Krallığı hanedanlari (Native clan_sturgia_1..9 reskin - klan verisi/lordlar/toprak Native, sadece kimlik degisir) -->
+  <Faction id="clan_sturgia_1" name="{=geo_house_bagrationi}Bagrationi Hanedanı" />
+  <Faction id="clan_sturgia_2" name="{=geo_house_baghvashi}Bagvaşi Hanedanı" />
+  <Faction id="clan_sturgia_3" name="{=geo_house_orbeli}Orbeli Hanedanı" />
+  <Faction id="clan_sturgia_4" name="{=geo_house_kvirikiani}Kvirikiani Hanedanı" />
+  <Faction id="clan_sturgia_5" name="{=geo_house_arishiani}Arişiani Hanedanı" />
+  <Faction id="clan_sturgia_6" name="{=geo_house_chqondideli}Çkondideli Hanedanı" />
+  <Faction id="clan_sturgia_7" name="{=geo_house_baramisdze}Baramisdze Hanedanı" />
+  <Faction id="clan_sturgia_8" name="{=geo_house_kakhaberisdze}Kahaberisdze Hanedanı" />
+  <Faction id="clan_sturgia_9" name="{=geo_house_eristavi}Eristavi Hanedanı" />
+</Factions>
