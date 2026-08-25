@@ -11,10 +11,54 @@ namespace SeljukEmpire.CharacterCreation
     /// Injects authentic Seljuk & Turkic character creation narrative options into Mount & Blade II: Bannerlord.
     /// Safely integrated with Native CharacterCreationManager, 3D parent model equipment, and effect pipelines.
     /// </summary>
-    public class SeljukCharacterCreationContentHandler : ICharacterCreationContentHandler
+    /// <remarks>
+    /// Was registered by polling GameStateManager.Current.ActiveState on SubModule.OnApplicationTick and
+    /// calling CharacterCreationManager.RegisterCharacterCreationContentHandler one frame after
+    /// CharacterCreationState activated. But CharacterCreationState's constructor builds
+    /// CharacterCreationManager synchronously, and THAT constructor already iterates every registered
+    /// handler's InitializeContent/AfterInitializeContent before the object even exists for the SubModule
+    /// tick to find - so the tick-based registration always ran one frame too late, after every stage
+    /// (culture select, family background, ...) had already been built without our content. Native's own
+    /// TaleWorlds.CampaignSystem.CampaignBehaviors.CharacterCreationCampaignBehavior avoids this by being a
+    /// CampaignBehaviorBase that self-registers inside CampaignEvents.OnCharacterCreationInitializedEvent,
+    /// which fires mid-constructor before those loops run - this class now follows the same pattern.
+    /// </remarks>
+    public class SeljukCharacterCreationContentHandler : CampaignBehaviorBase, ICharacterCreationContentHandler
     {
         private static readonly PropertyInfo GoldProp = typeof(NarrativeMenuOptionArgs).GetProperty("GoldToAdd", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
         private bool _isOptionsInjected;
+
+        public override void RegisterEvents()
+        {
+            CampaignEvents.OnCharacterCreationInitializedEvent.AddNonSerializedListener(this, OnCharacterCreationInitialized);
+        }
+
+        public override void SyncData(IDataStore dataStore)
+        {
+            // Transient character-creation behavior, nothing to persist
+        }
+
+        private void OnCharacterCreationInitialized(CharacterCreationManager characterCreationManager)
+        {
+            try
+            {
+                characterCreationManager.RegisterCharacterCreationContentHandler(this, 100);
+
+                // Native's CharacterCreationCampaignBehavior only ever adds its own hardcoded 6 cultures
+                // (aserai/battania/empire/khuzait/sturgia/vlandia) to the culture-select stage - Culture.seljuk
+                // was never in that list, so it could never appear there no matter what is_main_culture is
+                // set to in seljuk_culture.xml. Add it explicitly here.
+                var seljukCulture = Game.Current?.ObjectManager?.GetObject<CultureObject>("seljuk");
+                if (seljukCulture != null)
+                {
+                    characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(seljukCulture, 1, 10);
+                }
+            }
+            catch (Exception)
+            {
+                // Safety
+            }
+        }
 
         public void InitializeContent(CharacterCreationManager characterCreationManager)
         {

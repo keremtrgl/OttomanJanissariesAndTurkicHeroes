@@ -18,6 +18,13 @@ namespace SeljukEmpire.Immersion
     {
         private const int BARD_COST = 100;
         private const float MORALE_BONUS = 15f;
+        private const float COOLDOWN_HOURS = 24f;
+
+        // Was never persisted (SyncData was a no-op "transient" stub) and optionLeaveType was
+        // Submenu, which keeps the player on the same menu after clicking - nothing stopped
+        // clicking it over and over for unlimited morale as long as gold lasted. Now gated by a
+        // 24h in-game cooldown, tracked here and saved with the campaign.
+        private CampaignTime _lastListenTime = CampaignTime.Zero;
 
         public override void RegisterEvents()
         {
@@ -26,7 +33,7 @@ namespace SeljukEmpire.Immersion
 
         public override void SyncData(IDataStore dataStore)
         {
-            // Transient immersion behavior
+            dataStore.SyncData("_seljukTavernBardLastListenTime", ref _lastListenTime);
         }
 
         private void OnSessionLaunched(CampaignGameStarter starter)
@@ -41,7 +48,16 @@ namespace SeljukEmpire.Immersion
                     gameMenuOption =>
                     {
                         gameMenuOption.optionLeaveType = GameMenuOption.LeaveType.Submenu;
-                        if (Hero.MainHero == null || Hero.MainHero.Gold < BARD_COST)
+
+                        bool onCooldown = CampaignTime.Now - _lastListenTime < CampaignTime.Hours(COOLDOWN_HOURS);
+                        if (onCooldown)
+                        {
+                            gameMenuOption.IsEnabled = false;
+                            double hoursLeft = COOLDOWN_HOURS - (CampaignTime.Now - _lastListenTime).ToHours;
+                            gameMenuOption.Tooltip = new TextObject("{=seljuk_bard_cooldown}Ozan yorgun, dinlenmesi gerek ({HOURS} saat sonra tekrar gelin).")
+                                .SetTextVariable("HOURS", Math.Max(1, (int)Math.Ceiling(hoursLeft)));
+                        }
+                        else if (Hero.MainHero == null || Hero.MainHero.Gold < BARD_COST)
                         {
                             gameMenuOption.IsEnabled = false;
                             gameMenuOption.Tooltip = new TextObject("{=seljuk_bard_no_gold}Yeterli altınınız yok (100 Dinar gerekli).");
@@ -52,7 +68,8 @@ namespace SeljukEmpire.Immersion
                     {
                         try
                         {
-                            if (Hero.MainHero != null && Hero.MainHero.Gold >= BARD_COST)
+                            bool onCooldown = CampaignTime.Now - _lastListenTime < CampaignTime.Hours(COOLDOWN_HOURS);
+                            if (!onCooldown && Hero.MainHero != null && Hero.MainHero.Gold >= BARD_COST)
                             {
                                 GiveGoldAction.ApplyBetweenCharacters(Hero.MainHero, null, BARD_COST, true);
 
@@ -60,6 +77,8 @@ namespace SeljukEmpire.Immersion
                                 {
                                     MobileParty.MainParty.RecentEventsMorale += MORALE_BONUS;
                                 }
+
+                                _lastListenTime = CampaignTime.Now;
 
                                 MBInformationManager.AddQuickInformation(
                                     new TextObject("{=seljuk_bard_notif}Ozanın kopuzundan dökülen Selçuklu gazavat destanı erlerin yüreğini coşturdu! (+15 Ordu Morali)"));
