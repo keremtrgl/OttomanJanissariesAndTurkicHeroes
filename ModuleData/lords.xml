@@ -429,9 +429,9 @@
       </EquipmentRoster>
     </Equipments>
   </NPCCharacter>
-  <NPCCharacter id="lord_seljuk_karaman_bey" name="{=lord_karaman_bey}Kerimüddin Karaman Bey" age="36" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
+  <NPCCharacter id="lord_seljuk_karaman_bey" name="{=lord_karaman_bey}Kerimüddin Karaman Bey" age="40" voice="curt" is_hero="true" occupation="Lord" culture="Culture.seljuk" default_group="HorseArcher" face_mesh_cache="true">
     <face>
-      <BodyProperties version="4" key="0011880FD13C100D375A76A3977895388783B3188494663232AB272797D235A700068AE6067576B50000037F0000000F00000037049140010000000000781141" age="36" weight="0.70" build="0.80" />
+      <BodyProperties version="4" key="0011880FD13C100D375A76A3977895388783B3188494663232AB272797D235A700068AE6067576B50000037F0000000F00000037049140010000000000781141" age="40" weight="0.70" build="0.80" />
       <hair_tags>
         <hair_tag name="khuzait" />
       </hair_tags>
