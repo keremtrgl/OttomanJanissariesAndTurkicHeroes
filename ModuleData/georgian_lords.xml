@@ -2,6 +2,7 @@
 <NPCCharacters>
   <!-- Gurcu lordlarinin gercek tarihi isimleri (Kral IV. David/Yapici donemi, 1089-1125) - yuz/ekipman/beceri Native, sadece isim degisir -->
   <NPCCharacter id="lord_2_1" name="{=geo_ln_david}IV. David Ağmaşenebeli" />
+  <NPCCharacter id="lord_2_2" name="{=geo_ln_gurandukht}Gurandukht" />
   <NPCCharacter id="lord_2_3" name="{=geo_ln_liparit}Liparit Bagvaşi" />
   <NPCCharacter id="lord_2_5" name="{=geo_ln_ivane}İvane Orbeli" />
   <NPCCharacter id="lord_2_16" name="{=geo_ln_aghsartan}II. Ağsartan" />
