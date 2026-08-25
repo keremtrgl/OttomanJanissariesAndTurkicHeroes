@@ -1,5 +1,5 @@
 using System;
-using System.Reflection;
+using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.Core;
@@ -25,7 +25,15 @@ namespace SeljukEmpire.CharacterCreation
     /// </remarks>
     public class SeljukCharacterCreationContentHandler : CampaignBehaviorBase, ICharacterCreationContentHandler
     {
-        private static readonly PropertyInfo GoldProp = typeof(NarrativeMenuOptionArgs).GetProperty("GoldToAdd", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        // NarrativeMenuOptionArgs.GoldToAdd has no public setter (only AffectedSkills/RenownToAdd/
+        // Attribute/etc. have SetXxx methods) - Native itself never grants gold through a narrative
+        // option, it's only ever read back into the option's own preview tooltip text. Setting it via
+        // reflection from the per-option "preview args" callback (invoked on every hover/click while
+        // browsing, not just on the option the player ends up keeping) was firing prematurely and
+        // showing an unexpected gold notification before the player had actually chosen anything.
+        // Gold bonuses are now tracked here and granted exactly once, for the option actually still
+        // selected when character creation finishes (OnCharacterCreationFinalize).
+        private readonly Dictionary<string, int> _goldBonusByOptionId = new Dictionary<string, int>();
         private bool _isOptionsInjected;
 
         public override void RegisterEvents()
@@ -201,7 +209,7 @@ namespace SeljukEmpire.CharacterCreation
             catch (Exception) { }
         }
 
-        private static void AddOption(
+        private void AddOption(
             NarrativeMenu menu,
             string stringId,
             string titleKey,
@@ -215,6 +223,11 @@ namespace SeljukEmpire.CharacterCreation
             NarrativeMenuOptionOnSelectDelegate onSelect)
         {
             if (menu == null) return;
+
+            if (goldToAdd > 0)
+            {
+                _goldBonusByOptionId[stringId] = goldToAdd;
+            }
 
             var option = new NarrativeMenuOption(
                 stringId,
@@ -237,17 +250,6 @@ namespace SeljukEmpire.CharacterCreation
                     {
                         args.SetRenownToAdd(renownToAdd);
                     }
-                    if (goldToAdd > 0)
-                    {
-                        try
-                        {
-                            if (GoldProp != null && GoldProp.CanWrite)
-                            {
-                                GoldProp.SetValue(args, goldToAdd, null);
-                            }
-                        }
-                        catch (Exception) { }
-                    }
                 },
                 IsSeljukCultureSelected, // Only visible when the player has picked Culture.seljuk
                 onSelect,
@@ -257,6 +259,31 @@ namespace SeljukEmpire.CharacterCreation
         }
 
         public void OnStageCompleted(CharacterCreationStageBase stage) { }
-        public void OnCharacterCreationFinalize(CharacterCreationManager characterCreationManager) { }
+
+        public void OnCharacterCreationFinalize(CharacterCreationManager characterCreationManager)
+        {
+            try
+            {
+                if (Hero.MainHero == null || characterCreationManager?.SelectedOptions == null) return;
+
+                int totalGold = 0;
+                foreach (var selectedOption in characterCreationManager.SelectedOptions.Values)
+                {
+                    if (selectedOption != null && _goldBonusByOptionId.TryGetValue(selectedOption.StringId, out int gold))
+                    {
+                        totalGold += gold;
+                    }
+                }
+
+                if (totalGold > 0)
+                {
+                    Hero.MainHero.Gold += totalGold;
+                }
+            }
+            catch (Exception)
+            {
+                // Safety
+            }
+        }
     }
 }

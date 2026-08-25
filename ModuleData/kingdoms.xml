@@ -36,22 +36,25 @@
 
   <!-- BİZANS İMPARATORLUĞU (Native: Southern Empire / empire_s) -->
   <!-- banner_key eksikti - kingdoms.xml'de bir Kingdom sadece kismi override alsa da banner_key
-       hic belirtilmeyince oyun icinde kirik/varsayilan bir bayrak render ediliyordu (Native'in kendi
-       empire_s banner_key'i miras alinmiyor). Asagidaki key, Native'in orijinal empire_s bayragiyla
-       AYNI yapi/ikon (162) - sadece renk paleti index'leri kullanicinin istedigi C32ACE mora
-       (palet id 79, en yakin gecerli renk: 0xffA34FAF) ve mevcut altin vurguya (palet id 7,
-       0xffDEA940, D4AF37'ye zaten cok yakin) cekildi. Ayni banner_key, Diogenes Hanedani'nin
-       (clan_empire_south_1) klan bayragiyla da eslesiyor - bkz. byzantine_clans.xml. -->
+       hic belirtilmeyince oyun icinde kirik/varsayilan bir bayrag render ediliyordu (Native'in kendi
+       empire_s banner_key'i miras alinmiyor). Bayragin kendisi (ikon 162, cift basli kartal) artik
+       dogru render ediyor - ilk turda palet id 79 (0xffA34FAF) kullanildi ama bu, istenen C32ACE'e
+       kiyasla doygunlugu dusuk ("soluk") bir ton. Oyunun bayrak renk paleti sabit ~230 renkten
+       olustugu icin tam C32ACE hex'i mumkun degil; bunun yerine palet id 71 (0xff710083) secildi -
+       C32ACE'e cok yakin ayni mor/menekse tonu (hue farki ~4 derece) ama %100 doygunlukta, koyu/canli
+       "emperyal mor" (Bizans imparatorlarinin tarihi "porphyra" rengine de yakin) - "soluk" sorununu
+       coker. Ayni banner_key, Diogenes Hanedani'nin (clan_empire_south_1) klan bayragiyla da
+       eslesiyor - bkz. byzantine_clans.xml. -->
   <Kingdom id="empire_s"
            name="{=seljuk_byzantine_name}Bizans İmparatorluğu"
            short_name="{=seljuk_byzantine_short}Bizans"
            title="{=seljuk_byzantine_title}Bizans İmparatorluğu"
            ruler_title="{=seljuk_byzantine_ruler}İmparator"
            text="{=seljuk_byzantine_desc}Malazgirt sonrası Anadolu'da direnen Bizans'ın güney kanadı. Büyük Selçuklu Devleti'nin en amansız rakibi; Konya ve İsfahan'a doğru genişleyen Türkmen boylarına karşı sınır kalelerini elinde tutmaya çalışır."
-           banner_key="11.79.79.4345.4345.764.764.1.0.0.162.7.7.512.512.764.764.1.0.0"
-           primary_banner_color="0xFFC32ACE"
+           banner_key="11.71.71.4345.4345.764.764.1.0.0.162.7.7.512.512.764.764.1.0.0"
+           primary_banner_color="0xFF710083"
            secondary_banner_color="0xFFD4AF37"
-           color="0xFFC32ACE"
+           color="0xFF710083"
            color2="0xFFD4AF37">
     <!-- Native ships empire_s already at war with aserai on day 1 (spkingdoms.xml) - under our
          renames that's Bizans vs Abbasi at war from the very start of every campaign. -->
@@ -79,18 +82,22 @@
   </Kingdom>
 
   <!-- GÜRCİSTAN KRALLIĞI (Native: Principality of Sturgia / sturgia) -->
-  <!-- Ayni banner_key eksikligi buradaydi da - Native'in kendi sturgia bayragi/renkleri geri eklendi. -->
+  <!-- Ayni banner_key eksikligi buradaydi da, ama Native'in kendi mavi/gri renklerini geri koymak
+       yerine gercek Gurcu krallik bayragina uygun beyaz zemin + kirmizi (hac) vurgusuna cevrildi
+       (kullanicinin talebi: "beyaz" olmali, mavi degil). Palette'te tam beyaz (id 172) ve yakin bir
+       kirmizi (id 83) mevcut. Ayni banner_key, hukumdar hanedani Bagrationi'nin (clan_sturgia_1)
+       klan bayragiyla da eslesiyor - bkz. georgian_clans.xml. -->
   <Kingdom id="sturgia"
            name="{=seljuk_georgia_name}Gürcistan Krallığı"
            short_name="{=seljuk_georgia_short}Gürcüler"
            title="{=seljuk_georgia_title}Gürcistan Krallığı"
            ruler_title="{=seljuk_georgia_ruler}Kral"
            text="{=seljuk_georgia_desc}Kafkas dağlarının eteklerinde hüküm süren Hristiyan krallık. Büyük Selçuklu akıncılarıyla sınır boylarında sık sık çatışan, bağımsızlığını korumakta kararlı bir kuzey komşusu."
-           banner_key="11.12.12.4345.4345.764.764.1.0.0.462.13.13.512.512.764.764.1.0.0"
-           primary_banner_color="0xff224277"
-           secondary_banner_color="0xffCEDAE7"
-           color="0xff224277"
-           color2="0xffCEDAE7">
+           banner_key="11.172.172.4345.4345.764.764.1.0.0.462.83.83.512.512.764.764.1.0.0"
+           primary_banner_color="0xFFFFFFFF"
+           secondary_banner_color="0xFFD22D33"
+           color="0xFFFFFFFF"
+           color2="0xFFD22D33">
     <!-- Native ships sturgia already at war with vlandia on day 1 (spkingdoms.xml). -->
     <relationships>
       <relationship kingdom="Kingdom.vlandia" value="0" isAtWar="false" />

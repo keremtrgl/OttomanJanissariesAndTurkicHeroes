@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Factions>
   <!-- Gurcistan Krallığı hanedanlari (Native clan_sturgia_1..9 reskin - klan verisi/lordlar/toprak Native, sadece kimlik degisir) -->
-  <Faction id="clan_sturgia_1" name="{=geo_house_bagrationi}Bagrationi Hanedanı" />
+  <!-- clan_sturgia_1 hukumdar hanedani (Kingdom.sturgia'nin sahibi) oldugu icin banner_key burada
+       da kingdoms.xml'deki sturgia ile AYNI degere (beyaz+kirmizi) cekildi. -->
+  <Faction id="clan_sturgia_1" name="{=geo_house_bagrationi}Bagrationi Hanedanı" banner_key="11.172.172.4345.4345.764.764.1.0.0.462.83.83.512.512.764.764.1.0.0" />
   <Faction id="clan_sturgia_2" name="{=geo_house_baghvashi}Bagvaşi Hanedanı" />
   <Faction id="clan_sturgia_3" name="{=geo_house_orbeli}Orbeli Hanedanı" />
   <Faction id="clan_sturgia_4" name="{=geo_house_kvirikiani}Kvirikiani Hanedanı" />

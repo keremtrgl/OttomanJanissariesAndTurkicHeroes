@@ -20,13 +20,17 @@
       <skill id="Bow" value="10" />
       <skill id="Throwing" value="10" />
     </skills>
+    <!-- No Horse slot: this is Culture.aserai's basic_troop, which GetBasicVolunteer() (Bannerlord's
+         DefaultVolunteerModel) hands out to almost every notable/village as the default recruit.
+         It previously carried a full aserai_horse, making even the cheapest tier-1 recruit register
+         as mounted cavalry and price like it - seljuk_peasant (this mod's own tier-1 Seljuk recruit,
+         ~20 Dinars) has no Horse slot at all, which is the actual reason it's so much cheaper. -->
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.aserai_sword_3_t3" />
         <equipment slot="Head" id="Item.turban" />
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
-      <equipment slot="Horse" id="Item.aserai_horse" />
     </Equipments>
     <upgrade_targets>
       <upgrade_target id="NPCCharacter.abb2_ayyar" />
