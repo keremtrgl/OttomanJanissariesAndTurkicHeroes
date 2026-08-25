@@ -33,6 +33,20 @@ Checks performed:
                             Native id and sets is_female keeps the SAME is_female Native already
                             defined for that id (this exact mismatch caused a real "ruler shows
                             as a woman" bug earlier in this mod's history).
+  8. id-order-stability     Save-compatibility guard. Bannerlord assigns each NPCCharacter/Item/
+                            Faction/Settlement/Kingdom/Culture a save-file identity (MBGUID) by
+                            REGISTRATION ORDER during XML load, not by its string id - confirmed by
+                            decompiling TroopRosterElement's (de)serialization. Appending new ids at
+                            the very end (of both a file's own element list AND SubModule.xml's
+                            <XmlNode> list) is safe; inserting/removing/reordering anything BEFORE an
+                            already-shipped id silently shifts every later id's assigned identity, so
+                            an old save's roster/inventory could resolve to a DIFFERENT, wrong troop
+                            or item on load - not a crash, a silent data-corrupting mismatch. This
+                            check compares the current order against a frozen snapshot
+                            (tools/shipped_ids_baseline.json) of the last verified-safe release and
+                            fails if anything before the snapshot's tail has moved. Run with
+                            --update-baseline (only right after confirming a release is safe to ship)
+                            to advance the snapshot.
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -56,6 +70,7 @@ SOURCE_DIR = REPO_ROOT / "Source"
 SUBMODULE_XML = REPO_ROOT / "SubModule.xml"
 LANG_EN = MODULE_DATA / "Languages" / "strings.xml"
 LANG_TR = MODULE_DATA / "Languages" / "TR" / "strings.xml"
+ID_ORDER_BASELINE = REPO_ROOT / "tools" / "shipped_ids_baseline.json"
 
 DEFAULT_GAME_PATHS = [
     r"C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord",
@@ -460,6 +475,107 @@ def check_gender_consistency(issues, game_path):
                                  f'explicitly on this override.'))
 
 
+# ---------------------------------------------------------------- check 8 --
+
+def build_id_order_snapshot():
+    """Snapshot of everything that determines this mod's own MBGUID assignment
+    order: the order of <XmlNode path="..."> entries in SubModule.xml whose file
+    defines an id-bearing type, and, for each such file, the order its ids appear
+    in. Native's own load order isn't tracked here - it loads before this mod's
+    SubModule.xml entries and this mod has no control over it; only this mod's
+    own ordering is ours to keep stable."""
+    submodule_root = safe_parse(SUBMODULE_XML)
+    xmlnode_order = []
+    if submodule_root is not None:
+        for xn in submodule_root.iter("XmlName"):
+            p = xn.get("path")
+            if not p:
+                continue
+            candidate = MODULE_DATA / f"{p}.xml"
+            root = safe_parse(candidate) if candidate.exists() else None
+            if root is not None and root.tag in ID_BEARING_TYPES:
+                xmlnode_order.append(p)
+
+    files = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag not in ID_BEARING_TYPES:
+            continue
+        child_tag = ID_BEARING_TYPES[root.tag]
+        ids = [child.get("id") for child in root if child.tag == child_tag and child.get("id")]
+        if ids:
+            files[rel(f)] = ids
+
+    return {"submodule_xmlnode_order": xmlnode_order, "files": files}
+
+
+def _first_prefix_mismatch(baseline_seq, current_seq):
+    """Returns (index, baseline_value, current_value_or_None) for the first
+    position where current_seq no longer matches baseline_seq, or None if
+    baseline_seq is a clean prefix of current_seq (i.e. only appends happened)."""
+    for i, base_val in enumerate(baseline_seq):
+        cur_val = current_seq[i] if i < len(current_seq) else None
+        if cur_val != base_val:
+            return i, base_val, cur_val
+    return None
+
+
+def check_id_order_stability(issues):
+    if not ID_ORDER_BASELINE.exists():
+        issues.append(Issue("WARN", "id-order-stability", rel(ID_ORDER_BASELINE),
+                             "No baseline snapshot yet - save-compatibility order is not being checked. "
+                             "Run `python tools/verify_mod.py --update-baseline` once you've confirmed the "
+                             "current state is safe to treat as the new reference point (e.g. right after "
+                             "a release)."))
+        return
+
+    try:
+        baseline = json.loads(ID_ORDER_BASELINE.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        issues.append(Issue("ERROR", "id-order-stability", rel(ID_ORDER_BASELINE), f"Could not read baseline: {e}"))
+        return
+
+    current = build_id_order_snapshot()
+
+    mismatch = _first_prefix_mismatch(baseline.get("submodule_xmlnode_order", []), current["submodule_xmlnode_order"])
+    if mismatch is not None:
+        idx, base_val, cur_val = mismatch
+        issues.append(Issue("ERROR", "id-order-stability", rel(SUBMODULE_XML),
+                             f'<XmlName> load order changed at position {idx}: baseline had "{base_val}" there, '
+                             f'now "{cur_val}". Every id-bearing file registered from this point onward gets a '
+                             f'different save-file identity than before - existing saves\' troop/item references '
+                             f'in that range can silently resolve to the WRONG object. If this reorder was '
+                             f'intentional and you have accepted breaking existing saves, run --update-baseline; '
+                             f'otherwise move the new/changed <XmlNode> entries so this prefix is restored.'))
+
+    for path, baseline_ids in baseline.get("files", {}).items():
+        current_ids = current["files"].get(path)
+        if current_ids is None:
+            issues.append(Issue("ERROR", "id-order-stability", path,
+                                 f"This file defined {len(baseline_ids)} id(s) in the baseline snapshot but no "
+                                 f"longer exists (or no longer defines any id-bearing content) - existing saves "
+                                 f"referencing those ids are at risk."))
+            continue
+        file_mismatch = _first_prefix_mismatch(baseline_ids, current_ids)
+        if file_mismatch is not None:
+            idx, base_val, cur_val = file_mismatch
+            issues.append(Issue("ERROR", "id-order-stability", path,
+                                 f'id order changed at position {idx}: baseline had "{base_val}" there, now '
+                                 f'"{cur_val}". Every id from this position onward in this file gets a different '
+                                 f'save-file identity than before (see check 8\'s description). Only ever append '
+                                 f'new ids at the end of this file\'s existing list; if this change was '
+                                 f'intentional and breaking existing saves is accepted, run --update-baseline.'))
+
+
+def update_id_order_baseline():
+    ID_ORDER_BASELINE.parent.mkdir(parents=True, exist_ok=True)
+    snapshot = build_id_order_snapshot()
+    total_ids = sum(len(v) for v in snapshot["files"].values())
+    ID_ORDER_BASELINE.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Wrote {rel(ID_ORDER_BASELINE)}: {len(snapshot['submodule_xmlnode_order'])} registered file(s), "
+          f"{total_ids} id(s) tracked across {len(snapshot['files'])} file(s).")
+
+
 # --------------------------------------------------------------------- run --
 
 def run(args):
@@ -468,6 +584,7 @@ def run(args):
     check_xml_wellformed(issues)
     check_submodule_registration(issues)
     check_id_collisions(issues)
+    check_id_order_stability(issues)
 
     game_path = None if args.quick else find_game_path(args.game_path)
     if not args.quick and game_path is None:
@@ -513,7 +630,14 @@ def main():
     parser.add_argument("--quick", action="store_true",
                          help="Skip checks that require the game install (upgrade-target, item-id, gender-consistency).")
     parser.add_argument("--json", action="store_true", help="Print machine-readable JSON instead of a text report.")
+    parser.add_argument("--update-baseline", action="store_true",
+                         help="Write the current id order to tools/shipped_ids_baseline.json as the new "
+                              "save-compatibility reference point, instead of running the checks. Only do "
+                              "this right after confirming the current state is safe to ship.")
     args = parser.parse_args()
+    if args.update_baseline:
+        update_id_order_baseline()
+        sys.exit(0)
     sys.exit(run(args))
 
 
