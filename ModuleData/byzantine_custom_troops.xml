@@ -183,7 +183,7 @@
       </EquipmentRoster>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.empire_sword_4_t4" />
-        <equipment slot="Item1" id="Item.heavy_oval_shield" />
+        <equipment slot="Item1" id="Item.fortified_kite_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
         <equipment slot="Head" id="Item.imperial_mail_coif" />
         <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
