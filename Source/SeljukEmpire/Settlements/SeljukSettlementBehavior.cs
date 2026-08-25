@@ -37,11 +37,67 @@ namespace SeljukEmpire.Settlements
         private void OnSessionLaunched(CampaignGameStarter starter)
         {
             InitializeSeljukKingdomHierarchy();
-            
+
             if (!_isSettlementOwnershipInitialized)
             {
                 InitializeSeljukTerritories();
                 _isSettlementOwnershipInitialized = true;
+            }
+
+            // Renaming is done via reflection (see RenameSettlement) and is not part of the
+            // campaign save graph, so - unlike ownership/prosperity above - it must be
+            // reasserted every session, not just the first one, or a save/reload cycle
+            // shows the settlement's original Native name again.
+            ReapplySeljukSettlementNames();
+        }
+
+        private void ReapplySeljukSettlementNames()
+        {
+            try
+            {
+                // Towns
+                RenameSettlement(Settlement.Find("town_ES1"), "{=seljuk_town_danustica}Konya");
+                RenameSettlement(Settlement.Find("town_A2"), "{=seljuk_town_husnfulq}Söğüt");
+                RenameSettlement(Settlement.Find("town_ES2"), "{=seljuk_town_isfahan}İsfahan");
+                RenameSettlement(Settlement.Find("town_A4"), "{=seljuk_town_nisabur}Nişabur");
+
+                // Castles
+                RenameSettlement(Settlement.Find("castle_ES4"), "{=seljuk_castle_lavenia}Lavenia Kalesi");
+                RenameSettlement(Settlement.Find("castle_A6"), "{=seljuk_castle_shibalzumr}Şibal Zümr Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES5"), "{=seljuk_castle_morenia}Morenia Kalesi");
+                RenameSettlement(Settlement.Find("castle_A8"), "{=seljuk_castle_rey}Rey Kalesi");
+
+                // Konya villages
+                RenameSettlement(Settlement.Find("village_ES1_2"), "{=seljuk_vil_polisia}Meram");
+                RenameSettlement(Settlement.Find("village_ES1_3"), "{=seljuk_vil_tegresos}Sille");
+                RenameSettlement(Settlement.Find("village_ES1_4"), "{=seljuk_vil_erebulos}Karatay");
+
+                // Söğüt villages
+                RenameSettlement(Settlement.Find("village_A2_2"), "{=seljuk_vil_abukhih}Domaniç");
+                RenameSettlement(Settlement.Find("village_A2_3"), "{=seljuk_vil_hoqqa}Bozüyük");
+
+                // Castle villages
+                RenameSettlement(Settlement.Find("castle_village_ES4_1"), "{=seljuk_vil_lavenia}Lavenia");
+                RenameSettlement(Settlement.Find("castle_village_A6_1"), "{=seljuk_vil_shibalzumr}Şibal Zümr");
+                RenameSettlement(Settlement.Find("castle_village_ES5_1"), "{=seljuk_vil_morenia}Morenia");
+
+                // İsfahan villages
+                RenameSettlement(Settlement.Find("village_ES2_2"), "{=seljuk_vil_cuybare}Cûybâre");
+                RenameSettlement(Settlement.Find("village_ES2_3"), "{=seljuk_vil_lenban}Lenban");
+                RenameSettlement(Settlement.Find("village_ES2_4"), "{=seljuk_vil_hasanabad}Hasanabad");
+
+                // Nişabur villages
+                RenameSettlement(Settlement.Find("village_A4_1"), "{=seljuk_vil_bostanabad}Bostanabad");
+                RenameSettlement(Settlement.Find("village_A4_2"), "{=seljuk_vil_sadyah}Şadyah");
+                RenameSettlement(Settlement.Find("village_A4_4"), "{=seljuk_vil_kohandiz}Kohandiz");
+
+                // Rey Kalesi villages
+                RenameSettlement(Settlement.Find("castle_village_A8_1"), "{=seljuk_vil_cesmedeh}Çeşmedeh");
+                RenameSettlement(Settlement.Find("castle_village_A8_2"), "{=seljuk_vil_veramin}Veramin");
+            }
+            catch (Exception)
+            {
+                // Engine safety catch
             }
         }
 
