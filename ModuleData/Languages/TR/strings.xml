@@ -384,5 +384,80 @@
     <string id="lord_ibrahim_ahlatsah" text="İbrahim el-Ahlatî" />
     <string id="lord_mahmud_karaman" text="Mahmud Karamanoğlu" />
     <string id="lord_nasiruddin_halife" text="Şeyh Nasirüddin" />
+    <string id="byz_house_diogenes" text="Diogenes Hanedanı" />
+    <string id="byz_house_botaneiates" text="Botaneiates Hanedanı" />
+    <string id="byz_house_doukas" text="Dukas Hanedanı" />
+    <string id="byz_house_komnenos" text="Komnenos Hanedanı" />
+    <string id="byz_house_bryennios" text="Bryennios Hanedanı" />
+    <string id="byz_house_melissenos" text="Melissenos Hanedanı" />
+    <string id="byz_house_argyros" text="Argyros Hanedanı" />
+    <string id="byz_house_tarchaneiotes" text="Tarhaniotes Hanedanı" />
+    <string id="byz_house_kekaumenos" text="Kekavmenos Hanedanı" />
+    <string id="byz_ln_romanos_diogenes" text="Romanos Diogenes" />
+    <string id="byz_ln_nikephoros_botaneiates" text="Nikephoros Botaneiates" />
+    <string id="byz_ln_andronikos_doukas" text="Andronikos Dukas" />
+    <string id="byz_ln_alexios_komnenos" text="Aleksios Komnenos" />
+    <string id="byz_ln_nikephoros_bryennios" text="Nikephoros Bryennios" />
+    <string id="byz_ln_nikephoros_melissenos" text="Nikephoros Melissenos" />
+    <string id="byz_ln_romanos_argyros" text="Romanos Argyros" />
+    <string id="byz_ln_joseph_tarchaneiotes" text="Yusuf Tarhaniotes" />
+    <string id="byz_ln_katakalon_kekaumenos" text="Katakalon Kekavmenos" />
+    <string id="byz_s_ankara" text="Ankara" />
+    <string id="byz_v_juliopolis" text="Iuliopolis" />
+    <string id="byz_v_germa" text="Germa" />
+    <string id="byz_s_amaseia" text="Amaseia" />
+    <string id="byz_v_andrapa" text="Andrapa" />
+    <string id="byz_v_ibora" text="Ibora" />
+    <string id="byz_v_sebastopolis" text="Sebastopolis" />
+    <string id="byz_s_nicaea" text="Nicaea" />
+    <string id="byz_v_prusa" text="Prusa" />
+    <string id="byz_v_apollonia" text="Apollonia" />
+    <string id="byz_v_lopadion" text="Lopadion" />
+    <string id="byz_s_sebasteia" text="Sebasteia" />
+    <string id="byz_v_nicopolis" text="Nicopolis" />
+    <string id="byz_v_koloneia" text="Koloneia" />
+    <string id="byz_v_amycon2" text="Dazimon" />
+    <string id="byz_s_trebizond" text="Trabzon" />
+    <string id="byz_v_rhizaion" text="Rhizaion" />
+    <string id="byz_v_kerasous" text="Kerasous" />
+    <string id="byz_v_eunalica2" text="Susurmena" />
+    <string id="byz_c_dorylaeum" text="Dorylaeum Kalesi" />
+    <string id="byz_v_nakoleia" text="Nakoleia" />
+    <string id="byz_v_midaion" text="Midaion" />
+    <string id="byz_c_nicomedia" text="Nicomedia Kalesi" />
+    <string id="byz_v_chalcedon" text="Chalcedon" />
+    <string id="byz_v_prainetos" text="Prainetos" />
+    <string id="byz_c_chonae" text="Chonae Kalesi" />
+    <string id="byz_v_laodicea" text="Laodicea" />
+    <string id="byz_v_colossae" text="Colossae" />
+    <string id="byz_c_claudiopolis" text="Claudiopolis Kalesi" />
+    <string id="byz_v_gangra" text="Gangra" />
+    <string id="byz_c_neocaesarea" text="Neocaesarea Kalesi" />
+    <string id="byz_v_comana" text="Comana" />
+    <string id="byz_c_caesarea" text="Caesarea Kalesi" />
+    <string id="byz_v_tyana" text="Tyana" />
+    <string id="byz_v_nazianzus" text="Nazianzus" />
+    <string id="byz_t_recruit" text="Bizans Acemisi" />
+    <string id="byz_t_skutatos" text="Skutatos" />
+    <string id="byz_t_vigla_recruit" text="Vigla Acemisi" />
+    <string id="byz_t_equite" text="Bizans Atlısı" />
+    <string id="byz_t_klibanophoros" text="Klibanoforos" />
+    <string id="byz_t_kataphraktos" text="Katafraktos" />
+    <string id="byz_t_vestiaritai" text="Vestiaritai" />
+    <string id="byz_t_thematic_skutatos" text="Thema Skutatosu" />
+    <string id="byz_t_tagmatic_skutatos" text="Tagma Skutatosu" />
+    <string id="byz_t_varangian" text="Vareg Muhafızı" />
+    <string id="byz_t_toxotes" text="Toksotes" />
+    <string id="byz_t_thematic_toxotes" text="Thema Toksotesi" />
+    <string id="byz_t_tagmatic_toxotes" text="Tagma Toksotesi" />
+    <string id="byz_t_hetaireia" text="Hetaireia Muhafızı" />
+    <string id="byz_t_menavlaton" text="Menavlaton" />
+    <string id="byz_t_elite_menavlaton" text="Seçkin Menavlaton" />
+    <string id="byz_t_tzangra" text="Tzangra Arbaletçisi" />
+    <string id="byz_t_tzangratores" text="Tzangratores" />
+    <string id="byz_t_thema_militia_archer" text="Thema Milis Okçusu" />
+    <string id="byz_t_thema_militia_vet_archer" text="Thema Milis Kıdemli Okçusu" />
+    <string id="byz_t_thema_militia_spearman" text="Thema Milis Mızrakçısı" />
+    <string id="byz_t_thema_militia_vet_spearman" text="Thema Milis Kıdemli Mızrakçısı" />
   </strings>
 </base>

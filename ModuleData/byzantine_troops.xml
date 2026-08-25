@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Bizans (Culture.empire) birlik agaci gercek Bizans askeri terimleriyle yeniden adlandirildi. -->
+  <!-- Ekipman/beceri/terfi zinciri Native - sadece isim degisir. -->
+  <NPCCharacter id="imperial_recruit" name="{=byz_t_recruit}Byzantine Recruit" />
+  <NPCCharacter id="imperial_infantryman" name="{=byz_t_skutatos}Skutatos" />
+  <NPCCharacter id="imperial_vigla_recruit" name="{=byz_t_vigla_recruit}Vigla Recruit" />
+  <NPCCharacter id="imperial_equite" name="{=byz_t_equite}Byzantine Trooper" />
+  <NPCCharacter id="imperial_heavy_horseman" name="{=byz_t_klibanophoros}Klibanophoros" />
+  <NPCCharacter id="imperial_cataphract" name="{=byz_t_kataphraktos}Kataphraktos" />
+  <NPCCharacter id="imperial_elite_cataphract" name="{=byz_t_vestiaritai}Vestiaritai" />
+  <NPCCharacter id="imperial_trained_infantryman" name="{=byz_t_thematic_skutatos}Thematic Skutatos" />
+  <NPCCharacter id="imperial_veteran_infantryman" name="{=byz_t_tagmatic_skutatos}Tagmatic Skutatos" />
+  <NPCCharacter id="imperial_legionary" name="{=byz_t_varangian}Varangian Guardsman" />
+  <NPCCharacter id="imperial_archer" name="{=byz_t_toxotes}Toxotes" />
+  <NPCCharacter id="imperial_trained_archer" name="{=byz_t_thematic_toxotes}Thematic Toxotes" />
+  <NPCCharacter id="imperial_veteran_archer" name="{=byz_t_tagmatic_toxotes}Tagmatic Toxotes" />
+  <NPCCharacter id="imperial_palatine_guard" name="{=byz_t_hetaireia}Hetaireia Guardsman" />
+  <NPCCharacter id="imperial_menavliaton" name="{=byz_t_menavlaton}Menavlaton" />
+  <NPCCharacter id="imperial_elite_menavliaton" name="{=byz_t_elite_menavlaton}Elite Menavlaton" />
+  <NPCCharacter id="imperial_crossbowman" name="{=byz_t_tzangra}Tzangra Crossbowman" />
+  <NPCCharacter id="imperial_sergeant_crossbowman" name="{=byz_t_tzangratores}Tzangratores" />
+  <NPCCharacter id="imperial_militia_archer" name="{=byz_t_thema_militia_archer}Thema Militia Archer" />
+  <NPCCharacter id="imperial_militia_veteran_archer" name="{=byz_t_thema_militia_vet_archer}Thema Militia Veteran Archer" />
+  <NPCCharacter id="imperial_militia_spearman" name="{=byz_t_thema_militia_spearman}Thema Militia Spearman" />
+  <NPCCharacter id="imperial_militia_veteran_spearman" name="{=byz_t_thema_militia_vet_spearman}Thema Militia Veteran Spearman" />
+</NPCCharacters>

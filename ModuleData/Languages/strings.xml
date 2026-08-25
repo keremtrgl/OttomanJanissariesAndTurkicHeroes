@@ -384,5 +384,80 @@
     <string id="lord_ibrahim_ahlatsah" text="Ibrahim al-Akhlati" />
     <string id="lord_mahmud_karaman" text="Mahmud of Karaman" />
     <string id="lord_nasiruddin_halife" text="Sheikh Nasir al-Din" />
+    <string id="byz_house_diogenes" text="House Diogenes" />
+    <string id="byz_house_botaneiates" text="House Botaneiates" />
+    <string id="byz_house_doukas" text="House Doukas" />
+    <string id="byz_house_komnenos" text="House Komnenos" />
+    <string id="byz_house_bryennios" text="House Bryennios" />
+    <string id="byz_house_melissenos" text="House Melissenos" />
+    <string id="byz_house_argyros" text="House Argyros" />
+    <string id="byz_house_tarchaneiotes" text="House Tarchaneiotes" />
+    <string id="byz_house_kekaumenos" text="House Kekaumenos" />
+    <string id="byz_ln_romanos_diogenes" text="Romanos Diogenes" />
+    <string id="byz_ln_nikephoros_botaneiates" text="Nikephoros Botaneiates" />
+    <string id="byz_ln_andronikos_doukas" text="Andronikos Doukas" />
+    <string id="byz_ln_alexios_komnenos" text="Alexios Komnenos" />
+    <string id="byz_ln_nikephoros_bryennios" text="Nikephoros Bryennios" />
+    <string id="byz_ln_nikephoros_melissenos" text="Nikephoros Melissenos" />
+    <string id="byz_ln_romanos_argyros" text="Romanos Argyros" />
+    <string id="byz_ln_joseph_tarchaneiotes" text="Joseph Tarchaneiotes" />
+    <string id="byz_ln_katakalon_kekaumenos" text="Katakalon Kekaumenos" />
+    <string id="byz_s_ankara" text="Ancyra" />
+    <string id="byz_v_juliopolis" text="Iuliopolis" />
+    <string id="byz_v_germa" text="Germa" />
+    <string id="byz_s_amaseia" text="Amaseia" />
+    <string id="byz_v_andrapa" text="Andrapa" />
+    <string id="byz_v_ibora" text="Ibora" />
+    <string id="byz_v_sebastopolis" text="Sebastopolis" />
+    <string id="byz_s_nicaea" text="Nicaea" />
+    <string id="byz_v_prusa" text="Prusa" />
+    <string id="byz_v_apollonia" text="Apollonia" />
+    <string id="byz_v_lopadion" text="Lopadion" />
+    <string id="byz_s_sebasteia" text="Sebasteia" />
+    <string id="byz_v_nicopolis" text="Nicopolis" />
+    <string id="byz_v_koloneia" text="Koloneia" />
+    <string id="byz_v_amycon2" text="Dazimon" />
+    <string id="byz_s_trebizond" text="Trebizond" />
+    <string id="byz_v_rhizaion" text="Rhizaion" />
+    <string id="byz_v_kerasous" text="Kerasous" />
+    <string id="byz_v_eunalica2" text="Susurmena" />
+    <string id="byz_c_dorylaeum" text="Dorylaeum Castle" />
+    <string id="byz_v_nakoleia" text="Nakoleia" />
+    <string id="byz_v_midaion" text="Midaion" />
+    <string id="byz_c_nicomedia" text="Nicomedia Castle" />
+    <string id="byz_v_chalcedon" text="Chalcedon" />
+    <string id="byz_v_prainetos" text="Prainetos" />
+    <string id="byz_c_chonae" text="Chonae Castle" />
+    <string id="byz_v_laodicea" text="Laodicea" />
+    <string id="byz_v_colossae" text="Colossae" />
+    <string id="byz_c_claudiopolis" text="Claudiopolis Castle" />
+    <string id="byz_v_gangra" text="Gangra" />
+    <string id="byz_c_neocaesarea" text="Neocaesarea Castle" />
+    <string id="byz_v_comana" text="Comana" />
+    <string id="byz_c_caesarea" text="Caesarea Castle" />
+    <string id="byz_v_tyana" text="Tyana" />
+    <string id="byz_v_nazianzus" text="Nazianzus" />
+    <string id="byz_t_recruit" text="Byzantine Recruit" />
+    <string id="byz_t_skutatos" text="Skutatos" />
+    <string id="byz_t_vigla_recruit" text="Vigla Recruit" />
+    <string id="byz_t_equite" text="Byzantine Trooper" />
+    <string id="byz_t_klibanophoros" text="Klibanophoros" />
+    <string id="byz_t_kataphraktos" text="Kataphraktos" />
+    <string id="byz_t_vestiaritai" text="Vestiaritai" />
+    <string id="byz_t_thematic_skutatos" text="Thematic Skutatos" />
+    <string id="byz_t_tagmatic_skutatos" text="Tagmatic Skutatos" />
+    <string id="byz_t_varangian" text="Varangian Guardsman" />
+    <string id="byz_t_toxotes" text="Toxotes" />
+    <string id="byz_t_thematic_toxotes" text="Thematic Toxotes" />
+    <string id="byz_t_tagmatic_toxotes" text="Tagmatic Toxotes" />
+    <string id="byz_t_hetaireia" text="Hetaireia Guardsman" />
+    <string id="byz_t_menavlaton" text="Menavlaton" />
+    <string id="byz_t_elite_menavlaton" text="Elite Menavlaton" />
+    <string id="byz_t_tzangra" text="Tzangra Crossbowman" />
+    <string id="byz_t_tzangratores" text="Tzangratores" />
+    <string id="byz_t_thema_militia_archer" text="Thema Militia Archer" />
+    <string id="byz_t_thema_militia_vet_archer" text="Thema Militia Veteran Archer" />
+    <string id="byz_t_thema_militia_spearman" text="Thema Militia Spearman" />
+    <string id="byz_t_thema_militia_vet_spearman" text="Thema Militia Veteran Spearman" />
   </strings>
 </base>
