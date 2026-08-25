@@ -376,5 +376,13 @@
     <string id="seljuk_georgia_title" text="Kingdom of Georgia" />
     <string id="seljuk_georgia_ruler" text="King" />
     <string id="seljuk_georgia_desc" text="A Christian kingdom ruling in the shadow of the Caucasus mountains. A northern neighbor determined to keep its independence, frequently clashing with Great Seljuk raiders along the frontier." />
+    <string id="lord_fahrulmulk" text="Fahr al-Mulk" />
+    <string id="lord_emir_gazi" text="Emir Ghazi" />
+    <string id="lord_ishak_mengucek" text="Ishak of Mengujek" />
+    <string id="lord_ali_saltuk" text="Ali of Saltuk" />
+    <string id="lord_yusuf_caka" text="Yusuf of Chaka" />
+    <string id="lord_ibrahim_ahlatsah" text="Ibrahim al-Akhlati" />
+    <string id="lord_mahmud_karaman" text="Mahmud of Karaman" />
+    <string id="lord_nasiruddin_halife" text="Sheikh Nasir al-Din" />
   </strings>
 </base>

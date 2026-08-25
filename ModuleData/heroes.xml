@@ -193,4 +193,37 @@
         mother="Hero.hayme_ana"
         preferred_upgrade_formation="HorseArcher" />
 
+
+  <Hero id="lord_seljuk_fahrulmulk"
+        alive="true"
+        father="Hero.lord_seljuk_nizamulmulk"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_emir_gazi"
+        alive="true"
+        father="Hero.lord_seljuk_danismend_gazi"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_ishak_mengucek"
+        alive="true"
+        father="Hero.lord_seljuk_mengucek_gazi"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_ali_saltuk"
+        alive="true"
+        father="Hero.lord_seljuk_emir_saltuk"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_yusuf_caka"
+        alive="true"
+        father="Hero.lord_seljuk_caka_bey"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_ibrahim_ahlatsah"
+        alive="true"
+        father="Hero.lord_seljuk_sokmen_bey"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_mahmud_karaman"
+        alive="true"
+        father="Hero.lord_seljuk_karaman_bey"
+        preferred_upgrade_formation="Cavalry" />
+  <Hero id="lord_seljuk_nasiruddin_halife"
+        alive="true"
+        father="Hero.lord_seljuk_ahi_evran"
+        preferred_upgrade_formation="Cavalry" />
 </Heroes>
