@@ -1,5 +1,7 @@
 # Rival-Kingdom Depth, Verification & Repo Hygiene Implementation Plan
 
+> **STATUS (2026-08-25, same session):** Tasks 1-3 complete (commits `57371d7`, `829e581`, and this plan file itself in `57371d7`). Task 4 checked and found not applicable in the `abbasi-georgia-depth-587fb5` worktree — none of the listed dev-session artifacts exist in this worktree's checkout (worktrees only contain committed content; if these files still exist, they're untracked scratch in the main working directory outside this worktree, out of scope here unless the user asks to look there specifically).
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. This plan is content/data-modding work, not general software: "tests" below are XML well-formedness checks, id/key cross-reference scripts, and `dotnet build`, run the same way every prior content pass this session verified its own work.
 
 **Goal:** Close out the three open items from the 2026-08-25 era-realism roadmap for the Byzantine/Abbasid/Georgian reskins (kingdom lore, diplomacy, succession depth — verified below, two of three already complete), add real historical consorts for the five best-documented rival-kingdom lords, run the still-open troop-tree balance audit, and do the repo hygiene pass — all previously flagged as open work in `docs/superpowers/specs/2026-08-25-seljuk-era-realism-and-roadmap-design.md`.
