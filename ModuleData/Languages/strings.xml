@@ -361,5 +361,20 @@
     <string id="seljuk_cn_21" text="Bugduz" />
     <string id="seljuk_cn_22" text="Yiva" />
     <string id="seljuk_cn_23" text="Kinik" />
+    <string id="seljuk_byzantine_name" text="Byzantine Empire" />
+    <string id="seljuk_byzantine_short" text="Byzantium" />
+    <string id="seljuk_byzantine_title" text="Byzantine Empire" />
+    <string id="seljuk_byzantine_ruler" text="Emperor" />
+    <string id="seljuk_byzantine_desc" text="The southern wing of the Byzantine resistance in Anatolia after Manzikert. The Great Seljuk Empire's most implacable rival, struggling to hold its border fortresses against the Turkoman tribes advancing on Konya and Isfahan." />
+    <string id="seljuk_abbasid_name" text="Abbasid Caliphate" />
+    <string id="seljuk_abbasid_short" text="Abbasids" />
+    <string id="seljuk_abbasid_title" text="Abbasid Caliphate" />
+    <string id="seljuk_abbasid_ruler" text="Caliph" />
+    <string id="seljuk_abbasid_desc" text="The Baghdad-based Caliphate, nominal head of the Islamic world though real military power now rests with the Great Seljuk Sultans. The Sultan stands as the Caliph's protector and de facto ruler." />
+    <string id="seljuk_georgia_name" text="Kingdom of Georgia" />
+    <string id="seljuk_georgia_short" text="Georgians" />
+    <string id="seljuk_georgia_title" text="Kingdom of Georgia" />
+    <string id="seljuk_georgia_ruler" text="King" />
+    <string id="seljuk_georgia_desc" text="A Christian kingdom ruling in the shadow of the Caucasus mountains. A northern neighbor determined to keep its independence, frequently clashing with Great Seljuk raiders along the frontier." />
   </strings>
 </base>

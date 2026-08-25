@@ -361,5 +361,20 @@
     <string id="seljuk_cn_21" text="Büğdüz" />
     <string id="seljuk_cn_22" text="Yıva" />
     <string id="seljuk_cn_23" text="Kınık" />
+    <string id="seljuk_byzantine_name" text="Bizans İmparatorluğu" />
+    <string id="seljuk_byzantine_short" text="Bizans" />
+    <string id="seljuk_byzantine_title" text="Bizans İmparatorluğu" />
+    <string id="seljuk_byzantine_ruler" text="İmparator" />
+    <string id="seljuk_byzantine_desc" text="Malazgirt sonrası Anadolu'da direnen Bizans'ın güney kanadı. Büyük Selçuklu Devleti'nin en amansız rakibi; Konya ve İsfahan'a doğru genişleyen Türkmen boylarına karşı sınır kalelerini elinde tutmaya çalışır." />
+    <string id="seljuk_abbasid_name" text="Abbasi Halifeliği" />
+    <string id="seljuk_abbasid_short" text="Abbasiler" />
+    <string id="seljuk_abbasid_title" text="Abbasi Halifeliği" />
+    <string id="seljuk_abbasid_ruler" text="Halife" />
+    <string id="seljuk_abbasid_desc" text="Bağdat merkezli halifelik; İslam dünyasının nominal başı olsa da gerçek askeri güç artık Büyük Selçuklu sultanlarının elindedir. Sultan, Halife'nin koruyucusu ve fiili hükümdarıdır." />
+    <string id="seljuk_georgia_name" text="Gürcistan Krallığı" />
+    <string id="seljuk_georgia_short" text="Gürcüler" />
+    <string id="seljuk_georgia_title" text="Gürcistan Krallığı" />
+    <string id="seljuk_georgia_ruler" text="Kral" />
+    <string id="seljuk_georgia_desc" text="Kafkas dağlarının eteklerinde hüküm süren Hristiyan krallık. Büyük Selçuklu akıncılarıyla sınır boylarında sık sık çatışan, bağımsızlığını korumakta kararlı bir kuzey komşusu." />
   </strings>
 </base>

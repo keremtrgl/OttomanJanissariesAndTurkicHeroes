@@ -18,9 +18,42 @@
            initial_home_settlement="Settlement.town_ES1"
            text="{=seljuk_faction_desc}Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir.">
     <relationships>
-      <relationship kingdom="Kingdom.empire" value="0" />
-      <relationship kingdom="Kingdom.aserai" value="10" />
+      <relationship kingdom="Kingdom.empire_s" value="-30" />
+      <relationship kingdom="Kingdom.aserai" value="20" />
       <relationship kingdom="Kingdom.khuzait" value="15" />
+      <relationship kingdom="Kingdom.sturgia" value="0" />
     </relationships>
+  </Kingdom>
+
+  <!-- ================================================================================= -->
+  <!-- DÖNEME AİT KOMŞU/RAKİP DEVLETLER (Sadece isim/unvan/açıklama override'ı;              -->
+  <!-- birlikler, kahramanlar ve oynanış mekanikleri Native'de tanımlı haliyle kalır.)        -->
+  <!-- ================================================================================= -->
+
+  <!-- BİZANS İMPARATORLUĞU (Native: Southern Empire / empire_s) -->
+  <Kingdom id="empire_s"
+           name="{=seljuk_byzantine_name}Bizans İmparatorluğu"
+           short_name="{=seljuk_byzantine_short}Bizans"
+           title="{=seljuk_byzantine_title}Bizans İmparatorluğu"
+           ruler_title="{=seljuk_byzantine_ruler}İmparator"
+           text="{=seljuk_byzantine_desc}Malazgirt sonrası Anadolu'da direnen Bizans'ın güney kanadı. Büyük Selçuklu Devleti'nin en amansız rakibi; Konya ve İsfahan'a doğru genişleyen Türkmen boylarına karşı sınır kalelerini elinde tutmaya çalışır.">
+  </Kingdom>
+
+  <!-- ABBASİ HALİFELİĞİ (Native: Sultanate of the Aserai / aserai) -->
+  <Kingdom id="aserai"
+           name="{=seljuk_abbasid_name}Abbasi Halifeliği"
+           short_name="{=seljuk_abbasid_short}Abbasiler"
+           title="{=seljuk_abbasid_title}Abbasi Halifeliği"
+           ruler_title="{=seljuk_abbasid_ruler}Halife"
+           text="{=seljuk_abbasid_desc}Bağdat merkezli halifelik; İslam dünyasının nominal başı olsa da gerçek askeri güç artık Büyük Selçuklu sultanlarının elindedir. Sultan, Halife'nin koruyucusu ve fiili hükümdarıdır.">
+  </Kingdom>
+
+  <!-- GÜRCİSTAN KRALLIĞI (Native: Principality of Sturgia / sturgia) -->
+  <Kingdom id="sturgia"
+           name="{=seljuk_georgia_name}Gürcistan Krallığı"
+           short_name="{=seljuk_georgia_short}Gürcüler"
+           title="{=seljuk_georgia_title}Gürcistan Krallığı"
+           ruler_title="{=seljuk_georgia_ruler}Kral"
+           text="{=seljuk_georgia_desc}Kafkas dağlarının eteklerinde hüküm süren Hristiyan krallık. Büyük Selçuklu akıncılarıyla sınır boylarında sık sık çatışan, bağımsızlığını korumakta kararlı bir kuzey komşusu.">
   </Kingdom>
 </Kingdoms>
