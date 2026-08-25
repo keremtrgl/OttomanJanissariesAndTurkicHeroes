@@ -397,6 +397,42 @@
     <string id="byz_culture_name" text="Byzantine" />
     <string id="abb_culture_name" text="Abbasid" />
     <string id="geo_culture_name" text="Georgian" />
+    <string id="byz2_t_recruit" text="Byzantine Recruit" />
+    <string id="byz2_t_skutatos" text="Skutatos" />
+    <string id="byz2_t_toxotes" text="Toxotes" />
+    <string id="byz2_t_trapezites" text="Trapezites" />
+    <string id="byz2_t_klibanophoros" text="Klibanophoros" />
+    <string id="byz2_t_thematic_skutatos" text="Thematic Skutatos" />
+    <string id="byz2_t_thematic_toxotes" text="Thematic Toxotes" />
+    <string id="byz2_t_prokoursatores" text="Prokoursatores" />
+    <string id="byz2_t_kataphraktos" text="Kataphraktos" />
+    <string id="byz2_t_tagmatic_skutatos" text="Tagmatic Skutatos" />
+    <string id="byz2_t_tagmatic_toxotes" text="Tagmatic Toxotes" />
+    <string id="byz2_t_koursores" text="Koursores" />
+    <string id="byz2_t_vestiaritai" text="Vestiaritai" />
+    <string id="byz2_t_varangian" text="Varangian Guardsman" />
+    <string id="byz2_t_tzangra" text="Tzangra Crossbowman" />
+    <string id="byz2_t_vardariotai" text="Vardariotai" />
+    <string id="byz2_t_athanatoi" text="Athanatoi" />
+    <string id="byz2_t_hetaireia" text="Hetaireia Guardsman" />
+    <string id="abb2_t_recruit" text="Abbasid Levy" />
+    <string id="abb2_t_ayyar" text="Ayyar" />
+    <string id="abb2_t_qawwas" text="Qawwas" />
+    <string id="abb2_t_bedouin_horseman" text="Bedouin Horseman" />
+    <string id="abb2_t_ghulam" text="Ghulam" />
+    <string id="abb2_t_hashimiyya" text="Hashimiyya Infantry" />
+    <string id="abb2_t_master_qawwas" text="Master Qawwas" />
+    <string id="abb2_t_faris" text="Faris" />
+    <string id="abb2_t_ghulam_regular" text="Ghulam Regular" />
+    <string id="abb2_t_veteran_hashimiyya" text="Veteran Hashimiyya" />
+    <string id="abb2_t_rami_metin" text="Rami el-Metin" />
+    <string id="abb2_t_veteran_faris" text="Veteran Faris" />
+    <string id="abb2_t_ghulam_horseman" text="Ghulam Horseman" />
+    <string id="abb2_t_hujariyya" text="Hujariyya Guard" />
+    <string id="abb2_t_naffatun" text="Naffatun" />
+    <string id="abb2_t_vanguard_faris" text="Faris al-Muqaddima" />
+    <string id="abb2_t_ghulam_lancer" text="Ghulam Lancer" />
+    <string id="abb2_t_dar_alkhilafa" text="Dar al-Khilafa Guard" />
     <string id="byz_ln_nikephoros_botaneiates" text="Nikephoros Botaneiates" />
     <string id="byz_ln_andronikos_doukas" text="Andronikos Doukas" />
     <string id="byz_ln_alexios_komnenos" text="Alexios Komnenos" />
