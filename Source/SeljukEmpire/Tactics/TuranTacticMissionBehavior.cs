@@ -120,8 +120,18 @@ namespace SeljukEmpire.Tactics
                 return;
             }
 
-            _seljukTeam = Mission.Current.DefenderTeam ?? Mission.Current.AttackerTeam;
-            
+            // Anchor to the player's own team rather than assuming "defender == us". The battle's
+            // Defender/Attacker roles reflect who initiated the encounter, not faction identity, so
+            // defaulting to DefenderTeam applied this doctrine to whichever side happened to be
+            // defending -- including the enemy when the Seljuk player's army was the attacker, which
+            // actively boosted the opposing AI's tactics instead of ours.
+            _seljukTeam = Mission.Current.PlayerTeam;
+            if (_seljukTeam == null)
+            {
+                _activeDoctrine = TacticalDoctrine.StandardEngineFallback;
+                return;
+            }
+
             // Find opponent team
             if (Mission.Current.Teams != null)
             {

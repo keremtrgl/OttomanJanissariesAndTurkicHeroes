@@ -96,13 +96,13 @@ namespace SeljukEmpire.Tournaments
         private static bool IsSeljukTown(Settlement settlement)
         {
             if (settlement == null) return false;
-            if (settlement.StringId == "town_K1" || settlement.StringId == "town_K4" ||
-                settlement.StringId == "town_ES4" || settlement.StringId == "town_ES2" ||
-                settlement.StringId == "town_K6" || settlement.StringId == "town_A4")
-            {
-                return true;
-            }
 
+            // Kingdom-based check only. The previous hardcoded settlement-id whitelist
+            // (town_K1/K4/K6, town_ES4, ...) predated the contiguous-territory rewrite and the
+            // Byzantine reskin: town_ES4 is now the Byzantine city of Ankara, so that whitelist was
+            // incorrectly granting the Seljuk imperial tournament prize in a rival kingdom's town.
+            // The Kingdom check below already covers every settlement we actually own and stays
+            // correct as territory changes.
             return settlement.OwnerClan?.Kingdom != null && settlement.OwnerClan.Kingdom.StringId == "kingdom_seljuks";
         }
     }
