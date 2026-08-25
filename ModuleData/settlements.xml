@@ -7,24 +7,24 @@
   <!-- Buradaki klan atamaları C# behavior ile %100 senkronize olmalıdır.                  -->
   <!-- ================================================================================= -->
 
-  <!-- DANUSTİCA (Yeni Selçuklu Başkenti) -->
-  <Settlement id="town_ES1" name="{=seljuk_town_danustica}Danustica" owner="Faction.clan_seljuk_royal" culture="Culture.seljuk">
+  <!-- KONYA (Büyük Selçuklu Başkenti) -->
+  <Settlement id="town_ES1" name="{=seljuk_town_danustica}Konya" owner="Faction.clan_seljuk_royal" culture="Culture.seljuk">
     <Components>
       <Town id="town_comp_ES1" is_castle="false" prosperity="7800" />
     </Components>
   </Settlement>
-  <Settlement id="village_ES1_2" name="{=seljuk_vil_polisia}Polisia" culture="Culture.seljuk" />
-  <Settlement id="village_ES1_3" name="{=seljuk_vil_tegresos}Tegresos" culture="Culture.seljuk" />
-  <Settlement id="village_ES1_4" name="{=seljuk_vil_erebulos}Erebulos" culture="Culture.seljuk" />
+  <Settlement id="village_ES1_2" name="{=seljuk_vil_polisia}Meram" culture="Culture.seljuk" />
+  <Settlement id="village_ES1_3" name="{=seljuk_vil_tegresos}Sille" culture="Culture.seljuk" />
+  <Settlement id="village_ES1_4" name="{=seljuk_vil_erebulos}Karatay" culture="Culture.seljuk" />
 
-  <!-- HUSN FULQ (Kayı Boyu Merkezi) -->
-  <Settlement id="town_A2" name="{=seljuk_town_husnfulq}Husn Fulq" owner="Faction.clan_kayi_oguz" culture="Culture.seljuk">
+  <!-- SÖĞÜT (Kayı Boyu Merkezi) -->
+  <Settlement id="town_A2" name="{=seljuk_town_husnfulq}Söğüt" owner="Faction.clan_kayi_oguz" culture="Culture.seljuk">
     <Components>
       <Town id="town_comp_A2" is_castle="false" prosperity="6600" />
     </Components>
   </Settlement>
-  <Settlement id="village_A2_2" name="{=seljuk_vil_abukhih}Abu Khih" culture="Culture.seljuk" />
-  <Settlement id="village_A2_3" name="{=seljuk_vil_hoqqa}Hoqqa" culture="Culture.seljuk" />
+  <Settlement id="village_A2_2" name="{=seljuk_vil_abukhih}Domaniç" culture="Culture.seljuk" />
+  <Settlement id="village_A2_3" name="{=seljuk_vil_hoqqa}Bozüyük" culture="Culture.seljuk" />
 
   <!-- LAVENİA KALESİ (Danişmendliler) -->
   <Settlement id="castle_ES4" name="{=seljuk_castle_lavenia}Lavenia Kalesi" owner="Faction.clan_danismend" culture="Culture.seljuk" />

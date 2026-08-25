@@ -117,8 +117,8 @@ namespace SeljukEmpire.Settlements
                 // =====================================================================
                 // 1. TOWNS (ŞEHİRLER)
                 // =====================================================================
-                SetupTown("town_ES1", "clan_seljuk_royal", "{=seljuk_town_danustica}Danustica", 7800f);
-                SetupTown("town_A2", "clan_kayi_oguz", "{=seljuk_town_husnfulq}Husn Fulq", 6600f);
+                SetupTown("town_ES1", "clan_seljuk_royal", "{=seljuk_town_danustica}Konya", 7800f);
+                SetupTown("town_A2", "clan_kayi_oguz", "{=seljuk_town_husnfulq}Söğüt", 6600f);
                 SetupTown("town_ES2", "clan_seljuk_royal", "{=seljuk_town_isfahan}İsfahan", 7200f);
                 SetupTown("town_A4", "clan_seljuk_royal", "{=seljuk_town_nisabur}Nişabur", 6800f);
 
@@ -133,14 +133,14 @@ namespace SeljukEmpire.Settlements
                 // =====================================================================
                 // 3. VILLAGES (KÖYLER)
                 // =====================================================================
-                // Danustica Villages
-                SetupVillage("village_ES1_2", "{=seljuk_vil_polisia}Polisia");
-                SetupVillage("village_ES1_3", "{=seljuk_vil_tegresos}Tegresos");
-                SetupVillage("village_ES1_4", "{=seljuk_vil_erebulos}Erebulos");
+                // Konya Villages
+                SetupVillage("village_ES1_2", "{=seljuk_vil_polisia}Meram");
+                SetupVillage("village_ES1_3", "{=seljuk_vil_tegresos}Sille");
+                SetupVillage("village_ES1_4", "{=seljuk_vil_erebulos}Karatay");
 
-                // Husn Fulq Villages
-                SetupVillage("village_A2_2", "{=seljuk_vil_abukhih}Abu Khih");
-                SetupVillage("village_A2_3", "{=seljuk_vil_hoqqa}Hoqqa");
+                // Söğüt Villages
+                SetupVillage("village_A2_2", "{=seljuk_vil_abukhih}Domaniç");
+                SetupVillage("village_A2_3", "{=seljuk_vil_hoqqa}Bozüyük");
 
                 // Castle Villages
                 SetupVillage("castle_village_ES4_1", "{=seljuk_vil_lavenia}Lavenia");

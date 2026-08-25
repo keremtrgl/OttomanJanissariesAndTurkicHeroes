@@ -259,18 +259,107 @@
     <string id="timarli_sipahi_name" text="Timarli Sipahi" />
     <string id="veteran_janissary_name" text="Veteran Janissary" />
   <string id="seljuk_v_palu" text="Palu" /><string id="seljuk_v_keban" text="Keban" /><string id="seljuk_castle_harep" text="Harput Castle" /><string id="item_seljuk_ghulam_armor" text="Seljuk Ghulam Mirror-Plate Armor" /><string id="item_seljuk_gazi_armor" text="Danishmend Border Bey Armor" /><string id="item_seljuk_royal_helm" text="Sultan Royal Feathered Helmet" /><string id="item_seljuk_spiked_helm" text="Seljuk Armored Spiked Helmet" /><string id="item_seljuk_fur_helm" text="Kayi Ghazi Fur Helmet" /><string id="item_seljuk_pauldrons" text="Seljuk Royal Plated Pauldrons" /><string id="item_seljuk_bracers" text="Ghazi Damascene Steel Bracers" /><string id="item_seljuk_boots" text="Fine Seljuk Cavalry Boots" /><string id="item_seljuk_inf_shield" text="Seljuk Nizam Infantry Shield" /><string id="item_seljuk_composite_bow" text="Oguz Atabeg Composite Bow" /><string id="item_seljuk_heavy_arrows" text="Seljuk Armor Piercing Arrows" /><string id="item_seljuk_bolts" text="Seljuk Steel Bodkin Bolts" /><string id="item_seljuk_turkoman_horse" text="Noble Turkoman Warhorse" /><string id="seljuk_faction_desc" text="The Great Seljuk Empire; spanning from Khorasan to the heart of Anatolia, ruling Calradia's steppes and ancient cities with justice, Nizamiya institutions, and invincible Turkoman horsemen." /><string id="policy_futuwwa_nizam_name" text="Futuwwa Order" /><string id="policy_futuwwa_nizam_desc" text="Artisan workshops and guild production profits in towns increase by 30%, strengthening urban security." /><string id="policy_uc_gazileri_name" text="Frontier Gazi Organization" /><string id="policy_uc_gazileri_desc" text="Frontier warriors and seasoned alps are organized across borderlands. Clan and lord party capacity increases by +25 troops." /><string id="policy_kervansaray_berati_name" text="Caravanserai Imperial Charter" /><string id="policy_kervansaray_berati_desc" text="Caravanserais along the Silk Road receive royal charters. Town prosperity increases by +1 every day permanently." /><string id="seljuk_bard_opt" text="Listen to Ghazavat Epic from the Steppe Bard (100 Dinars)" /><string id="seljuk_bard_no_gold" text="Not enough gold (100 Dinars required)." /><string id="seljuk_bard_notif" text="The heroic Seljuk Ghazavat epic recited on the kopuz fired up your soldiers' hearts! (+15 Army Morale)" /><string id="seljuk_alp_arslan_greet" text="Valiant alp of the Ghazavat fields! Welcome, may your blade remain sharp and your order steadfast. The House of Seljuk bestows its blessing upon you. What do you seek?" /><string id="seljuk_ertugrul_greet" text="O companion of Gaza! A thousand greetings from the frontier of Sogut and the Kayi encampment. May your steel shine forever, what brings you to my tent?" /><string id="seljuk_nizam_greet" text="The blade of justice and state order is sharp, my child. May your service to the Grand Realm endure. Speak, I am listening." /><string id="seljuk_starter_notif" text="The Grand Seljuk Gazi Starter Pack has been credited to your inventory! (+2,500 Dinars, Noble Turkoman Horse, Composite Bow, and Armor Piercing Arrows)" /><string id="clan_seljuk_royal" text="House of Seljuk" /><string id="clan_nizamiye" text="Nizamiya Divan" /><string id="clan_danismend" text="Danishmendids Principality" /><string id="clan_artuk" text="Artuqids Principality" /><string id="clan_mengucek" text="Mengujekids Principality" /><string id="clan_saltuk" text="Saltukids Principality" /><string id="clan_caka" text="Chaka Bey Principality" /><string id="clan_ahlatsah" text="Ahlatshahs Principality" /><string id="clan_karaman" text="Karamanoğlu Principality" /><string id="clan_kayi_oguz" text="Kayi Tribe Alps" /><string id="clan_ahi_order" text="Ahi Order" />
-    <string id="seljuk_town_danustica" text="Danustica" />
-    <string id="seljuk_town_husnfulq" text="Husn Fulq" />
+    <string id="seljuk_town_danustica" text="Konya" />
+    <string id="seljuk_town_husnfulq" text="Sogut" />
     <string id="seljuk_castle_lavenia" text="Lavenia Castle" />
     <string id="seljuk_castle_shibalzumr" text="Shibal Zumr Castle" />
     <string id="seljuk_castle_morenia" text="Morenia Castle" />
-    <string id="seljuk_vil_polisia" text="Polisia" />
-    <string id="seljuk_vil_tegresos" text="Tegresos" />
-    <string id="seljuk_vil_erebulos" text="Erebulos" />
-    <string id="seljuk_vil_abukhih" text="Abu Khih" />
-    <string id="seljuk_vil_hoqqa" text="Hoqqa" />
+    <string id="seljuk_vil_polisia" text="Meram" />
+    <string id="seljuk_vil_tegresos" text="Sille" />
+    <string id="seljuk_vil_erebulos" text="Karatay" />
+    <string id="seljuk_vil_abukhih" text="Domanic" />
+    <string id="seljuk_vil_hoqqa" text="Bozuyuk" />
     <string id="seljuk_vil_lavenia" text="Lavenia" />
     <string id="seljuk_vil_shibalzumr" text="Shibal Zumr" />
     <string id="seljuk_vil_morenia" text="Morenia" />
+    <string id="seljuk_castle_rey" text="Rey Castle" />
+    <string id="seljuk_town_isfahan" text="Isfahan" />
+    <string id="seljuk_town_nisabur" text="Nishapur" />
+    <string id="seljuk_vil_cuybare" text="Juybareh" />
+    <string id="seljuk_vil_lenban" text="Lenban" />
+    <string id="seljuk_vil_hasanabad" text="Hasanabad" />
+    <string id="seljuk_vil_bostanabad" text="Bostanabad" />
+    <string id="seljuk_vil_sadyah" text="Shadyakh" />
+    <string id="seljuk_vil_kohandiz" text="Kohandezh" />
+    <string id="seljuk_vil_cesmedeh" text="Cheshmedeh" />
+    <string id="seljuk_vil_veramin" text="Varamin" />
+    <string id="seljuk_mn_1" text="Alparslan" />
+    <string id="seljuk_mn_2" text="Tughril" />
+    <string id="seljuk_mn_3" text="Chaghri" />
+    <string id="seljuk_mn_4" text="Suleiman" />
+    <string id="seljuk_mn_5" text="Kilij Arslan" />
+    <string id="seljuk_mn_6" text="Sanjar" />
+    <string id="seljuk_mn_7" text="Berkyaruq" />
+    <string id="seljuk_mn_8" text="Mahmud" />
+    <string id="seljuk_mn_9" text="Toghan" />
+    <string id="seljuk_mn_10" text="Bozkurt" />
+    <string id="seljuk_mn_11" text="Ertugrul" />
+    <string id="seljuk_mn_12" text="Osman" />
+    <string id="seljuk_mn_13" text="Orhan" />
+    <string id="seljuk_mn_14" text="Turgut" />
+    <string id="seljuk_mn_15" text="Yavuz" />
+    <string id="seljuk_mn_16" text="Kutalmish" />
+    <string id="seljuk_mn_17" text="Danishmend" />
+    <string id="seljuk_mn_18" text="Artuk" />
+    <string id="seljuk_mn_19" text="Saltuk" />
+    <string id="seljuk_mn_20" text="Chaka" />
+    <string id="seljuk_mn_21" text="Mengujek" />
+    <string id="seljuk_mn_22" text="Karaman" />
+    <string id="seljuk_mn_23" text="Yusuf" />
+    <string id="seljuk_mn_24" text="Ibrahim" />
+    <string id="seljuk_mn_25" text="Hasan" />
+    <string id="seljuk_mn_26" text="Huseyin" />
+    <string id="seljuk_mn_27" text="Timur" />
+    <string id="seljuk_mn_28" text="Turan" />
+    <string id="seljuk_mn_29" text="Sancar" />
+    <string id="seljuk_mn_30" text="Ghazi" />
+    <string id="seljuk_fn_1" text="Terken" />
+    <string id="seljuk_fn_2" text="Zubayda" />
+    <string id="seljuk_fn_3" text="Gevher" />
+    <string id="seljuk_fn_4" text="Mahperi" />
+    <string id="seljuk_fn_5" text="Hafsa" />
+    <string id="seljuk_fn_6" text="Halima" />
+    <string id="seljuk_fn_7" text="Aisha" />
+    <string id="seljuk_fn_8" text="Fatima" />
+    <string id="seljuk_fn_9" text="Khadija" />
+    <string id="seljuk_fn_10" text="Zaynab" />
+    <string id="seljuk_fn_11" text="Amina" />
+    <string id="seljuk_fn_12" text="Ummuhan" />
+    <string id="seljuk_fn_13" text="Nur" />
+    <string id="seljuk_fn_14" text="Qamar" />
+    <string id="seljuk_fn_15" text="Gulnar" />
+    <string id="seljuk_fn_16" text="Shirin" />
+    <string id="seljuk_fn_17" text="Banu" />
+    <string id="seljuk_fn_18" text="Asli" />
+    <string id="seljuk_fn_19" text="Elif" />
+    <string id="seljuk_fn_20" text="Maryam" />
+    <string id="seljuk_fn_21" text="Ruqayya" />
+    <string id="seljuk_fn_22" text="Nafisa" />
+    <string id="seljuk_fn_23" text="Devlet" />
+    <string id="seljuk_fn_24" text="Shah" />
+    <string id="seljuk_fn_25" text="Hurshida" />
+    <string id="seljuk_cn_1" text="Kayi" />
+    <string id="seljuk_cn_2" text="Bayat" />
+    <string id="seljuk_cn_3" text="Alka Evli" />
+    <string id="seljuk_cn_4" text="Kara Evli" />
+    <string id="seljuk_cn_5" text="Yazir" />
+    <string id="seljuk_cn_6" text="Doger" />
+    <string id="seljuk_cn_7" text="Dodurga" />
+    <string id="seljuk_cn_8" text="Afshar" />
+    <string id="seljuk_cn_9" text="Kizik" />
+    <string id="seljuk_cn_10" text="Begdili" />
+    <string id="seljuk_cn_11" text="Karkin" />
+    <string id="seljuk_cn_12" text="Bayindir" />
+    <string id="seljuk_cn_13" text="Pecheneg" />
+    <string id="seljuk_cn_14" text="Chavuldur" />
+    <string id="seljuk_cn_15" text="Chepni" />
+    <string id="seljuk_cn_16" text="Salur" />
+    <string id="seljuk_cn_17" text="Eymur" />
+    <string id="seljuk_cn_18" text="Alayuntlu" />
+    <string id="seljuk_cn_19" text="Yuregir" />
+    <string id="seljuk_cn_20" text="Igdir" />
+    <string id="seljuk_cn_21" text="Bugduz" />
+    <string id="seljuk_cn_22" text="Yiva" />
+    <string id="seljuk_cn_23" text="Kinik" />
   </strings>
 </base>

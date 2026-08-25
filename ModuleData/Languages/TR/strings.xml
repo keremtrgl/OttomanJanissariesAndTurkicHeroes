@@ -259,18 +259,107 @@
     <string id="timarli_sipahi_name" text="Tımarlı Sipahi" />
     <string id="veteran_janissary_name" text="Kıdemli Yeniçeri" />
   <string id="seljuk_v_palu" text="Palu" /><string id="seljuk_v_keban" text="Keban" /><string id="seljuk_castle_harep" text="Harput Kalesi" /><string id="item_seljuk_ghulam_armor" text="Selçuklu Gulam Çar-Ayine Zırhı" /><string id="item_seljuk_gazi_armor" text="Danişmendiye Uç Beyi Zırhı" /><string id="item_seljuk_royal_helm" text="Sultan Hassa Şeref Miğferi" /><string id="item_seljuk_spiked_helm" text="Selçuklu Zırhlı Boyunluklu Tolgası" /><string id="item_seljuk_fur_helm" text="Kayı Gazi Kürklü Tolgası" /><string id="item_seljuk_pauldrons" text="Selçuklu Hassa Plaka Omuzlukları" /><string id="item_seljuk_bracers" text="Gazi Şam Çeliği Kolçakları" /><string id="item_seljuk_boots" text="Sahtiyan Selçuklu Süvari Çizmeleri" /><string id="item_seljuk_inf_shield" text="Selçuklu Nizam Piyade Kalkanı" /><string id="item_seljuk_composite_bow" text="Oğuz Atabeg Kompozit Yayı" /><string id="item_seljuk_heavy_arrows" text="Selçuklu Zırh Delen Temren Okları" /><string id="item_seljuk_bolts" text="Selçuklu Çelik Temrenli Kundak Okları" /><string id="item_seljuk_turkoman_horse" text="Asil Türkmen Savaş Atı" /><string id="seljuk_faction_desc" text="Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir." /><string id="policy_futuwwa_nizam_name" text="Fütüvvet Nizamı" /><string id="policy_futuwwa_nizam_desc" text="Şehirlerdeki zanaatkar ocakları ve atölye gelirleri %30 artar, şehir asayişi güçlenir." /><string id="policy_uc_gazileri_name" text="Uç Gazileri Teşkilatı" /><string id="policy_uc_gazileri_desc" text="Sınır boylarında gaziler ve alpler teşkilatlandırılır. Lordların ve klanların birlik kapasitesi +25 asker artar." /><string id="policy_kervansaray_berati_name" text="Kervansaray Beratı" /><string id="policy_kervansaray_berati_desc" text="İpek Yolu üzerindeki kervansaraylara özel sultanlık beratı verilir. Şehirlerin refahı her gün +1 kalıcı olarak yükselir." /><string id="seljuk_bard_opt" text="Bozkır Ozanından Gazavat Destanı Dinle (100 Dinar)" /><string id="seljuk_bard_no_gold" text="Yeterli altınınız yok (100 Dinar gerekli)." /><string id="seljuk_bard_notif" text="Ozanın kopuzundan dökülen Selçuklu gazavat destanı erlerin yüreğini coşturdu! (+15 Ordu Morali)" /><string id="seljuk_alp_arslan_greet" text="Gaza meydanlarının yiğit alpi! Hoş geldin, kılıcın keskin, nizamın daim olsun. Âl-i Selçuk'un fermanı ve himmeti üzerinedir. Ne dilersin?" /><string id="seljuk_ertugrul_greet" text="Ey gaza yoldaşım! Söğüt uç boyundan ve Kayı otağından sana bin selam olsun. Pusatın daim parlasın, ne murat edersin?" /><string id="seljuk_nizam_greet" text="Adaletin ve nizamın kılıcı keskindir evlat. Devlet-i Âliyye'ye hizmetin daim olsun. Buyur, seni dinlerim." /><string id="seljuk_starter_notif" text="Büyük Selçuklu Gazi Başlangıç Paketi envanterinize tanımlandı! (+2.500 Dinar, Asil Türkmen Atı, Kompozit Yay ve Zırh Delen Oklar)" /><string id="clan_seljuk_royal" text="Âl-i Selçuk Hanedanı" /><string id="clan_nizamiye" text="Nizamiye Divanı" /><string id="clan_danismend" text="Danişmendliler Beyliği" /><string id="clan_artuk" text="Artuklular Beyliği" /><string id="clan_mengucek" text="Mengücekliler Melikliği" /><string id="clan_saltuk" text="Saltuklular Beyliği" /><string id="clan_caka" text="Çaka Beyliği" /><string id="clan_ahlatsah" text="Ahlatşahlar Beyliği" /><string id="clan_karaman" text="Karamanoğulları Beyliği" /><string id="clan_kayi_oguz" text="Kayı Boyu Alpleri" /><string id="clan_ahi_order" text="Ahilik Teşkilatı" />
-    <string id="seljuk_town_danustica" text="Danustica" />
-    <string id="seljuk_town_husnfulq" text="Husn Fulq" />
+    <string id="seljuk_town_danustica" text="Konya" />
+    <string id="seljuk_town_husnfulq" text="Söğüt" />
     <string id="seljuk_castle_lavenia" text="Lavenia Kalesi" />
     <string id="seljuk_castle_shibalzumr" text="Şibal Zümr Kalesi" />
     <string id="seljuk_castle_morenia" text="Morenia Kalesi" />
-    <string id="seljuk_vil_polisia" text="Polisia" />
-    <string id="seljuk_vil_tegresos" text="Tegresos" />
-    <string id="seljuk_vil_erebulos" text="Erebulos" />
-    <string id="seljuk_vil_abukhih" text="Abu Khih" />
-    <string id="seljuk_vil_hoqqa" text="Hoqqa" />
+    <string id="seljuk_vil_polisia" text="Meram" />
+    <string id="seljuk_vil_tegresos" text="Sille" />
+    <string id="seljuk_vil_erebulos" text="Karatay" />
+    <string id="seljuk_vil_abukhih" text="Domaniç" />
+    <string id="seljuk_vil_hoqqa" text="Bozüyük" />
     <string id="seljuk_vil_lavenia" text="Lavenia" />
     <string id="seljuk_vil_shibalzumr" text="Şibal Zümr" />
     <string id="seljuk_vil_morenia" text="Morenia" />
+    <string id="seljuk_castle_rey" text="Rey Kalesi" />
+    <string id="seljuk_town_isfahan" text="İsfahan" />
+    <string id="seljuk_town_nisabur" text="Nişabur" />
+    <string id="seljuk_vil_cuybare" text="Cûybâre" />
+    <string id="seljuk_vil_lenban" text="Lenban" />
+    <string id="seljuk_vil_hasanabad" text="Hasanabad" />
+    <string id="seljuk_vil_bostanabad" text="Bostanabad" />
+    <string id="seljuk_vil_sadyah" text="Şadyah" />
+    <string id="seljuk_vil_kohandiz" text="Kohandiz" />
+    <string id="seljuk_vil_cesmedeh" text="Çeşmedeh" />
+    <string id="seljuk_vil_veramin" text="Veramin" />
+    <string id="seljuk_mn_1" text="Alparslan" />
+    <string id="seljuk_mn_2" text="Tuğrul" />
+    <string id="seljuk_mn_3" text="Çağrı" />
+    <string id="seljuk_mn_4" text="Süleyman" />
+    <string id="seljuk_mn_5" text="Kılıçarslan" />
+    <string id="seljuk_mn_6" text="Sencer" />
+    <string id="seljuk_mn_7" text="Berkyaruk" />
+    <string id="seljuk_mn_8" text="Mahmud" />
+    <string id="seljuk_mn_9" text="Toğan" />
+    <string id="seljuk_mn_10" text="Bozkurt" />
+    <string id="seljuk_mn_11" text="Ertuğrul" />
+    <string id="seljuk_mn_12" text="Osman" />
+    <string id="seljuk_mn_13" text="Orhan" />
+    <string id="seljuk_mn_14" text="Turgut" />
+    <string id="seljuk_mn_15" text="Yavuz" />
+    <string id="seljuk_mn_16" text="Kutalmış" />
+    <string id="seljuk_mn_17" text="Danişmend" />
+    <string id="seljuk_mn_18" text="Artuk" />
+    <string id="seljuk_mn_19" text="Saltuk" />
+    <string id="seljuk_mn_20" text="Çaka" />
+    <string id="seljuk_mn_21" text="Mengücek" />
+    <string id="seljuk_mn_22" text="Karaman" />
+    <string id="seljuk_mn_23" text="Yusuf" />
+    <string id="seljuk_mn_24" text="İbrahim" />
+    <string id="seljuk_mn_25" text="Hasan" />
+    <string id="seljuk_mn_26" text="Hüseyin" />
+    <string id="seljuk_mn_27" text="Timur" />
+    <string id="seljuk_mn_28" text="Turan" />
+    <string id="seljuk_mn_29" text="Sancar" />
+    <string id="seljuk_mn_30" text="Gazi" />
+    <string id="seljuk_fn_1" text="Terken" />
+    <string id="seljuk_fn_2" text="Zübeyde" />
+    <string id="seljuk_fn_3" text="Gevher" />
+    <string id="seljuk_fn_4" text="Mahperi" />
+    <string id="seljuk_fn_5" text="Hafsa" />
+    <string id="seljuk_fn_6" text="Halime" />
+    <string id="seljuk_fn_7" text="Ayşe" />
+    <string id="seljuk_fn_8" text="Fatma" />
+    <string id="seljuk_fn_9" text="Hatice" />
+    <string id="seljuk_fn_10" text="Zeynep" />
+    <string id="seljuk_fn_11" text="Emine" />
+    <string id="seljuk_fn_12" text="Ümmühan" />
+    <string id="seljuk_fn_13" text="Nur" />
+    <string id="seljuk_fn_14" text="Kamer" />
+    <string id="seljuk_fn_15" text="Gülnar" />
+    <string id="seljuk_fn_16" text="Şirin" />
+    <string id="seljuk_fn_17" text="Banu" />
+    <string id="seljuk_fn_18" text="Aslı" />
+    <string id="seljuk_fn_19" text="Elif" />
+    <string id="seljuk_fn_20" text="Meryem" />
+    <string id="seljuk_fn_21" text="Rukiye" />
+    <string id="seljuk_fn_22" text="Nefise" />
+    <string id="seljuk_fn_23" text="Devlet" />
+    <string id="seljuk_fn_24" text="Şah" />
+    <string id="seljuk_fn_25" text="Hurşide" />
+    <string id="seljuk_cn_1" text="Kayı" />
+    <string id="seljuk_cn_2" text="Bayat" />
+    <string id="seljuk_cn_3" text="Alka Evli" />
+    <string id="seljuk_cn_4" text="Kara Evli" />
+    <string id="seljuk_cn_5" text="Yazır" />
+    <string id="seljuk_cn_6" text="Döğer" />
+    <string id="seljuk_cn_7" text="Dodurga" />
+    <string id="seljuk_cn_8" text="Avşar" />
+    <string id="seljuk_cn_9" text="Kızık" />
+    <string id="seljuk_cn_10" text="Beğdili" />
+    <string id="seljuk_cn_11" text="Karkın" />
+    <string id="seljuk_cn_12" text="Bayındır" />
+    <string id="seljuk_cn_13" text="Peçenek" />
+    <string id="seljuk_cn_14" text="Çavuldur" />
+    <string id="seljuk_cn_15" text="Çepni" />
+    <string id="seljuk_cn_16" text="Salur" />
+    <string id="seljuk_cn_17" text="Eymür" />
+    <string id="seljuk_cn_18" text="Alayundlu" />
+    <string id="seljuk_cn_19" text="Yüreğir" />
+    <string id="seljuk_cn_20" text="İğdir" />
+    <string id="seljuk_cn_21" text="Büğdüz" />
+    <string id="seljuk_cn_22" text="Yıva" />
+    <string id="seljuk_cn_23" text="Kınık" />
   </strings>
 </base>
