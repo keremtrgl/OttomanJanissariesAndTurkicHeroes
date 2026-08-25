@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Engine;
 using TaleWorlds.Library;
@@ -16,6 +17,9 @@ namespace SeljukEmpire.Tactics
     public class TuranTacticMissionBehavior : MissionBehavior
     {
         public override MissionBehaviorType BehaviorType => MissionBehaviorType.Other;
+
+        private const string SeljukCultureId = "seljuk";
+        private const string SeljukKingdomId = "kingdom_seljuks";
 
         public enum TacticalDoctrine
         {
@@ -120,18 +124,32 @@ namespace SeljukEmpire.Tactics
                 return;
             }
 
-            _seljukTeam = Mission.Current.DefenderTeam ?? Mission.Current.AttackerTeam;
-            
-            // Find opponent team
-            if (Mission.Current.Teams != null)
+            // Only take over a side that is actually Seljuk-affiliated (culture or kingdom).
+            // This mission behavior is added to every non-siege field battle in the game
+            // (see SeljukSubModule.OnMissionBehaviorInitialize), so without this check it used
+            // to hijack "whichever side is Defender" in every battle in the game, including
+            // ones with no Seljuk involvement at all.
+            if (IsSeljukTeam(Mission.Current.DefenderTeam))
             {
-                foreach (var t in Mission.Current.Teams)
+                _seljukTeam = Mission.Current.DefenderTeam;
+            }
+            else if (IsSeljukTeam(Mission.Current.AttackerTeam))
+            {
+                _seljukTeam = Mission.Current.AttackerTeam;
+            }
+            else
+            {
+                _activeDoctrine = TacticalDoctrine.StandardEngineFallback;
+                return;
+            }
+
+            // Find opponent team
+            foreach (var t in Mission.Current.Teams)
+            {
+                if (t != _seljukTeam && t.IsEnemyOf(_seljukTeam))
                 {
-                    if (t != _seljukTeam && t.IsEnemyOf(_seljukTeam))
-                    {
-                        _enemyTeam = t;
-                        break;
-                    }
+                    _enemyTeam = t;
+                    break;
                 }
             }
 
@@ -368,6 +386,49 @@ namespace SeljukEmpire.Tactics
             {
                 _activeDoctrine = TacticalDoctrine.StandardEngineFallback;
             }
+        }
+
+        /// <summary>
+        /// True if this team is meaningfully Seljuk: either commanded by a Seljuk-culture or
+        /// Kingdom.kingdom_seljuks-affiliated general, or made up of a majority of
+        /// Culture.seljuk troops among its currently active agents.
+        /// </summary>
+        private static bool IsSeljukTeam(Team team)
+        {
+            if (team == null) return false;
+
+            if (team.GeneralAgent?.Character is CharacterObject generalCharacter)
+            {
+                if (generalCharacter.Culture != null && generalCharacter.Culture.StringId == SeljukCultureId)
+                {
+                    return true;
+                }
+                if (generalCharacter.HeroObject?.Clan?.Kingdom != null && generalCharacter.HeroObject.Clan.Kingdom.StringId == SeljukKingdomId)
+                {
+                    return true;
+                }
+            }
+
+            int seljukCount = 0;
+            int sampledCount = 0;
+            foreach (var formation in team.FormationsIncludingEmpty)
+            {
+                if (formation.CountOfUnits <= 0) continue;
+                formation.ApplyActionOnEachUnit(agent =>
+                {
+                    if (agent == null || !agent.IsActive() || !(agent.Character is CharacterObject troopCharacter) || troopCharacter.Culture == null)
+                    {
+                        return;
+                    }
+                    sampledCount++;
+                    if (troopCharacter.Culture.StringId == SeljukCultureId)
+                    {
+                        seljukCount++;
+                    }
+                });
+            }
+
+            return sampledCount > 0 && seljukCount * 2 >= sampledCount;
         }
 
         private static Vec3 GetTeamCenterPosition(Team team)
