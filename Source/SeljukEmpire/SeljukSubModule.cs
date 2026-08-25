@@ -11,7 +11,6 @@ using SeljukEmpire.Tactics;
 using SeljukEmpire.Tournaments;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.CharacterCreationContent;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
@@ -27,8 +26,6 @@ namespace SeljukEmpire
     /// </summary>
     public class SeljukSubModule : MBSubModuleBase
     {
-        private bool _isCharacterCreationHooked;
-
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
@@ -37,38 +34,6 @@ namespace SeljukEmpire
         protected override void OnSubModuleUnloaded()
         {
             base.OnSubModuleUnloaded();
-        }
-
-        protected override void OnApplicationTick(float dt)
-        {
-            base.OnApplicationTick(dt);
-
-            try
-            {
-                if (GameStateManager.Current?.ActiveState is CharacterCreationState ccState)
-                {
-                    if (!_isCharacterCreationHooked && ccState.CharacterCreationManager != null)
-                    {
-                        var handler = new SeljukCharacterCreationContentHandler();
-                        ccState.CharacterCreationManager.RegisterCharacterCreationContentHandler(handler, 100);
-                        handler.InjectSeljukNarratives(ccState.CharacterCreationManager);
-
-                        var rivalHandler = new RivalCultureCharacterCreationContentHandler();
-                        ccState.CharacterCreationManager.RegisterCharacterCreationContentHandler(rivalHandler, 100);
-                        rivalHandler.InjectRivalNarratives(ccState.CharacterCreationManager);
-
-                        _isCharacterCreationHooked = true;
-                    }
-                }
-                else
-                {
-                    _isCharacterCreationHooked = false;
-                }
-            }
-            catch (Exception)
-            {
-                // Fail-safe protection
-            }
         }
 
         protected override void InitializeGameStarter(Game game, IGameStarter starterObject)
@@ -144,6 +109,18 @@ namespace SeljukEmpire
                     //    CampaignBehaviorBase with SyncData, not a SubModule-level flag: see
                     //    SeljukStarterPackBehavior's summary for why.
                     campaignStarter.AddBehavior(new SeljukStarterPackBehavior());
+                }
+                catch (Exception) { }
+
+                try
+                {
+                    // 10. Register Seljuk & rival-culture (Byzantine/Abbasid/Georgian) character
+                    //     creation narrative content. Must go through CampaignBehaviorBase.RegisterEvents
+                    //     (CampaignEvents.OnCharacterCreationInitializedEvent), not a SubModule tick poll -
+                    //     see each handler's class remarks for why the previous approach never actually
+                    //     showed any custom content in character creation.
+                    campaignStarter.AddBehavior(new SeljukCharacterCreationContentHandler());
+                    campaignStarter.AddBehavior(new RivalCultureCharacterCreationContentHandler());
                 }
                 catch (Exception) { }
             }

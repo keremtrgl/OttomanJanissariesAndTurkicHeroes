@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
   <!-- Bizans lordlarinin gercek tarihi isimleri (Manzikert donemi, 1071) - yuz/ekipman/beceri Native, sadece isim degisir -->
-  <NPCCharacter id="lord_1_14" name="{=byz_ln_eudokia}Eudokia Makrembolitissa" />
+  <!-- lord_1_14 = clan_empire_south_1's (Diogenes Hanedani / Kingdom.empire_s) starting ruler owner
+       (see SandBox/ModuleData/spclans.xml + spkingdoms.xml). Native ships this hero as "Rhagaea",
+       explicitly is_female="true" with her own face/body/voice/equipment - renaming the name= alone
+       (as 72d34da did) keeps that female face/body under a male "Imparator" title, which is exactly
+       the mismatch being reported. Overriding is_female + face + Equipments here makes the Empire's
+       actual ruler male: Romanos IV Diogenes, the historical emperor who lost at Manzikert (1071) to
+       Alp Arslan - fits both House Diogenes and the kingdom's "Malazgirt sonrasi" description. Native
+       never authored a male "s_emp_king" equipment set (Southern Empire's only ever had a female
+       ruler), so this reuses Northern Empire's male king template (n_emp_king_template_bat_m/civ_m -
+       verified present in SandBox/ModuleData/lords.xml), and the BodyProperties key already used
+       across dozens of byz2_ custom troops in byzantine_custom_troops.xml. -->
+  <NPCCharacter id="lord_1_14" name="{=byz_ln_romanos_diogenes}Romanos Diogenes" is_female="false">
+    <face>
+      <BodyProperties version="4" weight="0.4" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" />
+    </face>
+    <Equipments>
+      <EquipmentSet id="n_emp_king_template_bat_m" />
+      <EquipmentSet id="n_emp_king_template_civ_m" equipmentType="Civilian" />
+    </Equipments>
+  </NPCCharacter>
   <NPCCharacter id="lord_1_15" name="{=byz_ln_nikephoros_botaneiates}Nikephoros Botaneiates" />
   <NPCCharacter id="lord_1_16" name="{=byz_ln_maria_alania}Maria of Alania" />
   <NPCCharacter id="lord_1_17" name="{=byz_ln_andronikos_doukas}Andronikos Dukas" />

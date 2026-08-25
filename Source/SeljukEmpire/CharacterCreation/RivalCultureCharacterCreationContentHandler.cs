@@ -9,15 +9,44 @@ using TaleWorlds.Localization;
 namespace SeljukEmpire.CharacterCreation
 {
     /// <summary>
-    /// Injects authentic Byzantine, Abbasid & Georgian character creation narrative options into
+    /// Injects authentic Byzantine, Abbasid &amp; Georgian character creation narrative options into
     /// Mount &amp; Blade II: Bannerlord, mirroring SeljukCharacterCreationContentHandler's approach
     /// for the three rival-kingdom cultures introduced by this mod. Safely integrated with Native
     /// CharacterCreationManager, 3D parent model equipment, and effect pipelines.
     /// </summary>
-    public class RivalCultureCharacterCreationContentHandler : ICharacterCreationContentHandler
+    /// <remarks>
+    /// See SeljukCharacterCreationContentHandler's remarks: this used to be registered a frame too late
+    /// via SubModule.OnApplicationTick polling, after CharacterCreationManager's constructor had already
+    /// run its handler-invoking loops on an empty handler list. Now self-registers via
+    /// CampaignEvents.OnCharacterCreationInitializedEvent, same as Native's own
+    /// CharacterCreationCampaignBehavior.
+    /// </remarks>
+    public class RivalCultureCharacterCreationContentHandler : CampaignBehaviorBase, ICharacterCreationContentHandler
     {
         private static readonly PropertyInfo GoldProp = typeof(NarrativeMenuOptionArgs).GetProperty("GoldToAdd", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
         private bool _isOptionsInjected;
+
+        public override void RegisterEvents()
+        {
+            CampaignEvents.OnCharacterCreationInitializedEvent.AddNonSerializedListener(this, OnCharacterCreationInitialized);
+        }
+
+        public override void SyncData(IDataStore dataStore)
+        {
+            // Transient character-creation behavior, nothing to persist
+        }
+
+        private void OnCharacterCreationInitialized(CharacterCreationManager characterCreationManager)
+        {
+            try
+            {
+                characterCreationManager.RegisterCharacterCreationContentHandler(this, 100);
+            }
+            catch (Exception)
+            {
+                // Safety
+            }
+        }
 
         public void InitializeContent(CharacterCreationManager characterCreationManager)
         {

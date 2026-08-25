@@ -15,7 +15,13 @@
        every notable/garrison in empire_s or aserai now offers those instead of Native's
        imperial_recruit/aserai_recruit. Since Culture.empire is shared, this also applies to
        Northern/Western Empire recruitment (same accepted tradeoff as the name above). -->
-  <Culture id="empire" name="{=byz_culture_name}Byzantine" basic_troop="NPCCharacter.byz2_recruit" elite_basic_troop="NPCCharacter.byz2_klibanophoros" />
-  <Culture id="aserai" name="{=abb_culture_name}Abbasi" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ghulam" />
+  <!-- elite_basic_troop was byz2_klibanophoros/abb2_ghulam - both full lance+mail+horse heavy
+       cavalry (the byz2/abb2 tier-2 "cavalry" branch), so every notable-recruited "starter"
+       trooper showed up mounted and priced like a heavy cavalryman (~170 dinars) instead of a
+       basic recruit. Switched to the tier-2 INFANTRY branch (byz2_skutatos/abb2_ayyar - sword,
+       shield, no horse) so the elite recruit is still a step above basic_troop without being an
+       expensive mounted unit. -->
+  <Culture id="empire" name="{=byz_culture_name}Byzantine" basic_troop="NPCCharacter.byz2_recruit" elite_basic_troop="NPCCharacter.byz2_skutatos" />
+  <Culture id="aserai" name="{=abb_culture_name}Abbasi" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ayyar" />
   <Culture id="sturgia" name="{=geo_culture_name}Gürcü" />
 </SPCultures>

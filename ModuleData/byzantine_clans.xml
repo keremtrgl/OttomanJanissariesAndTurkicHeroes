@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Factions>
   <!-- Bizans imparatorluk hanedanları (Native clan_empire_south_1..9 reskin - klan verisi/lordlar/toprak Native, sadece kimlik degisir) -->
-  <Faction id="clan_empire_south_1" name="{=byz_house_diogenes}Diogenes Hanedanı" />
+  <!-- clan_empire_south_1 hukumdar hanedani (Kingdom.empire_s'in sahibi) oldugu icin banner_key
+       burada da kingdoms.xml'deki empire_s ile AYNI degere cekildi - Native'in kendi banner_key'i
+       (Pethros klani icin, "Bizans" temasiyla alakasiz mor/altin degil, farkli bir renk/ikon)
+       hanedanin kral bayragiyla uyusmuyordu, "diğerleriyle aynı değil" sikayetinin kaynagi buydu. -->
+  <Faction id="clan_empire_south_1" name="{=byz_house_diogenes}Diogenes Hanedanı" banner_key="11.79.79.4345.4345.764.764.1.0.0.162.7.7.512.512.764.764.1.0.0" />
   <Faction id="clan_empire_south_2" name="{=byz_house_botaneiates}Botaneiates Hanedanı" />
   <Faction id="clan_empire_south_3" name="{=byz_house_doukas}Dukas Hanedanı" />
   <Faction id="clan_empire_south_4" name="{=byz_house_komnenos}Komnenos Hanedanı" />

@@ -323,7 +323,7 @@
         <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
       </EquipmentRoster>
     </Equipments>
-    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_varangian_huscarl" /></upgrade_targets>
   </NPCCharacter>
 
   <NPCCharacter id="byz2_tzangra_crossbowman" default_group="Ranged" level="26" name="{=byz2_t_tzangra}Tzangra Crossbowman" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
@@ -345,7 +345,7 @@
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
     </Equipments>
-    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tzangratores" /></upgrade_targets>
   </NPCCharacter>
 
   <NPCCharacter id="byz2_vardariotai" default_group="Cavalry" level="26" name="{=byz2_t_vardariotai}Vardariotai" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
@@ -369,7 +369,11 @@
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
       </EquipmentRoster>
     </Equipments>
-    <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
+    <!-- Vardariotai (mounted archer skirmish line) is left as its own branch endpoint here - the
+         historical Vardariotai were themselves an elite Imperial guard corps, so they don't need
+         a further promotion; see the note above byz2_hetaireia_guardsman for why this branch no
+         longer merges into it. -->
+    <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
   <NPCCharacter id="byz2_athanatoi" default_group="Cavalry" level="26" name="{=byz2_t_athanatoi}Athanatoi" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
@@ -396,7 +400,12 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_hetaireia_guardsman" /></upgrade_targets>
   </NPCCharacter>
 
-  <!-- Tier 6 (31): single top elite, converges from every tier-26 branch -->
+  <!-- Tier 6 (31): three separate branch endpoints (was: all four tier-26 branches converged
+       into this single troop, so every path - infantry, ranged, both cavalry lines - ended up
+       as the same "Hetaireia Guardsman". Now only byz2_athanatoi (heavy lancer) promotes here;
+       byz2_varangian_guardsman and byz2_tzangra_crossbowman get their own dedicated tier-6 below,
+       and byz2_vardariotai stands as a tier-5 endpoint. Hetaireia (the Emperor's own mounted
+       bodyguard) fits as the heavy-cavalry line's elite. -->
   <NPCCharacter id="byz2_hetaireia_guardsman" default_group="Cavalry" level="31" name="{=byz2_t_hetaireia}Hetaireia Guardsman" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -421,6 +430,52 @@
         <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
         <equipment slot="Horse" id="Item.t3_empire_horse" />
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_varangian_huscarl" default_group="Infantry" level="31" name="{=byz2_t_varangian_huscarl}Varangian Huscarl" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="130" />
+      <skill id="Polearm" value="130" />
+      <skill id="Throwing" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battle_axe_t4" />
+        <equipment slot="Item1" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Cape" id="Item.imperial_studded_strip_shoulders" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="byz2_tzangratores" default_group="Ranged" level="31" name="{=byz2_t_tzangratores}Tzangratores" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="165" />
+      <skill id="Crossbow" value="330" />
+      <skill id="Throwing" value="175" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Head" id="Item.imperial_goggled_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_padded_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets></upgrade_targets>
