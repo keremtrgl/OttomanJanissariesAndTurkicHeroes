@@ -28,7 +28,6 @@ namespace SeljukEmpire
     public class SeljukSubModule : MBSubModuleBase
     {
         private bool _isCharacterCreationHooked;
-        private bool _isStarterPackGranted;
 
         protected override void OnSubModuleLoad()
         {
@@ -134,56 +133,15 @@ namespace SeljukEmpire
                 }
                 catch (Exception) { }
 
-                // Register Starter Pack check on session launch
-                CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
-            }
-        }
-
-        private void OnSessionLaunched(CampaignGameStarter starter)
-        {
-            try
-            {
-                GrantStarterPackIfNewGame();
-            }
-            catch (Exception) { }
-        }
-
-        private void GrantStarterPackIfNewGame()
-        {
-            if (_isStarterPackGranted || Hero.MainHero == null) return;
-
-            try
-            {
-                // 1. Grant +2,500 Gold Dinars
-                Hero.MainHero.Gold += 2500;
-
-                // 2. Grant Asil Türkmen Savaş Atı
-                var horseItem = Game.Current.ObjectManager.GetObject<ItemObject>("seljuk_turkoman_horse");
-                if (horseItem != null && MobileParty.MainParty?.ItemRoster != null)
+                try
                 {
-                    MobileParty.MainParty.ItemRoster.AddToCounts(horseItem, 1);
+                    // 9. Register one-time Starter Pack grant (gold + gear). Must be a
+                    //    CampaignBehaviorBase with SyncData, not a SubModule-level flag: see
+                    //    SeljukStarterPackBehavior's summary for why.
+                    campaignStarter.AddBehavior(new SeljukStarterPackBehavior());
                 }
-
-                // 3. Grant Danişmend Kompozit Yayı
-                var bowItem = Game.Current.ObjectManager.GetObject<ItemObject>("seljuk_danismend_bow");
-                if (bowItem != null && MobileParty.MainParty?.ItemRoster != null)
-                {
-                    MobileParty.MainParty.ItemRoster.AddToCounts(bowItem, 1);
-                }
-
-                // 4. Grant Zırh Delen Temren Okları
-                var arrowItem = Game.Current.ObjectManager.GetObject<ItemObject>("seljuk_heavy_arrows");
-                if (arrowItem != null && MobileParty.MainParty?.ItemRoster != null)
-                {
-                    MobileParty.MainParty.ItemRoster.AddToCounts(arrowItem, 1);
-                }
-
-                MBInformationManager.AddQuickInformation(
-                    new TextObject("{=seljuk_starter_notif}Büyük Selçuklu Gazi Başlangıç Paketi envanterinize tanımlandı! (+2.500 Dinar, Asil Türkmen Atı, Kompozit Yay ve Zırh Delen Oklar)"));
-
-                _isStarterPackGranted = true;
+                catch (Exception) { }
             }
-            catch (Exception) { }
         }
 
         public override void OnMissionBehaviorInitialize(Mission mission)
