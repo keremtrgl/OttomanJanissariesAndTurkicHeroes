@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- Native "Northern Empire" (Kingdom.empire) hanedanlari - kullanicinin istegiyle (oyunda ayri
+       bir Kuzey Imparatorlugu kalmasin, tamami Bizans'a (Kingdom.empire_s) baglansin) gercek Bizans
+       hanedan isimleriyle yeniden adlandirildi VE super_faction'lari Kingdom.empire -> Kingdom.empire_s
+       olarak degistirildi. Bu 9 klan tasindiktan sonra Kingdom.empire'da hic klan kalmiyor, yani
+       harita/kampanyada ayri bir "Northern Empire" fraksiyonu artik hic gorunmuyor - tum eski
+       topraklari (bkz. byzantine_north_settlements.xml) Bizans'in vasal klanlari olarak devam ediyor.
+       clan_empire_north_1 (Palaiologos) haric hicbirinin banner_key'i degistirilmedi - sadece
+       hukumdar hanedani (Diogenes) kingdoms.xml'deki kral bayragiyla eslesiyor, digerleri (Botaneiates,
+       Dukas... ve simdi bunlar) kendi Native bayraklarini koruyor, ayni south klanlarindaki gibi. -->
+  <Faction id="clan_empire_north_1" name="{=byz_n_house_palaiologos}Palaiologos Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_2" name="{=byz_n_house_angelos}Angelos Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_3" name="{=byz_n_house_kantakouzenos}Kantakuzenos Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_4" name="{=byz_n_house_phokas}Fokas Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_5" name="{=byz_n_house_skleros}Skleros Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_6" name="{=byz_n_house_kourkouas}Kurkuas Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_7" name="{=byz_n_house_xiphilinos}Ksifilinos Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_8" name="{=byz_n_house_vatatzes}Vatatzes Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_9" name="{=byz_n_house_gabras}Gavras Hanedanı" super_faction="Kingdom.empire_s" />
+</Factions>

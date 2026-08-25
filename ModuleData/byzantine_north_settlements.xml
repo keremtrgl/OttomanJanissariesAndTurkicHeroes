@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settlements>
+  <!-- Native "Northern Empire" sehirleri/kaleleri/koyleri (47 yerlesim, 9 klan) gercek Bizans-donemi
+       Anadolu yer adlarina cevrildi. Sahiplik Native (ilgili klan) - sadece isim degisir; klanlarin
+       kendisi zaten byzantine_north_clans.xml'de Kingdom.empire_s'e baglandi, yani bu yerlesimlerin
+       hepsi artik Bizans'in topragi. South'ta (byzantine_settlements.xml) kullanilan isimlerle
+       (Ankara, Amaseia, Nicaea, Trebizond, Sebasteia, Nicomedia, Chonae, Claudiopolis, Neocaesarea,
+       Caesarea, vb.) CAKISMAYAN, farkli bolgelerden (Lydia/Ionia, Frigya/Galatya, Kilikya, Ermeni
+       sinir bolgesi, Osroene) 47 ayri gercek antik/Bizans yer adi secildi. -->
+
+  <!-- town_EN1 - Angelos Hanedanı (Frigya-Galatya) -->
+  <Settlement id="town_EN1" name="{=byz_n_s_amorium}Amorium" />
+  <Settlement id="village_EN1_1" name="{=byz_n_v_pessinus}Pessinus" />
+  <Settlement id="village_EN1_2" name="{=byz_n_v_synnada}Synnada" />
+  <Settlement id="village_EN1_3" name="{=byz_n_v_docimium}Docimium" />
+
+  <!-- town_EN2 - Palaiologos Hanedanı'nın başkenti (Lydia) -->
+  <Settlement id="town_EN2" name="{=byz_n_s_sardis}Sardis" />
+  <Settlement id="village_EN2_1" name="{=byz_n_v_philadelphia}Philadelphia" />
+  <Settlement id="village_EN2_2" name="{=byz_n_v_tralles}Tralles" />
+
+  <!-- town_EN3 - Kantakuzenos Hanedanı (Melitene sınır bölgesi) -->
+  <Settlement id="town_EN3" name="{=byz_n_s_melitene}Melitene" />
+  <Settlement id="village_EN3_1" name="{=byz_n_v_arabissus}Arabissus" />
+  <Settlement id="village_EN3_3" name="{=byz_n_v_ariaramneia}Ariaramneia" />
+
+  <!-- town_EN4 - Palaiologos Hanedanı'nın ikinci şehri (Ermeni sınırı) -->
+  <Settlement id="town_EN4" name="{=byz_n_s_theodosiopolis}Theodosiopolis" />
+  <Settlement id="village_EN4_2" name="{=byz_n_v_satala}Satala" />
+  <Settlement id="village_EN4_4" name="{=byz_n_v_sper}Sper" />
+
+  <!-- town_EN5 - Skleros Hanedanı (Osroene sınırı) -->
+  <Settlement id="town_EN5" name="{=byz_n_s_edessa}Edessa" />
+  <Settlement id="village_EN5_1" name="{=byz_n_v_samosata}Samosata" />
+  <Settlement id="village_EN5_2" name="{=byz_n_v_perrhe}Perrhe" />
+  <Settlement id="village_EN5_4" name="{=byz_n_v_germanicia}Germanicia" />
+
+  <!-- town_EN6 - Fokas Hanedanı (Kilikya) -->
+  <Settlement id="town_EN6" name="{=byz_n_s_tarsus}Tarsus" />
+  <Settlement id="village_EN6_1" name="{=byz_n_v_adana}Adana" />
+  <Settlement id="village_EN6_2" name="{=byz_n_v_anazarbus}Anazarbus" />
+
+  <!-- castle_EN1 - Kantakuzenos Hanedanı -->
+  <Settlement id="castle_EN1" name="{=byz_n_c_arsamosata}Arsamosata Kalesi" />
+  <Settlement id="castle_village_EN1_1" name="{=byz_n_v_citharizon}Citharizon" />
+  <Settlement id="castle_village_EN1_2" name="{=byz_n_v_romanoupolis}Romanoupolis" />
+
+  <!-- castle_EN2 - Kurkuas Hanedanı -->
+  <Settlement id="castle_EN2" name="{=byz_n_c_zela}Zela Kalesi" />
+  <Settlement id="castle_village_EN2_1" name="{=byz_n_v_amisos}Amisos" />
+  <Settlement id="castle_village_EN2_2" name="{=byz_n_v_themiscyra}Themiscyra" />
+
+  <!-- castle_EN3 - Gavras Hanedanı -->
+  <Settlement id="castle_EN3" name="{=byz_n_c_sinope}Sinope Kalesi" />
+  <Settlement id="castle_village_EN3_1" name="{=byz_n_v_tavium}Tavium" />
+  <Settlement id="castle_village_EN3_2" name="{=byz_n_v_cotyaeum}Cotyaeum" />
+
+  <!-- castle_EN4 - Kantakuzenos Hanedanı -->
+  <Settlement id="castle_EN4" name="{=byz_n_c_loulon}Loulon Kalesi" />
+  <Settlement id="castle_village_EN4_1" name="{=byz_n_v_zapetra}Zapetra" />
+  <Settlement id="castle_village_EN4_2" name="{=byz_n_v_charsianon}Charsianon" />
+
+  <!-- castle_EN5 - Palaiologos Hanedanı -->
+  <Settlement id="castle_EN5" name="{=byz_n_c_aezani}Aezani Kalesi" />
+  <Settlement id="castle_village_EN5_1" name="{=byz_n_v_cadi}Cadi" />
+  <Settlement id="castle_village_EN5_2" name="{=byz_n_v_apameia}Apameia" />
+
+  <!-- castle_EN6 - Angelos Hanedanı -->
+  <Settlement id="castle_EN6" name="{=byz_n_c_cyzicus}Cyzicus Kalesi" />
+  <Settlement id="castle_village_EN6_1" name="{=byz_n_v_lampsacus}Lampsacus" />
+  <Settlement id="castle_village_EN6_2" name="{=byz_n_v_abydos}Abydos" />
+
+  <!-- castle_EN7 - Ksifilinos Hanedanı -->
+  <Settlement id="castle_EN7" name="{=byz_n_c_ephesus}Ephesus Kalesi" />
+  <Settlement id="castle_village_EN7_1" name="{=byz_n_v_miletus}Miletus" />
+  <Settlement id="castle_village_EN7_2" name="{=byz_n_v_priene}Priene" />
+
+  <!-- castle_EN8 - Vatatzes Hanedanı -->
+  <Settlement id="castle_EN8" name="{=byz_n_c_pergamon}Pergamon Kalesi" />
+  <Settlement id="castle_village_EN8_1" name="{=byz_n_v_adramyttium}Adramyttium" />
+  <Settlement id="castle_village_EN8_2" name="{=byz_n_v_assos}Assos" />
+
+  <!-- castle_EN9 - Palaiologos Hanedanı -->
+  <Settlement id="castle_EN9" name="{=byz_n_c_smyrna}Smyrna Kalesi" />
+  <Settlement id="castle_village_EN9_1" name="{=byz_n_v_magnesia}Magnesia" />
+  <Settlement id="castle_village_EN9_2" name="{=byz_n_v_thyatira}Thyatira" />
+</Settlements>
