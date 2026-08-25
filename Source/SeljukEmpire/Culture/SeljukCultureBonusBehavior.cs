@@ -13,7 +13,7 @@ namespace SeljukEmpire.Culture
     /// Seljuk culture passive bonuses/debuffs, implemented as GameModel overrides. Native Bannerlord
     /// culture bonuses (e.g. Vlandia's cheaper crossbows) are not XML-configurable; they're C#
     /// GameModel overrides that branch on Hero/CharacterObject/Settlement culture, matching the
-    /// wrap/override pattern already used by SeljukVolunteerModel.cs.
+    /// wrap/override pattern used throughout this mod's GameModel overrides.
     ///
     /// - SeljukWageModel: Seljuk-culture mounted troops cost 10% less wage (Iqta cavalry economy).
     /// - SeljukConstructionSpeedModel: Seljuk settlements build 10% faster (Nizamiye public works).

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SeljukEmpire;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.Settlements;
@@ -42,7 +43,7 @@ namespace SeljukEmpire.Tournaments
 
         private void OnTournamentFinished(CharacterObject winner, MBReadOnlyList<CharacterObject> participants, Town town, ItemObject regularPrize)
         {
-            if (winner == null || town == null || !IsSeljukTown(town.Settlement)) return;
+            if (winner == null || town == null || !SeljukFactionUtility.IsSeljukSettlement(town.Settlement)) return;
 
             try
             {
@@ -93,17 +94,5 @@ namespace SeljukEmpire.Tournaments
             return null;
         }
 
-        private static bool IsSeljukTown(Settlement settlement)
-        {
-            if (settlement == null) return false;
-            if (settlement.StringId == "town_K1" || settlement.StringId == "town_K4" ||
-                settlement.StringId == "town_ES4" || settlement.StringId == "town_ES2" ||
-                settlement.StringId == "town_K6" || settlement.StringId == "town_A4")
-            {
-                return true;
-            }
-
-            return settlement.OwnerClan?.Kingdom != null && settlement.OwnerClan.Kingdom.StringId == "kingdom_seljuks";
-        }
     }
 }

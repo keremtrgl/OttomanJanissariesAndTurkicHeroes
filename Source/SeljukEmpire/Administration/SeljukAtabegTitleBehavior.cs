@@ -1,4 +1,5 @@
 using System;
+using SeljukEmpire;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
@@ -30,7 +31,7 @@ namespace SeljukEmpire.Administration
             try
             {
                 // Verify Seljuk ownership
-                if (IsSeljukFief(settlement))
+                if (SeljukFactionUtility.IsSeljukSettlement(settlement))
                 {
                     // 1. Loyalty Stabilizer (Adalet-i Selçukiye)
                     if (settlement.Town != null)
@@ -81,20 +82,5 @@ namespace SeljukEmpire.Administration
             }
         }
 
-        private static bool IsSeljukFief(Settlement settlement)
-        {
-            if (settlement == null) return false;
-            if (settlement.StringId == "town_K1" || settlement.StringId == "town_K4" ||
-                settlement.StringId == "town_ES4" || settlement.StringId == "town_ES2" ||
-                settlement.StringId == "town_K6" || settlement.StringId == "town_A4" ||
-                settlement.StringId == "castle_K2" || settlement.StringId == "castle_K5" ||
-                settlement.StringId == "castle_K1" || settlement.StringId == "castle_A8" ||
-                settlement.StringId == "castle_ES3")
-            {
-                return true;
-            }
-
-            return settlement.OwnerClan?.Kingdom != null && settlement.OwnerClan.Kingdom.StringId == "kingdom_seljuks";
-        }
     }
 }
