@@ -3,6 +3,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.Core;
 using TaleWorlds.Localization;
+using TaleWorlds.MountAndBlade;
 
 namespace SeljukEmpire.Economy
 {
@@ -11,16 +12,11 @@ namespace SeljukEmpire.Economy
     /// Must live in a CampaignBehaviorBase with SyncData: a plain bool field on the
     /// SubModule itself is not part of the save graph and resets to false every time the
     /// game process restarts, so re-loading a save used to re-grant the pack every time.
-    /// Hooks OnNewGameCreatedEvent (fires once, only for a brand-new campaign, after character
-    /// creation has fully finished) rather than OnSessionLaunchedEvent - the latter also fires
-    /// while character creation is still in progress, before Native applies its own
-    /// culture-based starting equipment to MobileParty.MainParty, which was overwriting/dropping
-    /// whatever this behavior had already added to the roster.
     /// </summary>
     public class SeljukStarterPackBehavior : CampaignBehaviorBase
     {
         private bool _isStarterPackGranted;
-        private bool _notificationPending;
+        private bool _isNewGamePending;
 
         public override void RegisterEvents()
         {
@@ -35,60 +31,46 @@ namespace SeljukEmpire.Economy
 
         private void OnNewGameCreated(CampaignGameStarter starter)
         {
-            try
-            {
-                GrantStarterPackIfNewGame();
-            }
-            catch (Exception) { }
+            _isNewGamePending = true;
         }
 
-        // Deferred past the intro cinematic, which still plays for a few ticks after OnNewGameCreatedEvent and would otherwise show this notification on top of it.
+        // Only grants once Mission.Current is null and stays null - past the intro cinematic and
+        // the optional tutorial battle, both of which are Missions - so the player is actually free
+        // on the map instead of mid-cutscene or mid-fight.
         private void OnTick(float dt)
         {
-            if (!_notificationPending) return;
-            _notificationPending = false;
-            MBInformationManager.AddQuickInformation(
-                new TextObject("{=seljuk_starter_notif}The Grand Seljuk Gazi Starter Pack has been credited to your inventory! (+2,500 Dinars, Noble Turkoman Horse, Composite Bow, and Armor Piercing Arrows)"));
-        }
-
-        private void GrantStarterPackIfNewGame()
-        {
-            if (_isStarterPackGranted || Hero.MainHero == null) return;
+            if (!_isNewGamePending || _isStarterPackGranted) return;
 
             try
             {
-                // MobileParty.MainParty should already exist by OnSessionLaunchedEvent, but if it
-                // doesn't for some reason, don't mark the pack granted - retry next session-launch
-                // instead of permanently losing the horse/bow/arrows (only the gold, which needs
-                // no party, would have been granted).
+                if (Mission.Current != null || Hero.MainHero == null) return;
                 if (MobileParty.MainParty?.ItemRoster == null) return;
 
-                // 1. Grant +2,500 Gold Dinars
-                Hero.MainHero.Gold += 2500;
+                Hero.MainHero.Gold += 1250;
 
-                // 2. Grant Asil Türkmen Savaş Atı
                 var horseItem = Game.Current.ObjectManager.GetObject<ItemObject>("seljuk_turkoman_horse");
                 if (horseItem != null)
                 {
                     MobileParty.MainParty.ItemRoster.AddToCounts(horseItem, 1);
                 }
 
-                // 3. Grant Danişmend Kompozit Yayı
                 var bowItem = Game.Current.ObjectManager.GetObject<ItemObject>("seljuk_danismend_bow");
                 if (bowItem != null)
                 {
                     MobileParty.MainParty.ItemRoster.AddToCounts(bowItem, 1);
                 }
 
-                // 4. Grant Zırh Delen Temren Okları
                 var arrowItem = Game.Current.ObjectManager.GetObject<ItemObject>("seljuk_heavy_arrows");
                 if (arrowItem != null)
                 {
                     MobileParty.MainParty.ItemRoster.AddToCounts(arrowItem, 1);
                 }
 
-                _notificationPending = true;
+                MBInformationManager.AddQuickInformation(
+                    new TextObject("{=seljuk_starter_notif}The Grand Seljuk Gazi Starter Pack has been credited to your inventory! (+1,250 Dinars, Noble Turkoman Horse, Composite Bow, and Armor Piercing Arrows)"));
+
                 _isStarterPackGranted = true;
+                _isNewGamePending = false;
             }
             catch (Exception) { }
         }
