@@ -1183,5 +1183,21 @@
     <string id="byz_w_v_nauplion" text="瑙普利翁" />
     <string id="byz_w_v_samos" text="萨摩斯" />
     <string id="byz_w_v_tenedos" text="特内多斯" />
+    <string id="krv_gt_name_seljuk" text="塞尔柱人" />
+    <string id="krv_gt_desc_seljuk" text="大塞尔柱突厥人最初是来自中亚的乌古斯草原战士,随后席卷伊斯兰世界,在曼齐克特之战中击溃拜占庭军队,建立起一个从呼罗珊延伸到安纳托利亚的帝国。他们的苏丹通过突厥蛮骑兵与受波斯教育的维齐尔之间的伙伴关系进行统治,将草原骑兵传统与尼扎米耶的行政精巧融为一体。" />
+    <string id="krv_gt_name_empire" text="拜占庭人" />
+    <string id="krv_gt_desc_empire" text="拜占庭人是罗马在东方讲希腊语的继承者,一千多年来一直从君士坦丁堡进行统治。尽管曼齐克特之战后塞尔柱人征服安纳托利亚使其元气大伤,他们仍凭借纪律严明的军区部队、瓦兰吉卫队等精锐近卫团,以及历经数十个入侵民族而不倒的精密官僚体系顽强延续下来。" />
+    <string id="krv_gt_name_aserai" text="阿拔斯人" />
+    <string id="krv_gt_desc_aserai" text="阿拔斯人是巴格达的阿拉伯哈里发王朝,自推翻倭马亚王朝以来一直是伊斯兰世界名义上的领袖。尽管真正的军事力量如今掌握在保护他们的突厥古拉姆卫队和大塞尔柱苏丹手中,哈里发仍保有巨大的宗教权威,他们的宫廷依然是连接地中海与印度洋的法律、学术与贸易中心。" />
+    <string id="krv_gt_name_khuzait" text="喀喇汗人" />
+    <string id="krv_gt_desc_khuzait" text="喀喇汗人是伟大的突厥草原民族,祖先是曾服务于突厥汗国的葛逻禄和样磨部落。自萨图克·布格拉汗时期皈依伊斯兰教后,他们建立了一个横跨撒马尔罕与喀什之间的定居汗国,但仍是令人生畏的骑射手,与大塞尔柱苏丹争夺河中地区与呼罗珊。" />
+    <string id="krv_gt_name_sturgia" text="格鲁吉亚人" />
+    <string id="krv_gt_desc_sturgia" text="格鲁吉亚人是高加索地区信奉基督教的山地民族,由巴格拉季昂尼王朝从第比利斯进行统治。四面受敌的他们锻造出了一种坚韧的战斗文化,拥有阿兹瑙里轻骑兵和埃里斯塔维贵族长枪骑兵,决心抵御来自南方的塞尔柱袭击者,守卫他们的高地王国。" />
+    <string id="krv_gt_name_battania" text="亚美尼亚人" />
+    <string id="krv_gt_desc_battania" text="奇里乞亚的亚美尼亚人是脱离拜占庭统治、在托罗斯山脉建立公国的山地领主。他们是古老亚美尼亚贵族的后裔,其阿扎特骑兵和纳哈拉尔军阀以一种松散、常有纷争的联盟形式据守着自己的城堡,但一旦有外来势力觊觎他们的山地庇护所,便会迅速联合起来。" />
+    <string id="krv_gt_name_vlandia" text="十字军" />
+    <string id="krv_gt_desc_vlandia" text="十字军是在第一次十字军东征中东进、于1098年建立安条克公国与埃德萨伯国的法兰克与诺曼领主。身披锁甲的骑士与图科波尔骑射手共同守卫着大塞尔柱帝国西部边境上的这片新领地——这是一支无论围攻要塞还是野战冲锋都游刃有余的尚武贵族。" />
+    <string id="krkh_bonus_construction" text="塔姆加赤汗的营建" />
+    <string id="crus_bonus_construction" text="法兰克筑城术" />
 </strings>
 </base>

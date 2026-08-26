@@ -1183,5 +1183,21 @@
     <string id="byz_w_v_nauplion" text="Nauplia" />
     <string id="byz_w_v_samos" text="Samos" />
     <string id="byz_w_v_tenedos" text="Tenedos" />
+    <string id="krv_gt_name_seljuk" text="Selyucidas" />
+    <string id="krv_gt_desc_seljuk" text="Los grandes turcos selyucidas comenzaron como guerreros esteparios oguz de Asia Central antes de irrumpir en el mundo islamico, derrotando al ejercito bizantino en Manzikert y forjando un imperio que se extendia desde Jorasan hasta Anatolia. Sus sultanes gobiernan mediante una alianza entre jinetes turcomanos y visires de formacion persa, combinando la tradicion de caballeria esteparia con el refinamiento administrativo de la Nizamiyya." />
+    <string id="krv_gt_name_empire" text="Bizantinos" />
+    <string id="krv_gt_desc_empire" text="Los bizantinos son los herederos de habla griega de Roma en Oriente, gobernando desde Constantinopla durante mas de mil anos. Aunque golpeados por la conquista selyucida de Anatolia tras Manzikert, perduran gracias a ejercitos tematicos disciplinados, regimientos de elite como la Guardia Varega, y una burocracia sofisticada que ha sobrevivido a una docena de pueblos invasores antes que este." />
+    <string id="krv_gt_name_aserai" text="Abasies" />
+    <string id="krv_gt_desc_aserai" text="Los abasies son la dinastia califal arabe de Bagdad, cabezas nominales del mundo islamico desde el derrocamiento de los omeyas. Aunque el poder militar real recae ahora en los guardias gulam turcos y en los sultanes selyucidas que los protegen, los califas conservan una inmensa autoridad religiosa, y su corte sigue siendo un centro de derecho, erudicion y comercio que une el Mediterraneo con el Oceano Indico." />
+    <string id="krv_gt_name_khuzait" text="Karajanidas" />
+    <string id="krv_gt_desc_khuzait" text="Los karajanidas son un gran pueblo estepario turco, descendiente de las tribus karluk y yagma que antano sirvieron al kaganato gokturk. Tras convertirse al islam bajo Satuq Bugra Kan, han construido un kanato sedentario dividido entre Samarcanda y Kashgar, aunque siguen siendo formidables arqueros montados que disputan la Transoxiana y Jorasan a los sultanes selyucidas." />
+    <string id="krv_gt_name_sturgia" text="Georgianos" />
+    <string id="krv_gt_desc_sturgia" text="Los georgianos son un pueblo cristiano montanes del Caucaso, gobernado desde Tiflis por la dinastia Bagrationi. Rodeados de vecinos hostiles por todos lados, han forjado una resistente cultura guerrera de caballeria ligera aznauri y lanceros nobles eristavi, decididos a defender su reino montanoso frente a las incursiones selyucidas desde el sur." />
+    <string id="krv_gt_name_battania" text="Armenios" />
+    <string id="krv_gt_desc_battania" text="Los armenios de Cilicia son senores montaneses que rompieron con el dominio bizantino para forjar un principado en la cordillera del Tauro. Descendientes de la vieja nobleza armenia, sus jinetes azat y sus senores de la guerra najarar mantienen sus fortalezas en una confederacion laxa y a menudo pendenciera, pero se unen de buen grado ante cualquier pretension externa sobre su refugio montanoso." />
+    <string id="krv_gt_name_vlandia" text="Cruzados" />
+    <string id="krv_gt_desc_vlandia" text="Los cruzados son senores francos y normandos que marcharon hacia oriente en la Primera Cruzada y forjaron el Principado de Antioquia y el Condado de Edesa en 1098. Caballeros con cota de malla y arqueros montados turcopolos mantienen su nuevo dominio en la frontera occidental del Gran Imperio selyucida, una nobleza guerrera tan comoda asediando una fortaleza como cargando en batalla abierta." />
+    <string id="krkh_bonus_construction" text="Las Obras de Tamgach Kan" />
+    <string id="crus_bonus_construction" text="Construccion de Castillos Francos" />
 </strings>
 </base>

@@ -74,6 +74,8 @@ namespace SeljukEmpire.Culture
         private const string SeljukCultureId = "seljuk";
         private const string AbbasidCultureId = "aserai";
         private const string GeorgianCultureId = "sturgia";
+        private const string KaraKhanidCultureId = "khuzait";
+        private const string ArmenianCultureId = "battania";
 
         public override int GetCharacterWage(CharacterObject character)
         {
@@ -84,10 +86,13 @@ namespace SeljukEmpire.Culture
             }
 
             string cultureId = character.Culture.StringId;
-            if (cultureId == SeljukCultureId || cultureId == AbbasidCultureId || cultureId == GeorgianCultureId)
+            if (cultureId == SeljukCultureId || cultureId == AbbasidCultureId || cultureId == GeorgianCultureId
+                || cultureId == KaraKhanidCultureId || cultureId == ArmenianCultureId)
             {
                 // -10% wage for mounted troops of Seljuk (Iqta cavalry economy), Abbasid (ghulam
-                // cavalry economy), and Georgian (Aznauri/Didebuli/Eristavi noble cavalry economy)
+                // cavalry economy), Georgian (Aznauri/Didebuli/Eristavi noble cavalry economy),
+                // Kara-Khanid (steppe horse-warrior economy), and Armenian (azat land-holding
+                // noble cavalry economy)
                 return Math.Max(1, (int)Math.Round(baseWage * 0.90f));
             }
             return baseWage;
@@ -99,6 +104,8 @@ namespace SeljukEmpire.Culture
         private const string SeljukCultureId = "seljuk";
         private const string AbbasidCultureId = "aserai";
         private const string GeorgianCultureId = "sturgia";
+        private const string KaraKhanidCultureId = "khuzait";
+        private const string CrusaderCultureId = "vlandia";
 
         public override ExplainedNumber CalculateDailyConstructionPower(Town town, bool includeDescriptions = false)
         {
@@ -126,6 +133,18 @@ namespace SeljukEmpire.Culture
                 // own fortress and church program, 1089-1125 - this mod's own Georgian era)
                 result.AddFactor(0.10f, new TextObject("{=geo_bonus_construction}David the Builder's Works"));
             }
+            else if (cultureId == KaraKhanidCultureId)
+            {
+                // +10% build speed for Kara-Khanid town/castle construction (Ibrahim Tamgach Khan's
+                // real madrasa and hospital building program in Samarkand)
+                result.AddFactor(0.10f, new TextObject("{=krkh_bonus_construction}Tamgach Khan's Works"));
+            }
+            else if (cultureId == CrusaderCultureId)
+            {
+                // +10% build speed for Crusader town/castle construction (the Crusader States'
+                // famed European fortification-building tradition, as at Krak des Chevaliers)
+                result.AddFactor(0.10f, new TextObject("{=crus_bonus_construction}Frankish Castle-Building"));
+            }
 
             return result;
         }
@@ -135,6 +154,8 @@ namespace SeljukEmpire.Culture
     {
         private const string SeljukCultureId = "seljuk";
         private const string ByzantineCultureId = "empire";
+        private const string KaraKhanidCultureId = "khuzait";
+        private const string CrusaderCultureId = "vlandia";
 
         public override float GetConstructionProgressPerHour(SiegeEngineType type, SiegeEvent siegeEvent, ISiegeEventSide side)
         {
@@ -155,17 +176,18 @@ namespace SeljukEmpire.Culture
                 return baseProgress;
             }
 
-            if (sideCulture.StringId == SeljukCultureId)
+            if (sideCulture.StringId == SeljukCultureId || sideCulture.StringId == KaraKhanidCultureId)
             {
-                // -15% siege engine construction speed for the Seljuk-culture side (attacker or
-                // defender) of the siege -- weak siege engineering tradition
+                // -15% siege engine construction speed for the Seljuk- or Kara-Khanid-culture side
+                // (attacker or defender) of the siege -- both are steppe horse-warrior traditions
+                // with a historically weak siege engineering pedigree
                 return baseProgress * 0.85f;
             }
-            if (sideCulture.StringId == ByzantineCultureId)
+            if (sideCulture.StringId == ByzantineCultureId || sideCulture.StringId == CrusaderCultureId)
             {
-                // +15% siege engine construction speed for the Byzantine-culture side -- the
-                // historically well-documented Byzantine engineering tradition (Greek fire,
-                // advanced siege craft), a genuine bonus rather than Seljuk's debuff
+                // +15% siege engine construction speed for the Byzantine- or Crusader-culture side
+                // -- the historically well-documented Byzantine engineering tradition (Greek fire,
+                // advanced siege craft) and the Crusaders' own imported European siege expertise
                 return baseProgress * 1.15f;
             }
 
@@ -178,6 +200,9 @@ namespace SeljukEmpire.Culture
         private const string SeljukCultureId = "seljuk";
         private const string ByzantineCultureId = "empire";
         private const string AbbasidCultureId = "aserai";
+        private const string KaraKhanidCultureId = "khuzait";
+        private const string CrusaderCultureId = "vlandia";
+        private const string ArmenianCultureId = "battania";
 
         public override float GetTradePenaltyFactor(MobileParty party)
         {
@@ -195,22 +220,21 @@ namespace SeljukEmpire.Culture
             }
 
             string cultureId = owner.Clan.Culture.StringId;
-            if (cultureId == SeljukCultureId)
+            if (cultureId == SeljukCultureId || cultureId == AbbasidCultureId || cultureId == KaraKhanidCultureId)
             {
-                // +15% caravan trade profit for Seljuk-culture-owned caravans (AI and player)
+                // +15% caravan trade profit for Seljuk-, Abbasid-, and Kara-Khanid-culture-owned
+                // caravans (AI and player) -- all three sit astride the historical Silk Road, the
+                // wealthiest trade network of this era, from Baghdad through Khorasan to Samarkand
                 return baseFactor * 1.15f;
             }
-            if (cultureId == ByzantineCultureId)
+            if (cultureId == ByzantineCultureId || cultureId == CrusaderCultureId || cultureId == ArmenianCultureId)
             {
-                // +10% caravan trade profit for Byzantine-culture-owned caravans (Constantinople's
-                // sophisticated tax and mercantile bureaucracy)
+                // +10% caravan trade profit for Byzantine-, Crusader-, and Armenian-culture-owned
+                // caravans -- Constantinople's mercantile bureaucracy, the Italian merchant-republic
+                // trade routes underpinning the Crusader states' coastal economy, and Cilician
+                // Armenia's well-documented medieval merchant network, all real but a notch below
+                // the Silk Road's own historical wealth
                 return baseFactor * 1.10f;
-            }
-            if (cultureId == AbbasidCultureId)
-            {
-                // +15% caravan trade profit for Abbasid-culture-owned caravans (Baghdad's position
-                // astride the Silk Road, historically the wealthiest trade hub of this era)
-                return baseFactor * 1.15f;
             }
 
             return baseFactor;
