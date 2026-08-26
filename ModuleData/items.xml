@@ -7,7 +7,7 @@
   <!-- Sultan Alp Arslan Lameller Plaka Zırhı -->
   <Item id="seljuk_sultan_armor" name="{=item_seljuk_armor_name}Imperial Gilded Lamellar Armor" mesh="khuzait_heavy_armor" culture="Culture.khuzait" weight="16.5" value="28000" appearance="1" is_merchandise="false" Type="BodyArmor">
     <ItemComponent>
-      <Armor body_armor="60" leg_armor="25" arm_armor="24" covers_body="true" has_gender_variations="true" material_type="Plate" modifier_group="plate" />
+      <Armor body_armor="57" leg_armor="25" arm_armor="24" covers_body="true" has_gender_variations="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
     <Flags UseTeamColor="true" />
   </Item>
@@ -50,7 +50,7 @@
   <!-- Sultan Şeref Miğferi (Tüylü Tolga) -->
   <Item id="seljuk_royal_feather_helm" name="{=item_seljuk_royal_helm}Sultan Royal Feathered Helmet" mesh="khuzait_lord_helmet_a" culture="Culture.khuzait" weight="2.7" value="19000" appearance="1" is_merchandise="false" Type="HeadArmor">
     <ItemComponent>
-      <Armor head_armor="58" covers_head="true" material_type="Plate" modifier_group="plate" />
+      <Armor head_armor="55" covers_head="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
@@ -83,14 +83,14 @@
   <!-- Gazi Şam Çeliği Kolçakları -->
   <Item id="seljuk_damascene_bracers" name="{=item_seljuk_bracers}Ghazi Damascene Steel Bracers" mesh="khuzait_heavy_armor_bracer" culture="Culture.khuzait" weight="1.8" value="7500" appearance="1" is_merchandise="true" Type="HandArmor">
     <ItemComponent>
-      <Armor arm_armor="34" material_type="Plate" modifier_group="plate" />
+      <Armor arm_armor="28" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Sahtiyan Selçuklu Süvari Çizmeleri -->
   <Item id="seljuk_cavalry_boots" name="{=item_seljuk_boots}Fine Seljuk Cavalry Boots" mesh="khuzait_leather_boots" culture="Culture.khuzait" weight="2.2" value="8200" appearance="1" is_merchandise="true" Type="LegArmor">
     <ItemComponent>
-      <Armor leg_armor="32" material_type="Leather" modifier_group="leather" />
+      <Armor leg_armor="26" material_type="Leather" modifier_group="leather" />
     </ItemComponent>
   </Item>
 
