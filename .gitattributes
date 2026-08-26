@@ -1,0 +1,6 @@
+# Shell scripts must keep LF line endings regardless of core.autocrlf -
+# a CRLF shebang line ("#!/bin/sh\r") fails to resolve on checkout, which
+# would silently break the pre-commit hook and its installers on any
+# Windows clone with the common core.autocrlf=true setting.
+*.sh text eol=lf
+.githooks/* text eol=lf

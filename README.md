@@ -39,12 +39,41 @@ python tools/verify_mod.py
 
 It checks XML validity, that every content file is registered in `SubModule.xml`, that no
 id is defined twice across the mod's own files, that every `{=key}` used anywhere has a
-matching localization string in both `strings.xml` and `TR/strings.xml`, and — when a local
-Bannerlord install is found (or passed via `--game-path`) — that every equipped item id and
-troop upgrade target actually exists, and that renamed Native characters keep a consistent
-gender flag. Run with `--quick` to skip the game-install-dependent checks, or `--json` for
-machine-readable output. Every one of these checks has caught a real bug during this mod's
-development at least once.
+matching localization string in both `strings.xml` and `TR/strings.xml` (and, as a warning,
+in the mod's other 6 shipped languages — see "Keeping all 8 languages in sync" below), and —
+when a local Bannerlord install is found (or passed via `--game-path`) — that every equipped
+item id and troop upgrade target actually exists, and that renamed Native characters keep a
+consistent gender flag. Run with `--quick` to skip the game-install-dependent checks, or
+`--json` for machine-readable output. Every one of these checks has caught a real bug during
+this mod's development at least once.
+
+### Automatic pre-commit check
+
+Run once per clone to make `verify_mod.py` run automatically before every commit, blocking
+the commit if it finds an ERROR-level issue:
+
+```bash
+tools/install-hooks.sh          # Git Bash / macOS / Linux
+```
+```powershell
+tools\install-hooks.ps1         # PowerShell
+```
+
+This points git at the tracked `.githooks/` directory (`git config core.hooksPath .githooks`)
+— `.git/hooks/` itself is never committed, so every clone needs this one-time step. To bypass
+deliberately for a single commit (not recommended), use `git commit --no-verify`.
+
+### Keeping all 8 languages in sync
+
+The mod ships full localization in 8 languages, but only `strings.xml` (EN) and
+`TR/strings.xml` are treated as required — English is what an unset or mistranslated key
+falls back to at runtime, and Turkish is this mod's original authoring language, so those two
+fail the check with an ERROR. The other 6 (`DE`/`FR`/`ES`/`RU`/`AR`/`CN`) are checked too, but
+as a WARN, listing exactly which languages a newly-added `{=key}` hasn't reached yet — visible
+on every run instead of silently drifting for months, which is exactly how this mod once
+shipped with those 6 languages frozen at 228 of 892 keys while EN/TR kept growing untranslated
+underneath them. Translating a new key into all 6 languages in a follow-up commit is a normal
+workflow and this check will never block it; it only makes sure the gap can't go unnoticed.
 
 ### Save compatibility (id order)
 
@@ -74,5 +103,6 @@ tradeoff, update the baseline knowingly.
 
 - `ModuleData/` — troops, heroes, kingdoms, factions, settlements, items, localization, etc.
 - `Source/SeljukEmpire/` — the mod's C# gameplay behaviors.
-- `tools/` — `verify_mod.py`, the content integrity checker (see above).
+- `tools/` — `verify_mod.py`, the content integrity checker, and `install-hooks.sh`/`.ps1` (see above).
+- `.githooks/` — the tracked `pre-commit` hook that `install-hooks.sh`/`.ps1` wires up.
 - `bin/` — prebuilt `SeljukTactics.dll` (already included, so building from source is optional for players).
