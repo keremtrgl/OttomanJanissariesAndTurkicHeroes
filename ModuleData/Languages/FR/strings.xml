@@ -262,6 +262,8 @@
     <string id="seljuk_culture_name" text="Seljuk" />
     <string id="seljuk_bonus_cavalry_wage" text="Seljuk Iqta Cavalry Economy" />
     <string id="seljuk_bonus_construction" text="Nizamiye Public Works" />
+    <string id="abb_bonus_construction" text="Maison de la Sagesse" />
+    <string id="geo_bonus_construction" text="Les Œuvres de David le Bâtisseur" />
     <string id="seljuk_debuff_siege_engineering" text="Weak Siege Engineering Tradition" />
     <string id="seljuk_v_palu" text="Palu" />
     <string id="seljuk_v_keban" text="Keban" />
@@ -426,6 +428,12 @@
     <string id="byz_house_kekaumenos" text="House Kekaumenos" />
     <string id="byz_ln_romanos_diogenes" text="Romanos Diogenes" />
     <string id="byz_culture_name" text="Byzantine" />
+    <string id="byz_tactic_last_stand" text="[Commandement tactique byzantin] Défense thématique des hauteurs face à une force supérieure !" />
+    <string id="byz_tactic_hammer_anvil" text="[Commandement tactique byzantin] Tactique du marteau et de l'enclume des cataphractaires déployée !" />
+    <string id="byz_tactic_shield_wall" text="[Commandement tactique byzantin] Mur de boucliers des Tagmata formé au goulot d'étranglement !" />
+    <string id="byz_tactic_crossfire" text="[Commandement tactique byzantin] Formation de tir croisé des Toxotai engagée !" />
+    <string id="byz_tactic_lines_broken" text="[Cataphractaires] La ligne ennemie a perdu sa cohésion ! L'encerclement à double aile commence !" />
+    <string id="byz_tactic_full_assault" text="[Avance des Tagmata] Marteau et enclume achevés ! Toutes les lignes avancent !" />
     <string id="abb_culture_name" text="Abbasid" />
     <string id="geo_culture_name" text="Georgian" />
     <string id="byz2_t_recruit" text="Byzantine Recruit" />
@@ -750,6 +758,26 @@
     <string id="geo_v_akhaltsikhe" text="Akhaltsikhe" />
     <string id="geo_v_khertvisi" text="Khertvisi" />
     <string id="geo_t_recruit" text="Georgian Levy" />
+    <string id="geo2_t_recruit" text="Milice géorgienne" />
+    <string id="geo2_t_msakhuri" text="Soldat Msakhuri" />
+    <string id="geo2_t_mtiuli_hunter" text="Chasseur Mtiuli" />
+    <string id="geo2_t_aznauri_squire" text="Écuyer Aznauri" />
+    <string id="geo2_t_didebuli_squire" text="Écuyer Didebuli" />
+    <string id="geo2_t_kartli_msakhuri" text="Msakhuri de Kartli" />
+    <string id="geo2_t_mtiuli_archer" text="Archer Mtiuli" />
+    <string id="geo2_t_aznauri_horseman" text="Cavalier Aznauri" />
+    <string id="geo2_t_didebuli_horseman" text="Cavalier Didebuli" />
+    <string id="geo2_t_sepe_msakhuri" text="Sepe Msakhuri" />
+    <string id="geo2_t_mtiuli_veteran_archer" text="Archer vétéran Mtiuli" />
+    <string id="geo2_t_aznauri_warrior" text="Guerrier Aznauri" />
+    <string id="geo2_t_eristavi_lancer" text="Lancier Eristavi" />
+    <string id="geo2_t_khevsur_guard" text="Garde Khevsour" />
+    <string id="geo2_t_svan_marksman" text="Tireur d'élite Svan" />
+    <string id="geo2_t_alan_horseguard" text="Garde à cheval Alain" />
+    <string id="geo2_t_eristavi_heavy_lancer" text="Lancier lourd Eristavi" />
+    <string id="geo2_t_khevsur_sworn_guard" text="Garde jurée Khevsour" />
+    <string id="geo2_t_svan_master_archer" text="Archer maître Svan" />
+    <string id="geo2_t_monaspa" text="Garde royal Monaspa" />
     <string id="geo_t_aznauri_warrior" text="Aznauri Warrior" />
     <string id="geo_t_msakhuri" text="Msakhuri Soldier" />
     <string id="geo_t_didebuli_spear" text="Didebuli Spearman" />

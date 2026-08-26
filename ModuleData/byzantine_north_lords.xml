@@ -8,7 +8,7 @@
   <NPCCharacter id="lord_1_1" name="{=byz_n_ln_georgios_palaiologos}Georgios Palaiologos" />
   <NPCCharacter id="lord_1_3" name="{=byz_n_ln_konstantinos_angelos}Konstantinos Angelos" />
   <NPCCharacter id="lord_1_5" name="{=byz_n_ln_ioannes_kantakouzenos}Ioannes Kantakouzenos" />
-  <NPCCharacter id="lord_1_20" name="{=byz_n_ln_bardas_phokas}Bardas Phokas" />
+  <NPCCharacter id="lord_1_20" name="{=byz_n_ln_bardas_phokas}Bardas Phokas" is_female="false" />
   <NPCCharacter id="lord_1_50" name="{=byz_n_ln_romanos_skleros}Romanos Skleros" />
   <NPCCharacter id="lord_1_51" name="{=byz_n_ln_leon_kourkouas}Leon Kourkouas" />
   <NPCCharacter id="lord_1_58" name="{=byz_n_ln_michael_xiphilinos}Michael Xiphilinos" />

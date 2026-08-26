@@ -163,6 +163,8 @@
     <string id="seljuk_culture_desc" text="Büyük Selçuklu Devleti'nin ve Anadolu uç beyliklerinin kurduğu Türkmen konfederasyonu. İkta sistemiyle beslenen atlı ordular, Nizamiye medreseleri ve İpek Yolu kervanlarıyla zenginleşen şehirler bu kültürün temelini oluşturur." />
     <string id="seljuk_bonus_cavalry_wage" text="Selçuklu İkta Süvari Ekonomisi" />
     <string id="seljuk_bonus_construction" text="Nizamiye İmar Teşkilatı" />
+    <string id="abb_bonus_construction" text="Beytu'l-Hikme" />
+    <string id="geo_bonus_construction" text="Yapici David'in Eserleri" />
     <string id="seljuk_debuff_siege_engineering" text="Zayıf Kuşatma Mühendisliği" />
     <string id="seljuk_ceri_name" text="Çeri Yayak" />
     <string id="seljuk_emir_muhafizi_name" text="Emîr Muhafızı" />
@@ -401,6 +403,12 @@
     <string id="byz_house_kekaumenos" text="Kekavmenos Hanedanı" />
     <string id="byz_ln_romanos_diogenes" text="Romanos Diogenes" />
     <string id="byz_culture_name" text="Bizans" />
+    <string id="byz_tactic_last_stand" text="[Bizans Taktik Komutanligi] Ustun Dusmana Karsi Temali Yuksek Tepe Savunmasi!" />
+    <string id="byz_tactic_hammer_anvil" text="[Bizans Taktik Komutanligi] Kataphraktoi Cekic ve Ors Taktigi Devrede!" />
+    <string id="byz_tactic_shield_wall" text="[Bizans Taktik Komutanligi] Tagma Kalkan Duvari Bogazda Kuruldu!" />
+    <string id="byz_tactic_crossfire" text="[Bizans Taktik Komutanligi] Toxotai Ates Cemberi Duzeni Alindi!" />
+    <string id="byz_tactic_lines_broken" text="[Kataphraktoi] Dusman Hatti Bozuldu! Cift Kanat Kusatmasi Basliyor!" />
+    <string id="byz_tactic_full_assault" text="[Tagma Ilerleyisi] Cekic ve Ors Tamamlandi! Tum Hatlar Ileri!" />
     <string id="abb_culture_name" text="Abbasi" />
     <string id="geo_culture_name" text="Gürcü" />
     <string id="byz2_t_recruit" text="Bizans Acemisi" />
@@ -725,6 +733,26 @@
     <string id="geo_v_akhaltsikhe" text="Ahaltsihe" />
     <string id="geo_v_khertvisi" text="Hertvisi" />
     <string id="geo_t_recruit" text="Glehi Leventi" />
+    <string id="geo2_t_recruit" text="Gurcu Milisi" />
+    <string id="geo2_t_msakhuri" text="Msakhuri Askeri" />
+    <string id="geo2_t_mtiuli_hunter" text="Mtiuli Avcisi" />
+    <string id="geo2_t_aznauri_squire" text="Aznauri Silahtari" />
+    <string id="geo2_t_didebuli_squire" text="Didebuli Silahtari" />
+    <string id="geo2_t_kartli_msakhuri" text="Kartli Msakhurisi" />
+    <string id="geo2_t_mtiuli_archer" text="Mtiuli Okcusu" />
+    <string id="geo2_t_aznauri_horseman" text="Aznauri Atlisi" />
+    <string id="geo2_t_didebuli_horseman" text="Didebuli Atlisi" />
+    <string id="geo2_t_sepe_msakhuri" text="Sepe Msakhurisi" />
+    <string id="geo2_t_mtiuli_veteran_archer" text="Mtiuli Usta Okcusu" />
+    <string id="geo2_t_aznauri_warrior" text="Aznauri Savascisi" />
+    <string id="geo2_t_eristavi_lancer" text="Eristavi Mizrakcisi" />
+    <string id="geo2_t_khevsur_guard" text="Khevsur Muhafizi" />
+    <string id="geo2_t_svan_marksman" text="Svan Nisancisi" />
+    <string id="geo2_t_alan_horseguard" text="Alan Atli Muhafizi" />
+    <string id="geo2_t_eristavi_heavy_lancer" text="Eristavi Agir Mizrakcisi" />
+    <string id="geo2_t_khevsur_sworn_guard" text="Khevsur Yeminli Muhafizi" />
+    <string id="geo2_t_svan_master_archer" text="Svan Usta Okcusu" />
+    <string id="geo2_t_monaspa" text="Monaspa Kraliyet Muhafizi" />
     <string id="geo_t_aznauri_warrior" text="Aznauri Savaşçısı" />
     <string id="geo_t_msakhuri" text="Msahuri Eri" />
     <string id="geo_t_didebuli_spear" text="Didebuli Mızrakçısı" />
