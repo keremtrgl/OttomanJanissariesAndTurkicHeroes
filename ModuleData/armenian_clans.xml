@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- Cilician Armenian (Culture.battania) noble houses renamed with real historical figures -
+       the Rubenid principality was founded c. 1080 when Ruben I revolted against Byzantine rule
+       in the Taurus mountains, exactly the same "attribute-only partial-XML-override" pattern
+       already used for Byzantine/Abbasid/Georgian/Crusader clans. Tier/owner/settlement/banner
+       untouched, only name= changes. -->
+  <!-- 1. House of Rubenid - Ruben I, founder of the Armenian principality of Cilicia (r. c.1080-1095).
+       banner_key matches the kingdom's own real Rubenid heraldry (red field, gold lion accent) -
+       see kingdoms.xml's battania entry for the heraldry source. -->
+  <Faction id="clan_battania_1" name="{=arm_cn_rubenid}House of Rubenid"
+           banner_key="11.48.48.1536.1536.764.764.1.0.0.460.7.7.457.457.764.764.1.0.0" />
+  <!-- 2. House of Thoros - Thoros I, Prince of Armenian Cilicia (r. 1100-1129/30), Constantine I's son -->
+  <Faction id="clan_battania_2" name="{=arm_cn_thoros}House of Thoros" />
+  <!-- 3. House of Constantine - Constantine I, Prince of Armenian Cilicia (r. 1095-1100), Ruben I's successor -->
+  <Faction id="clan_battania_3" name="{=arm_cn_constantine}House of Constantine" />
+  <!-- 4. House of Kogh Vasil - Kogh Vasil ("Vasil the Robber"), independent Armenian lord of Kesoun and Raban -->
+  <Faction id="clan_battania_4" name="{=arm_cn_koghvasil}House of Kogh Vasil" />
+  <!-- 5. House of Vasil Dgha - Vasil Dgha, adopted son and successor of Kogh Vasil from 1112 -->
+  <Faction id="clan_battania_5" name="{=arm_cn_vasildgha}House of Vasil Dgha" />
+  <!-- 6. House of Lampron - Oshin of Lampron, founder of the rival Hethumid dynasty, captured Lampron fortress in 1072 -->
+  <Faction id="clan_battania_6" name="{=arm_cn_lampron}House of Lampron" />
+  <!-- 7. Gabrielid House - Gabriel of Melitene, Armenian lord of Melitene, father of Morphia (see
+       crusader_lords.xml - named "Gabrielid" rather than "House of Melitene" to avoid duplicating
+       Crusader States' own clan name for the same family). -->
+  <Faction id="clan_battania_7" name="{=arm_cn_gabriel}Gabrielid House" />
+</Factions>

@@ -984,5 +984,50 @@
     <string id="crus2_t_hospitaller_brother" text="Hospitalier Yeminli Kardesi" />
     <string id="crus2_t_arbalester_guard" text="Seckin Arbalist Muhafizi" />
     <string id="crus2_t_templar_knight" text="Tapinak Sovalyesi" />
+    <string id="arm_faction_name" text="Kilikya Ermenistani" />
+    <string id="arm_faction_short" text="Ermeniler" />
+    <string id="arm_faction_title" text="Kilikya Ermeni Prensligi" />
+    <string id="arm_faction_ruler" text="Prens" />
+    <string id="arm_faction_desc" text="Ruben I'in 1080 civarinda Toros Daglari'nda Bizans egemenliginden koparak kurdugu bir Ermeni dag prensligi. Lordlari kalelerini gevsek, sik sik cekisen bir konfederasyon halinde tutar, ama Kilikya uzerinde Bizans, Hacli prenslikleri veya Buyuk Selcuklu Devleti'nden gelen dis iddialara karsi kolayca birlesirler." />
+    <string id="arm_culture_name" text="Ermeni" />
+    <string id="arm_cn_rubenid" text="Rubenli Hanedani" />
+    <string id="arm_cn_thoros" text="Toros Hanedani" />
+    <string id="arm_cn_constantine" text="Konstantin Hanedani" />
+    <string id="arm_cn_koghvasil" text="Kogh Vasil Hanedani" />
+    <string id="arm_cn_vasildgha" text="Vasil Dgha Hanedani" />
+    <string id="arm_cn_lampron" text="Lampron Hanedani" />
+    <string id="arm_cn_gabriel" text="Gabrieli Hanedani" />
+    <string id="arm_ln_ruben1" text="I. Ruben" />
+    <string id="arm_ln_thoros1" text="I. Toros" />
+    <string id="arm_ln_constantine1" text="I. Konstantin" />
+    <string id="arm_ln_koghvasil" text="Kogh Vasil" />
+    <string id="arm_ln_vasildgha" text="Vasil Dgha" />
+    <string id="arm_ln_oshin" text="Lampronlu Osin" />
+    <string id="arm_ln_gabriel" text="Melitene'li Gabriel" />
+    <string id="arm_s_vahka" text="Vahka" />
+    <string id="arm_s_sis" text="Sis" />
+    <string id="arm_s_anazarbus" text="Anazarbus" />
+    <string id="arm_s_kesoun" text="Kesun" />
+    <string id="arm_s_raban" text="Raban" />
+    <string id="arm2_t_recruit" text="Kilikya Milisi" />
+    <string id="arm2_t_azat" text="Azat Mizrakcisi" />
+    <string id="arm2_t_archer" text="Kilikya Okcusu" />
+    <string id="arm2_t_azat_horseman" text="Azat Atlisi" />
+    <string id="arm2_t_azat_lancer" text="Azat Mizrakli Atlisi" />
+    <string id="arm2_t_pikeman" text="Toros Mizrakcisi" />
+    <string id="arm2_t_taurus_bowman" text="Toros Okcusu" />
+    <string id="arm2_t_ayrudzi_rider" text="Ayrudzi Atlisi" />
+    <string id="arm2_t_ayrudzi_lancer" text="Ayrudzi Mizrakcisi" />
+    <string id="arm2_t_vanguard" text="Toros Oncusu" />
+    <string id="arm2_t_veteran_archer" text="Usta Okcu" />
+    <string id="arm2_t_ayrudzi_veteran" text="Ayrudzi Gazisi" />
+    <string id="arm2_t_azatagund_rider" text="Azatagund Atlisi" />
+    <string id="arm2_t_naxarar_footguard" text="Naxarar Muhafizi" />
+    <string id="arm2_t_sparapet_marksman" text="Sparapet'in Nisancisi" />
+    <string id="arm2_t_aspet_skirmisher" text="Aspet'in Akincisi" />
+    <string id="arm2_t_azatagund_elite" text="Azatagund Seckini" />
+    <string id="arm2_t_naxarar_sworn_shield" text="Naxarar Yeminli Kalkani" />
+    <string id="arm2_t_taurus_master_archer" text="Toros Usta Okcusu" />
+    <string id="arm2_t_sparapet_guard" text="Sparapet'in Ayrudzisi" />
 </strings>
 </base>

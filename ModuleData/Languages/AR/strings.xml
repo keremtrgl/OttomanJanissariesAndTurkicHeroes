@@ -1025,5 +1025,50 @@
     <string id="crus2_t_hospitaller_brother" text="أخ اسبتاري مقسم" />
     <string id="crus2_t_arbalester_guard" text="حرس النشّابين النخبة" />
     <string id="crus2_t_templar_knight" text="فارس هيكلي" />
+    <string id="arm_faction_name" text="أرمينيا الكيليكية" />
+    <string id="arm_faction_short" text="الأرمن" />
+    <string id="arm_faction_title" text="إمارة أرمينيا الكيليكية" />
+    <string id="arm_faction_ruler" text="الأمير" />
+    <string id="arm_faction_desc" text="إمارة جبلية أرمنية تأسست حوالي عام 1080 عندما انفصل روبين الأول عن الحكم البيزنطي في جبال طوروس. يحتفظ أمراؤها بقلاعهم في اتحاد فضفاض كثيراً ما يشوبه الخلاف، لكنهم يتحدون بسهولة ضد أي مطالبات خارجية بكيليكية." />
+    <string id="arm_culture_name" text="أرمني" />
+    <string id="arm_cn_rubenid" text="بيت روبينيد" />
+    <string id="arm_cn_thoros" text="بيت طوروس" />
+    <string id="arm_cn_constantine" text="بيت قسطنطين" />
+    <string id="arm_cn_koghvasil" text="بيت كوغ فاسيل" />
+    <string id="arm_cn_vasildgha" text="بيت فاسيل دغا" />
+    <string id="arm_cn_lampron" text="بيت لامبرون" />
+    <string id="arm_cn_gabriel" text="بيت الغبريالي" />
+    <string id="arm_ln_ruben1" text="روبين الأول" />
+    <string id="arm_ln_thoros1" text="طوروس الأول" />
+    <string id="arm_ln_constantine1" text="قسطنطين الأول" />
+    <string id="arm_ln_koghvasil" text="كوغ فاسيل" />
+    <string id="arm_ln_vasildgha" text="فاسيل دغا" />
+    <string id="arm_ln_oshin" text="أوشين اللامبروني" />
+    <string id="arm_ln_gabriel" text="غبريال الملطي" />
+    <string id="arm_s_vahka" text="فاهكا" />
+    <string id="arm_s_sis" text="سيس" />
+    <string id="arm_s_anazarbus" text="عنيزربة" />
+    <string id="arm_s_kesoun" text="كيسون" />
+    <string id="arm_s_raban" text="رعبان" />
+    <string id="arm2_t_recruit" text="مجند كيليكي" />
+    <string id="arm2_t_azat" text="رمّاح آزات" />
+    <string id="arm2_t_archer" text="رامي كيليكي" />
+    <string id="arm2_t_azat_horseman" text="فارس آزات" />
+    <string id="arm2_t_azat_lancer" text="رمّاح آزات الفارس" />
+    <string id="arm2_t_pikeman" text="رمّاح طوروس" />
+    <string id="arm2_t_taurus_bowman" text="رامي طوروس" />
+    <string id="arm2_t_ayrudzi_rider" text="فارس أيرودزي" />
+    <string id="arm2_t_ayrudzi_lancer" text="رمّاح أيرودزي" />
+    <string id="arm2_t_vanguard" text="طليعة طوروس" />
+    <string id="arm2_t_veteran_archer" text="رامي مخضرم" />
+    <string id="arm2_t_ayrudzi_veteran" text="أيرودزي مخضرم" />
+    <string id="arm2_t_azatagund_rider" text="فارس أزاتاغوند" />
+    <string id="arm2_t_naxarar_footguard" text="حرس ناخارار المشاة" />
+    <string id="arm2_t_sparapet_marksman" text="قناص السبارابيت" />
+    <string id="arm2_t_aspet_skirmisher" text="كشاف الأسبيت" />
+    <string id="arm2_t_azatagund_elite" text="نخبة أزاتاغوند" />
+    <string id="arm2_t_naxarar_sworn_shield" text="درع ناخارار الموثوق" />
+    <string id="arm2_t_taurus_master_archer" text="رامي طوروس البارع" />
+    <string id="arm2_t_sparapet_guard" text="أيرودزي السبارابيت" />
 </strings>
 </base>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settlements>
+  <!-- Battania's 5 towns renamed to real cities/fortresses held by the Rubenid Armenian
+       principality of Cilicia. town_B4/B5 use Kesoun/Raban specifically rather than a generic
+       Cilician city name because those are the actual real seats of the two lords who own these
+       two clans (Kogh Vasil and Vasil Dgha) - not a loose thematic pick. Ownership/culture
+       untouched - only name= changes, same pattern as crusader_settlements.xml. -->
+  <Settlement id="town_B1" name="{=arm_s_vahka}Vahka" />
+  <Settlement id="town_B2" name="{=arm_s_sis}Sis" />
+  <Settlement id="town_B3" name="{=arm_s_anazarbus}Anazarbus" />
+  <Settlement id="town_B4" name="{=arm_s_kesoun}Kesoun" />
+  <Settlement id="town_B5" name="{=arm_s_raban}Raban" />
+</Settlements>

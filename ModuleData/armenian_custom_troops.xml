@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Fully independent Cilician Armenian (Culture.battania) troop tree - new character ids, own
+       upgrade chain, own equipment loadouts, mirroring byzantine/abbasid/georgian/crusader_custom_
+       troops.xml exactly. Does NOT reuse or touch Native's battania_recruit/etc troops. Every
+       equipment item id below is a real, already-shipped Native item (verified against
+       SandBoxCore/ModuleData/items/*.xml's own <Item>/<CraftedItem> definitions).
+       Tier structure (6/11/16/21/26/31) and per-tier skill-point totals (90/195/360/508/676/835)
+       match this mod's own audited standard, reusing byzantine_custom_troops.xml's exact
+       per-branch skill numbers since the branch roles line up directly.
+       Historical grounding: Azat (Armenian middle/lower nobility, light troops), Naxarar
+       (the great feudal lords, heavy/elite troops), Ayrudzi ("horseman" - Armenian cavalry) and
+       Azatagund (the elite noble heavy cavalry - armored cataphracts fighting with lance,
+       longsword, and composite bow), Sparapet (commander-in-chief of the army) and Aspet
+       (commander of the cavalry) as elite unit/rank names. -->
+
+  <!-- Tier 1 (6): shared recruit -->
+  <NPCCharacter id="arm2_recruit" default_group="Infantry" level="6" name="{=arm2_t_recruit}Cilician Levy" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="10" />
+      <skill id="OneHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="10" />
+      <skill id="Throwing" value="10" />
+    </skills>
+    <!-- No Horse slot: this is Culture.battania's basic_troop candidate, kept unmounted to avoid
+         the "170 dinar mounted recruit" bug class fixed for every other culture in this mod. -->
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_1_t2" />
+        <equipment slot="Head" id="Item.battania_fur_helmet" />
+        <equipment slot="Body" id="Item.battania_light_armor_a" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Body" id="Item.battania_light_armor_a" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.arm2_azat" />
+      <upgrade_target id="NPCCharacter.arm2_archer" />
+      <upgrade_target id="NPCCharacter.arm2_azat_horseman" />
+      <upgrade_target id="NPCCharacter.arm2_azat_lancer" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 2 (11) -->
+  <NPCCharacter id="arm2_azat" default_group="Infantry" level="11" name="{=arm2_t_azat}Azat Spearman" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="55" />
+      <skill id="OneHanded" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_1_t2" />
+        <equipment slot="Item1" id="Item.battania_large_shield_a" />
+        <equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_a" />
+        <equipment slot="Body" id="Item.battania_light_armor_b" />
+        <equipment slot="Leg" id="Item.battania_leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_axe_1_t2" />
+        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item2" id="Item.woodland_throwing_axe_1_t1" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_b" />
+        <equipment slot="Body" id="Item.battania_woodland_chainmail" />
+        <equipment slot="Leg" id="Item.battania_leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_pikeman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_archer" default_group="Ranged" level="11" name="{=arm2_t_archer}Cilician Archer" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="45" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.hunting_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.battania_sword_1_t2" />
+        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Body" id="Item.battania_light_armor_a" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.mountain_hunting_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.battania_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_scarf_a" />
+        <equipment slot="Body" id="Item.battania_light_armor_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_taurus_bowman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_azat_horseman" default_group="Cavalry" level="11" name="{=arm2_t_azat_horseman}Azat Horseman" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="35" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="55" />
+      <skill id="Bow" value="20" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Body" id="Item.battania_light_armor_a" />
+        <equipment slot="Horse" id="Item.battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_axe_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_a" />
+        <equipment slot="Body" id="Item.battania_light_armor_b" />
+        <equipment slot="Horse" id="Item.battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_ayrudzi_rider" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_azat_lancer" default_group="Cavalry" level="11" name="{=arm2_t_azat_lancer}Azat Lancer" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="65" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="30" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
+        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item2" id="Item.battania_sword_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_a" />
+        <equipment slot="Body" id="Item.battania_light_armor_a" />
+        <equipment slot="Horse" id="Item.battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
+        <equipment slot="Item1" id="Item.battania_large_shield_a" />
+        <equipment slot="Item2" id="Item.battania_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_b" />
+        <equipment slot="Body" id="Item.battania_light_armor_b" />
+        <equipment slot="Horse" id="Item.battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_ayrudzi_lancer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 3 (16) -->
+  <NPCCharacter id="arm2_pikeman" default_group="Infantry" level="16" name="{=arm2_t_pikeman}Taurus Pikeman" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_2_t3" />
+        <equipment slot="Item1" id="Item.battania_large_shield_b" />
+        <equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_b" />
+        <equipment slot="Body" id="Item.battania_woodland_chainmail" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_2hsword_2_t3" />
+        <equipment slot="Item1" id="Item.battania_large_shield_b" />
+        <equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battanian_chainmail_armor_a" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_vanguard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_taurus_bowman" default_group="Ranged" level="16" name="{=arm2_t_taurus_bowman}Taurus Bowman" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Bow" value="150" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.battania_sword_2_t3" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_b" />
+        <equipment slot="Body" id="Item.battania_light_armor_c" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.battania_axe_2_t4" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battania_woodland_chainmail" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_veteran_archer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_ayrudzi_rider" default_group="Cavalry" level="16" name="{=arm2_t_ayrudzi_rider}Ayrudzi Rider" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="110" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Bow" value="40" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_2_t3" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_b" />
+        <equipment slot="Body" id="Item.battania_light_armor_c" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_axe_2_t4" />
+        <equipment slot="Item1" id="Item.steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battania_woodland_chainmail" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_ayrudzi_veteran" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_ayrudzi_lancer" default_group="Cavalry" level="16" name="{=arm2_t_ayrudzi_lancer}Ayrudzi Lancer" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="50" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_2_t3" />
+        <equipment slot="Item1" id="Item.battania_large_shield_b" />
+        <equipment slot="Item2" id="Item.battania_sword_2_t3" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battania_woodland_chainmail" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_2_t3" />
+        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item2" id="Item.battania_axe_2_t4" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_d" />
+        <equipment slot="Body" id="Item.battanian_chainmail_armor_b" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_azatagund_rider" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 4 (21) -->
+  <NPCCharacter id="arm2_vanguard" default_group="Infantry" level="21" name="{=arm2_t_vanguard}Taurus Vanguard" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="155" />
+      <skill id="Polearm" value="140" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_3_t3" />
+        <equipment slot="Item1" id="Item.battania_large_shield_c" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battanian_chainmail_armor_b" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_2hsword_4_t4" />
+        <equipment slot="Item1" id="Item.battania_large_shield_c" />
+        <equipment slot="Item2" id="Item.southern_throwing_axe_1_t4" />
+        <equipment slot="Item3" id="Item.highland_throwing_axe_1_t2" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_d" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_a" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_naxarar_footguard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_veteran_archer" default_group="Ranged" level="21" name="{=arm2_t_veteran_archer}Veteran Archer" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Bow" value="213" />
+      <skill id="Throwing" value="75" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.battania_sword_3_t3" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battanian_chainmail_armor_a" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.battania_axe_2_t4" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_d" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_a" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_sparapet_marksman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_ayrudzi_veteran" default_group="Cavalry" level="21" name="{=arm2_t_ayrudzi_veteran}Ayrudzi Veteran" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="85" />
+      <skill id="Riding" value="155" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="55" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_4_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_c" />
+        <equipment slot="Body" id="Item.battanian_chainmail_armor_a" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_axe_2_t4" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_d" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_a" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_aspet_skirmisher" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_azatagund_rider" default_group="Cavalry" level="21" name="{=arm2_t_azatagund_rider}Azatagund Rider" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="70" />
+      <skill id="Riding" value="170" />
+      <skill id="OneHanded" value="183" />
+      <skill id="Polearm" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_3_t3" />
+        <equipment slot="Item1" id="Item.battania_large_shield_c" />
+        <equipment slot="Item2" id="Item.battania_sword_4_t4" />
+        <equipment slot="Head" id="Item.battania_earmuff_helmet_d" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_a" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_4_t4" />
+        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item2" id="Item.battania_axe_2_t4" />
+        <equipment slot="Head" id="Item.battanian_noble_helmet_with_feather" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_b" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Horse" id="Item.t2_battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_azatagund_elite" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 5 (26): four branches, but arm2_aspet_skirmisher ends here as its own leaf (light
+       cavalry skirmish line), matching byz2_vardariotai/geo2_alan_horseguard/crus2_turcopole_
+       captain's role. -->
+  <NPCCharacter id="arm2_naxarar_footguard" default_group="Infantry" level="26" name="{=arm2_t_naxarar_footguard}Naxarar Footguard" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="210" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="86" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_2haxe_1_t2" />
+        <equipment slot="Item1" id="Item.battania_sword_4_t4" />
+        <equipment slot="Item2" id="Item.battania_large_shield_c" />
+        <equipment slot="Head" id="Item.battanian_noble_helmet_with_feather" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_b" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_2hsword_5_t4" />
+        <equipment slot="Item1" id="Item.battania_sword_5_t5" />
+        <equipment slot="Item2" id="Item.battania_large_shield_c" />
+        <equipment slot="Head" id="Item.battanian_plated_noble_helmet" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_naxarar_sworn_shield" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_sparapet_marksman" default_group="Ranged" level="26" name="{=arm2_t_sparapet_marksman}Sparapet's Marksman" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="280" />
+      <skill id="Throwing" value="116" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.battania_sword_4_t4" />
+        <equipment slot="Head" id="Item.battanian_noble_helmet_with_feather" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_b" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.battania_sword_5_t5" />
+        <equipment slot="Head" id="Item.battanian_plated_noble_helmet" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_taurus_master_archer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_aspet_skirmisher" default_group="Cavalry" level="26" name="{=arm2_t_aspet_skirmisher}Aspet's Skirmisher" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="Riding" value="210" />
+      <skill id="OneHanded" value="180" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="96" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_sword_5_t5" />
+        <equipment slot="Item1" id="Item.steppe_war_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.battanian_noble_helmet_with_feather" />
+        <equipment slot="Body" id="Item.battanian_scale_armor_b" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Horse" id="Item.t3_battania_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_noble_sword_1_t5" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.battanian_plated_noble_helmet" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Horse" id="Item.t3_battania_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <!-- Aspet's Skirmisher (light cavalry skirmish line) is left as its own branch endpoint here,
+         mirroring byz2_vardariotai/geo2_alan_horseguard/crus2_turcopole_captain - "Aspet" was
+         itself the Armenian title for the commander of the cavalry, so this line already names
+         its own senior rank rather than promoting into the separate Azatagund heavy line. -->
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_azatagund_elite" default_group="Cavalry" level="26" name="{=arm2_t_azatagund_elite}Azatagund Elite" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="95" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="240" />
+      <skill id="Polearm" value="121" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_5_t5" />
+        <equipment slot="Item1" id="Item.battania_large_shield_c" />
+        <equipment slot="Item2" id="Item.battania_sword_5_t5" />
+        <equipment slot="Head" id="Item.battanian_plated_noble_helmet" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.battania_noble_bracers" />
+        <equipment slot="Horse" id="Item.t3_battania_horse" />
+        <equipment slot="HorseHarness" id="Item.battania_horse_harness" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_polearm_1_t5" />
+        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item2" id="Item.battania_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.battanian_crowned_helmet" />
+        <equipment slot="Body" id="Item.battania_warlord_armor" />
+        <equipment slot="Gloves" id="Item.battania_warlord_bracers" />
+        <equipment slot="Horse" id="Item.t3_battania_horse" />
+        <equipment slot="HorseHarness" id="Item.battania_horse_harness_halfscaled" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.arm2_sparapet_guard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 6 (31): three separate branch endpoints (infantry, ranged, heavy cavalry). -->
+  <NPCCharacter id="arm2_naxarar_sworn_shield" default_group="Infantry" level="31" name="{=arm2_t_naxarar_sworn_shield}Naxarar Sworn Shield" occupation="Soldier" culture="Culture.battania" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="130" />
+      <skill id="Polearm" value="130" />
+      <skill id="Throwing" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_2hsword_6" />
+        <equipment slot="Item1" id="Item.battania_noble_sword_1_t5" />
+        <equipment slot="Item2" id="Item.battania_large_shield_c" />
+        <equipment slot="Head" id="Item.battanian_plated_noble_helmet" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.battania_warlord_bracers" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_axe_3_t5" />
+        <equipment slot="Item1" id="Item.battania_noble_sword_3_t5" />
+        <equipment slot="Item2" id="Item.battania_large_shield_c" />
+        <equipment slot="Head" id="Item.battanian_crowned_helmet" />
+        <equipment slot="Body" id="Item.battania_warlord_armor" />
+        <equipment slot="Gloves" id="Item.battania_warlord_bracers" />
+        <equipment slot="Leg" id="Item.battania_warlord_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_taurus_master_archer" default_group="Ranged" level="31" name="{=arm2_t_taurus_master_archer}Master Archer of the Taurus" occupation="Soldier" culture="Culture.battania" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="165" />
+      <skill id="Bow" value="330" />
+      <skill id="Throwing" value="175" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.battania_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.battanian_plated_noble_helmet" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.battania_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.battanian_crowned_helmet" />
+        <equipment slot="Body" id="Item.battania_warlord_armor" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.battania_woodland_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="arm2_sparapet_guard" default_group="Cavalry" level="31" name="{=arm2_t_sparapet_guard}Sparapet's Ayrudzi" occupation="Soldier" culture="Culture.battania" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Bow" value="60" />
+      <skill id="Throwing" value="35" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battania_polearm_1_t5" />
+        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item2" id="Item.battania_noble_sword_1_t5" />
+        <equipment slot="Item3" id="Item.steppe_war_bow" />
+        <equipment slot="Head" id="Item.battanian_crowned_helmet" />
+        <equipment slot="Body" id="Item.battania_warlord_armor" />
+        <equipment slot="Gloves" id="Item.battania_warlord_bracers" />
+        <equipment slot="Leg" id="Item.battania_warlord_boots" />
+        <equipment slot="Horse" id="Item.t3_battania_horse" />
+        <equipment slot="HorseHarness" id="Item.battania_horse_harness_scaled" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_5_t5" />
+        <equipment slot="Item1" id="Item.battania_large_shield_c" />
+        <equipment slot="Item2" id="Item.battania_noble_sword_3_t5" />
+        <equipment slot="Item3" id="Item.steppe_heavy_bow" />
+        <equipment slot="Head" id="Item.battania_battle_crown" />
+        <equipment slot="Body" id="Item.battania_noble_armor" />
+        <equipment slot="Gloves" id="Item.battania_warlord_pauldrons" />
+        <equipment slot="Leg" id="Item.battania_warlord_boots" />
+        <equipment slot="Horse" id="Item.t3_battania_horse" />
+        <equipment slot="HorseHarness" id="Item.battania_horse_harness_halfscaled" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+</NPCCharacters>
