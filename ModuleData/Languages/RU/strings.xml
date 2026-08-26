@@ -977,5 +977,53 @@
     <string id="geo_orbeli_greet_2" text="Король, забывший, какие дома держат его трон, редко удерживает его надолго. Я лишь напоминаю тебе об этом факте. Говори." />
     <string id="geo_giorgi_greet_1" text="Церковь и Корона идут одним путём в этом королевстве, путник, сколь бы неспокойным он ни был. Что привело тебя ко мне?" />
     <string id="geo_grigol_greet_1" text="Эристави отвечает перед Королём, а не перед каждым странствующим чужаком, что проезжает по его землям. Изложи своё дело прямо." />
-  </strings>
+      <string id="crus_faction_name" text="Государства крестоносцев" />
+    <string id="crus_faction_short" text="Крестоносцы" />
+    <string id="crus_faction_title" text="Антиохийское княжество" />
+    <string id="crus_faction_ruler" text="Князь" />
+    <string id="crus_faction_desc" text="Франкские и нормандские сеньоры, отправившиеся на восток в Первом крестовом походе и основавшие в 1098 году Антиохийское княжество и графство Эдесса. Их новые владения граничат напрямую с союзными сельджукам бейликами Артукидов и Данишмендидов." />
+    <string id="crus_culture_name" text="Крестоносец" />
+    <string id="crus_cn_hauteville" text="Дом Отвилей" />
+    <string id="crus_cn_rethel" text="Дом Ретель" />
+    <string id="crus_cn_melitene" text="Дом Мелитены" />
+    <string id="crus_cn_tancred" text="Дом Отвиль-Галилея" />
+    <string id="crus_cn_lepuiset" text="Дом Ле-Пюизе" />
+    <string id="crus_cn_boulogne" text="Дом Булонь" />
+    <string id="crus_cn_courtenay" text="Дом Куртене" />
+    <string id="crus_ln_bohemond" text="Боэмунд Тарентский" />
+    <string id="crus_ln_baldwin2" text="Балдуин де Бурк" />
+    <string id="crus_ln_morphia" text="Морфия Мелитенская" />
+    <string id="crus_ln_tancred" text="Танкред" />
+    <string id="crus_ln_waleran" text="Валеран де Пюизе" />
+    <string id="crus_ln_baldwin1" text="Балдуин Булонский" />
+    <string id="crus_ln_joscelin" text="Жослен де Куртене" />
+    <string id="crus_s_antioch" text="Антиохия" />
+    <string id="crus_s_laodicea" text="Лаодикея" />
+    <string id="crus_s_edessa" text="Эдесса" />
+    <string id="crus_s_turbessel" text="Турбессель" />
+    <string id="crus_s_birecik" text="Биреджик" />
+    <string id="crus_s_marash" text="Мараш" />
+    <string id="crus_s_tarsus" text="Тарс" />
+    <string id="crus_s_saruj" text="Саруж" />
+    <string id="crus2_t_recruit" text="Крестоносное ополчение" />
+    <string id="crus2_t_sergeant" text="Пеший сержант" />
+    <string id="crus2_t_crossbowman" text="Арбалетчик" />
+    <string id="crus2_t_turcopole_recruit" text="Новобранец-туркопол" />
+    <string id="crus2_t_squire" text="Оруженосец" />
+    <string id="crus2_t_pikeman" text="Франкский пикинёр" />
+    <string id="crus2_t_veteran_crossbowman" text="Опытный арбалетчик" />
+    <string id="crus2_t_turcopole_archer" text="Туркопол конный лучник" />
+    <string id="crus2_t_mounted_serjeant" text="Конный сержант" />
+    <string id="crus2_t_frankish_serjeant" text="Франкский сержант" />
+    <string id="crus2_t_arbalester" text="Тяжёлый арбалетчик" />
+    <string id="crus2_t_turcopole_veteran" text="Туркопол-ветеран" />
+    <string id="crus2_t_knight" text="Рыцарь" />
+    <string id="crus2_t_hospitaller_sergeant" text="Госпитальерский сержант" />
+    <string id="crus2_t_master_arbalester" text="Мастер-арбалетчик" />
+    <string id="crus2_t_turcopole_captain" text="Туркопол-капитан" />
+    <string id="crus2_t_knight_banneret" text="Рыцарь-баннерет" />
+    <string id="crus2_t_hospitaller_brother" text="Брат-сержант госпитальеров" />
+    <string id="crus2_t_arbalester_guard" text="Элитная арбалетная стража" />
+    <string id="crus2_t_templar_knight" text="Рыцарь-тамплиер" />
+</strings>
 </base>

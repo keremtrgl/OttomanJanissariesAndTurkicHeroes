@@ -977,5 +977,53 @@
     <string id="geo_orbeli_greet_2" text="一位忘记是哪些世家撑起自己王座的君主,很少能长久保有王位。我不过是提醒你这个事实罢了。说吧。" />
     <string id="geo_giorgi_greet_1" text="教会与王冠在这个王国中同行一条道路,旅人,尽管走得并不总是安稳。是什么把你带到我这里?" />
     <string id="geo_grigol_greet_1" text="埃里斯塔维只向国王负责,而非向每一个路过其领地的浪迹异乡人。清楚说明你的来意。" />
-  </strings>
+      <string id="crus_faction_name" text="十字军国家" />
+    <string id="crus_faction_short" text="十字军" />
+    <string id="crus_faction_title" text="安条克公国" />
+    <string id="crus_faction_ruler" text="亲王" />
+    <string id="crus_faction_desc" text="在第一次十字军东征中挺进东方的法兰克与诺曼底领主们,于1098年建立了安条克公国和埃德萨伯国。他们的新领地与效忠塞尔柱的阿尔图克贝伊国和达尼什面德贝伊国直接接壤。" />
+    <string id="crus_culture_name" text="十字军" />
+    <string id="crus_cn_hauteville" text="奥特维尔家族" />
+    <string id="crus_cn_rethel" text="雷特尔家族" />
+    <string id="crus_cn_melitene" text="梅利泰内家族" />
+    <string id="crus_cn_tancred" text="加利利-奥特维尔家族" />
+    <string id="crus_cn_lepuiset" text="勒皮塞家族" />
+    <string id="crus_cn_boulogne" text="布洛涅家族" />
+    <string id="crus_cn_courtenay" text="库特尼家族" />
+    <string id="crus_ln_bohemond" text="塔兰托的博希蒙德" />
+    <string id="crus_ln_baldwin2" text="布尔克的鲍德温" />
+    <string id="crus_ln_morphia" text="梅利泰内的莫菲亚" />
+    <string id="crus_ln_tancred" text="坦克雷德" />
+    <string id="crus_ln_waleran" text="勒皮塞的瓦莱兰" />
+    <string id="crus_ln_baldwin1" text="布洛涅的鲍德温" />
+    <string id="crus_ln_joscelin" text="库特尼的乔斯林" />
+    <string id="crus_s_antioch" text="安条克" />
+    <string id="crus_s_laodicea" text="拉奥迪西亚" />
+    <string id="crus_s_edessa" text="埃德萨" />
+    <string id="crus_s_turbessel" text="图尔贝塞尔" />
+    <string id="crus_s_birecik" text="比雷吉克" />
+    <string id="crus_s_marash" text="马拉什" />
+    <string id="crus_s_tarsus" text="塔尔苏斯" />
+    <string id="crus_s_saruj" text="萨鲁季" />
+    <string id="crus2_t_recruit" text="十字军征召兵" />
+    <string id="crus2_t_sergeant" text="步兵军士" />
+    <string id="crus2_t_crossbowman" text="弩手" />
+    <string id="crus2_t_turcopole_recruit" text="图科波尔新兵" />
+    <string id="crus2_t_squire" text="侍从" />
+    <string id="crus2_t_pikeman" text="法兰克长枪兵" />
+    <string id="crus2_t_veteran_crossbowman" text="老练弩手" />
+    <string id="crus2_t_turcopole_archer" text="图科波尔骑射手" />
+    <string id="crus2_t_mounted_serjeant" text="骑马军士" />
+    <string id="crus2_t_frankish_serjeant" text="法兰克军士" />
+    <string id="crus2_t_arbalester" text="重弩手" />
+    <string id="crus2_t_turcopole_veteran" text="图科波尔老兵" />
+    <string id="crus2_t_knight" text="骑士" />
+    <string id="crus2_t_hospitaller_sergeant" text="医院骑士团军士" />
+    <string id="crus2_t_master_arbalester" text="弩术大师" />
+    <string id="crus2_t_turcopole_captain" text="图科波尔队长" />
+    <string id="crus2_t_knight_banneret" text="旌旗骑士" />
+    <string id="crus2_t_hospitaller_brother" text="医院骑士团誓约兄弟" />
+    <string id="crus2_t_arbalester_guard" text="精锐弩兵卫队" />
+    <string id="crus2_t_templar_knight" text="圣殿骑士" />
+</strings>
 </base>

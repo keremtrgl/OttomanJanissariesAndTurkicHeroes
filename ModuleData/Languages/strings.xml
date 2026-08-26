@@ -936,5 +936,53 @@
     <string id="geo_orbeli_greet_2" text="A king who forgets which houses hold up his throne rarely keeps it for long. I am simply reminding you of that fact. Speak." />
     <string id="geo_giorgi_greet_1" text="The Church and the Crown walk the same road in this kingdom, traveler, however uneasily. What brings you to me?" />
     <string id="geo_grigol_greet_1" text="An Eristavi answers to the King, not to every wandering stranger who rides through his lands. State your business plainly." />
-  </strings>
+      <string id="crus_faction_name" text="Crusader States" />
+    <string id="crus_faction_short" text="Crusaders" />
+    <string id="crus_faction_title" text="Principality of Antioch" />
+    <string id="crus_faction_ruler" text="Prince" />
+    <string id="crus_faction_desc" text="Frankish and Norman lords who marched east on the First Crusade and carved out the Principality of Antioch and the County of Edessa in 1098. Their new domain borders the Seljuk-aligned Artuqid and Danishmendid beyliks directly, making them a frequent combatant on the Great Seljuk Empire's western frontier." />
+    <string id="crus_culture_name" text="Crusader" />
+    <string id="crus_cn_hauteville" text="House of Hauteville" />
+    <string id="crus_cn_rethel" text="House of Rethel" />
+    <string id="crus_cn_melitene" text="House of Melitene" />
+    <string id="crus_cn_tancred" text="House of Hauteville-Galilee" />
+    <string id="crus_cn_lepuiset" text="House of Le Puiset" />
+    <string id="crus_cn_boulogne" text="House of Boulogne" />
+    <string id="crus_cn_courtenay" text="House of Courtenay" />
+    <string id="crus_ln_bohemond" text="Bohemond of Taranto" />
+    <string id="crus_ln_baldwin2" text="Baldwin of Le Bourcq" />
+    <string id="crus_ln_morphia" text="Morphia of Melitene" />
+    <string id="crus_ln_tancred" text="Tancred" />
+    <string id="crus_ln_waleran" text="Waleran of Le Puiset" />
+    <string id="crus_ln_baldwin1" text="Baldwin of Boulogne" />
+    <string id="crus_ln_joscelin" text="Joscelin of Courtenay" />
+    <string id="crus_s_antioch" text="Antioch" />
+    <string id="crus_s_laodicea" text="Laodicea" />
+    <string id="crus_s_edessa" text="Edessa" />
+    <string id="crus_s_turbessel" text="Turbessel" />
+    <string id="crus_s_birecik" text="Birecik" />
+    <string id="crus_s_marash" text="Marash" />
+    <string id="crus_s_tarsus" text="Tarsus" />
+    <string id="crus_s_saruj" text="Saruj" />
+    <string id="crus2_t_recruit" text="Crusader Levy" />
+    <string id="crus2_t_sergeant" text="Foot Sergeant" />
+    <string id="crus2_t_crossbowman" text="Crossbowman" />
+    <string id="crus2_t_turcopole_recruit" text="Turcopole Recruit" />
+    <string id="crus2_t_squire" text="Squire" />
+    <string id="crus2_t_pikeman" text="Frankish Pikeman" />
+    <string id="crus2_t_veteran_crossbowman" text="Veteran Crossbowman" />
+    <string id="crus2_t_turcopole_archer" text="Turcopole Horse Archer" />
+    <string id="crus2_t_mounted_serjeant" text="Mounted Serjeant" />
+    <string id="crus2_t_frankish_serjeant" text="Frankish Serjeant" />
+    <string id="crus2_t_arbalester" text="Arbalester" />
+    <string id="crus2_t_turcopole_veteran" text="Turcopole Veteran" />
+    <string id="crus2_t_knight" text="Knight" />
+    <string id="crus2_t_hospitaller_sergeant" text="Hospitaller Sergeant" />
+    <string id="crus2_t_master_arbalester" text="Master Arbalester" />
+    <string id="crus2_t_turcopole_captain" text="Turcopole Captain" />
+    <string id="crus2_t_knight_banneret" text="Knight Banneret" />
+    <string id="crus2_t_hospitaller_brother" text="Hospitaller Sworn Brother" />
+    <string id="crus2_t_arbalester_guard" text="Elite Arbalester Guard" />
+    <string id="crus2_t_templar_knight" text="Templar Knight" />
+</strings>
 </base>

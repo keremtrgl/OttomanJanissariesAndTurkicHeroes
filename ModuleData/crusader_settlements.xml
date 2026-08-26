@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settlements>
+  <!-- Vlandia's 8 towns renamed to real cities held by the Principality of Antioch / County of
+       Edessa (both founded 1098, First Crusade). Ownership/culture untouched - only name= changes,
+       same pattern as byzantine_settlements.xml/georgian_settlements.xml. -->
+  <Settlement id="town_V1" name="{=crus_s_antioch}Antioch" />
+  <Settlement id="town_V5" name="{=crus_s_laodicea}Laodicea" />
+  <Settlement id="town_V3" name="{=crus_s_edessa}Edessa" />
+  <Settlement id="town_V6" name="{=crus_s_turbessel}Turbessel" />
+  <Settlement id="town_V7" name="{=crus_s_birecik}Birecik" />
+  <Settlement id="town_V9" name="{=crus_s_marash}Marash" />
+  <Settlement id="town_V2" name="{=crus_s_tarsus}Tarsus" />
+  <Settlement id="town_V8" name="{=crus_s_saruj}Saruj" />
+</Settlements>

@@ -977,5 +977,53 @@
     <string id="geo_orbeli_greet_2" text="الملك الذي ينسى أي البيوت تسند عرشه نادرًا ما يحتفظ به طويلًا. أنا فقط أذكّرك بهذه الحقيقة. تكلم." />
     <string id="geo_giorgi_greet_1" text="تسير الكنيسة والتاج على نفس الطريق في هذه المملكة أيها المسافر، مهما كان ذلك مضطربًا. ما الذي أتى بك إليّ؟" />
     <string id="geo_grigol_greet_1" text="الإريستافي مسؤول أمام الملك، لا أمام كل غريب هائم يعبر أراضيه. اذكر شأنك بوضوح." />
-  </strings>
+      <string id="crus_faction_name" text="الدول الصليبية" />
+    <string id="crus_faction_short" text="الصليبيون" />
+    <string id="crus_faction_title" text="إمارة أنطاكية" />
+    <string id="crus_faction_ruler" text="الأمير" />
+    <string id="crus_faction_desc" text="أمراء فرنجة ونورمان ساروا شرقاً في الحملة الصليبية الأولى وأسسوا إمارة أنطاكية ومقاطعة الرها عام 1098. تحد أراضيهم الجديدة مباشرة إمارتي الأرتقيين والدانشمنديين الموالين للسلاجقة." />
+    <string id="crus_culture_name" text="صليبي" />
+    <string id="crus_cn_hauteville" text="بيت أوتفيل" />
+    <string id="crus_cn_rethel" text="بيت ريتيل" />
+    <string id="crus_cn_melitene" text="بيت ملطية" />
+    <string id="crus_cn_tancred" text="بيت أوتفيل-الجليل" />
+    <string id="crus_cn_lepuiset" text="بيت لوبويزيه" />
+    <string id="crus_cn_boulogne" text="بيت بولون" />
+    <string id="crus_cn_courtenay" text="بيت كورتيناي" />
+    <string id="crus_ln_bohemond" text="بوهيموند التارنتي" />
+    <string id="crus_ln_baldwin2" text="بالدوين دي بورك" />
+    <string id="crus_ln_morphia" text="مورفيا الملطية" />
+    <string id="crus_ln_tancred" text="تانكرد" />
+    <string id="crus_ln_waleran" text="فاليران دي لوبويزيه" />
+    <string id="crus_ln_baldwin1" text="بلدوين البولوني" />
+    <string id="crus_ln_joscelin" text="جوسلين دي كورتيناي" />
+    <string id="crus_s_antioch" text="أنطاكية" />
+    <string id="crus_s_laodicea" text="اللاذقية" />
+    <string id="crus_s_edessa" text="الرها" />
+    <string id="crus_s_turbessel" text="تل باشر" />
+    <string id="crus_s_birecik" text="البيرة" />
+    <string id="crus_s_marash" text="مرعش" />
+    <string id="crus_s_tarsus" text="طرسوس" />
+    <string id="crus_s_saruj" text="سروج" />
+    <string id="crus2_t_recruit" text="مجند صليبي" />
+    <string id="crus2_t_sergeant" text="سرجنت مشاة" />
+    <string id="crus2_t_crossbowman" text="نشّاب" />
+    <string id="crus2_t_turcopole_recruit" text="توركوبولي مجند" />
+    <string id="crus2_t_squire" text="تابع الفارس" />
+    <string id="crus2_t_pikeman" text="رمّاح فرنجي" />
+    <string id="crus2_t_veteran_crossbowman" text="نشّاب مخضرم" />
+    <string id="crus2_t_turcopole_archer" text="توركوبولي رامي فارس" />
+    <string id="crus2_t_mounted_serjeant" text="سرجنت فارس" />
+    <string id="crus2_t_frankish_serjeant" text="سرجنت فرنجي" />
+    <string id="crus2_t_arbalester" text="نشّاب ثقيل" />
+    <string id="crus2_t_turcopole_veteran" text="توركوبولي مخضرم" />
+    <string id="crus2_t_knight" text="فارس" />
+    <string id="crus2_t_hospitaller_sergeant" text="سرجنت اسبتاري" />
+    <string id="crus2_t_master_arbalester" text="نشّاب بارع" />
+    <string id="crus2_t_turcopole_captain" text="قائد توركوبولي" />
+    <string id="crus2_t_knight_banneret" text="فارس حامل اللواء" />
+    <string id="crus2_t_hospitaller_brother" text="أخ اسبتاري مقسم" />
+    <string id="crus2_t_arbalester_guard" text="حرس النشّابين النخبة" />
+    <string id="crus2_t_templar_knight" text="فارس هيكلي" />
+</strings>
 </base>

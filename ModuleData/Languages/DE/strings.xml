@@ -977,5 +977,53 @@
     <string id="geo_orbeli_greet_2" text="Ein König, der vergisst, welche Häuser seinen Thron stützen, behält ihn selten lange. Ich erinnere dich nur an diese Tatsache. Sprich." />
     <string id="geo_giorgi_greet_1" text="Kirche und Krone gehen in diesem Königreich denselben Weg, Reisender, so unruhig er auch sein mag. Was führt dich zu mir?" />
     <string id="geo_grigol_greet_1" text="Ein Eristavi ist dem König Rechenschaft schuldig, nicht jedem umherziehenden Fremden, der durch sein Land reitet. Nenne dein Anliegen offen." />
-  </strings>
+      <string id="crus_faction_name" text="Kreuzfahrerstaaten" />
+    <string id="crus_faction_short" text="Kreuzfahrer" />
+    <string id="crus_faction_title" text="Fuerstentum Antiochia" />
+    <string id="crus_faction_ruler" text="Fuerst" />
+    <string id="crus_faction_desc" text="Fraenkische und normannische Herren, die waehrend des Ersten Kreuzzugs nach Osten zogen und 1098 das Fuerstentum Antiochia und die Grafschaft Edessa gruendeten. Ihr neues Reich grenzt direkt an die dem Seldschukenreich verbuendeten Artukiden- und Danischmendiden-Fuerstentuemer." />
+    <string id="crus_culture_name" text="Kreuzfahrer" />
+    <string id="crus_cn_hauteville" text="Haus Hauteville" />
+    <string id="crus_cn_rethel" text="Haus Rethel" />
+    <string id="crus_cn_melitene" text="Haus Melitene" />
+    <string id="crus_cn_tancred" text="Haus Hauteville-Galilaea" />
+    <string id="crus_cn_lepuiset" text="Haus Le Puiset" />
+    <string id="crus_cn_boulogne" text="Haus Boulogne" />
+    <string id="crus_cn_courtenay" text="Haus Courtenay" />
+    <string id="crus_ln_bohemond" text="Bohemund von Tarent" />
+    <string id="crus_ln_baldwin2" text="Balduin von Le Bourcq" />
+    <string id="crus_ln_morphia" text="Morphia von Melitene" />
+    <string id="crus_ln_tancred" text="Tankred" />
+    <string id="crus_ln_waleran" text="Walram von Le Puiset" />
+    <string id="crus_ln_baldwin1" text="Balduin von Boulogne" />
+    <string id="crus_ln_joscelin" text="Jocelin von Courtenay" />
+    <string id="crus_s_antioch" text="Antiochia" />
+    <string id="crus_s_laodicea" text="Laodicea" />
+    <string id="crus_s_edessa" text="Edessa" />
+    <string id="crus_s_turbessel" text="Turbessel" />
+    <string id="crus_s_birecik" text="Birecik" />
+    <string id="crus_s_marash" text="Marasch" />
+    <string id="crus_s_tarsus" text="Tarsus" />
+    <string id="crus_s_saruj" text="Saruj" />
+    <string id="crus2_t_recruit" text="Kreuzfahrer-Aufgebot" />
+    <string id="crus2_t_sergeant" text="Fusssergeant" />
+    <string id="crus2_t_crossbowman" text="Armbrustschuetze" />
+    <string id="crus2_t_turcopole_recruit" text="Turkopolen-Rekrut" />
+    <string id="crus2_t_squire" text="Knappe" />
+    <string id="crus2_t_pikeman" text="Fraenkischer Pikenier" />
+    <string id="crus2_t_veteran_crossbowman" text="Erfahrener Armbrustschuetze" />
+    <string id="crus2_t_turcopole_archer" text="Turkopolen-Reiterbogenschuetze" />
+    <string id="crus2_t_mounted_serjeant" text="Berittener Sergeant" />
+    <string id="crus2_t_frankish_serjeant" text="Fraenkischer Sergeant" />
+    <string id="crus2_t_arbalester" text="Arbalest-Schuetze" />
+    <string id="crus2_t_turcopole_veteran" text="Turkopolen-Veteran" />
+    <string id="crus2_t_knight" text="Ritter" />
+    <string id="crus2_t_hospitaller_sergeant" text="Johanniter-Sergeant" />
+    <string id="crus2_t_master_arbalester" text="Meister-Armbrustschuetze" />
+    <string id="crus2_t_turcopole_captain" text="Turkopolen-Hauptmann" />
+    <string id="crus2_t_knight_banneret" text="Bannerritter" />
+    <string id="crus2_t_hospitaller_brother" text="Johanniter-Ordensbruder" />
+    <string id="crus2_t_arbalester_guard" text="Elite-Armbrustgarde" />
+    <string id="crus2_t_templar_knight" text="Templerritter" />
+</strings>
 </base>

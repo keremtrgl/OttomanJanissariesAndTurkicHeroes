@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Real historical lords of Antioch/Edessa (1098-1125) - face/equipment/skills Native, only
+       name= changes, same pattern as byzantine_lords.xml/abbasid_lords.xml/georgian_lords.xml.
+       All seven are historically male and Native already ships them without is_female, so no
+       gender override is needed (unlike lord_1_14/Rhagaea's case). -->
+  <NPCCharacter id="lord_4_1" name="{=crus_ln_bohemond}Bohemond of Taranto" />
+  <NPCCharacter id="lord_4_3" name="{=crus_ln_baldwin2}Baldwin of Le Bourcq" />
+  <!-- lord_4_6 is female in Native (Calatild) - Roger of Salerno (a real male historical figure)
+       would have needed a full face/Equipments override like lord_1_14/Rhagaea did. Instead this
+       slot gets a real, well-documented Crusader-era noblewoman: Morphia of Melitene, an Armenian
+       princess who married Baldwin II (Countess of Edessa, later Queen of Jerusalem alongside
+       him) - keeps Native's own gender/face/body, no override needed beyond the name. -->
+  <NPCCharacter id="lord_4_6" name="{=crus_ln_morphia}Morphia of Melitene" is_female="true" />
+  <NPCCharacter id="lord_4_16" name="{=crus_ln_tancred}Tancred" />
+  <NPCCharacter id="lord_4_22" name="{=crus_ln_waleran}Waleran of Le Puiset" />
+  <NPCCharacter id="lord_4_23" name="{=crus_ln_baldwin1}Baldwin of Boulogne" />
+  <NPCCharacter id="lord_4_24" name="{=crus_ln_joscelin}Joscelin of Courtenay" />
+</NPCCharacters>
