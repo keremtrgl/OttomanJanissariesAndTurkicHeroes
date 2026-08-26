@@ -39,7 +39,8 @@
   <Settlement id="castle_village_EW3_1" name="{=byz_w_v_halicarnassus}Halicarnassus" />
   <Settlement id="castle_village_EW3_2" name="{=byz_w_v_cythera}Cythera" />
 
-  <Settlement id="castle_EW4" name="{=byz_w_c_lesbos}Lesbos Castle" />
+  <!-- Lesbos, klan_empire_west_3'un ana toprağı Atina'dan ayrılıp Flandre Hanesi'nin (empire_w) tacına verildi -->
+  <Settlement id="castle_EW4" name="{=byz_w_c_lesbos}Lesbos Castle" owner="Faction.clan_empire_west_2" />
   <Settlement id="castle_village_EW4_1" name="{=byz_w_v_methymna}Methymna" />
   <Settlement id="castle_village_EW4_2" name="{=byz_w_v_lemnos}Lemnos" />
 

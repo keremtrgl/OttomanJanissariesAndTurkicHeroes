@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Latin Empire of Constantinople (Culture.empire, Kingdom.empire_w) troop tree - own ids,
+       own upgrade chain, own equipment, distinct from crusader_custom_troops.xml (Levantine
+       Crusader States) and byzantine_custom_troops.xml (Bizans). Every item id verified against
+       SandBoxCore/ModuleData/items/*.xml. Tier structure (6/11/16/21/26/31) and skill totals
+       (90/195/360/508/676/835) match this mod's audited standard.
+       Historical grounding: Genoese/Pisan crossbow mercenaries were central to the 1204 siege of
+       Constantinople; Vlach horsemen served as Balkan light cavalry auxiliaries to the Latin
+       Empire; Gasmouloi (mixed Greek-Latin soldiery, unique to Frankokratia-era Greece) as the
+       infantry's elite endpoint; "Baron of Romania" as the top knightly rank, the real feudal
+       title used by the Latin Empire's great vassals under the 1204 Partition Treaty. Horses use
+       the empire_horse line (locally sourced in Thrace) rather than vlandia_horse, and armor
+       blends Western knightly weapons with Constantinople-made helms/lamellar, keeping the tree
+       visually distinct from the Crusader States' purely Frankish-Levantine look. -->
+
+  <!-- Tier 1 (6): shared recruit -->
+  <NPCCharacter id="lat2_recruit" default_group="Infantry" level="6" name="{=lat2_t_recruit}Latin Levy" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="10" />
+      <skill id="OneHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="10" />
+      <skill id="Throwing" value="10" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_2_t2" />
+        <equipment slot="Head" id="Item.imperial_cloth_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.lat2_footman" />
+      <upgrade_target id="NPCCharacter.lat2_crossbowman" />
+      <upgrade_target id="NPCCharacter.lat2_vlach_horseman" />
+      <upgrade_target id="NPCCharacter.lat2_squire" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 2 (11) -->
+  <NPCCharacter id="lat2_footman" default_group="Infantry" level="11" name="{=lat2_t_footman}Frankish Footman" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="55" />
+      <skill id="OneHanded" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_1_t2" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.imperial_mail_over_leather" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Item1" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.imperial_padded_coif" />
+        <equipment slot="Body" id="Item.imperial_mail_over_stripped_leather" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_spearman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_crossbowman" default_group="Ranged" level="11" name="{=lat2_t_crossbowman}Genoese Crossbowman" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="45" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Crossbow" value="80" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_b" />
+        <equipment slot="Item1" id="Item.bolt_a" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_c" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_a" />
+        <equipment slot="Item2" id="Item.empire_sword_1_t2" />
+        <equipment slot="Head" id="Item.imperial_cloth_coif" />
+        <equipment slot="Body" id="Item.imperial_mail_over_leather" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_veteran_crossbowman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_vlach_horseman" default_group="Cavalry" level="11" name="{=lat2_t_vlach_horseman}Vlach Horseman" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="35" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="40" />
+      <skill id="Throwing" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.northern_throwing_axe_1_t1" />
+        <equipment slot="Item1" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.imperial_padded_cloth" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Item1" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.imperial_cloth_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_d" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_vlach_rider" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_squire" default_group="Cavalry" level="11" name="{=lat2_t_squire}Squire" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="65" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="30" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_1_t3" />
+        <equipment slot="Item1" id="Item.bound_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_1_t2" />
+        <equipment slot="Head" id="Item.imperial_nasal_helm" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_2_t2" />
+        <equipment slot="Item1" id="Item.bound_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.imperial_padded_coif" />
+        <equipment slot="Body" id="Item.imperial_mail_over_leather" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_mounted_sergeant" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 3 (16) -->
+  <NPCCharacter id="lat2_spearman" default_group="Infantry" level="16" name="{=lat2_t_spearman}Frankish Spearman" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_3_t3" />
+        <equipment slot="Item1" id="Item.fortified_kite_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.roundkettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_2_t3" />
+        <equipment slot="Item1" id="Item.fortified_kite_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.ironlame_nasalhelm_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_mail_vest" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_sergeant_at_arms" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_veteran_crossbowman" default_group="Ranged" level="16" name="{=lat2_t_veteran_crossbowman}Veteran Genoese Crossbowman" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Crossbow" value="150" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_d" />
+        <equipment slot="Item1" id="Item.bolt_b" />
+        <equipment slot="Item2" id="Item.empire_sword_2_t3" />
+        <equipment slot="Head" id="Item.roundkettle_over_imperial_leather" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_b" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.ironlame_roundkettle_over_imperial_leather" />
+        <equipment slot="Body" id="Item.imperial_mail_vest" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_arbalester" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_vlach_rider" default_group="Cavalry" level="16" name="{=lat2_t_vlach_rider}Vlach Rider" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="110" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Throwing" value="120" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_1_t2" />
+        <equipment slot="Item1" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.imperial_padded_coif" />
+        <equipment slot="Body" id="Item.empire_warrior_padded_armor_d" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_1_t2" />
+        <equipment slot="Item1" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.imperial_leather_coif" />
+        <equipment slot="Body" id="Item.imperial_mail_over_stripped_leather" />
+        <equipment slot="Horse" id="Item.empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_vlach_skirmisher" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_mounted_sergeant" default_group="Cavalry" level="16" name="{=lat2_t_mounted_sergeant}Mounted Sergeant" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="50" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.reinforced_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_2_t3" />
+        <equipment slot="Head" id="Item.roundkettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_1_t3" />
+        <equipment slot="Item1" id="Item.ironrim_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_mace_1_t2" />
+        <equipment slot="Head" id="Item.ironlame_nasalhelm_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_mail_vest" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_knight" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 4 (21) -->
+  <NPCCharacter id="lat2_sergeant_at_arms" default_group="Infantry" level="21" name="{=lat2_t_sergeant_at_arms}Sergeant-at-Arms" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="155" />
+      <skill id="Polearm" value="140" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_4_t3" />
+        <equipment slot="Item1" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.ironlame_roundkettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_4_t4" />
+        <equipment slot="Item1" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_man_at_arms" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_arbalester" default_group="Ranged" level="21" name="{=lat2_t_arbalester}Genoese Arbalester" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Crossbow" value="213" />
+      <skill id="Throwing" value="75" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_f" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.empire_sword_4_t4" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_e" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.empire_mace_2_t4" />
+        <equipment slot="Head" id="Item.ironlame_roundkettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_master_arbalester" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_vlach_skirmisher" default_group="Cavalry" level="21" name="{=lat2_t_vlach_skirmisher}Vlach Skirmisher" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="85" />
+      <skill id="Riding" value="155" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Throwing" value="168" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_2_t3" />
+        <equipment slot="Item1" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Head" id="Item.roundkettle_over_imperial_leather" />
+        <equipment slot="Body" id="Item.imperial_mail_vest" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_2_t4" />
+        <equipment slot="Item1" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Head" id="Item.leatherlame_nasalhelm_over_imperial_leather" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_vlach_captain" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_knight" default_group="Cavalry" level="21" name="{=lat2_t_knight}Knight" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="70" />
+      <skill id="Riding" value="170" />
+      <skill id="OneHanded" value="183" />
+      <skill id="Polearm" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_4_t4" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.ironrim_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.mail_mitten_e" />
+        <equipment slot="Horse" id="Item.t2_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_knight_banneret" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 5 (26): Vlach Captain ends here as its own leaf (light cavalry skirmish line),
+       mirroring crus2_turcopole_captain/byz2_vardariotai/geo2_alan_horseguard's role. -->
+  <NPCCharacter id="lat2_man_at_arms" default_group="Infantry" level="26" name="{=lat2_t_man_at_arms}Latin Man-at-Arms" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="210" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="86" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.imperial_axe_t3" />
+        <equipment slot="Item1" id="Item.empire_sword_4_t4" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_padding" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battle_axe_t4" />
+        <equipment slot="Item1" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.ironlame_spiked_kettle_over_mail" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_gasmoulos_guard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_master_arbalester" default_group="Ranged" level="26" name="{=lat2_t_master_arbalester}Master Genoese Arbalester" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Crossbow" value="280" />
+      <skill id="Throwing" value="116" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_g" />
+        <equipment slot="Item1" id="Item.bolt_d" />
+        <equipment slot="Item2" id="Item.empire_sword_4_t4" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.ironlame_spiked_kettle_over_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_h" />
+        <equipment slot="Item1" id="Item.bolt_d" />
+        <equipment slot="Item2" id="Item.empire_mace_3_t4" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_padding" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_elite_arbalester" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_vlach_captain" default_group="Cavalry" level="26" name="{=lat2_t_vlach_captain}Vlach Captain" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="Riding" value="210" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Throwing" value="226" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_sword_4_t4" />
+        <equipment slot="Item1" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Head" id="Item.ironlame_roundkettle_over_imperial_leather" />
+        <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.empire_mace_3_t4" />
+        <equipment slot="Item1" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Head" id="Item.roundkettle_over_imperial_mail" />
+        <equipment slot="Body" id="Item.imperial_mail_vest" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <!-- Vlach Captain (Balkan light-cavalry auxiliary command) ends its own branch here, mirroring
+         crus2_turcopole_captain/byz2_vardariotai/geo2_alan_horseguard - a skirmish specialist, not
+         a stepping stone to becoming a knight. -->
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_knight_banneret" default_group="Cavalry" level="26" name="{=lat2_t_knight_banneret}Knight Banneret" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="95" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="240" />
+      <skill id="Polearm" value="121" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.empire_helmet_with_metal_strips" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_riding_harness" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.empire_guarded_lord_helmet" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.lat2_baron_romania" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 6 (31): three final branch endpoints (infantry, ranged, heavy cavalry) - Vlach
+       Captain (light cavalry) already ended its branch at tier 5. -->
+  <NPCCharacter id="lat2_gasmoulos_guard" default_group="Infantry" level="31" name="{=lat2_t_gasmoulos_guard}Gasmoulos Guard" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="130" />
+      <skill id="Polearm" value="130" />
+      <skill id="Throwing" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.imperial_axe_t3" />
+        <equipment slot="Item1" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.ironlame_spiked_kettle_over_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.battle_axe_t4" />
+        <equipment slot="Item1" id="Item.empire_sword_6_t5" />
+        <equipment slot="Item2" id="Item.stronger_reinforced_kite_shield" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_padding" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_elite_arbalester" default_group="Ranged" level="31" name="{=lat2_t_elite_arbalester}Elite Genoese Arbalester" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="165" />
+      <skill id="Crossbow" value="330" />
+      <skill id="Throwing" value="175" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_i" />
+        <equipment slot="Item1" id="Item.bolt_e" />
+        <equipment slot="Item2" id="Item.empire_sword_5_t4" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.ironlame_spiked_kettle_over_mail" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_g" />
+        <equipment slot="Item1" id="Item.bolt_e" />
+        <equipment slot="Item2" id="Item.empire_sword_6_t5" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.spiked_kettle_over_imperial_padding" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="lat2_baron_romania" default_group="Cavalry" level="31" name="{=lat2_t_baron_romania}Baron of Romania" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="Riding" value="260" />
+      <skill id="OneHanded" value="280" />
+      <skill id="Polearm" value="195" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_3_t5" />
+        <equipment slot="Head" id="Item.empire_guarded_lord_helmet" />
+        <equipment slot="Body" id="Item.imperial_lamellar" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_4_t5" />
+        <equipment slot="Head" id="Item.empire_jewelled_helmet" />
+        <equipment slot="Body" id="Item.imperial_scale_armor" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
+        <equipment slot="Horse" id="Item.t3_empire_horse" />
+        <equipment slot="HorseHarness" id="Item.imperial_riding_harness" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+</NPCCharacters>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
   <NPCCharacter id="lord_1_7" name="{=byz_w_ln_theodoros_laskaris}Theodoros Laskaris" is_female="false" />
-  <NPCCharacter id="lord_1_9" name="{=byz_w_ln_alexios_branas}Alexios Branas" is_female="false" />
+  <NPCCharacter id="lord_1_9" name="{=lat_ln_henry_flanders}Henry of Flanders" is_female="false" />
   <NPCCharacter id="lord_1_11" name="{=byz_w_ln_andronikos_kontostephanos}Andronikos Kontostephanos" is_female="false" />
   <NPCCharacter id="lord_1_40" name="{=byz_w_ln_ioannes_raoul}Ioannes Raoul" is_female="false" />
   <NPCCharacter id="lord_1_45" name="{=byz_w_ln_theodoros_synadenos}Theodoros Synadenos" is_female="false" />
   <NPCCharacter id="lord_1_52" name="{=byz_w_ln_andronikos_kamateros}Andronikos Kamateros" is_female="false" />
-  <NPCCharacter id="lord_1_53" name="{=byz_w_ln_eustathios_maleinos}Eustathios Maleinos" is_female="false" />
+  <NPCCharacter id="lord_1_53" name="{=lat_ln_marco_sanudo}Marco Sanudo" is_female="false" />
   <NPCCharacter id="lord_1_71" name="{=byz_w_ln_nikephoros_kourtikios}Nikephoros Kourtikios" is_female="false" />
   <NPCCharacter id="lord_WE9_l" name="{=byz_w_ln_konstantinos_melias}Konstantinos Melias" is_female="false" />
 </NPCCharacters>

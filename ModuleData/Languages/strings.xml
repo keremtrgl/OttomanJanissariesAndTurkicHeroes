@@ -135,7 +135,7 @@
     <string id="lord_nizamulmulk" text="Khwaja Nizam al-Mulk" />
     <string id="lord_sokmen_bey" text="Sokmen al-Qutbi" />
     <string id="lord_terken_hatun" text="Terken Khatun" />
-    <string id="ottoman_akinji_name" text="Ottoman Akinji Raider" />
+    <string id="ottoman_akinji_name" text="Seljuk Akinji Raider" />
     <string id="ottoman_scout_name" text="Seljuk Scout Cavalry" />
     <string id="policy_ahi_desc" text="Artisan guilds are regulated. Workshop revenues increase by 25%, caravan tax boosts, and townsfolk join sieges as militia." />
     <string id="policy_ahi_name" text="Ahi Guild Regulations" />
@@ -1158,5 +1158,44 @@
     <string id="krv_gt_desc_vlandia" text="The Crusaders are Frankish and Norman lords who marched east on the First Crusade and carved out the Principality of Antioch and County of Edessa in 1098. Knights in mail and turcopole horse-archers hold their new domain on the Great Seljuk Empire's western frontier, a warrior nobility as at home besieging a fortress as riding down infidels in open battle." />
     <string id="krkh_bonus_construction" text="Tamgach Khan's Works" />
     <string id="crus_bonus_construction" text="Frankish Castle-Building" />
+    <string id="arm_s_lampron" text="Lampron Castle" />
+    <string id="arm_v_norperd" text="Norperd" />
+    <string id="arm_v_kanjor" text="Kanjor" />
+    <string id="seljuk_town_amasya" text="Amasya (Amaseia)" />
+    <string id="seljuk_vil_merzifon" text="Merzifon" />
+    <string id="seljuk_vil_tasova" text="Tasova" />
+    <string id="seljuk_vil_gumushacikoy" text="Gumushacikoy" />
+    <string id="seljuk_castle_dorylaeum" text="Eskisehir (Dorylaeum)" />
+    <string id="seljuk_vil_sivrihisar" text="Sivrihisar" />
+    <string id="seljuk_vil_mihaliccik" text="Mihaliccik" />
+    <string id="lat_faction_name" text="Latin Empire of Constantinople" />
+    <string id="lat_faction_short" text="Latin Empire" />
+    <string id="lat_faction_title" text="Latin Empire of Constantinople" />
+    <string id="lat_faction_ruler" text="Emperor" />
+    <string id="lat_faction_desc" text="Founded in 1204 when Fourth Crusade knights sacked Constantinople and partitioned the Byzantine world, the Latin Empire holds Thrace and the northern Aegean under Emperor Henry of Flanders, the ablest and most tolerant of its rulers toward its Greek subjects. Its vassal Marco Sanudo rules the Cyclades from Naxos as Duke of the Archipelago, while Nicaean and Bizans forces contest its borders on every side." />
+    <string id="lat_house_flanders" text="House of Flanders" />
+    <string id="lat_house_sanudo" text="House Sanudo" />
+    <string id="lat_ln_henry_flanders" text="Henry of Flanders" />
+    <string id="lat_ln_marco_sanudo" text="Marco Sanudo" />
+    <string id="lat2_t_recruit" text="Latin Levy" />
+    <string id="lat2_t_footman" text="Frankish Footman" />
+    <string id="lat2_t_crossbowman" text="Genoese Crossbowman" />
+    <string id="lat2_t_vlach_horseman" text="Vlach Horseman" />
+    <string id="lat2_t_squire" text="Squire" />
+    <string id="lat2_t_spearman" text="Frankish Spearman" />
+    <string id="lat2_t_veteran_crossbowman" text="Veteran Genoese Crossbowman" />
+    <string id="lat2_t_vlach_rider" text="Vlach Rider" />
+    <string id="lat2_t_mounted_sergeant" text="Mounted Sergeant" />
+    <string id="lat2_t_sergeant_at_arms" text="Sergeant-at-Arms" />
+    <string id="lat2_t_arbalester" text="Genoese Arbalester" />
+    <string id="lat2_t_vlach_skirmisher" text="Vlach Skirmisher" />
+    <string id="lat2_t_knight" text="Knight" />
+    <string id="lat2_t_man_at_arms" text="Latin Man-at-Arms" />
+    <string id="lat2_t_master_arbalester" text="Master Genoese Arbalester" />
+    <string id="lat2_t_vlach_captain" text="Vlach Captain" />
+    <string id="lat2_t_knight_banneret" text="Knight Banneret" />
+    <string id="lat2_t_gasmoulos_guard" text="Gasmoulos Guard" />
+    <string id="lat2_t_elite_arbalester" text="Elite Genoese Arbalester" />
+    <string id="lat2_t_baron_romania" text="Baron of Romania" />
 </strings>
 </base>

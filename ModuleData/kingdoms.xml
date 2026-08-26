@@ -166,7 +166,32 @@
       <relationship kingdom="Kingdom.khuzait" value="0" isAtWar="false" />
     </relationships>
   </Kingdom>
-  <Kingdom id="empire_w">
+  <!-- LATIN İMPARATORLUĞU (Native: Western Empire / empire_w) -->
+  <!-- IV. Haclı Seferi sonrasi 1204'te kurulan gercek Latin Imparatorlugu - Flandre'li Henri
+       (1206-1216, en yetenekli ve Rum tebaasina hosgorulu hukumdari) ile Naxos Dukasi Marco
+       Sanudo'nun (1207, gercek/belgelenmis Naksos fatihi) vasalligini temsil eder. Bayrak,
+       Flandre hanedaninin gercek/belgelenmis armasi "Or, a lion sable" (altin zemin + siyah
+       aslan) - palet id 84 (0xffFDE217, altin) + id 247 (0xff192026, siyah) - modda baska hicbir
+       krallik altini ana renk olarak kullanmiyor, karismiyor. Ikon 460 (aslan sekli), Ermeni
+       bayraginda da kullaniliyor ama zemin/vurgu renkleri tamamen zit (kirmizi+altin vs
+       altin+siyah) oldugundan gorsel karisiklik olusturmuyor - gercek heraldikte de farkli
+       hanedanlarin ayni sekli (aslan) farkli renklerle kullanmasi yaygindir. -->
+  <Kingdom id="empire_w"
+           name="{=lat_faction_name}Latin Empire of Constantinople"
+           short_name="{=lat_faction_short}Latin Empire"
+           title="{=lat_faction_title}Latin Empire of Constantinople"
+           ruler_title="{=lat_faction_ruler}Emperor"
+           culture="Culture.empire"
+           owner="Hero.lord_1_9"
+           banner_key="11.84.84.4345.4345.764.764.1.0.0.460.247.247.512.512.764.764.1.0.0"
+           primary_banner_color="0xffFDE217"
+           secondary_banner_color="0xff192026"
+           color="0xffFDE217"
+           color2="0xff192026"
+           settlement_banner_mesh="encounter_flag_a"
+           flag_mesh="info_screen_flags_a"
+           initial_home_settlement="Settlement.town_EW4"
+           text="{=lat_faction_desc}Founded in 1204 when Fourth Crusade knights sacked Constantinople and partitioned the Byzantine world, the Latin Empire holds Thrace and the northern Aegean under Emperor Henry of Flanders, the ablest and most tolerant of its rulers toward its Greek subjects. Its vassal Marco Sanudo rules the Cyclades from Naxos as Duke of the Archipelago, while Nicaean and Bizans forces contest its borders on every side.">
     <relationships>
       <relationship kingdom="Kingdom.battania" value="0" isAtWar="false" />
     </relationships>

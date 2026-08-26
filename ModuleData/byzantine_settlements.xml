@@ -5,10 +5,6 @@
   <Settlement id="town_ES4" name="{=byz_s_ankara}Ancyra" />
   <Settlement id="village_ES4_1" name="{=byz_v_juliopolis}Iuliopolis" />
   <Settlement id="village_ES4_3" name="{=byz_v_germa}Germa" />
-  <Settlement id="town_ES5" name="{=byz_s_amaseia}Amaseia" />
-  <Settlement id="village_ES5_1" name="{=byz_v_andrapa}Andrapa" />
-  <Settlement id="village_ES5_2" name="{=byz_v_ibora}Ibora" />
-  <Settlement id="village_ES5_3" name="{=byz_v_sebastopolis}Sebastopolis" />
   <Settlement id="town_ES3" name="{=byz_s_nicaea}Nicaea" />
   <Settlement id="village_ES3_1" name="{=byz_v_prusa}Prusa" />
   <Settlement id="village_ES3_2" name="{=byz_v_apollonia}Apollonia" />
@@ -21,9 +17,6 @@
   <Settlement id="village_ES7_1" name="{=byz_v_rhizaion}Rhizaion" />
   <Settlement id="village_ES7_2" name="{=byz_v_kerasous}Kerasous" />
   <Settlement id="castle_village_ES7_2" name="{=byz_v_eunalica2}Susurmena" />
-  <Settlement id="castle_ES1" name="{=byz_c_dorylaeum}Dorylaeum Castle" />
-  <Settlement id="castle_village_ES1_1" name="{=byz_v_nakoleia}Nakoleia" />
-  <Settlement id="castle_village_ES1_2" name="{=byz_v_midaion}Midaion" />
   <Settlement id="castle_ES2" name="{=byz_c_nicomedia}Nicomedia Castle" />
   <Settlement id="castle_village_ES2_1" name="{=byz_v_chalcedon}Chalcedon" />
   <Settlement id="castle_village_ES2_2" name="{=byz_v_prainetos}Prainetos" />

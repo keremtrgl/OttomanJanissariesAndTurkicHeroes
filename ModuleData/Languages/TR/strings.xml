@@ -135,7 +135,7 @@
     <string id="lord_nizamulmulk" text="Hâce Nizamülmülk" />
     <string id="lord_sokmen_bey" text="Sökmen el-Kutbî" />
     <string id="lord_terken_hatun" text="Terken Hatun" />
-    <string id="ottoman_akinji_name" text="Osmanlı Akıncısı" />
+    <string id="ottoman_akinji_name" text="Selçuklu Akıncısı" />
     <string id="ottoman_scout_name" text="Selçuklu Atlı Gözcüsü" />
     <string id="policy_ahi_desc" text="Şehir esnafı ve zanaatkarlar denetlenir. Şehir atölye gelirleri %25 artar, kervan ticareti vergi getirisi yükselir, şehir kuşatmalarında halk doğrudan milis olarak surlara koşar." />
     <string id="policy_ahi_name" text="Ahilik Esnaf ve Lonca Tüzüğü" />
@@ -1158,5 +1158,44 @@
     <string id="krv_gt_desc_vlandia" text="Haçlılar, Birinci Haçlı Seferi'nde doğuya yürüyüp 1098'de Antakya Prensliği ile Urfa Kontluğu'nu kuran Frank ve Norman beyleridir. Zırhlı şövalyeleri ve Türkopol atlı okçuları, Büyük Selçuklu Devleti'nin batı sınırındaki yeni topraklarını elinde tutar; açık meydanda düşmanı kılıçtan geçirmek kadar bir kaleyi kuşatmakta da kendini evinde hisseden bir savaşçı asalettir." />
     <string id="krkh_bonus_construction" text="Tamgaç Han'ın İmar Faaliyetleri" />
     <string id="crus_bonus_construction" text="Frenk Kale Ustalığı" />
+    <string id="arm_s_lampron" text="Lampron Kalesi" />
+    <string id="arm_v_norperd" text="Norperd" />
+    <string id="arm_v_kanjor" text="Kanjor" />
+    <string id="seljuk_town_amasya" text="Amasya (Amaseia)" />
+    <string id="seljuk_vil_merzifon" text="Merzifon" />
+    <string id="seljuk_vil_tasova" text="Tasova" />
+    <string id="seljuk_vil_gumushacikoy" text="Gumushacikoy" />
+    <string id="seljuk_castle_dorylaeum" text="Eskisehir (Dorylaeum)" />
+    <string id="seljuk_vil_sivrihisar" text="Sivrihisar" />
+    <string id="seljuk_vil_mihaliccik" text="Mihaliccik" />
+    <string id="lat_faction_name" text="Konstantinopolis Latin İmparatorluğu" />
+    <string id="lat_faction_short" text="Latin İmparatorluğu" />
+    <string id="lat_faction_title" text="Konstantinopolis Latin İmparatorluğu" />
+    <string id="lat_faction_ruler" text="İmparator" />
+    <string id="lat_faction_desc" text="1204'te IV. Haçlı Seferi şövalyelerinin Konstantinopolis'i yağmalamasıyla kurulan Latin İmparatorluğu, Trakya ve kuzey Ege'yi İmparator Flandre'li Henri yönetiminde elinde tutar - Rum tebaasına karşı en yetenekli ve hoşgörülü hükümdarı. Vasalı Marco Sanudo, Naksos'tan Takımadalar Dükü olarak Kikladlar'ı yönetirken, İznik ve Bizans kuvvetleri her yönden sınırlarını tehdit eder." />
+    <string id="lat_house_flanders" text="Flandre Hanesi" />
+    <string id="lat_house_sanudo" text="Sanudo Hanesi" />
+    <string id="lat_ln_henry_flanders" text="Flandre'li Henri" />
+    <string id="lat_ln_marco_sanudo" text="Marco Sanudo" />
+    <string id="lat2_t_recruit" text="Latin Askeri" />
+    <string id="lat2_t_footman" text="Frenk Piyadesi" />
+    <string id="lat2_t_crossbowman" text="Cenevizli Arbaletçi" />
+    <string id="lat2_t_vlach_horseman" text="Ulah Atlısı" />
+    <string id="lat2_t_squire" text="Silahtar" />
+    <string id="lat2_t_spearman" text="Frenk Mızrakçısı" />
+    <string id="lat2_t_veteran_crossbowman" text="Deneyimli Cenevizli Arbaletçi" />
+    <string id="lat2_t_vlach_rider" text="Ulah Süvarisi" />
+    <string id="lat2_t_mounted_sergeant" text="Atlı Serjan" />
+    <string id="lat2_t_sergeant_at_arms" text="Silahlı Serjan" />
+    <string id="lat2_t_arbalester" text="Cenevizli Ağır Arbaletçi" />
+    <string id="lat2_t_vlach_skirmisher" text="Ulah Akıncısı" />
+    <string id="lat2_t_knight" text="Şövalye" />
+    <string id="lat2_t_man_at_arms" text="Latin Silahşörü" />
+    <string id="lat2_t_master_arbalester" text="Cenevizli Usta Arbaletçi" />
+    <string id="lat2_t_vlach_captain" text="Ulah Kumandanı" />
+    <string id="lat2_t_knight_banneret" text="Sancaktar Şövalye" />
+    <string id="lat2_t_gasmoulos_guard" text="Gasmoulos Muhafızı" />
+    <string id="lat2_t_elite_arbalester" text="Seçkin Cenevizli Arbaletçi" />
+    <string id="lat2_t_baron_romania" text="Rumeli Baronu" />
 </strings>
 </base>

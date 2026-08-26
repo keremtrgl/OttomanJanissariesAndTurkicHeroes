@@ -135,7 +135,7 @@
     <string id="lord_nizamulmulk" text="الوزير نظام الملك" />
     <string id="lord_sokmen_bey" text="Sokmen al-Qutbi" />
     <string id="lord_terken_hatun" text="تركان خاتون" />
-    <string id="ottoman_akinji_name" text="Ottoman Akinji Raider" />
+    <string id="ottoman_akinji_name" text="Seljuk Akinji Raider" />
     <string id="ottoman_scout_name" text="Seljuk Scout Cavalry" />
     <string id="policy_ahi_desc" text="يزيد أرباح الورش بنسبة 25% ويستنفر ميليشيات المتطوعين أثناء الحصار." />
     <string id="policy_ahi_name" text="ميثاق الحرفيين والفتوة الأخية" />
@@ -1199,5 +1199,44 @@
     <string id="krv_gt_desc_vlandia" text="الصليبيون أمراء فرنجة ونورمان ساروا شرقا في الحملة الصليبية الأولى وأسسوا إمارة أنطاكية ومقاطعة الرها عام 1098. يحافظ فرسانهم المدرعون ورماة الخيل من التركوبول على نطاقهم الجديد على الحدود الغربية للدولة السلجوقية العظمى - نبالة محاربة تشعر بالراحة في حصار قلعة كما في معركة مفتوحة." />
     <string id="krkh_bonus_construction" text="أعمال تمغاج خان" />
     <string id="crus_bonus_construction" text="بناء القلاع الفرنجية" />
+    <string id="arm_s_lampron" text="قلعة لامبرون" />
+    <string id="arm_v_norperd" text="نوربرد" />
+    <string id="arm_v_kanjor" text="كانجور" />
+    <string id="seljuk_town_amasya" text="أماسيا" />
+    <string id="seljuk_vil_merzifon" text="مرزفون" />
+    <string id="seljuk_vil_tasova" text="طاشوفا" />
+    <string id="seljuk_vil_gumushacikoy" text="كوموشخاجي كوي" />
+    <string id="seljuk_castle_dorylaeum" text="دوريليوم (إسكي شهر)" />
+    <string id="seljuk_vil_sivrihisar" text="سيفري حصار" />
+    <string id="seljuk_vil_mihaliccik" text="ميهاليتشيك" />
+    <string id="lat_faction_name" text="الإمبراطورية اللاتينية في القسطنطينية" />
+    <string id="lat_faction_short" text="الإمبراطورية اللاتينية" />
+    <string id="lat_faction_title" text="الإمبراطورية اللاتينية في القسطنطينية" />
+    <string id="lat_faction_ruler" text="الإمبراطور" />
+    <string id="lat_faction_desc" text="تأسست عام 1204 عندما نهب فرسان الحملة الصليبية الرابعة القسطنطينية، وتسيطر الإمبراطورية اللاتينية على تراقيا وشمال بحر إيجه تحت حكم الإمبراطور هنري الفلمنكي، أكثر حكامها كفاءة وتسامحا مع رعاياه اليونانيين. يحكم تابعه ماركو سانودو جزر السيكلاد من ناكسوس كدوق للأرخبيل، بينما تتنازع قوات نيقية وبيزنطة حدوده من كل جانب." />
+    <string id="lat_house_flanders" text="بيت فلاندرز" />
+    <string id="lat_house_sanudo" text="بيت سانودو" />
+    <string id="lat_ln_henry_flanders" text="هنري الفلمنكي" />
+    <string id="lat_ln_marco_sanudo" text="ماركو سانودو" />
+    <string id="lat2_t_recruit" text="مجند لاتيني" />
+    <string id="lat2_t_footman" text="مشاة فرنجة" />
+    <string id="lat2_t_crossbowman" text="رامي أقواس جنوي" />
+    <string id="lat2_t_vlach_horseman" text="فارس فلاشي" />
+    <string id="lat2_t_squire" text="تابع الفارس" />
+    <string id="lat2_t_spearman" text="رمّاح فرنجة" />
+    <string id="lat2_t_veteran_crossbowman" text="رامي أقواس جنوي مخضرم" />
+    <string id="lat2_t_vlach_rider" text="فارس فلاشي متمرس" />
+    <string id="lat2_t_mounted_sergeant" text="رقيب فارس" />
+    <string id="lat2_t_sergeant_at_arms" text="رقيب مسلح" />
+    <string id="lat2_t_arbalester" text="رامي نبال جنوي ثقيل" />
+    <string id="lat2_t_vlach_skirmisher" text="مناوش فلاشي" />
+    <string id="lat2_t_knight" text="فارس" />
+    <string id="lat2_t_man_at_arms" text="محارب لاتيني مدجج" />
+    <string id="lat2_t_master_arbalester" text="أستاذ رماة النبال الجنوي" />
+    <string id="lat2_t_vlach_captain" text="قائد فلاشي" />
+    <string id="lat2_t_knight_banneret" text="فارس حامل اللواء" />
+    <string id="lat2_t_gasmoulos_guard" text="حرس الغازمول" />
+    <string id="lat2_t_elite_arbalester" text="نخبة رماة النبال الجنويين" />
+    <string id="lat2_t_baron_romania" text="بارون رومانيا" />
 </strings>
 </base>
