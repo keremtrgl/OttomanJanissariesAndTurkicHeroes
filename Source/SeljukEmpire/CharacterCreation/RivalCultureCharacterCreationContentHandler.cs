@@ -92,23 +92,23 @@ namespace SeljukEmpire.CharacterCreation
             if (menus.Count > 0)
             {
                 var parentMenu = menus[0];
-                AddOption(parentMenu, "byz_opt_senatorial", "{=byz_cc_senatorial_name}Konstantinopolis Senatocu Ailesi", "{=byz_cc_senatorial_desc}Ailen İmparatorluk başkentinde toprak sahibi dynatoi sınıfındandır; sarayın entrika ve protokolünü beşikten öğrendin.",
+                AddOption(parentMenu, "byz_opt_senatorial", "{=byz_cc_senatorial_name}Constantinopolitan Senatorial Family", "{=byz_cc_senatorial_desc}Your family belongs to the landed dynatoi class of the imperial capital; you learned the intrigue and protocol of the palace from the cradle.",
                     new[] { DefaultSkills.Charm, DefaultSkills.Steward }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1200,
                     IsByzantineCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
 
-                AddOption(parentMenu, "byz_opt_akritas", "{=byz_cc_akritas_name}Anadolu Akritas Sınır Ailesi", "{=byz_cc_akritas_desc}Toros ve Fırat sınırında İmparatorluğu Türkmen akınlarına karşı koruyan akritai savaşçı ailesindensin.",
+                AddOption(parentMenu, "byz_opt_akritas", "{=byz_cc_akritas_name}Anatolian Akritai Border Family", "{=byz_cc_akritas_desc}Your family are akritai warriors who guard the Taurus and Euphrates frontier against Turkoman raids.",
                     new[] { DefaultSkills.Bow, DefaultSkills.Riding }, 15, DefaultCharacterAttributes.Vigor, 1, 15, 600,
                     IsByzantineCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
 
-                AddOption(parentMenu, "byz_opt_thematic", "{=byz_cc_thematic_name}Anadolu Thema Askeri Toprak Sahibi Ailesi", "{=byz_cc_thematic_desc}Baban stratiotes olarak thema ordusuna kendi atı ve zırhıyla hizmet eden askeri çiftlik sahibiydi.",
+                AddOption(parentMenu, "byz_opt_thematic", "{=byz_cc_thematic_name}Anatolian Thematic Soldier-Landowner Family", "{=byz_cc_thematic_desc}Your father was a stratiotes, a military landowner who served the thematic army with his own horse and armor.",
                     new[] { DefaultSkills.Polearm, DefaultSkills.Athletics }, 15, DefaultCharacterAttributes.Control, 1, 15, 700,
                     IsByzantineCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
 
-                AddOption(parentMenu, "byz_opt_merchant", "{=byz_cc_merchant_name}Selanik Liman Tüccarı Ailesi", "{=byz_cc_merchant_desc}İmparatorluğun ikinci büyük şehri Selanik'in limanında ipek ve baharat ticareti yapan zengin bir ailede büyüdün.",
+                AddOption(parentMenu, "byz_opt_merchant", "{=byz_cc_merchant_name}Thessaloniki Harbor Merchant Family", "{=byz_cc_merchant_desc}You grew up in a wealthy family trading silk and spices in the port of Thessaloniki, the Empire's second city.",
                     new[] { DefaultSkills.Trade, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1000,
                     IsByzantineCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
 
-                AddOption(parentMenu, "byz_opt_monastic", "{=byz_cc_monastic_name}Manastır Kütüphanesi Kâtip Ailesi", "{=byz_cc_monastic_desc}Ailen manastır kütüphanelerinde eski Yunan ve Roma eserlerini istinsah eden kâtiplerdendi; ilim beşiğindi.",
+                AddOption(parentMenu, "byz_opt_monastic", "{=byz_cc_monastic_name}Monastic Library Scribe Family", "{=byz_cc_monastic_desc}Your family were scribes who copied ancient Greek and Roman works in monastery libraries; learning was your cradle.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Trade }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 900,
                     IsByzantineCultureSelected, mgr => SetParentOccupation(mgr, "Farmer"));
             }
@@ -116,55 +116,55 @@ namespace SeljukEmpire.CharacterCreation
             if (menus.Count > 1)
             {
                 var childMenu = menus[1];
-                AddOption(childMenu, "byz_child_hippodrome", "{=byz_cc_hippodrome_name}Hipodrom Yarışlarını İzleyerek Büyüdün", "{=byz_cc_hippodrome_desc}Konstantinopolis'in ünlü Hipodrom'unda at yarışlarını izleyip mahalle takımlarının tutkusunu içinde hissettin.",
+                AddOption(childMenu, "byz_child_hippodrome", "{=byz_cc_hippodrome_name}You Grew Up Watching the Hippodrome Races", "{=byz_cc_hippodrome_desc}You watched the chariot races at Constantinople's famous Hippodrome and felt the passion of the rival factions.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Athletics }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
 
-                AddOption(childMenu, "byz_child_akritic_songs", "{=byz_cc_akritic_songs_name}Sınırda Akritik Destanlar Dinleyerek Büyüdün", "{=byz_cc_akritic_songs_desc}Sınır köylerinde yaşlıların anlattığı akritai destanlarıyla büyüdün, ok atmayı erkenden öğrendin.",
+                AddOption(childMenu, "byz_child_akritic_songs", "{=byz_cc_akritic_songs_name}You Grew Up on Border Songs of the Akritai", "{=byz_cc_akritic_songs_desc}You grew up on the akritic epics told by the elders of the border villages, and learned to draw a bow early.",
                     new[] { DefaultSkills.Bow, DefaultSkills.Scouting }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
 
-                AddOption(childMenu, "byz_child_church_school", "{=byz_cc_church_school_name}Kilise Okulunda Yunanca ve İlahiyat Öğrendin", "{=byz_cc_church_school_desc}Mahalle kilisesinin okulunda Yunan alfabesini, kutsal metinleri ve ilahileri ezberledin.",
+                AddOption(childMenu, "byz_child_church_school", "{=byz_cc_church_school_name}You Learned Greek and Scripture at the Church School", "{=byz_cc_church_school_desc}At the parish church school you memorized the Greek alphabet, sacred texts, and hymns.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
 
-                AddOption(childMenu, "byz_child_market", "{=byz_cc_market_name}Mese Caddesi Pazarında Ticareti Öğrendin", "{=byz_cc_market_desc}Konstantinopolis'in ana caddesi Mese'deki dükkanlarda tüccarların yanında ticaret inceliklerini öğrendin.",
+                AddOption(childMenu, "byz_child_market", "{=byz_cc_market_name}You Learned Trade in the Mese Street Market", "{=byz_cc_market_desc}In the shops along the Mese, Constantinople's main avenue, you learned the finer points of trade from merchants.",
                     new[] { DefaultSkills.Trade, DefaultSkills.Steward }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
             }
 
             if (menus.Count > 2)
             {
                 var youthMenu = menus[2];
-                AddOption(youthMenu, "byz_youth_varangian", "{=byz_cc_varangian_name}Varanjyalı Muhafızlarla Talim Yaptın", "{=byz_cc_varangian_desc}İmparatorluk sarayının ünlü Varanjyalı Muhafızları arasında balta ve kılıç talimi gördün.",
+                AddOption(youthMenu, "byz_youth_varangian", "{=byz_cc_varangian_name}You Trained Alongside the Varangian Guard", "{=byz_cc_varangian_desc}You trained in axe and sword alongside the Empire's famed Varangian Guard at the imperial palace.",
                     new[] { DefaultSkills.OneHanded, DefaultSkills.Athletics, DefaultSkills.Tactics }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
 
-                AddOption(youthMenu, "byz_youth_thematic_army", "{=byz_cc_thematic_army_name}Anadolu Thema Ordusuna Katıldın", "{=byz_cc_thematic_army_desc}Anadolu'nun sınır themalarında atlı okçuluk ve mızrak talimiyle sertleşen bir asker oldun.",
+                AddOption(youthMenu, "byz_youth_thematic_army", "{=byz_cc_thematic_army_name}You Joined the Anatolian Thematic Army", "{=byz_cc_thematic_army_desc}You became a hardened soldier in Anatolia's frontier themes, trained in mounted archery and the spear.",
                     new[] { DefaultSkills.Bow, DefaultSkills.Riding, DefaultSkills.Polearm }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
 
-                AddOption(youthMenu, "byz_youth_university", "{=byz_cc_university_name}Manganalar Üniversitesi'nde Retorik Okudun", "{=byz_cc_university_desc}Konstantinopolis'in ünlü Manganalar Üniversitesi'nde felsefe, hukuk ve retorik dersleri aldın.",
+                AddOption(youthMenu, "byz_youth_university", "{=byz_cc_university_name}You Studied Rhetoric at the Mangana University", "{=byz_cc_university_desc}You took lessons in philosophy, law and rhetoric at Constantinople's famed Mangana University.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Leadership, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsByzantineCultureSelected, null);
             }
 
             if (menus.Count > 3)
             {
                 var careerMenu = menus[3];
-                AddOption(careerMenu, "byz_car_kataphraktos", "{=byz_cc_kataphraktos_name}Kataphraktos Ağır Süvari Alayına Seçildin", "{=byz_cc_kataphraktos_desc}Zırhlı atlardan ve zırhlı süvarilerden oluşan seçkin Kataphraktos birliğine kabul edildin.",
+                AddOption(careerMenu, "byz_car_kataphraktos", "{=byz_cc_kataphraktos_name}You Were Chosen for a Kataphraktos Heavy Cavalry Regiment", "{=byz_cc_kataphraktos_desc}You were accepted into the elite Kataphraktos corps of armored horses and armored riders.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Polearm, DefaultSkills.OneHanded }, 15, null, 0, 20, 0, IsByzantineCultureSelected, null);
 
-                AddOption(careerMenu, "byz_car_akritas_officer", "{=byz_cc_akritas_officer_name}Sınır Akritas Kumandanı Oldun", "{=byz_cc_akritas_officer_desc}Türkmen akınlarına karşı Anadolu sınırını savunan akritai birliklerine komuta ettin.",
+                AddOption(careerMenu, "byz_car_akritas_officer", "{=byz_cc_akritas_officer_name}You Became a Border Akritai Commander", "{=byz_cc_akritas_officer_desc}You commanded akritai units defending the Anatolian frontier against Turkoman raids.",
                     new[] { DefaultSkills.Tactics, DefaultSkills.Bow, DefaultSkills.Riding }, 15, null, 0, 15, 0, IsByzantineCultureSelected, null);
 
-                AddOption(careerMenu, "byz_car_bureaucrat", "{=byz_cc_bureaucrat_name}İmparatorluk Divanında Kâtip Oldun", "{=byz_cc_bureaucrat_desc}Sarayın bürokrasisinde vergi ve arazi kayıtlarını tutan güvenilir bir kâtip oldun.",
+                AddOption(careerMenu, "byz_car_bureaucrat", "{=byz_cc_bureaucrat_name}You Became a Clerk in the Imperial Chancery", "{=byz_cc_bureaucrat_desc}You became a trusted clerk in the palace bureaucracy, keeping tax and land records.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Charm, DefaultSkills.Leadership }, 15, null, 0, 15, 0, IsByzantineCultureSelected, null);
             }
 
             if (menus.Count > 4)
             {
                 var deedMenu = menus[4];
-                AddOption(deedMenu, "byz_deed_rally", "{=byz_cc_rally_name}Bir Meydan Savaşından Sağ Çıkıp Orduyu Topladın", "{=byz_cc_rally_desc}Büyük bir bozgunun ortasında dağılan birlikleri yeniden topladın ve düzenli bir geri çekilme sağladın.",
+                AddOption(deedMenu, "byz_deed_rally", "{=byz_cc_rally_name}You Survived a Battlefield Rout and Rallied the Army", "{=byz_cc_rally_desc}Amid a great rout you rallied the scattering units and secured an orderly retreat.",
                     new[] { DefaultSkills.Leadership, DefaultSkills.Tactics }, 15, null, 0, 30, 0, IsByzantineCultureSelected, null);
 
-                AddOption(deedMenu, "byz_deed_fortress_defense", "{=byz_cc_fortress_defense_name}Kuşatılan Bir Kaleyi Son Ana Kadar Savundun", "{=byz_cc_fortress_defense_desc}Düşman kuşatması altındaki bir sınır kalesini takviye gelene kadar azimle savundun.",
+                AddOption(deedMenu, "byz_deed_fortress_defense", "{=byz_cc_fortress_defense_name}You Held a Besieged Fortress to the Very End", "{=byz_cc_fortress_defense_desc}You defended a besieged frontier fortress with resolve until relief finally arrived.",
                     new[] { DefaultSkills.Tactics, DefaultSkills.Athletics }, 15, null, 0, 25, 0, IsByzantineCultureSelected, null);
 
-                AddOption(deedMenu, "byz_deed_diplomat", "{=byz_cc_diplomat_name}Tehlikeli Bir Elçilik Görevini Başarıyla Tamamladın", "{=byz_cc_diplomat_desc}Düşman sarayına gönderilen tehlikeli bir barış elçiliğini ustalıkla ve cesaretle tamamladın.",
+                AddOption(deedMenu, "byz_deed_diplomat", "{=byz_cc_diplomat_name}You Completed a Perilous Embassy", "{=byz_cc_diplomat_desc}You skillfully and bravely completed a dangerous peace embassy to an enemy court.",
                     new[] { DefaultSkills.Charm, DefaultSkills.Steward }, 15, null, 0, 20, 0, IsByzantineCultureSelected, null);
             }
         }
@@ -176,23 +176,23 @@ namespace SeljukEmpire.CharacterCreation
             if (menus.Count > 0)
             {
                 var parentMenu = menus[0];
-                AddOption(parentMenu, "abb_opt_hashimite", "{=abb_cc_hashimite_name}Haşimî Şerif Ailesi", "{=abb_cc_hashimite_desc}Peygamber soyundan gelen şerif bir Haşimî ailesinin çocuğusun; Bağdat'ta saygı ve nüfuz sahibisin.",
+                AddOption(parentMenu, "abb_opt_hashimite", "{=abb_cc_hashimite_name}Sharifian Hashimite Family", "{=abb_cc_hashimite_desc}You are the child of a sharifian Hashimite family descended from the Prophet's line, respected and influential in Baghdad.",
                     new[] { DefaultSkills.Charm, DefaultSkills.Steward }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1300,
                     IsAbbasidCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
 
-                AddOption(parentMenu, "abb_opt_qadi", "{=abb_cc_qadi_name}Bağdat Kadı ve Ulema Ailesi", "{=abb_cc_qadi_desc}Ailen fıkıh ve şeriat ilminde uzman kadılar yetiştiren saygın bir ulema hanedanıdır.",
+                AddOption(parentMenu, "abb_opt_qadi", "{=abb_cc_qadi_name}Baghdad Qadi and Ulema Family", "{=abb_cc_qadi_desc}Your family is a respected line of ulema who produced expert qadis learned in fiqh and sharia.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Trade }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1100,
                     IsAbbasidCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
 
-                AddOption(parentMenu, "abb_opt_bedouin", "{=abb_cc_bedouin_name}Sahra Bedevi Kabilesi", "{=abb_cc_bedouin_desc}Irak çölünün derinliklerinde deve sürüleri güden, kum fırtınalarında yol bulmayı bilen bir Bedevi kabilesinde doğdun.",
+                AddOption(parentMenu, "abb_opt_bedouin", "{=abb_cc_bedouin_name}Desert Bedouin Tribe", "{=abb_cc_bedouin_desc}You were born into a Bedouin tribe deep in the Iraqi desert, herding camels and finding your way through sandstorms.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Bow }, 15, DefaultCharacterAttributes.Cunning, 1, 10, 500,
                     IsAbbasidCultureSelected, mgr => SetParentOccupation(mgr, "Herder"));
 
-                AddOption(parentMenu, "abb_opt_basra_merchant", "{=abb_cc_basra_merchant_name}Basra Liman Tüccarı Ailesi", "{=abb_cc_basra_merchant_desc}Basra limanından Hint Okyanusu'na açılan gemilerle baharat ve inci ticareti yapan zengin bir tüccar ailesindensin.",
+                AddOption(parentMenu, "abb_opt_basra_merchant", "{=abb_cc_basra_merchant_name}Basra Harbor Merchant Family", "{=abb_cc_basra_merchant_desc}You come from a wealthy merchant family trading spices and pearls on ships sailing from Basra into the Indian Ocean.",
                     new[] { DefaultSkills.Trade, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1200,
                     IsAbbasidCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
 
-                AddOption(parentMenu, "abb_opt_ghilman", "{=abb_cc_ghilman_name}Halife Muhafız Gulamı Soyu", "{=abb_cc_ghilman_desc}Baban Halifenin Dar-ül Hilafe'sinde nöbet tutan Türk asıllı gulam muhafızlarındandı.",
+                AddOption(parentMenu, "abb_opt_ghilman", "{=abb_cc_ghilman_name}Line of a Caliphal Ghulam Guardsman", "{=abb_cc_ghilman_desc}Your father was one of the Turkish-born ghulam guardsmen who stood watch at the Caliph's Dar al-Khilafa.",
                     new[] { DefaultSkills.Polearm, DefaultSkills.Athletics }, 15, DefaultCharacterAttributes.Control, 1, 15, 700,
                     IsAbbasidCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
             }
@@ -200,55 +200,55 @@ namespace SeljukEmpire.CharacterCreation
             if (menus.Count > 1)
             {
                 var childMenu = menus[1];
-                AddOption(childMenu, "abb_child_desert", "{=abb_cc_desert_name}Çölde Deve ve At Sürmeyi Öğrendin", "{=abb_cc_desert_desc}Bedevi akrabalarının yanında çölün acımasız güneşinde deve sürmeyi ve yıldızlarla yön bulmayı öğrendin.",
+                AddOption(childMenu, "abb_child_desert", "{=abb_cc_desert_name}You Learned to Ride Camel and Horse in the Desert", "{=abb_cc_desert_desc}Among your Bedouin kin you learned to ride camels under the merciless desert sun and navigate by the stars.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Scouting }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(childMenu, "abb_child_madrasa", "{=abb_cc_madrasa_name}Cami Medresesinde Kur'an ve Fıkıh Ezberledin", "{=abb_cc_madrasa_desc}Bağdat'ın büyük camilerinde küçük yaşta Kur'an, hadis ve fıkıh derslerine katıldın.",
+                AddOption(childMenu, "abb_child_madrasa", "{=abb_cc_madrasa_name}You Memorized the Quran and Fiqh at the Mosque School", "{=abb_cc_madrasa_desc}From a young age you attended lessons in Quran, hadith and fiqh at Baghdad's great mosques.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(childMenu, "abb_child_bazaar", "{=abb_cc_bazaar_name}Bağdat Çarşısında Ticareti Öğrendin", "{=abb_cc_bazaar_desc}Kerh çarşısının labirent gibi sokaklarında tüccarların yanında pazarlık ve mal tartmayı öğrendin.",
+                AddOption(childMenu, "abb_child_bazaar", "{=abb_cc_bazaar_name}You Learned Trade in the Bazaars of Baghdad", "{=abb_cc_bazaar_desc}In the labyrinthine streets of the Karkh bazaar you learned bargaining and weighing goods from the merchants.",
                     new[] { DefaultSkills.Trade, DefaultSkills.Steward }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(childMenu, "abb_child_wrestling", "{=abb_cc_wrestling_name}Meydanlarda Güreş ve Kılıç Talimi Yaptın", "{=abb_cc_wrestling_desc}Bağdat meydanlarında yaşıtlarınla güreşip tahta kılıçlarla dövüş oyunları oynadın.",
+                AddOption(childMenu, "abb_child_wrestling", "{=abb_cc_wrestling_name}You Trained in Wrestling and Swordplay in the Squares", "{=abb_cc_wrestling_desc}You wrestled with other children in Baghdad's squares and played at swordplay with wooden blades.",
                     new[] { DefaultSkills.OneHanded, DefaultSkills.Athletics }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
             }
 
             if (menus.Count > 2)
             {
                 var youthMenu = menus[2];
-                AddOption(youthMenu, "abb_youth_nizamiyya", "{=abb_cc_nizamiyya_name}Bağdat Nizamiye Medresesi'nde Okudun", "{=abb_cc_nizamiyya_desc}Nizam-ül Mülk'ün kurduğu ünlü Nizamiye medresesinde fıkıh, mantık ve devlet idaresi okudun.",
+                AddOption(youthMenu, "abb_youth_nizamiyya", "{=abb_cc_nizamiyya_name}You Studied at the Nizamiyya Madrasa of Baghdad", "{=abb_cc_nizamiyya_desc}At the famous Nizamiyya madrasa founded by Nizam al-Mulk, you studied fiqh, logic, and statecraft.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Leadership, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(youthMenu, "abb_youth_caravan_guard", "{=abb_cc_caravan_guard_name}Hac Kervanı Muhafızlığı Yaptın", "{=abb_cc_caravan_guard_desc}Bağdat'tan Mekke'ye giden hac kervanlarını çöl haydutlarına karşı korudun.",
+                AddOption(youthMenu, "abb_youth_caravan_guard", "{=abb_cc_caravan_guard_name}You Served as a Hajj Caravan Guard", "{=abb_cc_caravan_guard_desc}You protected pilgrim caravans traveling from Baghdad to Mecca against desert bandits.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Bow, DefaultSkills.Trade }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(youthMenu, "abb_youth_palace_guard", "{=abb_cc_palace_guard_name}Dar-ül Hilafe Muhafız Alayına Katıldın", "{=abb_cc_palace_guard_desc}Halifenin sarayında disiplinli gulam muhafızları arasında silah eğitimi aldın.",
+                AddOption(youthMenu, "abb_youth_palace_guard", "{=abb_cc_palace_guard_name}You Joined the Dar al-Khilafa Guard Regiment", "{=abb_cc_palace_guard_desc}You received weapons training among the Caliph's disciplined ghulam guardsmen at the palace.",
                     new[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Tactics }, 15, null, 0, 0, 0, IsAbbasidCultureSelected, null);
             }
 
             if (menus.Count > 3)
             {
                 var careerMenu = menus[3];
-                AddOption(careerMenu, "abb_car_ghulam_elite", "{=abb_cc_ghulam_elite_name}Halife Hassa Muhafızına Seçildin", "{=abb_cc_ghulam_elite_desc}Üstün yeteneğinle Halifenin şahsi Dar-ül Hilafe muhafız birliğine kabul edildin.",
+                AddOption(careerMenu, "abb_car_ghulam_elite", "{=abb_cc_ghulam_elite_name}You Were Chosen for the Caliph's Elite Guard", "{=abb_cc_ghulam_elite_desc}Your outstanding skill earned you a place in the Caliph's personal Dar al-Khilafa guard unit.",
                     new[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding }, 15, null, 0, 20, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(careerMenu, "abb_car_scholar", "{=abb_cc_scholar_name}Divan-ı Mezalim'de Kâtiplik Yaptın", "{=abb_cc_scholar_desc}Halifenin adalet divanında davaları kayda geçiren güvenilir bir kâtip oldun.",
+                AddOption(careerMenu, "abb_car_scholar", "{=abb_cc_scholar_name}You Served as a Clerk in the Court of Grievances", "{=abb_cc_scholar_desc}You became a trusted clerk recording cases in the Caliph's court of grievances.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Charm, DefaultSkills.Leadership }, 15, null, 0, 15, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(careerMenu, "abb_car_desert_raider", "{=abb_cc_desert_raider_name}Sahra Seferlerinde Akıncı Oldun", "{=abb_cc_desert_raider_desc}Çöl kabilelerine karşı düzeni sağlayan seferlerde ön safta çarpıştın.",
+                AddOption(careerMenu, "abb_car_desert_raider", "{=abb_cc_desert_raider_name}You Became a Raider in Desert Campaigns", "{=abb_cc_desert_raider_desc}You fought on the front line in campaigns to keep order among the desert tribes.",
                     new[] { DefaultSkills.Bow, DefaultSkills.Riding, DefaultSkills.Tactics }, 15, null, 0, 15, 0, IsAbbasidCultureSelected, null);
             }
 
             if (menus.Count > 4)
             {
                 var deedMenu = menus[4];
-                AddOption(deedMenu, "abb_deed_palace_defense", "{=abb_cc_palace_defense_name}Saray Kuşatmasında Halifeyi Korudun", "{=abb_cc_palace_defense_desc}Dar-ül Hilafe'ye yapılan bir baskında canını hiçe sayarak Halifenin muhafızları arasında öne çıktın.",
+                AddOption(deedMenu, "abb_deed_palace_defense", "{=abb_cc_palace_defense_name}You Defended the Caliph During a Siege of the Palace", "{=abb_cc_palace_defense_desc}During a raid on the Dar al-Khilafa you risked your life and stood out among the Caliph's guard.",
                     new[] { DefaultSkills.Leadership, DefaultSkills.OneHanded }, 15, null, 0, 30, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(deedMenu, "abb_deed_caravan_save", "{=abb_cc_caravan_save_name}Hac Kervanını Baskından Kurtardın", "{=abb_cc_caravan_save_desc}Çöl haydutlarının bastığı büyük bir hac kervanını tek başına savunarak hacıları kurtardın.",
+                AddOption(deedMenu, "abb_deed_caravan_save", "{=abb_cc_caravan_save_name}You Saved a Hajj Caravan from a Raid", "{=abb_cc_caravan_save_desc}You single-handedly defended a great pilgrim caravan struck by desert bandits, saving the pilgrims.",
                     new[] { DefaultSkills.Bow, DefaultSkills.Athletics }, 15, null, 0, 25, 0, IsAbbasidCultureSelected, null);
 
-                AddOption(deedMenu, "abb_deed_justice", "{=abb_cc_justice_name}Mazlumun Hakkını Kadı Önünde Savundun", "{=abb_cc_justice_desc}Haksızlığa uğrayan bir esnafın davasını kadı huzurunda cesaretle savunarak adalet sağladın.",
+                AddOption(deedMenu, "abb_deed_justice", "{=abb_cc_justice_name}You Defended the Wronged Before the Qadi", "{=abb_cc_justice_desc}You courageously defended the case of a wronged tradesman before the qadi, securing justice.",
                     new[] { DefaultSkills.Charm, DefaultSkills.Steward }, 15, null, 0, 20, 0, IsAbbasidCultureSelected, null);
             }
         }
@@ -260,23 +260,23 @@ namespace SeljukEmpire.CharacterCreation
             if (menus.Count > 0)
             {
                 var parentMenu = menus[0];
-                AddOption(parentMenu, "geo_opt_bagrationi", "{=geo_cc_bagrationi_name}Bagrationi Hanedanı Yan Kolu", "{=geo_cc_bagrationi_desc}Kraliyet Bagrationi soyunun uzak bir kolundan geliyorsun; sarayın töre ve entrikalarıyla büyüdün.",
+                AddOption(parentMenu, "geo_opt_bagrationi", "{=geo_cc_bagrationi_name}Distant Branch of the Bagrationi Dynasty", "{=geo_cc_bagrationi_desc}You come from a distant branch of the royal Bagrationi line; you grew up amid the court's customs and intrigues.",
                     new[] { DefaultSkills.Leadership, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1300,
                     IsGeorgianCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
 
-                AddOption(parentMenu, "geo_opt_aznauri", "{=geo_cc_aznauri_name}Aznauri Küçük Asilzade Ailesi", "{=geo_cc_aznauri_desc}Kafkas dağlarında toprak sahibi küçük asilzade sınıfından bir ailenin çocuğusun; ata biner, mızrak kullanırdın.",
+                AddOption(parentMenu, "geo_opt_aznauri", "{=geo_cc_aznauri_name}Aznauri Petty Noble Family", "{=geo_cc_aznauri_desc}You are the child of a landed petty-noble aznauri family in the Caucasus mountains, raised to ride and wield the spear.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Polearm }, 15, DefaultCharacterAttributes.Vigor, 1, 15, 700,
                     IsGeorgianCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
 
-                AddOption(parentMenu, "geo_opt_mountain", "{=geo_cc_mountain_name}Dağlık Vadi Savaşçısı Ailesi", "{=geo_cc_mountain_desc}Kafkasların ulaşılmaz dağ vadilerinde, kar ve kayalarla boğuşarak sertleşen bir dağ ailesinde büyüdün.",
+                AddOption(parentMenu, "geo_opt_mountain", "{=geo_cc_mountain_name}Mountain Valley Warrior Family", "{=geo_cc_mountain_desc}You grew up in an unreachable Caucasus mountain valley, hardened by wrestling snow and rock.",
                     new[] { DefaultSkills.Athletics, DefaultSkills.Bow }, 15, DefaultCharacterAttributes.Endurance, 1, 10, 500,
                     IsGeorgianCultureSelected, mgr => SetParentOccupation(mgr, "Herder"));
 
-                AddOption(parentMenu, "geo_opt_tbilisi_merchant", "{=geo_cc_tbilisi_merchant_name}Tiflis İpek Yolu Tüccarı Ailesi", "{=geo_cc_tbilisi_merchant_desc}Doğu ile Batı'yı birbirine bağlayan Tiflis pazarlarında ipek ve baharat ticareti yapan bir ailenin evladısın.",
+                AddOption(parentMenu, "geo_opt_tbilisi_merchant", "{=geo_cc_tbilisi_merchant_name}Tbilisi Silk Road Merchant Family", "{=geo_cc_tbilisi_merchant_desc}You are the child of a family trading silk and spices in the markets of Tbilisi, where East meets West.",
                     new[] { DefaultSkills.Trade, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1000,
                     IsGeorgianCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
 
-                AddOption(parentMenu, "geo_opt_monastery", "{=geo_cc_monastery_name}Manastır Akademisi Kâtip Ailesi", "{=geo_cc_monastery_desc}Ünlü bir manastır akademisinde teoloji ve felsefe kopyalayan kâtip bir ailede yetiştin.",
+                AddOption(parentMenu, "geo_opt_monastery", "{=geo_cc_monastery_name}Monastery Academy Scribe Family", "{=geo_cc_monastery_desc}You were raised in a family of scribes copying theology and philosophy at a renowned monastery academy.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Crafting }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 800,
                     IsGeorgianCultureSelected, mgr => SetParentOccupation(mgr, "Farmer"));
             }
@@ -284,55 +284,55 @@ namespace SeljukEmpire.CharacterCreation
             if (menus.Count > 1)
             {
                 var childMenu = menus[1];
-                AddOption(childMenu, "geo_child_caucasus", "{=geo_cc_caucasus_name}Kafkas Geçitlerinde At Sürdün", "{=geo_cc_caucasus_desc}Dar dağ geçitlerinde, uçurumların kenarında ata binmeyi ve dengeyi küçük yaşta öğrendin.",
+                AddOption(childMenu, "geo_child_caucasus", "{=geo_cc_caucasus_name}You Rode Through Caucasus Mountain Passes", "{=geo_cc_caucasus_desc}In narrow mountain passes, along the edge of cliffs, you learned to ride and balance at a young age.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Athletics }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(childMenu, "geo_child_falconry", "{=geo_cc_falconry_name}Şahin Eğitimi ve Ok Atışı Öğrendin", "{=geo_cc_falconry_desc}Kafkas ormanlarında şahin uçurup yay çekerek avlanmayı öğrendin.",
+                AddOption(childMenu, "geo_child_falconry", "{=geo_cc_falconry_name}You Learned Falconry and Archery", "{=geo_cc_falconry_desc}You learned to hunt in the Caucasus forests by flying falcons and drawing the bow.",
                     new[] { DefaultSkills.Bow, DefaultSkills.Scouting }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(childMenu, "geo_child_church", "{=geo_cc_church_name}Kilise Korosunda ve Manastır Okulunda Okudun", "{=geo_cc_church_desc}Ortodoks kilise korosunda ilahiler söyledin, manastır okulunda okuma yazma ve dua kitaplarını öğrendin.",
+                AddOption(childMenu, "geo_child_church", "{=geo_cc_church_name}You Sang in the Church Choir and Studied at the Monastery School", "{=geo_cc_church_desc}You sang hymns in the Orthodox church choir and learned to read and write from prayer books at the monastery school.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(childMenu, "geo_child_smithy", "{=geo_cc_smithy_name}Dağ Köyü Demirci Ocağında Çelik Dövdün", "{=geo_cc_smithy_desc}Dağ köyünün demirci ocağında ustaların yanında çelik dövmeyi ve zırh onarmayı öğrendin.",
+                AddOption(childMenu, "geo_child_smithy", "{=geo_cc_smithy_name}You Forged Steel at a Mountain Village Smithy", "{=geo_cc_smithy_desc}At the village smithy you learned to forge steel and repair armor alongside the master smiths.",
                     new[] { DefaultSkills.Crafting, DefaultSkills.Trade }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
             }
 
             if (menus.Count > 2)
             {
                 var youthMenu = menus[2];
-                AddOption(youthMenu, "geo_youth_royal_guard", "{=geo_cc_royal_guard_name}Kraliyet Muhafız Alayına Katıldın", "{=geo_cc_royal_guard_desc}Kralın saray muhafızları arasında disiplinli silah ve süvari eğitimi gördün.",
+                AddOption(youthMenu, "geo_youth_royal_guard", "{=geo_cc_royal_guard_name}You Joined the Royal Guard Regiment", "{=geo_cc_royal_guard_desc}You received disciplined weapons and cavalry training among the king's palace guard.",
                     new[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Tactics }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(youthMenu, "geo_youth_mountain_scout", "{=geo_cc_mountain_scout_name}Dağ Geçitlerinde Sınır Gözcüsü Oldun", "{=geo_cc_mountain_scout_desc}Düşman akınlarına karşı dağ geçitlerini gözetleyen öncü birliklere katıldın.",
+                AddOption(youthMenu, "geo_youth_mountain_scout", "{=geo_cc_mountain_scout_name}You Became a Border Scout in the Mountain Passes", "{=geo_cc_mountain_scout_desc}You joined the vanguard units watching the mountain passes against enemy raids.",
                     new[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Riding }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(youthMenu, "geo_youth_academy", "{=geo_cc_academy_name}Manastır Akademisi'nde Felsefe ve Retorik Okudun", "{=geo_cc_academy_desc}Kafkasların önde gelen manastır akademisinde teoloji, felsefe ve devlet yönetimi üzerine eğitim aldın.",
+                AddOption(youthMenu, "geo_youth_academy", "{=geo_cc_academy_name}You Studied Philosophy and Rhetoric at the Monastery Academy", "{=geo_cc_academy_desc}At the Caucasus's foremost monastery academy you studied theology, philosophy, and statecraft.",
                     new[] { DefaultSkills.Steward, DefaultSkills.Leadership, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsGeorgianCultureSelected, null);
             }
 
             if (menus.Count > 3)
             {
                 var careerMenu = menus[3];
-                AddOption(careerMenu, "geo_car_royal_cavalry", "{=geo_cc_royal_cavalry_name}Kraliyet Ağır Süvarisine Seçildin", "{=geo_cc_royal_cavalry_desc}Kafkas sınırındaki seferlerde savaşan seçkin kraliyet süvari alayına katıldın.",
+                AddOption(careerMenu, "geo_car_royal_cavalry", "{=geo_cc_royal_cavalry_name}You Were Chosen for the Royal Heavy Cavalry", "{=geo_cc_royal_cavalry_desc}You joined the elite royal cavalry regiment that fought in campaigns along the Caucasus frontier.",
                     new[] { DefaultSkills.Riding, DefaultSkills.Polearm, DefaultSkills.OneHanded }, 15, null, 0, 20, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(careerMenu, "geo_car_border_gazi", "{=geo_cc_border_gazi_name}Sınır Kalelerinde Deneyim Kazandın", "{=geo_cc_border_gazi_desc}Kafkas sınır kalelerinde yıllarca düşmana karşı nöbet tuttun, kuşatmalarda tecrübe kazandın.",
+                AddOption(careerMenu, "geo_car_border_gazi", "{=geo_cc_border_gazi_name}You Gained Experience in Border Fortresses", "{=geo_cc_border_gazi_desc}You stood watch for years at Caucasus border fortresses, gaining experience through many sieges.",
                     new[] { DefaultSkills.Tactics, DefaultSkills.Athletics, DefaultSkills.Bow }, 15, null, 0, 15, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(careerMenu, "geo_car_court", "{=geo_cc_court_name}Kraliyet Sarayında Hizmet Ettin", "{=geo_cc_court_desc}Tiflis sarayında kraliyet ailesine yakın bir danışman olarak görev aldın.",
+                AddOption(careerMenu, "geo_car_court", "{=geo_cc_court_name}You Served at the Royal Court", "{=geo_cc_court_desc}You served as an advisor close to the royal family at the court in Tbilisi.",
                     new[] { DefaultSkills.Charm, DefaultSkills.Steward, DefaultSkills.Leadership }, 15, null, 0, 15, 0, IsGeorgianCultureSelected, null);
             }
 
             if (menus.Count > 4)
             {
                 var deedMenu = menus[4];
-                AddOption(deedMenu, "geo_deed_battle_hero", "{=geo_cc_battle_hero_name}Büyük Bir Meydan Savaşında Kahramanlık Gösterdin", "{=geo_cc_battle_hero_desc}Büyük bir meydan savaşında düşman saflarını yararak sancaktarı devirdin.",
+                AddOption(deedMenu, "geo_deed_battle_hero", "{=geo_cc_battle_hero_name}You Showed Heroism in a Great Pitched Battle", "{=geo_cc_battle_hero_desc}In a great pitched battle you cut through enemy ranks and struck down the enemy standard-bearer.",
                     new[] { DefaultSkills.Leadership, DefaultSkills.OneHanded }, 15, null, 0, 30, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(deedMenu, "geo_deed_rescue", "{=geo_cc_rescue_name}Kuşatılan Dağ Kalesini Kurtardın", "{=geo_cc_rescue_desc}Muhasara altındaki bir dağ kalesine gizli bir geçitten yardım ulaştırıp halkı kurtardın.",
+                AddOption(deedMenu, "geo_deed_rescue", "{=geo_cc_rescue_name}You Saved a Besieged Mountain Fortress", "{=geo_cc_rescue_desc}You slipped through a secret pass to bring relief to a besieged mountain fortress, saving its people.",
                     new[] { DefaultSkills.Tactics, DefaultSkills.Scouting }, 15, null, 0, 25, 0, IsGeorgianCultureSelected, null);
 
-                AddOption(deedMenu, "geo_deed_pilgrim", "{=geo_cc_pilgrim_name}Hacılara ve Mazlumlara Kalkan Oldun", "{=geo_cc_pilgrim_desc}Kutsal topraklara giden hacı kervanlarını haydutlardan koruyarak ün kazandın.",
+                AddOption(deedMenu, "geo_deed_pilgrim", "{=geo_cc_pilgrim_name}You Became a Shield for Pilgrims and the Wronged", "{=geo_cc_pilgrim_desc}You earned renown by protecting pilgrim caravans bound for holy sites from bandits.",
                     new[] { DefaultSkills.Charm, DefaultSkills.Athletics }, 15, null, 0, 20, 0, IsGeorgianCultureSelected, null);
             }
         }

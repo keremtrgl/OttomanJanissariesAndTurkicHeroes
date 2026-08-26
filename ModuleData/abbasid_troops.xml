@@ -2,28 +2,28 @@
 <NPCCharacters>
   <!-- Abbasi (Culture.aserai) birlik agaci gercek Abbasi-donemi askeri terimleriyle yeniden adlandirildi. -->
   <!-- Ekipman/beceri/terfi zinciri Native - sadece isim degisir. -->
-  <NPCCharacter id="aserai_recruit" name="{=abb_t_recruit}Abbasi Acemisi" />
-  <NPCCharacter id="aserai_tribesman" name="{=abb_t_tribesman}Bedevi Kabile Eri" />
-  <NPCCharacter id="aserai_footman" name="{=abb_t_ayyar}Ayyâr" />
-  <NPCCharacter id="aserai_skirmisher" name="{=abb_t_skirmisher}Bedevi Avcı Okçusu" />
-  <NPCCharacter id="aserai_archer" name="{=abb_t_qawwas}Kavvâs" />
-  <NPCCharacter id="aserai_master_archer" name="{=abb_t_master_qawwas}Usta Kavvâs" />
-  <NPCCharacter id="aserai_infantry" name="{=abb_t_hashimiyya}Hâşimiyye Piyadesi" />
-  <NPCCharacter id="aserai_veteran_infantry" name="{=abb_t_veteran_hashimiyya}Kıdemli Hâşimiyye Piyadesi" />
-  <NPCCharacter id="aserai_mameluke_soldier" name="{=abb_t_ghulam}Gulâm" />
-  <NPCCharacter id="aserai_mameluke_regular" name="{=abb_t_ghulam_regular}Gulâm Eri" />
-  <NPCCharacter id="aserai_mameluke_cavalry" name="{=abb_t_ghulam_horseman}Gulâm Süvarisi" />
-  <NPCCharacter id="aserai_mameluke_heavy_cavalry" name="{=abb_t_ghulam_lancer}Gulâm Mızraklı Süvari" />
-  <NPCCharacter id="aserai_mameluke_axeman" name="{=abb_t_ghulam_axeman}Gulâm Baltacısı" />
-  <NPCCharacter id="aserai_mameluke_guard" name="{=abb_t_hujariyya}Hucâriyye Muhafızı" />
-  <NPCCharacter id="mamluke_palace_guard" name="{=abb_t_dar_alkhilafa}Dârü'l-Hilâfe Muhafızı" />
-  <NPCCharacter id="aserai_youth" name="{=abb_t_ghilman}Gılmân Acemisi" />
-  <NPCCharacter id="aserai_tribal_horseman" name="{=abb_t_bedouin_horseman}Bedevi Atlısı" />
-  <NPCCharacter id="aserai_faris" name="{=abb_t_faris}Fâris" />
-  <NPCCharacter id="aserai_veteran_faris" name="{=abb_t_veteran_faris}Kıdemli Fâris" />
-  <NPCCharacter id="aserai_vanguard_faris" name="{=abb_t_vanguard_faris}Fâris el-Mukaddime" />
-  <NPCCharacter id="aserai_militia_archer" name="{=abb_t_militia_archer}Bağdat Milis Okçusu" />
-  <NPCCharacter id="aserai_militia_veteran_archer" name="{=abb_t_militia_vet_archer}Bağdat Kıdemli Milis Okçusu" />
-  <NPCCharacter id="aserai_militia_spearman" name="{=abb_t_militia_spearman}Bağdat Milis Mızrakçısı" />
-  <NPCCharacter id="aserai_militia_veteran_spearman" name="{=abb_t_militia_vet_spearman}Bağdat Kıdemli Milis Mızrakçısı" />
+  <NPCCharacter id="aserai_recruit" name="{=abb_t_recruit}Abbasid Recruit" />
+  <NPCCharacter id="aserai_tribesman" name="{=abb_t_tribesman}Bedouin Tribesman" />
+  <NPCCharacter id="aserai_footman" name="{=abb_t_ayyar}Ayyar" />
+  <NPCCharacter id="aserai_skirmisher" name="{=abb_t_skirmisher}Bedouin Skirmisher" />
+  <NPCCharacter id="aserai_archer" name="{=abb_t_qawwas}Qawwas" />
+  <NPCCharacter id="aserai_master_archer" name="{=abb_t_master_qawwas}Master Qawwas" />
+  <NPCCharacter id="aserai_infantry" name="{=abb_t_hashimiyya}Hashimiyya Infantry" />
+  <NPCCharacter id="aserai_veteran_infantry" name="{=abb_t_veteran_hashimiyya}Veteran Hashimiyya" />
+  <NPCCharacter id="aserai_mameluke_soldier" name="{=abb_t_ghulam}Ghulam" />
+  <NPCCharacter id="aserai_mameluke_regular" name="{=abb_t_ghulam_regular}Ghulam Regular" />
+  <NPCCharacter id="aserai_mameluke_cavalry" name="{=abb_t_ghulam_horseman}Ghulam Horseman" />
+  <NPCCharacter id="aserai_mameluke_heavy_cavalry" name="{=abb_t_ghulam_lancer}Ghulam Lancer" />
+  <NPCCharacter id="aserai_mameluke_axeman" name="{=abb_t_ghulam_axeman}Ghulam Axeman" />
+  <NPCCharacter id="aserai_mameluke_guard" name="{=abb_t_hujariyya}Hujariyya Guard" />
+  <NPCCharacter id="mamluke_palace_guard" name="{=abb_t_dar_alkhilafa}Dar al-Khilafa Guard" />
+  <NPCCharacter id="aserai_youth" name="{=abb_t_ghilman}Ghilman Recruit" />
+  <NPCCharacter id="aserai_tribal_horseman" name="{=abb_t_bedouin_horseman}Bedouin Horseman" />
+  <NPCCharacter id="aserai_faris" name="{=abb_t_faris}Faris" />
+  <NPCCharacter id="aserai_veteran_faris" name="{=abb_t_veteran_faris}Veteran Faris" />
+  <NPCCharacter id="aserai_vanguard_faris" name="{=abb_t_vanguard_faris}Faris al-Muqaddima" />
+  <NPCCharacter id="aserai_militia_archer" name="{=abb_t_militia_archer}Baghdad Militia Archer" />
+  <NPCCharacter id="aserai_militia_veteran_archer" name="{=abb_t_militia_vet_archer}Baghdad Veteran Militia Archer" />
+  <NPCCharacter id="aserai_militia_spearman" name="{=abb_t_militia_spearman}Baghdad Militia Spearman" />
+  <NPCCharacter id="aserai_militia_veteran_spearman" name="{=abb_t_militia_vet_spearman}Baghdad Veteran Militia Spearman" />
 </NPCCharacters>

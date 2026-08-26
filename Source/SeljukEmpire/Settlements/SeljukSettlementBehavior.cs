@@ -57,15 +57,15 @@ namespace SeljukEmpire.Settlements
             {
                 // Towns
                 RenameSettlement(Settlement.Find("town_ES1"), "{=seljuk_town_danustica}Konya");
-                RenameSettlement(Settlement.Find("town_A2"), "{=seljuk_town_husnfulq}Söğüt");
-                RenameSettlement(Settlement.Find("town_ES2"), "{=seljuk_town_isfahan}İsfahan");
-                RenameSettlement(Settlement.Find("town_A4"), "{=seljuk_town_nisabur}Nişabur");
+                RenameSettlement(Settlement.Find("town_A2"), "{=seljuk_town_husnfulq}Sogut");
+                RenameSettlement(Settlement.Find("town_ES2"), "{=seljuk_town_isfahan}Isfahan");
+                RenameSettlement(Settlement.Find("town_A4"), "{=seljuk_town_nisabur}Nishapur");
 
                 // Castles
-                RenameSettlement(Settlement.Find("castle_ES4"), "{=seljuk_castle_lavenia}Lavenia Kalesi");
-                RenameSettlement(Settlement.Find("castle_A6"), "{=seljuk_castle_shibalzumr}Şibal Zümr Kalesi");
-                RenameSettlement(Settlement.Find("castle_ES5"), "{=seljuk_castle_morenia}Morenia Kalesi");
-                RenameSettlement(Settlement.Find("castle_A8"), "{=seljuk_castle_rey}Rey Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES4"), "{=seljuk_castle_lavenia}Lavenia Castle");
+                RenameSettlement(Settlement.Find("castle_A6"), "{=seljuk_castle_shibalzumr}Shibal Zumr Castle");
+                RenameSettlement(Settlement.Find("castle_ES5"), "{=seljuk_castle_morenia}Morenia Castle");
+                RenameSettlement(Settlement.Find("castle_A8"), "{=seljuk_castle_rey}Rey Castle");
 
                 // Konya villages
                 RenameSettlement(Settlement.Find("village_ES1_2"), "{=seljuk_vil_polisia}Meram");
@@ -73,27 +73,27 @@ namespace SeljukEmpire.Settlements
                 RenameSettlement(Settlement.Find("village_ES1_4"), "{=seljuk_vil_erebulos}Karatay");
 
                 // Söğüt villages
-                RenameSettlement(Settlement.Find("village_A2_2"), "{=seljuk_vil_abukhih}Domaniç");
-                RenameSettlement(Settlement.Find("village_A2_3"), "{=seljuk_vil_hoqqa}Bozüyük");
+                RenameSettlement(Settlement.Find("village_A2_2"), "{=seljuk_vil_abukhih}Domanic");
+                RenameSettlement(Settlement.Find("village_A2_3"), "{=seljuk_vil_hoqqa}Bozuyuk");
 
                 // Castle villages
                 RenameSettlement(Settlement.Find("castle_village_ES4_1"), "{=seljuk_vil_lavenia}Lavenia");
-                RenameSettlement(Settlement.Find("castle_village_A6_1"), "{=seljuk_vil_shibalzumr}Şibal Zümr");
+                RenameSettlement(Settlement.Find("castle_village_A6_1"), "{=seljuk_vil_shibalzumr}Shibal Zumr");
                 RenameSettlement(Settlement.Find("castle_village_ES5_1"), "{=seljuk_vil_morenia}Morenia");
 
                 // İsfahan villages
-                RenameSettlement(Settlement.Find("village_ES2_2"), "{=seljuk_vil_cuybare}Cûybâre");
+                RenameSettlement(Settlement.Find("village_ES2_2"), "{=seljuk_vil_cuybare}Juybareh");
                 RenameSettlement(Settlement.Find("village_ES2_3"), "{=seljuk_vil_lenban}Lenban");
                 RenameSettlement(Settlement.Find("village_ES2_4"), "{=seljuk_vil_hasanabad}Hasanabad");
 
                 // Nişabur villages
                 RenameSettlement(Settlement.Find("village_A4_1"), "{=seljuk_vil_bostanabad}Bostanabad");
-                RenameSettlement(Settlement.Find("village_A4_2"), "{=seljuk_vil_sadyah}Şadyah");
-                RenameSettlement(Settlement.Find("village_A4_4"), "{=seljuk_vil_kohandiz}Kohandiz");
+                RenameSettlement(Settlement.Find("village_A4_2"), "{=seljuk_vil_sadyah}Shadyakh");
+                RenameSettlement(Settlement.Find("village_A4_4"), "{=seljuk_vil_kohandiz}Kohandezh");
 
                 // Rey Kalesi villages
-                RenameSettlement(Settlement.Find("castle_village_A8_1"), "{=seljuk_vil_cesmedeh}Çeşmedeh");
-                RenameSettlement(Settlement.Find("castle_village_A8_2"), "{=seljuk_vil_veramin}Veramin");
+                RenameSettlement(Settlement.Find("castle_village_A8_1"), "{=seljuk_vil_cesmedeh}Cheshmedeh");
+                RenameSettlement(Settlement.Find("castle_village_A8_2"), "{=seljuk_vil_veramin}Varamin");
 
                 // Byzantine, Abbasid and Georgian settlements/villages are declared purely via
                 // XML overrides (byzantine_settlements.xml / abbasid_settlements.xml /
@@ -103,7 +103,7 @@ namespace SeljukEmpire.Settlements
                 // on the XML override alone.
 
                 // --- Byzantine (35 settlements/villages) ---
-                RenameSettlement(Settlement.Find("town_ES4"), "{=byz_s_ankara}Ankara");
+                RenameSettlement(Settlement.Find("town_ES4"), "{=byz_s_ankara}Ancyra");
                 RenameSettlement(Settlement.Find("village_ES4_1"), "{=byz_v_juliopolis}Iuliopolis");
                 RenameSettlement(Settlement.Find("village_ES4_3"), "{=byz_v_germa}Germa");
                 RenameSettlement(Settlement.Find("town_ES5"), "{=byz_s_amaseia}Amaseia");
@@ -122,117 +122,117 @@ namespace SeljukEmpire.Settlements
                 RenameSettlement(Settlement.Find("village_ES7_1"), "{=byz_v_rhizaion}Rhizaion");
                 RenameSettlement(Settlement.Find("village_ES7_2"), "{=byz_v_kerasous}Kerasous");
                 RenameSettlement(Settlement.Find("castle_village_ES7_2"), "{=byz_v_eunalica2}Susurmena");
-                RenameSettlement(Settlement.Find("castle_ES1"), "{=byz_c_dorylaeum}Dorylaeum Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES1"), "{=byz_c_dorylaeum}Dorylaeum Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES1_1"), "{=byz_v_nakoleia}Nakoleia");
                 RenameSettlement(Settlement.Find("castle_village_ES1_2"), "{=byz_v_midaion}Midaion");
-                RenameSettlement(Settlement.Find("castle_ES2"), "{=byz_c_nicomedia}Nicomedia Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES2"), "{=byz_c_nicomedia}Nicomedia Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES2_1"), "{=byz_v_chalcedon}Chalcedon");
                 RenameSettlement(Settlement.Find("castle_village_ES2_2"), "{=byz_v_prainetos}Prainetos");
-                RenameSettlement(Settlement.Find("castle_ES3"), "{=byz_c_chonae}Chonae Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES3"), "{=byz_c_chonae}Chonae Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES3_1"), "{=byz_v_laodicea}Laodicea");
                 RenameSettlement(Settlement.Find("castle_village_ES3_2"), "{=byz_v_colossae}Colossae");
-                RenameSettlement(Settlement.Find("castle_ES6"), "{=byz_c_claudiopolis}Claudiopolis Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES6"), "{=byz_c_claudiopolis}Claudiopolis Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES6_1"), "{=byz_v_gangra}Gangra");
-                RenameSettlement(Settlement.Find("castle_ES7"), "{=byz_c_neocaesarea}Neocaesarea Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES7"), "{=byz_c_neocaesarea}Neocaesarea Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES7_1"), "{=byz_v_comana}Comana");
-                RenameSettlement(Settlement.Find("castle_ES8"), "{=byz_c_caesarea}Caesarea Kalesi");
+                RenameSettlement(Settlement.Find("castle_ES8"), "{=byz_c_caesarea}Caesarea Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES8_1"), "{=byz_v_tyana}Tyana");
                 RenameSettlement(Settlement.Find("castle_village_ES8_2"), "{=byz_v_nazianzus}Nazianzus");
 
                 // --- Abbasid (44 settlements/villages) ---
-                RenameSettlement(Settlement.Find("town_A1"), "{=abb_s_baghdad}Bağdat");
-                RenameSettlement(Settlement.Find("village_A1_1"), "{=abb_v_qutrabbul}Kutrabbul");
-                RenameSettlement(Settlement.Find("village_A1_2"), "{=abb_v_babalsham}Bâbüşşâm");
-                RenameSettlement(Settlement.Find("village_A1_4"), "{=abb_v_awana}Avâna");
+                RenameSettlement(Settlement.Find("town_A1"), "{=abb_s_baghdad}Baghdad");
+                RenameSettlement(Settlement.Find("village_A1_1"), "{=abb_v_qutrabbul}Qutrabbul");
+                RenameSettlement(Settlement.Find("village_A1_2"), "{=abb_v_babalsham}Bab al-Sham");
+                RenameSettlement(Settlement.Find("village_A1_4"), "{=abb_v_awana}Awana");
                 RenameSettlement(Settlement.Find("town_A3"), "{=abb_s_basra}Basra");
-                RenameSettlement(Settlement.Find("village_A3_1"), "{=abb_v_ubulla}Übülle");
-                RenameSettlement(Settlement.Find("village_A3_3"), "{=abb_v_abbadan}Abbâdân");
-                RenameSettlement(Settlement.Find("town_A5"), "{=abb_s_kufa}Küfe");
-                RenameSettlement(Settlement.Find("village_A5_1"), "{=abb_v_hira}Hîre");
-                RenameSettlement(Settlement.Find("village_A5_2"), "{=abb_v_najaf}Necef");
-                RenameSettlement(Settlement.Find("village_A5_3"), "{=abb_v_qadisiyyah}Kâdisiye");
-                RenameSettlement(Settlement.Find("town_A6"), "{=abb_s_mosul}Musul");
-                RenameSettlement(Settlement.Find("village_A6_1"), "{=abb_v_sinjar}Sincar");
+                RenameSettlement(Settlement.Find("village_A3_1"), "{=abb_v_ubulla}Ubulla");
+                RenameSettlement(Settlement.Find("village_A3_3"), "{=abb_v_abbadan}Abbadan");
+                RenameSettlement(Settlement.Find("town_A5"), "{=abb_s_kufa}Kufa");
+                RenameSettlement(Settlement.Find("village_A5_1"), "{=abb_v_hira}Hira");
+                RenameSettlement(Settlement.Find("village_A5_2"), "{=abb_v_najaf}Najaf");
+                RenameSettlement(Settlement.Find("village_A5_3"), "{=abb_v_qadisiyyah}Qadisiyyah");
+                RenameSettlement(Settlement.Find("town_A6"), "{=abb_s_mosul}Mosul");
+                RenameSettlement(Settlement.Find("village_A6_1"), "{=abb_v_sinjar}Sinjar");
                 RenameSettlement(Settlement.Find("village_A6_2"), "{=abb_v_balad}Balad");
-                RenameSettlement(Settlement.Find("village_A6_3"), "{=abb_v_tellafar}Tell Afer");
-                RenameSettlement(Settlement.Find("village_A6_4"), "{=abb_v_nineveh}Ninova");
-                RenameSettlement(Settlement.Find("town_A7"), "{=abb_s_wasit}Vâsıt");
-                RenameSettlement(Settlement.Find("village_A7_2"), "{=abb_v_numaniyya}Nu'mâniye");
-                RenameSettlement(Settlement.Find("village_A7_3"), "{=abb_v_jarjaraya}Cercerâyâ");
-                RenameSettlement(Settlement.Find("village_A7_4"), "{=abb_v_dayralaqul}Deyrü'l-Akûl");
-                RenameSettlement(Settlement.Find("town_A8"), "{=abb_s_samarra}Sâmerrâ");
-                RenameSettlement(Settlement.Find("village_A8_1"), "{=abb_v_daquqa}Dakûka");
-                RenameSettlement(Settlement.Find("village_A8_2"), "{=abb_v_harba}Harbâ");
-                RenameSettlement(Settlement.Find("castle_A1"), "{=abb_c_anbar}Enbâr Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A1_1"), "{=abb_v_falluja}Fellûce");
-                RenameSettlement(Settlement.Find("castle_village_A1_2"), "{=abb_v_sura}Sûrâ");
-                RenameSettlement(Settlement.Find("castle_A2"), "{=abb_c_hit}Hît Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A2_1"), "{=abb_v_hadithah}Hadîse");
-                RenameSettlement(Settlement.Find("castle_village_A2_2"), "{=abb_v_alus}Âlûs");
-                RenameSettlement(Settlement.Find("castle_A3"), "{=abb_c_tikrit}Tikrît Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A3_1"), "{=abb_v_dur}Ed-Devr");
-                RenameSettlement(Settlement.Find("castle_village_A3_2"), "{=abb_v_sinn}Sinn Barîmmâ");
-                RenameSettlement(Settlement.Find("castle_A4"), "{=abb_c_rahba}Rahbe Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A4_1"), "{=abb_v_raqqa}Rakka");
-                RenameSettlement(Settlement.Find("castle_village_A4_2"), "{=abb_v_qarqisiya}Karkîsiyâ");
-                RenameSettlement(Settlement.Find("castle_A5"), "{=abb_c_ana}Âne Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A5_1"), "{=abb_v_rawa}Râve");
-                RenameSettlement(Settlement.Find("castle_village_A5_2"), "{=abb_v_baqubah}Bakuba");
-                RenameSettlement(Settlement.Find("castle_A7"), "{=abb_c_nahrawan}Nehrevân Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A7_1"), "{=abb_v_jalula}Celûlâ");
-                RenameSettlement(Settlement.Find("castle_village_A7_2"), "{=abb_v_khaniqin}Hanikin");
-                RenameSettlement(Settlement.Find("castle_A9"), "{=abb_c_ukbara}Ukbera Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_A9_1"), "{=abb_v_dujayl}Dûceyl");
+                RenameSettlement(Settlement.Find("village_A6_3"), "{=abb_v_tellafar}Tell Afar");
+                RenameSettlement(Settlement.Find("village_A6_4"), "{=abb_v_nineveh}Nineveh");
+                RenameSettlement(Settlement.Find("town_A7"), "{=abb_s_wasit}Wasit");
+                RenameSettlement(Settlement.Find("village_A7_2"), "{=abb_v_numaniyya}Nu'maniyya");
+                RenameSettlement(Settlement.Find("village_A7_3"), "{=abb_v_jarjaraya}Jarjaraya");
+                RenameSettlement(Settlement.Find("village_A7_4"), "{=abb_v_dayralaqul}Dayr al-Aqul");
+                RenameSettlement(Settlement.Find("town_A8"), "{=abb_s_samarra}Samarra");
+                RenameSettlement(Settlement.Find("village_A8_1"), "{=abb_v_daquqa}Daquqa");
+                RenameSettlement(Settlement.Find("village_A8_2"), "{=abb_v_harba}Harba");
+                RenameSettlement(Settlement.Find("castle_A1"), "{=abb_c_anbar}Anbar Castle");
+                RenameSettlement(Settlement.Find("castle_village_A1_1"), "{=abb_v_falluja}Falluja");
+                RenameSettlement(Settlement.Find("castle_village_A1_2"), "{=abb_v_sura}Sura");
+                RenameSettlement(Settlement.Find("castle_A2"), "{=abb_c_hit}Hit Castle");
+                RenameSettlement(Settlement.Find("castle_village_A2_1"), "{=abb_v_hadithah}Hadithah");
+                RenameSettlement(Settlement.Find("castle_village_A2_2"), "{=abb_v_alus}Alus");
+                RenameSettlement(Settlement.Find("castle_A3"), "{=abb_c_tikrit}Tikrit Castle");
+                RenameSettlement(Settlement.Find("castle_village_A3_1"), "{=abb_v_dur}Ad-Dur");
+                RenameSettlement(Settlement.Find("castle_village_A3_2"), "{=abb_v_sinn}Sinn Barimma");
+                RenameSettlement(Settlement.Find("castle_A4"), "{=abb_c_rahba}Rahba Castle");
+                RenameSettlement(Settlement.Find("castle_village_A4_1"), "{=abb_v_raqqa}Raqqa");
+                RenameSettlement(Settlement.Find("castle_village_A4_2"), "{=abb_v_qarqisiya}Qarqisiya");
+                RenameSettlement(Settlement.Find("castle_A5"), "{=abb_c_ana}Ana Castle");
+                RenameSettlement(Settlement.Find("castle_village_A5_1"), "{=abb_v_rawa}Rawa");
+                RenameSettlement(Settlement.Find("castle_village_A5_2"), "{=abb_v_baqubah}Baqubah");
+                RenameSettlement(Settlement.Find("castle_A7"), "{=abb_c_nahrawan}Nahrawan Castle");
+                RenameSettlement(Settlement.Find("castle_village_A7_1"), "{=abb_v_jalula}Jalula");
+                RenameSettlement(Settlement.Find("castle_village_A7_2"), "{=abb_v_khaniqin}Khaniqin");
+                RenameSettlement(Settlement.Find("castle_A9"), "{=abb_c_ukbara}Ukbara Castle");
+                RenameSettlement(Settlement.Find("castle_village_A9_1"), "{=abb_v_dujayl}Dujayl");
                 RenameSettlement(Settlement.Find("castle_village_A9_2"), "{=abb_v_maskin}Maskin");
 
                 // --- Georgian (47 settlements/villages) ---
                 RenameSettlement(Settlement.Find("town_S1"), "{=geo_s_kutaisi}Kutaisi");
                 RenameSettlement(Settlement.Find("village_S1_1"), "{=geo_v_nokalakevi}Nokalakevi");
-                RenameSettlement(Settlement.Find("village_S1_3"), "{=geo_v_vardtsikhe}Vardtsihe");
-                RenameSettlement(Settlement.Find("town_S2"), "{=geo_s_tbilisi}Tiflis");
-                RenameSettlement(Settlement.Find("village_S2_1"), "{=geo_v_mtskheta}Mtsheta");
+                RenameSettlement(Settlement.Find("village_S1_3"), "{=geo_v_vardtsikhe}Vardtsikhe");
+                RenameSettlement(Settlement.Find("town_S2"), "{=geo_s_tbilisi}Tbilisi");
+                RenameSettlement(Settlement.Find("village_S2_1"), "{=geo_v_mtskheta}Mtskheta");
                 RenameSettlement(Settlement.Find("village_S2_2"), "{=geo_v_rustavi}Rustavi");
                 RenameSettlement(Settlement.Find("town_S3"), "{=geo_s_kldekari}Kldekari");
                 RenameSettlement(Settlement.Find("village_S3_1"), "{=geo_v_trialeti}Trialeti");
                 RenameSettlement(Settlement.Find("village_S3_2"), "{=geo_v_manglisi}Manglisi");
                 RenameSettlement(Settlement.Find("town_S4"), "{=geo_s_telavi}Telavi");
-                RenameSettlement(Settlement.Find("village_S4_1"), "{=geo_v_ikalto}İkalto");
+                RenameSettlement(Settlement.Find("village_S4_1"), "{=geo_v_ikalto}Ikalto");
                 RenameSettlement(Settlement.Find("village_S4_3"), "{=geo_v_alaverdi}Alaverdi");
                 RenameSettlement(Settlement.Find("village_S4_4"), "{=geo_v_nekresi}Nekresi");
                 RenameSettlement(Settlement.Find("town_S5"), "{=geo_s_lore}Lore");
                 RenameSettlement(Settlement.Find("village_S5_1"), "{=geo_v_kaladzori}Kaladzori");
-                RenameSettlement(Settlement.Find("village_S5_2"), "{=geo_v_tashir}Taşir");
-                RenameSettlement(Settlement.Find("town_S6"), "{=geo_s_chqondidi}Çkondidi");
-                RenameSettlement(Settlement.Find("village_S6_1"), "{=geo_v_anakopia}Anakopya");
-                RenameSettlement(Settlement.Find("village_S6_2"), "{=geo_v_bichvinta}Bıçvinta");
-                RenameSettlement(Settlement.Find("village_S6_3"), "{=geo_v_sokhumi}Sohumi");
-                RenameSettlement(Settlement.Find("town_S7"), "{=geo_s_khornabuji}Hornabuci");
+                RenameSettlement(Settlement.Find("village_S5_2"), "{=geo_v_tashir}Tashir");
+                RenameSettlement(Settlement.Find("town_S6"), "{=geo_s_chqondidi}Chqondidi");
+                RenameSettlement(Settlement.Find("village_S6_1"), "{=geo_v_anakopia}Anakopia");
+                RenameSettlement(Settlement.Find("village_S6_2"), "{=geo_v_bichvinta}Bichvinta");
+                RenameSettlement(Settlement.Find("village_S6_3"), "{=geo_v_sokhumi}Sokhumi");
+                RenameSettlement(Settlement.Find("town_S7"), "{=geo_s_khornabuji}Khornabuji");
                 RenameSettlement(Settlement.Find("village_S7_1"), "{=geo_v_bodbe}Bodbe");
                 RenameSettlement(Settlement.Find("village_S7_2"), "{=geo_v_vejini}Vejini");
-                RenameSettlement(Settlement.Find("castle_S1"), "{=geo_c_gori}Gori Kalesi");
+                RenameSettlement(Settlement.Find("castle_S1"), "{=geo_c_gori}Gori Castle");
                 RenameSettlement(Settlement.Find("castle_village_S1_1"), "{=geo_v_ateni}Ateni");
-                RenameSettlement(Settlement.Find("castle_village_S1_2"), "{=geo_v_uplistsikhe}Uplistsihe");
-                RenameSettlement(Settlement.Find("castle_S2"), "{=geo_c_dmanisi}Dmanisi Kalesi");
+                RenameSettlement(Settlement.Find("castle_village_S1_2"), "{=geo_v_uplistsikhe}Uplistsikhe");
+                RenameSettlement(Settlement.Find("castle_S2"), "{=geo_c_dmanisi}Dmanisi Castle");
                 RenameSettlement(Settlement.Find("castle_village_S2_1"), "{=geo_v_bolnisi}Bolnisi");
                 RenameSettlement(Settlement.Find("castle_village_S2_2"), "{=geo_v_tsalka}Tsalka");
-                RenameSettlement(Settlement.Find("castle_S3"), "{=geo_c_samshvilde}Samşvilde Kalesi");
+                RenameSettlement(Settlement.Find("castle_S3"), "{=geo_c_samshvilde}Samshvilde Castle");
                 RenameSettlement(Settlement.Find("castle_village_S3_1"), "{=geo_v_orbeti}Orbeti");
                 RenameSettlement(Settlement.Find("castle_village_S3_2"), "{=geo_v_tsintskaro}Tsintskaro");
-                RenameSettlement(Settlement.Find("castle_S4"), "{=geo_c_zedazeni}Zedazeni Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_S4_1"), "{=geo_v_mukhrani}Muhrani");
+                RenameSettlement(Settlement.Find("castle_S4"), "{=geo_c_zedazeni}Zedazeni Castle");
+                RenameSettlement(Settlement.Find("castle_village_S4_1"), "{=geo_v_mukhrani}Mukhrani");
                 RenameSettlement(Settlement.Find("castle_village_S4_2"), "{=geo_v_tsromi}Tsromi");
-                RenameSettlement(Settlement.Find("castle_S5"), "{=geo_c_manavi}Manavi Kalesi");
+                RenameSettlement(Settlement.Find("castle_S5"), "{=geo_c_manavi}Manavi Castle");
                 RenameSettlement(Settlement.Find("castle_village_S5_1"), "{=geo_v_kvareli}Kvareli");
-                RenameSettlement(Settlement.Find("castle_village_S5_2"), "{=geo_v_akhmeta}Ahmeta");
-                RenameSettlement(Settlement.Find("castle_S6"), "{=geo_c_kojori}Kojori Kalesi");
+                RenameSettlement(Settlement.Find("castle_village_S5_2"), "{=geo_v_akhmeta}Akhmeta");
+                RenameSettlement(Settlement.Find("castle_S6"), "{=geo_c_kojori}Kojori Castle");
                 RenameSettlement(Settlement.Find("castle_village_S6_1"), "{=geo_v_betania}Betania");
-                RenameSettlement(Settlement.Find("castle_village_S6_2"), "{=geo_v_tabakhmela}Tabahmela");
-                RenameSettlement(Settlement.Find("castle_S7"), "{=geo_c_artanuji}Artanuci Kalesi");
+                RenameSettlement(Settlement.Find("castle_village_S6_2"), "{=geo_v_tabakhmela}Tabakhmela");
+                RenameSettlement(Settlement.Find("castle_S7"), "{=geo_c_artanuji}Artanuji Castle");
                 RenameSettlement(Settlement.Find("castle_village_S7_1"), "{=geo_v_oltisi}Oltisi");
-                RenameSettlement(Settlement.Find("castle_village_S7_2"), "{=geo_v_shavsheti}Şavşeti");
-                RenameSettlement(Settlement.Find("castle_S8"), "{=geo_c_tmogvi}Tmogvi Kalesi");
-                RenameSettlement(Settlement.Find("castle_village_S8_1"), "{=geo_v_akhaltsikhe}Ahaltsihe");
-                RenameSettlement(Settlement.Find("castle_village_S8_2"), "{=geo_v_khertvisi}Hertvisi");
+                RenameSettlement(Settlement.Find("castle_village_S7_2"), "{=geo_v_shavsheti}Shavsheti");
+                RenameSettlement(Settlement.Find("castle_S8"), "{=geo_c_tmogvi}Tmogvi Castle");
+                RenameSettlement(Settlement.Find("castle_village_S8_1"), "{=geo_v_akhaltsikhe}Akhaltsikhe");
+                RenameSettlement(Settlement.Find("castle_village_S8_2"), "{=geo_v_khertvisi}Khertvisi");
             }
             catch (Exception)
             {
@@ -313,17 +313,17 @@ namespace SeljukEmpire.Settlements
                 // 1. TOWNS (ŞEHİRLER)
                 // =====================================================================
                 SetupTown("town_ES1", "clan_seljuk_royal", "{=seljuk_town_danustica}Konya", 7800f);
-                SetupTown("town_A2", "clan_kayi_oguz", "{=seljuk_town_husnfulq}Söğüt", 6600f);
-                SetupTown("town_ES2", "clan_seljuk_royal", "{=seljuk_town_isfahan}İsfahan", 7200f);
-                SetupTown("town_A4", "clan_seljuk_royal", "{=seljuk_town_nisabur}Nişabur", 6800f);
+                SetupTown("town_A2", "clan_kayi_oguz", "{=seljuk_town_husnfulq}Sogut", 6600f);
+                SetupTown("town_ES2", "clan_seljuk_royal", "{=seljuk_town_isfahan}Isfahan", 7200f);
+                SetupTown("town_A4", "clan_seljuk_royal", "{=seljuk_town_nisabur}Nishapur", 6800f);
 
                 // =====================================================================
                 // 2. CASTLES (KALELER)
                 // =====================================================================
-                SetupCastle("castle_ES4", "clan_danismend", "{=seljuk_castle_lavenia}Lavenia Kalesi");
-                SetupCastle("castle_A6", "clan_artuk", "{=seljuk_castle_shibalzumr}Şibal Zümr Kalesi");
-                SetupCastle("castle_ES5", "clan_ahlatsah", "{=seljuk_castle_morenia}Morenia Kalesi");
-                SetupCastle("castle_A8", "clan_seljuk_royal", "{=seljuk_castle_rey}Rey Kalesi");
+                SetupCastle("castle_ES4", "clan_danismend", "{=seljuk_castle_lavenia}Lavenia Castle");
+                SetupCastle("castle_A6", "clan_artuk", "{=seljuk_castle_shibalzumr}Shibal Zumr Castle");
+                SetupCastle("castle_ES5", "clan_ahlatsah", "{=seljuk_castle_morenia}Morenia Castle");
+                SetupCastle("castle_A8", "clan_seljuk_royal", "{=seljuk_castle_rey}Rey Castle");
 
                 // =====================================================================
                 // 3. VILLAGES (KÖYLER)
@@ -334,27 +334,27 @@ namespace SeljukEmpire.Settlements
                 SetupVillage("village_ES1_4", "{=seljuk_vil_erebulos}Karatay");
 
                 // Söğüt Villages
-                SetupVillage("village_A2_2", "{=seljuk_vil_abukhih}Domaniç");
-                SetupVillage("village_A2_3", "{=seljuk_vil_hoqqa}Bozüyük");
+                SetupVillage("village_A2_2", "{=seljuk_vil_abukhih}Domanic");
+                SetupVillage("village_A2_3", "{=seljuk_vil_hoqqa}Bozuyuk");
 
                 // Castle Villages
                 SetupVillage("castle_village_ES4_1", "{=seljuk_vil_lavenia}Lavenia");
-                SetupVillage("castle_village_A6_1", "{=seljuk_vil_shibalzumr}Şibal Zümr");
+                SetupVillage("castle_village_A6_1", "{=seljuk_vil_shibalzumr}Shibal Zumr");
                 SetupVillage("castle_village_ES5_1", "{=seljuk_vil_morenia}Morenia");
 
                 // İsfahan Villages
-                SetupVillage("village_ES2_2", "{=seljuk_vil_cuybare}Cûybâre");
+                SetupVillage("village_ES2_2", "{=seljuk_vil_cuybare}Juybareh");
                 SetupVillage("village_ES2_3", "{=seljuk_vil_lenban}Lenban");
                 SetupVillage("village_ES2_4", "{=seljuk_vil_hasanabad}Hasanabad");
 
                 // Nişabur Villages
                 SetupVillage("village_A4_1", "{=seljuk_vil_bostanabad}Bostanabad");
-                SetupVillage("village_A4_2", "{=seljuk_vil_sadyah}Şadyah");
-                SetupVillage("village_A4_4", "{=seljuk_vil_kohandiz}Kohandiz");
+                SetupVillage("village_A4_2", "{=seljuk_vil_sadyah}Shadyakh");
+                SetupVillage("village_A4_4", "{=seljuk_vil_kohandiz}Kohandezh");
 
                 // Rey Kalesi Villages
-                SetupVillage("castle_village_A8_1", "{=seljuk_vil_cesmedeh}Çeşmedeh");
-                SetupVillage("castle_village_A8_2", "{=seljuk_vil_veramin}Veramin");
+                SetupVillage("castle_village_A8_1", "{=seljuk_vil_cesmedeh}Cheshmedeh");
+                SetupVillage("castle_village_A8_2", "{=seljuk_vil_veramin}Varamin");
 
                 // =====================================================================
                 // 4. THIN-CLAN İKTÂ FIEFS (5 landless frontier beyliks each get 1 village)

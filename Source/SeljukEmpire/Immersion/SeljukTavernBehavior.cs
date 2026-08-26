@@ -44,7 +44,7 @@ namespace SeljukEmpire.Immersion
                 starter.AddGameMenuOption(
                     "town_backstreet",
                     "seljuk_listen_bard",
-                    "{=seljuk_bard_opt}Bozkır Ozanından Gazavat Destanı Dinle (100 Dinar)",
+                    "{=seljuk_bard_opt}Listen to Ghazavat Epic from the Steppe Bard (100 Dinars)",
                     gameMenuOption =>
                     {
                         gameMenuOption.optionLeaveType = GameMenuOption.LeaveType.Submenu;
@@ -54,13 +54,13 @@ namespace SeljukEmpire.Immersion
                         {
                             gameMenuOption.IsEnabled = false;
                             double hoursLeft = COOLDOWN_HOURS - (CampaignTime.Now - _lastListenTime).ToHours;
-                            gameMenuOption.Tooltip = new TextObject("{=seljuk_bard_cooldown}Ozan yorgun, dinlenmesi gerek ({HOURS} saat sonra tekrar gelin).")
+                            gameMenuOption.Tooltip = new TextObject("{=seljuk_bard_cooldown}The bard is tired and needs rest (come back in {HOURS} hours).")
                                 .SetTextVariable("HOURS", Math.Max(1, (int)Math.Ceiling(hoursLeft)));
                         }
                         else if (Hero.MainHero == null || Hero.MainHero.Gold < BARD_COST)
                         {
                             gameMenuOption.IsEnabled = false;
-                            gameMenuOption.Tooltip = new TextObject("{=seljuk_bard_no_gold}Yeterli altınınız yok (100 Dinar gerekli).");
+                            gameMenuOption.Tooltip = new TextObject("{=seljuk_bard_no_gold}Not enough gold (100 Dinars required).");
                         }
                         return Settlement.CurrentSettlement != null && Settlement.CurrentSettlement.IsTown;
                     },
@@ -81,7 +81,7 @@ namespace SeljukEmpire.Immersion
                                 _lastListenTime = CampaignTime.Now;
 
                                 MBInformationManager.AddQuickInformation(
-                                    new TextObject("{=seljuk_bard_notif}Ozanın kopuzundan dökülen Selçuklu gazavat destanı erlerin yüreğini coşturdu! (+15 Ordu Morali)"));
+                                    new TextObject("{=seljuk_bard_notif}The heroic Seljuk Ghazavat epic recited on the kopuz fired up your soldiers' hearts! (+15 Army Morale)"));
                             }
                         }
                         catch (Exception)

@@ -22,6 +22,6 @@
        shield, no horse) so the elite recruit is still a step above basic_troop without being an
        expensive mounted unit. -->
   <Culture id="empire" name="{=byz_culture_name}Byzantine" basic_troop="NPCCharacter.byz2_recruit" elite_basic_troop="NPCCharacter.byz2_skutatos" />
-  <Culture id="aserai" name="{=abb_culture_name}Abbasi" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ayyar" />
-  <Culture id="sturgia" name="{=geo_culture_name}Gürcü" />
+  <Culture id="aserai" name="{=abb_culture_name}Abbasid" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ayyar" />
+  <Culture id="sturgia" name="{=geo_culture_name}Georgian" />
 </SPCultures>

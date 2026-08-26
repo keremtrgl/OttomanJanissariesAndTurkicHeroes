@@ -9,13 +9,13 @@
        clan_empire_north_1 (Palaiologos) haric hicbirinin banner_key'i degistirilmedi - sadece
        hukumdar hanedani (Diogenes) kingdoms.xml'deki kral bayragiyla eslesiyor, digerleri (Botaneiates,
        Dukas... ve simdi bunlar) kendi Native bayraklarini koruyor, ayni south klanlarindaki gibi. -->
-  <Faction id="clan_empire_north_1" name="{=byz_n_house_palaiologos}Palaiologos Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_2" name="{=byz_n_house_angelos}Angelos Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_3" name="{=byz_n_house_kantakouzenos}Kantakuzenos Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_4" name="{=byz_n_house_phokas}Fokas Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_5" name="{=byz_n_house_skleros}Skleros Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_6" name="{=byz_n_house_kourkouas}Kurkuas Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_7" name="{=byz_n_house_xiphilinos}Ksifilinos Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_8" name="{=byz_n_house_vatatzes}Vatatzes Hanedanı" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_north_9" name="{=byz_n_house_gabras}Gavras Hanedanı" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_1" name="{=byz_n_house_palaiologos}House Palaiologos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_2" name="{=byz_n_house_angelos}House Angelos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_3" name="{=byz_n_house_kantakouzenos}House Kantakouzenos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_4" name="{=byz_n_house_phokas}House Phokas" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_5" name="{=byz_n_house_skleros}House Skleros" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_6" name="{=byz_n_house_kourkouas}House Kourkouas" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_7" name="{=byz_n_house_xiphilinos}House Xiphilinos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_8" name="{=byz_n_house_vatatzes}House Vatatzes" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_north_9" name="{=byz_n_house_gabras}House Gabras" super_faction="Kingdom.empire_s" />
 </Factions>

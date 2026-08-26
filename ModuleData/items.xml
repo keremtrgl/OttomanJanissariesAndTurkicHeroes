@@ -5,7 +5,7 @@
   <!-- ================================================================================= -->
 
   <!-- Sultan Alp Arslan Lameller Plaka Zırhı -->
-  <Item id="seljuk_sultan_armor" name="{=item_seljuk_armor_name}Sultanlık Lameller Plaka Zırhı" mesh="khuzait_heavy_armor" culture="Culture.khuzait" weight="16.5" value="28000" appearance="1" is_merchandise="false" Type="BodyArmor">
+  <Item id="seljuk_sultan_armor" name="{=item_seljuk_armor_name}Imperial Gilded Lamellar Armor" mesh="khuzait_heavy_armor" culture="Culture.khuzait" weight="16.5" value="28000" appearance="1" is_merchandise="false" Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="60" leg_armor="25" arm_armor="24" covers_body="true" has_gender_variations="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
@@ -13,7 +13,7 @@
   </Item>
 
   <!-- Nizamülmülk Divan Vezir Kaftanı -->
-  <Item id="seljuk_nizamiye_robe" name="{=item_seljuk_robe_name}Nizamiye Şeref Kaftanı" mesh="khuzait_civil_coat_b" culture="Culture.khuzait" weight="5.0" value="18000" appearance="1" is_merchandise="false" Type="BodyArmor">
+  <Item id="seljuk_nizamiye_robe" name="{=item_seljuk_robe_name}Nizamiyya Robe of Honor" mesh="khuzait_civil_coat_b" culture="Culture.khuzait" weight="5.0" value="18000" appearance="1" is_merchandise="false" Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="48" leg_armor="22" arm_armor="20" covers_body="true" has_gender_variations="true" material_type="Cloth" modifier_group="cloth" />
     </ItemComponent>
@@ -21,7 +21,7 @@
   </Item>
 
   <!-- Selçuklu Hassa Gulam Zincir-Plaka Zırhı -->
-  <Item id="seljuk_ghulam_armor" name="{=item_seljuk_ghulam_armor}Selçuklu Gulam Çar-Ayine Zırhı" mesh="aserai_chain_plate_armor_a" culture="Culture.khuzait" weight="18.0" value="24000" appearance="1" is_merchandise="true" Type="BodyArmor">
+  <Item id="seljuk_ghulam_armor" name="{=item_seljuk_ghulam_armor}Seljuk Ghulam Mirror-Plate Armor" mesh="aserai_chain_plate_armor_a" culture="Culture.khuzait" weight="18.0" value="24000" appearance="1" is_merchandise="true" Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="56" leg_armor="22" arm_armor="20" covers_body="true" has_gender_variations="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
@@ -29,7 +29,7 @@
   </Item>
 
   <!-- Gazi Uç Beyi Zırhı -->
-  <Item id="seljuk_gazi_armor" name="{=item_seljuk_gazi_armor}Danişmendiye Uç Beyi Zırhı" mesh="khuzait_fortified_armor" culture="Culture.khuzait" weight="14.0" value="21000" appearance="1" is_merchandise="true" Type="BodyArmor">
+  <Item id="seljuk_gazi_armor" name="{=item_seljuk_gazi_armor}Danishmend Border Bey Armor" mesh="khuzait_fortified_armor" culture="Culture.khuzait" weight="14.0" value="21000" appearance="1" is_merchandise="true" Type="BodyArmor">
     <ItemComponent>
       <Armor body_armor="52" leg_armor="20" arm_armor="18" covers_body="true" has_gender_variations="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
@@ -41,28 +41,28 @@
   <!-- ================================================================================= -->
 
   <!-- Demir Maskeli Selçuklu Tolgası -->
-  <Item id="seljuk_iron_mask_helm" name="{=item_seljuk_helm_name}Demir Maskeli Selçuklu Tolgası" mesh="khuzait_helmet_f" culture="Culture.khuzait" weight="2.5" value="16500" appearance="1" is_merchandise="false" Type="HeadArmor">
+  <Item id="seljuk_iron_mask_helm" name="{=item_seljuk_helm_name}Iron-Masked Seljuk Imperial Helmet" mesh="khuzait_helmet_f" culture="Culture.khuzait" weight="2.5" value="16500" appearance="1" is_merchandise="false" Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="56" covers_head="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Sultan Şeref Miğferi (Tüylü Tolga) -->
-  <Item id="seljuk_royal_feather_helm" name="{=item_seljuk_royal_helm}Sultan Hassa Şeref Miğferi" mesh="khuzait_lord_helmet_a" culture="Culture.khuzait" weight="2.7" value="19000" appearance="1" is_merchandise="false" Type="HeadArmor">
+  <Item id="seljuk_royal_feather_helm" name="{=item_seljuk_royal_helm}Sultan Royal Feathered Helmet" mesh="khuzait_lord_helmet_a" culture="Culture.khuzait" weight="2.7" value="19000" appearance="1" is_merchandise="false" Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="58" covers_head="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Selçuklu Boyunluklu Muharip Tolgası -->
-  <Item id="seljuk_noble_spiked_helm" name="{=item_seljuk_spiked_helm}Selçuklu Zırhlı Boyunluklu Tolgası" mesh="khuzait_lord_helmet_b" culture="Culture.khuzait" weight="2.8" value="15000" appearance="1" is_merchandise="true" Type="HeadArmor">
+  <Item id="seljuk_noble_spiked_helm" name="{=item_seljuk_spiked_helm}Seljuk Armored Spiked Helmet" mesh="khuzait_lord_helmet_b" culture="Culture.khuzait" weight="2.8" value="15000" appearance="1" is_merchandise="true" Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="54" covers_head="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Kürk Muhafazalı Gazi Tolgası -->
-  <Item id="seljuk_fur_warrior_helm" name="{=item_seljuk_fur_helm}Kayı Gazi Kürklü Tolgası" mesh="khuzait_lord_helmet_c" culture="Culture.khuzait" weight="2.3" value="13500" appearance="1" is_merchandise="true" Type="HeadArmor">
+  <Item id="seljuk_fur_warrior_helm" name="{=item_seljuk_fur_helm}Kayi Ghazi Fur Helmet" mesh="khuzait_lord_helmet_c" culture="Culture.khuzait" weight="2.3" value="13500" appearance="1" is_merchandise="true" Type="HeadArmor">
     <ItemComponent>
       <Armor head_armor="50" covers_head="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
@@ -73,7 +73,7 @@
   <!-- ================================================================================= -->
 
   <!-- Selçuklu Hassa Plaka Omuzlukları -->
-  <Item id="seljuk_royal_pauldrons" name="{=item_seljuk_pauldrons}Selçuklu Hassa Plaka Omuzlukları" mesh="khuzait_leather_armor_shoulder" culture="Culture.khuzait" weight="3.2" value="9500" appearance="1" is_merchandise="true" Type="Cape">
+  <Item id="seljuk_royal_pauldrons" name="{=item_seljuk_pauldrons}Seljuk Royal Plated Pauldrons" mesh="khuzait_leather_armor_shoulder" culture="Culture.khuzait" weight="3.2" value="9500" appearance="1" is_merchandise="true" Type="Cape">
     <ItemComponent>
       <Armor body_armor="18" arm_armor="16" covers_body="true" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
@@ -81,14 +81,14 @@
   </Item>
 
   <!-- Gazi Şam Çeliği Kolçakları -->
-  <Item id="seljuk_damascene_bracers" name="{=item_seljuk_bracers}Gazi Şam Çeliği Kolçakları" mesh="khuzait_heavy_armor_bracer" culture="Culture.khuzait" weight="1.8" value="7500" appearance="1" is_merchandise="true" Type="HandArmor">
+  <Item id="seljuk_damascene_bracers" name="{=item_seljuk_bracers}Ghazi Damascene Steel Bracers" mesh="khuzait_heavy_armor_bracer" culture="Culture.khuzait" weight="1.8" value="7500" appearance="1" is_merchandise="true" Type="HandArmor">
     <ItemComponent>
       <Armor arm_armor="34" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Sahtiyan Selçuklu Süvari Çizmeleri -->
-  <Item id="seljuk_cavalry_boots" name="{=item_seljuk_boots}Sahtiyan Selçuklu Süvari Çizmeleri" mesh="khuzait_leather_boots" culture="Culture.khuzait" weight="2.2" value="8200" appearance="1" is_merchandise="true" Type="LegArmor">
+  <Item id="seljuk_cavalry_boots" name="{=item_seljuk_boots}Fine Seljuk Cavalry Boots" mesh="khuzait_leather_boots" culture="Culture.khuzait" weight="2.2" value="8200" appearance="1" is_merchandise="true" Type="LegArmor">
     <ItemComponent>
       <Armor leg_armor="32" material_type="Leather" modifier_group="leather" />
     </ItemComponent>
@@ -99,7 +99,7 @@
   <!-- ================================================================================= -->
 
   <!-- Çift Başlı Selçuklu Kartalı Süvari Kalkanı -->
-  <Item id="seljuk_eagle_shield" name="{=item_seljuk_shield_name}Çift Başlı Selçuklu Kartalı Kalkanı" mesh="shield_khuzait_cavalary_c" culture="Culture.khuzait" weight="3.2" value="11000" is_merchandise="true" Type="Shield" item_holsters="shield_round:shield_back">
+  <Item id="seljuk_eagle_shield" name="{=item_seljuk_shield_name}Double-Headed Seljuk Eagle Shield" mesh="shield_khuzait_cavalary_c" culture="Culture.khuzait" weight="3.2" value="11000" is_merchandise="true" Type="Shield" item_holsters="shield_round:shield_back">
     <ItemComponent>
       <Weapon weapon_class="SmallShield" speed_rating="95" physics_material="wood_shield" body_armor="14" hit_points="520" thrust_damage="8" thrust_damage_type="Blunt" item_usage="shield" weapon_length="48">
         <WeaponFlags CanBlockRanged="true" HasString="false" />
@@ -108,7 +108,7 @@
   </Item>
 
   <!-- Selçuklu Ağır Nizam Piyade Kalkanı -->
-  <Item id="seljuk_infantry_shield" name="{=item_seljuk_inf_shield}Selçuklu Nizam Piyade Kalkanı" mesh="shield_khuzait_infantary_a" culture="Culture.khuzait" weight="4.0" value="8500" is_merchandise="true" Type="Shield" item_holsters="shield_round:shield_back">
+  <Item id="seljuk_infantry_shield" name="{=item_seljuk_inf_shield}Seljuk Nizam Infantry Shield" mesh="shield_khuzait_infantary_a" culture="Culture.khuzait" weight="4.0" value="8500" is_merchandise="true" Type="Shield" item_holsters="shield_round:shield_back">
     <ItemComponent>
       <Weapon weapon_class="LargeShield" speed_rating="88" physics_material="wood_shield" body_armor="18" hit_points="620" thrust_damage="10" thrust_damage_type="Blunt" item_usage="shield" weapon_length="62">
         <WeaponFlags CanBlockRanged="true" HasString="false" />
@@ -121,7 +121,7 @@
   <!-- ================================================================================= -->
 
   <!-- Danişmend Gazi'nin Efsanevi Bozkır Yayı -->
-  <Item id="seljuk_danismend_bow" name="{=item_seljuk_bow_name}Danişmend Gazi'nin Efsanevi Bozkır Yayı" mesh="shortbow_a" culture="Culture.khuzait" weight="0.9" value="16000" is_merchandise="true" Type="Bow" item_holsters="bow_hip:bow_hip_2">
+  <Item id="seljuk_danismend_bow" name="{=item_seljuk_bow_name}Danishmend Gazi's Legendary Steppe Bow" mesh="shortbow_a" culture="Culture.khuzait" weight="0.9" value="16000" is_merchandise="true" Type="Bow" item_holsters="bow_hip:bow_hip_2">
     <ItemComponent>
       <Weapon weapon_class="Bow" ammo_class="Arrow" ammo_limit="1" thrust_speed="92" speed_rating="95" missile_speed="92" weapon_length="85" accuracy="98" thrust_damage_type="Pierce" thrust_damage="78" item_usage="bow" physics_material="wood_weapon">
         <WeaponFlags RangedWeapon="true" HasString="true" StringHeldByHand="true" NotUsableWithOneHand="true" TwoHandIdleOnMount="true" AutoReload="true" UnloadWhenSheathed="true" CanBeUsedWhileCrouched="true" />
@@ -131,7 +131,7 @@
   </Item>
 
   <!-- Oğuz Atabeg Kompozit Refleks Yayı -->
-  <Item id="seljuk_composite_bow_legendary" name="{=item_seljuk_composite_bow}Oğuz Atabeg Kompozit Yayı" mesh="shortbow_f" culture="Culture.khuzait" weight="0.8" value="22000" is_merchandise="true" Type="Bow" item_holsters="bow_hip:bow_hip_2">
+  <Item id="seljuk_composite_bow_legendary" name="{=item_seljuk_composite_bow}Oguz Atabeg Composite Bow" mesh="shortbow_f" culture="Culture.khuzait" weight="0.8" value="22000" is_merchandise="true" Type="Bow" item_holsters="bow_hip:bow_hip_2">
     <ItemComponent>
       <Weapon weapon_class="Bow" ammo_class="Arrow" ammo_limit="1" thrust_speed="94" speed_rating="98" missile_speed="96" weapon_length="82" accuracy="99" thrust_damage_type="Pierce" thrust_damage="84" item_usage="bow" physics_material="wood_weapon">
         <WeaponFlags RangedWeapon="true" HasString="true" StringHeldByHand="true" NotUsableWithOneHand="true" TwoHandIdleOnMount="true" AutoReload="true" UnloadWhenSheathed="true" CanBeUsedWhileCrouched="true" />
@@ -141,7 +141,7 @@
   </Item>
 
   <!-- Ağır Delici Selçuklu Zırh Delen Okları -->
-  <Item id="seljuk_heavy_arrows" name="{=item_seljuk_heavy_arrows}Selçuklu Zırh Delen Temren Okları" body_name="bo_capsule_arrow" holster_body_name="bo_axe_short" mesh="arrow_bl_f" holster_mesh="arrow_bl_f_quiver" holster_mesh_with_weapon="arrow_bl_f_quiver" flying_mesh="arrow_bl_flying" culture="Culture.khuzait" weight="2.5" value="6500" is_merchandise="true" Type="Arrows" item_holsters="quiver_back_top:quiver_back_2">
+  <Item id="seljuk_heavy_arrows" name="{=item_seljuk_heavy_arrows}Seljuk Armor Piercing Arrows" body_name="bo_capsule_arrow" holster_body_name="bo_axe_short" mesh="arrow_bl_f" holster_mesh="arrow_bl_f_quiver" holster_mesh_with_weapon="arrow_bl_f_quiver" flying_mesh="arrow_bl_flying" culture="Culture.khuzait" weight="2.5" value="6500" is_merchandise="true" Type="Arrows" item_holsters="quiver_back_top:quiver_back_2">
     <ItemComponent>
       <Weapon weapon_class="Arrow" stack_amount="32" thrust_damage="5" thrust_damage_type="Pierce" physics_material="missile" item_usage="arrow_right">
         <WeaponFlags Consumable="true" />
@@ -150,7 +150,7 @@
   </Item>
 
   <!-- Çaka Bey'in Kundaklı Yayı -->
-  <Item id="seljuk_caka_crossbow" name="{=item_seljuk_crossbow_name}Çaka Bey'in Kundaklı Yayı" mesh="crossbow_b" culture="Culture.khuzait" weight="2.4" value="14000" is_merchandise="true" Type="Crossbow" item_holsters="crossbow_back:bow_hip:mace_right_hip:bow_hip_2">
+  <Item id="seljuk_caka_crossbow" name="{=item_seljuk_crossbow_name}Chaka Bey's Naval Crossbow" mesh="crossbow_b" culture="Culture.khuzait" weight="2.4" value="14000" is_merchandise="true" Type="Crossbow" item_holsters="crossbow_back:bow_hip:mace_right_hip:bow_hip_2">
     <ItemComponent>
       <Weapon weapon_class="Crossbow" ammo_class="Bolt" ammo_limit="1" thrust_speed="82" speed_rating="78" missile_speed="110" weapon_length="75" accuracy="95" thrust_damage_type="Pierce" thrust_damage="96" item_usage="crossbow_light" reload_phase_count="2" physics_material="wood_weapon">
         <WeaponFlags RangedWeapon="true" HasString="true" NotUsableWithOneHand="true" TwoHandIdleOnMount="true" CanBeUsedWhileCrouched="true" />
@@ -159,7 +159,7 @@
   </Item>
 
   <!-- Selçuklu Deniz Akıncısı Kundak Temrenleri -->
-  <Item id="seljuk_crossbow_bolts" name="{=item_seljuk_bolts}Selçuklu Çelik Temrenli Kundak Okları" body_name="bo_capsule_arrow" holster_body_name="bo_axe_short" mesh="bolt_bl_a" holster_mesh="bolt_bl_a_quiver" holster_mesh_with_weapon="bolt_bl_a_quiver" flying_mesh="bolt_bl_flying" culture="Culture.khuzait" weight="2.8" value="5500" is_merchandise="true" Type="Bolts" item_holsters="quiver_bolts">
+  <Item id="seljuk_crossbow_bolts" name="{=item_seljuk_bolts}Seljuk Steel Bodkin Bolts" body_name="bo_capsule_arrow" holster_body_name="bo_axe_short" mesh="bolt_bl_a" holster_mesh="bolt_bl_a_quiver" holster_mesh_with_weapon="bolt_bl_a_quiver" flying_mesh="bolt_bl_flying" culture="Culture.khuzait" weight="2.8" value="5500" is_merchandise="true" Type="Bolts" item_holsters="quiver_bolts">
     <ItemComponent>
       <Weapon weapon_class="Bolt" stack_amount="26" thrust_damage="6" thrust_damage_type="Pierce" physics_material="missile" item_usage="bolts">
         <WeaponFlags Consumable="true" />
@@ -172,7 +172,7 @@
   <!-- ================================================================================= -->
 
   <!-- Asil Türkmen Savaş Atı -->
-  <Item id="seljuk_turkoman_horse" name="{=item_seljuk_turkoman_horse}Asil Türkmen Savaş Atı" mesh="horse_brown" culture="Culture.khuzait" weight="450" value="18000" is_merchandise="true" Type="Horse">
+  <Item id="seljuk_turkoman_horse" name="{=item_seljuk_turkoman_horse}Noble Turkoman Warhorse" mesh="horse_brown" culture="Culture.khuzait" weight="450" value="18000" is_merchandise="true" Type="Horse">
     <ItemComponent>
       <Horse speed="58" maneuver="72" charge_damage="26" body_length="104" is_mountable="true" extra_health="30" skeleton_scale="khuzait_horse" monster="Monster.horse" />
     </ItemComponent>
@@ -180,7 +180,7 @@
   </Item>
 
   <!-- Selçuklu Hassa Barda Koşumu -->
-  <Item id="seljuk_barda_horse_armor" name="{=item_seljuk_barda_name}Selçuklu Hassa Barda Koşumu" mesh="horse_harness_khuzait_c_clotest" culture="Culture.khuzait" weight="24.0" value="22000" appearance="1" is_merchandise="true" Type="HorseHarness">
+  <Item id="seljuk_barda_horse_armor" name="{=item_seljuk_barda_name}Seljuk Royal Barda Horse Armor" mesh="horse_harness_khuzait_c_clotest" culture="Culture.khuzait" weight="24.0" value="22000" appearance="1" is_merchandise="true" Type="HorseHarness">
     <ItemComponent>
       <Armor body_armor="70" mane_cover_type="none" family_type="1" reins_mesh="horse_harness_khuzait_c_rein" material_type="Plate" modifier_group="plate" />
     </ItemComponent>

@@ -147,7 +147,7 @@ namespace SeljukEmpire.Economy
         {
             // Root menu option in town center
             starter.AddGameMenuOption("town", "seljuk_trade_divan",
-                "{=seljuk_menu_trade_divan}Selçuklu İpek Yolu ve Kervan Sigortası Divanı'na Git",
+                "{=seljuk_menu_trade_divan}Visit the Seljuk Silk Road & Caravan Insurance Divan",
                 args =>
                 {
                     args.optionLeaveType = GameMenuOption.LeaveType.Trade;
@@ -159,24 +159,24 @@ namespace SeljukEmpire.Economy
 
             // Submenu
             starter.AddGameMenu("seljuk_caravan_insurance_menu",
-                "{=seljuk_menu_insurance_text}Selçuklu Kervansaraylar İdaresi ve İpek Yolu Sigorta Divanı'ndasınız. Buradan kervanlarınızı devlet teminatı altına alabilir ve kervansaraylara sermaye yatırarak haftalık kâr ortaklığı kurabilirsiniz.",
+                "{=seljuk_menu_insurance_text}Welcome to the Seljuk Caravanserai Administration and Silk Road Insurance Divan. Here, you can place your trade caravans under Imperial Treasury guarantee and invest capital into caravanserais to receive regular weekly dividends.",
                 args => { });
 
             // Option 1: Purchase Insurance
             starter.AddGameMenuOption("seljuk_caravan_insurance_menu", "opt_buy_insurance",
-                "{=seljuk_opt_buy_ins}Kervanlarını Selçuklu Devlet Sigortası Kapsamına Al (1,500 Dinar)",
+                "{=seljuk_opt_buy_ins}Insure your caravans under Seljuk State Insurance (1,500 Dinars)",
                 args =>
                 {
                     args.optionLeaveType = GameMenuOption.LeaveType.Submenu;
                     if (_isPlayerCaravanInsuranceActive)
                     {
                         args.IsEnabled = false;
-                        args.Tooltip = new TextObject("{=seljuk_tip_ins_active}Kervanlarınız zaten Selçuklu Devlet Sigortası teminatı altındadır.");
+                        args.Tooltip = new TextObject("{=seljuk_tip_ins_active}Your trade caravans are already under Seljuk State Insurance protection.");
                     }
                     else if (Hero.MainHero.Gold < INSURANCE_POLICY_COST)
                     {
                         args.IsEnabled = false;
-                        args.Tooltip = new TextObject("{=seljuk_tip_no_gold}Yeterli altınınız yok.");
+                        args.Tooltip = new TextObject("{=seljuk_tip_no_gold}You do not have enough gold.");
                     }
                     return true;
                 },
@@ -190,14 +190,14 @@ namespace SeljukEmpire.Economy
 
             // Option 2: Invest Capital (10,000 Dinars)
             starter.AddGameMenuOption("seljuk_caravan_insurance_menu", "opt_invest_10k",
-                "{=seljuk_opt_invest_10k}Bu Şehrin Kervansaray Fonuna 10,000 Dinar Sermaye Yatır (Haftalık Kâr Payı)",
+                "{=seljuk_opt_invest_10k}Invest 10,000 Dinars into this city's Caravanserai Fund (Weekly Dividends)",
                 args =>
                 {
                     args.optionLeaveType = GameMenuOption.LeaveType.Trade;
                     if (Hero.MainHero.Gold < INVESTMENT_TIER_1)
                     {
                         args.IsEnabled = false;
-                        args.Tooltip = new TextObject("{=seljuk_tip_no_gold}Yeterli altınınız yok.");
+                        args.Tooltip = new TextObject("{=seljuk_tip_no_gold}You do not have enough gold.");
                     }
                     return true;
                 },
@@ -220,7 +220,7 @@ namespace SeljukEmpire.Economy
 
             // Option 3: Return to town
             starter.AddGameMenuOption("seljuk_caravan_insurance_menu", "opt_leave_insurance",
-                "{=seljuk_opt_leave}Şehir Meydanına Geri Dön",
+                "{=seljuk_opt_leave}Return to the Town Center",
                 args =>
                 {
                     args.optionLeaveType = GameMenuOption.LeaveType.Leave;
