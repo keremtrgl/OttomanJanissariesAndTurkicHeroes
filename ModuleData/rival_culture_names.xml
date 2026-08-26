@@ -32,4 +32,7 @@
        not a mounted branch, for the same reason byz2_skutatos/abb2_ayyar/geo2_msakhuri were
        picked over their cavalry siblings. -->
   <Culture id="vlandia" name="{=crus_culture_name}Crusader" basic_troop="NPCCharacter.crus2_recruit" elite_basic_troop="NPCCharacter.crus2_sergeant" />
+  <!-- elite_basic_troop is the tier-2 INFANTRY branch (arm2_azat - spear/shield, no horse), not a
+       mounted branch, for the same reason as every other culture's elite_basic_troop above. -->
+  <Culture id="battania" name="{=arm_culture_name}Armenian" basic_troop="NPCCharacter.arm2_recruit" elite_basic_troop="NPCCharacter.arm2_azat" />
 </SPCultures>

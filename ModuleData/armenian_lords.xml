@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Real historical lords of the Rubenid Armenian principality of Cilicia (c. 1080-1125) - face/
+       equipment/skills Native, only name= changes, same pattern as crusader_lords.xml. All seven
+       are historically male and Native already ships them without is_female, so no gender
+       override is needed. -->
+  <NPCCharacter id="lord_5_1" name="{=arm_ln_ruben1}Ruben I" />
+  <NPCCharacter id="lord_5_3" name="{=arm_ln_thoros1}Thoros I" />
+  <NPCCharacter id="lord_5_5" name="{=arm_ln_constantine1}Constantine I" />
+  <NPCCharacter id="lord_5_14" name="{=arm_ln_koghvasil}Kogh Vasil" />
+  <NPCCharacter id="lord_5_16" name="{=arm_ln_vasildgha}Vasil Dgha" />
+  <NPCCharacter id="lord_5_17" name="{=arm_ln_oshin}Oshin of Lampron" />
+  <NPCCharacter id="lord_5_15" name="{=arm_ln_gabriel}Gabriel of Melitene" />
+</NPCCharacters>

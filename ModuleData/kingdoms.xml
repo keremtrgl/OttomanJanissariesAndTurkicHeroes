@@ -115,27 +115,49 @@
   <!-- HAÇLI DEVLETLERİ (Native: Kingdom of Vlandia / vlandia) -->
   <!-- Antakya Prensliği ve Urfa Kontluğu, ikisi de 1098'de Birinci Haçlı Seferi sirasinda kuruldu -
        Urfa, Artuklu/Danismendli/Selcuklu beyliklerinin dogrudan sinirdasi (bkz. crusader_lords.xml).
-       Renk paleti: altin zemin (palet id 7, 0xffDEA940) + kirmizi hac vurgusu (palet id 83,
-       0xffD22D33 - Gurcistan'in da ikincil rengi ama ana/zemin rengi tamamen farkli oldugu icin
-       bayraklar birbirine karismiyor). banner_key, Vlandia'nin kendi Native mesh/boyut/pozisyon
-       yapisini korur, sadece renk index'leri degisti (ayni "banner_key eksikligi" hatasina
-       dusmemek icin Native'in kendi gecerli layout'u temel alindi). -->
+       Renk paleti duzeltildi: Bohemond'un ait oldugu Hauteville hanedaninin gercek/belgelenmis
+       arma rengi lacivert (azure) + kirmizi/gumus damali serittir (Wikimedia Commons/WappenWiki
+       kaynaklarindan dogrulandi) - ilk secilen altin/kirmizi kombinasyonu tarihi kaynagi olmayan
+       bir tahmindi, duzeltildi. Palet id 202 (0xFF2A5599, lacivert) + id 83 (0xffD22D33, kirmizi -
+       Gurcistan'in da ikincil rengi ama ana/zemin rengi tamamen farkli oldugu icin bayraklar
+       birbirine karismiyor; ayrica lacivert bu modda baska hicbir krallikta kullanilmiyor).
+       banner_key, Vlandia'nin kendi Native mesh/boyut/pozisyon yapisini korur, sadece renk
+       index'leri degisti. -->
   <Kingdom id="vlandia"
            name="{=crus_faction_name}Crusader States"
            short_name="{=crus_faction_short}Crusaders"
            title="{=crus_faction_title}Principality of Antioch"
            ruler_title="{=crus_faction_ruler}Prince"
            text="{=crus_faction_desc}Frankish and Norman lords who marched east on the First Crusade and carved out the Principality of Antioch and the County of Edessa in 1098. Their new domain borders the Seljuk-aligned Artuqid and Danishmendid beyliks directly, making them a frequent combatant on the Great Seljuk Empire's western frontier."
-           banner_key="11.7.7.1536.1536.764.764.1.0.0.160.83.83.497.497.764.764.1.0.0"
-           primary_banner_color="0xffDEA940"
+           banner_key="11.202.202.1536.1536.764.764.1.0.0.160.83.83.497.497.764.764.1.0.0"
+           primary_banner_color="0xFF2A5599"
            secondary_banner_color="0xffD22D33"
-           color="0xffDEA940"
+           color="0xFF2A5599"
            color2="0xffD22D33">
     <relationships>
       <relationship kingdom="Kingdom.sturgia" value="0" isAtWar="false" />
     </relationships>
   </Kingdom>
-  <Kingdom id="battania">
+  <!-- KİLİKYA ERMENİ PRENSLİĞİ (Native: High Kingdom of the Battanians / battania) -->
+  <!-- Rubenli hanedanligi, 1080 civarinda Ruben I'in Bizans'a karsi ayaklanmasiyla kuruldu -
+       modun kendi zaman cizelgesiyle (1071 Malazgirt - 1125 civari) tam ortusuyor. Renk paleti:
+       Rubenli hanedaninin gercek/belgelenmis armasi "Gules, a Lion passant guardant holding a
+       cross Or" - yani kirmizi zemin + altin renkli aslan (Wikimedia Commons/PeopleOfAr
+       kaynaklarindan dogrulandi). Native'in kendi yesil/acik-mavi rengi bu yuzden KORUNMADI, gercek
+       tarihi renklerle degistirildi: palet id 48 (0xffe44434, kirmizi zemin - Gurcistan/Haclilarin
+       ikincil kirmizisindan (id 83) farkli bir ton, ana renk olarak kullanildigi icin karismiyor)
+       + id 7 (0xffDEA940, altin aslan vurgusu). -->
+  <Kingdom id="battania"
+           name="{=arm_faction_name}Cilician Armenia"
+           short_name="{=arm_faction_short}Armenians"
+           title="{=arm_faction_title}Principality of Cilician Armenia"
+           ruler_title="{=arm_faction_ruler}Prince"
+           text="{=arm_faction_desc}An Armenian mountain principality founded around 1080 when Ruben I broke away from Byzantine rule in the Taurus range. Its lords hold their fortresses in a loose, often quarrelsome confederation, but unite readily against outside claims on Cilicia from Byzantium, the Crusader principalities, or the Great Seljuk Empire."
+           banner_key="11.48.48.1536.1536.764.764.1.0.0.460.7.7.457.457.764.764.1.0.0"
+           primary_banner_color="0xffe44434"
+           secondary_banner_color="0xffDEA940"
+           color="0xffe44434"
+           color2="0xffDEA940">
     <relationships>
       <relationship kingdom="Kingdom.empire_w" value="0" isAtWar="false" />
     </relationships>

@@ -984,5 +984,50 @@
     <string id="crus2_t_hospitaller_brother" text="Hospitaller Sworn Brother" />
     <string id="crus2_t_arbalester_guard" text="Elite Arbalester Guard" />
     <string id="crus2_t_templar_knight" text="Templar Knight" />
+    <string id="arm_faction_name" text="Cilician Armenia" />
+    <string id="arm_faction_short" text="Armenians" />
+    <string id="arm_faction_title" text="Principality of Cilician Armenia" />
+    <string id="arm_faction_ruler" text="Prince" />
+    <string id="arm_faction_desc" text="An Armenian mountain principality founded around 1080 when Ruben I broke away from Byzantine rule in the Taurus range. Its lords hold their fortresses in a loose, often quarrelsome confederation, but unite readily against outside claims on Cilicia from Byzantium, the Crusader principalities, or the Great Seljuk Empire." />
+    <string id="arm_culture_name" text="Armenian" />
+    <string id="arm_cn_rubenid" text="House of Rubenid" />
+    <string id="arm_cn_thoros" text="House of Thoros" />
+    <string id="arm_cn_constantine" text="House of Constantine" />
+    <string id="arm_cn_koghvasil" text="House of Kogh Vasil" />
+    <string id="arm_cn_vasildgha" text="House of Vasil Dgha" />
+    <string id="arm_cn_lampron" text="House of Lampron" />
+    <string id="arm_cn_gabriel" text="Gabrielid House" />
+    <string id="arm_ln_ruben1" text="Ruben I" />
+    <string id="arm_ln_thoros1" text="Thoros I" />
+    <string id="arm_ln_constantine1" text="Constantine I" />
+    <string id="arm_ln_koghvasil" text="Kogh Vasil" />
+    <string id="arm_ln_vasildgha" text="Vasil Dgha" />
+    <string id="arm_ln_oshin" text="Oshin of Lampron" />
+    <string id="arm_ln_gabriel" text="Gabriel of Melitene" />
+    <string id="arm_s_vahka" text="Vahka" />
+    <string id="arm_s_sis" text="Sis" />
+    <string id="arm_s_anazarbus" text="Anazarbus" />
+    <string id="arm_s_kesoun" text="Kesoun" />
+    <string id="arm_s_raban" text="Raban" />
+    <string id="arm2_t_recruit" text="Cilician Levy" />
+    <string id="arm2_t_azat" text="Azat Spearman" />
+    <string id="arm2_t_archer" text="Cilician Archer" />
+    <string id="arm2_t_azat_horseman" text="Azat Horseman" />
+    <string id="arm2_t_azat_lancer" text="Azat Lancer" />
+    <string id="arm2_t_pikeman" text="Taurus Pikeman" />
+    <string id="arm2_t_taurus_bowman" text="Taurus Bowman" />
+    <string id="arm2_t_ayrudzi_rider" text="Ayrudzi Rider" />
+    <string id="arm2_t_ayrudzi_lancer" text="Ayrudzi Lancer" />
+    <string id="arm2_t_vanguard" text="Taurus Vanguard" />
+    <string id="arm2_t_veteran_archer" text="Veteran Archer" />
+    <string id="arm2_t_ayrudzi_veteran" text="Ayrudzi Veteran" />
+    <string id="arm2_t_azatagund_rider" text="Azatagund Rider" />
+    <string id="arm2_t_naxarar_footguard" text="Naxarar Footguard" />
+    <string id="arm2_t_sparapet_marksman" text="Sparapet's Marksman" />
+    <string id="arm2_t_aspet_skirmisher" text="Aspet's Skirmisher" />
+    <string id="arm2_t_azatagund_elite" text="Azatagund Elite" />
+    <string id="arm2_t_naxarar_sworn_shield" text="Naxarar Sworn Shield" />
+    <string id="arm2_t_taurus_master_archer" text="Master Archer of the Taurus" />
+    <string id="arm2_t_sparapet_guard" text="Sparapet's Ayrudzi" />
 </strings>
 </base>
