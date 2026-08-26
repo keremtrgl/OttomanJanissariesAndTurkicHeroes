@@ -136,7 +136,7 @@
     <string id="lord_sokmen_bey" text="Sokmen al-Qutbi" />
     <string id="lord_terken_hatun" text="Terken Khatun" />
     <string id="ottoman_akinji_name" text="Ottoman Akinji Raider" />
-    <string id="ottoman_scout_name" text="Ottoman Scout Cavalry" />
+    <string id="ottoman_scout_name" text="Seljuk Scout Cavalry" />
     <string id="policy_ahi_desc" text="Artisan guilds are regulated. Workshop revenues increase by 25%, caravan tax boosts, and townsfolk join sieges as militia." />
     <string id="policy_ahi_name" text="Ahi Guild Regulations" />
     <string id="policy_caravan_desc" text="Caravanserais and guard posts secure all roads. Caravan bandit raid chances eliminated, trade profits +30%." />
@@ -172,6 +172,12 @@
     <string id="seljuk_ghulam_acemi_name" text="Ghulam Recruit" />
     <string id="seljuk_gok_nisanci_name" text="Celestial Gok Archer" />
     <string id="seljuk_hassa_suvarisi_name" text="Royal Hassa Cavalry" />
+    <string id="seljuk_gt_faction_official" text="an emir" />
+    <string id="seljuk_gt_faction_official_f" text="an emira" />
+    <string id="seljuk_gt_faction_ruler" text="sultan" />
+    <string id="seljuk_gt_faction_ruler_f" text="sultana" />
+    <string id="seljuk_gt_ruler_term_in_speech" text="{?RULER.GENDER}Sultana{?}Sultan{\?} {RULER.NAME}" />
+    <string id="seljuk_gt_noble_name_with_title" text="{?RULER.GENDER}Emira{?}Emir{\?} {RULER.NAME}" />
     <string id="seljuk_menu_insurance_text" text="Welcome to the Seljuk Caravanserai Administration and Silk Road Insurance Divan. Here, you can place your trade caravans under Imperial Treasury guarantee and invest capital into caravanserais to receive regular weekly dividends." />
     <string id="seljuk_menu_trade_divan" text="Visit the Seljuk Silk Road &amp; Caravan Insurance Divan" />
     <string id="seljuk_nizam_name" text="Seljuk Regular Nizam Infantry" />

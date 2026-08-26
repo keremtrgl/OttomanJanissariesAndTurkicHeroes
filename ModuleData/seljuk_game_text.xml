@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Native's HeroHelper.GetTitleInIndefiniteCase, AllianceCampaignBehavior,
+  LesserNobleRevoltIssueBehavior, PlayerTownVisitCampaignBehavior, etc. all call
+  GameTexts.FindText("str_faction_ruler"/"str_faction_official"/"str_faction_ruler_name_with_title"/
+  "str_faction_noble_name_with_title", <cultureId>) to describe a hero by their
+  faction's culture (e.g. "sultan", "an emir", "Sultan Alp Arslan"). This is a
+  SEPARATE system from TaleWorlds.Localization's key-with-inline-fallback text lookups (loaded via
+  GameTextManager, XmlName id="GameText", not gated by the "English never loads
+  strings.xml" rule) - decompiling confirmed it merges every module's GameText-
+  registered XML into one culture-keyed dictionary regardless of active language.
+  Native/ModuleData/module_strings.xml defines these ".<culture>" variations for
+  all 6 Native cultures (empire/vlandia/battania/khuzait/aserai/sturgia) but has
+  none for the mod's own "seljuk" culture, so any of the above flows involving a
+  Seljuk hero rendered the engine's own literal fallback text: "ERROR: Text with
+  id str_faction_ruler doesn't exist! Variation: seljuk". This file adds the
+  missing ".seljuk" variants, modeled on Native's "aserai" entries (Sultan/Sultana),
+  matching kingdoms.xml's existing ruler_title="{=seljuk_ruler_title}Sultan".
+-->
+<strings>
+	<string id="str_faction_official.seljuk" text="{=seljuk_gt_faction_official}an emir" />
+	<string id="str_faction_official.seljuk_f" text="{=seljuk_gt_faction_official_f}an emira" />
+	<string id="str_faction_ruler.seljuk" text="{=seljuk_gt_faction_ruler}sultan" />
+	<string id="str_faction_ruler.seljuk_f" text="{=seljuk_gt_faction_ruler_f}sultana" />
+	<string id="str_faction_ruler_term_in_speech.seljuk" text="{=seljuk_gt_ruler_term_in_speech}{?RULER.GENDER}Sultana{?}Sultan{\?} {RULER.NAME}" />
+	<string id="str_faction_ruler_name_with_title.seljuk" text="{=seljuk_gt_ruler_term_in_speech}{?RULER.GENDER}Sultana{?}Sultan{\?} {RULER.NAME}" />
+	<string id="str_faction_noble_name_with_title.seljuk" text="{=seljuk_gt_noble_name_with_title}{?RULER.GENDER}Emira{?}Emir{\?} {RULER.NAME}" />
+</strings>
