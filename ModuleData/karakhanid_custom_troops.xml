@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Fully independent Kara-Khanid (Culture.khuzait) troop tree - new character ids, own upgrade
+       chain, own equipment loadouts. Does NOT reuse or touch Native's khuzait_* troops (those stay
+       exactly as Native shipped them; kept for Custom Battle/tournament troop lists that still
+       reference the native ids directly - same pattern as byzantine_troops.xml/abbasid_troops.xml/
+       georgian_troops.xml). Every equipment item id below is a real, already-shipped Native item,
+       drawn almost entirely from Khuzait's own culture-tagged item pool (khuzait_*/steppe_*/
+       eastern_* in SandBoxCore/ModuleData/items/*.xml) since the historical Kara-Khanids were
+       themselves a Turkic steppe horse people - the same asset library this mod's own Georgian
+       tree already borrowed from for its Alan Horse-Guard branch.
+       Tier structure (6/11/16/21/26/31) and per-tier skill-point totals (90/195/360/508/676/835)
+       match byzantine_custom_troops.xml/abbasid_custom_troops.xml/georgian_custom_troops.xml
+       exactly - each branch below reuses that same skill-point budget per tier.
+       Historical grounding: Yigit/Alp (young warrior/champion warrior, generic old Turkic warrior
+       ranks), Tarkhan (a real tax-exempt elite-warrior noble title used across Gokturk/Kara-Khanid/
+       Mongol successor steppe states), Tegin (Kara-Khanid royal-prince title, as in Ali-Tegin and
+       Ibrahim Tamgach Khan's own alternate name Boritigin), Subasi/Beg (real Turkic military/noble
+       titles), Mergen (old Turkic/steppe word for a marksman), Yagici (raider/skirmisher), Ordu
+       (army/horde). The tier-6 heavy cavalry endpoint "Bori Tarkhan" ("Wolf-Tarkhan") nods to both
+       the Bozkurt (grey wolf) figure central to Turkic steppe mythology and to Boritigin himself. -->
+
+  <!-- Tier 1 (6): shared recruit -->
+  <NPCCharacter id="kk2_recruit" default_group="Infantry" level="6" name="{=kk2_t_recruit}Kara-Khanid Recruit" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="10" />
+      <skill id="OneHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="10" />
+      <skill id="Throwing" value="10" />
+    </skills>
+    <!-- No Horse slot: this is Culture.khuzait's basic_troop once rival_culture_names.xml points it
+         here, and GetBasicVolunteer() hands basic_troop out to almost every notable/village - the
+         byz2_recruit/abb2_recruit/geo2_recruit fix established that a Horse slot on the basic_troop
+         is what makes even the cheapest recruit register as mounted and overpriced. -->
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Item1" id="Item.eastern_wicker_shield" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
+        <equipment slot="Head" id="Item.nomad_padded_hood" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.kk2_yigit" />
+      <upgrade_target id="NPCCharacter.kk2_okcu" />
+      <upgrade_target id="NPCCharacter.kk2_alp_atli" />
+      <upgrade_target id="NPCCharacter.kk2_tegin_squire" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 2 (11) -->
+  <NPCCharacter id="kk2_yigit" default_group="Infantry" level="11" name="{=kk2_t_yigit}Yigit" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="55" />
+      <skill id="OneHanded" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Item1" id="Item.eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_1_t2" />
+        <equipment slot="Item1" id="Item.eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.nomad_padded_hood" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_alp_eri" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_okcu" default_group="Ranged" level="11" name="{=kk2_t_okcu}Okcu" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="45" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_padded_hood" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_mergen" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_alp_atli" default_group="Cavalry" level="11" name="{=kk2_t_alp_atli}Alp Atli" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="35" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="55" />
+      <skill id="Bow" value="20" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nomad_padded_hood" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_yagici" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_tegin_squire" default_group="Cavalry" level="11" name="{=kk2_t_tegin_squire}Tegin's Squire" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="65" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="30" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
+        <equipment slot="Item1" id="Item.tribal_steppe_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
+        <equipment slot="Item1" id="Item.tribal_steppe_shield" />
+        <equipment slot="Item2" id="Item.khuzait_mace_1_t2" />
+        <equipment slot="Head" id="Item.nomad_padded_hood" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_tarkhan_silahtari" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 3 (16) -->
+  <NPCCharacter id="kk2_alp_eri" default_group="Infantry" level="16" name="{=kk2_t_alp_eri}Alp Eri" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
+        <equipment slot="Body" id="Item.eastern_stitched_leather_coat" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_3_t3" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.eastern_cap" />
+        <equipment slot="Body" id="Item.eastern_studded_leather" />
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_kulug_alp" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_mergen" default_group="Ranged" level="16" name="{=kk2_t_mergen}Mergen" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Bow" value="150" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
+        <equipment slot="Body" id="Item.eastern_stitched_leather_coat" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_3_t3" />
+        <equipment slot="Head" id="Item.eastern_cap" />
+        <equipment slot="Body" id="Item.eastern_studded_leather" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_kulug_mergen" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_yagici" default_group="Cavalry" level="16" name="{=kk2_t_yagici}Yagici" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="110" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Bow" value="40" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
+        <equipment slot="Body" id="Item.eastern_stitched_leather_coat" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_3_t3" />
+        <equipment slot="Item1" id="Item.steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.eastern_cap" />
+        <equipment slot="Body" id="Item.eastern_studded_leather" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_tarkhan_atlisi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_tarkhan_silahtari" default_group="Cavalry" level="16" name="{=kk2_t_tarkhan_silahtari}Tarkhan's Lancer" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="50" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
+        <equipment slot="Body" id="Item.eastern_stitched_leather_coat" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_3_t3" />
+        <equipment slot="Head" id="Item.eastern_cap" />
+        <equipment slot="Body" id="Item.eastern_studded_leather" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_beg_suvarisi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 4 (21) -->
+  <NPCCharacter id="kk2_kulug_alp" default_group="Infantry" level="21" name="{=kk2_t_kulug_alp}Kulug Alp" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="155" />
+      <skill id="Polearm" value="140" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.eastern_throwing_spear_1_t3" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_2_t4" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.eastern_throwing_spear_1_t3" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
+        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_subasi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_kulug_mergen" default_group="Ranged" level="21" name="{=kk2_t_kulug_mergen}Kulug Mergen" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Bow" value="213" />
+      <skill id="Throwing" value="75" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_mace_2_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
+        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_bas_mergen" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_tarkhan_atlisi" default_group="Cavalry" level="21" name="{=kk2_t_tarkhan_atlisi}Tarkhan's Rider" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="85" />
+      <skill id="Riding" value="155" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="55" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_2_t4" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
+        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_kasgar_muhafizi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_beg_suvarisi" default_group="Cavalry" level="21" name="{=kk2_t_beg_suvarisi}Beg's Cavalryman" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="70" />
+      <skill id="Riding" value="170" />
+      <skill id="OneHanded" value="183" />
+      <skill id="Polearm" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.noyans_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.noyans_shield" />
+        <equipment slot="Item2" id="Item.khuzait_mace_2_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
+        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_tarkhan_suvarisi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 5 (26): four branches, but kk2_kasgar_muhafizi ends here as its own leaf (allied/elite
+       light-cavalry horse-archer skirmish line), mirroring geo2_alan_horseguard/byz2_vardariotai's
+       role - only the heavy cavalry, infantry, and ranged branches continue to tier 6. -->
+  <NPCCharacter id="kk2_subasi" default_group="Infantry" level="26" name="{=kk2_t_subasi}Subasi" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="210" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="86" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.khuzait_mace_3_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_han_muhafizi" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_bas_mergen" default_group="Ranged" level="26" name="{=kk2_t_bas_mergen}Bas Mergen" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="280" />
+      <skill id="Throwing" value="116" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_mace_3_t4" />
+        <equipment slot="Head" id="Item.plumed_nomad_helmet" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_ordu_mergeni" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_kasgar_muhafizi" default_group="Cavalry" level="26" name="{=kk2_t_kasgar_muhafizi}Kashgar Horse-Guard" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="Riding" value="210" />
+      <skill id="OneHanded" value="180" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="96" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Item1" id="Item.steppe_war_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_3_t4" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+      </EquipmentRoster>
+    </Equipments>
+    <!-- Kashgar Horse-Guard (elite eastern-capital horse-archer skirmish line) is left as its own
+         branch endpoint here, mirroring geo2_alan_horseguard/byz2_vardariotai. -->
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_tarkhan_suvarisi" default_group="Cavalry" level="26" name="{=kk2_t_tarkhan_suvarisi}Tarkhan's Cavalryman" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="95" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="240" />
+      <skill id="Polearm" value="121" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.steppe_guardian_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.steppe_guardian_shield" />
+        <equipment slot="Item2" id="Item.khuzait_mace_3_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.kk2_bori_tarkhan" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 6 (31): three separate branch endpoints (infantry, ranged, heavy cavalry) - mirrors
+       byzantine_custom_troops.xml/georgian_custom_troops.xml's tier-6 structure exactly. -->
+  <NPCCharacter id="kk2_han_muhafizi" default_group="Infantry" level="31" name="{=kk2_t_han_muhafizi}Khan's Guard" occupation="Soldier" culture="Culture.khuzait" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="130" />
+      <skill id="Polearm" value="130" />
+      <skill id="Throwing" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_battle_crown" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
+        <equipment slot="Item2" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_ordu_mergeni" default_group="Ranged" level="31" name="{=kk2_t_ordu_mergeni}Ordu Mergeni" occupation="Soldier" culture="Culture.khuzait" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="165" />
+      <skill id="Bow" value="330" />
+      <skill id="Throwing" value="175" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Head" id="Item.khuzait_battle_crown" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="kk2_bori_tarkhan" default_group="Cavalry" level="31" name="{=kk2_t_bori_tarkhan}Bori Tarkhan" occupation="Soldier" culture="Culture.khuzait" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Bow" value="60" />
+      <skill id="Throwing" value="35" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.steppe_guardian_shield" />
+        <equipment slot="Item2" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Item3" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_battle_crown" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.noyans_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Item3" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+</NPCCharacters>
