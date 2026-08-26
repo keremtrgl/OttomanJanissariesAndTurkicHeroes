@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Fully independent Crusader States (Culture.vlandia) troop tree - new character ids, own
+       upgrade chain, own equipment loadouts, mirroring byzantine_custom_troops.xml/
+       abbasid_custom_troops.xml/georgian_custom_troops.xml exactly. Does NOT reuse or touch
+       Native's vlandia_recruit/vlandia_militia/etc troops. Every equipment item id below is a
+       real, already-shipped Native item (verified against SandBoxCore/ModuleData/items/*.xml's
+       own <Item>/<CraftedItem> definitions).
+       Tier structure (6/11/16/21/26/31) and per-tier skill-point totals (90/195/360/508/676/835)
+       match this mod's own audited standard, reusing byzantine_custom_troops.xml's exact
+       per-branch skill numbers since the branch roles line up directly (infantry/ranged/light
+       cavalry/heavy cavalry) - only the ranged branch's skill type changes (Crossbow instead of
+       Bow, since the crossbow was the Franks' actual signature ranged weapon, not reflavored).
+       Historical grounding: Sergeants (both foot and mounted, saw far more combat use than
+       knights per capita and were core Crusader men-at-arms), Turcopoles (locally-recruited
+       mounted archers, up to half of a Crusader army's cavalry by the mid-12th century),
+       Knights and the "Knight banneret" rank (a knight entitled to lead troops under his own
+       square banner), and the Hospitaller and Templar military-religious orders (founded 1099
+       and 1119 respectively - both founded within this mod's own timeframe) as the elite endpoint
+       of the infantry and heavy cavalry lines. -->
+
+  <!-- Tier 1 (6): shared recruit -->
+  <NPCCharacter id="crus2_recruit" default_group="Infantry" level="6" name="{=crus2_t_recruit}Crusader Levy" occupation="Soldier" culture="Culture.vlandia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="10" />
+      <skill id="OneHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="10" />
+      <skill id="Throwing" value="10" />
+    </skills>
+    <!-- No Horse slot: this is Culture.vlandia's basic_troop candidate - keeping it unmounted
+         avoids the "170 dinar mounted recruit" bug class this mod fixed for every other culture. -->
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_1_t2" />
+        <equipment slot="Head" id="Item.padded_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Head" id="Item.laced_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.crus2_sergeant" />
+      <upgrade_target id="NPCCharacter.crus2_crossbowman" />
+      <upgrade_target id="NPCCharacter.crus2_turcopole_recruit" />
+      <upgrade_target id="NPCCharacter.crus2_squire" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 2 (11) -->
+  <NPCCharacter id="crus2_sergeant" default_group="Infantry" level="11" name="{=crus2_t_sergeant}Foot Sergeant" occupation="Soldier" culture="Culture.vlandia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="55" />
+      <skill id="OneHanded" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.western_javelin_1_t2" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.hauberk" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.western_javelin_1_t2" />
+        <equipment slot="Head" id="Item.padded_coif" />
+        <equipment slot="Body" id="Item.mail_shirt" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_pikeman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_crossbowman" default_group="Ranged" level="11" name="{=crus2_t_crossbowman}Crossbowman" occupation="Soldier" culture="Culture.vlandia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="45" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Crossbow" value="80" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_a" />
+        <equipment slot="Item1" id="Item.bolt_a" />
+        <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Head" id="Item.padded_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_b" />
+        <equipment slot="Item1" id="Item.bolt_a" />
+        <equipment slot="Item2" id="Item.vlandia_sword_1_t2" />
+        <equipment slot="Head" id="Item.laced_coif" />
+        <equipment slot="Body" id="Item.mail_shirt" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_veteran_crossbowman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_turcopole_recruit" default_group="Cavalry" level="11" name="{=crus2_t_turcopole_recruit}Turcopole Recruit" occupation="Soldier" culture="Culture.vlandia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="35" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="55" />
+      <skill id="Bow" value="20" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.laced_coif" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.padded_coif" />
+        <equipment slot="Body" id="Item.mail_shirt" />
+        <equipment slot="Horse" id="Item.vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_turcopole_archer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_squire" default_group="Cavalry" level="11" name="{=crus2_t_squire}Squire" occupation="Soldier" culture="Culture.vlandia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="65" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="30" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_1_t3" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.vlandia_sword_1_t2" />
+        <equipment slot="Head" id="Item.nasal_helmet" />
+        <equipment slot="Body" id="Item.gambeson_b" />
+        <equipment slot="Horse" id="Item.vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_1_t2" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Head" id="Item.padded_coif" />
+        <equipment slot="Body" id="Item.mail_shirt" />
+        <equipment slot="Horse" id="Item.vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_mounted_serjeant" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 3 (16) -->
+  <NPCCharacter id="crus2_pikeman" default_group="Infantry" level="16" name="{=crus2_t_pikeman}Frankish Pikeman" occupation="Soldier" culture="Culture.vlandia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_3_t3" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.western_javelin_2_t3" />
+        <equipment slot="Head" id="Item.kettle_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.hauberk" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_2_t3" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.western_javelin_2_t3" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_mail_coif" />
+        <equipment slot="Body" id="Item.mail_shirt" />
+        <equipment slot="Leg" id="Item.leather_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_frankish_serjeant" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_veteran_crossbowman" default_group="Ranged" level="16" name="{=crus2_t_veteran_crossbowman}Veteran Crossbowman" occupation="Soldier" culture="Culture.vlandia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Crossbow" value="150" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_c" />
+        <equipment slot="Item1" id="Item.bolt_b" />
+        <equipment slot="Item2" id="Item.vlandia_sword_2_t3" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.hauberk" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_d" />
+        <equipment slot="Item1" id="Item.bolt_b" />
+        <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Head" id="Item.kettle_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_arbalester" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_turcopole_archer" default_group="Cavalry" level="16" name="{=crus2_t_turcopole_archer}Turcopole Horse Archer" occupation="Soldier" culture="Culture.vlandia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="110" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Bow" value="40" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_2_t3" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.hauberk" />
+        <equipment slot="Horse" id="Item.vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Item1" id="Item.steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.kettle_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Horse" id="Item.vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_turcopole_veteran" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_mounted_serjeant" default_group="Cavalry" level="16" name="{=crus2_t_mounted_serjeant}Mounted Serjeant" occupation="Soldier" culture="Culture.vlandia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="50" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.vlandia_sword_2_t3" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_mail_coif" />
+        <equipment slot="Body" id="Item.hauberk" />
+        <equipment slot="Horse" id="Item.t2_vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_1_t3" />
+        <equipment slot="Item1" id="Item.western_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
+        <equipment slot="Head" id="Item.kettle_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Horse" id="Item.t2_vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_knight" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 4 (21) -->
+  <NPCCharacter id="crus2_frankish_serjeant" default_group="Infantry" level="21" name="{=crus2_t_frankish_serjeant}Frankish Serjeant" occupation="Soldier" culture="Culture.vlandia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="155" />
+      <skill id="Polearm" value="140" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_spear_4_t4" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.western_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.western_javelin_2_t3" />
+        <equipment slot="Head" id="Item.kettle_hat_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_3_t4" />
+        <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.western_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.western_javelin_2_t3" />
+        <equipment slot="Head" id="Item.full_helm_over_laced_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_hospitaller_sergeant" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_arbalester" default_group="Ranged" level="21" name="{=crus2_t_arbalester}Arbalester" occupation="Soldier" culture="Culture.vlandia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Crossbow" value="213" />
+      <skill id="Throwing" value="75" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_e" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.vlandia_sword_3_t4" />
+        <equipment slot="Head" id="Item.kettle_hat_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_f" />
+        <equipment slot="Item1" id="Item.bolt_c" />
+        <equipment slot="Item2" id="Item.vlandia_mace_2_t4" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_mail" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_master_arbalester" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_turcopole_veteran" default_group="Cavalry" level="21" name="{=crus2_t_turcopole_veteran}Turcopole Veteran" occupation="Soldier" culture="Culture.vlandia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="85" />
+      <skill id="Riding" value="155" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="55" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_3_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.kettle_hat_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Horse" id="Item.t2_vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_mace_2_t4" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.nasal_helmet_over_mail" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Horse" id="Item.t2_vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_turcopole_captain" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_knight" default_group="Cavalry" level="21" name="{=crus2_t_knight}Knight" occupation="Soldier" culture="Culture.vlandia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="70" />
+      <skill id="Riding" value="170" />
+      <skill id="OneHanded" value="183" />
+      <skill id="Polearm" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
+        <equipment slot="Item1" id="Item.western_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_sword_3_t4" />
+        <equipment slot="Head" id="Item.kettle_hat_over_mail_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+        <equipment slot="Horse" id="Item.t2_vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.western_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_sword_4_t4" />
+        <equipment slot="Head" id="Item.full_helm_over_laced_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+        <equipment slot="Horse" id="Item.t2_vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_knight_banneret" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 5 (26): four branches, but crus2_turcopole_captain ends here as its own leaf (light
+       cavalry skirmish line), matching byz2_vardariotai/geo2_alan_horseguard's role. -->
+  <NPCCharacter id="crus2_hospitaller_sergeant" default_group="Infantry" level="26" name="{=crus2_t_hospitaller_sergeant}Hospitaller Sergeant" occupation="Soldier" culture="Culture.vlandia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="210" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="86" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_2haxe_1_t4" />
+        <equipment slot="Item1" id="Item.vlandia_sword_4_t4" />
+        <equipment slot="Item2" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Head" id="Item.full_helm_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_2hsword_t3" />
+        <equipment slot="Item1" id="Item.vlandia_sword_4_t4" />
+        <equipment slot="Item2" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Head" id="Item.visored_helmet_over_mail_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_hospitaller_brother" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_master_arbalester" default_group="Ranged" level="26" name="{=crus2_t_master_arbalester}Master Arbalester" occupation="Soldier" culture="Culture.vlandia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Crossbow" value="280" />
+      <skill id="Throwing" value="116" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_g" />
+        <equipment slot="Item1" id="Item.bolt_d" />
+        <equipment slot="Item2" id="Item.vlandia_sword_4_t4" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.full_helm_over_laced_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_h" />
+        <equipment slot="Item1" id="Item.bolt_d" />
+        <equipment slot="Item2" id="Item.vlandia_mace_3_t5" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.visored_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_arbalester_guard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_turcopole_captain" default_group="Cavalry" level="26" name="{=crus2_t_turcopole_captain}Turcopole Captain" occupation="Soldier" culture="Culture.vlandia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="Riding" value="210" />
+      <skill id="OneHanded" value="180" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="96" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_sword_4_t4" />
+        <equipment slot="Item1" id="Item.steppe_war_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.full_helm_over_laced_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+        <equipment slot="Horse" id="Item.t3_vlandia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_mace_3_t5" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.visored_helmet_over_padded_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.mail_mitten" />
+        <equipment slot="Horse" id="Item.t3_vlandia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <!-- Turcopole Captain (allied/locally-recruited horse archer skirmish line) is left as its own
+         branch endpoint here, mirroring byz2_vardariotai and geo2_alan_horseguard - by the mid-12th
+         century Turcopoles made up roughly half of a Crusader army's mounted forces in their own
+         right, not a stepping stone to becoming knights. -->
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_knight_banneret" default_group="Cavalry" level="26" name="{=crus2_t_knight_banneret}Knight Banneret" occupation="Soldier" culture="Culture.vlandia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="95" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="240" />
+      <skill id="Polearm" value="121" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
+        <equipment slot="Item1" id="Item.western_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_1_t5" />
+        <equipment slot="Head" id="Item.full_helm_over_mail_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Horse" id="Item.t3_vlandia_horse" />
+        <equipment slot="HorseHarness" id="Item.chain_horse_harness" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item1" id="Item.western_riders_kite_shield" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_2_t5" />
+        <equipment slot="Head" id="Item.visored_helmet_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
+        <equipment slot="Horse" id="Item.t3_vlandia_horse" />
+        <equipment slot="HorseHarness" id="Item.chain_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.crus2_templar_knight" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 6 (31): three separate branch endpoints (infantry, ranged, heavy cavalry). -->
+  <NPCCharacter id="crus2_hospitaller_brother" default_group="Infantry" level="31" name="{=crus2_t_hospitaller_brother}Hospitaller Sworn Brother" occupation="Soldier" culture="Culture.vlandia" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="130" />
+      <skill id="Polearm" value="130" />
+      <skill id="Throwing" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_2haxe_1_t4" />
+        <equipment slot="Item1" id="Item.vlandia_sword_5_t5" />
+        <equipment slot="Item2" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Head" id="Item.full_helm_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_2hsword_t4" />
+        <equipment slot="Item1" id="Item.vlandia_noble_sword_1_t5" />
+        <equipment slot="Item2" id="Item.vlandia_infantry_shield_a" />
+        <equipment slot="Head" id="Item.visored_helmet_over_laced_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_arbalester_guard" default_group="Ranged" level="31" name="{=crus2_t_arbalester_guard}Elite Arbalester Guard" occupation="Soldier" culture="Culture.vlandia" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="165" />
+      <skill id="Crossbow" value="330" />
+      <skill id="Throwing" value="175" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_i" />
+        <equipment slot="Item1" id="Item.bolt_e" />
+        <equipment slot="Item2" id="Item.vlandia_sword_5_t5" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.full_helm_over_mail_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.crossbow_g" />
+        <equipment slot="Item1" id="Item.bolt_e" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_2_t5" />
+        <equipment slot="Item3" id="Item.pavise_shield" />
+        <equipment slot="Head" id="Item.visored_helmet_over_mail_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="crus2_templar_knight" default_group="Cavalry" level="31" name="{=crus2_t_templar_knight}Templar Knight" occupation="Soldier" culture="Culture.vlandia" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Bow" value="60" />
+      <skill id="Throwing" value="35" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.vlandia_2haxe_1_t4" />
+        <equipment slot="Item1" id="Item.vlandia_lance_3_t5" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_3_t5" />
+        <equipment slot="Item3" id="Item.western_riders_kite_shield" />
+        <equipment slot="Head" id="Item.full_helm_over_mail_coif" />
+        <equipment slot="Body" id="Item.vlandia_chainmail" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+        <equipment slot="Horse" id="Item.t3_vlandia_horse" />
+        <equipment slot="HorseHarness" id="Item.mail_and_plate_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.western_2hsword_t4" />
+        <equipment slot="Item1" id="Item.vlandia_lance_2_t4" />
+        <equipment slot="Item2" id="Item.vlandia_noble_sword_4_t5" />
+        <equipment slot="Item3" id="Item.western_riders_kite_shield" />
+        <equipment slot="Head" id="Item.visored_helmet_over_laced_coif" />
+        <equipment slot="Body" id="Item.western_scale_mail" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
+        <equipment slot="Leg" id="Item.plated_strip_boots" />
+        <equipment slot="Horse" id="Item.t3_vlandia_horse" />
+        <equipment slot="HorseHarness" id="Item.half_mail_and_plate_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+</NPCCharacters>

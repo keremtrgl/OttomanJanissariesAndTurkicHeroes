@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- Crusader State (Culture.vlandia) noble houses renamed with real historical figures from the
+       Principality of Antioch and the County of Edessa, both founded in 1098 during the First
+       Crusade - the same "attribute-only partial-XML-override" pattern already used for Byzantine/
+       Abbasid/Georgian clans. Tier/owner/settlement/banner untouched, only name= changes. -->
+  <!-- 1. House of Hauteville - Bohemond I, founder and first Prince of Antioch (r. 1098-1111) -->
+  <Faction id="clan_vlandia_1" name="{=crus_cn_hauteville}House of Hauteville" />
+  <!-- 2. House of Rethel - Baldwin II of Le Bourcq, Count of Edessa (r. 1100-1118), later King of Jerusalem -->
+  <Faction id="clan_vlandia_2" name="{=crus_cn_rethel}House of Rethel" />
+  <!-- 3. House of Melitene - Morphia of Melitene, Armenian princess, Countess of Edessa by marriage to Baldwin II -->
+  <Faction id="clan_vlandia_3" name="{=crus_cn_melitene}House of Melitene" />
+  <!-- 4. House of Hauteville (Galilee branch) - Tancred, regent of Antioch (1101-1103, 1104-1112), Prince of Galilee -->
+  <Faction id="clan_vlandia_4" name="{=crus_cn_tancred}House of Hauteville-Galilee" />
+  <!-- 6. House of Le Puiset - Waleran of Le Puiset, Seigneur of Birejik -->
+  <Faction id="clan_vlandia_6" name="{=crus_cn_lepuiset}House of Le Puiset" />
+  <!-- 7. House of Boulogne - Baldwin of Boulogne, first Count of Edessa (r. 1098-1100) -->
+  <Faction id="clan_vlandia_7" name="{=crus_cn_boulogne}House of Boulogne" />
+  <!-- 8. House of Courtenay - Joscelin I of Courtenay, Count of Edessa (r. 1119-1131), Lord of Turbessel -->
+  <Faction id="clan_vlandia_8" name="{=crus_cn_courtenay}House of Courtenay" />
+</Factions>

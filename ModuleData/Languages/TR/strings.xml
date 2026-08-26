@@ -936,5 +936,53 @@
     <string id="geo_orbeli_greet_2" text="Hangi hanedanların tahtını ayakta tuttuğunu unutan bir kral, onu nadiren uzun süre elinde tutar. Ben sadece sana bu gerçeği hatırlatıyorum. Konuş." />
     <string id="geo_giorgi_greet_1" text="Kilise ve Taç, bu krallıkta aynı yoldan yürür, yolcu, ne kadar tedirgin olsa da. Seni bana getiren nedir?" />
     <string id="geo_grigol_greet_1" text="Bir Eristavi, Krala hesap verir, topraklarından geçen her başıboş yabancıya değil. İşini açıkça söyle." />
-  </strings>
+      <string id="crus_faction_name" text="Hacli Devletleri" />
+    <string id="crus_faction_short" text="Haclilar" />
+    <string id="crus_faction_title" text="Antakya Prensligi" />
+    <string id="crus_faction_ruler" text="Prens" />
+    <string id="crus_faction_desc" text="Birinci Hacli Seferi'nde dogu'ya yuruyup 1098'de Antakya Prensligi ile Urfa Kontlugu'nu kuran Frank ve Norman lordlar. Yeni topraklari, Selcuklu'ya bagli Artuklu ve Danismendli beyliklerine dogrudan sinirdas - bu yuzden Buyuk Selcuklu Devleti'nin bati sinirinin en sik rastlanan hasmi." />
+    <string id="crus_culture_name" text="Hacli" />
+    <string id="crus_cn_hauteville" text="Hauteville Hanedani" />
+    <string id="crus_cn_rethel" text="Rethel Hanedani" />
+    <string id="crus_cn_melitene" text="Melitene Hanedanı" />
+    <string id="crus_cn_tancred" text="Hauteville-Galilee Hanedani" />
+    <string id="crus_cn_lepuiset" text="Le Puiset Hanedani" />
+    <string id="crus_cn_boulogne" text="Boulogne Hanedani" />
+    <string id="crus_cn_courtenay" text="Courtenay Hanedani" />
+    <string id="crus_ln_bohemond" text="Tarentolu Bohemond" />
+    <string id="crus_ln_baldwin2" text="Le Bourcqlu Baldwin" />
+    <string id="crus_ln_morphia" text="Melitene'li Morphia" />
+    <string id="crus_ln_tancred" text="Tankred" />
+    <string id="crus_ln_waleran" text="Le Puisetli Waleran" />
+    <string id="crus_ln_baldwin1" text="Boulognlu Baldwin" />
+    <string id="crus_ln_joscelin" text="Courtenayli Joscelin" />
+    <string id="crus_s_antioch" text="Antakya" />
+    <string id="crus_s_laodicea" text="Laodikeia" />
+    <string id="crus_s_edessa" text="Urfa" />
+    <string id="crus_s_turbessel" text="Turbessel" />
+    <string id="crus_s_birecik" text="Birecik" />
+    <string id="crus_s_marash" text="Maras" />
+    <string id="crus_s_tarsus" text="Tarsus" />
+    <string id="crus_s_saruj" text="Suruc" />
+    <string id="crus2_t_recruit" text="Hacli Milisi" />
+    <string id="crus2_t_sergeant" text="Piyade Serjani" />
+    <string id="crus2_t_crossbowman" text="Arbaletci" />
+    <string id="crus2_t_turcopole_recruit" text="Turkopol Acemisi" />
+    <string id="crus2_t_squire" text="Silahtar" />
+    <string id="crus2_t_pikeman" text="Frank Mizrakcisi" />
+    <string id="crus2_t_veteran_crossbowman" text="Usta Arbaletci" />
+    <string id="crus2_t_turcopole_archer" text="Turkopol Atli Okcusu" />
+    <string id="crus2_t_mounted_serjeant" text="Atli Serjan" />
+    <string id="crus2_t_frankish_serjeant" text="Frank Serjani" />
+    <string id="crus2_t_arbalester" text="Arbalist" />
+    <string id="crus2_t_turcopole_veteran" text="Turkopol Gazisi" />
+    <string id="crus2_t_knight" text="Sovalye" />
+    <string id="crus2_t_hospitaller_sergeant" text="Hospitalier Serjani" />
+    <string id="crus2_t_master_arbalester" text="Usta Arbalist" />
+    <string id="crus2_t_turcopole_captain" text="Turkopol Kumandani" />
+    <string id="crus2_t_knight_banneret" text="Sancak Sovalyesi" />
+    <string id="crus2_t_hospitaller_brother" text="Hospitalier Yeminli Kardesi" />
+    <string id="crus2_t_arbalester_guard" text="Seckin Arbalist Muhafizi" />
+    <string id="crus2_t_templar_knight" text="Tapinak Sovalyesi" />
+</strings>
 </base>

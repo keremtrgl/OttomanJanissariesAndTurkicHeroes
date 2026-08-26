@@ -112,7 +112,25 @@
   <!-- basliyor" diye bildirdigi icin bunlar da barisa cekildi - isim/kultur/banner gibi     -->
   <!-- baska hicbir sey degistirilmedi, sadece baslangic savas durumu.                       -->
   <!-- ================================================================================= -->
-  <Kingdom id="vlandia">
+  <!-- HAÇLI DEVLETLERİ (Native: Kingdom of Vlandia / vlandia) -->
+  <!-- Antakya Prensliği ve Urfa Kontluğu, ikisi de 1098'de Birinci Haçlı Seferi sirasinda kuruldu -
+       Urfa, Artuklu/Danismendli/Selcuklu beyliklerinin dogrudan sinirdasi (bkz. crusader_lords.xml).
+       Renk paleti: altin zemin (palet id 7, 0xffDEA940) + kirmizi hac vurgusu (palet id 83,
+       0xffD22D33 - Gurcistan'in da ikincil rengi ama ana/zemin rengi tamamen farkli oldugu icin
+       bayraklar birbirine karismiyor). banner_key, Vlandia'nin kendi Native mesh/boyut/pozisyon
+       yapisini korur, sadece renk index'leri degisti (ayni "banner_key eksikligi" hatasina
+       dusmemek icin Native'in kendi gecerli layout'u temel alindi). -->
+  <Kingdom id="vlandia"
+           name="{=crus_faction_name}Crusader States"
+           short_name="{=crus_faction_short}Crusaders"
+           title="{=crus_faction_title}Principality of Antioch"
+           ruler_title="{=crus_faction_ruler}Prince"
+           text="{=crus_faction_desc}Frankish and Norman lords who marched east on the First Crusade and carved out the Principality of Antioch and the County of Edessa in 1098. Their new domain borders the Seljuk-aligned Artuqid and Danishmendid beyliks directly, making them a frequent combatant on the Great Seljuk Empire's western frontier."
+           banner_key="11.7.7.1536.1536.764.764.1.0.0.160.83.83.497.497.764.764.1.0.0"
+           primary_banner_color="0xffDEA940"
+           secondary_banner_color="0xffD22D33"
+           color="0xffDEA940"
+           color2="0xffD22D33">
     <relationships>
       <relationship kingdom="Kingdom.sturgia" value="0" isAtWar="false" />
     </relationships>

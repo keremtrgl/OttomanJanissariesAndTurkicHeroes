@@ -977,5 +977,53 @@
     <string id="geo_orbeli_greet_2" text="Un rey que olvida qué casas sostienen su trono rara vez lo conserva mucho tiempo. Solo te recuerdo ese hecho. Habla." />
     <string id="geo_giorgi_greet_1" text="La Iglesia y la Corona recorren el mismo camino en este reino, viajero, por incómodo que resulte. ¿Qué te trae ante mí?" />
     <string id="geo_grigol_greet_1" text="Un Eristavi responde ante el Rey, no ante cualquier forastero errante que cruce sus tierras. Expón tu asunto con claridad." />
-  </strings>
+      <string id="crus_faction_name" text="Estados Cruzados" />
+    <string id="crus_faction_short" text="Cruzados" />
+    <string id="crus_faction_title" text="Principado de Antioquia" />
+    <string id="crus_faction_ruler" text="Principe" />
+    <string id="crus_faction_desc" text="Senores francos y normandos que marcharon hacia el este durante la Primera Cruzada y fundaron el Principado de Antioquia y el Condado de Edesa en 1098. Su nuevo dominio limita directamente con los beylicatos artuquida y danishmendi, aliados de los selyucidas." />
+    <string id="crus_culture_name" text="Cruzado" />
+    <string id="crus_cn_hauteville" text="Casa de Hauteville" />
+    <string id="crus_cn_rethel" text="Casa de Rethel" />
+    <string id="crus_cn_melitene" text="Casa de Melitene" />
+    <string id="crus_cn_tancred" text="Casa de Hauteville-Galilea" />
+    <string id="crus_cn_lepuiset" text="Casa de Le Puiset" />
+    <string id="crus_cn_boulogne" text="Casa de Boulogne" />
+    <string id="crus_cn_courtenay" text="Casa de Courtenay" />
+    <string id="crus_ln_bohemond" text="Bohemundo de Tarento" />
+    <string id="crus_ln_baldwin2" text="Balduino de Le Bourcq" />
+    <string id="crus_ln_morphia" text="Morfia de Melitene" />
+    <string id="crus_ln_tancred" text="Tancredo" />
+    <string id="crus_ln_waleran" text="Waleran de Le Puiset" />
+    <string id="crus_ln_baldwin1" text="Balduino de Bolonia" />
+    <string id="crus_ln_joscelin" text="Joscelino de Courtenay" />
+    <string id="crus_s_antioch" text="Antioquia" />
+    <string id="crus_s_laodicea" text="Laodicea" />
+    <string id="crus_s_edessa" text="Edesa" />
+    <string id="crus_s_turbessel" text="Turbesel" />
+    <string id="crus_s_birecik" text="Birecik" />
+    <string id="crus_s_marash" text="Marash" />
+    <string id="crus_s_tarsus" text="Tarso" />
+    <string id="crus_s_saruj" text="Saruj" />
+    <string id="crus2_t_recruit" text="Leva Cruzada" />
+    <string id="crus2_t_sergeant" text="Sargento de a Pie" />
+    <string id="crus2_t_crossbowman" text="Ballestero" />
+    <string id="crus2_t_turcopole_recruit" text="Turcopolo Recluta" />
+    <string id="crus2_t_squire" text="Escudero" />
+    <string id="crus2_t_pikeman" text="Piquero Franco" />
+    <string id="crus2_t_veteran_crossbowman" text="Ballestero Veterano" />
+    <string id="crus2_t_turcopole_archer" text="Turcopolo Arquero a Caballo" />
+    <string id="crus2_t_mounted_serjeant" text="Sargento Montado" />
+    <string id="crus2_t_frankish_serjeant" text="Sargento Franco" />
+    <string id="crus2_t_arbalester" text="Ballestero Pesado" />
+    <string id="crus2_t_turcopole_veteran" text="Turcopolo Veterano" />
+    <string id="crus2_t_knight" text="Caballero" />
+    <string id="crus2_t_hospitaller_sergeant" text="Sargento Hospitalario" />
+    <string id="crus2_t_master_arbalester" text="Maestro Ballestero" />
+    <string id="crus2_t_turcopole_captain" text="Capitan Turcopolo" />
+    <string id="crus2_t_knight_banneret" text="Caballero Banneret" />
+    <string id="crus2_t_hospitaller_brother" text="Hermano Sargento Hospitalario" />
+    <string id="crus2_t_arbalester_guard" text="Guardia de Elite Ballestera" />
+    <string id="crus2_t_templar_knight" text="Caballero Templario" />
+</strings>
 </base>

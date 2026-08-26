@@ -28,4 +28,8 @@
        is the tier-2 INFANTRY branch (geo2_msakhuri - axe/sword, shield, no horse), not a mounted
        branch, for the same reason byz2_skutatos/abb2_ayyar were picked over their cavalry siblings. -->
   <Culture id="sturgia" name="{=geo_culture_name}Georgian" basic_troop="NPCCharacter.geo2_recruit" elite_basic_troop="NPCCharacter.geo2_msakhuri" />
+  <!-- elite_basic_troop is the tier-2 INFANTRY branch (crus2_sergeant - sword, shield, no horse),
+       not a mounted branch, for the same reason byz2_skutatos/abb2_ayyar/geo2_msakhuri were
+       picked over their cavalry siblings. -->
+  <Culture id="vlandia" name="{=crus_culture_name}Crusader" basic_troop="NPCCharacter.crus2_recruit" elite_basic_troop="NPCCharacter.crus2_sergeant" />
 </SPCultures>
