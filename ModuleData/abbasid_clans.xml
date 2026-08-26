@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Factions>
   <!-- Abbasi Halifeligi hanedanlari (Native clan_aserai_1..9 reskin - klan verisi/lordlar/toprak Native, sadece kimlik degisir) -->
-  <Faction id="clan_aserai_1" name="{=abb_house_abbas}Banu Abbas" />
+  <Faction id="clan_aserai_1" name="{=abb_house_abbas}Banu Abbas" banner_key="11.116.116.4345.4345.764.764.1.0.0.463.172.172.466.466.764.764.1.0.0" />
   <Faction id="clan_aserai_2" name="{=abb_house_jahir}Banu Jahir" />
   <Faction id="clan_aserai_3" name="{=abb_house_muslima}Banu al-Muslima" />
   <Faction id="clan_aserai_4" name="{=abb_house_zaynabi}Banu al-Zaynabi" />
