@@ -1120,5 +1120,68 @@
     <string id="kk2_t_han_muhafizi" text="Гвардия хана" />
     <string id="kk2_t_ordu_mergeni" text="Орду Мерген" />
     <string id="kk2_t_bori_tarkhan" text="Бёри-тархан" />
+    <string id="byz_w_house_laskaris" text="Дом Ласкариса" />
+    <string id="byz_w_house_branas" text="Дом Враны" />
+    <string id="byz_w_house_kontostephanos" text="Дом Контостефана" />
+    <string id="byz_w_house_raoul" text="Дом Рауля" />
+    <string id="byz_w_house_synadenos" text="Дом Синадина" />
+    <string id="byz_w_house_kamateros" text="Дом Камитира" />
+    <string id="byz_w_house_maleinos" text="Дом Малеина" />
+    <string id="byz_w_house_kourtikios" text="Дом Куртикия" />
+    <string id="byz_w_house_melias" text="Дом Мелия" />
+    <string id="byz_w_ln_theodoros_laskaris" text="Феодор Ласкарис" />
+    <string id="byz_w_ln_alexios_branas" text="Алексей Врана" />
+    <string id="byz_w_ln_andronikos_kontostephanos" text="Андроник Контостефан" />
+    <string id="byz_w_ln_ioannes_raoul" text="Иоанн Рауль" />
+    <string id="byz_w_ln_theodoros_synadenos" text="Феодор Синадин" />
+    <string id="byz_w_ln_andronikos_kamateros" text="Андроник Камитир" />
+    <string id="byz_w_ln_eustathios_maleinos" text="Евстафий Малеин" />
+    <string id="byz_w_ln_nikephoros_kourtikios" text="Никифор Куртикий" />
+    <string id="byz_w_ln_konstantinos_melias" text="Константин Мелий" />
+    <string id="byz_w_s_thessalonica" text="Фессалоника" />
+    <string id="byz_w_s_adrianople" text="Адрианополь" />
+    <string id="byz_w_s_athens" text="Афины" />
+    <string id="byz_w_s_patras" text="Патры" />
+    <string id="byz_w_s_herakleia" text="Гераклея" />
+    <string id="byz_w_s_anchialos" text="Анхиал" />
+    <string id="byz_w_c_amphipolis" text="Замок Амфиполь" />
+    <string id="byz_w_c_chios" text="Замок Хиос" />
+    <string id="byz_w_c_rhodes" text="Замок Родос" />
+    <string id="byz_w_c_lesbos" text="Замок Лесбос" />
+    <string id="byz_w_c_naxos" text="Замок Наксос" />
+    <string id="byz_w_c_dyrrhachium" text="Замок Диррахий" />
+    <string id="byz_w_c_larissa" text="Замок Лариса" />
+    <string id="byz_w_c_chandax" text="Замок Хандак" />
+    <string id="byz_w_v_pella" text="Пелла" />
+    <string id="byz_w_v_beroia" text="Верия" />
+    <string id="byz_w_v_philippi" text="Филиппы" />
+    <string id="byz_w_v_philippopolis" text="Филиппополь" />
+    <string id="byz_w_v_beroe" text="Берое" />
+    <string id="byz_w_v_develtos" text="Девелт" />
+    <string id="byz_w_v_corinth" text="Коринф" />
+    <string id="byz_w_v_thebes" text="Фивы" />
+    <string id="byz_w_v_sparta" text="Спарта" />
+    <string id="byz_w_v_argos" text="Аргос" />
+    <string id="byz_w_v_selymbria" text="Силимврия" />
+    <string id="byz_w_v_bizye" text="Визия" />
+    <string id="byz_w_v_mesembria" text="Месемврия" />
+    <string id="byz_w_v_didymoteichon" text="Дидимотихон" />
+    <string id="byz_w_v_rhaidestos" text="Родосто" />
+    <string id="byz_w_v_serres" text="Серры" />
+    <string id="byz_w_v_ainos" text="Энос" />
+    <string id="byz_w_v_phocaea" text="Фокея" />
+    <string id="byz_w_v_andros" text="Андрос" />
+    <string id="byz_w_v_halicarnassus" text="Галикарнас" />
+    <string id="byz_w_v_cythera" text="Кифера" />
+    <string id="byz_w_v_methymna" text="Мифимна" />
+    <string id="byz_w_v_lemnos" text="Лемнос" />
+    <string id="byz_w_v_paros" text="Парос" />
+    <string id="byz_w_v_imbros" text="Имброс" />
+    <string id="byz_w_v_kastoria" text="Кастория" />
+    <string id="byz_w_v_apros" text="Апрос" />
+    <string id="byz_w_v_demetrias" text="Деметриада" />
+    <string id="byz_w_v_nauplion" text="Навплион" />
+    <string id="byz_w_v_samos" text="Самос" />
+    <string id="byz_w_v_tenedos" text="Тенедос" />
 </strings>
 </base>

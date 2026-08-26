@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Factions>
+  <!-- Native "Western Empire" (Kingdom.empire_w) hanedanlari - kullanicinin istegiyle (haritada ayri
+       bir Bati Imparatorlugu kalmasin, tamami Bizans'a (Kingdom.empire_s) baglansin) gercek Bizans
+       hanedan isimleriyle yeniden adlandirildi VE super_faction'lari Kingdom.empire_w -> Kingdom.empire_s
+       olarak degistirildi. Bu 9 klan tasindiktan sonra Kingdom.empire_w'de hic klan kalmiyor, yani
+       harita/kampanyada ayri bir "Western Empire" fraksiyonu artik hic gorunmuyor - tum eski
+       topraklari (bkz. byzantine_west_settlements.xml) Bizans'in vasal klanlari olarak devam ediyor.
+       South'ta (Diogenes, Botaneiates, Doukas, Komnenos, Bryennios, Melissenos, Argyros,
+       Tarchaneiotes, Kekaumenos) ve North'ta (Palaiologos, Angelos, Kantakouzenos, Phokas, Skleros,
+       Kourkouas, Xiphilinos, Vatatzes, Gabras) kullanilan isimlerle CAKISMAYAN, 9 ayri gercek Bizans
+       asil hanedani secildi (Laskaris, Branas, Kontostephanos, Raoul, Synadenos, Kamateros, Maleinos,
+       Kourtikios, Melias) - ayni south/north klanlarindaki gibi banner_key'leri degistirilmedi
+       (hukumdar hanedani haric, bkz. asagi). -->
+  <Faction id="clan_empire_west_1" name="{=byz_w_house_laskaris}House Laskaris" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_2" name="{=byz_w_house_branas}House Branas" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_3" name="{=byz_w_house_kontostephanos}House Kontostephanos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_4" name="{=byz_w_house_raoul}House Raoul" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_5" name="{=byz_w_house_synadenos}House Synadenos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_6" name="{=byz_w_house_kamateros}House Kamateros" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_7" name="{=byz_w_house_maleinos}House Maleinos" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_8" name="{=byz_w_house_kourtikios}House Kourtikios" super_faction="Kingdom.empire_s" />
+  <Faction id="clan_empire_west_9" name="{=byz_w_house_melias}House Melias" super_faction="Kingdom.empire_s" />
+</Factions>
