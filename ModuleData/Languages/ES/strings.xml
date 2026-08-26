@@ -806,6 +806,7 @@
     <string id="byz_ln_maria_alania" text="Maria of Alania" />
     <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
     <string id="byz_ln_irene_doukaina" text="Irene Doukaina" />
+    <string id="byz_ln_anna_diogenissa" text="Anna Diogenissa" />
     <string id="byz_cc_senatorial_name" text="Familia Senatorial Constantinopolitana" />
     <string id="byz_cc_akritas_name" text="Familia Fronteriza Akrita De Anatolia" />
     <string id="byz_cc_thematic_name" text="Familia De Soldado-Terrateniente Temático De Anatolia" />
@@ -930,6 +931,114 @@
     <string id="geo_cc_rescue_desc" text="Te deslizaste por un paso secreto para llevar auxilio a una fortaleza de montaña sitiada, salvando a su gente." />
     <string id="geo_cc_pilgrim_name" text="Te Convertiste En Un Escudo Para Peregrinos Y Agraviados" />
     <string id="geo_cc_pilgrim_desc" text="Te ganaste renombre protegiendo caravanas de peregrinos rumbo a lugares sagrados contra los bandidos." />
+    <string id="crus_cc_norman_knight_name" text="Familia de Caballeros Normandos" />
+    <string id="crus_cc_norman_knight_desc" text="Tu familia desciende de caballeros normandos que siguieron a la Primera Cruzada hacia Oriente; creciste con lanza y corcel de guerra desde la niñez." />
+    <string id="crus_cc_antiochene_noble_name" text="Familia de un Señor Fronterizo de Antioquía" />
+    <string id="crus_cc_antiochene_noble_desc" text="Tu familia posee un feudo fronterizo cerca de Antioquía, cuyos señores están acostumbrados a escaramuzar tanto contra incursores turcomanos como contra vecinos musulmanes." />
+    <string id="crus_cc_genoese_merchant_name" text="Familia de Mercaderes Genoveses" />
+    <string id="crus_cc_genoese_merchant_desc" text="Tu familia son mercaderes genoveses instalados en el barrio portuario de Antioquía, enriquecidos por el comercio entre Ultramar e Italia." />
+    <string id="crus_cc_hospitaller_name" text="Linaje de un Hermano Sirviente Hospitalario" />
+    <string id="crus_cc_hospitaller_desc" text="Tu padre sirvió a los Caballeros Hospitalarios como hombre de armas, atendiendo a los enfermos y combatiendo a los numerosos enemigos de los estados cruzados." />
+    <string id="crus_cc_pilgrim_settler_name" text="Familia de Pobres Colonos Peregrinos" />
+    <string id="crus_cc_pilgrim_settler_desc" text="Tu familia caminó hasta Tierra Santa en la Primera Cruzada y se quedó, sacando una existencia modesta en la frontera levantina." />
+    <string id="crus_cc_squire_training_name" text="Te Entrenaste con Espadas de Madera en un Patio Normando" />
+    <string id="crus_cc_squire_training_desc" text="Te ejercitaste con espadas de madera en el patio de tu familia, adiestrado por un viejo hombre de armas al estilo normando." />
+    <string id="crus_cc_levantine_name" text="Creciste Hablando Tanto Francés como Árabe" />
+    <string id="crus_cc_levantine_desc" text="Criado entre sirvientes y vecinos levantinos, creciste hablando árabe con fluidez además del francés de tu familia." />
+    <string id="crus_cc_church_school_name" text="Aprendiste Latín y Escrituras en una Escuela Parroquial" />
+    <string id="crus_cc_church_school_desc" text="En una escuela de iglesia parroquial aprendiste letras latinas y las Escrituras de un sacerdote nacido en el Levante." />
+    <string id="crus_cc_market_name" text="Aprendiste Comercio en los Mercados de Antioquía" />
+    <string id="crus_cc_market_desc" text="En los abarrotados mercados de Antioquía aprendiste a regatear tanto con francos como con armenios y griegos." />
+    <string id="crus_cc_squire_name" text="Serviste como Escudero de un Caballero Terrateniente" />
+    <string id="crus_cc_squire_desc" text="Serviste como escudero de un caballero terrateniente, cuidando su caballo y sus armas y aprendiendo los modos de la guerra montada." />
+    <string id="crus_cc_garrison_name" text="Montaste Guardia de Guarnición en un Castillo Fronterizo" />
+    <string id="crus_cc_garrison_desc" text="Montaste largas guardias en las murallas de un castillo fronterizo, ballesta en mano, atento a incursiones desde las colinas circundantes." />
+    <string id="crus_cc_scribe_name" text="Estudiaste como Escriba en un Cabildo Catedralicio" />
+    <string id="crus_cc_scribe_desc" text="Bajo los canónigos de un cabildo catedralicio aprendiste a leer, escribir y llevar cuentas." />
+    <string id="crus_cc_knighted_name" text="Fuiste Armado Caballero y Te Uniste al Séquito de un Señor" />
+    <string id="crus_cc_knighted_desc" text="Fuiste ceñido con la espada y armado caballero, ocupando tu lugar en el séquito montado de un señor." />
+    <string id="crus_cc_templar_name" text="Te Uniste a los Templarios como Hermano Sirviente" />
+    <string id="crus_cc_templar_desc" text="Hiciste tus votos como hermano sirviente de la Orden del Temple, guarneciendo sus castillos y escoltando peregrinos." />
+    <string id="crus_cc_italian_trade_name" text="Comerciaste Junto a las Flotas Mercantes Italianas" />
+    <string id="crus_cc_italian_trade_desc" text="Trabajaste junto a las flotas mercantes genovesas y venecianas, aprendiendo el negocio que mantiene vivos a los estados cruzados." />
+    <string id="crus_cc_siege_held_name" text="Defendiste una Muralla Durante un Gran Asedio" />
+    <string id="crus_cc_siege_held_desc" text="Mantuviste tu sección de la muralla durante un gran asedio, rechazando asalto tras asalto." />
+    <string id="crus_cc_charge_name" text="Lideraste una Carga de Caballería Decisiva" />
+    <string id="crus_cc_charge_desc" text="Lideraste una carga de caballería decisiva que rompió la línea enemiga en el momento en que más importaba." />
+    <string id="crus_cc_ransom_name" text="Negociaste el Rescate de un Señor Capturado" />
+    <string id="crus_cc_ransom_desc" text="Negociaste el rescate de un señor capturado, ganándote tanto gratitud como una reputación de astucia." />
+    <string id="arm_cc_naxarar_name" text="Familia Noble Najarar" />
+    <string id="arm_cc_naxarar_desc" text="Vienes de una antigua casa Najarar, la nobleza feudal hereditaria de Armenia, con feudo montañés propio y guerreros vasallos." />
+    <string id="arm_cc_azat_name" text="Familia de Guerreros Terratenientes Azat" />
+    <string id="arm_cc_azat_desc" text="Tu familia son azat, guerreros terratenientes libres que deben servicio de caballería a su señor Najarar a cambio de sus tierras montañosas." />
+    <string id="arm_cc_silk_merchant_name" text="Familia de Mercaderes Armenios de la Ruta de la Seda" />
+    <string id="arm_cc_silk_merchant_desc" text="Tu familia comercia con seda y mercancías a lo largo de rutas que se extienden desde Cilicia hasta Persia, parte de la gran red mercantil armenia medieval." />
+    <string id="arm_cc_church_name" text="Familia del Clero de la Iglesia Armenia" />
+    <string id="arm_cc_church_desc" text="Te criaste en una familia devota de la Iglesia Apostólica Armenia, copiando las Escrituras y manteniendo viva la fe en las montañas." />
+    <string id="arm_cc_herder_name" text="Familia de Pastores de Montaña" />
+    <string id="arm_cc_herder_desc" text="Creciste pastoreando cabras por las empinadas laderas de los montes Tauro, aprendiendo a sobrevivir donde la tierra ofrece poco." />
+    <string id="arm_cc_mountain_ride_name" text="Cabalgaste Senderos de Montaña Desde Muy Joven" />
+    <string id="arm_cc_mountain_ride_desc" text="Cabalgaste desde muy joven por estrechos senderos de montaña, ganando equilibrio y valor al borde de los acantilados del Tauro." />
+    <string id="arm_cc_falconry_name" text="Aprendiste Cetrería en las Tierras Altas" />
+    <string id="arm_cc_falconry_desc" text="Aprendiste a volar halcones y rastrear caza en las tierras altas sobre el hogar de tu familia." />
+    <string id="arm_cc_monastery_name" text="Aprendiste la Escritura Armenia en un Monasterio" />
+    <string id="arm_cc_monastery_desc" text="Aprendiste a leer y escribir el alfabeto armenio con monjes de un monasterio cercano." />
+    <string id="arm_cc_trade_name" text="Aprendiste Comercio por los Caminos de Montaña" />
+    <string id="arm_cc_trade_desc" text="Aprendiste a regatear y pesar mercancías por los caminos comerciales de montaña con las caravanas de tu familia." />
+    <string id="arm_cc_princely_guard_name" text="Te Uniste a la Guardia Personal del Príncipe" />
+    <string id="arm_cc_princely_guard_desc" text="Te uniste a la guardia personal del príncipe de Cilicia, entrenándote con lanza y espada junto a sus hombres juramentados." />
+    <string id="arm_cc_border_watch_name" text="Vigilaste los Pasos de Montaña como Explorador Fronterizo" />
+    <string id="arm_cc_border_watch_desc" text="Vigilaste los pasos de montaña como explorador, listo para advertir de incursiones bizantinas o selyúcidas." />
+    <string id="arm_cc_monastery_school_name" text="Estudiaste en una Renombrada Escuela Monástica" />
+    <string id="arm_cc_monastery_school_desc" text="Estudiaste teología y letras en una de las renombradas escuelas monásticas de Cilicia." />
+    <string id="arm_cc_ayrudzi_name" text="Fuiste Elegido para la Caballería de Élite Ayrudzí" />
+    <string id="arm_cc_ayrudzi_desc" text="Tu destreza en la silla te ganó un lugar entre los ayrudzí, la guardia de caballería de élite de Cilicia." />
+    <string id="arm_cc_naxarar_retainer_name" text="Te Convertiste en el Vasallo de Confianza de un Señor Najarar" />
+    <string id="arm_cc_naxarar_retainer_desc" text="Te convertiste en el vasallo de confianza de un señor Najarar, aconsejándolo y liderando a sus hombres en el campo." />
+    <string id="arm_cc_intermediary_name" text="Serviste como Intérprete Entre Cortes Cristianas y Musulmanas" />
+    <string id="arm_cc_intermediary_desc" text="Dominando varias lenguas, serviste como intérprete entre cortes cristianas y musulmanas, un papel que a menudo se confiaba a los armenios." />
+    <string id="arm_cc_fortress_defense_name" text="Defendiste una Fortaleza de Montaña Contra un Asedio" />
+    <string id="arm_cc_fortress_defense_desc" text="Defendiste una fortaleza de montaña contra un asedio decidido hasta que los sitiadores finalmente se rindieron y se retiraron." />
+    <string id="arm_cc_battle_name" text="Te Distinguiste Frente a Fuerzas Bizantinas o Selyúcidas" />
+    <string id="arm_cc_battle_desc" text="Te distinguiste en una batalla campal contra fuerzas bizantinas o selyúcidas en avance." />
+    <string id="arm_cc_negotiation_name" text="Negociaste una Tregua Vital para Tu Pueblo" />
+    <string id="arm_cc_negotiation_desc" text="Negociaste una tregua vital que salvó a tu pueblo de una guerra que no habría podido ganar." />
+    <string id="krkh_cc_khan_lineage_name" text="Rama Lejana de un Linaje de Kanes" />
+    <string id="krkh_cc_khan_lineage_desc" text="Desciendes de una rama menor de una casa gobernante karajánida, criado entre las costumbres y rivalidades de la corte del kan." />
+    <string id="krkh_cc_tarkhan_name" text="Familia Noble Tarján" />
+    <string id="krkh_cc_tarkhan_desc" text="Tu familia ostenta el rango de tarján, una nobleza guerrera exenta de impuestos que debe jinetes al kan a cambio de sus privilegios esteparios." />
+    <string id="krkh_cc_silk_merchant_name" text="Familia de Mercaderes de Samarcanda en la Ruta de la Seda" />
+    <string id="krkh_cc_silk_merchant_desc" text="Tu familia comercia en los bazares de Samarcanda y Bujará, en el mismísimo corazón de la riqueza de la Ruta de la Seda." />
+    <string id="krkh_cc_madrasa_name" text="Familia de Eruditos de Madrasa" />
+    <string id="krkh_cc_madrasa_desc" text="Tu familia son eruditos en una de las madrasas de Samarcanda, parte de la ola de saber que siguió a la conversión de los karajánidas al islam." />
+    <string id="krkh_cc_nomad_name" text="Familia de Nómadas de la Estepa" />
+    <string id="krkh_cc_nomad_desc" text="Creciste siguiendo los rebaños por la estepa abierta, del mismo modo de vida que llevaron antaño tus antepasados carluks y yagmas." />
+    <string id="krkh_cc_horseback_name" text="Cabalgabas Antes de Poder Caminar Bien" />
+    <string id="krkh_cc_horseback_desc" text="Cabalgabas antes de poder caminar bien, como es costumbre de todo niño nacido en la estepa." />
+    <string id="krkh_cc_archery_name" text="Te Entrenaste en Tiro con Arco a Caballo Desde la Niñez" />
+    <string id="krkh_cc_archery_desc" text="Te entrenaste en tiro con arco a caballo desde la niñez, disparando a blancos desde un poni en movimiento." />
+    <string id="krkh_cc_madrasa_child_name" text="Aprendiste el Corán y el Árabe en una Escuela de Mezquita" />
+    <string id="krkh_cc_madrasa_child_desc" text="Aprendiste el Corán y las letras árabes en una escuela de mezquita en una de las ciudades sedentarias del kanato." />
+    <string id="krkh_cc_bazaar_name" text="Aprendiste Comercio en los Bazares de Samarcanda" />
+    <string id="krkh_cc_bazaar_desc" text="Aprendiste a pesar seda y a regatear precios en los concurridos bazares de Samarcanda." />
+    <string id="krkh_cc_khan_guard_name" text="Te Uniste a la Guardia Personal del Kan" />
+    <string id="krkh_cc_khan_guard_desc" text="Te uniste a la guardia personal del kan, entrenándote con lanza y espada entre sus jinetes juramentados." />
+    <string id="krkh_cc_horse_archer_name" text="Cabalgaste como Escaramuzador Arquero a Caballo" />
+    <string id="krkh_cc_horse_archer_desc" text="Cabalgaste como escaramuzador arquero a caballo, hostigando a los rivales con andanadas de flechas antes de retirarte." />
+    <string id="krkh_cc_madrasa_student_name" text="Estudiaste en la Madrasa de Ibrahim Tamgach Kan en Samarcanda" />
+    <string id="krkh_cc_madrasa_student_desc" text="Estudiaste derecho y arte de gobernar en la gran madrasa que Ibrahim Tamgach Kan fundó en Samarcanda." />
+    <string id="krkh_cc_tarkhan_cavalry_name" text="Te Uniste a la Caballería Pesada de Élite Tarján" />
+    <string id="krkh_cc_tarkhan_cavalry_desc" text="Tu destreza en la silla te ganó un lugar entre la caballería pesada de élite tarján del kanato." />
+    <string id="krkh_cc_caravan_trader_name" text="Lideraste Caravanas por la Ruta de la Seda" />
+    <string id="krkh_cc_caravan_trader_desc" text="Lideraste caravanas comerciales por la Ruta de la Seda, aprendiendo a sobrevivir tanto a bandidos como a duras negociaciones." />
+    <string id="krkh_cc_court_scribe_name" text="Serviste como Escriba en la Corte del Kan" />
+    <string id="krkh_cc_court_scribe_desc" text="Serviste como escriba en la corte del kan, redactando decretos y llevando las cuentas del tesoro." />
+    <string id="krkh_cc_skirmish_won_name" text="Ganaste una Escaramuza Decisiva de Arqueros a Caballo" />
+    <string id="krkh_cc_skirmish_won_desc" text="Ganaste una escaramuza decisiva; tus flechas quebraron el ánimo del enemigo antes de que llegara siquiera al cuerpo a cuerpo." />
+    <string id="krkh_cc_caravan_defense_name" text="Defendiste una Caravana de Saqueadores" />
+    <string id="krkh_cc_caravan_defense_desc" text="Defendiste una caravana de la Ruta de la Seda de saqueadores, salvando sus bienes y las vidas de sus mercaderes." />
+    <string id="krkh_cc_seljuk_rival_name" text="Te Distinguiste Frente a Rivales Selyúcidas" />
+    <string id="krkh_cc_seljuk_rival_desc" text="Te distinguiste en un enfrentamiento contra rivales selyúcidas que disputaban las fronteras del kanato." />
       <string id="seljuk_systems_intro_title" text="El Gran Imperio Selyúcida" />
     <string id="seljuk_systems_intro_text" text="Habéis entrado en tierras selyúcidas. Tres instituciones distinguen a este imperio de sus vecinos:&#10;&#10;Gobernanza del Atabeg – estabiliza discretamente la lealtad, las reservas de alimentos y la seguridad en cada ciudad y castillo selyúcida, y forma a todo héroe que ejerza de gobernador.&#10;&#10;Diván de la Ruta de la Seda y Seguro de Caravanas – disponible en el menú de Comercio de cualquier ciudad selyúcida; permite asegurar vuestras caravanas contra pérdidas e invertir capital para obtener dividendos semanales.&#10;&#10;Bardo de la Taberna – en la taberna del arrabal, un bardo de la estepa recita epopeyas de Ghazavat por una módica suma, elevando la moral de vuestro ejército.&#10;&#10;Buscad estas opciones cada vez que visitéis un asentamiento selyúcida." />
     <string id="seljuk_ok_button" text="OK" />
@@ -1005,6 +1114,47 @@
     <string id="crus_s_marash" text="Marash" />
     <string id="crus_s_tarsus" text="Tarso" />
     <string id="crus_s_saruj" text="Saruj" />
+    <string id="crus_s_harim" text="Castillo de Harim" />
+    <string id="crus_s_sahyun" text="Castillo de Saone" />
+    <string id="crus_s_baghras" text="Castillo de Baghras" />
+    <string id="crus_s_zerdana" text="Castillo de Zerdana" />
+    <string id="crus_s_najm" text="Castillo de Najm" />
+    <string id="crus_s_duluk" text="Castillo de Duluk" />
+    <string id="crus_s_azaz" text="Castillo de Azaz" />
+    <string id="crus_s_artah" text="Artah" />
+    <string id="crus_s_latmin" text="Latmin" />
+    <string id="crus_s_jisr_hadid" text="Jisr al-Hadid" />
+    <string id="crus_s_balatanos" text="Balatanos" />
+    <string id="crus_s_trapesac" text="Trapesac" />
+    <string id="crus_s_kaysun" text="Kaysun" />
+    <string id="crus_s_samosata" text="Samosata" />
+    <string id="crus_s_antab" text="Antab" />
+    <string id="crus_s_qusayr" text="Qusayr" />
+    <string id="crus_s_bikisrail" text="Bikisrail" />
+    <string id="crus_s_til_khalid" text="Til Khalid" />
+    <string id="crus_s_zamanti" text="Zamanti" />
+    <string id="crus_s_sarmin" text="Sarmin" />
+    <string id="crus_s_maarrat" text="Maarrat al-Numan" />
+    <string id="crus_s_albara" text="Al-Bara" />
+    <string id="crus_s_kafartab" text="Kafartab" />
+    <string id="crus_s_apamea" text="Apamea" />
+    <string id="crus_s_jabala" text="Jabala" />
+    <string id="crus_s_qinnasrin" text="Qinnasrin" />
+    <string id="crus_s_manbij" text="Manbij" />
+    <string id="crus_s_tell_aran" text="Tell Aran" />
+    <string id="crus_s_buzaa" text="Buza'a" />
+    <string id="crus_s_dabiq" text="Dabiq" />
+    <string id="crus_s_balis" text="Balis" />
+    <string id="crus_s_deir_semaan" text="Deir Semaan" />
+    <string id="crus_s_kfar_nabu" text="Kfar Nabu" />
+    <string id="crus_s_basufan" text="Basufan" />
+    <string id="crus_s_serjilla" text="Serjilla" />
+    <string id="crus_s_ruweiha" text="Ruweiha" />
+    <string id="crus_s_frikya" text="Frikya" />
+    <string id="crus_s_kafr_ambil" text="Kafr Ambil" />
+    <string id="crus_s_tell_aqibrin" text="Tell Aqibrin" />
+    <string id="crus_s_sarmada" text="Sarmada" />
+    <string id="crus_s_cyrrhus" text="Cirro" />
     <string id="crus2_t_recruit" text="Leva Cruzada" />
     <string id="crus2_t_sergeant" text="Sargento de a Pie" />
     <string id="crus2_t_crossbowman" text="Ballestero" />
@@ -1050,6 +1200,47 @@
     <string id="arm_s_anazarbus" text="Anazarbo" />
     <string id="arm_s_kesoun" text="Kesun" />
     <string id="arm_s_raban" text="Raban" />
+    <string id="arm_s_til_hamdoun" text="Castillo de Til Hamdoun" />
+    <string id="arm_s_partzerpert" text="Castillo de Partzerpert" />
+    <string id="arm_s_korikos" text="Castillo de Korikos" />
+    <string id="arm_s_silifke" text="Castillo de Silifke" />
+    <string id="arm_s_sarvandikar" text="Castillo de Sarvandikar" />
+    <string id="arm_s_gaban" text="Castillo de Gaban" />
+    <string id="arm_s_amuda" text="Castillo de Amuda" />
+    <string id="arm_s_kizkalesi" text="Kizkalesi" />
+    <string id="arm_s_gastria" text="Gastria" />
+    <string id="arm_s_kanytelis" text="Kanytelis" />
+    <string id="arm_s_elaiussa" text="Elaiussa" />
+    <string id="arm_s_hemite" text="Hemite" />
+    <string id="arm_s_gokveli" text="Gokveli" />
+    <string id="arm_s_meydan" text="Meydan" />
+    <string id="arm_s_feke" text="Feke" />
+    <string id="arm_s_andirin" text="Andirin" />
+    <string id="arm_s_haruniye" text="Haruniye" />
+    <string id="arm_s_kadirli" text="Kadirli" />
+    <string id="arm_s_karaisali" text="Karaisali" />
+    <string id="arm_s_saimbeyli" text="Saimbeyli" />
+    <string id="arm_s_vardanus" text="Vardanus" />
+    <string id="arm_s_kokison" text="Kokison" />
+    <string id="arm_s_sgevra" text="Sgevra" />
+    <string id="arm_s_simnados" text="Simnados" />
+    <string id="arm_s_missis" text="Missis" />
+    <string id="arm_s_ayas" text="Ayas" />
+    <string id="arm_s_malavans" text="Malavans" />
+    <string id="arm_s_tumlu" text="Tumlu" />
+    <string id="arm_s_chandir" text="Chandir" />
+    <string id="arm_s_geben" text="Geben" />
+    <string id="arm_s_sariz" text="Sariz" />
+    <string id="arm_s_bahce" text="Bahce" />
+    <string id="arm_s_hasanbeyli" text="Hasanbeyli" />
+    <string id="arm_s_erzin" text="Erzin" />
+    <string id="arm_s_payas" text="Payas" />
+    <string id="arm_s_dortyol" text="Dortyol" />
+    <string id="arm_s_yarpuz" text="Yarpuz" />
+    <string id="arm_s_kastalon" text="Kastalon" />
+    <string id="arm_s_sinap" text="Sinap" />
+    <string id="arm_s_osmaniye" text="Osmaniye" />
+    <string id="arm_s_amik" text="Amik" />
     <string id="arm2_t_recruit" text="Leva Cilicia" />
     <string id="arm2_t_azat" text="Lancero Azat" />
     <string id="arm2_t_archer" text="Arquero Cilicio" />
@@ -1100,6 +1291,50 @@
     <string id="krkh_s_khotan" text="Jotan" />
     <string id="krkh_s_uzgen" text="Uzgen" />
     <string id="krkh_s_bukhara" text="Bujara" />
+    <string id="krkh_s_tashkent" text="Castillo de Taskent" />
+    <string id="krkh_s_akhsikath" text="Castillo de Ajsiket" />
+    <string id="krkh_s_termez" text="Castillo de Termez" />
+    <string id="krkh_s_khujand" text="Castillo de Juyand" />
+    <string id="krkh_s_karshi" text="Castillo de Karshi" />
+    <string id="krkh_s_sayram" text="Castillo de Sayram" />
+    <string id="krkh_s_taraz" text="Castillo de Taraz" />
+    <string id="krkh_s_otrar" text="Castillo de Otrar" />
+    <string id="krkh_s_sighnaq" text="Castillo de Signaq" />
+    <string id="krkh_s_zamin" text="Zamin" />
+    <string id="krkh_s_uratepe" text="Ura-Tepe" />
+    <string id="krkh_s_panjikent" text="Panyikent" />
+    <string id="krkh_s_dabusiyya" text="Dabusiyya" />
+    <string id="krkh_s_kish" text="Kish" />
+    <string id="krkh_s_vardanzi" text="Vardanzi" />
+    <string id="krkh_s_paykand" text="Paykand" />
+    <string id="krkh_s_kabudjama" text="Kabudjama" />
+    <string id="krkh_s_nujkath" text="Nuykat" />
+    <string id="krkh_s_barskhan" text="Barskhan" />
+    <string id="krkh_s_suyab" text="Suyab" />
+    <string id="krkh_s_navekat" text="Navekat" />
+    <string id="krkh_s_kulan" text="Kulan" />
+    <string id="krkh_s_aspara" text="Aspara" />
+    <string id="krkh_s_merki" text="Merki" />
+    <string id="krkh_s_jand" text="Yand" />
+    <string id="krkh_s_yangikent" text="Yangikent" />
+    <string id="krkh_s_sauran" text="Sauran" />
+    <string id="krkh_s_kermine" text="Kermine" />
+    <string id="krkh_s_ghijduvan" text="Guichduvan" />
+    <string id="krkh_s_rabinjan" text="Rabinyan" />
+    <string id="krkh_s_zarafshan" text="Zarafshan" />
+    <string id="krkh_s_miankal" text="Miankal" />
+    <string id="krkh_s_dizak" text="Dizak" />
+    <string id="krkh_s_khavas" text="Javas" />
+    <string id="krkh_s_banaket" text="Banaket" />
+    <string id="krkh_s_niyaz" text="Niyaz" />
+    <string id="krkh_s_osrushana" text="Osrushana" />
+    <string id="krkh_s_farkhar" text="Farkhar" />
+    <string id="krkh_s_chinaz" text="Chinaz" />
+    <string id="krkh_s_arys" text="Arys" />
+    <string id="krkh_s_karnak" text="Karnak" />
+    <string id="krkh_s_turkestan" text="Turquestan" />
+    <string id="krkh_s_iskijkath" text="Iskiyket" />
+    <string id="krkh_s_chimkent" text="Chimkent" />
     <string id="kk2_t_recruit" text="Recluta karajanida" />
     <string id="kk2_t_yigit" text="Yigit" />
     <string id="kk2_t_okcu" text="Okcu" />

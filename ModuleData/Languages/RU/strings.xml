@@ -483,6 +483,7 @@
     <string id="byz_house_tarchaneiotes" text="Дом Тарханиотов" />
     <string id="byz_ln_alexios_komnenos" text="Алексей Комнин" />
     <string id="byz_ln_andronikos_doukas" text="Андроник Дука" />
+    <string id="byz_ln_anna_diogenissa" text="Анна Диогенисса" />
     <string id="byz_ln_irene_doukaina" text="Ирина Дукиня" />
     <string id="byz_ln_joseph_tarchaneiotes" text="Иосиф Тарханиот" />
     <string id="byz_ln_katakalon_kekaumenos" text="Катакалон Кекавмен" />
@@ -654,6 +655,114 @@
     <string id="geo_cc_mountain_scout_name" text="Ты Стал Пограничным Разведчиком В Горных Перевалах" />
     <string id="geo_cc_pilgrim_desc" text="Ты снискал славу, защищая паломнические караваны, направлявшиеся к святым местам, от разбойников." />
     <string id="geo_cc_pilgrim_name" text="Ты Стал Щитом Для Паломников И Обиженных" />
+    <string id="crus_cc_norman_knight_name" text="Семья Нормандских Рыцарей" />
+    <string id="crus_cc_norman_knight_desc" text="Твоя семья происходит от нормандских рыцарей, последовавших на восток вместе с Первым крестовым походом; ты с детства рос с копьём и боевым конём." />
+    <string id="crus_cc_antiochene_noble_name" text="Семья Пограничного Лорда Антиохии" />
+    <string id="crus_cc_antiochene_noble_desc" text="Твоя семья владеет пограничным феодом близ Антиохии, чьи лорды привыкли сражаться как с туркменскими налётчиками, так и с мусульманскими соседями." />
+    <string id="crus_cc_genoese_merchant_name" text="Семья Генуэзских Купцов" />
+    <string id="crus_cc_genoese_merchant_desc" text="Твоя семья — генуэзские купцы, обосновавшиеся в портовом квартале Антиохии, разбогатевшие на торговле между Заморьем и Италией." />
+    <string id="crus_cc_hospitaller_name" text="Род Служащего Брата Госпитальеров" />
+    <string id="crus_cc_hospitaller_desc" text="Твой отец служил рыцарям-госпитальерам оруженосцем, ухаживая за больными и сражаясь с многочисленными врагами государств крестоносцев." />
+    <string id="crus_cc_pilgrim_settler_name" text="Семья Бедных Паломников-Поселенцев" />
+    <string id="crus_cc_pilgrim_settler_desc" text="Твоя семья пришла пешком в Святую землю во время Первого крестового похода и осталась там, влача скромное существование на левантийской границе." />
+    <string id="crus_cc_squire_training_name" text="Ты Тренировался Деревянными Мечами во Дворе Нормандского Замка" />
+    <string id="crus_cc_squire_training_desc" text="Ты фехтовал деревянными мечами во дворе своей семьи, под руководством старого воина, обучавшего тебя нормандскому стилю." />
+    <string id="crus_cc_levantine_name" text="Ты Вырос, Говоря Как по-Французски, Так и по-Арабски" />
+    <string id="crus_cc_levantine_desc" text="Выросший среди левантийских слуг и соседей, ты свободно заговорил по-арабски так же, как и на родном французском своей семьи." />
+    <string id="crus_cc_church_school_name" text="Ты Учил Латынь и Писание в Церковной Школе" />
+    <string id="crus_cc_church_school_desc" text="В приходской церковной школе ты учил латинские буквы и Писание у священника, рождённого в Леванте." />
+    <string id="crus_cc_market_name" text="Ты Учился Торговле на Рынках Антиохии" />
+    <string id="crus_cc_market_desc" text="На многолюдных рынках Антиохии ты научился торговаться как с франками, так и с армянами и греками." />
+    <string id="crus_cc_squire_name" text="Ты Служил Оруженосцем у Землевладеющего Рыцаря" />
+    <string id="crus_cc_squire_desc" text="Ты служил оруженосцем у землевладеющего рыцаря, ухаживая за его конём и оружием и постигая законы конного боя." />
+    <string id="crus_cc_garrison_name" text="Ты Нёс Гарнизонную Службу в Пограничном Замке" />
+    <string id="crus_cc_garrison_desc" text="Ты подолгу стоял на страже на стенах пограничного замка с арбалетом в руках, настороже перед набегами из окрестных холмов." />
+    <string id="crus_cc_scribe_name" text="Ты Учился на Писца при Соборном Капитуле" />
+    <string id="crus_cc_scribe_desc" text="Под руководством каноников соборного капитула ты научился читать, писать и вести счета." />
+    <string id="crus_cc_knighted_name" text="Тебя Посвятили в Рыцари, и Ты Вступил в Свиту Лорда" />
+    <string id="crus_cc_knighted_desc" text="Тебя опоясали мечом и посвятили в рыцари, и ты занял своё место в конной свите лорда." />
+    <string id="crus_cc_templar_name" text="Ты Вступил к Тамплиерам как Служащий Брат" />
+    <string id="crus_cc_templar_desc" text="Ты принёс обеты служащего брата ордена Тамплиеров, охраняя его замки и сопровождая паломников." />
+    <string id="crus_cc_italian_trade_name" text="Ты Торговал Вместе с Итальянскими Купеческими Флотами" />
+    <string id="crus_cc_italian_trade_desc" text="Ты работал вместе с генуэзскими и венецианскими купеческими флотами, изучая дело, которое поддерживает жизнь государств крестоносцев." />
+    <string id="crus_cc_siege_held_name" text="Ты Удержал Стену во Время Великой Осады" />
+    <string id="crus_cc_siege_held_desc" text="Ты удерживал свой участок стены на протяжении великой осады, отражая штурм за штурмом." />
+    <string id="crus_cc_charge_name" text="Ты Возглавил Решающую Кавалерийскую Атаку" />
+    <string id="crus_cc_charge_desc" text="Ты возглавил решающую кавалерийскую атаку, прорвавшую вражескую линию именно в тот момент, когда это было важнее всего." />
+    <string id="crus_cc_ransom_name" text="Ты Договорился о Выкупе за Пленённого Лорда" />
+    <string id="crus_cc_ransom_desc" text="Ты договорился о выкупе за пленённого лорда, заслужив и благодарность, и репутацию человека проницательного." />
+    <string id="arm_cc_naxarar_name" text="Знатная Семья Нахараров" />
+    <string id="arm_cc_naxarar_desc" text="Ты происходишь из древнего дома нахараров, наследственной феодальной знати Армении, владеющего собственным горным феодом и воинами-вассалами." />
+    <string id="arm_cc_azat_name" text="Семья Свободных Землевладеющих Воинов-Азатов" />
+    <string id="arm_cc_azat_desc" text="Твоя семья принадлежит к азатам — свободным землевладеющим воинам, обязанным конной службой своему нахарарскому господину в обмен на горные земли." />
+    <string id="arm_cc_silk_merchant_name" text="Семья Армянских Купцов Шёлкового Пути" />
+    <string id="arm_cc_silk_merchant_desc" text="Твоя семья торгует шёлком и товарами по путям, тянущимся от Киликии до Персии, — часть великой средневековой армянской торговой сети." />
+    <string id="arm_cc_church_name" text="Семья Духовенства Армянской Церкви" />
+    <string id="arm_cc_church_desc" text="Ты вырос в семье, преданной Армянской апостольской церкви, переписывающей Писание и хранящей веру живой в горах." />
+    <string id="arm_cc_herder_name" text="Семья Горных Пастухов" />
+    <string id="arm_cc_herder_desc" text="Ты вырос, пася коз по крутым склонам гор Тавра, учась выживать там, где земля даёт немного." />
+    <string id="arm_cc_mountain_ride_name" text="Ты С Юных Лет Скакал по Горным Тропам" />
+    <string id="arm_cc_mountain_ride_desc" text="Ты с юных лет скакал по узким горным тропам, обретая равновесие и смелость на краю обрывов Тавра." />
+    <string id="arm_cc_falconry_name" text="Ты Учился Соколиной Охоте в Нагорьях" />
+    <string id="arm_cc_falconry_desc" text="Ты учился напускать соколов и выслеживать дичь в нагорьях над домом своей семьи." />
+    <string id="arm_cc_monastery_name" text="Ты Учил Армянскую Письменность в Монастыре" />
+    <string id="arm_cc_monastery_desc" text="Ты учился читать и писать армянской азбукой у монахов ближайшего монастыря." />
+    <string id="arm_cc_trade_name" text="Ты Учился Торговле на Горных Дорогах" />
+    <string id="arm_cc_trade_desc" text="Ты учился торговаться и взвешивать товары на горных торговых путях вместе с караванами своей семьи." />
+    <string id="arm_cc_princely_guard_name" text="Ты Вступил в Дружину Князя" />
+    <string id="arm_cc_princely_guard_desc" text="Ты вступил в дружину киликийского князя, обучаясь копью и мечу рядом с его присягнувшими воинами." />
+    <string id="arm_cc_border_watch_name" text="Ты Сторожил Горные Перевалы как Пограничный Разведчик" />
+    <string id="arm_cc_border_watch_desc" text="Ты сторожил горные перевалы как разведчик, готовый предупредить о византийских или сельджукских набегах." />
+    <string id="arm_cc_monastery_school_name" text="Ты Учился в Прославленной Монастырской Школе" />
+    <string id="arm_cc_monastery_school_desc" text="Ты изучал богословие и словесность в одной из прославленных монастырских школ Киликии." />
+    <string id="arm_cc_ayrudzi_name" text="Тебя Отобрали в Элитную Конницу Айрудзи" />
+    <string id="arm_cc_ayrudzi_desc" text="Твоё мастерство в седле принесло тебе место среди айрудзи — элитной конной гвардии Киликии." />
+    <string id="arm_cc_naxarar_retainer_name" text="Ты Стал Доверенным Вассалом Нахарарского Лорда" />
+    <string id="arm_cc_naxarar_retainer_desc" text="Ты стал доверенным вассалом нахарарского лорда, советуя ему и возглавляя его людей на поле боя." />
+    <string id="arm_cc_intermediary_name" text="Ты Служил Переводчиком Между Христианскими и Мусульманскими Дворами" />
+    <string id="arm_cc_intermediary_desc" text="Владея несколькими языками, ты служил переводчиком между христианскими и мусульманскими дворами — роль, которую часто доверяли армянам." />
+    <string id="arm_cc_fortress_defense_name" text="Ты Оборонял Горную Крепость от Осады" />
+    <string id="arm_cc_fortress_defense_desc" text="Ты оборонял горную крепость от упорной осады, пока осаждавшие наконец не сдались и не отступили." />
+    <string id="arm_cc_battle_name" text="Ты Отличился в Сражении Против Византийских или Сельджукских Сил" />
+    <string id="arm_cc_battle_desc" text="Ты отличился в полевом сражении против наступающих византийских или сельджукских сил." />
+    <string id="arm_cc_negotiation_name" text="Ты Заключил Жизненно Важное Перемирие для Своего Народа" />
+    <string id="arm_cc_negotiation_desc" text="Ты заключил жизненно важное перемирие, избавившее твой народ от войны, которую он не смог бы выиграть." />
+    <string id="krkh_cc_khan_lineage_name" text="Дальняя Ветвь Ханского Рода" />
+    <string id="krkh_cc_khan_lineage_desc" text="Ты происходишь из младшей ветви караханидского правящего дома, выросший среди обычаев и соперничества ханского двора." />
+    <string id="krkh_cc_tarkhan_name" text="Знатная Семья Тарханов" />
+    <string id="krkh_cc_tarkhan_desc" text="Твоя семья носит звание тархана — освобождённой от налогов воинской знати, обязанной поставлять хану всадников в обмен на степные привилегии." />
+    <string id="krkh_cc_silk_merchant_name" text="Семья Купцов Шёлкового Пути из Самарканда" />
+    <string id="krkh_cc_silk_merchant_desc" text="Твоя семья торгует на базарах Самарканда и Бухары, в самом сердце богатства Шёлкового пути." />
+    <string id="krkh_cc_madrasa_name" text="Семья Учёных Медресе" />
+    <string id="krkh_cc_madrasa_desc" text="Твоя семья — учёные одного из медресе Самарканда, часть волны знания, последовавшей за принятием ислама Караханидами." />
+    <string id="krkh_cc_nomad_name" text="Семья Степных Кочевников" />
+    <string id="krkh_cc_nomad_desc" text="Ты вырос, следуя за стадами по открытой степи, тем же укладом жизни, каким когда-то жили твои карлукские и ягминские предки." />
+    <string id="krkh_cc_horseback_name" text="Ты Ездил Верхом Прежде, Чем Научился Как Следует Ходить" />
+    <string id="krkh_cc_horseback_desc" text="Ты ездил верхом прежде, чем научился как следует ходить, как это заведено у каждого степного ребёнка." />
+    <string id="krkh_cc_archery_name" text="Ты с Детства Тренировался в Конной Стрельбе из Лука" />
+    <string id="krkh_cc_archery_desc" text="Ты с детства тренировался в конной стрельбе из лука, поражая цели с движущегося пони." />
+    <string id="krkh_cc_madrasa_child_name" text="Ты Учил Коран и Арабский в Мечетской Школе" />
+    <string id="krkh_cc_madrasa_child_desc" text="Ты учил Коран и арабские буквы в мечетской школе одного из осёдлых городов ханства." />
+    <string id="krkh_cc_bazaar_name" text="Ты Учился Торговле на Базарах Самарканда" />
+    <string id="krkh_cc_bazaar_desc" text="Ты учился взвешивать шёлк и торговаться о ценах на многолюдных базарах Самарканда." />
+    <string id="krkh_cc_khan_guard_name" text="Ты Вступил в Дружину Хана" />
+    <string id="krkh_cc_khan_guard_desc" text="Ты вступил в дружину хана, обучаясь копью и мечу среди его присягнувших всадников." />
+    <string id="krkh_cc_horse_archer_name" text="Ты Сражался как Конный Лучник-Застрельщик" />
+    <string id="krkh_cc_horse_archer_desc" text="Ты сражался как конный лучник-застрельщик, изматывая противников залпами стрел, прежде чем ускользнуть." />
+    <string id="krkh_cc_madrasa_student_name" text="Ты Учился в Медресе Ибрахима Тамгач-Хана в Самарканде" />
+    <string id="krkh_cc_madrasa_student_desc" text="Ты изучал право и государственное управление в великом медресе, основанном Ибрахимом Тамгач-Ханом в Самарканде." />
+    <string id="krkh_cc_tarkhan_cavalry_name" text="Ты Вступил в Элитную Тяжёлую Конницу Тарханов" />
+    <string id="krkh_cc_tarkhan_cavalry_desc" text="Твоё мастерство в седле принесло тебе место в элитной тяжёлой коннице тарханов ханства." />
+    <string id="krkh_cc_caravan_trader_name" text="Ты Водил Караваны по Шёлковому Пути" />
+    <string id="krkh_cc_caravan_trader_desc" text="Ты водил торговые караваны по Шёлковому пути, учась выживать и среди разбойников, и в жёстких переговорах." />
+    <string id="krkh_cc_court_scribe_name" text="Ты Служил Писцом при Ханском Дворе" />
+    <string id="krkh_cc_court_scribe_desc" text="Ты служил писцом при ханском дворе, составляя указы и ведя счета казны." />
+    <string id="krkh_cc_skirmish_won_name" text="Ты Выиграл Решающую Стычку Конных Лучников" />
+    <string id="krkh_cc_skirmish_won_desc" text="Ты выиграл решающую стычку; твои стрелы сломили дух врага прежде, чем он успел вступить в ближний бой." />
+    <string id="krkh_cc_caravan_defense_name" text="Ты Защитил Караван от Разбойников" />
+    <string id="krkh_cc_caravan_defense_desc" text="Ты защитил караван Шёлкового пути от разбойников, спасая его товары и жизни купцов." />
+    <string id="krkh_cc_seljuk_rival_name" text="Ты Отличился Против Сельджукских Соперников" />
+    <string id="krkh_cc_seljuk_rival_desc" text="Ты отличился в столкновении против сельджукских соперников, оспаривавших границы ханства." />
     <string id="geo_cc_rescue_desc" text="Ты проскользнул тайным перевалом, чтобы принести помощь осаждённой горной крепости, спасая её жителей." />
     <string id="geo_cc_rescue_name" text="Ты Спас Осаждённую Горную Крепость" />
     <string id="geo_cc_royal_cavalry_desc" text="Ты вступил в элитный царский кавалерийский полк, сражавшийся в походах вдоль кавказской границы." />
@@ -1005,6 +1114,47 @@
     <string id="crus_s_marash" text="Мараш" />
     <string id="crus_s_tarsus" text="Тарс" />
     <string id="crus_s_saruj" text="Саруж" />
+    <string id="crus_s_harim" text="Замок Харим" />
+    <string id="crus_s_sahyun" text="Замок Сахьюн" />
+    <string id="crus_s_baghras" text="Замок Багра" />
+    <string id="crus_s_zerdana" text="Замок Зердана" />
+    <string id="crus_s_najm" text="Замок Наджм" />
+    <string id="crus_s_duluk" text="Замок Дулук" />
+    <string id="crus_s_azaz" text="Замок Азаз" />
+    <string id="crus_s_artah" text="Артах" />
+    <string id="crus_s_latmin" text="Латмин" />
+    <string id="crus_s_jisr_hadid" text="Джиср-эль-Хадид" />
+    <string id="crus_s_balatanos" text="Балатанос" />
+    <string id="crus_s_trapesac" text="Трапесак" />
+    <string id="crus_s_kaysun" text="Кайсун" />
+    <string id="crus_s_samosata" text="Самосата" />
+    <string id="crus_s_antab" text="Антаб" />
+    <string id="crus_s_qusayr" text="Кусайр" />
+    <string id="crus_s_bikisrail" text="Бикисраил" />
+    <string id="crus_s_til_khalid" text="Тель-Халид" />
+    <string id="crus_s_zamanti" text="Заманты" />
+    <string id="crus_s_sarmin" text="Сармин" />
+    <string id="crus_s_maarrat" text="Мааррат-эн-Нуман" />
+    <string id="crus_s_albara" text="Эль-Бара" />
+    <string id="crus_s_kafartab" text="Кафартаб" />
+    <string id="crus_s_apamea" text="Апамея" />
+    <string id="crus_s_jabala" text="Джебела" />
+    <string id="crus_s_qinnasrin" text="Киннасрин" />
+    <string id="crus_s_manbij" text="Манбидж" />
+    <string id="crus_s_tell_aran" text="Телль-Аран" />
+    <string id="crus_s_buzaa" text="Буза" />
+    <string id="crus_s_dabiq" text="Дабик" />
+    <string id="crus_s_balis" text="Балис" />
+    <string id="crus_s_deir_semaan" text="Дейр-Симан" />
+    <string id="crus_s_kfar_nabu" text="Кафр-Набу" />
+    <string id="crus_s_basufan" text="Басуфан" />
+    <string id="crus_s_serjilla" text="Сарджилла" />
+    <string id="crus_s_ruweiha" text="Рувейха" />
+    <string id="crus_s_frikya" text="Фрикия" />
+    <string id="crus_s_kafr_ambil" text="Кафр-Амбиль" />
+    <string id="crus_s_tell_aqibrin" text="Телль-Акибрин" />
+    <string id="crus_s_sarmada" text="Сармада" />
+    <string id="crus_s_cyrrhus" text="Кирос" />
     <string id="crus2_t_recruit" text="Крестоносное ополчение" />
     <string id="crus2_t_sergeant" text="Пеший сержант" />
     <string id="crus2_t_crossbowman" text="Арбалетчик" />
@@ -1050,6 +1200,47 @@
     <string id="arm_s_anazarbus" text="Аназарв" />
     <string id="arm_s_kesoun" text="Кесун" />
     <string id="arm_s_raban" text="Рабан" />
+    <string id="arm_s_til_hamdoun" text="Замок Тиль-Хамдун" />
+    <string id="arm_s_partzerpert" text="Замок Барцрберд" />
+    <string id="arm_s_korikos" text="Замок Корик" />
+    <string id="arm_s_silifke" text="Замок Силифке" />
+    <string id="arm_s_sarvandikar" text="Замок Сарвандикар" />
+    <string id="arm_s_gaban" text="Замок Габан" />
+    <string id="arm_s_amuda" text="Замок Амуда" />
+    <string id="arm_s_kizkalesi" text="Кызкалеси" />
+    <string id="arm_s_gastria" text="Гастрия" />
+    <string id="arm_s_kanytelis" text="Каныделис" />
+    <string id="arm_s_elaiussa" text="Элеусса" />
+    <string id="arm_s_hemite" text="Хемите" />
+    <string id="arm_s_gokveli" text="Гёквели" />
+    <string id="arm_s_meydan" text="Мейдан" />
+    <string id="arm_s_feke" text="Феке" />
+    <string id="arm_s_andirin" text="Андырын" />
+    <string id="arm_s_haruniye" text="Харуние" />
+    <string id="arm_s_kadirli" text="Кадирли" />
+    <string id="arm_s_karaisali" text="Караисалы" />
+    <string id="arm_s_saimbeyli" text="Саймбейли" />
+    <string id="arm_s_vardanus" text="Варданус" />
+    <string id="arm_s_kokison" text="Гёксун" />
+    <string id="arm_s_sgevra" text="Йыланкале" />
+    <string id="arm_s_simnados" text="Симнадос" />
+    <string id="arm_s_missis" text="Мисис" />
+    <string id="arm_s_ayas" text="Юмурталык" />
+    <string id="arm_s_malavans" text="Малаванс" />
+    <string id="arm_s_tumlu" text="Тумлу" />
+    <string id="arm_s_chandir" text="Чандыр" />
+    <string id="arm_s_geben" text="Гебен" />
+    <string id="arm_s_sariz" text="Сарыз" />
+    <string id="arm_s_bahce" text="Бахче" />
+    <string id="arm_s_hasanbeyli" text="Хасанбейли" />
+    <string id="arm_s_erzin" text="Эрзин" />
+    <string id="arm_s_payas" text="Пайас" />
+    <string id="arm_s_dortyol" text="Дёртйол" />
+    <string id="arm_s_yarpuz" text="Ярпуз" />
+    <string id="arm_s_kastalon" text="Касталон" />
+    <string id="arm_s_sinap" text="Синап" />
+    <string id="arm_s_osmaniye" text="Османие" />
+    <string id="arm_s_amik" text="Амик" />
     <string id="arm2_t_recruit" text="Киликийское ополчение" />
     <string id="arm2_t_azat" text="Азатский копейщик" />
     <string id="arm2_t_archer" text="Киликийский лучник" />
@@ -1100,6 +1291,50 @@
     <string id="krkh_s_khotan" text="Хотан" />
     <string id="krkh_s_uzgen" text="Узген" />
     <string id="krkh_s_bukhara" text="Бухара" />
+    <string id="krkh_s_tashkent" text="Замок Ташкент" />
+    <string id="krkh_s_akhsikath" text="Замок Ахсикет" />
+    <string id="krkh_s_termez" text="Замок Термез" />
+    <string id="krkh_s_khujand" text="Замок Худжанд" />
+    <string id="krkh_s_karshi" text="Замок Карши" />
+    <string id="krkh_s_sayram" text="Замок Сайрам" />
+    <string id="krkh_s_taraz" text="Замок Тараз" />
+    <string id="krkh_s_otrar" text="Замок Отрар" />
+    <string id="krkh_s_sighnaq" text="Замок Сыгнак" />
+    <string id="krkh_s_zamin" text="Замин" />
+    <string id="krkh_s_uratepe" text="Ура-Тюбе" />
+    <string id="krkh_s_panjikent" text="Пенджикент" />
+    <string id="krkh_s_dabusiyya" text="Дабусия" />
+    <string id="krkh_s_kish" text="Кеш" />
+    <string id="krkh_s_vardanzi" text="Варданзи" />
+    <string id="krkh_s_paykand" text="Пайкенд" />
+    <string id="krkh_s_kabudjama" text="Кабуджама" />
+    <string id="krkh_s_nujkath" text="Нуджкет" />
+    <string id="krkh_s_barskhan" text="Барсхан" />
+    <string id="krkh_s_suyab" text="Суяб" />
+    <string id="krkh_s_navekat" text="Навекат" />
+    <string id="krkh_s_kulan" text="Кулан" />
+    <string id="krkh_s_aspara" text="Аспара" />
+    <string id="krkh_s_merki" text="Мерке" />
+    <string id="krkh_s_jand" text="Джанд" />
+    <string id="krkh_s_yangikent" text="Янгикент" />
+    <string id="krkh_s_sauran" text="Сауран" />
+    <string id="krkh_s_kermine" text="Кермине" />
+    <string id="krkh_s_ghijduvan" text="Гиждуван" />
+    <string id="krkh_s_rabinjan" text="Рабинджан" />
+    <string id="krkh_s_zarafshan" text="Зерафшан" />
+    <string id="krkh_s_miankal" text="Мианкаль" />
+    <string id="krkh_s_dizak" text="Дизак" />
+    <string id="krkh_s_khavas" text="Хавас" />
+    <string id="krkh_s_banaket" text="Банакет" />
+    <string id="krkh_s_niyaz" text="Нияз" />
+    <string id="krkh_s_osrushana" text="Уструшана" />
+    <string id="krkh_s_farkhar" text="Фархар" />
+    <string id="krkh_s_chinaz" text="Чиназ" />
+    <string id="krkh_s_arys" text="Арысь" />
+    <string id="krkh_s_karnak" text="Карнак" />
+    <string id="krkh_s_turkestan" text="Туркестан" />
+    <string id="krkh_s_iskijkath" text="Искиджкет" />
+    <string id="krkh_s_chimkent" text="Чимкент" />
     <string id="kk2_t_recruit" text="Караханидский новобранец" />
     <string id="kk2_t_yigit" text="Йигит" />
     <string id="kk2_t_okcu" text="Окчу" />

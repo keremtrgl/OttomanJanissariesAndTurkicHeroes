@@ -15,4 +15,47 @@
   <Settlement id="castle_V6" name="{=arm_s_lampron}Lampron Castle" owner="Faction.clan_battania_6" culture="Culture.battania" />
   <Settlement id="castle_village_V6_1" name="{=arm_v_norperd}Norperd" culture="Culture.battania" />
   <Settlement id="castle_village_V6_2" name="{=arm_v_kanjor}Kanjor" culture="Culture.battania" />
+  <!-- Remaining native Battania castles/villages renamed to real Cilician Armenian
+       fortresses/towns (Rubenid/Hetumid era, 11th-13th c.). -->
+  <Settlement id="castle_B1" name="{=arm_s_til_hamdoun}Til Hamdoun Castle" />
+  <Settlement id="castle_B2" name="{=arm_s_partzerpert}Partzerpert Castle" />
+  <Settlement id="castle_B3" name="{=arm_s_korikos}Korikos Castle" />
+  <Settlement id="castle_B4" name="{=arm_s_silifke}Silifke Castle" />
+  <Settlement id="castle_B5" name="{=arm_s_sarvandikar}Sarvandikar Castle" />
+  <Settlement id="castle_B6" name="{=arm_s_gaban}Gaban Castle" />
+  <Settlement id="castle_B7" name="{=arm_s_amuda}Amuda Castle" />
+  <Settlement id="castle_B8" name="{=arm_s_kizkalesi}Kizkalesi" />
+  <Settlement id="castle_village_B1_1" name="{=arm_s_gastria}Gastria" />
+  <Settlement id="castle_village_B1_2" name="{=arm_s_kanytelis}Kanytelis" />
+  <Settlement id="castle_village_B2_1" name="{=arm_s_elaiussa}Elaiussa" />
+  <Settlement id="castle_village_B2_2" name="{=arm_s_hemite}Hemite" />
+  <Settlement id="castle_village_B3_1" name="{=arm_s_gokveli}Gokveli" />
+  <Settlement id="castle_village_B3_2" name="{=arm_s_meydan}Meydan" />
+  <Settlement id="castle_village_B4_1" name="{=arm_s_feke}Feke" />
+  <Settlement id="castle_village_B4_2" name="{=arm_s_andirin}Andirin" />
+  <Settlement id="castle_village_B5_1" name="{=arm_s_haruniye}Haruniye" />
+  <Settlement id="castle_village_B5_2" name="{=arm_s_kadirli}Kadirli" />
+  <Settlement id="castle_village_B6_1" name="{=arm_s_karaisali}Karaisali" />
+  <Settlement id="castle_village_B6_2" name="{=arm_s_saimbeyli}Saimbeyli" />
+  <Settlement id="castle_village_B7_1" name="{=arm_s_vardanus}Vardanus" />
+  <Settlement id="castle_village_B7_2" name="{=arm_s_kokison}Kokison" />
+  <Settlement id="castle_village_B8_1" name="{=arm_s_sgevra}Sgevra" />
+  <Settlement id="castle_village_B8_2" name="{=arm_s_simnados}Simnados" />
+  <Settlement id="village_B1_1" name="{=arm_s_missis}Missis" />
+  <Settlement id="village_B1_2" name="{=arm_s_ayas}Ayas" />
+  <Settlement id="village_B1_3" name="{=arm_s_malavans}Malavans" />
+  <Settlement id="village_B1_4" name="{=arm_s_tumlu}Tumlu" />
+  <Settlement id="village_B2_1" name="{=arm_s_chandir}Chandir" />
+  <Settlement id="village_B2_2" name="{=arm_s_geben}Geben" />
+  <Settlement id="village_B2_3" name="{=arm_s_sariz}Sariz" />
+  <Settlement id="village_B3_1" name="{=arm_s_bahce}Bahce" />
+  <Settlement id="village_B3_2" name="{=arm_s_hasanbeyli}Hasanbeyli" />
+  <Settlement id="village_B3_3" name="{=arm_s_erzin}Erzin" />
+  <Settlement id="village_B4_1" name="{=arm_s_payas}Payas" />
+  <Settlement id="village_B4_2" name="{=arm_s_dortyol}Dortyol" />
+  <Settlement id="village_B4_3" name="{=arm_s_yarpuz}Yarpuz" />
+  <Settlement id="village_B4_4" name="{=arm_s_kastalon}Kastalon" />
+  <Settlement id="village_B5_1" name="{=arm_s_sinap}Sinap" />
+  <Settlement id="village_B5_2" name="{=arm_s_osmaniye}Osmaniye" />
+  <Settlement id="village_B5_3" name="{=arm_s_amik}Amik" />
 </Settlements>

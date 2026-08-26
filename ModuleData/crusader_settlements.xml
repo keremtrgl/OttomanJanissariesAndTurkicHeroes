@@ -11,4 +11,48 @@
   <Settlement id="town_V9" name="{=crus_s_marash}Marash" />
   <Settlement id="town_V2" name="{=crus_s_tarsus}Tarsus" />
   <Settlement id="town_V8" name="{=crus_s_saruj}Saruj" />
+  <!-- Castles and villages renamed to real fortresses/settlements of Antioch and Edessa's
+       hinterland (Jabal Zawiya/Limestone Massif and the Euphrates frontier). castle_V6 and its
+       two villages are excluded - transferred to Cilician Armenia, see armenian_settlements.xml. -->
+  <Settlement id="castle_V1" name="{=crus_s_harim}Harim Castle" />
+  <Settlement id="castle_V2" name="{=crus_s_sahyun}Sahyun Castle" />
+  <Settlement id="castle_V3" name="{=crus_s_baghras}Baghras Castle" />
+  <Settlement id="castle_V4" name="{=crus_s_zerdana}Zerdana Castle" />
+  <Settlement id="castle_V5" name="{=crus_s_najm}Najm Castle" />
+  <Settlement id="castle_V7" name="{=crus_s_duluk}Duluk Castle" />
+  <Settlement id="castle_V8" name="{=crus_s_azaz}Azaz Castle" />
+  <Settlement id="castle_village_V1_1" name="{=crus_s_artah}Artah" />
+  <Settlement id="castle_village_V2_1" name="{=crus_s_latmin}Latmin" />
+  <Settlement id="castle_village_V2_2" name="{=crus_s_jisr_hadid}Jisr al-Hadid" />
+  <Settlement id="castle_village_V3_1" name="{=crus_s_balatanos}Balatanos" />
+  <Settlement id="castle_village_V3_2" name="{=crus_s_trapesac}Trapesac" />
+  <Settlement id="castle_village_V4_1" name="{=crus_s_kaysun}Kaysun" />
+  <Settlement id="castle_village_V5_1" name="{=crus_s_samosata}Samosata" />
+  <Settlement id="castle_village_V5_2" name="{=crus_s_antab}Antab" />
+  <Settlement id="castle_village_V7_1" name="{=crus_s_qusayr}Qusayr" />
+  <Settlement id="castle_village_V7_2" name="{=crus_s_bikisrail}Bikisrail" />
+  <Settlement id="castle_village_V8_1" name="{=crus_s_til_khalid}Til Khalid" />
+  <Settlement id="castle_village_V8_2" name="{=crus_s_zamanti}Zamanti" />
+  <Settlement id="village_V1_1" name="{=crus_s_sarmin}Sarmin" />
+  <Settlement id="village_V1_2" name="{=crus_s_maarrat}Ma'arrat al-Numan" />
+  <Settlement id="village_V2_1" name="{=crus_s_albara}Al-Bara" />
+  <Settlement id="village_V2_2" name="{=crus_s_kafartab}Kafartab" />
+  <Settlement id="village_V2_3" name="{=crus_s_apamea}Apamea" />
+  <Settlement id="village_V3_2" name="{=crus_s_jabala}Jabala" />
+  <Settlement id="village_V3_3" name="{=crus_s_qinnasrin}Qinnasrin" />
+  <Settlement id="village_V3_4" name="{=crus_s_manbij}Manbij" />
+  <Settlement id="village_V5_1" name="{=crus_s_tell_aran}Tell Aran" />
+  <Settlement id="village_V5_2" name="{=crus_s_buzaa}Buza'a" />
+  <Settlement id="village_V5_3" name="{=crus_s_dabiq}Dabiq" />
+  <Settlement id="village_V6_1" name="{=crus_s_balis}Balis" />
+  <Settlement id="village_V6_2" name="{=crus_s_deir_semaan}Deir Semaan" />
+  <Settlement id="village_V6_3" name="{=crus_s_kfar_nabu}Kfar Nabu" />
+  <Settlement id="village_V6_4" name="{=crus_s_basufan}Basufan" />
+  <Settlement id="village_V7_1" name="{=crus_s_serjilla}Serjilla" />
+  <Settlement id="village_V7_2" name="{=crus_s_ruweiha}Ruweiha" />
+  <Settlement id="village_V8_1" name="{=crus_s_frikya}Frikya" />
+  <Settlement id="village_V8_2" name="{=crus_s_kafr_ambil}Kafr Ambil" />
+  <Settlement id="village_V8_3" name="{=crus_s_tell_aqibrin}Tell Aqibrin" />
+  <Settlement id="village_V9_1" name="{=crus_s_sarmada}Sarmada" />
+  <Settlement id="village_V9_2" name="{=crus_s_cyrrhus}Cyrrhus" />
 </Settlements>

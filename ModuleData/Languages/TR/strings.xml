@@ -781,6 +781,7 @@
     <string id="byz_ln_maria_alania" text="Maria of Alania" />
     <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
     <string id="byz_ln_irene_doukaina" text="İrini Dukaina" />
+    <string id="byz_ln_anna_diogenissa" text="Anna Diogenissa" />
     <string id="byz_cc_senatorial_name" text="Konstantinopolis Senatocu Ailesi" />
     <string id="byz_cc_senatorial_desc" text="Ailen İmparatorluk başkentinde toprak sahibi dynatoi sınıfındandır; sarayın entrika ve protokolünü beşikten öğrendin." />
     <string id="byz_cc_akritas_name" text="Anadolu Akritas Sınır Ailesi" />
@@ -889,6 +890,114 @@
     <string id="geo_cc_rescue_desc" text="Muhasara altındaki bir dağ kalesine gizli bir geçitten yardım ulaştırıp halkı kurtardın." />
     <string id="geo_cc_pilgrim_name" text="Hacılara ve Mazlumlara Kalkan Oldun" />
     <string id="geo_cc_pilgrim_desc" text="Kutsal topraklara giden hacı kervanlarını haydutlardan koruyarak ün kazandın." />
+    <string id="crus_cc_norman_knight_name" text="Norman Şövalyesi Ailesi" />
+    <string id="crus_cc_norman_knight_desc" text="Ailen, Birinci Haçlı Seferi'yle doğuya gelen Norman şövalyelerinden geliyor; çocukluğundan beri mızrak ve savaş atıyla büyüdün." />
+    <string id="crus_cc_antiochene_noble_name" text="Antakya Sınır Beyi Ailesi" />
+    <string id="crus_cc_antiochene_noble_desc" text="Ailen Antakya yakınlarında bir sınır beyliği tutuyor; beyleri Türkmen akıncılarına ve Müslüman komşulara karşı çarpışmaya alışkın." />
+    <string id="crus_cc_genoese_merchant_name" text="Cenevizli Tüccar Ailesi" />
+    <string id="crus_cc_genoese_merchant_desc" text="Ailen, Antakya'nın liman mahallesine yerleşmiş Cenevizli tüccarlardan; Outremer ile İtalya arasındaki ticaretle zenginleşti." />
+    <string id="crus_cc_hospitaller_name" text="Bir Hospitalier Hizmetkâr Kardeşin Soyu" />
+    <string id="crus_cc_hospitaller_desc" text="Baban, Hospitalier Şövalyeleri'ne silahlı hizmetkâr olarak hizmet etti; hastalara baktı ve Haçlı devletlerinin sayısız düşmanıyla savaştı." />
+    <string id="crus_cc_pilgrim_settler_name" text="Yoksul Hacı Yerleşimci Ailesi" />
+    <string id="crus_cc_pilgrim_settler_desc" text="Ailen Birinci Haçlı Seferi'nde Kutsal Topraklar'a yürüdü ve orada kaldı; Levanten sınırında mütevazı bir yaşam sürdürdü." />
+    <string id="crus_cc_squire_training_name" text="Norman Avlusunda Tahta Kılıçlarla Eğitim Aldın" />
+    <string id="crus_cc_squire_training_desc" text="Ailenin avlusunda tahta kılıçlarla dövüştün; seni Norman tarzında eğiten yaşlı bir silahlı adam vardı." />
+    <string id="crus_cc_levantine_name" text="Fransızca ve Arapçayı Birlikte Konuşarak Büyüdün" />
+    <string id="crus_cc_levantine_desc" text="Levanten hizmetkârlar ve komşular arasında büyüdün; ailenin Fransızcası kadar akıcı Arapça da öğrendin." />
+    <string id="crus_cc_church_school_name" text="Bir Kilise Okulunda Latince ve Kutsal Metinler Öğrendin" />
+    <string id="crus_cc_church_school_desc" text="Bir cemaat kilisesi okulunda, Levanten doğumlu bir rahipten Latin harflerini ve kutsal metinleri öğrendin." />
+    <string id="crus_cc_market_name" text="Antakya Pazarlarında Ticareti Öğrendin" />
+    <string id="crus_cc_market_desc" text="Antakya'nın kalabalık pazarlarında Franklar, Ermeniler ve Rumlar arasında pazarlık yapmayı öğrendin." />
+    <string id="crus_cc_squire_name" text="Toprak Sahibi Bir Şövalyeye Silahtarlık Ettin" />
+    <string id="crus_cc_squire_desc" text="Toprak sahibi bir şövalyeye silahtarlık ederek atına ve silahlarına baktın, atlı savaşın yollarını öğrendin." />
+    <string id="crus_cc_garrison_name" text="Bir Sınır Kalesinde Garnizon Nöbeti Tuttun" />
+    <string id="crus_cc_garrison_desc" text="Bir sınır kalesinin surlarında elinde arbaletle uzun nöbetler tuttun, çevredeki tepelerden gelecek akınlara karşı tetikte bekledin." />
+    <string id="crus_cc_scribe_name" text="Bir Katedral Meclisinde Kâtip Olarak Öğrenim Gördün" />
+    <string id="crus_cc_scribe_desc" text="Bir katedral meclisinin kanonikleri altında okumayı, yazmayı ve hesap tutmayı öğrendin." />
+    <string id="crus_cc_knighted_name" text="Şövalye İlan Edildin ve Bir Lordun Maiyetine Katıldın" />
+    <string id="crus_cc_knighted_desc" text="Kılıçla kuşatılıp şövalye ilan edildin, bir lordun atlı maiyetinde yerini aldın." />
+    <string id="crus_cc_templar_name" text="Tapınakçılara Hizmetkâr Kardeş Olarak Katıldın" />
+    <string id="crus_cc_templar_desc" text="Tapınak Şövalyeleri tarikatına hizmetkâr kardeş olarak yemin ettin, kalelerinde nöbet tuttun ve hacılara eşlik ettin." />
+    <string id="crus_cc_italian_trade_name" text="İtalyan Tüccar Filolarıyla Birlikte Ticaret Yaptın" />
+    <string id="crus_cc_italian_trade_desc" text="Cenevizli ve Venedikli tüccar filolarıyla birlikte çalışarak Haçlı devletlerini ayakta tutan işi öğrendin." />
+    <string id="crus_cc_siege_held_name" text="Büyük Bir Kuşatmada Bir Suru Savundun" />
+    <string id="crus_cc_siege_held_desc" text="Büyük bir kuşatma boyunca surdaki bölümünü savundun, art arda gelen saldırıları püskürttün." />
+    <string id="crus_cc_charge_name" text="Belirleyici Bir Süvari Hücumuna Önderlik Ettin" />
+    <string id="crus_cc_charge_desc" text="Tam gerektiği anda düşman hattını kıran belirleyici bir süvari hücumuna önderlik ettin." />
+    <string id="crus_cc_ransom_name" text="Esir Alınan Bir Lordun Fidyesini Görüştün" />
+    <string id="crus_cc_ransom_desc" text="Esir alınan bir lordun fidyesini görüştün, hem minnet hem de keskin zekâlı biri olarak ün kazandın." />
+    <string id="arm_cc_naxarar_name" text="Naharar Asil Ailesi" />
+    <string id="arm_cc_naxarar_desc" text="Ermenistan'ın kalıtsal feodal soyluluğu olan kadim bir Naharar hanedanından geliyorsun; kendi dağ beyliğine ve vasal savaşçılara sahipsin." />
+    <string id="arm_cc_azat_name" text="Azat Toprak Sahibi Savaşçı Ailesi" />
+    <string id="arm_cc_azat_desc" text="Ailen azat, yani dağ topraklarının karşılığında Naharar lordlarına süvari hizmeti borçlu olan özgür toprak sahibi savaşçılardan." />
+    <string id="arm_cc_silk_merchant_name" text="Ermeni İpek Yolu Tüccarı Ailesi" />
+    <string id="arm_cc_silk_merchant_desc" text="Ailen Kilikya'dan Pers topraklarına uzanan yollarda ipek ve mal ticareti yapıyor; ortaçağın büyük Ermeni tüccar ağının bir parçası." />
+    <string id="arm_cc_church_name" text="Ermeni Kilisesi Din Adamları Ailesi" />
+    <string id="arm_cc_church_desc" text="Ermeni Apostolik Kilisesi'ne adanmış bir ailede büyüdün; kutsal metinleri çoğaltıp dağlarda inancı yaşattın." />
+    <string id="arm_cc_herder_name" text="Dağlı Çoban Ailesi" />
+    <string id="arm_cc_herder_desc" text="Toros dağlarının dik yamaçlarında keçi güderek büyüdün; toprağın az şey sunduğu yerde hayatta kalmayı öğrendin." />
+    <string id="arm_cc_mountain_ride_name" text="Küçük Yaştan Dağ Patikalarında At Sürdün" />
+    <string id="arm_cc_mountain_ride_desc" text="Küçük yaştan itibaren Toros'un uçurum kenarlarındaki dar patikalarda at sürerek denge ve cesaret kazandın." />
+    <string id="arm_cc_falconry_name" text="Yaylalarda Doğancılık Öğrendin" />
+    <string id="arm_cc_falconry_desc" text="Ailenin evinin yukarısındaki yaylalarda doğan uçurmayı ve av izlemeyi öğrendin." />
+    <string id="arm_cc_monastery_name" text="Bir Manastırda Ermeni Alfabesini Öğrendin" />
+    <string id="arm_cc_monastery_desc" text="Yakındaki bir manastırdaki keşişlerden Ermeni alfabesiyle okuma yazmayı öğrendin." />
+    <string id="arm_cc_trade_name" text="Dağ Yollarında Ticareti Öğrendin" />
+    <string id="arm_cc_trade_desc" text="Ailenin kervanlarıyla dağ ticaret yollarında pazarlık yapmayı ve mal tartmayı öğrendin." />
+    <string id="arm_cc_princely_guard_name" text="Prensin Ev Muhafızlarına Katıldın" />
+    <string id="arm_cc_princely_guard_desc" text="Kilikya prensinin ev muhafızlarına katılıp yeminli adamlarıyla birlikte mızrak ve kılıç eğitimi aldın." />
+    <string id="arm_cc_border_watch_name" text="Sınır Gözcüsü Olarak Dağ Geçitlerini İzledin" />
+    <string id="arm_cc_border_watch_desc" text="Bizans ya da Selçuklu akınlarına karşı uyarmak için dağ geçitlerini bir gözcü olarak izledin." />
+    <string id="arm_cc_monastery_school_name" text="Ünlü Bir Manastır Okulunda Eğitim Gördün" />
+    <string id="arm_cc_monastery_school_desc" text="Kilikya'nın ünlü manastır okullarından birinde ilahiyat ve edebiyat okudun." />
+    <string id="arm_cc_ayrudzi_name" text="Seçkin Ayrudzi Süvarisine Seçildin" />
+    <string id="arm_cc_ayrudzi_desc" text="Eyerdeki maharetin, Kilikya'nın seçkin süvari muhafızı Ayrudzi arasında yer almanı sağladı." />
+    <string id="arm_cc_naxarar_retainer_name" text="Bir Naharar Lordunun Güvenilir Adamı Oldun" />
+    <string id="arm_cc_naxarar_retainer_desc" text="Bir Naharar lordunun güvenilir adamı oldun; ona akıl verip sahada adamlarına önderlik ettin." />
+    <string id="arm_cc_intermediary_name" text="Hristiyan ve Müslüman Saraylar Arasında Tercümanlık Yaptın" />
+    <string id="arm_cc_intermediary_desc" text="Birkaç dile hâkim olduğundan, Ermenilerin sıkça güvenildiği bir görev olan Hristiyan ve Müslüman saraylar arasında tercümanlık yaptın." />
+    <string id="arm_cc_fortress_defense_name" text="Bir Dağ Kalesini Kuşatmaya Karşı Savundun" />
+    <string id="arm_cc_fortress_defense_desc" text="Kuşatanlar sonunda pes edip çekilene dek bir dağ kalesini kararlı bir kuşatmaya karşı savundun." />
+    <string id="arm_cc_battle_name" text="Bizans ya da Selçuklu Kuvvetlerine Karşı Meydan Savaşında Sivrildin" />
+    <string id="arm_cc_battle_desc" text="İlerleyen Bizans ya da Selçuklu kuvvetlerine karşı bir meydan savaşında üstün başarı gösterdin." />
+    <string id="arm_cc_negotiation_name" text="Halkın İçin Hayati Bir Ateşkes Görüştün" />
+    <string id="arm_cc_negotiation_desc" text="Halkını kazanamayacakları bir savaştan kurtaran hayati bir ateşkesi görüştün." />
+    <string id="krkh_cc_khan_lineage_name" text="Bir Hanlık Soyunun Uzak Kolu" />
+    <string id="krkh_cc_khan_lineage_desc" text="Bir Karahanlı hükümdar hanesinin küçük bir kolundan geliyorsun; hanın sarayının adetleri ve rekabetleri arasında büyüdün." />
+    <string id="krkh_cc_tarkhan_name" text="Tarhan Asil Ailesi" />
+    <string id="krkh_cc_tarkhan_desc" text="Ailen, bozkır ayrıcalıkları karşılığında Hana atlı asker borçlu olan vergiden muaf savaşçı soyluluğu Tarhan rütbesini taşıyor." />
+    <string id="krkh_cc_silk_merchant_name" text="Semerkant İpek Yolu Tüccarı Ailesi" />
+    <string id="krkh_cc_silk_merchant_desc" text="Ailen Semerkant ve Buhara çarşılarında ticaret yapıyor, İpek Yolu'nun zenginliğinin tam kalbinde." />
+    <string id="krkh_cc_madrasa_name" text="Medrese Alimi Ailesi" />
+    <string id="krkh_cc_madrasa_desc" text="Ailen, Karahanlıların İslam'a geçişinin ardından gelen ilim dalgasının bir parçası olarak Semerkant'taki medreselerden birinde alimlik yapıyor." />
+    <string id="krkh_cc_nomad_name" text="Bozkır Göçebesi Ailesi" />
+    <string id="krkh_cc_nomad_desc" text="Açık bozkırda sürüleri takip ederek büyüdün, tıpkı Karluk ve Yağma atalarının bir zamanlar sürdüğü yaşam tarzıyla." />
+    <string id="krkh_cc_horseback_name" text="Daha Düzgün Yürümeden Önce At Sürdün" />
+    <string id="krkh_cc_horseback_desc" text="Her bozkır çocuğunun yolunda olduğu gibi, daha düzgün yürümeden önce at sürmeyi öğrendin." />
+    <string id="krkh_cc_archery_name" text="Çocukluğundan Beri Atlı Okçuluk Eğitimi Aldın" />
+    <string id="krkh_cc_archery_desc" text="Çocukluğundan beri atlı okçuluk eğitimi aldın, hareket eden bir midilliden hedeflere ok attın." />
+    <string id="krkh_cc_madrasa_child_name" text="Bir Cami Okulunda Kuran ve Arapça Öğrendin" />
+    <string id="krkh_cc_madrasa_child_desc" text="Hanlığın yerleşik şehirlerinden birindeki bir cami okulunda Kuran ve Arap harflerini öğrendin." />
+    <string id="krkh_cc_bazaar_name" text="Semerkant Çarşılarında Ticareti Öğrendin" />
+    <string id="krkh_cc_bazaar_desc" text="Semerkant'ın kalabalık çarşılarında ipek tartmayı ve fiyat pazarlığı yapmayı öğrendin." />
+    <string id="krkh_cc_khan_guard_name" text="Hanın Ev Muhafızlarına Katıldın" />
+    <string id="krkh_cc_khan_guard_desc" text="Hanın ev muhafızlarına katılıp yeminli atlıları arasında mızrak ve kılıç eğitimi aldın." />
+    <string id="krkh_cc_horse_archer_name" text="Atlı Okçu Akıncı Olarak Savaştın" />
+    <string id="krkh_cc_horse_archer_desc" text="Atlı okçu akıncı olarak, rakiplerini ok yağmuruyla yıprattıktan sonra geri çekilerek savaştın." />
+    <string id="krkh_cc_madrasa_student_name" text="İbrahim Tamgaç Han'ın Semerkant'taki Medresesinde Okudun" />
+    <string id="krkh_cc_madrasa_student_desc" text="İbrahim Tamgaç Han'ın Semerkant'ta kurduğu büyük medresede hukuk ve devlet yönetimi okudun." />
+    <string id="krkh_cc_tarkhan_cavalry_name" text="Seçkin Tarhan Ağır Süvarisine Katıldın" />
+    <string id="krkh_cc_tarkhan_cavalry_desc" text="Eyerdeki maharetin, Hanlığın seçkin Tarhan ağır süvarisi arasında yer almanı sağladı." />
+    <string id="krkh_cc_caravan_trader_name" text="İpek Yolu Boyunca Kervanlara Önderlik Ettin" />
+    <string id="krkh_cc_caravan_trader_desc" text="İpek Yolu boyunca ticaret kervanlarına önderlik ederek hem haydutlardan hem de zorlu pazarlıklardan sağ çıkmayı öğrendin." />
+    <string id="krkh_cc_court_scribe_name" text="Hanın Sarayında Kâtip Olarak Hizmet Ettin" />
+    <string id="krkh_cc_court_scribe_desc" text="Hanın sarayında kâtip olarak hizmet ettin, fermanları kaleme alıp hazinenin hesaplarını tuttun." />
+    <string id="krkh_cc_skirmish_won_name" text="Belirleyici Bir Atlı Okçuluk Çarpışmasını Kazandın" />
+    <string id="krkh_cc_skirmish_won_desc" text="Belirleyici bir çarpışmayı kazandın; okların düşman yakın dövüşe geçmeden onların cesaretini kırdı." />
+    <string id="krkh_cc_caravan_defense_name" text="Bir Kervanı Haydutlardan Savundun" />
+    <string id="krkh_cc_caravan_defense_desc" text="Bir İpek Yolu kervanını haydutlardan savunarak mallarını ve tüccarların canlarını kurtardın." />
+    <string id="krkh_cc_seljuk_rival_name" text="Selçuklu Rakiplerine Karşı Sivrildin" />
+    <string id="krkh_cc_seljuk_rival_desc" text="Hanlığın sınırlarını tartışmalı hale getiren Selçuklu rakipleriyle bir çatışmada sivrildin." />
       <string id="seljuk_systems_intro_title" text="Büyük Selçuklu Devleti" />
     <string id="seljuk_systems_intro_text" text="Selçuklu topraklarına girdiniz. Bu imparatorluğu komşularından ayıran üç kurum var:&#10;&#10;Atabeglik Yönetimi - her Selçuklu şehir ve kalesinde sadakati, erzak stoklarını ve güvenliği sessizce güçlendirir, vali olarak görev yapan kahramanları da eğitir.&#10;&#10;İpek Yolu ve Kervan Sigortası Divanı - herhangi bir Selçuklu şehrinin Ticaret menüsünde bulunur; kervanlarınızı kayba karşı sigortalamanızı ve haftalık kâr payı için sermaye yatırmanızı sağlar.&#10;&#10;Meyhane Ozanı - arka sokak meyhanesinde bir bozkır ozanı, mütevazı bir ücret karşılığında Gazavat destanları okuyarak ordunuzun moralini yükseltir.&#10;&#10;Bir Selçuklu yerleşimini her ziyaret ettiğinizde bu seçenekleri arayın." />
     <string id="seljuk_ok_button" text="Tamam" />
@@ -964,6 +1073,47 @@
     <string id="crus_s_marash" text="Maras" />
     <string id="crus_s_tarsus" text="Tarsus" />
     <string id="crus_s_saruj" text="Suruc" />
+    <string id="crus_s_harim" text="Harim Kalesi" />
+    <string id="crus_s_sahyun" text="Sahyun Kalesi" />
+    <string id="crus_s_baghras" text="Bağras Kalesi" />
+    <string id="crus_s_zerdana" text="Zerdana Kalesi" />
+    <string id="crus_s_najm" text="Necm Kalesi" />
+    <string id="crus_s_duluk" text="Dülük Kalesi" />
+    <string id="crus_s_azaz" text="Azez Kalesi" />
+    <string id="crus_s_artah" text="Artah" />
+    <string id="crus_s_latmin" text="Latmin" />
+    <string id="crus_s_jisr_hadid" text="Demirköprü" />
+    <string id="crus_s_balatanos" text="Balatanos" />
+    <string id="crus_s_trapesac" text="Trapesaç" />
+    <string id="crus_s_kaysun" text="Keysun" />
+    <string id="crus_s_samosata" text="Samsat" />
+    <string id="crus_s_antab" text="Antep" />
+    <string id="crus_s_qusayr" text="Kusayr" />
+    <string id="crus_s_bikisrail" text="Bikisrail" />
+    <string id="crus_s_til_khalid" text="Tel Halid" />
+    <string id="crus_s_zamanti" text="Zamantı" />
+    <string id="crus_s_sarmin" text="Sermin" />
+    <string id="crus_s_maarrat" text="Maarra" />
+    <string id="crus_s_albara" text="Elbara" />
+    <string id="crus_s_kafartab" text="Kefertab" />
+    <string id="crus_s_apamea" text="Apameia" />
+    <string id="crus_s_jabala" text="Cebele" />
+    <string id="crus_s_qinnasrin" text="Kınnesrin" />
+    <string id="crus_s_manbij" text="Münbiç" />
+    <string id="crus_s_tell_aran" text="Tel Eren" />
+    <string id="crus_s_buzaa" text="Büza" />
+    <string id="crus_s_dabiq" text="Dabık" />
+    <string id="crus_s_balis" text="Balis" />
+    <string id="crus_s_deir_semaan" text="Deyr Sem'an" />
+    <string id="crus_s_kfar_nabu" text="Kefernebu" />
+    <string id="crus_s_basufan" text="Basufan" />
+    <string id="crus_s_serjilla" text="Sercilla" />
+    <string id="crus_s_ruweiha" text="Ruveyha" />
+    <string id="crus_s_frikya" text="Firikya" />
+    <string id="crus_s_kafr_ambil" text="Kefer Ambil" />
+    <string id="crus_s_tell_aqibrin" text="Tel Akibrin" />
+    <string id="crus_s_sarmada" text="Sermeda" />
+    <string id="crus_s_cyrrhus" text="Kirus" />
     <string id="crus2_t_recruit" text="Hacli Milisi" />
     <string id="crus2_t_sergeant" text="Piyade Serjani" />
     <string id="crus2_t_crossbowman" text="Arbaletci" />
@@ -1009,6 +1159,47 @@
     <string id="arm_s_anazarbus" text="Anazarbus" />
     <string id="arm_s_kesoun" text="Kesun" />
     <string id="arm_s_raban" text="Raban" />
+    <string id="arm_s_til_hamdoun" text="Toprakkale" />
+    <string id="arm_s_partzerpert" text="Parçerpert Kalesi" />
+    <string id="arm_s_korikos" text="Korykos Kalesi" />
+    <string id="arm_s_silifke" text="Silifke Kalesi" />
+    <string id="arm_s_sarvandikar" text="Servantikar Kalesi" />
+    <string id="arm_s_gaban" text="Gaban Kalesi" />
+    <string id="arm_s_amuda" text="Amuda Kalesi" />
+    <string id="arm_s_kizkalesi" text="Kızkalesi" />
+    <string id="arm_s_gastria" text="Gastria" />
+    <string id="arm_s_kanytelis" text="Kanlıdivane" />
+    <string id="arm_s_elaiussa" text="Ayaş" />
+    <string id="arm_s_hemite" text="Hemite" />
+    <string id="arm_s_gokveli" text="Gökveli" />
+    <string id="arm_s_meydan" text="Meydan" />
+    <string id="arm_s_feke" text="Feke" />
+    <string id="arm_s_andirin" text="Andırın" />
+    <string id="arm_s_haruniye" text="Haruniye" />
+    <string id="arm_s_kadirli" text="Kadirli" />
+    <string id="arm_s_karaisali" text="Karaisalı" />
+    <string id="arm_s_saimbeyli" text="Saimbeyli" />
+    <string id="arm_s_vardanus" text="Vartanuş" />
+    <string id="arm_s_kokison" text="Göksun" />
+    <string id="arm_s_sgevra" text="Yılankale" />
+    <string id="arm_s_simnados" text="Simnados" />
+    <string id="arm_s_missis" text="Misis" />
+    <string id="arm_s_ayas" text="Yumurtalık" />
+    <string id="arm_s_malavans" text="Malavans" />
+    <string id="arm_s_tumlu" text="Tumlu" />
+    <string id="arm_s_chandir" text="Çandır" />
+    <string id="arm_s_geben" text="Geben" />
+    <string id="arm_s_sariz" text="Sarız" />
+    <string id="arm_s_bahce" text="Bahçe" />
+    <string id="arm_s_hasanbeyli" text="Hasanbeyli" />
+    <string id="arm_s_erzin" text="Erzin" />
+    <string id="arm_s_payas" text="Payas" />
+    <string id="arm_s_dortyol" text="Dörtyol" />
+    <string id="arm_s_yarpuz" text="Yarpuz" />
+    <string id="arm_s_kastalon" text="Kastalon" />
+    <string id="arm_s_sinap" text="Sinap" />
+    <string id="arm_s_osmaniye" text="Osmaniye" />
+    <string id="arm_s_amik" text="Amik" />
     <string id="arm2_t_recruit" text="Kilikya Milisi" />
     <string id="arm2_t_azat" text="Azat Mizrakcisi" />
     <string id="arm2_t_archer" text="Kilikya Okcusu" />
@@ -1059,6 +1250,50 @@
     <string id="krkh_s_khotan" text="Hotan" />
     <string id="krkh_s_uzgen" text="Özkend" />
     <string id="krkh_s_bukhara" text="Buhara" />
+    <string id="krkh_s_tashkent" text="Taşkent Kalesi" />
+    <string id="krkh_s_akhsikath" text="Ahsıket Kalesi" />
+    <string id="krkh_s_termez" text="Termiz Kalesi" />
+    <string id="krkh_s_khujand" text="Hucend Kalesi" />
+    <string id="krkh_s_karshi" text="Karşı Kalesi" />
+    <string id="krkh_s_sayram" text="Sayram Kalesi" />
+    <string id="krkh_s_taraz" text="Taraz Kalesi" />
+    <string id="krkh_s_otrar" text="Otrar Kalesi" />
+    <string id="krkh_s_sighnaq" text="Sığnak Kalesi" />
+    <string id="krkh_s_zamin" text="Zamin" />
+    <string id="krkh_s_uratepe" text="Uratepe" />
+    <string id="krkh_s_panjikent" text="Pencikent" />
+    <string id="krkh_s_dabusiyya" text="Debusiye" />
+    <string id="krkh_s_kish" text="Keş" />
+    <string id="krkh_s_vardanzi" text="Verdanzi" />
+    <string id="krkh_s_paykand" text="Peykent" />
+    <string id="krkh_s_kabudjama" text="Kabudcame" />
+    <string id="krkh_s_nujkath" text="Nucket" />
+    <string id="krkh_s_barskhan" text="Barshan" />
+    <string id="krkh_s_suyab" text="Suyab" />
+    <string id="krkh_s_navekat" text="Navekat" />
+    <string id="krkh_s_kulan" text="Kulan" />
+    <string id="krkh_s_aspara" text="Aspara" />
+    <string id="krkh_s_merki" text="Merki" />
+    <string id="krkh_s_jand" text="Cend" />
+    <string id="krkh_s_yangikent" text="Yenikent" />
+    <string id="krkh_s_sauran" text="Savran" />
+    <string id="krkh_s_kermine" text="Kermine" />
+    <string id="krkh_s_ghijduvan" text="Gıcduvan" />
+    <string id="krkh_s_rabinjan" text="Rabincan" />
+    <string id="krkh_s_zarafshan" text="Zerefşan" />
+    <string id="krkh_s_miankal" text="Miyankal" />
+    <string id="krkh_s_dizak" text="Dizak" />
+    <string id="krkh_s_khavas" text="Havas" />
+    <string id="krkh_s_banaket" text="Benaket" />
+    <string id="krkh_s_niyaz" text="Niyaz" />
+    <string id="krkh_s_osrushana" text="Uşrusana" />
+    <string id="krkh_s_farkhar" text="Ferhar" />
+    <string id="krkh_s_chinaz" text="Çinaz" />
+    <string id="krkh_s_arys" text="Arıs" />
+    <string id="krkh_s_karnak" text="Karnak" />
+    <string id="krkh_s_turkestan" text="Türkistan" />
+    <string id="krkh_s_iskijkath" text="İskicket" />
+    <string id="krkh_s_chimkent" text="Çimkent" />
     <string id="kk2_t_recruit" text="Karahanlı Eri" />
     <string id="kk2_t_yigit" text="Yiğit" />
     <string id="kk2_t_okcu" text="Okçu" />

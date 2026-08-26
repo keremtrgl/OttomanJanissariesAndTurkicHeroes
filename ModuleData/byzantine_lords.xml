@@ -32,4 +32,6 @@
   <NPCCharacter id="lord_1_55" name="{=byz_ln_romanos_argyros}Romanos Argyros" />
   <NPCCharacter id="lord_1_72" name="{=byz_ln_joseph_tarchaneiotes}Joseph Tarchaneiotes" />
   <NPCCharacter id="lord_SE9_l" name="{=byz_ln_katakalon_kekaumenos}Katakalon Kekaumenos" />
+  <!-- lord_1_37 = Native's "Ira", dev-commented as lord_1_14's daughter; lord_1_14 is now the male Romanos Diogenes here, so she's renamed to fit as his daughter under the historical Diogenes house instead of keeping her orphaned Native name. -->
+  <NPCCharacter id="lord_1_37" name="{=byz_ln_anna_diogenissa}Anna Diogenissa" is_female="true" />
 </NPCCharacters>
