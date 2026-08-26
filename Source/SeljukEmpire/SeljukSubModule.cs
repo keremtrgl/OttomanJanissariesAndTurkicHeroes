@@ -56,6 +56,8 @@ namespace SeljukEmpire
                 TryRegister(campaignStarter, "SeljukRecruitmentBehavior", () => campaignStarter.AddBehavior(new SeljukRecruitmentBehavior()));
                 TryRegister(campaignStarter, "SeljukTavernBehavior", () => campaignStarter.AddBehavior(new SeljukTavernBehavior()));
                 TryRegister(campaignStarter, "SeljukDialogueBehavior", () => campaignStarter.AddBehavior(new SeljukDialogueBehavior()));
+                TryRegister(campaignStarter, "RivalCultureDialogueBehavior", () => campaignStarter.AddBehavior(new RivalCultureDialogueBehavior()));
+                TryRegister(campaignStarter, "SeljukSystemsExplainerBehavior", () => campaignStarter.AddBehavior(new SeljukSystemsExplainerBehavior()));
                 TryRegister(campaignStarter, "SeljukCultureBonusModels", () =>
                 {
                     // -10% mounted-troop wage, +10% construction speed, -15% siege engine speed, +15% caravan trade profit
