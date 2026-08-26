@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
   <!-- Gurcu lordlarinin gercek tarihi isimleri (Kral IV. David/Yapici donemi, 1089-1125) - yuz/ekipman/beceri Native, sadece isim degisir -->
-  <NPCCharacter id="lord_2_1" name="{=geo_ln_david}IV. David Ağmaşenebeli" />
+  <NPCCharacter id="lord_2_1" name="{=geo_ln_david}David IV the Builder" />
   <NPCCharacter id="lord_2_2" name="{=geo_ln_gurandukht}Gurandukht" />
-  <NPCCharacter id="lord_2_3" name="{=geo_ln_liparit}Liparit Bagvaşi" />
-  <NPCCharacter id="lord_2_5" name="{=geo_ln_ivane}İvane Orbeli" />
-  <NPCCharacter id="lord_2_16" name="{=geo_ln_aghsartan}II. Ağsartan" />
-  <NPCCharacter id="lord_2_17" name="{=geo_ln_arishiani}Arişiani" />
-  <NPCCharacter id="lord_2_18" name="{=geo_ln_giorgi_chqondideli}Çkondideli Giorgi" />
+  <NPCCharacter id="lord_2_3" name="{=geo_ln_liparit}Liparit Baghvashi" />
+  <NPCCharacter id="lord_2_5" name="{=geo_ln_ivane}Ivane Orbeli" />
+  <NPCCharacter id="lord_2_16" name="{=geo_ln_aghsartan}Aghsartan II" />
+  <NPCCharacter id="lord_2_17" name="{=geo_ln_arishiani}Arishiani" />
+  <NPCCharacter id="lord_2_18" name="{=geo_ln_giorgi_chqondideli}Giorgi of Chqondidi" />
   <NPCCharacter id="lord_2_19" name="{=geo_ln_kavtar}Kavtar Baramisdze" />
-  <NPCCharacter id="lord_2_20" name="{=geo_ln_kakhaber}Kahaber Kahaberisdze" />
+  <NPCCharacter id="lord_2_20" name="{=geo_ln_kakhaber}Kakhaber Kakhaberisdze" />
   <NPCCharacter id="lord_S9_l" name="{=geo_ln_grigol}Grigol Eristavi" />
 </NPCCharacters>

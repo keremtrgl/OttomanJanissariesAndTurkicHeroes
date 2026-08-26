@@ -4,10 +4,10 @@
   <!-- Sahiplik/kultur Native (Culture.sturgia, ilgili klan) - sadece isim degisir. Sturgia toprraklarindan hicbiri Selcuklu'da degil. -->
   <Settlement id="town_S1" name="{=geo_s_kutaisi}Kutaisi" />
   <Settlement id="village_S1_1" name="{=geo_v_nokalakevi}Nokalakevi" />
-  <Settlement id="village_S1_3" name="{=geo_v_vardtsikhe}Vardtsihe" />
+  <Settlement id="village_S1_3" name="{=geo_v_vardtsikhe}Vardtsikhe" />
 
-  <Settlement id="town_S2" name="{=geo_s_tbilisi}Tiflis" />
-  <Settlement id="village_S2_1" name="{=geo_v_mtskheta}Mtsheta" />
+  <Settlement id="town_S2" name="{=geo_s_tbilisi}Tbilisi" />
+  <Settlement id="village_S2_1" name="{=geo_v_mtskheta}Mtskheta" />
   <Settlement id="village_S2_2" name="{=geo_v_rustavi}Rustavi" />
 
   <Settlement id="town_S3" name="{=geo_s_kldekari}Kldekari" />
@@ -15,52 +15,52 @@
   <Settlement id="village_S3_2" name="{=geo_v_manglisi}Manglisi" />
 
   <Settlement id="town_S4" name="{=geo_s_telavi}Telavi" />
-  <Settlement id="village_S4_1" name="{=geo_v_ikalto}İkalto" />
+  <Settlement id="village_S4_1" name="{=geo_v_ikalto}Ikalto" />
   <Settlement id="village_S4_3" name="{=geo_v_alaverdi}Alaverdi" />
   <Settlement id="village_S4_4" name="{=geo_v_nekresi}Nekresi" />
 
   <Settlement id="town_S5" name="{=geo_s_lore}Lore" />
   <Settlement id="village_S5_1" name="{=geo_v_kaladzori}Kaladzori" />
-  <Settlement id="village_S5_2" name="{=geo_v_tashir}Taşir" />
+  <Settlement id="village_S5_2" name="{=geo_v_tashir}Tashir" />
 
-  <Settlement id="town_S6" name="{=geo_s_chqondidi}Çkondidi" />
-  <Settlement id="village_S6_1" name="{=geo_v_anakopia}Anakopya" />
-  <Settlement id="village_S6_2" name="{=geo_v_bichvinta}Bıçvinta" />
-  <Settlement id="village_S6_3" name="{=geo_v_sokhumi}Sohumi" />
+  <Settlement id="town_S6" name="{=geo_s_chqondidi}Chqondidi" />
+  <Settlement id="village_S6_1" name="{=geo_v_anakopia}Anakopia" />
+  <Settlement id="village_S6_2" name="{=geo_v_bichvinta}Bichvinta" />
+  <Settlement id="village_S6_3" name="{=geo_v_sokhumi}Sokhumi" />
 
-  <Settlement id="town_S7" name="{=geo_s_khornabuji}Hornabuci" />
+  <Settlement id="town_S7" name="{=geo_s_khornabuji}Khornabuji" />
   <Settlement id="village_S7_1" name="{=geo_v_bodbe}Bodbe" />
   <Settlement id="village_S7_2" name="{=geo_v_vejini}Vejini" />
 
-  <Settlement id="castle_S1" name="{=geo_c_gori}Gori Kalesi" />
+  <Settlement id="castle_S1" name="{=geo_c_gori}Gori Castle" />
   <Settlement id="castle_village_S1_1" name="{=geo_v_ateni}Ateni" />
-  <Settlement id="castle_village_S1_2" name="{=geo_v_uplistsikhe}Uplistsihe" />
+  <Settlement id="castle_village_S1_2" name="{=geo_v_uplistsikhe}Uplistsikhe" />
 
-  <Settlement id="castle_S2" name="{=geo_c_dmanisi}Dmanisi Kalesi" />
+  <Settlement id="castle_S2" name="{=geo_c_dmanisi}Dmanisi Castle" />
   <Settlement id="castle_village_S2_1" name="{=geo_v_bolnisi}Bolnisi" />
   <Settlement id="castle_village_S2_2" name="{=geo_v_tsalka}Tsalka" />
 
-  <Settlement id="castle_S3" name="{=geo_c_samshvilde}Samşvilde Kalesi" />
+  <Settlement id="castle_S3" name="{=geo_c_samshvilde}Samshvilde Castle" />
   <Settlement id="castle_village_S3_1" name="{=geo_v_orbeti}Orbeti" />
   <Settlement id="castle_village_S3_2" name="{=geo_v_tsintskaro}Tsintskaro" />
 
-  <Settlement id="castle_S4" name="{=geo_c_zedazeni}Zedazeni Kalesi" />
-  <Settlement id="castle_village_S4_1" name="{=geo_v_mukhrani}Muhrani" />
+  <Settlement id="castle_S4" name="{=geo_c_zedazeni}Zedazeni Castle" />
+  <Settlement id="castle_village_S4_1" name="{=geo_v_mukhrani}Mukhrani" />
   <Settlement id="castle_village_S4_2" name="{=geo_v_tsromi}Tsromi" />
 
-  <Settlement id="castle_S5" name="{=geo_c_manavi}Manavi Kalesi" />
+  <Settlement id="castle_S5" name="{=geo_c_manavi}Manavi Castle" />
   <Settlement id="castle_village_S5_1" name="{=geo_v_kvareli}Kvareli" />
-  <Settlement id="castle_village_S5_2" name="{=geo_v_akhmeta}Ahmeta" />
+  <Settlement id="castle_village_S5_2" name="{=geo_v_akhmeta}Akhmeta" />
 
-  <Settlement id="castle_S6" name="{=geo_c_kojori}Kojori Kalesi" />
+  <Settlement id="castle_S6" name="{=geo_c_kojori}Kojori Castle" />
   <Settlement id="castle_village_S6_1" name="{=geo_v_betania}Betania" />
-  <Settlement id="castle_village_S6_2" name="{=geo_v_tabakhmela}Tabahmela" />
+  <Settlement id="castle_village_S6_2" name="{=geo_v_tabakhmela}Tabakhmela" />
 
-  <Settlement id="castle_S7" name="{=geo_c_artanuji}Artanuci Kalesi" />
+  <Settlement id="castle_S7" name="{=geo_c_artanuji}Artanuji Castle" />
   <Settlement id="castle_village_S7_1" name="{=geo_v_oltisi}Oltisi" />
-  <Settlement id="castle_village_S7_2" name="{=geo_v_shavsheti}Şavşeti" />
+  <Settlement id="castle_village_S7_2" name="{=geo_v_shavsheti}Shavsheti" />
 
-  <Settlement id="castle_S8" name="{=geo_c_tmogvi}Tmogvi Kalesi" />
-  <Settlement id="castle_village_S8_1" name="{=geo_v_akhaltsikhe}Ahaltsihe" />
-  <Settlement id="castle_village_S8_2" name="{=geo_v_khertvisi}Hertvisi" />
+  <Settlement id="castle_S8" name="{=geo_c_tmogvi}Tmogvi Castle" />
+  <Settlement id="castle_village_S8_1" name="{=geo_v_akhaltsikhe}Akhaltsikhe" />
+  <Settlement id="castle_village_S8_2" name="{=geo_v_khertvisi}Khertvisi" />
 </Settlements>

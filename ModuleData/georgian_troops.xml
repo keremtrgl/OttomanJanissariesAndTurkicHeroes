@@ -2,28 +2,28 @@
 <NPCCharacters>
   <!-- Gurcistan (Culture.sturgia) birlik agaci gercek Gurcu Kralligi-donemi askeri terimleriyle yeniden adlandirildi. -->
   <!-- Ekipman/beceri/terfi zinciri Native - sadece isim degisir. -->
-  <NPCCharacter id="sturgian_recruit" name="{=geo_t_recruit}Glehi Leventi" />
-  <NPCCharacter id="sturgian_warrior" name="{=geo_t_aznauri_warrior}Aznauri Savaşçısı" />
-  <NPCCharacter id="sturgian_soldier" name="{=geo_t_msakhuri}Msahuri Eri" />
-  <NPCCharacter id="sturgian_shock_troop" name="{=geo_t_didebuli_spear}Didebuli Mızrakçısı" />
-  <NPCCharacter id="sturgian_veteran_warrior" name="{=geo_t_didebuli_axe}Didebuli Baltacısı" />
-  <NPCCharacter id="sturgian_warrior_son" name="{=geo_t_aznauri_squire}Aznauri Silahtarı" />
-  <NPCCharacter id="varyag" name="{=geo_t_monaspa}Monaspa Muhafızı" />
-  <NPCCharacter id="varyag_veteran" name="{=geo_t_alan_horseguard}Alan Atlı Muhafızı" />
-  <NPCCharacter id="druzhinnik" name="{=geo_t_frankish_maa}Frenk Silahlı Şövalyesi" />
-  <NPCCharacter id="druzhinnik_champion" name="{=geo_t_frankish_knight}Kıdemli Frenk Şövalyesi" />
-  <NPCCharacter id="sturgian_woodsman" name="{=geo_t_mtiuli_woodsman}Mtiuli Ormancısı" />
-  <NPCCharacter id="sturgian_hunter" name="{=geo_t_mtiuli_hunter}Mtiuli Avcısı" />
-  <NPCCharacter id="sturgian_archer" name="{=geo_t_mtiuli_archer}Mtiuli Okçusu" />
-  <NPCCharacter id="sturgian_veteran_bowman" name="{=geo_t_mtiuli_vet_bowman}Kıdemli Mtiuli Okçusu" />
-  <NPCCharacter id="sturgian_brigand" name="{=geo_t_khevsur_raider}Hevsur Akıncısı" />
-  <NPCCharacter id="sturgian_hardened_brigand" name="{=geo_t_khevsur_hardened}Sertleşmiş Hevsur Akıncısı" />
-  <NPCCharacter id="sturgian_horse_raider" name="{=geo_t_khevsur_horse}Hevsur Atlı Akıncısı" />
-  <NPCCharacter id="sturgian_berzerker" name="{=geo_t_svan_linebreaker}Svan Saf Yarıcısı" />
-  <NPCCharacter id="sturgian_spearman" name="{=geo_t_svan_spearman}Svan Mızrakçısı" />
-  <NPCCharacter id="sturgian_ulfhednar" name="{=geo_t_svan_heroic}Kahraman Svan Saf Yarıcısı" />
-  <NPCCharacter id="sturgian_militia_archer" name="{=geo_t_kartli_militia_archer}Kartli Milis Okçusu" />
-  <NPCCharacter id="sturgian_militia_veteran_archer" name="{=geo_t_kartli_militia_vet_archer}Kartli Kıdemli Milis Okçusu" />
-  <NPCCharacter id="sturgian_militia_spearman" name="{=geo_t_kartli_militia_spear}Kartli Milis Mızrakçısı" />
-  <NPCCharacter id="sturgian_militia_veteran_spearman" name="{=geo_t_kartli_militia_vet_spear}Kartli Kıdemli Milis Mızrakçısı" />
+  <NPCCharacter id="sturgian_recruit" name="{=geo_t_recruit}Georgian Levy" />
+  <NPCCharacter id="sturgian_warrior" name="{=geo_t_aznauri_warrior}Aznauri Warrior" />
+  <NPCCharacter id="sturgian_soldier" name="{=geo_t_msakhuri}Msakhuri Soldier" />
+  <NPCCharacter id="sturgian_shock_troop" name="{=geo_t_didebuli_spear}Didebuli Spearman" />
+  <NPCCharacter id="sturgian_veteran_warrior" name="{=geo_t_didebuli_axe}Didebuli Axeman" />
+  <NPCCharacter id="sturgian_warrior_son" name="{=geo_t_aznauri_squire}Aznauri Squire" />
+  <NPCCharacter id="varyag" name="{=geo_t_monaspa}Monaspa Guardsman" />
+  <NPCCharacter id="varyag_veteran" name="{=geo_t_alan_horseguard}Alan Horse-Guard" />
+  <NPCCharacter id="druzhinnik" name="{=geo_t_frankish_maa}Frankish Man-at-Arms" />
+  <NPCCharacter id="druzhinnik_champion" name="{=geo_t_frankish_knight}Frankish Knight" />
+  <NPCCharacter id="sturgian_woodsman" name="{=geo_t_mtiuli_woodsman}Mtiuli Woodsman" />
+  <NPCCharacter id="sturgian_hunter" name="{=geo_t_mtiuli_hunter}Mtiuli Hunter" />
+  <NPCCharacter id="sturgian_archer" name="{=geo_t_mtiuli_archer}Mtiuli Archer" />
+  <NPCCharacter id="sturgian_veteran_bowman" name="{=geo_t_mtiuli_vet_bowman}Mtiuli Veteran Bowman" />
+  <NPCCharacter id="sturgian_brigand" name="{=geo_t_khevsur_raider}Khevsur Raider" />
+  <NPCCharacter id="sturgian_hardened_brigand" name="{=geo_t_khevsur_hardened}Khevsur Hardened Raider" />
+  <NPCCharacter id="sturgian_horse_raider" name="{=geo_t_khevsur_horse}Khevsur Horse Raider" />
+  <NPCCharacter id="sturgian_berzerker" name="{=geo_t_svan_linebreaker}Svan Line Breaker" />
+  <NPCCharacter id="sturgian_spearman" name="{=geo_t_svan_spearman}Svan Spearman" />
+  <NPCCharacter id="sturgian_ulfhednar" name="{=geo_t_svan_heroic}Svan Heroic Line Breaker" />
+  <NPCCharacter id="sturgian_militia_archer" name="{=geo_t_kartli_militia_archer}Kartli Militia Archer" />
+  <NPCCharacter id="sturgian_militia_veteran_archer" name="{=geo_t_kartli_militia_vet_archer}Kartli Veteran Militia Archer" />
+  <NPCCharacter id="sturgian_militia_spearman" name="{=geo_t_kartli_militia_spear}Kartli Militia Spearman" />
+  <NPCCharacter id="sturgian_militia_veteran_spearman" name="{=geo_t_kartli_militia_vet_spear}Kartli Veteran Militia Spearman" />
 </NPCCharacters>

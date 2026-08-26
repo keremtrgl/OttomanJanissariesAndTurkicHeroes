@@ -4,7 +4,7 @@
     <!-- ================================================================================= -->
     <!-- BÜYÜK SELÇUKLU VE TÜRK SANCAK İKONLARI GRUBU (TURKIC & SELJUK BANNER ICONS)        -->
     <!-- ================================================================================= -->
-    <BannerIconGroup id="7" name="{=str_banner_seljuk_group}Selçuklu ve Türk Tamgaları" is_pattern="false">
+    <BannerIconGroup id="7" name="{=str_banner_seljuk_group}Seljuk &amp; Turkic Tamgas" is_pattern="false">
       <!--
         NOT: Icon id değerleri Native/ModuleData/banner_icons.xml içindeki mevcut
         ikonlarla (id aralığı 100-535) ÇAKIŞMAYACAK şekilde 900+ bloğuna taşındı.

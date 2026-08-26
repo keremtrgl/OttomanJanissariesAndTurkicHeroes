@@ -72,7 +72,7 @@ namespace SeljukEmpire.Economy
                 }
 
                 MBInformationManager.AddQuickInformation(
-                    new TextObject("{=seljuk_starter_notif}Büyük Selçuklu Gazi Başlangıç Paketi envanterinize tanımlandı! (+2.500 Dinar, Asil Türkmen Atı, Kompozit Yay ve Zırh Delen Oklar)"));
+                    new TextObject("{=seljuk_starter_notif}The Grand Seljuk Gazi Starter Pack has been credited to your inventory! (+2,500 Dinars, Noble Turkoman Horse, Composite Bow, and Armor Piercing Arrows)"));
 
                 _isStarterPackGranted = true;
             }

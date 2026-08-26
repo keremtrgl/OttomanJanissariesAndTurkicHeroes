@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Factions>
   <!-- Abbasi Halifeligi hanedanlari (Native clan_aserai_1..9 reskin - klan verisi/lordlar/toprak Native, sadece kimlik degisir) -->
-  <Faction id="clan_aserai_1" name="{=abb_house_abbas}Benî Abbas" />
-  <Faction id="clan_aserai_2" name="{=abb_house_jahir}Benî Cehîr" />
-  <Faction id="clan_aserai_3" name="{=abb_house_muslima}Benî Müslime" />
-  <Faction id="clan_aserai_4" name="{=abb_house_zaynabi}Benî Zeynebî" />
-  <Faction id="clan_aserai_5" name="{=abb_house_damaghani}Benî Damegânî" />
-  <Faction id="clan_aserai_6" name="{=abb_house_sabi}Benî Sâbî" />
-  <Faction id="clan_aserai_7" name="{=abb_house_uqayl}Benî Ukayl" />
-  <Faction id="clan_aserai_8" name="{=abb_house_ayyub}Benî Eyyûb" />
-  <Faction id="clan_aserai_9" name="{=abb_house_darust}Benî Derûst" />
+  <Faction id="clan_aserai_1" name="{=abb_house_abbas}Banu Abbas" />
+  <Faction id="clan_aserai_2" name="{=abb_house_jahir}Banu Jahir" />
+  <Faction id="clan_aserai_3" name="{=abb_house_muslima}Banu al-Muslima" />
+  <Faction id="clan_aserai_4" name="{=abb_house_zaynabi}Banu al-Zaynabi" />
+  <Faction id="clan_aserai_5" name="{=abb_house_damaghani}Banu al-Damaghani" />
+  <Faction id="clan_aserai_6" name="{=abb_house_sabi}Banu al-Sabi" />
+  <Faction id="clan_aserai_7" name="{=abb_house_uqayl}Banu Uqayl" />
+  <Faction id="clan_aserai_8" name="{=abb_house_ayyub}Banu Ayyub" />
+  <Faction id="clan_aserai_9" name="{=abb_house_darust}Banu Darust" />
 </Factions>

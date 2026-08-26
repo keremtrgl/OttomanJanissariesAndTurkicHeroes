@@ -2,9 +2,9 @@
 <Kingdoms>
   <!-- BÜYÜK SELÇUKLU DEVLETİ ANA KRALLIK TANIMI (ENCYCLOPEDIA & MAP ENTITY) -->
   <Kingdom id="kingdom_seljuks"
-           name="{=seljuk_faction_name}Büyük Selçuklu Devleti"
-           short_name="{=seljuk_faction_short}Selçuklular"
-           title="{=seljuk_faction_title}Sultanlık"
+           name="{=seljuk_faction_name}Great Seljuk Empire"
+           short_name="{=seljuk_faction_short}Seljuks"
+           title="{=seljuk_faction_title}Sultanate"
            ruler_title="{=seljuk_ruler_title}Sultan"
            culture="Culture.seljuk"
            owner="Hero.lord_seljuk_alp_arslan"
@@ -16,7 +16,7 @@
            settlement_banner_mesh="encounter_flag_a"
            flag_mesh="info_screen_flags_b"
            initial_home_settlement="Settlement.town_ES1"
-           text="{=seljuk_faction_desc}Büyük Selçuklu Devleti; Horasan'dan Anadolu içlerine kadar uzanan, adaleti, Nizamiye medreseleri ve yenilmez Türkmen süvarileriyle Calradia bozkırlarına ve kadim şehirlerine hükmeden ulu cihan devletidir.">
+           text="{=seljuk_faction_desc}The Great Seljuk Empire; spanning from Khorasan to the heart of Anatolia, ruling Calradia's steppes and ancient cities with justice, Nizamiya institutions, and invincible Turkoman horsemen.">
     <!-- value="-30" (was) sat right at the AI's quick-war threshold and put the Seljuks and Bizans
          at war within the first few in-game days of every campaign - same bug class already fixed
          for Kingdom.empire in b133b3c, just never applied here. 0 keeps genuine rivalry in the text
@@ -46,11 +46,11 @@
        coker. Ayni banner_key, Diogenes Hanedani'nin (clan_empire_south_1) klan bayragiyla da
        eslesiyor - bkz. byzantine_clans.xml. -->
   <Kingdom id="empire_s"
-           name="{=seljuk_byzantine_name}Bizans İmparatorluğu"
-           short_name="{=seljuk_byzantine_short}Bizans"
-           title="{=seljuk_byzantine_title}Bizans İmparatorluğu"
-           ruler_title="{=seljuk_byzantine_ruler}İmparator"
-           text="{=seljuk_byzantine_desc}Malazgirt sonrası Anadolu'da direnen Bizans'ın güney kanadı. Büyük Selçuklu Devleti'nin en amansız rakibi; Konya ve İsfahan'a doğru genişleyen Türkmen boylarına karşı sınır kalelerini elinde tutmaya çalışır."
+           name="{=seljuk_byzantine_name}Byzantine Empire"
+           short_name="{=seljuk_byzantine_short}Byzantium"
+           title="{=seljuk_byzantine_title}Byzantine Empire"
+           ruler_title="{=seljuk_byzantine_ruler}Emperor"
+           text="{=seljuk_byzantine_desc}The southern wing of the Byzantine resistance in Anatolia after Manzikert. The Great Seljuk Empire's most implacable rival, struggling to hold its border fortresses against the Turkoman tribes advancing on Konya and Isfahan."
            banner_key="11.71.71.4345.4345.764.764.1.0.0.162.7.7.512.512.764.764.1.0.0"
            primary_banner_color="0xFF710083"
            secondary_banner_color="0xFFD4AF37"
@@ -66,11 +66,11 @@
   <!-- ABBASİ HALİFELİĞİ (Native: Sultanate of the Aserai / aserai) -->
   <!-- Ayni banner_key eksikligi buradaydi da - Native'in kendi aserai bayragi/renkleri geri eklendi. -->
   <Kingdom id="aserai"
-           name="{=seljuk_abbasid_name}Abbasi Halifeliği"
-           short_name="{=seljuk_abbasid_short}Abbasiler"
-           title="{=seljuk_abbasid_title}Abbasi Halifeliği"
-           ruler_title="{=seljuk_abbasid_ruler}Halife"
-           text="{=seljuk_abbasid_desc}Bağdat merkezli halifelik; İslam dünyasının nominal başı olsa da gerçek askeri güç artık Büyük Selçuklu sultanlarının elindedir. Sultan, Halife'nin koruyucusu ve fiili hükümdarıdır."
+           name="{=seljuk_abbasid_name}Abbasid Caliphate"
+           short_name="{=seljuk_abbasid_short}Abbasids"
+           title="{=seljuk_abbasid_title}Abbasid Caliphate"
+           ruler_title="{=seljuk_abbasid_ruler}Caliph"
+           text="{=seljuk_abbasid_desc}The Baghdad-based Caliphate, nominal head of the Islamic world though real military power now rests with the Great Seljuk Sultans. The Sultan stands as the Caliph's protector and de facto ruler."
            banner_key="11.0.0.4345.4345.764.764.1.0.0.463.1.1.466.466.764.764.1.0.0"
            primary_banner_color="0xffB57A1E"
            secondary_banner_color="0xff4E1A13"
@@ -88,11 +88,11 @@
        kirmizi (id 83) mevcut. Ayni banner_key, hukumdar hanedani Bagrationi'nin (clan_sturgia_1)
        klan bayragiyla da eslesiyor - bkz. georgian_clans.xml. -->
   <Kingdom id="sturgia"
-           name="{=seljuk_georgia_name}Gürcistan Krallığı"
-           short_name="{=seljuk_georgia_short}Gürcüler"
-           title="{=seljuk_georgia_title}Gürcistan Krallığı"
-           ruler_title="{=seljuk_georgia_ruler}Kral"
-           text="{=seljuk_georgia_desc}Kafkas dağlarının eteklerinde hüküm süren Hristiyan krallık. Büyük Selçuklu akıncılarıyla sınır boylarında sık sık çatışan, bağımsızlığını korumakta kararlı bir kuzey komşusu."
+           name="{=seljuk_georgia_name}Kingdom of Georgia"
+           short_name="{=seljuk_georgia_short}Georgians"
+           title="{=seljuk_georgia_title}Kingdom of Georgia"
+           ruler_title="{=seljuk_georgia_ruler}King"
+           text="{=seljuk_georgia_desc}A Christian kingdom ruling in the shadow of the Caucasus mountains. A northern neighbor determined to keep its independence, frequently clashing with Great Seljuk raiders along the frontier."
            banner_key="11.172.172.4345.4345.764.764.1.0.0.462.83.83.512.512.764.764.1.0.0"
            primary_banner_color="0xFFFFFFFF"
            secondary_banner_color="0xFFD22D33"

@@ -7,7 +7,7 @@
 
   <!-- 1. Âl-i Selçuk Hanedanı (Sultan Alp Arslan) -->
   <Faction id="clan_seljuk_royal"
-           name="{=clan_seljuk_royal}Âl-i Selçuk Hanedanı"
+           name="{=clan_seljuk_royal}House of Seljuk"
            tier="6"
            owner="Hero.lord_seljuk_alp_arslan"
            super_faction="Kingdom.kingdom_seljuks"
@@ -22,7 +22,7 @@
 
   <!-- 2. Nizamiye Divanı ve İdare-i Saltanat (Hâce Nizamülmülk) -->
   <Faction id="clan_nizamiye"
-           name="{=clan_nizamiye}Nizamiye Divanı"
+           name="{=clan_nizamiye}Nizamiya Divan"
            tier="4"
            owner="Hero.lord_seljuk_nizamulmulk"
            super_faction="Kingdom.kingdom_seljuks"
@@ -37,7 +37,7 @@
 
   <!-- 3. Danişmendliler Gaza Beyliği (Melik Danişmend Gazi) -->
   <Faction id="clan_danismend"
-           name="{=clan_danismend}Danişmendliler Beyliği"
+           name="{=clan_danismend}Danishmendids Principality"
            tier="5"
            owner="Hero.lord_seljuk_danismend_gazi"
            super_faction="Kingdom.kingdom_seljuks"
@@ -52,7 +52,7 @@
 
   <!-- 4. Artuklular Uç Beyliği (Artuk Bey) -->
   <Faction id="clan_artuk"
-           name="{=clan_artuk}Artuklular Beyliği"
+           name="{=clan_artuk}Artuqids Principality"
            tier="4"
            owner="Hero.lord_seljuk_artuk_bey"
            super_faction="Kingdom.kingdom_seljuks"
@@ -67,7 +67,7 @@
 
   <!-- 5. Mengücekliler Melikliği (Mengücek Gazi) -->
   <Faction id="clan_mengucek"
-           name="{=clan_mengucek}Mengücekliler Melikliği"
+           name="{=clan_mengucek}Mengujekids Principality"
            tier="3"
            owner="Hero.lord_seljuk_mengucek_gazi"
            super_faction="Kingdom.kingdom_seljuks"
@@ -82,7 +82,7 @@
 
   <!-- 6. Saltuklular Uç Beyliği (Emir Saltuk) -->
   <Faction id="clan_saltuk"
-           name="{=clan_saltuk}Saltuklular Beyliği"
+           name="{=clan_saltuk}Saltukids Principality"
            tier="3"
            owner="Hero.lord_seljuk_emir_saltuk"
            super_faction="Kingdom.kingdom_seljuks"
@@ -97,7 +97,7 @@
 
   <!-- 7. Çaka Beyliği ve Donanma-yı Hümayun (Çaka Bey) -->
   <Faction id="clan_caka"
-           name="{=clan_caka}Çaka Beyliği"
+           name="{=clan_caka}Chaka Bey Principality"
            tier="3"
            owner="Hero.lord_seljuk_caka_bey"
            super_faction="Kingdom.kingdom_seljuks"
@@ -112,7 +112,7 @@
 
   <!-- 8. Ahlatşahlar Ermenşahlar Beyliği (Sökmen el-Kutbî) -->
   <Faction id="clan_ahlatsah"
-           name="{=clan_ahlatsah}Ahlatşahlar Beyliği"
+           name="{=clan_ahlatsah}Ahlatshahs Principality"
            tier="4"
            owner="Hero.lord_seljuk_sokmen_bey"
            super_faction="Kingdom.kingdom_seljuks"
@@ -127,7 +127,7 @@
 
   <!-- 9. Karamanoğulları Türkmen Beyliği (Kerimüddin Karaman Bey) -->
   <Faction id="clan_karaman"
-           name="{=clan_karaman}Karamanoğulları Beyliği"
+           name="{=clan_karaman}Karamanoğlu Principality"
            tier="3"
            owner="Hero.lord_seljuk_karaman_bey"
            super_faction="Kingdom.kingdom_seljuks"
@@ -142,7 +142,7 @@
 
   <!-- 10. Kayı Boyu ve Söğüt Uç Gazileri (Ertuğrul Gazi) -->
   <Faction id="clan_kayi_oguz"
-           name="{=clan_kayi_oguz}Kayı Boyu Alpleri"
+           name="{=clan_kayi_oguz}Kayi Tribe Alps"
            tier="3"
            owner="Hero.ertugrul_gazi"
            super_faction="Kingdom.kingdom_seljuks"
@@ -157,7 +157,7 @@
 
   <!-- 11. Ahilik Teşkilatı ve Fütüvvet Ocağı (Ahi Evran) -->
   <Faction id="clan_ahi_order"
-           name="{=clan_ahi_order}Ahilik Teşkilatı"
+           name="{=clan_ahi_order}Ahi Order"
            tier="3"
            owner="Hero.lord_seljuk_ahi_evran"
            super_faction="Kingdom.kingdom_seljuks"

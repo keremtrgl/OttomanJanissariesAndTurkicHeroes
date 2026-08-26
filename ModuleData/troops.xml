@@ -5,7 +5,7 @@
   
 
   
-  <NPCCharacter id="seljuk_peasant" default_group="Infantry" level="6" name="{=seljuk_t1_name}İkta Gönüllüsü" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_peasant" default_group="Infantry" level="6" name="{=seljuk_t1_name}Seljuk Iqta Volunteer" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -43,7 +43,7 @@
   
 
   
-  <NPCCharacter id="seljuk_footman" default_group="Infantry" level="11" name="{=seljuk_ceri_name}Çeri Yayak" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_footman" default_group="Infantry" level="11" name="{=seljuk_ceri_name}Seljuk Cheri Footman" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -77,7 +77,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_armored_infantry" default_group="Infantry" level="16" name="{=seljuk_zirhli_yayak_name}Zırhlı Yayak" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_armored_infantry" default_group="Infantry" level="16" name="{=seljuk_zirhli_yayak_name}Armored Footman" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -111,7 +111,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_nizam_infantry" default_group="Infantry" level="21" name="{=seljuk_nizam_name}Selçuklu Nizam Piyadesi" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_nizam_infantry" default_group="Infantry" level="21" name="{=seljuk_nizam_name}Seljuk Regular Nizam Infantry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -149,7 +149,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_subasi_guard" default_group="Infantry" level="26" name="{=seljuk_subasi_name}Subaşı Ağır Muhafızı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_subasi_guard" default_group="Infantry" level="26" name="{=seljuk_subasi_name}Subashi Heavy Guard" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -187,7 +187,7 @@
   
 
   
-  <NPCCharacter id="seljuk_hunter" default_group="Ranged" level="11" name="{=seljuk_turkmen_avci_name}Türkmen Avcısı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_hunter" default_group="Ranged" level="11" name="{=seljuk_turkmen_avci_name}Turcoman Hunter" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -221,7 +221,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_composite_archer" default_group="Ranged" level="16" name="{=seljuk_bilesik_yayci_name}Bileşik Yaycı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_composite_archer" default_group="Ranged" level="16" name="{=seljuk_bilesik_yayci_name}Seljuk Composite Bowman" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -255,7 +255,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_steppe_archer" default_group="Ranged" level="21" name="{=seljuk_bozkir_nisanci_name}Usta Bozkır Nişancısı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_steppe_archer" default_group="Ranged" level="21" name="{=seljuk_bozkir_nisanci_name}Master Steppe Marksman" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -291,7 +291,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_sky_archer" default_group="Ranged" level="26" name="{=seljuk_gok_nisanci_name}Gök Nişancı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_sky_archer" default_group="Ranged" level="26" name="{=seljuk_gok_nisanci_name}Celestial Gok Archer" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -328,7 +328,7 @@
   
 
   
-  <NPCCharacter id="seljuk_horseman" default_group="Cavalry" level="11" name="{=seljuk_turkmen_atli_name}Türkmen Atlısı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_horseman" default_group="Cavalry" level="11" name="{=seljuk_turkmen_atli_name}Turcoman Rider" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -367,7 +367,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_clan_scout" default_group="HorseArcher" level="16" name="{=seljuk_boy_akinci_name}Boy Akıncısı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_clan_scout" default_group="HorseArcher" level="16" name="{=seljuk_boy_akinci_name}Clan Akinji Raider" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -408,7 +408,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_horse_archer" default_group="HorseArcher" level="21" name="{=seljuk_atli_okcu_name}Selçuklu Atlı Okçusu" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_horse_archer" default_group="HorseArcher" level="21" name="{=seljuk_atli_okcu_name}Seljuk Horse Archer" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -448,7 +448,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_heavy_raider" default_group="HorseArcher" level="26" name="{=seljuk_tugrul_akinci_name}Tuğrul Ağır Akıncısı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_heavy_raider" default_group="HorseArcher" level="26" name="{=seljuk_tugrul_akinci_name}Tughril Heavy Akinji" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -492,7 +492,7 @@
   
 
   
-  <NPCCharacter id="seljuk_ghulam_recruit" default_group="Cavalry" level="11" name="{=seljuk_ghulam_acemi_name}Gulam Acemisi" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_ghulam_recruit" default_group="Cavalry" level="11" name="{=seljuk_ghulam_acemi_name}Ghulam Recruit" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -534,7 +534,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_armored_ghulam" default_group="Cavalry" level="16" name="{=seljuk_zirhli_gulam_name}Zırhlı Gulam" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_armored_ghulam" default_group="Cavalry" level="16" name="{=seljuk_zirhli_gulam_name}Armored Ghulam" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -576,7 +576,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_hassa_cavalry" default_group="Cavalry" level="21" name="{=seljuk_hassa_suvarisi_name}Hassa Süvarisi" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_hassa_cavalry" default_group="Cavalry" level="21" name="{=seljuk_hassa_suvarisi_name}Royal Hassa Cavalry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -618,7 +618,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_emir_guard" default_group="Cavalry" level="26" name="{=seljuk_emir_muhafizi_name}Emîr Muhafızı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_emir_guard" default_group="Cavalry" level="26" name="{=seljuk_emir_muhafizi_name}Emir's Bodyguard" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -660,7 +660,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_iron_mask_ghulam" default_group="Cavalry" level="31" name="{=seljuk_t6_name}Demir Maskeli Hassa Bahadırı" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_iron_mask_ghulam" default_group="Cavalry" level="31" name="{=seljuk_t6_name}Iron-Masked Imperial Hassa Bahadir" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>

@@ -7,11 +7,11 @@
        override'ina gerek olmadi. -->
   <NPCCharacter id="lord_1_1" name="{=byz_n_ln_georgios_palaiologos}Georgios Palaiologos" />
   <NPCCharacter id="lord_1_3" name="{=byz_n_ln_konstantinos_angelos}Konstantinos Angelos" />
-  <NPCCharacter id="lord_1_5" name="{=byz_n_ln_ioannes_kantakouzenos}Ioannes Kantakuzenos" />
-  <NPCCharacter id="lord_1_20" name="{=byz_n_ln_bardas_phokas}Bardas Fokas" />
+  <NPCCharacter id="lord_1_5" name="{=byz_n_ln_ioannes_kantakouzenos}Ioannes Kantakouzenos" />
+  <NPCCharacter id="lord_1_20" name="{=byz_n_ln_bardas_phokas}Bardas Phokas" />
   <NPCCharacter id="lord_1_50" name="{=byz_n_ln_romanos_skleros}Romanos Skleros" />
-  <NPCCharacter id="lord_1_51" name="{=byz_n_ln_leon_kourkouas}Leon Kurkuas" />
-  <NPCCharacter id="lord_1_58" name="{=byz_n_ln_michael_xiphilinos}Mihail Ksifilinos" />
+  <NPCCharacter id="lord_1_51" name="{=byz_n_ln_leon_kourkouas}Leon Kourkouas" />
+  <NPCCharacter id="lord_1_58" name="{=byz_n_ln_michael_xiphilinos}Michael Xiphilinos" />
   <NPCCharacter id="lord_NE8_l" name="{=byz_n_ln_nikephoros_vatatzes}Nikephoros Vatatzes" />
-  <NPCCharacter id="lord_NE9_l" name="{=byz_n_ln_theodoros_gabras}Theodoros Gavras" />
+  <NPCCharacter id="lord_NE9_l" name="{=byz_n_ln_theodoros_gabras}Theodoros Gabras" />
 </NPCCharacters>
