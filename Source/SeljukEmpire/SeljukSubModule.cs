@@ -60,14 +60,12 @@ namespace SeljukEmpire
                 TryRegister(campaignStarter, "RivalCultureDialogueBehavior", () => campaignStarter.AddBehavior(new RivalCultureDialogueBehavior()));
                 TryRegister(campaignStarter, "NewKingdomsDialogueBehavior", () => campaignStarter.AddBehavior(new NewKingdomsDialogueBehavior()));
                 TryRegister(campaignStarter, "SeljukSystemsExplainerBehavior", () => campaignStarter.AddBehavior(new SeljukSystemsExplainerBehavior()));
-                TryRegister(campaignStarter, "SeljukCultureBonusModels", () =>
-                {
-                    // -10% mounted-troop wage, +10% construction speed, -15% siege engine speed, +15% caravan trade profit
-                    campaignStarter.AddModel(new SeljukWageModel());
-                    campaignStarter.AddModel(new SeljukConstructionSpeedModel());
-                    campaignStarter.AddModel(new SeljukSiegeEngineeringModel());
-                    campaignStarter.AddModel(new SeljukCaravanTradeModel());
-                });
+                // Registered independently (not one bundled call) so another mod's model of the same
+                // base type misbehaving on Initialize can't take the other three down with it.
+                TryRegister(campaignStarter, "SeljukWageModel", () => campaignStarter.AddModel(new SeljukWageModel()));
+                TryRegister(campaignStarter, "SeljukConstructionSpeedModel", () => campaignStarter.AddModel(new SeljukConstructionSpeedModel()));
+                TryRegister(campaignStarter, "SeljukSiegeEngineeringModel", () => campaignStarter.AddModel(new SeljukSiegeEngineeringModel()));
+                TryRegister(campaignStarter, "SeljukCaravanTradeModel", () => campaignStarter.AddModel(new SeljukCaravanTradeModel()));
                 // One-time Starter Pack grant (gold + gear). Must be a CampaignBehaviorBase with
                 // SyncData, not a SubModule-level flag: see SeljukStarterPackBehavior's summary for why.
                 TryRegister(campaignStarter, "SeljukStarterPackBehavior", () => campaignStarter.AddBehavior(new SeljukStarterPackBehavior()));
