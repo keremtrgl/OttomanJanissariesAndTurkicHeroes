@@ -772,17 +772,17 @@
     <string id="byz_ln_maria_alania" text="Maria of Alania" />
     <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
     <string id="byz_ln_irene_doukaina" text="Irene Doukaina" />
-    <string id="byz_cc_senatorial_name" text="Constantinopolitan Senatorial Family" />
-    <string id="byz_cc_akritas_name" text="Anatolian Akritai Border Family" />
-    <string id="byz_cc_thematic_name" text="Anatolian Thematic Soldier-Landowner Family" />
-    <string id="byz_cc_merchant_name" text="Thessaloniki Harbor Merchant Family" />
-    <string id="byz_cc_monastic_name" text="Monastic Library Scribe Family" />
-    <string id="abb_cc_hashimite_name" text="Sharifian Hashimite Family" />
-    <string id="abb_cc_bedouin_name" text="Desert Bedouin Tribe" />
-    <string id="abb_cc_basra_merchant_name" text="Basra Harbor Merchant Family" />
-    <string id="geo_cc_aznauri_name" text="Aznauri Petty Noble Family" />
-    <string id="geo_cc_mountain_name" text="Mountain Valley Warrior Family" />
-    <string id="geo_cc_monastery_name" text="Monastery Academy Scribe Family" />
+    <string id="byz_cc_senatorial_name" text="Familia Senatorial Constantinopolitana" />
+    <string id="byz_cc_akritas_name" text="Familia Fronteriza Akrita De Anatolia" />
+    <string id="byz_cc_thematic_name" text="Familia De Soldado-Terrateniente Temático De Anatolia" />
+    <string id="byz_cc_merchant_name" text="Familia De Mercaderes Del Puerto De Tesalónica" />
+    <string id="byz_cc_monastic_name" text="Familia De Escribas De Biblioteca Monástica" />
+    <string id="abb_cc_hashimite_name" text="Familia Hachemita Jerifiana" />
+    <string id="abb_cc_bedouin_name" text="Tribu Beduina Del Desierto" />
+    <string id="abb_cc_basra_merchant_name" text="Familia De Mercaderes Del Puerto De Basora" />
+    <string id="geo_cc_aznauri_name" text="Familia De Pequeña Nobleza Aznauri" />
+    <string id="geo_cc_mountain_name" text="Familia De Guerreros Del Valle Montañoso" />
+    <string id="geo_cc_monastery_name" text="Familia De Escribas De La Academia Monástica" />
     <string id="seljuk_culture_desc" text="Una confederación turcomana forjada por el Estado gran selyúcida y los beyliks fronterizos de Anatolia. Las ciudades se enriquecen con ejércitos de caballería sostenidos por el iqta, madrasas nizamiyya y caravanas de la Ruta de la Seda." />
     <string id="seljuk_faction_desc" text="El Gran Imperio selyúcida; extendiéndose desde Jorasán hasta el corazón de Anatolia, gobernando las estepas y ciudades antiguas de Calradia con justicia, instituciones nizamiyya, y jinetes turcomanos invencibles." />
     <string id="policy_futuwwa_nizam_desc" text="Las ganancias de los talleres artesanales y la producción gremial en las ciudades aumentan un 30%, fortaleciendo la seguridad urbana." />

@@ -772,17 +772,17 @@
     <string id="byz_ln_maria_alania" text="Maria of Alania" />
     <string id="byz_ln_maria_bulgaria" text="Maria of Bulgaria" />
     <string id="byz_ln_irene_doukaina" text="Irene Doukaina" />
-    <string id="byz_cc_senatorial_name" text="Constantinopolitan Senatorial Family" />
-    <string id="byz_cc_akritas_name" text="Anatolian Akritai Border Family" />
-    <string id="byz_cc_thematic_name" text="Anatolian Thematic Soldier-Landowner Family" />
-    <string id="byz_cc_merchant_name" text="Thessaloniki Harbor Merchant Family" />
-    <string id="byz_cc_monastic_name" text="Monastic Library Scribe Family" />
-    <string id="abb_cc_hashimite_name" text="Sharifian Hashimite Family" />
-    <string id="abb_cc_bedouin_name" text="Desert Bedouin Tribe" />
-    <string id="abb_cc_basra_merchant_name" text="Basra Harbor Merchant Family" />
-    <string id="geo_cc_aznauri_name" text="Aznauri Petty Noble Family" />
-    <string id="geo_cc_mountain_name" text="Mountain Valley Warrior Family" />
-    <string id="geo_cc_monastery_name" text="Monastery Academy Scribe Family" />
+    <string id="byz_cc_senatorial_name" text="Konstantinopolitanische Senatorenfamilie" />
+    <string id="byz_cc_akritas_name" text="Anatolische Akritai-Grenzfamilie" />
+    <string id="byz_cc_thematic_name" text="Anatolische Themen-Soldaten-Grundbesitzerfamilie" />
+    <string id="byz_cc_merchant_name" text="Thessaloniki Hafenkaufmannsfamilie" />
+    <string id="byz_cc_monastic_name" text="Familie Der Klosterbibliotheksschreiber" />
+    <string id="abb_cc_hashimite_name" text="Scherifische Haschimitenfamilie" />
+    <string id="abb_cc_bedouin_name" text="Beduinenstamm Der Wüste" />
+    <string id="abb_cc_basra_merchant_name" text="Basra Hafenkaufmannsfamilie" />
+    <string id="geo_cc_aznauri_name" text="Aznauri-Kleinadelsfamilie" />
+    <string id="geo_cc_mountain_name" text="Kriegerfamilie Des Bergtals" />
+    <string id="geo_cc_monastery_name" text="Familie Der Klosterakademie-Schreiber" />
     <string id="seljuk_culture_desc" text="Eine turkmenische Konföderation, geschmiedet vom Großseldschukischen Staat und den anatolischen Grenzbeyliks. Die Städte werden reich durch iqta-finanzierte Kavallerieheere, Nizamiye-Madrasas und Seidenstraßen-Karawanen." />
     <string id="seljuk_faction_desc" text="Das Großseldschukische Reich; von Khorasan bis ins Herz Anatoliens reichend, beherrscht es die Steppen und uralten Städte Calradias mit Gerechtigkeit, Nizamiya-Institutionen und unbesiegbaren turkmenischen Reitern." />
     <string id="policy_futuwwa_nizam_desc" text="Die Gewinne der Handwerksbetriebe und Zunftproduktion in Städten steigen um 30%, was die städtische Sicherheit stärkt." />
