@@ -64,12 +64,6 @@
   </Kingdom>
 
   <!-- ABBASİ HALİFELİĞİ (Native: Sultanate of the Aserai / aserai) -->
-  <!-- Native'in kendi aserai bayragi altin/kahverengiydi (id 0/1); tarihi Abbasi bayragi ise
-       "Ar-Rayah" / Kara Sancak - siyah zemin. Native'in banner_icons.xml paletinde tam siyah
-       yok ama id 116 (0xff0B0C11) neredeyse ayirt edilemeyecek kadar yakin; ikon katmani da
-       goze carpsin diye id 172 (0xffffffff, sade beyaz) secildi - Ar-Rayah'in uzerindeki beyaz
-       kelime-i tevhid yazisina da uygun bir kontrast. Hukumdar hanedani clan_aserai_1'in
-       banner_key'i de (abbasid_clans.xml) ayni degere cekildi, Bizans/Gurcistan'da yapildigi gibi. -->
   <Kingdom id="aserai"
            name="{=seljuk_abbasid_name}Abbasid Caliphate"
            short_name="{=seljuk_abbasid_short}Abbasids"
@@ -177,18 +171,7 @@
       <relationship kingdom="Kingdom.battania" value="0" isAtWar="false" />
     </relationships>
   </Kingdom>
-  <!-- KARAHANLI DEVLETI (Native: Khuzait Khanate / khuzait). Real Kara-Khanid Khanate (840-1212),
-       the Great Seljuks' actual historical eastern neighbor/rival over Transoxiana and Khorasan -
-       Alp Arslan's own predecessors served under the Kara-Khanid ruler Ali-Tegin in Bukhara in the
-       1020s before their falling-out in 1034. Split into a Western Khanate (Transoxiana, capital
-       Samarkand/Bukhara) and an Eastern Khanate (Kashgar/Khotan/Balasagun) since the 1030s-40s -
-       both are folded into this one Kingdom entry, matching how Byzantine absorbed the Northern
-       Empire. Ruler title "Khagan" (Qara-Khagan) is the real supreme Kara-Khanid title, distinct
-       from Sultan/Caliph/Emperor. Banner: primary black (id 116, 0xff0B0C11) for the "Kara" (black/
-       great) in the dynasty's own name, secondary a vivid sky-blue (id 234, 0xff3995f8) for "Kok"
-       (sky) - the sacred color of Turkic Tengri/sky worship inherited from the Kara-Khanids'
-       Gokturk-descended Karluk/Yaghma tribal roots. Uses khuzait's own reserved icon mesh (461),
-       same convention as Crusader States reusing Vlandia's reserved icon (160). -->
+  <!-- KARAHANLI DEVLETI (Native: Khuzait Khanate / khuzait) -->
   <Kingdom id="khuzait"
            name="{=krkh_faction_name}Kara-Khanid Khanate"
            short_name="{=krkh_faction_short}Kara-Khanids"

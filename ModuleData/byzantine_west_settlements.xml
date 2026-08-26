@@ -1,82 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Settlements>
-  <!-- Native "Western Empire" sehirleri/kaleleri/koyleri (45 yerlesim, 9 klan) gercek Bizans-donemi
-       yer adlarina cevrildi. Sahiplik Native (ilgili klan) - sadece isim degisir; klanlarin kendisi
-       zaten byzantine_west_clans.xml'de Kingdom.empire_s'e baglandi, yani bu yerlesimlerin hepsi
-       artik Bizans'in topragi. South (Anadolu) ve North'ta (Frigya/Galatya, Lydia/Ionia, Kilikya,
-       Ermeni sinir bolgesi, Osroene) kullanilan isimlerle CAKISMAYAN, Bizans'in gercek Avrupa
-       topraklarindan (Trakya, Makedonya, Yunanistan/Hellas, Ege adalari) 45 ayri gercek antik/Bizans
-       yer adi secildi - "Western Empire" adina uygun olarak imparatorlugun gercekten batisi. -->
-
-  <!-- town_EW2 - Laskaris Hanedanı'nın başkenti (Makedonya) -->
   <Settlement id="town_EW2" name="{=byz_w_s_thessalonica}Thessalonica" />
   <Settlement id="village_EW2_2" name="{=byz_w_v_pella}Pella" />
   <Settlement id="village_EW2_3" name="{=byz_w_v_beroia}Beroia" />
   <Settlement id="village_EW2_4" name="{=byz_w_v_philippi}Philippi" />
 
-  <!-- town_EW4 - Branas Hanedanı (Trakya) -->
   <Settlement id="town_EW4" name="{=byz_w_s_adrianople}Adrianople" />
   <Settlement id="village_EW4_1" name="{=byz_w_v_philippopolis}Philippopolis" />
   <Settlement id="village_EW4_3" name="{=byz_w_v_beroe}Beroe" />
   <Settlement id="village_EW4_4" name="{=byz_w_v_develtos}Develtos" />
 
-  <!-- town_EW1 - Kontostephanos Hanedanı (Hellas) -->
   <Settlement id="town_EW1" name="{=byz_w_s_athens}Athens" />
   <Settlement id="village_EW1_1" name="{=byz_w_v_corinth}Corinth" />
   <Settlement id="village_EW1_2" name="{=byz_w_v_thebes}Thebes" />
 
-  <!-- town_EW5 - Raoul Hanedanı (Peloponnesos) -->
   <Settlement id="town_EW5" name="{=byz_w_s_patras}Patras" />
   <Settlement id="village_EW5_1" name="{=byz_w_v_sparta}Sparta" />
   <Settlement id="village_EW5_2" name="{=byz_w_v_argos}Argos" />
 
-  <!-- town_EW6 - Synadenos Hanedanı (Trakya kıyısı) -->
   <Settlement id="town_EW6" name="{=byz_w_s_herakleia}Herakleia" />
   <Settlement id="village_EW6_1" name="{=byz_w_v_selymbria}Selymbria" />
   <Settlement id="village_EW6_3" name="{=byz_w_v_bizye}Bizye" />
   <Settlement id="village_EW6_4" name="{=byz_w_v_mesembria}Mesembria" />
 
-  <!-- town_EW3 - krallığa bağlı, klan başkenti değil (Trakya kıyısı) -->
   <Settlement id="town_EW3" name="{=byz_w_s_anchialos}Anchialos" />
   <Settlement id="village_EW3_2" name="{=byz_w_v_didymoteichon}Didymoteichon" />
   <Settlement id="village_EW3_3" name="{=byz_w_v_rhaidestos}Rhaidestos" />
 
-  <!-- castle_EW1 - krallığa bağlı (Makedonya) -->
   <Settlement id="castle_EW1" name="{=byz_w_c_amphipolis}Amphipolis Castle" />
   <Settlement id="castle_village_EW1_1" name="{=byz_w_v_serres}Serres" />
   <Settlement id="castle_village_EW1_2" name="{=byz_w_v_ainos}Ainos" />
 
-  <!-- castle_EW2 - krallığa bağlı (Ege adaları) -->
   <Settlement id="castle_EW2" name="{=byz_w_c_chios}Chios Castle" />
   <Settlement id="castle_village_EW2_1" name="{=byz_w_v_phocaea}Phocaea" />
   <Settlement id="castle_village_EW2_2" name="{=byz_w_v_andros}Andros" />
 
-  <!-- castle_EW3 - krallığa bağlı (Ege adaları) -->
   <Settlement id="castle_EW3" name="{=byz_w_c_rhodes}Rhodes Castle" />
   <Settlement id="castle_village_EW3_1" name="{=byz_w_v_halicarnassus}Halicarnassus" />
   <Settlement id="castle_village_EW3_2" name="{=byz_w_v_cythera}Cythera" />
 
-  <!-- castle_EW4 - krallığa bağlı (Ege adaları) -->
   <Settlement id="castle_EW4" name="{=byz_w_c_lesbos}Lesbos Castle" />
   <Settlement id="castle_village_EW4_1" name="{=byz_w_v_methymna}Methymna" />
   <Settlement id="castle_village_EW4_2" name="{=byz_w_v_lemnos}Lemnos" />
 
-  <!-- castle_EW5 - Maleinos Hanedanı (Ege adaları) -->
   <Settlement id="castle_EW5" name="{=byz_w_c_naxos}Naxos Castle" />
   <Settlement id="castle_village_EW5_1" name="{=byz_w_v_paros}Paros" />
   <Settlement id="castle_village_EW5_2" name="{=byz_w_v_imbros}Imbros" />
 
-  <!-- castle_EW6 - Kourtikios Hanedanı (Epir kıyısı) -->
   <Settlement id="castle_EW6" name="{=byz_w_c_dyrrhachium}Dyrrhachium Castle" />
   <Settlement id="castle_village_EW6_1" name="{=byz_w_v_kastoria}Kastoria" />
   <Settlement id="castle_village_EW6_2" name="{=byz_w_v_apros}Apros" />
 
-  <!-- castle_EW7 - Melias Hanedanı (Thessalia) -->
   <Settlement id="castle_EW7" name="{=byz_w_c_larissa}Larissa Castle" />
   <Settlement id="castle_village_EW7_1" name="{=byz_w_v_demetrias}Demetrias" />
   <Settlement id="castle_village_EW7_2" name="{=byz_w_v_nauplion}Nauplion" />
 
-  <!-- castle_EW8 - Kamateros Hanedanı (Girit) -->
   <Settlement id="castle_EW8" name="{=byz_w_c_chandax}Chandax Castle" />
   <Settlement id="castle_village_EW8_1" name="{=byz_w_v_samos}Samos" />
   <Settlement id="castle_village_EW8_2" name="{=byz_w_v_tenedos}Tenedos" />

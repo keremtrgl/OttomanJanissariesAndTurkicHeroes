@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
-  <!-- Native "Western Empire" hanedanlarinin klan sahibi lordlari gercek/donem-uygun Bizans
-       isimleriyle yeniden adlandirildi (bkz. byzantine_west_clans.xml). Yuz/ekipman/beceri Native -
-       sadece isim degisir. Hepsi zaten Native'de erkek (is_female belirtilmemis ya da "false" =
-       varsayilan erkek), lord_1_14/Rhagaea'daki gibi bir cinsiyet uyusmazligi yok. -->
   <NPCCharacter id="lord_1_7" name="{=byz_w_ln_theodoros_laskaris}Theodoros Laskaris" is_female="false" />
   <NPCCharacter id="lord_1_9" name="{=byz_w_ln_alexios_branas}Alexios Branas" is_female="false" />
   <NPCCharacter id="lord_1_11" name="{=byz_w_ln_andronikos_kontostephanos}Andronikos Kontostephanos" is_female="false" />
