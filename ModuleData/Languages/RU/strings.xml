@@ -135,7 +135,7 @@
     <string id="lord_nizamulmulk" text="Визирь Низам аль-Мульк" />
     <string id="lord_sokmen_bey" text="Sokmen al-Qutbi" />
     <string id="lord_terken_hatun" text="Теркен Хатун" />
-    <string id="ottoman_akinji_name" text="Ottoman Akinji Raider" />
+    <string id="ottoman_akinji_name" text="Seljuk Akinji Raider" />
     <string id="ottoman_scout_name" text="Seljuk Scout Cavalry" />
     <string id="policy_ahi_desc" text="Повышает доходы мастерских на 25% и созывает ополчение при осаде городов." />
     <string id="policy_ahi_name" text="Устав Гильдий и Ремесленников Ахи" />
@@ -1199,5 +1199,44 @@
     <string id="krv_gt_desc_vlandia" text="Крестоносцы - франкские и нормандские сеньоры, выступившие на восток в Первом крестовом походе и основавшие в 1098 году княжество Антиохию и графство Эдессу. Рыцари в кольчугах и туркопольские конные лучники удерживают свои новые владения на западной границе Великой Сельджукской империи - воинская знать, одинаково уверенно чувствующая себя как при осаде крепости, так и в открытом бою." />
     <string id="krkh_bonus_construction" text="Труды Тамгач-хана" />
     <string id="crus_bonus_construction" text="Франкское замковое зодчество" />
+    <string id="arm_s_lampron" text="Замок Лампрон" />
+    <string id="arm_v_norperd" text="Норперд" />
+    <string id="arm_v_kanjor" text="Канджор" />
+    <string id="seljuk_town_amasya" text="Амасья (Амасея)" />
+    <string id="seljuk_vil_merzifon" text="Мерзифон" />
+    <string id="seljuk_vil_tasova" text="Ташова" />
+    <string id="seljuk_vil_gumushacikoy" text="Гюмюшхаджикёй" />
+    <string id="seljuk_castle_dorylaeum" text="Эскишехир (Дорилей)" />
+    <string id="seljuk_vil_sivrihisar" text="Сиврихисар" />
+    <string id="seljuk_vil_mihaliccik" text="Михалыччик" />
+    <string id="lat_faction_name" text="Латинская империя" />
+    <string id="lat_faction_short" text="Латинская империя" />
+    <string id="lat_faction_title" text="Латинская империя" />
+    <string id="lat_faction_ruler" text="Император" />
+    <string id="lat_faction_desc" text="Основанная в 1204 году, когда рыцари Четвёртого крестового похода разграбили Константинополь, Латинская империя удерживает Фракию и северную часть Эгейского моря под властью императора Генриха Фландрского - самого способного и терпимого к грекам правителя. Его вассал Марко Санудо правит Кикладами с Наксоса как герцог Архипелага, пока никейские и византийские силы теснят его границы со всех сторон." />
+    <string id="lat_house_flanders" text="Дом Фландрии" />
+    <string id="lat_house_sanudo" text="Дом Санудо" />
+    <string id="lat_ln_henry_flanders" text="Генрих Фландрский" />
+    <string id="lat_ln_marco_sanudo" text="Марко Санудо" />
+    <string id="lat2_t_recruit" text="Латинское ополчение" />
+    <string id="lat2_t_footman" text="Франкский пехотинец" />
+    <string id="lat2_t_crossbowman" text="Генуэзский арбалетчик" />
+    <string id="lat2_t_vlach_horseman" text="Влашский всадник" />
+    <string id="lat2_t_squire" text="Оруженосец" />
+    <string id="lat2_t_spearman" text="Франкский копейщик" />
+    <string id="lat2_t_veteran_crossbowman" text="Опытный генуэзский арбалетчик" />
+    <string id="lat2_t_vlach_rider" text="Влашский наездник" />
+    <string id="lat2_t_mounted_sergeant" text="Конный сержант" />
+    <string id="lat2_t_sergeant_at_arms" text="Оружейный сержант" />
+    <string id="lat2_t_arbalester" text="Тяжёлый генуэзский арбалетчик" />
+    <string id="lat2_t_vlach_skirmisher" text="Влашский застрельщик" />
+    <string id="lat2_t_knight" text="Рыцарь" />
+    <string id="lat2_t_man_at_arms" text="Латинский латник" />
+    <string id="lat2_t_master_arbalester" text="Мастер-арбалетчик из Генуи" />
+    <string id="lat2_t_vlach_captain" text="Влашский капитан" />
+    <string id="lat2_t_knight_banneret" text="Рыцарь-баннерет" />
+    <string id="lat2_t_gasmoulos_guard" text="Стража гасмулов" />
+    <string id="lat2_t_elite_arbalester" text="Элитный генуэзский арбалетчик" />
+    <string id="lat2_t_baron_romania" text="Барон Романии" />
 </strings>
 </base>

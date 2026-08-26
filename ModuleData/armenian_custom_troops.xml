@@ -29,14 +29,14 @@
          the "170 dinar mounted recruit" bug class fixed for every other culture in this mod. -->
     <Equipments>
       <EquipmentRoster>
-        <equipment slot="Item0" id="Item.battania_sword_1_t2" />
-        <equipment slot="Head" id="Item.battania_fur_helmet" />
-        <equipment slot="Body" id="Item.battania_light_armor_a" />
+        <equipment slot="Item0" id="Item.battania_mace_1_t2" />
+        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Body" id="Item.battania_civil_a" />
       </EquipmentRoster>
       <EquipmentRoster>
-        <equipment slot="Item0" id="Item.battania_axe_1_t2" />
-        <equipment slot="Head" id="Item.battania_cloak" />
-        <equipment slot="Body" id="Item.battania_light_armor_a" />
+        <equipment slot="Item0" id="Item.battania_mace_2_t2" />
+        <equipment slot="Head" id="Item.battania_scarf_a" />
+        <equipment slot="Body" id="Item.battania_civil_b" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets>

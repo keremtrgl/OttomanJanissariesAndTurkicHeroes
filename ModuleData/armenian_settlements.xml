@@ -10,4 +10,9 @@
   <Settlement id="town_B3" name="{=arm_s_anazarbus}Anazarbus" />
   <Settlement id="town_B4" name="{=arm_s_kesoun}Kesoun" />
   <Settlement id="town_B5" name="{=arm_s_raban}Raban" />
+  <!-- Caleus Castle transferred from the Crusader States to Oshin of Lampron's own clan - renamed
+       to his real historical seat, Lampron. -->
+  <Settlement id="castle_V6" name="{=arm_s_lampron}Lampron Castle" owner="Faction.clan_battania_6" culture="Culture.battania" />
+  <Settlement id="castle_village_V6_1" name="{=arm_v_norperd}Norperd" culture="Culture.battania" />
+  <Settlement id="castle_village_V6_2" name="{=arm_v_kanjor}Kanjor" culture="Culture.battania" />
 </Settlements>

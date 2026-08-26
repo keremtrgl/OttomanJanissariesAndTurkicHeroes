@@ -37,6 +37,7 @@
       <upgrade_target id="NPCCharacter.seljuk_footman" />
       <upgrade_target id="NPCCharacter.seljuk_hunter" />
       <upgrade_target id="NPCCharacter.seljuk_horseman" />
+      <upgrade_target id="NPCCharacter.seljuk_ghulam_recruit" />
     </upgrade_targets>
   </NPCCharacter>
 
@@ -898,7 +899,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="16" name="{=ottoman_akinji_name}Ottoman Akinji Raider" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="16" name="{=ottoman_akinji_name}Seljuk Akinji Raider" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>

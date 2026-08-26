@@ -18,8 +18,9 @@
   <Faction id="clan_battania_4" name="{=arm_cn_koghvasil}House of Kogh Vasil" />
   <!-- 5. House of Vasil Dgha - Vasil Dgha, adopted son and successor of Kogh Vasil from 1112 -->
   <Faction id="clan_battania_5" name="{=arm_cn_vasildgha}House of Vasil Dgha" />
-  <!-- 6. House of Lampron - Oshin of Lampron, founder of the rival Hethumid dynasty, captured Lampron fortress in 1072 -->
-  <Faction id="clan_battania_6" name="{=arm_cn_lampron}House of Lampron" />
+  <!-- 6. House of Lampron - Oshin of Lampron, founder of the rival Hethumid dynasty, captured
+       Lampron fortress in 1072. Now owns Lampron Castle (see armenian_settlements.xml). -->
+  <Faction id="clan_battania_6" name="{=arm_cn_lampron}House of Lampron" initial_home_settlement="Settlement.castle_V6" />
   <!-- 7. Gabrielid House - Gabriel of Melitene, Armenian lord of Melitene, father of Morphia (see
        crusader_lords.xml - named "Gabrielid" rather than "House of Melitene" to avoid duplicating
        Crusader States' own clan name for the same family). -->

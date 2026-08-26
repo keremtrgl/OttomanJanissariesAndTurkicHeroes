@@ -39,14 +39,14 @@
          the basic_troop is what makes even the cheapest recruit register as mounted and overpriced. -->
     <Equipments>
       <EquipmentRoster>
-        <equipment slot="Item0" id="Item.sturgia_axe_2_t2" />
+        <equipment slot="Item0" id="Item.eastern_javelin_1_t2" />
         <equipment slot="Head" id="Item.nordic_fur_cap" />
-        <equipment slot="Body" id="Item.sturgian_lamellar_gambeson" />
+        <equipment slot="Body" id="Item.nordic_padded_cloth" />
       </EquipmentRoster>
       <EquipmentRoster>
-        <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
+        <equipment slot="Item0" id="Item.sturgia_mace_1_t3" />
         <equipment slot="Head" id="Item.nomad_cap" />
-        <equipment slot="Body" id="Item.sturgian_lamellar_gambeson" />
+        <equipment slot="Body" id="Item.nordic_sloven_leather" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets>

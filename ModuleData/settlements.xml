@@ -62,4 +62,15 @@
   <Settlement id="village_A4_1" name="{=seljuk_vil_bostanabad}Bostanabad" culture="Culture.seljuk" />
   <Settlement id="village_A4_2" name="{=seljuk_vil_sadyah}Shadyakh" culture="Culture.seljuk" />
   <Settlement id="village_A4_4" name="{=seljuk_vil_kohandiz}Kohandezh" culture="Culture.seljuk" />
+
+  <!-- AMASYA (Bizans'tan alındı, Danişmendliler'e verildi - tarihi beylik topraklarına uygun) -->
+  <Settlement id="town_ES5" name="{=seljuk_town_amasya}Amasya (Amaseia)" owner="Faction.clan_danismend" culture="Culture.seljuk" />
+  <Settlement id="village_ES5_1" name="{=seljuk_vil_merzifon}Merzifon" culture="Culture.seljuk" />
+  <Settlement id="village_ES5_2" name="{=seljuk_vil_tasova}Tasova" culture="Culture.seljuk" />
+  <Settlement id="village_ES5_3" name="{=seljuk_vil_gumushacikoy}Gumushacikoy" culture="Culture.seljuk" />
+
+  <!-- ESKİŞEHİR/DORYLAEUM (Bizans'tan alındı, Kayı Boyu'na verildi - Söğüt'e bitişik) -->
+  <Settlement id="castle_ES1" name="{=seljuk_castle_dorylaeum}Eskisehir (Dorylaeum)" owner="Faction.clan_kayi_oguz" culture="Culture.seljuk" />
+  <Settlement id="castle_village_ES1_1" name="{=seljuk_vil_sivrihisar}Sivrihisar" culture="Culture.seljuk" />
+  <Settlement id="castle_village_ES1_2" name="{=seljuk_vil_mihaliccik}Mihaliccik" culture="Culture.seljuk" />
 </Settlements>

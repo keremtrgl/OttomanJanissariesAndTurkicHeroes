@@ -54,6 +54,7 @@ namespace SeljukEmpire
                 TryRegister(campaignStarter, "SeljukAtabegTitleBehavior", () => campaignStarter.AddBehavior(new SeljukAtabegTitleBehavior()));
                 TryRegister(campaignStarter, "SeljukTournamentRewardBehavior", () => campaignStarter.AddBehavior(new SeljukTournamentRewardBehavior()));
                 TryRegister(campaignStarter, "SeljukRecruitmentBehavior", () => campaignStarter.AddBehavior(new SeljukRecruitmentBehavior()));
+                TryRegister(campaignStarter, "LatinEmpireRecruitmentBehavior", () => campaignStarter.AddBehavior(new LatinEmpireRecruitmentBehavior()));
                 TryRegister(campaignStarter, "SeljukTavernBehavior", () => campaignStarter.AddBehavior(new SeljukTavernBehavior()));
                 TryRegister(campaignStarter, "SeljukDialogueBehavior", () => campaignStarter.AddBehavior(new SeljukDialogueBehavior()));
                 TryRegister(campaignStarter, "RivalCultureDialogueBehavior", () => campaignStarter.AddBehavior(new RivalCultureDialogueBehavior()));

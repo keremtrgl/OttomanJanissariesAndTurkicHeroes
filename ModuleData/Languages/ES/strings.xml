@@ -135,7 +135,7 @@
     <string id="lord_nizamulmulk" text="Visir Nizam al-Mulk" />
     <string id="lord_sokmen_bey" text="Sokmen al-Qutbi" />
     <string id="lord_terken_hatun" text="Terken Jatún" />
-    <string id="ottoman_akinji_name" text="Ottoman Akinji Raider" />
+    <string id="ottoman_akinji_name" text="Seljuk Akinji Raider" />
     <string id="ottoman_scout_name" text="Seljuk Scout Cavalry" />
     <string id="policy_ahi_desc" text="Aumenta los ingresos de talleres en 25% y moviliza milicias ciudadanas durante asedios." />
     <string id="policy_ahi_name" text="Carta de Gremios Ahi" />
@@ -1199,5 +1199,44 @@
     <string id="krv_gt_desc_vlandia" text="Los cruzados son senores francos y normandos que marcharon hacia oriente en la Primera Cruzada y forjaron el Principado de Antioquia y el Condado de Edesa en 1098. Caballeros con cota de malla y arqueros montados turcopolos mantienen su nuevo dominio en la frontera occidental del Gran Imperio selyucida, una nobleza guerrera tan comoda asediando una fortaleza como cargando en batalla abierta." />
     <string id="krkh_bonus_construction" text="Las Obras de Tamgach Kan" />
     <string id="crus_bonus_construction" text="Construccion de Castillos Francos" />
+    <string id="arm_s_lampron" text="Castillo de Lampron" />
+    <string id="arm_v_norperd" text="Norperd" />
+    <string id="arm_v_kanjor" text="Kanjor" />
+    <string id="seljuk_town_amasya" text="Amasya (Amasea)" />
+    <string id="seljuk_vil_merzifon" text="Merzifon" />
+    <string id="seljuk_vil_tasova" text="Tasova" />
+    <string id="seljuk_vil_gumushacikoy" text="Gumushacikoy" />
+    <string id="seljuk_castle_dorylaeum" text="Eskisehir (Dorileo)" />
+    <string id="seljuk_vil_sivrihisar" text="Sivrihisar" />
+    <string id="seljuk_vil_mihaliccik" text="Mihaliccik" />
+    <string id="lat_faction_name" text="Imperio Latino de Constantinopla" />
+    <string id="lat_faction_short" text="Imperio Latino" />
+    <string id="lat_faction_title" text="Imperio Latino de Constantinopla" />
+    <string id="lat_faction_ruler" text="Emperador" />
+    <string id="lat_faction_desc" text="Fundado en 1204 cuando los caballeros de la Cuarta Cruzada saquearon Constantinopla, el Imperio Latino domina Tracia y el norte del Egeo bajo el emperador Enrique de Flandes, el más hábil y tolerante de sus gobernantes hacia sus súbditos griegos. Su vasallo Marco Sanudo gobierna las Cícladas desde Naxos como duque del Archipiélago, mientras las fuerzas de Nicea y Bizancio disputan sus fronteras por todos lados." />
+    <string id="lat_house_flanders" text="Casa de Flandes" />
+    <string id="lat_house_sanudo" text="Casa Sanudo" />
+    <string id="lat_ln_henry_flanders" text="Enrique de Flandes" />
+    <string id="lat_ln_marco_sanudo" text="Marco Sanudo" />
+    <string id="lat2_t_recruit" text="Leva latina" />
+    <string id="lat2_t_footman" text="Infante franco" />
+    <string id="lat2_t_crossbowman" text="Ballestero genovés" />
+    <string id="lat2_t_vlach_horseman" text="Jinete valaco" />
+    <string id="lat2_t_squire" text="Escudero" />
+    <string id="lat2_t_spearman" text="Lancero franco" />
+    <string id="lat2_t_veteran_crossbowman" text="Ballestero genovés veterano" />
+    <string id="lat2_t_vlach_rider" text="Jinete valaco experimentado" />
+    <string id="lat2_t_mounted_sergeant" text="Sargento montado" />
+    <string id="lat2_t_sergeant_at_arms" text="Sargento de armas" />
+    <string id="lat2_t_arbalester" text="Ballestero genovés pesado" />
+    <string id="lat2_t_vlach_skirmisher" text="Escaramuzador valaco" />
+    <string id="lat2_t_knight" text="Caballero" />
+    <string id="lat2_t_man_at_arms" text="Hombre de armas latino" />
+    <string id="lat2_t_master_arbalester" text="Maestro ballestero genovés" />
+    <string id="lat2_t_vlach_captain" text="Capitán valaco" />
+    <string id="lat2_t_knight_banneret" text="Caballero banderado" />
+    <string id="lat2_t_gasmoulos_guard" text="Guardia gasmulo" />
+    <string id="lat2_t_elite_arbalester" text="Ballestero genovés de élite" />
+    <string id="lat2_t_baron_romania" text="Barón de Romania" />
 </strings>
 </base>
