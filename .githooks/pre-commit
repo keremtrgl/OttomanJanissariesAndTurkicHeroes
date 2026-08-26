@@ -1,0 +1,27 @@
+#!/bin/sh
+# Runs tools/verify_mod.py before every commit. Not active until git is
+# pointed at this directory - see tools/install-hooks.sh (or .ps1) for the
+# one-time setup, and the "Verifying content changes" section of README.md.
+
+REPO_ROOT="$(git rev-parse --show-toplevel)" || exit 1
+cd "$REPO_ROOT" || exit 1
+
+if command -v python3 >/dev/null 2>&1; then
+    PYTHON=python3
+elif command -v python >/dev/null 2>&1; then
+    PYTHON=python
+else
+    echo "pre-commit: no python3/python found on PATH - skipping tools/verify_mod.py" >&2
+    exit 0
+fi
+
+"$PYTHON" tools/verify_mod.py
+status=$?
+
+if [ "$status" -ne 0 ]; then
+    echo ""
+    echo "pre-commit: tools/verify_mod.py found ERROR-level issue(s) above - commit blocked."
+    echo "Fix them, or bypass deliberately with: git commit --no-verify"
+fi
+
+exit "$status"

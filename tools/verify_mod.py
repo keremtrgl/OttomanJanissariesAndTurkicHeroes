@@ -47,6 +47,12 @@ Checks performed:
                             fails if anything before the snapshot's tail has moved. Run with
                             --update-baseline (only right after confirming a release is safe to ship)
                             to advance the snapshot.
+  9. language-sync          Every {=key} that check 4 confirms exists in EN and TR is also looked up
+                            in the mod's other 6 shipped languages (DE/FR/ES/RU/AR/CN). Reported as
+                            WARN, never ERROR, so adding a key now and translating it later doesn't
+                            block a commit - but the gap is now visible on every single run instead of
+                            silently accumulating for months (this is exactly how the mod once shipped
+                            with 6 languages frozen at 228/892 keys while EN/TR kept growing).
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -70,6 +76,21 @@ SOURCE_DIR = REPO_ROOT / "Source"
 SUBMODULE_XML = REPO_ROOT / "SubModule.xml"
 LANG_EN = MODULE_DATA / "Languages" / "strings.xml"
 LANG_TR = MODULE_DATA / "Languages" / "TR" / "strings.xml"
+
+# The mod's other 6 shipped languages - not required for check 4 (EN/TR must
+# always be complete since English is what every unset/mistranslated key
+# falls back to and Turkish is this mod's original authoring language), but
+# tracked by check 9 (language-sync) so a newly added key that only reaches
+# EN/TR doesn't silently drift the other 6 out of sync again.
+SECONDARY_LANG_FILES = [
+    ("DE", MODULE_DATA / "Languages" / "DE" / "strings.xml"),
+    ("FR", MODULE_DATA / "Languages" / "FR" / "strings.xml"),
+    ("ES", MODULE_DATA / "Languages" / "ES" / "strings.xml"),
+    ("RU", MODULE_DATA / "Languages" / "RU" / "strings.xml"),
+    ("AR", MODULE_DATA / "Languages" / "AR" / "strings.xml"),
+    ("CN", MODULE_DATA / "Languages" / "CN" / "strings.xml"),
+]
+
 ID_ORDER_BASELINE = REPO_ROOT / "tools" / "shipped_ids_baseline.json"
 
 DEFAULT_GAME_PATHS = [
@@ -289,6 +310,43 @@ def check_localization_coverage(issues, game_path):
     for sid in sorted(tr_dupes):
         issues.append(Issue("WARN", "localization-coverage", rel(LANG_TR),
                              f'<string id="{sid}"> is defined more than once (later definition silently wins)'))
+
+
+# ---------------------------------------------------------------- check 9 --
+
+def check_language_sync(issues, game_path):
+    """Extends check 4's EN/TR-only coverage to the mod's other 6 shipped
+    languages (DE/FR/ES/RU/AR/CN). This is precisely the gap that let the mod
+    ship for months with those 6 languages frozen at 228/892 keys while
+    EN/TR kept growing with every new feature, undetected until a player
+    reported seeing the wrong language everywhere. Reported as WARN, never
+    ERROR: adding a key now and translating it into all 6 languages in a
+    later, separate commit is a normal and legitimate workflow, so this
+    check must never block a commit for that - it only needs to make the
+    gap impossible to miss on every single run, instead of letting it
+    accumulate silently for months like before."""
+    used_keys = collect_loc_keys_from_mod()
+    native_ids = load_native_string_ids(game_path) if game_path else None
+
+    secondary_ids = {}
+    for label, path in SECONDARY_LANG_FILES:
+        ids, dupes = collect_string_ids(path)
+        secondary_ids[label] = ids
+        for sid in sorted(dupes):
+            issues.append(Issue("WARN", "language-sync", rel(path),
+                                 f'<string id="{sid}"> is defined more than once (later definition silently wins)'))
+
+    for key, first_seen_in in sorted(used_keys.items()):
+        if native_ids is not None and key in native_ids:
+            continue  # legitimately reuses a Native key - Native ships its own translation in every language
+        missing = [label for label, ids in secondary_ids.items() if key not in ids]
+        if missing:
+            suffix = "" if native_ids is not None else \
+                " (native-reused keys are not excluded from this check - no game install found, pass --game-path)"
+            issues.append(Issue("WARN", "language-sync", first_seen_in,
+                                 f'{{=<{key}>}} is missing from: {", ".join(missing)}{suffix} - players on '
+                                 f'those languages will silently see the inline fallback text instead of a '
+                                 f'real translation.'))
 
 
 # ------------------------------------------------------- game-path helpers --
@@ -596,6 +654,7 @@ def run(args):
                              "entirely. Pass --game-path or use --quick to silence this."))
 
     check_localization_coverage(issues, game_path)
+    check_language_sync(issues, game_path)
 
     if game_path is not None:
         check_upgrade_targets(issues, game_path)
