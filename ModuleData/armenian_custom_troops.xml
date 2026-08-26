@@ -30,12 +30,12 @@
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.battania_mace_1_t2" />
-        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Head" id="Item.thinhide_coif" />
         <equipment slot="Body" id="Item.battania_civil_a" />
       </EquipmentRoster>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.battania_mace_2_t2" />
-        <equipment slot="Head" id="Item.battania_scarf_a" />
+        <equipment slot="Head" id="Item.arming_coif" />
         <equipment slot="Body" id="Item.battania_civil_b" />
       </EquipmentRoster>
     </Equipments>
@@ -90,14 +90,14 @@
         <equipment slot="Item0" id="Item.hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.battania_sword_1_t2" />
-        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Head" id="Item.battania_fur_helmet" />
         <equipment slot="Body" id="Item.battania_light_armor_a" />
       </EquipmentRoster>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.mountain_hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.battania_axe_1_t2" />
-        <equipment slot="Head" id="Item.battania_scarf_a" />
+        <equipment slot="Head" id="Item.laced_cloth_coif" />
         <equipment slot="Body" id="Item.battania_light_armor_b" />
       </EquipmentRoster>
     </Equipments>
@@ -118,7 +118,7 @@
         <equipment slot="Item0" id="Item.battania_sword_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
-        <equipment slot="Head" id="Item.battania_cloak" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
         <equipment slot="Body" id="Item.battania_light_armor_a" />
         <equipment slot="Horse" id="Item.battania_horse" />
       </EquipmentRoster>
@@ -616,7 +616,7 @@
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.battania_polearm_1_t5" />
-        <equipment slot="Item1" id="Item.battania_targe_b" />
+        <equipment slot="Item1" id="Item.heavy_steppe_arrows" />
         <equipment slot="Item2" id="Item.battania_noble_sword_1_t5" />
         <equipment slot="Item3" id="Item.steppe_war_bow" />
         <equipment slot="Head" id="Item.battanian_crowned_helmet" />
@@ -628,12 +628,12 @@
       </EquipmentRoster>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.eastern_spear_5_t5" />
-        <equipment slot="Item1" id="Item.battania_large_shield_c" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.battania_noble_sword_3_t5" />
         <equipment slot="Item3" id="Item.steppe_heavy_bow" />
         <equipment slot="Head" id="Item.battania_battle_crown" />
         <equipment slot="Body" id="Item.battania_noble_armor" />
-        <equipment slot="Gloves" id="Item.battania_warlord_pauldrons" />
+        <equipment slot="Gloves" id="Item.lordly_mail_mitten" />
         <equipment slot="Leg" id="Item.battania_warlord_boots" />
         <equipment slot="Horse" id="Item.t3_battania_horse" />
         <equipment slot="HorseHarness" id="Item.battania_horse_harness_halfscaled" />

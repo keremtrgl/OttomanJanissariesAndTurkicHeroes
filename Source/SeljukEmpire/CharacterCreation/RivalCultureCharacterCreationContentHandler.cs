@@ -49,7 +49,8 @@ namespace SeljukEmpire.CharacterCreation
         {
             try
             {
-                characterCreationManager.RegisterCharacterCreationContentHandler(this, 100);
+                // Native keys handlers by this int internally - must differ from SeljukCharacterCreationContentHandler's 100 or registration throws and this handler never runs.
+                characterCreationManager.RegisterCharacterCreationContentHandler(this, 101);
             }
             catch (Exception)
             {
