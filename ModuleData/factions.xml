@@ -143,7 +143,7 @@
   <!-- 10. Kayı Boyu ve Söğüt Uç Gazileri (Ertuğrul Gazi) -->
   <Faction id="clan_kayi_oguz"
            name="{=clan_kayi_oguz}Kayi Tribe Alps"
-           tier="3"
+           tier="2"
            owner="Hero.ertugrul_gazi"
            super_faction="Kingdom.kingdom_seljuks"
            culture="Culture.seljuk"

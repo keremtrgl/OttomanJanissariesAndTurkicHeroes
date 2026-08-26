@@ -136,7 +136,7 @@
     <string id="lord_sokmen_bey" text="Sökmen el-Kutbî" />
     <string id="lord_terken_hatun" text="Terken Hatun" />
     <string id="ottoman_akinji_name" text="Osmanlı Akıncısı" />
-    <string id="ottoman_scout_name" text="Osmanlı Atlı Gözcüsü" />
+    <string id="ottoman_scout_name" text="Selçuklu Atlı Gözcüsü" />
     <string id="policy_ahi_desc" text="Şehir esnafı ve zanaatkarlar denetlenir. Şehir atölye gelirleri %25 artar, kervan ticareti vergi getirisi yükselir, şehir kuşatmalarında halk doğrudan milis olarak surlara koşar." />
     <string id="policy_ahi_name" text="Ahilik Esnaf ve Lonca Tüzüğü" />
     <string id="policy_caravan_desc" text="Tüm ticaret yolları boyunca kervansaraylar ve derbentler inşa edilir. Kervanların haydutlar tarafından soyulma ihtimali ortadan kalkar, ticaret geliri %30 artar." />
@@ -172,6 +172,12 @@
     <string id="seljuk_ghulam_acemi_name" text="Gulam Acemisi" />
     <string id="seljuk_gok_nisanci_name" text="Gök Nişancı" />
     <string id="seljuk_hassa_suvarisi_name" text="Hassa Süvarisi" />
+    <string id="seljuk_gt_faction_official" text="bir emir" />
+    <string id="seljuk_gt_faction_official_f" text="bir emire" />
+    <string id="seljuk_gt_faction_ruler" text="Sultan" />
+    <string id="seljuk_gt_faction_ruler_f" text="Sultan Hatun" />
+    <string id="seljuk_gt_ruler_term_in_speech" text="{?RULER.GENDER}Sultan Hatun{?}Sultan{\?} {RULER.NAME}" />
+    <string id="seljuk_gt_noble_name_with_title" text="{?RULER.GENDER}Emire{?}Emir{\?} {RULER.NAME}" />
     <string id="seljuk_menu_insurance_text" text="Selçuklu Kervansaraylar İdaresi ve İpek Yolu Sigorta Divanı'ndasınız. Buradan kervanlarınızı devlet teminatı altına alabilir ve kervansaraylara sermaye yatırarak haftalık kâr ortaklığı kurabilirsiniz." />
     <string id="seljuk_menu_trade_divan" text="Selçuklu İpek Yolu ve Kervan Sigortası Divanı'na Git" />
     <string id="seljuk_nizam_name" text="Selçuklu Nizam Piyadesi" />
