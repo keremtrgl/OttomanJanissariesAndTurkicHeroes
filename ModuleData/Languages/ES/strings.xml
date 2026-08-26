@@ -1120,5 +1120,68 @@
     <string id="kk2_t_han_muhafizi" text="Guardia del kan" />
     <string id="kk2_t_ordu_mergeni" text="Ordu Mergeni" />
     <string id="kk2_t_bori_tarkhan" text="Bori Tarkhan" />
+    <string id="byz_w_house_laskaris" text="Casa de Laskaris" />
+    <string id="byz_w_house_branas" text="Casa de Branas" />
+    <string id="byz_w_house_kontostephanos" text="Casa de Kontostephanos" />
+    <string id="byz_w_house_raoul" text="Casa de Raoul" />
+    <string id="byz_w_house_synadenos" text="Casa de Synadenos" />
+    <string id="byz_w_house_kamateros" text="Casa de Kamateros" />
+    <string id="byz_w_house_maleinos" text="Casa de Maleinos" />
+    <string id="byz_w_house_kourtikios" text="Casa de Kourtikios" />
+    <string id="byz_w_house_melias" text="Casa de Melias" />
+    <string id="byz_w_ln_theodoros_laskaris" text="Theodoros Laskaris" />
+    <string id="byz_w_ln_alexios_branas" text="Alexios Branas" />
+    <string id="byz_w_ln_andronikos_kontostephanos" text="Andronikos Kontostephanos" />
+    <string id="byz_w_ln_ioannes_raoul" text="Ioannes Raoul" />
+    <string id="byz_w_ln_theodoros_synadenos" text="Theodoros Synadenos" />
+    <string id="byz_w_ln_andronikos_kamateros" text="Andronikos Kamateros" />
+    <string id="byz_w_ln_eustathios_maleinos" text="Eustathios Maleinos" />
+    <string id="byz_w_ln_nikephoros_kourtikios" text="Nikephoros Kourtikios" />
+    <string id="byz_w_ln_konstantinos_melias" text="Konstantinos Melias" />
+    <string id="byz_w_s_thessalonica" text="Tesalonica" />
+    <string id="byz_w_s_adrianople" text="Adrianopolis" />
+    <string id="byz_w_s_athens" text="Atenas" />
+    <string id="byz_w_s_patras" text="Patras" />
+    <string id="byz_w_s_herakleia" text="Heraclea" />
+    <string id="byz_w_s_anchialos" text="Anchialos" />
+    <string id="byz_w_c_amphipolis" text="Castillo de Anfipolis" />
+    <string id="byz_w_c_chios" text="Castillo de Quios" />
+    <string id="byz_w_c_rhodes" text="Castillo de Rodas" />
+    <string id="byz_w_c_lesbos" text="Castillo de Lesbos" />
+    <string id="byz_w_c_naxos" text="Castillo de Naxos" />
+    <string id="byz_w_c_dyrrhachium" text="Castillo de Dirraquio" />
+    <string id="byz_w_c_larissa" text="Castillo de Larisa" />
+    <string id="byz_w_c_chandax" text="Castillo de Chandax" />
+    <string id="byz_w_v_pella" text="Pella" />
+    <string id="byz_w_v_beroia" text="Beroia" />
+    <string id="byz_w_v_philippi" text="Filipos" />
+    <string id="byz_w_v_philippopolis" text="Filipopolis" />
+    <string id="byz_w_v_beroe" text="Beroe" />
+    <string id="byz_w_v_develtos" text="Develtos" />
+    <string id="byz_w_v_corinth" text="Corinto" />
+    <string id="byz_w_v_thebes" text="Tebas" />
+    <string id="byz_w_v_sparta" text="Esparta" />
+    <string id="byz_w_v_argos" text="Argos" />
+    <string id="byz_w_v_selymbria" text="Selymbria" />
+    <string id="byz_w_v_bizye" text="Bizye" />
+    <string id="byz_w_v_mesembria" text="Mesembria" />
+    <string id="byz_w_v_didymoteichon" text="Didymoteichon" />
+    <string id="byz_w_v_rhaidestos" text="Rhaidestos" />
+    <string id="byz_w_v_serres" text="Serres" />
+    <string id="byz_w_v_ainos" text="Ainos" />
+    <string id="byz_w_v_phocaea" text="Focea" />
+    <string id="byz_w_v_andros" text="Andros" />
+    <string id="byz_w_v_halicarnassus" text="Halicarnaso" />
+    <string id="byz_w_v_cythera" text="Citera" />
+    <string id="byz_w_v_methymna" text="Methymna" />
+    <string id="byz_w_v_lemnos" text="Lemnos" />
+    <string id="byz_w_v_paros" text="Paros" />
+    <string id="byz_w_v_imbros" text="Imbros" />
+    <string id="byz_w_v_kastoria" text="Kastoria" />
+    <string id="byz_w_v_apros" text="Apros" />
+    <string id="byz_w_v_demetrias" text="Demetrias" />
+    <string id="byz_w_v_nauplion" text="Nauplia" />
+    <string id="byz_w_v_samos" text="Samos" />
+    <string id="byz_w_v_tenedos" text="Tenedos" />
 </strings>
 </base>

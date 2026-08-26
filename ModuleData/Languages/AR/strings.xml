@@ -1120,5 +1120,68 @@
     <string id="kk2_t_han_muhafizi" text="حرس الخان" />
     <string id="kk2_t_ordu_mergeni" text="مرغن الجيش" />
     <string id="kk2_t_bori_tarkhan" text="بوري ترخان" />
+    <string id="byz_w_house_laskaris" text="بيت لاسكاريس" />
+    <string id="byz_w_house_branas" text="بيت براناس" />
+    <string id="byz_w_house_kontostephanos" text="بيت كونتوستيفانوس" />
+    <string id="byz_w_house_raoul" text="بيت راؤول" />
+    <string id="byz_w_house_synadenos" text="بيت سينادينوس" />
+    <string id="byz_w_house_kamateros" text="بيت كاماتيروس" />
+    <string id="byz_w_house_maleinos" text="بيت مالينوس" />
+    <string id="byz_w_house_kourtikios" text="بيت كورتيكيوس" />
+    <string id="byz_w_house_melias" text="بيت ميلياس" />
+    <string id="byz_w_ln_theodoros_laskaris" text="ثيودوروس لاسكاريس" />
+    <string id="byz_w_ln_alexios_branas" text="ألكسيوس براناس" />
+    <string id="byz_w_ln_andronikos_kontostephanos" text="أندرونيكوس كونتوستيفانوس" />
+    <string id="byz_w_ln_ioannes_raoul" text="يوأنس راؤول" />
+    <string id="byz_w_ln_theodoros_synadenos" text="ثيودوروس سينادينوس" />
+    <string id="byz_w_ln_andronikos_kamateros" text="أندرونيكوس كاماتيروس" />
+    <string id="byz_w_ln_eustathios_maleinos" text="إفستاثيوس مالينوس" />
+    <string id="byz_w_ln_nikephoros_kourtikios" text="نيكيفوروس كورتيكيوس" />
+    <string id="byz_w_ln_konstantinos_melias" text="قسطنطين ميلياس" />
+    <string id="byz_w_s_thessalonica" text="تسالونيكي" />
+    <string id="byz_w_s_adrianople" text="أدرنة" />
+    <string id="byz_w_s_athens" text="أثينا" />
+    <string id="byz_w_s_patras" text="باتراس" />
+    <string id="byz_w_s_herakleia" text="هرقلية" />
+    <string id="byz_w_s_anchialos" text="أنخيالوس" />
+    <string id="byz_w_c_amphipolis" text="قلعة أمفيبوليس" />
+    <string id="byz_w_c_chios" text="قلعة خيوس" />
+    <string id="byz_w_c_rhodes" text="قلعة رودس" />
+    <string id="byz_w_c_lesbos" text="قلعة ليسبوس" />
+    <string id="byz_w_c_naxos" text="قلعة ناكسوس" />
+    <string id="byz_w_c_dyrrhachium" text="قلعة ديراخيوم" />
+    <string id="byz_w_c_larissa" text="قلعة لاريسا" />
+    <string id="byz_w_c_chandax" text="قلعة الخندق" />
+    <string id="byz_w_v_pella" text="بيلا" />
+    <string id="byz_w_v_beroia" text="بيرويا" />
+    <string id="byz_w_v_philippi" text="فيليبي" />
+    <string id="byz_w_v_philippopolis" text="فيلبوبوليس" />
+    <string id="byz_w_v_beroe" text="بيرويه" />
+    <string id="byz_w_v_develtos" text="ديفلتوس" />
+    <string id="byz_w_v_corinth" text="كورنثوس" />
+    <string id="byz_w_v_thebes" text="ثيفا" />
+    <string id="byz_w_v_sparta" text="إسبرطة" />
+    <string id="byz_w_v_argos" text="أرغوس" />
+    <string id="byz_w_v_selymbria" text="سيليمبريا" />
+    <string id="byz_w_v_bizye" text="بيزيي" />
+    <string id="byz_w_v_mesembria" text="مسمبريا" />
+    <string id="byz_w_v_didymoteichon" text="ديديموتيخون" />
+    <string id="byz_w_v_rhaidestos" text="رودستو" />
+    <string id="byz_w_v_serres" text="سيريس" />
+    <string id="byz_w_v_ainos" text="أينوس" />
+    <string id="byz_w_v_phocaea" text="فوقية" />
+    <string id="byz_w_v_andros" text="أندروس" />
+    <string id="byz_w_v_halicarnassus" text="هاليكارناسوس" />
+    <string id="byz_w_v_cythera" text="كيثيرا" />
+    <string id="byz_w_v_methymna" text="ميثيمنا" />
+    <string id="byz_w_v_lemnos" text="ليمنوس" />
+    <string id="byz_w_v_paros" text="باروس" />
+    <string id="byz_w_v_imbros" text="إمبروس" />
+    <string id="byz_w_v_kastoria" text="كاستوريا" />
+    <string id="byz_w_v_apros" text="أبروس" />
+    <string id="byz_w_v_demetrias" text="ديميترياس" />
+    <string id="byz_w_v_nauplion" text="نافبليون" />
+    <string id="byz_w_v_samos" text="ساموس" />
+    <string id="byz_w_v_tenedos" text="تندة" />
 </strings>
 </base>
