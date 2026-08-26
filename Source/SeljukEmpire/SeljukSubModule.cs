@@ -66,16 +66,12 @@ namespace SeljukEmpire
                 TryRegister(campaignStarter, "SeljukConstructionSpeedModel", () => campaignStarter.AddModel(new SeljukConstructionSpeedModel()));
                 TryRegister(campaignStarter, "SeljukSiegeEngineeringModel", () => campaignStarter.AddModel(new SeljukSiegeEngineeringModel()));
                 TryRegister(campaignStarter, "SeljukCaravanTradeModel", () => campaignStarter.AddModel(new SeljukCaravanTradeModel()));
-                // One-time Starter Pack grant (gold + gear). Must be a CampaignBehaviorBase with
-                // SyncData, not a SubModule-level flag: see SeljukStarterPackBehavior's summary for why.
-                TryRegister(campaignStarter, "SeljukStarterPackBehavior", () => campaignStarter.AddBehavior(new SeljukStarterPackBehavior()));
-                // Seljuk & rival-culture (Byzantine/Abbasid/Georgian) character creation narrative
-                // content. Must go through CampaignBehaviorBase.RegisterEvents
-                // (CampaignEvents.OnCharacterCreationInitializedEvent), not a SubModule tick poll -
-                // see each handler's class remarks for why the previous approach never actually
-                // showed any custom content in character creation.
+                // Seljuk character creation narrative content. Must go through
+                // CampaignBehaviorBase.RegisterEvents (CampaignEvents.OnCharacterCreationInitializedEvent),
+                // not a SubModule tick poll - see the handler's class remarks for why the previous
+                // approach never actually showed any custom content in character creation.
                 TryRegister(campaignStarter, "SeljukCharacterCreationContentHandler", () => campaignStarter.AddBehavior(new SeljukCharacterCreationContentHandler()));
-                TryRegister(campaignStarter, "RivalCultureCharacterCreationContentHandler", () => campaignStarter.AddBehavior(new RivalCultureCharacterCreationContentHandler()));
+                // RivalCultureCharacterCreationContentHandler is deliberately NOT registered: a crash dump pinpointed CharacterCreationScreen::HandleResume, right where its 108 options (never live before the v1.6.2 priority fix let them register) first get rendered - disabled until the specific bad option is found. SeljukStarterPackBehavior removed outright per explicit request.
             }
         }
 
