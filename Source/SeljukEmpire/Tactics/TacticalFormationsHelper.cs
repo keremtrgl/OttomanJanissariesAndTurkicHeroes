@@ -89,7 +89,7 @@ namespace SeljukEmpire.Tactics
 
             formation.ApplyActionOnEachUnit(agent =>
             {
-                if (agent.IsActive() && agent.IsRangedCached)
+                if (agent != null && agent.IsActive() && agent.IsRangedCached)
                 {
                     totalRanged++;
                     // Check if agent has 3 or fewer arrows left

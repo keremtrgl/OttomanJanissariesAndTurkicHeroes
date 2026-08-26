@@ -46,6 +46,7 @@ namespace SeljukEmpire.Tactics
         private Team _seljukTeam;
         private Team _enemyTeam;
         private MissionTime _phaseTimer;
+        private MissionTime _tickThrottleTimer;
         private Vec3 _anchorHighGround;
         private Vec3 _designatedKillzone;
         private Vec3 _leftFlankPosition;
@@ -56,6 +57,7 @@ namespace SeljukEmpire.Tactics
             base.AfterStart();
             _currentPhase = TacticalPhase.InitialAssessment;
             _phaseTimer = MissionTime.Now;
+            _tickThrottleTimer = MissionTime.Now;
         }
 
         public override void OnMissionTick(float dt)
@@ -70,9 +72,13 @@ namespace SeljukEmpire.Tactics
                     return;
                 }
 
-                // Periodic AI tick every 1.25 seconds to eliminate CPU stutter & garbage collection
-                if (_phaseTimer.ElapsedSeconds > 1.25f)
+                // Periodic AI tick every 1.25 seconds to eliminate CPU stutter & garbage collection.
+                // Uses its own timer, separate from _phaseTimer (which tracks phase duration) -
+                // sharing one timer for both purposes meant this gate stopped throttling anything
+                // after the first 1.25s, since _phaseTimer only resets on a phase transition.
+                if (_tickThrottleTimer.ElapsedSeconds > 1.25f)
                 {
+                    _tickThrottleTimer = MissionTime.Now;
                     ExecuteTacticalDecisionLoop();
                 }
             }
