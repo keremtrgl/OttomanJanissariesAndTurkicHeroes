@@ -32,17 +32,31 @@ namespace SeljukEmpire.Recruitment
 
         private void OnDailyTickSettlement(Settlement settlement)
         {
-            if (settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
+            try
             {
-                RefreshSettlementNotables(settlement);
+                if (settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
+                {
+                    RefreshSettlementNotables(settlement);
+                }
+            }
+            catch (Exception)
+            {
+                // Engine safety catch - fires once per settlement per day, must never crash the tick
             }
         }
 
         private void OnSettlementEntered(MobileParty party, Settlement settlement, Hero hero)
         {
-            if (party != null && party.IsMainParty && settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
+            try
             {
-                RefreshSettlementNotables(settlement);
+                if (party != null && party.IsMainParty && settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
+                {
+                    RefreshSettlementNotables(settlement);
+                }
+            }
+            catch (Exception)
+            {
+                // Engine safety catch - fires on every settlement visit, must never crash the game
             }
         }
 

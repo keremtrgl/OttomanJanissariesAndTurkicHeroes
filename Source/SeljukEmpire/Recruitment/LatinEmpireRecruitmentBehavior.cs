@@ -35,17 +35,31 @@ namespace SeljukEmpire.Recruitment
 
         private void OnDailyTickSettlement(Settlement settlement)
         {
-            if (IsLatinEmpireSettlement(settlement))
+            try
             {
-                RefreshSettlementNotables(settlement);
+                if (IsLatinEmpireSettlement(settlement))
+                {
+                    RefreshSettlementNotables(settlement);
+                }
+            }
+            catch (Exception)
+            {
+                // Engine safety catch - fires once per settlement per day, must never crash the tick
             }
         }
 
         private void OnSettlementEntered(MobileParty party, Settlement settlement, Hero hero)
         {
-            if (party != null && party.IsMainParty && IsLatinEmpireSettlement(settlement))
+            try
             {
-                RefreshSettlementNotables(settlement);
+                if (party != null && party.IsMainParty && IsLatinEmpireSettlement(settlement))
+                {
+                    RefreshSettlementNotables(settlement);
+                }
+            }
+            catch (Exception)
+            {
+                // Engine safety catch - fires on every settlement visit, must never crash the game
             }
         }
 

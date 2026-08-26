@@ -75,25 +75,32 @@ namespace SeljukEmpire.Economy
         /// </summary>
         private void OnMobilePartyDestroyed(MobileParty mobileParty, PartyBase destroyerParty)
         {
-            if (mobileParty == null || !_isPlayerCaravanInsuranceActive) return;
-
-            // Check if destroyed party was a player-owned caravan
-            if (mobileParty.IsCaravan && mobileParty.Party?.Owner == Hero.MainHero)
+            try
             {
-                bool onCooldown = CampaignTime.Now - _lastInsuranceClaimTime < CampaignTime.Days(CLAIM_COOLDOWN_DAYS);
-                int memberCount = mobileParty.MemberRoster?.TotalManCount ?? 0;
-                if (onCooldown || memberCount < MIN_MEMBERS_FOR_CLAIM)
+                if (mobileParty == null || !_isPlayerCaravanInsuranceActive) return;
+
+                // Check if destroyed party was a player-owned caravan
+                if (mobileParty.IsCaravan && mobileParty.Party?.Owner == Hero.MainHero)
                 {
-                    return;
+                    bool onCooldown = CampaignTime.Now - _lastInsuranceClaimTime < CampaignTime.Days(CLAIM_COOLDOWN_DAYS);
+                    int memberCount = mobileParty.MemberRoster?.TotalManCount ?? 0;
+                    if (onCooldown || memberCount < MIN_MEMBERS_FOR_CLAIM)
+                    {
+                        return;
+                    }
+
+                    int compensation = BASE_CARAVAN_COMPENSATION;
+                    GiveGoldToPlayer(compensation);
+                    _lastInsuranceClaimTime = CampaignTime.Now;
+
+                    InformationManager.DisplayMessage(new InformationMessage(
+                        $"🛡️ [Selçuklu Kervan Sigortası] Kervanınız vuruldu! Selçuklu Hazine-i Âmire'si zararınızı karşıladı (+{compensation:N0} Dinar ödendi)!",
+                        Colors.Yellow));
                 }
-
-                int compensation = BASE_CARAVAN_COMPENSATION;
-                GiveGoldToPlayer(compensation);
-                _lastInsuranceClaimTime = CampaignTime.Now;
-
-                InformationManager.DisplayMessage(new InformationMessage(
-                    $"🛡️ [Selçuklu Kervan Sigortası] Kervanınız vuruldu! Selçuklu Hazine-i Âmire'si zararınızı karşıladı (+{compensation:N0} Dinar ödendi)!",
-                    Colors.Yellow));
+            }
+            catch (Exception)
+            {
+                // Safety: never let an insurance-claim edge case crash the campaign
             }
         }
 
@@ -102,29 +109,36 @@ namespace SeljukEmpire.Economy
         /// </summary>
         private void OnWeeklyTick()
         {
-            if (_totalSilkRoadInvestedGold <= 0 || _settlementInvestments == null || _settlementInvestments.Count == 0) return;
-
-            int totalDividend = 0;
-            foreach (var kvp in _settlementInvestments)
+            try
             {
-                Settlement settlement = Settlement.Find(kvp.Key);
-                if (settlement != null && settlement.IsTown && !settlement.IsUnderSiege
-                    && SeljukFactionUtility.IsSeljukSettlement(settlement))
+                if (_totalSilkRoadInvestedGold <= 0 || _settlementInvestments == null || _settlementInvestments.Count == 0) return;
+
+                int totalDividend = 0;
+                foreach (var kvp in _settlementInvestments)
                 {
-                    // Town prosperity modulates return on investment
-                    float prosperityMultiplier = MBMath.ClampFloat(settlement.Town.Prosperity / 5000f, 0.75f, 1.4f);
-                    float weeklyRoi = 0.045f * prosperityMultiplier; // Base ~4.5% weekly return
-                    int payout = (int)(kvp.Value * weeklyRoi);
-                    totalDividend += payout;
+                    Settlement settlement = Settlement.Find(kvp.Key);
+                    if (settlement != null && settlement.IsTown && !settlement.IsUnderSiege
+                        && SeljukFactionUtility.IsSeljukSettlement(settlement))
+                    {
+                        // Town prosperity modulates return on investment
+                        float prosperityMultiplier = MBMath.ClampFloat(settlement.Town.Prosperity / 5000f, 0.75f, 1.4f);
+                        float weeklyRoi = 0.045f * prosperityMultiplier; // Base ~4.5% weekly return
+                        int payout = (int)(kvp.Value * weeklyRoi);
+                        totalDividend += payout;
+                    }
+                }
+
+                if (totalDividend > 0)
+                {
+                    GiveGoldToPlayer(totalDividend);
+                    InformationManager.DisplayMessage(new InformationMessage(
+                        $"🪙 [İpek Yolu Kâr Payı] Kervansaray ve Liman yatırımlarınızdan haftalık kâr payı tahsil edildi (+{totalDividend:N0} Dinar)!",
+                        Colors.Green));
                 }
             }
-
-            if (totalDividend > 0)
+            catch (Exception)
             {
-                GiveGoldToPlayer(totalDividend);
-                InformationManager.DisplayMessage(new InformationMessage(
-                    $"🪙 [İpek Yolu Kâr Payı] Kervansaray ve Liman yatırımlarınızdan haftalık kâr payı tahsil edildi (+{totalDividend:N0} Dinar)!", 
-                    Colors.Green));
+                // Safety: never let a malformed investment record crash the weekly tick for everyone
             }
         }
 
