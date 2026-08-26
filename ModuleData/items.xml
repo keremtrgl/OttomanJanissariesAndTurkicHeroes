@@ -43,28 +43,28 @@
   <!-- Demir Maskeli Selçuklu Tolgası -->
   <Item id="seljuk_iron_mask_helm" name="{=item_seljuk_helm_name}Iron-Masked Seljuk Imperial Helmet" mesh="khuzait_helmet_f" culture="Culture.seljuk" weight="2.5" value="16500" appearance="1" is_merchandise="false" Type="HeadArmor">
     <ItemComponent>
-      <Armor head_armor="56" covers_head="true" material_type="Plate" modifier_group="plate" />
+      <Armor head_armor="56" has_gender_variations="false" hair_cover_type="all" beard_cover_type="all" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Sultan Şeref Miğferi (Tüylü Tolga) -->
   <Item id="seljuk_royal_feather_helm" name="{=item_seljuk_royal_helm}Sultan Royal Feathered Helmet" mesh="khuzait_lord_helmet_a" culture="Culture.seljuk" weight="2.7" value="19000" appearance="1" is_merchandise="false" Type="HeadArmor">
     <ItemComponent>
-      <Armor head_armor="55" covers_head="true" material_type="Plate" modifier_group="plate" />
+      <Armor head_armor="55" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type2" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Selçuklu Boyunluklu Muharip Tolgası -->
   <Item id="seljuk_noble_spiked_helm" name="{=item_seljuk_spiked_helm}Seljuk Armored Spiked Helmet" mesh="khuzait_lord_helmet_b" culture="Culture.seljuk" weight="2.8" value="15000" appearance="1" is_merchandise="true" Type="HeadArmor">
     <ItemComponent>
-      <Armor head_armor="54" covers_head="true" material_type="Plate" modifier_group="plate" />
+      <Armor head_armor="54" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type4" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
   <!-- Kürk Muhafazalı Gazi Tolgası -->
   <Item id="seljuk_fur_warrior_helm" name="{=item_seljuk_fur_helm}Kayi Ghazi Fur Helmet" mesh="khuzait_lord_helmet_c" culture="Culture.seljuk" weight="2.3" value="13500" appearance="1" is_merchandise="true" Type="HeadArmor">
     <ItemComponent>
-      <Armor head_armor="50" covers_head="true" material_type="Plate" modifier_group="plate" />
+      <Armor head_armor="50" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type4" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
 
