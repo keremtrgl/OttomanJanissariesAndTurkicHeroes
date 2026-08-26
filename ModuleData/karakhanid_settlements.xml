@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Settlements>
-  <!-- Khuzait's 6 towns renamed to real Kara-Khanid cities, split across the Western Khanate
-       (Transoxiana: Samarkand, Bukhara) and Eastern Khanate (Kashgar, Khotan, Balasagun, Uzgen).
-       Ownership/culture untouched - only name= changes, same pattern as
-       byzantine_settlements.xml/georgian_settlements.xml/crusader_settlements.xml. -->
-  <!-- town_K3 is clan_khuzait_1's (House of Boritigin) home settlement - Samarkand, the real
-       Western Khanate capital under Ibrahim Tamgach Khan/Shams al-Mulk Nasr. -->
   <Settlement id="town_K3" name="{=krkh_s_samarkand}Samarkand" />
-  <!-- town_K1 is clan_khuzait_2's (House of Musa Baytash Khan / Buwi Maryam) home settlement -
-       Kashgar, site of Buwi Maryam's real shrine. -->
   <Settlement id="town_K1" name="{=krkh_s_kashgar}Kashgar" />
-  <!-- town_K4 is clan_khuzait_3's (House of Bughra Khan Harun) home settlement - Balasagun,
-       the real Eastern Khanate capital. -->
   <Settlement id="town_K4" name="{=krkh_s_balasagun}Balasagun" />
-  <!-- town_K2 is clan_khuzait_4's (House of Yusuf Toghrul Khan) home settlement - Khotan, held
-       jointly with Kashgar/Balasagun by the Eastern Khanate's co-rulers. -->
   <Settlement id="town_K2" name="{=krkh_s_khotan}Khotan" />
-  <!-- town_K6 is clan_khuzait_5's (House of Hasan ibn Sulayman) home settlement - Uzgen
-       (Ozkend), a major Kara-Khanid city, home to the historical Uzgen mausoleum complex of
-       Kara-Khanid khans. -->
   <Settlement id="town_K6" name="{=krkh_s_uzgen}Uzgen" />
-  <!-- town_K5 is not a clan capital in this mod's roster - Bukhara, Ali-Tegin's real seat and
-       the Western Khanate's other major city alongside Samarkand. -->
   <Settlement id="town_K5" name="{=krkh_s_bukhara}Bukhara" />
 </Settlements>

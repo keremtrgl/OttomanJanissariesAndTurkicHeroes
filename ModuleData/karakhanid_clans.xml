@@ -1,48 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Factions>
-  <!-- Kara-Khanid (Culture.khuzait) noble houses renamed with real historical Kara-Khanid rulers
-       and figures verified against Wikipedia/e-history.kz/Encyclopaedia Iranica, the same
-       "attribute-only partial-XML-override" pattern already used for Byzantine/Abbasid/Georgian/
-       Crusader/Armenian clans. Tier/owner/settlement/banner untouched except clan_khuzait_1 (the
-       ruling clan), only name= changes elsewhere.
-       The Kara-Khanid Khanate split into a Western Khanate (Transoxiana, capital Samarkand/Bukhara)
-       and an Eastern Khanate (capital Balasagun, also holding Kashgar/Khotan) in the 1030s-40s -
-       both branches are represented below, reflecting the real political geography of 1071. -->
-  <!-- 1. House of Boritigin - Ibrahim Tamgach Khan (Boritigin), Western Khanate ruler 1038-1068,
-       Samarkand-based, founder of Samarkand's first madrasa and a hospital. His son and successor
-       Shams al-Mulk Nasr is the active ruling lord here in the mod's 1071 setting.
-       banner_key matches the kingdom's own colors - see kingdoms.xml's khuzait entry. -->
   <Faction id="clan_khuzait_1" name="{=krkh_cn_boritigin}House of Boritigin"
            banner_key="11.116.116.4345.4345.764.764.1.0.0.461.234.234.512.512.764.764.1.0.0" />
-  <!-- 2. House of Musa Baytash Khan - the dynasty's own founding-era line (Musa Baytash Khan,
-       5th Great Khagan, r. 955-958, second Muslim Khan). His daughter Buwi Maryam, whose shrine
-       in Kashgar remains a holy site, represents the house here - a diminished elder branch by
-       1071, eclipsed by Boritigin's line, similar in spirit to how the Kayi tribe's own Ertugrul
-       is included in this mod despite predating/postdating the exact 1071 timeframe. -->
   <Faction id="clan_khuzait_2" name="{=krkh_cn_musabaytash}House of Musa Baytash Khan" />
-  <!-- 3. House of Bughra Khan Harun - Eastern Khanate co-ruler 1059-1074, then sole ruler of
-       Kashgar/Khotan/Balasagun 1075-1102. -->
   <Faction id="clan_khuzait_3" name="{=krkh_cn_bughrakhan}House of Bughra Khan Harun" />
-  <!-- 4. House of Yusuf Toghrul Khan - Eastern Khanate co-ruler alongside Bughra Khan Harun,
-       1059-1074. -->
   <Faction id="clan_khuzait_4" name="{=krkh_cn_toghrulkhan}House of Yusuf Toghrul Khan" />
-  <!-- 5. House of Hasan ibn Sulayman - Eastern Khanate ruler from 1074, the Kashgar court patron
-       to whom Yusuf Balasaguni presented the Kutadgu Bilig (completed 1069/1070). -->
   <Faction id="clan_khuzait_5" name="{=krkh_cn_hasansulayman}House of Hasan ibn Sulayman" />
-  <!-- 6. House of Ali-Tegin - Western Khanate/Transoxiana ruler based in Bukhara (r. 1020-1034),
-       historically linked to the young Seljuk chiefs Tughril and Chaghri Beg, who served in his
-       territory in the 1020s before their falling-out and flight in 1034. -->
   <Faction id="clan_khuzait_6" name="{=krkh_cn_alitegin}House of Ali-Tegin" />
-  <!-- 7. House of Yusuf Qadir Khan - ruler of Kashgar and Khotan, met Mahmud of Ghazni in 1025,
-       died 1032; an elder-generation branch of the Eastern Khanate line by 1071. -->
   <Faction id="clan_khuzait_7" name="{=krkh_cn_qadirkhan}House of Yusuf Qadir Khan" />
-  <!-- 8. House of Satuq Bughra Khan - the dynasty's legendary founder, first Kara-Khanid Khan to
-       convert to Islam (10th century); by 1071 a minor remnant branch, kept mostly for prestige. -->
   <Faction id="clan_khuzait_8" name="{=krkh_cn_satukbughra}House of Satuq Bughra Khan" />
-  <!-- 9. House of Yusuf Balasaguni - not a ruling dynasty but the real historical Khass Hajib
-       (privy councillor/vizier-equivalent) of the Kashgar court, author of the Kutadgu Bilig
-       (1069/1070); placed here as the administrative/scholarly noble house, mirroring this mod's
-       own Nizamiye Divani (Nizam al-Mulk) for the Seljuks - fits clan_khuzait_9's Native flavour
-       text ("more interested in trade than fighting"). -->
   <Faction id="clan_khuzait_9" name="{=krkh_cn_balasaguni}House of Yusuf Balasaguni" />
 </Factions>

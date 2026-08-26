@@ -1,25 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <NPCCharacters>
-  <!-- Fully independent Kara-Khanid (Culture.khuzait) troop tree - new character ids, own upgrade
-       chain, own equipment loadouts. Does NOT reuse or touch Native's khuzait_* troops (those stay
-       exactly as Native shipped them; kept for Custom Battle/tournament troop lists that still
-       reference the native ids directly - same pattern as byzantine_troops.xml/abbasid_troops.xml/
-       georgian_troops.xml). Every equipment item id below is a real, already-shipped Native item,
-       drawn almost entirely from Khuzait's own culture-tagged item pool (khuzait_*/steppe_*/
-       eastern_* in SandBoxCore/ModuleData/items/*.xml) since the historical Kara-Khanids were
-       themselves a Turkic steppe horse people - the same asset library this mod's own Georgian
-       tree already borrowed from for its Alan Horse-Guard branch.
-       Tier structure (6/11/16/21/26/31) and per-tier skill-point totals (90/195/360/508/676/835)
-       match byzantine_custom_troops.xml/abbasid_custom_troops.xml/georgian_custom_troops.xml
-       exactly - each branch below reuses that same skill-point budget per tier.
-       Historical grounding: Yigit/Alp (young warrior/champion warrior, generic old Turkic warrior
-       ranks), Tarkhan (a real tax-exempt elite-warrior noble title used across Gokturk/Kara-Khanid/
-       Mongol successor steppe states), Tegin (Kara-Khanid royal-prince title, as in Ali-Tegin and
-       Ibrahim Tamgach Khan's own alternate name Boritigin), Subasi/Beg (real Turkic military/noble
-       titles), Mergen (old Turkic/steppe word for a marksman), Yagici (raider/skirmisher), Ordu
-       (army/horde). The tier-6 heavy cavalry endpoint "Bori Tarkhan" ("Wolf-Tarkhan") nods to both
-       the Bozkurt (grey wolf) figure central to Turkic steppe mythology and to Boritigin himself. -->
-
   <!-- Tier 1 (6): shared recruit -->
   <NPCCharacter id="kk2_recruit" default_group="Infantry" level="6" name="{=kk2_t_recruit}Kara-Khanid Recruit" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
@@ -31,10 +11,6 @@
       <skill id="Bow" value="10" />
       <skill id="Throwing" value="10" />
     </skills>
-    <!-- No Horse slot: this is Culture.khuzait's basic_troop once rival_culture_names.xml points it
-         here, and GetBasicVolunteer() hands basic_troop out to almost every notable/village - the
-         byz2_recruit/abb2_recruit/geo2_recruit fix established that a Horse slot on the basic_troop
-         is what makes even the cheapest recruit register as mounted and overpriced. -->
     <Equipments>
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
@@ -412,9 +388,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_tarkhan_suvarisi" /></upgrade_targets>
   </NPCCharacter>
 
-  <!-- Tier 5 (26): four branches, but kk2_kasgar_muhafizi ends here as its own leaf (allied/elite
-       light-cavalry horse-archer skirmish line), mirroring geo2_alan_horseguard/byz2_vardariotai's
-       role - only the heavy cavalry, infantry, and ranged branches continue to tier 6. -->
+  <!-- Tier 5 (26) -->
   <NPCCharacter id="kk2_subasi" default_group="Infantry" level="26" name="{=kk2_t_subasi}Subasi" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -507,8 +481,6 @@
         <equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
       </EquipmentRoster>
     </Equipments>
-    <!-- Kashgar Horse-Guard (elite eastern-capital horse-archer skirmish line) is left as its own
-         branch endpoint here, mirroring geo2_alan_horseguard/byz2_vardariotai. -->
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
@@ -545,8 +517,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_bori_tarkhan" /></upgrade_targets>
   </NPCCharacter>
 
-  <!-- Tier 6 (31): three separate branch endpoints (infantry, ranged, heavy cavalry) - mirrors
-       byzantine_custom_troops.xml/georgian_custom_troops.xml's tier-6 structure exactly. -->
+  <!-- Tier 6 (31) -->
   <NPCCharacter id="kk2_han_muhafizi" default_group="Infantry" level="31" name="{=kk2_t_han_muhafizi}Khan's Guard" occupation="Soldier" culture="Culture.khuzait" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>

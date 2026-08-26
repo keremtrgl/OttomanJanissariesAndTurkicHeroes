@@ -35,10 +35,5 @@
   <!-- elite_basic_troop is the tier-2 INFANTRY branch (arm2_azat - spear/shield, no horse), not a
        mounted branch, for the same reason as every other culture's elite_basic_troop above. -->
   <Culture id="battania" name="{=arm_culture_name}Armenian" basic_troop="NPCCharacter.arm2_recruit" elite_basic_troop="NPCCharacter.arm2_azat" />
-  <!-- basic_troop/elite_basic_troop redirect Kara-Khanid recruitment to the fully independent
-       troop tree in karakhanid_custom_troops.xml, same pattern as every culture above.
-       elite_basic_troop is the tier-2 INFANTRY branch (kk2_yigit - sword/shield, no horse), not
-       one of the tier-2 cavalry branches, for the same reason as every other culture's
-       elite_basic_troop above. -->
   <Culture id="khuzait" name="{=krkh_culture_name}Kara-Khanid" basic_troop="NPCCharacter.kk2_recruit" elite_basic_troop="NPCCharacter.kk2_yigit" />
 </SPCultures>
