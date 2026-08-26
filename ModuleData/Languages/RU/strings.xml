@@ -253,5 +253,648 @@
     <string id="str_wanderer_response_2.turgut_the_hammer" text="Two-handed axes require fierce discipline. Are you ready to march?" />
     <string id="timarli_sipahi_name" text="Timarli Sipahi" />
     <string id="veteran_janissary_name" text="Veteran Janissary" />
+    <string id="abb2_t_ayyar" text="Аййар" />
+    <string id="abb2_t_bedouin_horseman" text="Бедуинский Всадник" />
+    <string id="abb2_t_dar_alkhilafa" text="Гвардеец Дар аль-Хилафа" />
+    <string id="abb2_t_faris" text="Фарис" />
+    <string id="abb2_t_ghulam" text="Гулям" />
+    <string id="abb2_t_ghulam_horseman" text="Гулям-Всадник" />
+    <string id="abb2_t_ghulam_lancer" text="Гулям-Копейщик" />
+    <string id="abb2_t_ghulam_regular" text="Гулям Регулярный" />
+    <string id="abb2_t_hashimiyya" text="Хашимийская Пехота" />
+    <string id="abb2_t_hujariyya" text="Гвардеец Худжарийя" />
+    <string id="abb2_t_master_qawwas" text="Мастер-Каввас" />
+    <string id="abb2_t_naffatun" text="Наффатун" />
+    <string id="abb2_t_naffatun_khassa" text="Наффатун аль-Хасса" />
+    <string id="abb2_t_qawwas" text="Каввас" />
+    <string id="abb2_t_rami_metin" text="Рами эль-Метин" />
+    <string id="abb2_t_recruit" text="Аббасидский Новобранец" />
+    <string id="abb2_t_saqaliba" text="Гвардеец Сакалиба" />
+    <string id="abb2_t_vanguard_faris" text="Фарис аль-Мукаддима" />
+    <string id="abb2_t_veteran_faris" text="Ветеран-Фарис" />
+    <string id="abb2_t_veteran_hashimiyya" text="Ветеран Хашимийя" />
+    <string id="abb_c_ana" text="Замок Ана" />
+    <string id="abb_c_anbar" text="Замок Анбар" />
+    <string id="abb_c_hit" text="Замок Хит" />
+    <string id="abb_c_nahrawan" text="Замок Нахраван" />
+    <string id="abb_c_rahba" text="Замок Рахба" />
+    <string id="abb_c_tikrit" text="Замок Тикрит" />
+    <string id="abb_c_ukbara" text="Замок Укбара" />
+    <string id="abb_cc_basra_merchant_desc" text="Ты происходишь из богатой купеческой семьи, торгующей пряностями и жемчугом на кораблях, плывущих из Басры в Индийский океан." />
+    <string id="abb_cc_basra_merchant_name" text="Купеческая Семья Порта Басры" />
+    <string id="abb_cc_bazaar_desc" text="В лабиринтах улочек базара Карх ты научился у торговцев искусству торговаться и взвешивать товары." />
+    <string id="abb_cc_bazaar_name" text="Ты Изучил Торговлю На Базарах Багдада" />
+    <string id="abb_cc_bedouin_desc" text="Ты родился в бедуинском племени в глубине иракской пустыни, пас верблюдов и находил путь сквозь песчаные бури." />
+    <string id="abb_cc_bedouin_name" text="Пустынное Бедуинское Племя" />
+    <string id="abb_cc_caravan_guard_desc" text="Ты защищал паломнические караваны, следовавшие из Багдада в Мекку, от пустынных разбойников." />
+    <string id="abb_cc_caravan_guard_name" text="Ты Служил Охранником Паломнического Каравана" />
+    <string id="abb_cc_caravan_save_desc" text="Ты в одиночку защитил большой паломнический караван, подвергшийся нападению пустынных разбойников, спасая паломников." />
+    <string id="abb_cc_caravan_save_name" text="Ты Спас Паломнический Караван От Набега" />
+    <string id="abb_cc_desert_desc" text="Среди своих бедуинских родичей ты научился ездить на верблюдах под безжалостным пустынным солнцем и находить путь по звёздам." />
+    <string id="abb_cc_desert_name" text="Ты Научился Ездить На Верблюде И Коне В Пустыне" />
+    <string id="abb_cc_desert_raider_desc" text="Ты сражался на передовой в походах, поддерживающих порядок среди пустынных племён." />
+    <string id="abb_cc_desert_raider_name" text="Ты Стал Налётчиком В Пустынных Походах" />
+    <string id="abb_cc_ghilman_desc" text="Твой отец был одним из тюркских по происхождению гвардейцев-гулямов, несших стражу в Дар аль-Хилафа халифа." />
+    <string id="abb_cc_ghilman_name" text="Род Халифского Гвардейца-Гуляма" />
+    <string id="abb_cc_ghulam_elite_desc" text="Твоё выдающееся мастерство принесло тебе место в личной гвардии халифа при Дар аль-Хилафа." />
+    <string id="abb_cc_ghulam_elite_name" text="Ты Был Избран В Элитную Гвардию Халифа" />
+    <string id="abb_cc_hashimite_desc" text="Ты дитя шарифской хашимитской семьи, происходящей от рода Пророка, уважаемой и влиятельной в Багдаде." />
+    <string id="abb_cc_hashimite_name" text="Шарифская Хашимитская Семья" />
+    <string id="abb_cc_justice_desc" text="Ты мужественно защитил дело обиженного торговца перед кади, добившись справедливости." />
+    <string id="abb_cc_justice_name" text="Ты Защитил Обиженного Перед Кади" />
+    <string id="abb_cc_madrasa_desc" text="С юных лет ты посещал уроки Корана, хадисов и фикха в великих мечетях Багдада." />
+    <string id="abb_cc_madrasa_name" text="Ты Заучил Коран И Фикх В Мечетской Школе" />
+    <string id="abb_cc_nizamiyya_desc" text="В знаменитой медресе Низамийя, основанной Низам аль-Мульком, ты изучал фикх, логику и искусство управления." />
+    <string id="abb_cc_nizamiyya_name" text="Ты Учился В Багдадской Медресе Низамийя" />
+    <string id="abb_cc_palace_defense_desc" text="Во время набега на Дар аль-Хилафа ты рисковал жизнью и отличился среди гвардии халифа." />
+    <string id="abb_cc_palace_defense_name" text="Ты Защищал Халифа Во Время Осады Дворца" />
+    <string id="abb_cc_palace_guard_desc" text="Ты прошёл обучение владению оружием среди дисциплинированных гвардейцев-гулямов халифа во дворце." />
+    <string id="abb_cc_palace_guard_name" text="Ты Вступил В Гвардейский Полк Дар аль-Хилафа" />
+    <string id="abb_cc_qadi_desc" text="Твоя семья — уважаемый род улемов, давший опытных кади, сведущих в фикхе и шариате." />
+    <string id="abb_cc_qadi_name" text="Багдадская Семья Кади И Улемов" />
+    <string id="abb_cc_scholar_desc" text="Ты стал доверенным писцом, фиксирующим дела в суде жалоб халифа." />
+    <string id="abb_cc_scholar_name" text="Ты Служил Писцом В Суде Жалоб" />
+    <string id="abb_cc_wrestling_desc" text="Ты боролся с другими детьми на площадях Багдада и играл в фехтование деревянными клинками." />
+    <string id="abb_cc_wrestling_name" text="Ты Тренировался В Борьбе И Фехтовании На Площадях" />
+    <string id="abb_culture_name" text="Аббасиды" />
+    <string id="abb_house_abbas" text="Бану Аббас" />
+    <string id="abb_house_ayyub" text="Бану Айюб" />
+    <string id="abb_house_damaghani" text="Бану ад-Дамагани" />
+    <string id="abb_house_darust" text="Бану Даруст" />
+    <string id="abb_house_jahir" text="Бану Джахир" />
+    <string id="abb_house_muslima" text="Бану аль-Муслима" />
+    <string id="abb_house_sabi" text="Бану ас-Саби" />
+    <string id="abb_house_uqayl" text="Бану Укайль" />
+    <string id="abb_house_zaynabi" text="Бану аз-Зайнаби" />
+    <string id="abb_ln_alqaim" text="аль-Каим Биамриллах" />
+    <string id="abb_ln_arslan_khatun" text="Арслан-хатун" />
+    <string id="abb_ln_damaghani" text="Абу Абдаллах ад-Дамагани" />
+    <string id="abb_ln_hilal" text="Хиляль ас-Саби" />
+    <string id="abb_ln_ibnalmuslima" text="Ибн аль-Муслима" />
+    <string id="abb_ln_ibnayyub" text="Ибн Айюб" />
+    <string id="abb_ln_ibndarust" text="Ибн Даруст" />
+    <string id="abb_ln_ibnjahir" text="Фахр ад-Дауля ибн Джахир" />
+    <string id="abb_ln_quraysh" text="Курайш ибн Бадран" />
+    <string id="abb_ln_tirad" text="Тирад аз-Зайнаби" />
+    <string id="abb_s_baghdad" text="Багдад" />
+    <string id="abb_s_basra" text="Басра" />
+    <string id="abb_s_kufa" text="Куфа" />
+    <string id="abb_s_mosul" text="Мосул" />
+    <string id="abb_s_samarra" text="Самарра" />
+    <string id="abb_s_wasit" text="Васит" />
+    <string id="abb_t_ayyar" text="Аййар" />
+    <string id="abb_t_bedouin_horseman" text="Бедуинский Всадник" />
+    <string id="abb_t_dar_alkhilafa" text="Гвардеец Дар аль-Хилафа" />
+    <string id="abb_t_faris" text="Фарис" />
+    <string id="abb_t_ghilman" text="Новобранец-Гилман" />
+    <string id="abb_t_ghulam" text="Гулям" />
+    <string id="abb_t_ghulam_axeman" text="Гулям-Топорщик" />
+    <string id="abb_t_ghulam_horseman" text="Гулям-Всадник" />
+    <string id="abb_t_ghulam_lancer" text="Гулям-Копейщик" />
+    <string id="abb_t_ghulam_regular" text="Гулям Регулярный" />
+    <string id="abb_t_hashimiyya" text="Хашимийская Пехота" />
+    <string id="abb_t_hujariyya" text="Гвардеец Худжарийя" />
+    <string id="abb_t_master_qawwas" text="Мастер-Каввас" />
+    <string id="abb_t_militia_archer" text="Багдадский Ополченец-Лучник" />
+    <string id="abb_t_militia_spearman" text="Багдадский Ополченец-Копейщик" />
+    <string id="abb_t_militia_vet_archer" text="Багдадский Ветеран-Лучник Ополчения" />
+    <string id="abb_t_militia_vet_spearman" text="Багдадский Ветеран-Копейщик Ополчения" />
+    <string id="abb_t_qawwas" text="Каввас" />
+    <string id="abb_t_recruit" text="Аббасидский Новобранец" />
+    <string id="abb_t_skirmisher" text="Бедуинский Застрельщик" />
+    <string id="abb_t_tribesman" text="Бедуинский Соплеменник" />
+    <string id="abb_t_vanguard_faris" text="Фарис аль-Мукаддима" />
+    <string id="abb_t_veteran_faris" text="Ветеран-Фарис" />
+    <string id="abb_t_veteran_hashimiyya" text="Ветеран Хашимийя" />
+    <string id="abb_v_abbadan" text="Абадан" />
+    <string id="abb_v_alus" text="Алус" />
+    <string id="abb_v_awana" text="Авана" />
+    <string id="abb_v_babalsham" text="Баб-эль-Шам" />
+    <string id="abb_v_balad" text="Балад" />
+    <string id="abb_v_baqubah" text="Бакуба" />
+    <string id="abb_v_daquqa" text="Дакука" />
+    <string id="abb_v_dayralaqul" text="Дайр-эль-Акуль" />
+    <string id="abb_v_dujayl" text="Дуджейль" />
+    <string id="abb_v_dur" text="Ад-Дур" />
+    <string id="abb_v_falluja" text="Фаллуджа" />
+    <string id="abb_v_hadithah" text="Хадита" />
+    <string id="abb_v_harba" text="Харба" />
+    <string id="abb_v_hira" text="Хира" />
+    <string id="abb_v_jalula" text="Джалула" />
+    <string id="abb_v_jarjaraya" text="Джарджарая" />
+    <string id="abb_v_khaniqin" text="Ханакин" />
+    <string id="abb_v_maskin" text="Маскин" />
+    <string id="abb_v_najaf" text="Наджаф" />
+    <string id="abb_v_nineveh" text="Ниневия" />
+    <string id="abb_v_numaniyya" text="Нуманийя" />
+    <string id="abb_v_qadisiyyah" text="Кадисия" />
+    <string id="abb_v_qarqisiya" text="Каркисия" />
+    <string id="abb_v_qutrabbul" text="Кутрабулль" />
+    <string id="abb_v_raqqa" text="Ракка" />
+    <string id="abb_v_rawa" text="Рава" />
+    <string id="abb_v_sinjar" text="Синджар" />
+    <string id="abb_v_sinn" text="Синн-Баримма" />
+    <string id="abb_v_sura" text="Сура" />
+    <string id="abb_v_tellafar" text="Талль-Афар" />
+    <string id="abb_v_ubulla" text="Убулла" />
+    <string id="byz2_t_athanatoi" text="Атанатой" />
+    <string id="byz2_t_hetaireia" text="Гвардеец Этерии" />
+    <string id="byz2_t_kataphraktos" text="Катафракт" />
+    <string id="byz2_t_klibanophoros" text="Клибанофор" />
+    <string id="byz2_t_koursores" text="Курсоры" />
+    <string id="byz2_t_prokoursatores" text="Прокурсаторы" />
+    <string id="byz2_t_recruit" text="Византийский Новобранец" />
+    <string id="byz2_t_skutatos" text="Скутат" />
+    <string id="byz2_t_tagmatic_skutatos" text="Тагматический Скутат" />
+    <string id="byz2_t_tagmatic_toxotes" text="Тагматический Токсот" />
+    <string id="byz2_t_thematic_skutatos" text="Фемный Скутат" />
+    <string id="byz2_t_thematic_toxotes" text="Фемный Токсот" />
+    <string id="byz2_t_toxotes" text="Токсот" />
+    <string id="byz2_t_trapezites" text="Трапезиты" />
+    <string id="byz2_t_tzangra" text="Цангра-Арбалетчик" />
+    <string id="byz2_t_tzangratores" text="Цанграторы" />
+    <string id="byz2_t_varangian" text="Варяжский Гвардеец" />
+    <string id="byz2_t_varangian_huscarl" text="Варяжский Хускарл" />
+    <string id="byz2_t_vardariotai" text="Вардариоты" />
+    <string id="byz2_t_vestiaritai" text="Вестиариты" />
+    <string id="byz_c_caesarea" text="Замок Кесария" />
+    <string id="byz_c_chonae" text="Замок Хоны" />
+    <string id="byz_c_claudiopolis" text="Замок Клавдиополь" />
+    <string id="byz_c_dorylaeum" text="Замок Дорилей" />
+    <string id="byz_c_neocaesarea" text="Замок Неокесария" />
+    <string id="byz_c_nicomedia" text="Замок Никомедия" />
+    <string id="byz_cc_akritas_desc" text="Твоя семья — воины-акриты, охраняющие границу у Тавра и Евфрата от туркменских набегов." />
+    <string id="byz_cc_akritas_name" text="Анатолийская Пограничная Семья Акритов" />
+    <string id="byz_cc_akritas_officer_desc" text="Ты командовал отрядами акритов, защищавшими анатолийскую границу от туркменских набегов." />
+    <string id="byz_cc_akritas_officer_name" text="Ты Стал Пограничным Командиром Акритов" />
+    <string id="byz_cc_akritic_songs_desc" text="Ты вырос на акритских эпосах, рассказываемых старейшинами пограничных сёл, и рано научился натягивать лук." />
+    <string id="byz_cc_akritic_songs_name" text="Ты Вырос На Пограничных Песнях Акритов" />
+    <string id="byz_cc_bureaucrat_desc" text="Ты стал доверенным писцом дворцовой бюрократии, ведущим налоговые и земельные записи." />
+    <string id="byz_cc_bureaucrat_name" text="Ты Стал Писцом Императорской Канцелярии" />
+    <string id="byz_cc_church_school_desc" text="В приходской церковной школе ты заучил греческий алфавит, священные тексты и гимны." />
+    <string id="byz_cc_church_school_name" text="Ты Изучил Греческий Язык И Писание В Церковной Школе" />
+    <string id="byz_cc_diplomat_desc" text="Ты искусно и отважно завершил опасное посольство мира к вражескому двору." />
+    <string id="byz_cc_diplomat_name" text="Ты Завершил Опасное Посольство" />
+    <string id="byz_cc_fortress_defense_desc" text="Ты стойко защищал осаждённую пограничную крепость, пока наконец не подошло подкрепление." />
+    <string id="byz_cc_fortress_defense_name" text="Ты Удерживал Осаждённую Крепость До Конца" />
+    <string id="byz_cc_hippodrome_desc" text="Ты наблюдал за гонками колесниц на знаменитом Константинопольском ипподроме и чувствовал страсть соперничающих партий." />
+    <string id="byz_cc_hippodrome_name" text="Ты Вырос, Наблюдая За Гонками На Ипподроме" />
+    <string id="byz_cc_kataphraktos_desc" text="Тебя приняли в элитный корпус катафрактов — бронированных коней и бронированных всадников." />
+    <string id="byz_cc_kataphraktos_name" text="Ты Был Выбран В Полк Тяжёлой Конницы Катафрактов" />
+    <string id="byz_cc_market_desc" text="В лавках вдоль Месы, главной улицы Константинополя, ты постиг у купцов тонкости торговли." />
+    <string id="byz_cc_market_name" text="Ты Изучил Торговлю На Рынке Улицы Месы" />
+    <string id="byz_cc_merchant_desc" text="Ты вырос в богатой семье, торговавшей шёлком и пряностями в порту Фессалоники, втором городе Империи." />
+    <string id="byz_cc_merchant_name" text="Купеческая Семья Порта Фессалоники" />
+    <string id="byz_cc_monastic_desc" text="Твоя семья были переписчиками, копировавшими древние греческие и римские труды в монастырских библиотеках; знание было твоей колыбелью." />
+    <string id="byz_cc_monastic_name" text="Семья Монастырских Переписчиков" />
+    <string id="byz_cc_rally_desc" text="Среди великого разгрома ты собрал рассеивающиеся отряды и обеспечил организованное отступление." />
+    <string id="byz_cc_rally_name" text="Ты Пережил Разгром На Поле Боя И Собрал Армию" />
+    <string id="byz_cc_senatorial_desc" text="Твоя семья принадлежит к землевладельческому сословию динатов имперской столицы; интригам и протоколу дворца ты научился с колыбели." />
+    <string id="byz_cc_senatorial_name" text="Константинопольская Сенаторская Семья" />
+    <string id="byz_cc_thematic_army_desc" text="Ты стал закалённым воином в пограничных фемах Анатолии, обученным конной стрельбе из лука и копью." />
+    <string id="byz_cc_thematic_army_name" text="Ты Вступил В Анатолийскую Фемную Армию" />
+    <string id="byz_cc_thematic_desc" text="Твой отец был стратиотом — военным землевладельцем, служившим в фемной армии со своим конём и доспехом." />
+    <string id="byz_cc_thematic_name" text="Анатолийская Семья Фемного Воина-Землевладельца" />
+    <string id="byz_cc_university_desc" text="Ты брал уроки философии, права и риторики в знаменитом Манганском университете Константинополя." />
+    <string id="byz_cc_university_name" text="Ты Изучал Риторику В Манганском Университете" />
+    <string id="byz_cc_varangian_desc" text="Ты тренировался с топором и мечом рядом со знаменитой Варяжской гвардией Империи в императорском дворце." />
+    <string id="byz_cc_varangian_name" text="Ты Тренировался Рядом С Варяжской Гвардией" />
+    <string id="byz_culture_name" text="Византийцы" />
+    <string id="byz_house_argyros" text="Дом Аргиров" />
+    <string id="byz_house_botaneiates" text="Дом Вотаниатов" />
+    <string id="byz_house_bryennios" text="Дом Вриенниев" />
+    <string id="byz_house_diogenes" text="Дом Диогенов" />
+    <string id="byz_house_doukas" text="Дом Дук" />
+    <string id="byz_house_kekaumenos" text="Дом Кекавменов" />
+    <string id="byz_house_komnenos" text="Дом Комнинов" />
+    <string id="byz_house_melissenos" text="Дом Мелиссинов" />
+    <string id="byz_house_tarchaneiotes" text="Дом Тарханиотов" />
+    <string id="byz_ln_alexios_komnenos" text="Алексей Комнин" />
+    <string id="byz_ln_andronikos_doukas" text="Андроник Дука" />
+    <string id="byz_ln_irene_doukaina" text="Ирина Дукиня" />
+    <string id="byz_ln_joseph_tarchaneiotes" text="Иосиф Тарханиот" />
+    <string id="byz_ln_katakalon_kekaumenos" text="Катакалон Кекавмен" />
+    <string id="byz_ln_maria_alania" text="Мария Аланская" />
+    <string id="byz_ln_maria_bulgaria" text="Мария Болгарская" />
+    <string id="byz_ln_nikephoros_botaneiates" text="Никифор Вотаниат" />
+    <string id="byz_ln_nikephoros_bryennios" text="Никифор Вриенний" />
+    <string id="byz_ln_nikephoros_melissenos" text="Никифор Мелиссин" />
+    <string id="byz_ln_romanos_argyros" text="Роман Аргир" />
+    <string id="byz_ln_romanos_diogenes" text="Роман Диоген" />
+    <string id="byz_n_c_aezani" text="Замок Айзаной" />
+    <string id="byz_n_c_arsamosata" text="Замок Арсамосата" />
+    <string id="byz_n_c_cyzicus" text="Замок Кизик" />
+    <string id="byz_n_c_ephesus" text="Замок Эфес" />
+    <string id="byz_n_c_loulon" text="Замок Лулон" />
+    <string id="byz_n_c_pergamon" text="Замок Пергам" />
+    <string id="byz_n_c_sinope" text="Замок Синоп" />
+    <string id="byz_n_c_smyrna" text="Замок Смирна" />
+    <string id="byz_n_c_zela" text="Замок Зела" />
+    <string id="byz_n_house_angelos" text="Дом Ангелов" />
+    <string id="byz_n_house_gabras" text="Дом Гаврасов" />
+    <string id="byz_n_house_kantakouzenos" text="Дом Кантакузинов" />
+    <string id="byz_n_house_kourkouas" text="Дом Куркуасов" />
+    <string id="byz_n_house_palaiologos" text="Дом Палеологов" />
+    <string id="byz_n_house_phokas" text="Дом Фок" />
+    <string id="byz_n_house_skleros" text="Дом Склиров" />
+    <string id="byz_n_house_vatatzes" text="Дом Ватацев" />
+    <string id="byz_n_house_xiphilinos" text="Дом Ксифилинов" />
+    <string id="byz_n_ln_bardas_phokas" text="Варда Фока" />
+    <string id="byz_n_ln_georgios_palaiologos" text="Георгий Палеолог" />
+    <string id="byz_n_ln_ioannes_kantakouzenos" text="Иоанн Кантакузин" />
+    <string id="byz_n_ln_konstantinos_angelos" text="Константин Ангел" />
+    <string id="byz_n_ln_leon_kourkouas" text="Лев Куркуас" />
+    <string id="byz_n_ln_michael_xiphilinos" text="Михаил Ксифилин" />
+    <string id="byz_n_ln_nikephoros_vatatzes" text="Никифор Ватац" />
+    <string id="byz_n_ln_romanos_skleros" text="Роман Склир" />
+    <string id="byz_n_ln_theodoros_gabras" text="Феодор Гаврас" />
+    <string id="byz_n_s_amorium" text="Аморий" />
+    <string id="byz_n_s_edessa" text="Эдесса" />
+    <string id="byz_n_s_melitene" text="Мелитена" />
+    <string id="byz_n_s_sardis" text="Сарды" />
+    <string id="byz_n_s_tarsus" text="Тарс" />
+    <string id="byz_n_s_theodosiopolis" text="Феодосиополь" />
+    <string id="byz_n_v_abydos" text="Абидос" />
+    <string id="byz_n_v_adana" text="Адана" />
+    <string id="byz_n_v_adramyttium" text="Адрамиттий" />
+    <string id="byz_n_v_amisos" text="Амис" />
+    <string id="byz_n_v_anazarbus" text="Аназарб" />
+    <string id="byz_n_v_apameia" text="Апамея" />
+    <string id="byz_n_v_arabissus" text="Арависс" />
+    <string id="byz_n_v_ariaramneia" text="Ариарамнея" />
+    <string id="byz_n_v_assos" text="Асс" />
+    <string id="byz_n_v_cadi" text="Кадои" />
+    <string id="byz_n_v_charsianon" text="Харсиан" />
+    <string id="byz_n_v_citharizon" text="Кифаризон" />
+    <string id="byz_n_v_cotyaeum" text="Котиэй" />
+    <string id="byz_n_v_docimium" text="Докимий" />
+    <string id="byz_n_v_germanicia" text="Германикея" />
+    <string id="byz_n_v_lampsacus" text="Лампсак" />
+    <string id="byz_n_v_magnesia" text="Магнесия" />
+    <string id="byz_n_v_miletus" text="Милет" />
+    <string id="byz_n_v_perrhe" text="Перре" />
+    <string id="byz_n_v_pessinus" text="Пессинунт" />
+    <string id="byz_n_v_philadelphia" text="Филадельфия" />
+    <string id="byz_n_v_priene" text="Приена" />
+    <string id="byz_n_v_romanoupolis" text="Романополь" />
+    <string id="byz_n_v_samosata" text="Самосата" />
+    <string id="byz_n_v_satala" text="Сатала" />
+    <string id="byz_n_v_sper" text="Спер" />
+    <string id="byz_n_v_synnada" text="Синнада" />
+    <string id="byz_n_v_tavium" text="Тавий" />
+    <string id="byz_n_v_themiscyra" text="Фемискира" />
+    <string id="byz_n_v_thyatira" text="Фиатира" />
+    <string id="byz_n_v_tralles" text="Траллы" />
+    <string id="byz_n_v_zapetra" text="Запетра" />
+    <string id="byz_s_amaseia" text="Амасия" />
+    <string id="byz_s_ankara" text="Анкира" />
+    <string id="byz_s_nicaea" text="Никея" />
+    <string id="byz_s_sebasteia" text="Себастия" />
+    <string id="byz_s_trebizond" text="Трапезунд" />
+    <string id="byz_t_elite_menavlaton" text="Элитный Менавлатон" />
+    <string id="byz_t_equite" text="Византийский Всадник" />
+    <string id="byz_t_hetaireia" text="Гвардеец Этерии" />
+    <string id="byz_t_kataphraktos" text="Катафракт" />
+    <string id="byz_t_klibanophoros" text="Клибанофор" />
+    <string id="byz_t_menavlaton" text="Менавлатон" />
+    <string id="byz_t_recruit" text="Византийский Новобранец" />
+    <string id="byz_t_skutatos" text="Скутат" />
+    <string id="byz_t_tagmatic_skutatos" text="Тагматический Скутат" />
+    <string id="byz_t_tagmatic_toxotes" text="Тагматический Токсот" />
+    <string id="byz_t_thema_militia_archer" text="Фемный Ополченец-Лучник" />
+    <string id="byz_t_thema_militia_spearman" text="Фемный Ополченец-Копейщик" />
+    <string id="byz_t_thema_militia_vet_archer" text="Фемный Ветеран-Лучник Ополчения" />
+    <string id="byz_t_thema_militia_vet_spearman" text="Фемный Ветеран-Копейщик Ополчения" />
+    <string id="byz_t_thematic_skutatos" text="Фемный Скутат" />
+    <string id="byz_t_thematic_toxotes" text="Фемный Токсот" />
+    <string id="byz_t_toxotes" text="Токсот" />
+    <string id="byz_t_tzangra" text="Цангра-Арбалетчик" />
+    <string id="byz_t_tzangratores" text="Цанграторы" />
+    <string id="byz_t_varangian" text="Варяжский Гвардеец" />
+    <string id="byz_t_vestiaritai" text="Вестиариты" />
+    <string id="byz_t_vigla_recruit" text="Новобранец Вигла" />
+    <string id="byz_v_amycon2" text="Дазимон" />
+    <string id="byz_v_andrapa" text="Андрапа" />
+    <string id="byz_v_apollonia" text="Аполлония" />
+    <string id="byz_v_chalcedon" text="Халкидон" />
+    <string id="byz_v_colossae" text="Колоссы" />
+    <string id="byz_v_comana" text="Комана" />
+    <string id="byz_v_eunalica2" text="Сусурмена" />
+    <string id="byz_v_gangra" text="Гангра" />
+    <string id="byz_v_germa" text="Герма" />
+    <string id="byz_v_ibora" text="Ибора" />
+    <string id="byz_v_juliopolis" text="Юлиополь" />
+    <string id="byz_v_kerasous" text="Керасунт" />
+    <string id="byz_v_koloneia" text="Колонея" />
+    <string id="byz_v_laodicea" text="Лаодикея" />
+    <string id="byz_v_lopadion" text="Лопадий" />
+    <string id="byz_v_midaion" text="Мидайон" />
+    <string id="byz_v_nakoleia" text="Наколея" />
+    <string id="byz_v_nazianzus" text="Назианз" />
+    <string id="byz_v_nicopolis" text="Никополь" />
+    <string id="byz_v_prainetos" text="Пренет" />
+    <string id="byz_v_prusa" text="Пруса" />
+    <string id="byz_v_rhizaion" text="Ризайон" />
+    <string id="byz_v_sebastopolis" text="Себастополь" />
+    <string id="byz_v_tyana" text="Тиана" />
+    <string id="clan_ahi_order" text="Орден Ахи" />
+    <string id="clan_ahlatsah" text="Княжество Ахлатшахов" />
+    <string id="clan_artuk" text="Княжество Артукидов" />
+    <string id="clan_caka" text="Княжество Чаки-бея" />
+    <string id="clan_danismend" text="Княжество Данишмендидов" />
+    <string id="clan_karaman" text="Княжество Караманоглу" />
+    <string id="clan_kayi_oguz" text="Алпы Племени Кайы" />
+    <string id="clan_mengucek" text="Княжество Менгюджекидов" />
+    <string id="clan_nizamiye" text="Низамийский Диван" />
+    <string id="clan_saltuk" text="Княжество Салтукидов" />
+    <string id="clan_seljuk_royal" text="Дом Сельджуков" />
+    <string id="geo_c_artanuji" text="Замок Артануджи" />
+    <string id="geo_c_dmanisi" text="Замок Дманиси" />
+    <string id="geo_c_gori" text="Замок Гори" />
+    <string id="geo_c_kojori" text="Замок Коджори" />
+    <string id="geo_c_manavi" text="Замок Манави" />
+    <string id="geo_c_samshvilde" text="Замок Самшвилде" />
+    <string id="geo_c_tmogvi" text="Замок Тмогви" />
+    <string id="geo_c_zedazeni" text="Замок Зедазени" />
+    <string id="geo_cc_academy_desc" text="В главной монастырской академии Кавказа ты изучал богословие, философию и искусство управления." />
+    <string id="geo_cc_academy_name" text="Ты Изучал Философию И Риторику В Монастырской Академии" />
+    <string id="geo_cc_aznauri_desc" text="Ты дитя мелкодворянской азнаурской семьи-землевладельцев в горах Кавказа, воспитан для верховой езды и владения копьём." />
+    <string id="geo_cc_aznauri_name" text="Мелкодворянская Азнаурская Семья" />
+    <string id="geo_cc_bagrationi_desc" text="Ты происходишь из дальней ветви царского рода Багратиони; ты вырос среди обычаев и интриг двора." />
+    <string id="geo_cc_bagrationi_name" text="Дальняя Ветвь Династии Багратиони" />
+    <string id="geo_cc_battle_hero_desc" text="В великой полевой битве ты прорубился сквозь ряды врага и сразил вражеского знаменосца." />
+    <string id="geo_cc_battle_hero_name" text="Ты Проявил Героизм В Великой Полевой Битве" />
+    <string id="geo_cc_border_gazi_desc" text="Ты годами нёс стражу в пограничных крепостях Кавказа, накопив опыт через множество осад." />
+    <string id="geo_cc_border_gazi_name" text="Ты Приобрёл Опыт В Пограничных Крепостях" />
+    <string id="geo_cc_caucasus_desc" text="В узких горных перевалах, у края обрывов, ты с юных лет научился верховой езде и равновесию." />
+    <string id="geo_cc_caucasus_name" text="Ты Проезжал Через Горные Перевалы Кавказа" />
+    <string id="geo_cc_church_desc" text="Ты пел гимны в хоре православной церкви и научился читать и писать по молитвенникам в монастырской школе." />
+    <string id="geo_cc_church_name" text="Ты Пел В Церковном Хоре И Учился В Монастырской Школе" />
+    <string id="geo_cc_court_desc" text="Ты служил советником, близким к царской семье, при дворе в Тбилиси." />
+    <string id="geo_cc_court_name" text="Ты Служил При Царском Дворе" />
+    <string id="geo_cc_falconry_desc" text="Ты научился охотиться в кавказских лесах, напуская соколов и натягивая лук." />
+    <string id="geo_cc_falconry_name" text="Ты Изучил Соколиную Охоту И Стрельбу Из Лука" />
+    <string id="geo_cc_monastery_desc" text="Ты вырос в семье переписчиков, копировавших богословские и философские труды в известной монастырской академии." />
+    <string id="geo_cc_monastery_name" text="Семья Переписчиков Монастырской Академии" />
+    <string id="geo_cc_mountain_desc" text="Ты вырос в недоступной горной долине Кавказа, закалённый борьбой со снегом и скалами." />
+    <string id="geo_cc_mountain_name" text="Семья Воинов Горной Долины" />
+    <string id="geo_cc_mountain_scout_desc" text="Ты вступил в передовые отряды, следившие за горными перевалами от вражеских набегов." />
+    <string id="geo_cc_mountain_scout_name" text="Ты Стал Пограничным Разведчиком В Горных Перевалах" />
+    <string id="geo_cc_pilgrim_desc" text="Ты снискал славу, защищая паломнические караваны, направлявшиеся к святым местам, от разбойников." />
+    <string id="geo_cc_pilgrim_name" text="Ты Стал Щитом Для Паломников И Обиженных" />
+    <string id="geo_cc_rescue_desc" text="Ты проскользнул тайным перевалом, чтобы принести помощь осаждённой горной крепости, спасая её жителей." />
+    <string id="geo_cc_rescue_name" text="Ты Спас Осаждённую Горную Крепость" />
+    <string id="geo_cc_royal_cavalry_desc" text="Ты вступил в элитный царский кавалерийский полк, сражавшийся в походах вдоль кавказской границы." />
+    <string id="geo_cc_royal_cavalry_name" text="Ты Был Избран В Царскую Тяжёлую Конницу" />
+    <string id="geo_cc_royal_guard_desc" text="Ты прошёл дисциплинированное обучение оружию и верховой езде в дворцовой гвардии короля." />
+    <string id="geo_cc_royal_guard_name" text="Ты Вступил В Полк Царской Гвардии" />
+    <string id="geo_cc_smithy_desc" text="В деревенской кузнице ты научился ковать сталь и чинить доспехи рядом с мастерами-кузнецами." />
+    <string id="geo_cc_smithy_name" text="Ты Ковал Сталь В Кузнице Горного Села" />
+    <string id="geo_cc_tbilisi_merchant_desc" text="Ты дитя семьи, торгующей шёлком и пряностями на рынках Тбилиси, где Восток встречается с Западом." />
+    <string id="geo_cc_tbilisi_merchant_name" text="Тбилисская Купеческая Семья Шёлкового Пути" />
+    <string id="geo_culture_name" text="Грузины" />
+    <string id="geo_house_arishiani" text="Дом Аришиани" />
+    <string id="geo_house_baghvashi" text="Дом Багваши" />
+    <string id="geo_house_bagrationi" text="Дом Багратиони" />
+    <string id="geo_house_baramisdze" text="Дом Барамисдзе" />
+    <string id="geo_house_chqondideli" text="Дом Чкондидели" />
+    <string id="geo_house_eristavi" text="Дом Эристави" />
+    <string id="geo_house_kakhaberisdze" text="Дом Кахаберисдзе" />
+    <string id="geo_house_kvirikiani" text="Дом Кюрикидов" />
+    <string id="geo_house_orbeli" text="Дом Орбели" />
+    <string id="geo_ln_aghsartan" text="Агсартан II" />
+    <string id="geo_ln_arishiani" text="Аришиани" />
+    <string id="geo_ln_david" text="Давид IV Строитель" />
+    <string id="geo_ln_giorgi_chqondideli" text="Георгий Чкондидели" />
+    <string id="geo_ln_grigol" text="Григол Эристави" />
+    <string id="geo_ln_gurandukht" text="Гурандухт" />
+    <string id="geo_ln_ivane" text="Иванэ Орбели" />
+    <string id="geo_ln_kakhaber" text="Кахабер Кахаберисдзе" />
+    <string id="geo_ln_kavtar" text="Кавтар Барамисдзе" />
+    <string id="geo_ln_liparit" text="Липарит Багваши" />
+    <string id="geo_s_chqondidi" text="Чкондиди" />
+    <string id="geo_s_khornabuji" text="Хорнабуджи" />
+    <string id="geo_s_kldekari" text="Клдекари" />
+    <string id="geo_s_kutaisi" text="Кутаиси" />
+    <string id="geo_s_lore" text="Лоре" />
+    <string id="geo_s_tbilisi" text="Тбилиси" />
+    <string id="geo_s_telavi" text="Телави" />
+    <string id="geo_t_alan_horseguard" text="Аланский Конный Гвардеец" />
+    <string id="geo_t_aznauri_squire" text="Азнаурский Оруженосец" />
+    <string id="geo_t_aznauri_warrior" text="Азнаурский Воин" />
+    <string id="geo_t_didebuli_axe" text="Дидебульский Топорщик" />
+    <string id="geo_t_didebuli_spear" text="Дидебульский Копейщик" />
+    <string id="geo_t_frankish_knight" text="Франкский Рыцарь" />
+    <string id="geo_t_frankish_maa" text="Франкский Латник" />
+    <string id="geo_t_kartli_militia_archer" text="Картлийский Ополченец-Лучник" />
+    <string id="geo_t_kartli_militia_spear" text="Картлийский Ополченец-Копейщик" />
+    <string id="geo_t_kartli_militia_vet_archer" text="Картлийский Ветеран-Лучник Ополчения" />
+    <string id="geo_t_kartli_militia_vet_spear" text="Картлийский Ветеран-Копейщик Ополчения" />
+    <string id="geo_t_khevsur_hardened" text="Закалённый Хевсурский Налётчик" />
+    <string id="geo_t_khevsur_horse" text="Хевсурский Конный Налётчик" />
+    <string id="geo_t_khevsur_raider" text="Хевсурский Налётчик" />
+    <string id="geo_t_monaspa" text="Монаспа-Гвардеец" />
+    <string id="geo_t_msakhuri" text="Мсахурский Воин" />
+    <string id="geo_t_mtiuli_archer" text="Мтиульский Лучник" />
+    <string id="geo_t_mtiuli_hunter" text="Мтиульский Охотник" />
+    <string id="geo_t_mtiuli_vet_bowman" text="Мтиульский Ветеран-Стрелок" />
+    <string id="geo_t_mtiuli_woodsman" text="Мтиульский Лесник" />
+    <string id="geo_t_recruit" text="Грузинский Новобранец" />
+    <string id="geo_t_svan_heroic" text="Сванский Героический Пробивной Боец" />
+    <string id="geo_t_svan_linebreaker" text="Сванский Пробивной Боец" />
+    <string id="geo_t_svan_spearman" text="Сванский Копейщик" />
+    <string id="geo_v_akhaltsikhe" text="Ахалцихе" />
+    <string id="geo_v_akhmeta" text="Ахмета" />
+    <string id="geo_v_alaverdi" text="Алаверди" />
+    <string id="geo_v_anakopia" text="Анакопия" />
+    <string id="geo_v_ateni" text="Атени" />
+    <string id="geo_v_betania" text="Бетания" />
+    <string id="geo_v_bichvinta" text="Бичвинта" />
+    <string id="geo_v_bodbe" text="Бодбе" />
+    <string id="geo_v_bolnisi" text="Болниси" />
+    <string id="geo_v_ikalto" text="Икалто" />
+    <string id="geo_v_kaladzori" text="Каладзори" />
+    <string id="geo_v_khertvisi" text="Хертвиси" />
+    <string id="geo_v_kvareli" text="Кварели" />
+    <string id="geo_v_manglisi" text="Манглиси" />
+    <string id="geo_v_mtskheta" text="Мцхета" />
+    <string id="geo_v_mukhrani" text="Мухрани" />
+    <string id="geo_v_nekresi" text="Некреси" />
+    <string id="geo_v_nokalakevi" text="Нокалакеви" />
+    <string id="geo_v_oltisi" text="Олтиси" />
+    <string id="geo_v_orbeti" text="Орбети" />
+    <string id="geo_v_rustavi" text="Рустави" />
+    <string id="geo_v_shavsheti" text="Шавшети" />
+    <string id="geo_v_sokhumi" text="Сухуми" />
+    <string id="geo_v_tabakhmela" text="Табахмела" />
+    <string id="geo_v_tashir" text="Ташир" />
+    <string id="geo_v_trialeti" text="Триалети" />
+    <string id="geo_v_tsalka" text="Цалка" />
+    <string id="geo_v_tsintskaro" text="Цинцкаро" />
+    <string id="geo_v_tsromi" text="Цроми" />
+    <string id="geo_v_uplistsikhe" text="Уплисцихе" />
+    <string id="geo_v_vardtsikhe" text="Вардцихе" />
+    <string id="geo_v_vejini" text="Вежини" />
+    <string id="item_seljuk_bolts" text="Сельджукские Стальные Срезни" />
+    <string id="item_seljuk_boots" text="Тонкие Сельджукские Кавалерийские Сапоги" />
+    <string id="item_seljuk_bracers" text="Дамасские Стальные Наручи Гази" />
+    <string id="item_seljuk_composite_bow" text="Композитный Лук Огузского Атабека" />
+    <string id="item_seljuk_fur_helm" text="Меховой Шлем Кайы-Гази" />
+    <string id="item_seljuk_gazi_armor" text="Доспех Данишмендского Пограничного Бея" />
+    <string id="item_seljuk_ghulam_armor" text="Зеркальный Доспех Сельджукского Гуляма" />
+    <string id="item_seljuk_heavy_arrows" text="Сельджукские Бронебойные Стрелы" />
+    <string id="item_seljuk_inf_shield" text="Низамский Пехотный Щит Сельджуков" />
+    <string id="item_seljuk_pauldrons" text="Сельджукские Королевские Наплечники" />
+    <string id="item_seljuk_royal_helm" text="Королевский Перьевой Шлем Султана" />
+    <string id="item_seljuk_spiked_helm" text="Сельджукский Бронированный Шлем С Шипами" />
+    <string id="item_seljuk_turkoman_horse" text="Благородный Туркоманский Боевой Конь" />
+    <string id="lord_ali_saltuk" text="Али Салтук" />
+    <string id="lord_emir_gazi" text="Эмир Гази" />
+    <string id="lord_fahrulmulk" text="Фахр аль-Мульк" />
+    <string id="lord_ibrahim_ahlatsah" text="Ибрахим аль-Ахлати" />
+    <string id="lord_ishak_mengucek" text="Исхак Менгюджек" />
+    <string id="lord_mahmud_karaman" text="Махмуд Караманоглу" />
+    <string id="lord_nasiruddin_halife" text="Шейх Насир ад-Дин" />
+    <string id="lord_yusuf_caka" text="Юсуф Чака" />
+    <string id="policy_futuwwa_nizam_desc" text="Прибыль ремесленных мастерских и цеховое производство в городах возрастают на 30%, укрепляя городскую безопасность." />
+    <string id="policy_futuwwa_nizam_name" text="Орден Футувва" />
+    <string id="policy_kervansaray_berati_desc" text="Караван-сараи вдоль Шёлкового пути получают царские грамоты. Благосостояние городов постоянно растёт на +1 каждый день." />
+    <string id="policy_kervansaray_berati_name" text="Императорская Грамота Каравансараев" />
+    <string id="policy_uc_gazileri_desc" text="Пограничные воины и опытные альпы организуются вдоль рубежей. Вместимость отрядов клана и лордов увеличивается на +25 бойцов." />
+    <string id="policy_uc_gazileri_name" text="Организация Пограничных Гази" />
+    <string id="seljuk_abbasid_desc" text="Багдадский Халифат, номинальный глава исламского мира, хотя реальная военная власть теперь принадлежит великим сельджукским султанам. Султан выступает защитником халифа и фактическим правителем." />
+    <string id="seljuk_abbasid_name" text="Аббасидский Халифат" />
+    <string id="seljuk_abbasid_ruler" text="Халиф" />
+    <string id="seljuk_abbasid_short" text="Аббасиды" />
+    <string id="seljuk_abbasid_title" text="Аббасидский Халифат" />
+    <string id="seljuk_alp_arslan_greet" text="Доблестный алп полей газавата! Добро пожаловать, да останется твой клинок острым, а порядок твой — незыблемым. Дом Сельджуков дарует тебе своё благословение. Чего ты ищешь?" />
+    <string id="seljuk_bard_cooldown" text="Бард устал и нуждается в отдыхе (вернись через {HOURS} ч.)." />
+    <string id="seljuk_bard_no_gold" text="Недостаточно золота (требуется 100 динаров)." />
+    <string id="seljuk_bard_notif" text="Героический сельджукский эпос о газавате, исполненный на копузе, зажёг сердца твоих солдат! (+15 К Морали Армии)" />
+    <string id="seljuk_bard_opt" text="Послушать Эпос О Газавате От Степного Барда (100 Динаров)" />
+    <string id="seljuk_bonus_cavalry_wage" text="Сельджукская Икта-Экономика Конницы" />
+    <string id="seljuk_bonus_construction" text="Низамийские Общественные Работы" />
+    <string id="seljuk_byzantine_desc" text="Южное крыло византийского сопротивления в Анатолии после Манцикерта. Самый непримиримый соперник Великой Сельджукской империи, борющийся за удержание пограничных крепостей против туркменских племён, наступающих на Конью и Исфахан." />
+    <string id="seljuk_byzantine_name" text="Византийская Империя" />
+    <string id="seljuk_byzantine_ruler" text="Император" />
+    <string id="seljuk_byzantine_short" text="Византия" />
+    <string id="seljuk_byzantine_title" text="Византийская Империя" />
+    <string id="seljuk_castle_harep" text="Замок Харпут" />
+    <string id="seljuk_castle_lavenia" text="Замок Лавения" />
+    <string id="seljuk_castle_morenia" text="Замок Морения" />
+    <string id="seljuk_castle_rey" text="Замок Рей" />
+    <string id="seljuk_castle_shibalzumr" text="Замок Шибаль-Зумр" />
+    <string id="seljuk_cn_1" text="Кайы" />
+    <string id="seljuk_cn_10" text="Бегдили" />
+    <string id="seljuk_cn_11" text="Каркын" />
+    <string id="seljuk_cn_12" text="Баяндур" />
+    <string id="seljuk_cn_13" text="Печенег" />
+    <string id="seljuk_cn_14" text="Чавулдур" />
+    <string id="seljuk_cn_15" text="Чепни" />
+    <string id="seljuk_cn_16" text="Салур" />
+    <string id="seljuk_cn_17" text="Эймюр" />
+    <string id="seljuk_cn_18" text="Алаюнтлу" />
+    <string id="seljuk_cn_19" text="Юрегир" />
+    <string id="seljuk_cn_2" text="Баят" />
+    <string id="seljuk_cn_20" text="Ыгдыр" />
+    <string id="seljuk_cn_21" text="Бюгдюз" />
+    <string id="seljuk_cn_22" text="Ива" />
+    <string id="seljuk_cn_23" text="Кынык" />
+    <string id="seljuk_cn_3" text="Алка-эвли" />
+    <string id="seljuk_cn_4" text="Кара-эвли" />
+    <string id="seljuk_cn_5" text="Языр" />
+    <string id="seljuk_cn_6" text="Дёгер" />
+    <string id="seljuk_cn_7" text="Додурга" />
+    <string id="seljuk_cn_8" text="Афшар" />
+    <string id="seljuk_cn_9" text="Кызык" />
+    <string id="seljuk_culture_desc" text="Туркменская конфедерация, выкованная Великим Сельджукским государством и анатолийскими пограничными бейликами. Города богатеют благодаря конным армиям, кормящимся с икты, медресе Низамийя и караванам Шёлкового пути." />
+    <string id="seljuk_culture_name" text="Сельджуки" />
+    <string id="seljuk_debuff_siege_engineering" text="Слабая Традиция Осадной Инженерии" />
+    <string id="seljuk_ertugrul_greet" text="О соратник газавата! Тысяча приветствий с рубежа Сёгюта и стана племени Кайы. Пусть твоя сталь сияет вечно, что привело тебя в мой шатёр?" />
+    <string id="seljuk_faction_desc" text="Великая Сельджукская империя; простираясь от Хорасана до сердца Анатолии, правит степями и древними городами Калрадии с помощью справедливости, низамийских учреждений и непобедимых туркменских всадников." />
+    <string id="seljuk_fn_1" text="Теркен" />
+    <string id="seljuk_fn_10" text="Зейнаб" />
+    <string id="seljuk_fn_11" text="Амина" />
+    <string id="seljuk_fn_12" text="Уммухан" />
+    <string id="seljuk_fn_13" text="Нур" />
+    <string id="seljuk_fn_14" text="Камар" />
+    <string id="seljuk_fn_15" text="Гюльнар" />
+    <string id="seljuk_fn_16" text="Ширин" />
+    <string id="seljuk_fn_17" text="Бану" />
+    <string id="seljuk_fn_18" text="Аслы" />
+    <string id="seljuk_fn_19" text="Элиф" />
+    <string id="seljuk_fn_2" text="Зубайда" />
+    <string id="seljuk_fn_20" text="Марьям" />
+    <string id="seljuk_fn_21" text="Рукайя" />
+    <string id="seljuk_fn_22" text="Нафиса" />
+    <string id="seljuk_fn_23" text="Девлет" />
+    <string id="seljuk_fn_24" text="Шах" />
+    <string id="seljuk_fn_25" text="Хуршида" />
+    <string id="seljuk_fn_3" text="Гевхер" />
+    <string id="seljuk_fn_4" text="Махпери" />
+    <string id="seljuk_fn_5" text="Хафса" />
+    <string id="seljuk_fn_6" text="Халима" />
+    <string id="seljuk_fn_7" text="Айша" />
+    <string id="seljuk_fn_8" text="Фатима" />
+    <string id="seljuk_fn_9" text="Хадиджа" />
+    <string id="seljuk_georgia_desc" text="Христианское королевство, правящее в тени Кавказских гор. Северный сосед, решительно настроенный сохранить независимость, часто сталкивающийся с сельджукскими налётчиками вдоль границы." />
+    <string id="seljuk_georgia_name" text="Королевство Грузия" />
+    <string id="seljuk_georgia_ruler" text="Король" />
+    <string id="seljuk_georgia_short" text="Грузины" />
+    <string id="seljuk_georgia_title" text="Королевство Грузия" />
+    <string id="seljuk_mn_1" text="Алпарслан" />
+    <string id="seljuk_mn_10" text="Бозкурт" />
+    <string id="seljuk_mn_11" text="Эртогрул" />
+    <string id="seljuk_mn_12" text="Осман" />
+    <string id="seljuk_mn_13" text="Орхан" />
+    <string id="seljuk_mn_14" text="Тургут" />
+    <string id="seljuk_mn_15" text="Явуз" />
+    <string id="seljuk_mn_16" text="Кутальмыш" />
+    <string id="seljuk_mn_17" text="Данишменд" />
+    <string id="seljuk_mn_18" text="Артук" />
+    <string id="seljuk_mn_19" text="Салтук" />
+    <string id="seljuk_mn_2" text="Тогрул" />
+    <string id="seljuk_mn_20" text="Чака" />
+    <string id="seljuk_mn_21" text="Менгюджек" />
+    <string id="seljuk_mn_22" text="Караман" />
+    <string id="seljuk_mn_23" text="Юсуф" />
+    <string id="seljuk_mn_24" text="Ибрахим" />
+    <string id="seljuk_mn_25" text="Хасан" />
+    <string id="seljuk_mn_26" text="Хусейн" />
+    <string id="seljuk_mn_27" text="Тимур" />
+    <string id="seljuk_mn_28" text="Туран" />
+    <string id="seljuk_mn_29" text="Санджар" />
+    <string id="seljuk_mn_3" text="Чагры" />
+    <string id="seljuk_mn_30" text="Гази" />
+    <string id="seljuk_mn_4" text="Сулейман" />
+    <string id="seljuk_mn_5" text="Кылыч-Арслан" />
+    <string id="seljuk_mn_6" text="Санджар" />
+    <string id="seljuk_mn_7" text="Беркярук" />
+    <string id="seljuk_mn_8" text="Махмуд" />
+    <string id="seljuk_mn_9" text="Тоган" />
+    <string id="seljuk_nizam_greet" text="Клинок справедливости и государственного порядка остр, дитя моё. Да продлится твоя служба Великому Царству. Говори, я слушаю." />
+    <string id="seljuk_starter_notif" text="Стартовый набор Великого Сельджукского Гази зачислен в твой инвентарь! (+2500 Динаров, Благородный Туркоманский Конь, Композитный Лук И Бронебойные Стрелы)" />
+    <string id="seljuk_town_danustica" text="Конья" />
+    <string id="seljuk_town_husnfulq" text="Сёгют" />
+    <string id="seljuk_town_isfahan" text="Исфахан" />
+    <string id="seljuk_town_nisabur" text="Нишапур" />
+    <string id="seljuk_v_keban" text="Кебан" />
+    <string id="seljuk_v_palu" text="Палу" />
+    <string id="seljuk_vil_abukhih" text="Доманич" />
+    <string id="seljuk_vil_bostanabad" text="Бостанабад" />
+    <string id="seljuk_vil_cesmedeh" text="Чешмеде" />
+    <string id="seljuk_vil_cuybare" text="Джуйбаре" />
+    <string id="seljuk_vil_erebulos" text="Каратай" />
+    <string id="seljuk_vil_hasanabad" text="Хасанабад" />
+    <string id="seljuk_vil_hoqqa" text="Бозюйюк" />
+    <string id="seljuk_vil_kohandiz" text="Кохандеж" />
+    <string id="seljuk_vil_lavenia" text="Лавения" />
+    <string id="seljuk_vil_lenban" text="Ленбан" />
+    <string id="seljuk_vil_morenia" text="Морения" />
+    <string id="seljuk_vil_polisia" text="Мерам" />
+    <string id="seljuk_vil_sadyah" text="Шадьях" />
+    <string id="seljuk_vil_shibalzumr" text="Шибаль-Зумр" />
+    <string id="seljuk_vil_tegresos" text="Силле" />
+    <string id="seljuk_vil_veramin" text="Варамин" />
   </strings>
 </base>
