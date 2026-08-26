@@ -483,6 +483,7 @@
     <string id="byz_house_tarchaneiotes" text="آل تارخانيوتيس" />
     <string id="byz_ln_alexios_komnenos" text="أليكسيوس كومنينوس" />
     <string id="byz_ln_andronikos_doukas" text="أندرونيكوس دوكاس" />
+    <string id="byz_ln_anna_diogenissa" text="آنا ديوجانيسا" />
     <string id="byz_ln_irene_doukaina" text="إيرين دوكاينا" />
     <string id="byz_ln_joseph_tarchaneiotes" text="يوسف تارخانيوتيس" />
     <string id="byz_ln_katakalon_kekaumenos" text="كاتاكالون كيكافمينوس" />
@@ -654,6 +655,114 @@
     <string id="geo_cc_mountain_scout_name" text="أصبحت كشافاً حدودياً في الممرات الجبلية" />
     <string id="geo_cc_pilgrim_desc" text="اكتسبت شهرة بحماية قوافل الحجاج المتجهة إلى الأماكن المقدسة من قطاع الطرق." />
     <string id="geo_cc_pilgrim_name" text="أصبحت درعاً للحجاج والمظلومين" />
+    <string id="crus_cc_norman_knight_name" text="عائلة فرسان نورمان" />
+    <string id="crus_cc_norman_knight_desc" text="تنحدر عائلتك من فرسان نورمان تبعوا الحملة الصليبية الأولى شرقاً؛ نشأت وأنت تحمل الرمح وتمتطي جواد الحرب منذ الطفولة." />
+    <string id="crus_cc_antiochene_noble_name" text="عائلة سيد حدودي من أنطاكية" />
+    <string id="crus_cc_antiochene_noble_desc" text="تملك عائلتك إقطاعية حدودية قرب أنطاكية، اعتاد أسيادها القتال ضد الغزاة التركمان والجيران المسلمين على حد سواء." />
+    <string id="crus_cc_genoese_merchant_name" text="عائلة تجار جنويين" />
+    <string id="crus_cc_genoese_merchant_desc" text="عائلتك تجار جنويون استقروا في الحي المرفئي لأنطاكية، أثروا من التجارة بين عكا وإيطاليا." />
+    <string id="crus_cc_hospitaller_name" text="سلالة أخ خادم من فرسان الإسبتارية" />
+    <string id="crus_cc_hospitaller_desc" text="خدم والدك فرسان الإسبتارية كرجل سلاح، يعتني بالمرضى ويقاتل أعداء الدول الصليبية الكثيرين." />
+    <string id="crus_cc_pilgrim_settler_name" text="عائلة مستوطنين حجاج فقراء" />
+    <string id="crus_cc_pilgrim_settler_desc" text="سارت عائلتك إلى الأرض المقدسة في الحملة الصليبية الأولى وبقيت هناك، تكسب عيشاً متواضعاً على الحدود الشامية." />
+    <string id="crus_cc_squire_training_name" text="تدربت بسيوف خشبية في فناء قلعة نورمانية" />
+    <string id="crus_cc_squire_training_desc" text="تبارزت بسيوف خشبية في فناء عائلتك، على يد رجل سلاح عجوز درّبك على الطراز النورماني." />
+    <string id="crus_cc_levantine_name" text="نشأت تتحدث الفرنسية والعربية معاً" />
+    <string id="crus_cc_levantine_desc" text="نشأت بين خدم وجيران شاميين، فأتقنت العربية بطلاقة إلى جانب فرنسية عائلتك." />
+    <string id="crus_cc_church_school_name" text="تعلمت اللاتينية والكتاب المقدس في مدرسة كنسية" />
+    <string id="crus_cc_church_school_desc" text="في مدرسة كنيسة أبرشية، تعلمت الحروف اللاتينية والكتاب المقدس على يد كاهن وُلد في الشام." />
+    <string id="crus_cc_market_name" text="تعلمت التجارة في أسواق أنطاكية" />
+    <string id="crus_cc_market_desc" text="في أسواق أنطاكية المزدحمة، تعلمت المساومة مع الإفرنج والأرمن واليونانيين على حد سواء." />
+    <string id="crus_cc_squire_name" text="خدمت تابعاً لفارس مالك أرض" />
+    <string id="crus_cc_squire_desc" text="خدمت تابعاً لفارس مالك أرض، تعتني بحصانه وسلاحه وتتعلم أساليب القتال الفارس." />
+    <string id="crus_cc_garrison_name" text="أديت خدمة الحامية في قلعة حدودية" />
+    <string id="crus_cc_garrison_desc" text="وقفت حراسات طويلة على أسوار قلعة حدودية، حاملاً القوس النشاب، حذراً من غارات التلال المحيطة." />
+    <string id="crus_cc_scribe_name" text="درست كاتباً في مجلس كاتدرائية" />
+    <string id="crus_cc_scribe_desc" text="على يد قسس مجلس كاتدرائية، تعلمت القراءة والكتابة ومسك الحسابات." />
+    <string id="crus_cc_knighted_name" text="أصبحت فارساً وانضممت إلى حاشية سيد" />
+    <string id="crus_cc_knighted_desc" text="تم تنصيبك فارساً بالسيف، وأخذت مكانك في حاشية سيد الفرسان." />
+    <string id="crus_cc_templar_name" text="انضممت إلى فرسان الهيكل كأخ خادم" />
+    <string id="crus_cc_templar_desc" text="أقسمت أخاً خادماً في نظام فرسان الهيكل، تحرس قلاعه وترافق الحجاج." />
+    <string id="crus_cc_italian_trade_name" text="تاجرت جنباً إلى جنب مع الأساطيل التجارية الإيطالية" />
+    <string id="crus_cc_italian_trade_desc" text="عملت جنباً إلى جنب مع الأساطيل التجارية الجنوية والبندقية، متعلماً التجارة التي تُبقي الدول الصليبية حية." />
+    <string id="crus_cc_siege_held_name" text="صمدت على سور خلال حصار عظيم" />
+    <string id="crus_cc_siege_held_desc" text="صمدت في قسمك من السور طوال حصار عظيم، تصد هجوماً تلو الآخر." />
+    <string id="crus_cc_charge_name" text="قدت هجوماً فرسانياً حاسماً" />
+    <string id="crus_cc_charge_desc" text="قدت هجوماً فرسانياً حاسماً كسر خط العدو في اللحظة التي كانت الأهم." />
+    <string id="crus_cc_ransom_name" text="تفاوضت على فدية سيد أُسر" />
+    <string id="crus_cc_ransom_desc" text="تفاوضت على فدية سيد أُسر، كاسباً امتنانه وسمعة الدهاء معاً." />
+    <string id="arm_cc_naxarar_name" text="عائلة نبيلة من النخارار" />
+    <string id="arm_cc_naxarar_desc" text="تنحدر من بيت نخارار قديم، أرستقراطية أرمينيا الإقطاعية الوراثية، تملك إقطاعيتها الجبلية ومحاربين تابعين." />
+    <string id="arm_cc_azat_name" text="عائلة محاربين ملاك أراضٍ من الأزات" />
+    <string id="arm_cc_azat_desc" text="عائلتك من الأزات، محاربون أحرار ملاك أراضٍ يدينون بخدمة الفروسية لسيدهم النخراري مقابل أراضيهم الجبلية." />
+    <string id="arm_cc_silk_merchant_name" text="عائلة تجار أرمن على طريق الحرير" />
+    <string id="arm_cc_silk_merchant_desc" text="تتاجر عائلتك بالحرير والبضائع على طرق تمتد من كيليكيا إلى بلاد فارس، جزء من شبكة التجارة الأرمنية العظيمة في القرون الوسطى." />
+    <string id="arm_cc_church_name" text="عائلة رجال دين الكنيسة الأرمنية" />
+    <string id="arm_cc_church_desc" text="نشأت في عائلة مكرسة للكنيسة الرسولية الأرمنية، تنسخ الكتب المقدسة وتُبقي الإيمان حياً في الجبال." />
+    <string id="arm_cc_herder_name" text="عائلة رعاة جبليين" />
+    <string id="arm_cc_herder_desc" text="نشأت ترعى الماعز على منحدرات جبال طوروس الشديدة، متعلماً البقاء حيث تقدم الأرض القليل." />
+    <string id="arm_cc_mountain_ride_name" text="ركبت الخيل في دروب الجبال منذ صغرك" />
+    <string id="arm_cc_mountain_ride_desc" text="ركبت منذ صغرك في دروب جبلية ضيقة، مكتسباً التوازن والجرأة على حواف منحدرات طوروس." />
+    <string id="arm_cc_falconry_name" text="تعلمت الصقارة في المرتفعات" />
+    <string id="arm_cc_falconry_desc" text="تعلمت إطلاق الصقور وتتبع الصيد في المرتفعات فوق دار عائلتك." />
+    <string id="arm_cc_monastery_name" text="تعلمت الكتابة الأرمنية في دير" />
+    <string id="arm_cc_monastery_desc" text="تعلمت القراءة والكتابة بالأبجدية الأرمنية على يد رهبان دير قريب." />
+    <string id="arm_cc_trade_name" text="تعلمت التجارة على طرق الجبال" />
+    <string id="arm_cc_trade_desc" text="تعلمت المساومة ووزن البضائع على طرق التجارة الجبلية مع قوافل عائلتك." />
+    <string id="arm_cc_princely_guard_name" text="انضممت إلى حرس الأمير الخاص" />
+    <string id="arm_cc_princely_guard_desc" text="انضممت إلى حرس أمير كيليكيا الخاص، متدرباً بالرمح والسيف إلى جانب رجاله الموالين." />
+    <string id="arm_cc_border_watch_name" text="راقبت الممرات الجبلية كطليعة حدودية" />
+    <string id="arm_cc_border_watch_desc" text="راقبت الممرات الجبلية كطليعة، مستعداً للتحذير من غارات بيزنطية أو سلجوقية." />
+    <string id="arm_cc_monastery_school_name" text="درست في مدرسة ديرية مشهورة" />
+    <string id="arm_cc_monastery_school_desc" text="درست اللاهوت والآداب في إحدى مدارس كيليكيا الديرية المشهورة." />
+    <string id="arm_cc_ayrudzi_name" text="اختيرت لفرسان الأيرودزي النخبة" />
+    <string id="arm_cc_ayrudzi_desc" text="أكسبتك براعتك في السرج مكاناً بين الأيرودزي، حرس كيليكيا الفارس النخبوي." />
+    <string id="arm_cc_naxarar_retainer_name" text="أصبحت تابعاً موثوقاً لسيد نخراري" />
+    <string id="arm_cc_naxarar_retainer_desc" text="أصبحت تابعاً موثوقاً لسيد نخراري، تنصحه وتقود رجاله في الميدان." />
+    <string id="arm_cc_intermediary_name" text="خدمت مترجماً بين البلاطات المسيحية والإسلامية" />
+    <string id="arm_cc_intermediary_desc" text="بإتقانك عدة لغات، خدمت مترجماً بين البلاطات المسيحية والإسلامية، دور غالباً ما ائتُمن عليه الأرمن." />
+    <string id="arm_cc_fortress_defense_name" text="دافعت عن قلعة جبلية ضد حصار" />
+    <string id="arm_cc_fortress_defense_desc" text="دافعت عن قلعة جبلية ضد حصار عنيد حتى استسلم المحاصرون أخيراً وانسحبوا." />
+    <string id="arm_cc_battle_name" text="تميزت في معركة ضد قوات بيزنطية أو سلجوقية" />
+    <string id="arm_cc_battle_desc" text="تميزت في معركة ميدانية ضد قوات بيزنطية أو سلجوقية زاحفة." />
+    <string id="arm_cc_negotiation_name" text="تفاوضت على هدنة حيوية لشعبك" />
+    <string id="arm_cc_negotiation_desc" text="تفاوضت على هدنة حيوية جنّبت شعبك حرباً لم يكن ليربحها." />
+    <string id="krkh_cc_khan_lineage_name" text="فرع بعيد من سلالة خانية" />
+    <string id="krkh_cc_khan_lineage_desc" text="تنحدر من فرع صغير من بيت حاكم قره خاني، نشأت وسط أعراف بلاط الخان ومنافساته." />
+    <string id="krkh_cc_tarkhan_name" text="عائلة نبيلة من الطرخان" />
+    <string id="krkh_cc_tarkhan_desc" text="تحمل عائلتك رتبة طرخان، وهي طبقة نبلاء محاربين معفاة من الضرائب تدين للخان بفرسان مقابل امتيازاتها في السهوب." />
+    <string id="krkh_cc_silk_merchant_name" text="عائلة تجار سمرقند على طريق الحرير" />
+    <string id="krkh_cc_silk_merchant_desc" text="تتاجر عائلتك في أسواق سمرقند وبخارى، في قلب ثروة طريق الحرير ذاته." />
+    <string id="krkh_cc_madrasa_name" text="عائلة علماء مدرسة" />
+    <string id="krkh_cc_madrasa_desc" text="عائلتك من العلماء في إحدى مدارس سمرقند، جزء من موجة العلم التي تلت اعتناق القره خانيين للإسلام." />
+    <string id="krkh_cc_nomad_name" text="عائلة رحل السهوب" />
+    <string id="krkh_cc_nomad_desc" text="نشأت تتبع القطعان عبر السهوب المفتوحة، بنفس أسلوب الحياة الذي عاشه أسلافك من القارلوق واليغما." />
+    <string id="krkh_cc_horseback_name" text="ركبت الخيل قبل أن تتقن المشي" />
+    <string id="krkh_cc_horseback_desc" text="ركبت الخيل قبل أن تتقن المشي، كما هو حال كل طفل وُلد في السهوب." />
+    <string id="krkh_cc_archery_name" text="تدربت على الرماية الفارسية منذ الطفولة" />
+    <string id="krkh_cc_archery_desc" text="تدربت على الرماية الفارسية منذ الطفولة، تصيب الأهداف من فوق مهر متحرك." />
+    <string id="krkh_cc_madrasa_child_name" text="تعلمت القرآن والعربية في مدرسة مسجد" />
+    <string id="krkh_cc_madrasa_child_desc" text="تعلمت القرآن والحروف العربية في مدرسة مسجد في إحدى مدن الخانية المستقرة." />
+    <string id="krkh_cc_bazaar_name" text="تعلمت التجارة في أسواق سمرقند" />
+    <string id="krkh_cc_bazaar_desc" text="تعلمت وزن الحرير والمساومة على الأسعار في أسواق سمرقند المزدحمة." />
+    <string id="krkh_cc_khan_guard_name" text="انضممت إلى حرس الخان الخاص" />
+    <string id="krkh_cc_khan_guard_desc" text="انضممت إلى حرس الخان الخاص، متدرباً بالرمح والسيف بين فرسانه الموالين." />
+    <string id="krkh_cc_horse_archer_name" text="قاتلت كمناوش رام فارس" />
+    <string id="krkh_cc_horse_archer_desc" text="قاتلت كمناوش رام فارس، تنهك الخصوم بوابل من السهام قبل الانسحاب." />
+    <string id="krkh_cc_madrasa_student_name" text="درست في مدرسة إبراهيم تمغاج خان في سمرقند" />
+    <string id="krkh_cc_madrasa_student_desc" text="درست القانون وفن الحكم في المدرسة العظيمة التي أسسها إبراهيم تمغاج خان في سمرقند." />
+    <string id="krkh_cc_tarkhan_cavalry_name" text="انضممت إلى فرسان الطرخان الثقيلة النخبة" />
+    <string id="krkh_cc_tarkhan_cavalry_desc" text="أكسبتك براعتك في السرج مكاناً بين فرسان الطرخان الثقيلة النخبة في الخانية." />
+    <string id="krkh_cc_caravan_trader_name" text="قدت قوافل على طريق الحرير" />
+    <string id="krkh_cc_caravan_trader_desc" text="قدت قوافل تجارية على طريق الحرير، متعلماً النجاة من قطاع الطرق والمساومات القاسية على حد سواء." />
+    <string id="krkh_cc_court_scribe_name" text="خدمت كاتباً في بلاط الخان" />
+    <string id="krkh_cc_court_scribe_desc" text="خدمت كاتباً في بلاط الخان، تصوغ المراسيم وتمسك حسابات الخزينة." />
+    <string id="krkh_cc_skirmish_won_name" text="فزت بمناوشة رماية فارسية حاسمة" />
+    <string id="krkh_cc_skirmish_won_desc" text="فزت بمناوشة حاسمة؛ حطمت سهامك معنويات العدو قبل أن يصل إلى قتال الأيدي." />
+    <string id="krkh_cc_caravan_defense_name" text="دافعت عن قافلة ضد قطاع الطرق" />
+    <string id="krkh_cc_caravan_defense_desc" text="دافعت عن قافلة على طريق الحرير ضد قطاع الطرق، منقذاً بضائعها وأرواح تجارها." />
+    <string id="krkh_cc_seljuk_rival_name" text="تميزت ضد منافسين سلاجقة" />
+    <string id="krkh_cc_seljuk_rival_desc" text="تميزت في اشتباك ضد منافسين سلاجقة يتنازعون حدود الخانية." />
     <string id="geo_cc_rescue_desc" text="تسللت عبر ممر سري لتقديم الإغاثة لقلعة جبلية محاصرة، منقذاً أهلها." />
     <string id="geo_cc_rescue_name" text="أنقذت قلعة جبلية محاصرة" />
     <string id="geo_cc_royal_cavalry_desc" text="انضممت إلى فوج الفرسان الملكي النخبوي الذي قاتل في حملات على طول حدود القوقاز." />
@@ -1005,6 +1114,47 @@
     <string id="crus_s_marash" text="مرعش" />
     <string id="crus_s_tarsus" text="طرسوس" />
     <string id="crus_s_saruj" text="سروج" />
+    <string id="crus_s_harim" text="قلعة حارم" />
+    <string id="crus_s_sahyun" text="قلعة صهيون" />
+    <string id="crus_s_baghras" text="قلعة بغراس" />
+    <string id="crus_s_zerdana" text="قلعة زردنا" />
+    <string id="crus_s_najm" text="قلعة نجم" />
+    <string id="crus_s_duluk" text="قلعة دلوك" />
+    <string id="crus_s_azaz" text="قلعة أعزاز" />
+    <string id="crus_s_artah" text="أرتاح" />
+    <string id="crus_s_latmin" text="لطمين" />
+    <string id="crus_s_jisr_hadid" text="جسر الحديد" />
+    <string id="crus_s_balatanos" text="بلاطنس" />
+    <string id="crus_s_trapesac" text="طرابيسك" />
+    <string id="crus_s_kaysun" text="كيسون" />
+    <string id="crus_s_samosata" text="سميساط" />
+    <string id="crus_s_antab" text="عينتاب" />
+    <string id="crus_s_qusayr" text="القصير" />
+    <string id="crus_s_bikisrail" text="بكسرائيل" />
+    <string id="crus_s_til_khalid" text="تل خالد" />
+    <string id="crus_s_zamanti" text="زمانتي" />
+    <string id="crus_s_sarmin" text="سرمين" />
+    <string id="crus_s_maarrat" text="معرة النعمان" />
+    <string id="crus_s_albara" text="البارة" />
+    <string id="crus_s_kafartab" text="كفرطاب" />
+    <string id="crus_s_apamea" text="أفاميا" />
+    <string id="crus_s_jabala" text="جبلة" />
+    <string id="crus_s_qinnasrin" text="قنسرين" />
+    <string id="crus_s_manbij" text="منبج" />
+    <string id="crus_s_tell_aran" text="تل عران" />
+    <string id="crus_s_buzaa" text="بزاعة" />
+    <string id="crus_s_dabiq" text="دابق" />
+    <string id="crus_s_balis" text="بالس" />
+    <string id="crus_s_deir_semaan" text="دير سمعان" />
+    <string id="crus_s_kfar_nabu" text="كفر نبو" />
+    <string id="crus_s_basufan" text="باصوفان" />
+    <string id="crus_s_serjilla" text="سرجلة" />
+    <string id="crus_s_ruweiha" text="الرويحة" />
+    <string id="crus_s_frikya" text="فركيا" />
+    <string id="crus_s_kafr_ambil" text="كفر عمبل" />
+    <string id="crus_s_tell_aqibrin" text="تل عقبرين" />
+    <string id="crus_s_sarmada" text="سرمدا" />
+    <string id="crus_s_cyrrhus" text="قورس" />
     <string id="crus2_t_recruit" text="مجند صليبي" />
     <string id="crus2_t_sergeant" text="سرجنت مشاة" />
     <string id="crus2_t_crossbowman" text="نشّاب" />
@@ -1050,6 +1200,47 @@
     <string id="arm_s_anazarbus" text="عنيزربة" />
     <string id="arm_s_kesoun" text="كيسون" />
     <string id="arm_s_raban" text="رعبان" />
+    <string id="arm_s_til_hamdoun" text="قلعة تل حمدون" />
+    <string id="arm_s_partzerpert" text="قلعة بارتزربرت" />
+    <string id="arm_s_korikos" text="قلعة كوريكوس" />
+    <string id="arm_s_silifke" text="قلعة سلفكة" />
+    <string id="arm_s_sarvandikar" text="قلعة سرفندكار" />
+    <string id="arm_s_gaban" text="قلعة غبان" />
+    <string id="arm_s_amuda" text="قلعة عمودة" />
+    <string id="arm_s_kizkalesi" text="قيزقلعة سي" />
+    <string id="arm_s_gastria" text="غاستريا" />
+    <string id="arm_s_kanytelis" text="كانيتليس" />
+    <string id="arm_s_elaiussa" text="إلايوسا" />
+    <string id="arm_s_hemite" text="هيميته" />
+    <string id="arm_s_gokveli" text="غوكفلي" />
+    <string id="arm_s_meydan" text="ميدان" />
+    <string id="arm_s_feke" text="فكه" />
+    <string id="arm_s_andirin" text="أندرين" />
+    <string id="arm_s_haruniye" text="هارونية" />
+    <string id="arm_s_kadirli" text="قادرلي" />
+    <string id="arm_s_karaisali" text="قره ايصالي" />
+    <string id="arm_s_saimbeyli" text="سايم بيلي" />
+    <string id="arm_s_vardanus" text="وردانوس" />
+    <string id="arm_s_kokison" text="كوكيسون" />
+    <string id="arm_s_sgevra" text="سغيفرا" />
+    <string id="arm_s_simnados" text="سيمنادوس" />
+    <string id="arm_s_missis" text="مصيصة" />
+    <string id="arm_s_ayas" text="أياس" />
+    <string id="arm_s_malavans" text="مالافانس" />
+    <string id="arm_s_tumlu" text="تومولو" />
+    <string id="arm_s_chandir" text="تشاندر" />
+    <string id="arm_s_geben" text="غبن" />
+    <string id="arm_s_sariz" text="ساريز" />
+    <string id="arm_s_bahce" text="باهتشة" />
+    <string id="arm_s_hasanbeyli" text="حسن بيلي" />
+    <string id="arm_s_erzin" text="أرزين" />
+    <string id="arm_s_payas" text="باياس" />
+    <string id="arm_s_dortyol" text="دورتيول" />
+    <string id="arm_s_yarpuz" text="يارپوز" />
+    <string id="arm_s_kastalon" text="كاستالون" />
+    <string id="arm_s_sinap" text="سيناب" />
+    <string id="arm_s_osmaniye" text="عثمانية" />
+    <string id="arm_s_amik" text="العمق" />
     <string id="arm2_t_recruit" text="مجند كيليكي" />
     <string id="arm2_t_azat" text="رمّاح آزات" />
     <string id="arm2_t_archer" text="رامي كيليكي" />
@@ -1100,6 +1291,50 @@
     <string id="krkh_s_khotan" text="ختن" />
     <string id="krkh_s_uzgen" text="أوزجند" />
     <string id="krkh_s_bukhara" text="بخارى" />
+    <string id="krkh_s_tashkent" text="قلعة طشقند" />
+    <string id="krkh_s_akhsikath" text="قلعة أخسيكث" />
+    <string id="krkh_s_termez" text="قلعة ترمذ" />
+    <string id="krkh_s_khujand" text="قلعة خجند" />
+    <string id="krkh_s_karshi" text="قلعة نخشب" />
+    <string id="krkh_s_sayram" text="قلعة إسفيجاب" />
+    <string id="krkh_s_taraz" text="قلعة طراز" />
+    <string id="krkh_s_otrar" text="قلعة فاراب" />
+    <string id="krkh_s_sighnaq" text="قلعة سغناق" />
+    <string id="krkh_s_zamin" text="زامين" />
+    <string id="krkh_s_uratepe" text="أورا تپه" />
+    <string id="krkh_s_panjikent" text="بنجيكث" />
+    <string id="krkh_s_dabusiyya" text="دبوسية" />
+    <string id="krkh_s_kish" text="كش" />
+    <string id="krkh_s_vardanzi" text="وردانزي" />
+    <string id="krkh_s_paykand" text="بيكند" />
+    <string id="krkh_s_kabudjama" text="كبودجامة" />
+    <string id="krkh_s_nujkath" text="نوجكث" />
+    <string id="krkh_s_barskhan" text="برسخان" />
+    <string id="krkh_s_suyab" text="سوياب" />
+    <string id="krkh_s_navekat" text="نافكات" />
+    <string id="krkh_s_kulan" text="كولان" />
+    <string id="krkh_s_aspara" text="أسبرة" />
+    <string id="krkh_s_merki" text="ميركي" />
+    <string id="krkh_s_jand" text="جند" />
+    <string id="krkh_s_yangikent" text="يانگي كنت" />
+    <string id="krkh_s_sauran" text="سوران" />
+    <string id="krkh_s_kermine" text="كرمينة" />
+    <string id="krkh_s_ghijduvan" text="غجدوان" />
+    <string id="krkh_s_rabinjan" text="رابنجان" />
+    <string id="krkh_s_zarafshan" text="زرافشان" />
+    <string id="krkh_s_miankal" text="ميانكال" />
+    <string id="krkh_s_dizak" text="ديزك" />
+    <string id="krkh_s_khavas" text="خواص" />
+    <string id="krkh_s_banaket" text="بنكث" />
+    <string id="krkh_s_niyaz" text="نياز" />
+    <string id="krkh_s_osrushana" text="أشروسنة" />
+    <string id="krkh_s_farkhar" text="فرخار" />
+    <string id="krkh_s_chinaz" text="چيناز" />
+    <string id="krkh_s_arys" text="أريس" />
+    <string id="krkh_s_karnak" text="كارناك" />
+    <string id="krkh_s_turkestan" text="تركستان" />
+    <string id="krkh_s_iskijkath" text="إسكيجكث" />
+    <string id="krkh_s_chimkent" text="شيمكنت" />
     <string id="kk2_t_recruit" text="مجند قراخاني" />
     <string id="kk2_t_yigit" text="ييغيت" />
     <string id="kk2_t_okcu" text="أوقچو" />

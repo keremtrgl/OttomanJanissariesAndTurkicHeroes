@@ -9,9 +9,12 @@ using TaleWorlds.Localization;
 namespace SeljukEmpire.CharacterCreation
 {
     /// <summary>
-    /// Injects authentic Byzantine, Abbasid &amp; Georgian character creation narrative options into
+    /// Injects authentic Byzantine, Abbasid, Georgian, Crusader (Culture.vlandia), Cilician Armenian
+    /// (Culture.battania) &amp; Kara-Khanid (Culture.khuzait) character creation narrative options into
     /// Mount &amp; Blade II: Bannerlord, mirroring SeljukCharacterCreationContentHandler's approach
-    /// for the three rival-kingdom cultures introduced by this mod. Safely integrated with Native
+    /// for the rival-kingdom cultures introduced by this mod. Latin Empire has no separate entry here:
+    /// it shares Culture.empire with Byzantium, and narrative visibility is gated by culture, not
+    /// kingdom, so the Byzantine options already cover it. Safely integrated with Native
     /// CharacterCreationManager, 3D parent model equipment, and effect pipelines.
     /// </summary>
     /// <remarks>
@@ -76,6 +79,9 @@ namespace SeljukEmpire.CharacterCreation
                 InjectByzantineNarratives(menus);
                 InjectAbbasidNarratives(menus);
                 InjectGeorgianNarratives(menus);
+                InjectCrusaderNarratives(menus);
+                InjectArmenianNarratives(menus);
+                InjectKaraKhanidNarratives(menus);
 
                 _isOptionsInjected = true;
             }
@@ -337,6 +343,258 @@ namespace SeljukEmpire.CharacterCreation
             }
         }
 
+        // ============================== CRUSADER STATES (Culture.vlandia) ==============================
+
+        private void InjectCrusaderNarratives(MBReadOnlyList<NarrativeMenu> menus)
+        {
+            if (menus.Count > 0)
+            {
+                var parentMenu = menus[0];
+                AddOption(parentMenu, "crus_opt_norman_knight", "{=crus_cc_norman_knight_name}Norman Knightly Family", "{=crus_cc_norman_knight_desc}Your family descends from Norman knights who followed the First Crusade east; you were raised with lance and warhorse from childhood.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.OneHanded }, 15, DefaultCharacterAttributes.Vigor, 1, 10, 1200,
+                    IsCrusaderCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "crus_opt_antiochene_noble", "{=crus_cc_antiochene_noble_name}Antiochene Frontier Lord's Family", "{=crus_cc_antiochene_noble_desc}Your family holds a frontier fief near Antioch, its lords accustomed to skirmishing against Turkoman raiders and Muslim neighbors alike.",
+                    new[] { DefaultSkills.Polearm, DefaultSkills.Athletics }, 15, DefaultCharacterAttributes.Control, 1, 15, 1000,
+                    IsCrusaderCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "crus_opt_genoese_merchant", "{=crus_cc_genoese_merchant_name}Genoese Trading Family", "{=crus_cc_genoese_merchant_desc}Your family are Genoese merchants who settled in Antioch's harbor quarter, growing wealthy on the trade between Outremer and Italy.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1300,
+                    IsCrusaderCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
+
+                AddOption(parentMenu, "crus_opt_hospitaller", "{=crus_cc_hospitaller_name}Line of a Hospitaller Serving Brother", "{=crus_cc_hospitaller_desc}Your father served the Knights Hospitaller as an armsman, tending the sick and fighting the Crusader states' many enemies.",
+                    new[] { DefaultSkills.OneHanded, DefaultSkills.Athletics }, 15, DefaultCharacterAttributes.Control, 1, 15, 700,
+                    IsCrusaderCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "crus_opt_pilgrim_settler", "{=crus_cc_pilgrim_settler_name}Poor Pilgrim Settler Family", "{=crus_cc_pilgrim_settler_desc}Your family walked to the Holy Land on the First Crusade and stayed, scraping out a modest living on the Levantine frontier.",
+                    new[] { DefaultSkills.Scouting, DefaultSkills.Bow }, 15, DefaultCharacterAttributes.Cunning, 1, 10, 500,
+                    IsCrusaderCultureSelected, mgr => SetParentOccupation(mgr, "Herder"));
+            }
+
+            if (menus.Count > 1)
+            {
+                var childMenu = menus[1];
+                AddOption(childMenu, "crus_child_squire_training", "{=crus_cc_squire_training_name}You Trained with Wooden Swords in a Norman Bailey", "{=crus_cc_squire_training_desc}You sparred with wooden swords in your family's bailey, drilled by an old man-at-arms in the Norman style.",
+                    new[] { DefaultSkills.OneHanded, DefaultSkills.Athletics }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(childMenu, "crus_child_levantine", "{=crus_cc_levantine_name}You Grew Up Speaking Both French and Arabic", "{=crus_cc_levantine_desc}Raised among Levantine servants and neighbors, you grew up fluent in Arabic as well as your family's own French.",
+                    new[] { DefaultSkills.Charm, DefaultSkills.Trade }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(childMenu, "crus_child_church_school", "{=crus_cc_church_school_name}You Learned Latin and Scripture at a Church School", "{=crus_cc_church_school_desc}At a parish church school you learned Latin letters and scripture from a Levantine-born priest.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(childMenu, "crus_child_market", "{=crus_cc_market_name}You Learned Trade in the Markets of Antioch", "{=crus_cc_market_desc}In the crowded markets of Antioch you learned to haggle among Franks, Armenians, and Greeks alike.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Steward }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+            }
+
+            if (menus.Count > 2)
+            {
+                var youthMenu = menus[2];
+                AddOption(youthMenu, "crus_youth_squire", "{=crus_cc_squire_name}You Served as a Squire to a Landed Knight", "{=crus_cc_squire_desc}You served as a squire to a landed knight, tending his horse and arms and learning the ways of mounted war.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.OneHanded, DefaultSkills.Polearm }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(youthMenu, "crus_youth_garrison", "{=crus_cc_garrison_name}You Stood Garrison Duty in a Frontier Castle", "{=crus_cc_garrison_desc}You stood long watches on a frontier castle's walls, crossbow in hand, wary of raids from the surrounding hills.",
+                    new[] { DefaultSkills.Athletics, DefaultSkills.Crossbow, DefaultSkills.Tactics }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(youthMenu, "crus_youth_scribe", "{=crus_cc_scribe_name}You Studied as a Scribe in a Cathedral Chapter", "{=crus_cc_scribe_desc}You studied under the canons of a cathedral chapter, learning to read, write, and keep accounts.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm, DefaultSkills.Leadership }, 15, null, 0, 0, 0, IsCrusaderCultureSelected, null);
+            }
+
+            if (menus.Count > 3)
+            {
+                var careerMenu = menus[3];
+                AddOption(careerMenu, "crus_car_knighted", "{=crus_cc_knighted_name}You Were Knighted and Joined a Lord's Retinue", "{=crus_cc_knighted_desc}You were girded with a sword and knighted, taking your place in a lord's mounted retinue.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Polearm, DefaultSkills.OneHanded }, 15, null, 0, 20, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(careerMenu, "crus_car_templar", "{=crus_cc_templar_name}You Joined the Templars as a Serving Brother", "{=crus_cc_templar_desc}You took vows as a serving brother of the Templar order, garrisoning its castles and escorting pilgrims.",
+                    new[] { DefaultSkills.OneHanded, DefaultSkills.Crossbow, DefaultSkills.Athletics }, 15, null, 0, 15, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(careerMenu, "crus_car_italian_trade", "{=crus_cc_italian_trade_name}You Traded Alongside the Italian Merchant Fleets", "{=crus_cc_italian_trade_desc}You worked alongside Genoese and Venetian merchant fleets, learning the business that keeps the Crusader states alive.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Charm, DefaultSkills.Steward }, 15, null, 0, 15, 0, IsCrusaderCultureSelected, null);
+            }
+
+            if (menus.Count > 4)
+            {
+                var deedMenu = menus[4];
+                AddOption(deedMenu, "crus_deed_siege_held", "{=crus_cc_siege_held_name}You Held a Wall During a Great Siege", "{=crus_cc_siege_held_desc}You held your section of the wall through a great siege, fighting off assault after assault.",
+                    new[] { DefaultSkills.Tactics, DefaultSkills.Athletics }, 15, null, 0, 30, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(deedMenu, "crus_deed_charge", "{=crus_cc_charge_name}You Led a Decisive Cavalry Charge", "{=crus_cc_charge_desc}You led a decisive cavalry charge that broke the enemy line at the moment it mattered most.",
+                    new[] { DefaultSkills.Leadership, DefaultSkills.Riding }, 15, null, 0, 25, 0, IsCrusaderCultureSelected, null);
+
+                AddOption(deedMenu, "crus_deed_ransom", "{=crus_cc_ransom_name}You Negotiated a Captured Lord's Ransom", "{=crus_cc_ransom_desc}You negotiated the ransom of a captured lord, earning both gratitude and a reputation for shrewdness.",
+                    new[] { DefaultSkills.Charm, DefaultSkills.Steward }, 15, null, 0, 20, 0, IsCrusaderCultureSelected, null);
+            }
+        }
+
+        // ============================== CILICIAN ARMENIA (Culture.battania) ==============================
+
+        private void InjectArmenianNarratives(MBReadOnlyList<NarrativeMenu> menus)
+        {
+            if (menus.Count > 0)
+            {
+                var parentMenu = menus[0];
+                AddOption(parentMenu, "arm_opt_naxarar", "{=arm_cc_naxarar_name}Naxarar Noble Family", "{=arm_cc_naxarar_desc}You come from an ancient Naxarar house, Armenia's hereditary feudal nobility, holding your own mountain fief and vassal warriors.",
+                    new[] { DefaultSkills.Leadership, DefaultSkills.Polearm }, 15, DefaultCharacterAttributes.Vigor, 1, 10, 1300,
+                    IsArmenianCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "arm_opt_azat", "{=arm_cc_azat_name}Azat Landholding Warrior Family", "{=arm_cc_azat_desc}Your family are azat, free landholding warriors who owe cavalry service to their Naxarar lord in exchange for their mountain lands.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.OneHanded }, 15, DefaultCharacterAttributes.Control, 1, 15, 800,
+                    IsArmenianCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "arm_opt_silk_merchant", "{=arm_cc_silk_merchant_name}Armenian Silk Road Merchant Family", "{=arm_cc_silk_merchant_desc}Your family trades silk and goods along routes stretching from Cilicia to Persia, part of the great medieval Armenian merchant network.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1200,
+                    IsArmenianCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
+
+                AddOption(parentMenu, "arm_opt_church", "{=arm_cc_church_name}Armenian Church Clergy Family", "{=arm_cc_church_desc}You were raised in a family devoted to the Armenian Apostolic Church, copying scripture and keeping the faith alive in the mountains.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 900,
+                    IsArmenianCultureSelected, mgr => SetParentOccupation(mgr, "Farmer"));
+
+                AddOption(parentMenu, "arm_opt_herder", "{=arm_cc_herder_name}Mountain Herder Family", "{=arm_cc_herder_desc}You grew up herding goats along the steep slopes of the Taurus mountains, learning to survive where the land offers little.",
+                    new[] { DefaultSkills.Athletics, DefaultSkills.Bow }, 15, DefaultCharacterAttributes.Endurance, 1, 10, 500,
+                    IsArmenianCultureSelected, mgr => SetParentOccupation(mgr, "Herder"));
+            }
+
+            if (menus.Count > 1)
+            {
+                var childMenu = menus[1];
+                AddOption(childMenu, "arm_child_mountain_ride", "{=arm_cc_mountain_ride_name}You Rode Mountain Trails from a Young Age", "{=arm_cc_mountain_ride_desc}You rode narrow mountain trails from a young age, learning balance and nerve along the cliff edges of the Taurus.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Athletics }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+
+                AddOption(childMenu, "arm_child_falconry", "{=arm_cc_falconry_name}You Learned Falconry in the Highlands", "{=arm_cc_falconry_desc}You learned to fly falcons and track game in the highlands above your family's home.",
+                    new[] { DefaultSkills.Bow, DefaultSkills.Scouting }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+
+                AddOption(childMenu, "arm_child_monastery", "{=arm_cc_monastery_name}You Learned Armenian Script at a Monastery", "{=arm_cc_monastery_desc}You learned to read and write the Armenian script from monks at a nearby monastery.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+
+                AddOption(childMenu, "arm_child_trade", "{=arm_cc_trade_name}You Learned Trade Along the Mountain Roads", "{=arm_cc_trade_desc}You learned to bargain and weigh goods along the mountain trade roads with your family's caravans.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Steward }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+            }
+
+            if (menus.Count > 2)
+            {
+                var youthMenu = menus[2];
+                AddOption(youthMenu, "arm_youth_princely_guard", "{=arm_cc_princely_guard_name}You Joined the Prince's Household Guard", "{=arm_cc_princely_guard_desc}You joined the Cilician prince's household guard, training in spear and sword alongside his sworn men.",
+                    new[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Tactics }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+
+                AddOption(youthMenu, "arm_youth_border_watch", "{=arm_cc_border_watch_name}You Watched the Mountain Passes as a Border Scout", "{=arm_cc_border_watch_desc}You watched the mountain passes as a scout, ready to warn of Byzantine or Seljuk incursions.",
+                    new[] { DefaultSkills.Scouting, DefaultSkills.Bow, DefaultSkills.Riding }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+
+                AddOption(youthMenu, "arm_youth_monastery_school", "{=arm_cc_monastery_school_name}You Studied at a Renowned Monastery School", "{=arm_cc_monastery_school_desc}You studied theology and letters at one of Cilicia's renowned monastery schools.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Leadership, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsArmenianCultureSelected, null);
+            }
+
+            if (menus.Count > 3)
+            {
+                var careerMenu = menus[3];
+                AddOption(careerMenu, "arm_car_ayrudzi", "{=arm_cc_ayrudzi_name}You Were Chosen for the Elite Ayrudzi Cavalry", "{=arm_cc_ayrudzi_desc}Your skill in the saddle earned you a place among the Ayrudzi, Cilicia's elite cavalry guard.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Polearm, DefaultSkills.OneHanded }, 15, null, 0, 20, 0, IsArmenianCultureSelected, null);
+
+                AddOption(careerMenu, "arm_car_naxarar_retainer", "{=arm_cc_naxarar_retainer_name}You Became a Naxarar Lord's Trusted Retainer", "{=arm_cc_naxarar_retainer_desc}You became a trusted retainer to a Naxarar lord, advising him and leading his men in the field.",
+                    new[] { DefaultSkills.Leadership, DefaultSkills.Charm, DefaultSkills.Tactics }, 15, null, 0, 15, 0, IsArmenianCultureSelected, null);
+
+                AddOption(careerMenu, "arm_car_intermediary", "{=arm_cc_intermediary_name}You Served as an Interpreter Between Christian and Muslim Courts", "{=arm_cc_intermediary_desc}Fluent in several tongues, you served as an interpreter between Christian and Muslim courts, a role Armenians were often trusted with.",
+                    new[] { DefaultSkills.Charm, DefaultSkills.Trade, DefaultSkills.Steward }, 15, null, 0, 15, 0, IsArmenianCultureSelected, null);
+            }
+
+            if (menus.Count > 4)
+            {
+                var deedMenu = menus[4];
+                AddOption(deedMenu, "arm_deed_fortress_defense", "{=arm_cc_fortress_defense_name}You Held a Mountain Fortress Against Siege", "{=arm_cc_fortress_defense_desc}You held a mountain fortress against a determined siege until the besiegers finally gave up and withdrew.",
+                    new[] { DefaultSkills.Tactics, DefaultSkills.Athletics }, 15, null, 0, 30, 0, IsArmenianCultureSelected, null);
+
+                AddOption(deedMenu, "arm_deed_battle", "{=arm_cc_battle_name}You Fought with Distinction Against Byzantine or Seljuk Forces", "{=arm_cc_battle_desc}You fought with distinction in a pitched battle against encroaching Byzantine or Seljuk forces.",
+                    new[] { DefaultSkills.Leadership, DefaultSkills.OneHanded }, 15, null, 0, 25, 0, IsArmenianCultureSelected, null);
+
+                AddOption(deedMenu, "arm_deed_negotiation", "{=arm_cc_negotiation_name}You Negotiated a Vital Truce for Your People", "{=arm_cc_negotiation_desc}You negotiated a vital truce that spared your people from a war they could not have won.",
+                    new[] { DefaultSkills.Charm, DefaultSkills.Steward }, 15, null, 0, 20, 0, IsArmenianCultureSelected, null);
+            }
+        }
+
+        // ============================== KARA-KHANID KHANATE (Culture.khuzait) ==============================
+
+        private void InjectKaraKhanidNarratives(MBReadOnlyList<NarrativeMenu> menus)
+        {
+            if (menus.Count > 0)
+            {
+                var parentMenu = menus[0];
+                AddOption(parentMenu, "krkh_opt_khan_lineage", "{=krkh_cc_khan_lineage_name}Distant Branch of a Khanal Lineage", "{=krkh_cc_khan_lineage_desc}You descend from a minor branch of a Kara-Khanid ruling house, raised amid the customs and rivalries of the khan's court.",
+                    new[] { DefaultSkills.Leadership, DefaultSkills.Riding }, 15, DefaultCharacterAttributes.Vigor, 1, 10, 1300,
+                    IsKaraKhanidCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "krkh_opt_tarkhan", "{=krkh_cc_tarkhan_name}Tarkhan Noble Family", "{=krkh_cc_tarkhan_desc}Your family holds Tarkhan rank, a tax-exempt warrior nobility owing horsemen to the Khan in exchange for their steppe privileges.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Bow }, 15, DefaultCharacterAttributes.Control, 1, 15, 1000,
+                    IsKaraKhanidCultureSelected, mgr => SetParentOccupation(mgr, "Retainer"));
+
+                AddOption(parentMenu, "krkh_opt_silk_merchant", "{=krkh_cc_silk_merchant_name}Samarkand Silk Road Merchant Family", "{=krkh_cc_silk_merchant_desc}Your family trades in the bazaars of Samarkand and Bukhara, at the very heart of the Silk Road's wealth.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 1300,
+                    IsKaraKhanidCultureSelected, mgr => SetParentOccupation(mgr, "Merchant"));
+
+                AddOption(parentMenu, "krkh_opt_madrasa", "{=krkh_cc_madrasa_name}Madrasa Scholar Family", "{=krkh_cc_madrasa_desc}Your family are scholars at one of Samarkand's madrasas, part of the wave of learning that followed the Kara-Khanids' conversion to Islam.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, DefaultCharacterAttributes.Intelligence, 1, 10, 900,
+                    IsKaraKhanidCultureSelected, mgr => SetParentOccupation(mgr, "Farmer"));
+
+                AddOption(parentMenu, "krkh_opt_nomad", "{=krkh_cc_nomad_name}Steppe Nomad Family", "{=krkh_cc_nomad_desc}You grew up following the herds across the open steppe, in the same way of life your Karluk and Yaghma ancestors once lived.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Bow }, 15, DefaultCharacterAttributes.Cunning, 1, 10, 500,
+                    IsKaraKhanidCultureSelected, mgr => SetParentOccupation(mgr, "Herder"));
+            }
+
+            if (menus.Count > 1)
+            {
+                var childMenu = menus[1];
+                AddOption(childMenu, "krkh_child_horseback", "{=krkh_cc_horseback_name}You Rode Before You Could Properly Walk", "{=krkh_cc_horseback_desc}You rode before you could properly walk, as is the way of every steppe-born child.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Athletics }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(childMenu, "krkh_child_archery", "{=krkh_cc_archery_name}You Trained in Horse-Archery from Childhood", "{=krkh_cc_archery_desc}You trained in horse-archery from childhood, shooting at targets from a moving pony.",
+                    new[] { DefaultSkills.Bow, DefaultSkills.Scouting }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(childMenu, "krkh_child_madrasa", "{=krkh_cc_madrasa_child_name}You Studied Quran and Arabic at a Mosque School", "{=krkh_cc_madrasa_child_desc}You studied the Quran and Arabic letters at a mosque school in one of the Khanate's settled cities.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(childMenu, "krkh_child_bazaar", "{=krkh_cc_bazaar_name}You Learned Trade in the Bazaars of Samarkand", "{=krkh_cc_bazaar_desc}You learned to weigh silk and haggle over prices in the crowded bazaars of Samarkand.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Steward }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+            }
+
+            if (menus.Count > 2)
+            {
+                var youthMenu = menus[2];
+                AddOption(youthMenu, "krkh_youth_khan_guard", "{=krkh_cc_khan_guard_name}You Joined the Khan's Household Guard", "{=krkh_cc_khan_guard_desc}You joined the Khan's household guard, training with spear and sword among his sworn horsemen.",
+                    new[] { DefaultSkills.Polearm, DefaultSkills.OneHanded, DefaultSkills.Riding }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(youthMenu, "krkh_youth_horse_archer", "{=krkh_cc_horse_archer_name}You Rode as a Horse-Archer Skirmisher", "{=krkh_cc_horse_archer_desc}You rode as a horse-archer skirmisher, harassing rivals with volleys before wheeling away.",
+                    new[] { DefaultSkills.Bow, DefaultSkills.Riding, DefaultSkills.Scouting }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(youthMenu, "krkh_youth_madrasa_student", "{=krkh_cc_madrasa_student_name}You Studied at Ibrahim Tamgach Khan's Madrasa in Samarkand", "{=krkh_cc_madrasa_student_desc}You studied law and statecraft at the great madrasa Ibrahim Tamgach Khan founded in Samarkand.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Leadership, DefaultSkills.Charm }, 15, null, 0, 0, 0, IsKaraKhanidCultureSelected, null);
+            }
+
+            if (menus.Count > 3)
+            {
+                var careerMenu = menus[3];
+                AddOption(careerMenu, "krkh_car_tarkhan_cavalry", "{=krkh_cc_tarkhan_cavalry_name}You Joined the Elite Tarkhan Heavy Cavalry", "{=krkh_cc_tarkhan_cavalry_desc}Your prowess in the saddle earned you a place among the Khanate's elite Tarkhan heavy cavalry.",
+                    new[] { DefaultSkills.Riding, DefaultSkills.Polearm, DefaultSkills.OneHanded }, 15, null, 0, 20, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(careerMenu, "krkh_car_caravan_trader", "{=krkh_cc_caravan_trader_name}You Led Caravans Along the Silk Road", "{=krkh_cc_caravan_trader_desc}You led trade caravans along the Silk Road, learning to survive both bandits and hard bargains.",
+                    new[] { DefaultSkills.Trade, DefaultSkills.Riding, DefaultSkills.Steward }, 15, null, 0, 15, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(careerMenu, "krkh_car_court_scribe", "{=krkh_cc_court_scribe_name}You Served as a Scribe at the Khan's Court", "{=krkh_cc_court_scribe_desc}You served as a scribe at the Khan's court, drafting decrees and keeping the treasury's accounts.",
+                    new[] { DefaultSkills.Steward, DefaultSkills.Charm, DefaultSkills.Leadership }, 15, null, 0, 15, 0, IsKaraKhanidCultureSelected, null);
+            }
+
+            if (menus.Count > 4)
+            {
+                var deedMenu = menus[4];
+                AddOption(deedMenu, "krkh_deed_skirmish_won", "{=krkh_cc_skirmish_won_name}You Won a Decisive Horse-Archery Skirmish", "{=krkh_cc_skirmish_won_desc}You won a decisive skirmish, your arrows breaking the enemy's nerve before they ever closed to melee.",
+                    new[] { DefaultSkills.Bow, DefaultSkills.Riding }, 15, null, 0, 30, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(deedMenu, "krkh_deed_caravan_defense", "{=krkh_cc_caravan_defense_name}You Defended a Caravan from Raiders", "{=krkh_cc_caravan_defense_desc}You defended a Silk Road caravan from raiders, saving its goods and the lives of its merchants.",
+                    new[] { DefaultSkills.Tactics, DefaultSkills.Bow }, 15, null, 0, 25, 0, IsKaraKhanidCultureSelected, null);
+
+                AddOption(deedMenu, "krkh_deed_seljuk_rival", "{=krkh_cc_seljuk_rival_name}You Distinguished Yourself Against Seljuk Rivals", "{=krkh_cc_seljuk_rival_desc}You distinguished yourself in a clash against Seljuk rivals contesting the Khanate's borders.",
+                    new[] { DefaultSkills.Leadership, DefaultSkills.OneHanded }, 15, null, 0, 20, 0, IsKaraKhanidCultureSelected, null);
+            }
+        }
+
         // ============================== SHARED HELPERS ==============================
 
         private static bool IsByzantineCultureSelected(CharacterCreationManager manager)
@@ -368,6 +626,42 @@ namespace SeljukEmpire.CharacterCreation
             try
             {
                 return manager?.CharacterCreationContent?.SelectedCulture?.StringId == "sturgia";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private static bool IsCrusaderCultureSelected(CharacterCreationManager manager)
+        {
+            try
+            {
+                return manager?.CharacterCreationContent?.SelectedCulture?.StringId == "vlandia";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private static bool IsArmenianCultureSelected(CharacterCreationManager manager)
+        {
+            try
+            {
+                return manager?.CharacterCreationContent?.SelectedCulture?.StringId == "battania";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private static bool IsKaraKhanidCultureSelected(CharacterCreationManager manager)
+        {
+            try
+            {
+                return manager?.CharacterCreationContent?.SelectedCulture?.StringId == "khuzait";
             }
             catch (Exception)
             {

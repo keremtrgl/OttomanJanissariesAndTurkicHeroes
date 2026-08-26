@@ -483,6 +483,7 @@
     <string id="byz_house_tarchaneiotes" text="塔尔哈涅奥特斯家族" />
     <string id="byz_ln_alexios_komnenos" text="阿莱克修斯·科穆宁" />
     <string id="byz_ln_andronikos_doukas" text="安德罗尼卡·杜卡斯" />
+    <string id="byz_ln_anna_diogenissa" text="安娜·狄奥基尼萨" />
     <string id="byz_ln_irene_doukaina" text="伊琳娜·杜凯娜" />
     <string id="byz_ln_joseph_tarchaneiotes" text="约瑟夫·塔尔哈涅奥特斯" />
     <string id="byz_ln_katakalon_kekaumenos" text="卡塔卡隆·凯考梅诺斯" />
@@ -654,6 +655,114 @@
     <string id="geo_cc_mountain_scout_name" text="你成为了山道边境侦察兵" />
     <string id="geo_cc_pilgrim_desc" text="你因保护前往圣地的朝圣商队免遭强盗侵害而声名远扬。" />
     <string id="geo_cc_pilgrim_name" text="你成为了朝圣者与受冤者的护盾" />
+    <string id="crus_cc_norman_knight_name" text="诺曼骑士家族" />
+    <string id="crus_cc_norman_knight_desc" text="你的家族出身诺曼骑士，随第一次十字军东征而来；你自幼便与长枪和战马为伴。" />
+    <string id="crus_cc_antiochene_noble_name" text="安条克边境领主家族" />
+    <string id="crus_cc_antiochene_noble_desc" text="你的家族在安条克附近拥有一处边境采邑，其领主习惯于与突厥蛮劫掠者和穆斯林邻居交战。" />
+    <string id="crus_cc_genoese_merchant_name" text="热那亚商人家族" />
+    <string id="crus_cc_genoese_merchant_desc" text="你的家族是定居在安条克港口区的热那亚商人，靠海外领地与意大利之间的贸易致富。" />
+    <string id="crus_cc_hospitaller_name" text="医院骑士团服务修士之后" />
+    <string id="crus_cc_hospitaller_desc" text="你的父亲曾以武装侍从身份效力医院骑士团，照料伤病，并与十字军国家的众多敌人作战。" />
+    <string id="crus_cc_pilgrim_settler_name" text="贫穷的朝圣定居者家族" />
+    <string id="crus_cc_pilgrim_settler_desc" text="你的家族在第一次十字军东征时徒步来到圣地并留了下来，在黎凡特边境勉强维生。" />
+    <string id="crus_cc_squire_training_name" text="你在诺曼庭院里用木剑练习" />
+    <string id="crus_cc_squire_training_desc" text="你在家族庭院里用木剑对练，由一位按诺曼方式训练你的老武士指导。" />
+    <string id="crus_cc_levantine_name" text="你在法语与阿拉伯语并用的环境中长大" />
+    <string id="crus_cc_levantine_desc" text="你在黎凡特仆人与邻居中长大，除了家族的法语外，阿拉伯语也说得流利。" />
+    <string id="crus_cc_church_school_name" text="你在教会学校学习拉丁文与圣经" />
+    <string id="crus_cc_church_school_desc" text="在一所教区教会学校里，你跟随一位出生在黎凡特的神父学习拉丁字母与圣经。" />
+    <string id="crus_cc_market_name" text="你在安条克的市场上学会了经商" />
+    <string id="crus_cc_market_desc" text="在安条克熙攘的市场上，你学会了与法兰克人、亚美尼亚人和希腊人讨价还价。" />
+    <string id="crus_cc_squire_name" text="你为一位有地骑士充任侍从" />
+    <string id="crus_cc_squire_desc" text="你为一位有地骑士充任侍从，照料他的战马与兵器，学习骑战之道。" />
+    <string id="crus_cc_garrison_name" text="你在边境城堡驻守" />
+    <string id="crus_cc_garrison_desc" text="你手持弩弓，在边境城堡的城墙上长时间站岗，警惕着来自四周丘陵的袭击。" />
+    <string id="crus_cc_scribe_name" text="你在座堂议事会中学习为书记" />
+    <string id="crus_cc_scribe_desc" text="在座堂议事会的教士们指导下，你学会了读、写与记账。" />
+    <string id="crus_cc_knighted_name" text="你受封为骑士，加入了一位领主的扈从" />
+    <string id="crus_cc_knighted_desc" text="你被授剑册封为骑士，在一位领主的骑马扈从中占得一席之地。" />
+    <string id="crus_cc_templar_name" text="你以服务修士身份加入圣殿骑士团" />
+    <string id="crus_cc_templar_desc" text="你立誓成为圣殿骑士团的服务修士，守卫其城堡并护送朝圣者。" />
+    <string id="crus_cc_italian_trade_name" text="你与意大利商船队一同经商" />
+    <string id="crus_cc_italian_trade_desc" text="你与热那亚和威尼斯的商船队一同工作，学会了维系十字军国家存续的生意。" />
+    <string id="crus_cc_siege_held_name" text="你在一场大围城中坚守城墙" />
+    <string id="crus_cc_siege_held_desc" text="你在一场大围城中坚守自己那段城墙，击退了一波又一波的进攻。" />
+    <string id="crus_cc_charge_name" text="你率领了一次决定性的骑兵冲锋" />
+    <string id="crus_cc_charge_desc" text="你在最关键的时刻率领骑兵冲锋，冲垮了敌军战线。" />
+    <string id="crus_cc_ransom_name" text="你为一位被俘领主谈成了赎金" />
+    <string id="crus_cc_ransom_desc" text="你为一位被俘领主谈成了赎金，既赢得了感激，也赢得了精明的名声。" />
+    <string id="arm_cc_naxarar_name" text="纳哈拉尔贵族家族" />
+    <string id="arm_cc_naxarar_desc" text="你出身于古老的纳哈拉尔家族，那是亚美尼亚世袭的封建贵族，拥有自己的山地采邑和附庸战士。" />
+    <string id="arm_cc_azat_name" text="阿扎特自由领地战士家族" />
+    <string id="arm_cc_azat_desc" text="你的家族属于阿扎特，即自由的有地战士，须以骑兵役换取纳哈拉尔领主授予的山地。" />
+    <string id="arm_cc_silk_merchant_name" text="亚美尼亚丝路商人家族" />
+    <string id="arm_cc_silk_merchant_desc" text="你的家族沿着从奇里乞亚延伸至波斯的商路贩卖丝绸与货物，是中世纪亚美尼亚商业网络的一部分。" />
+    <string id="arm_cc_church_name" text="亚美尼亚教会神职家族" />
+    <string id="arm_cc_church_desc" text="你在一个虔诚侍奉亚美尼亚使徒教会的家族中长大，抄写经文，在群山中延续信仰。" />
+    <string id="arm_cc_herder_name" text="山地牧民家族" />
+    <string id="arm_cc_herder_desc" text="你在托罗斯山陡峭的山坡上放牧山羊长大，学会了在贫瘠之地求生。" />
+    <string id="arm_cc_mountain_ride_name" text="你自幼便在山道上骑马" />
+    <string id="arm_cc_mountain_ride_desc" text="你自幼便在托罗斯山悬崖边缘的狭窄山道上骑马，练就了平衡与胆量。" />
+    <string id="arm_cc_falconry_name" text="你在高地学会了猎鹰之术" />
+    <string id="arm_cc_falconry_desc" text="你在家族住地上方的高地学会了放飞猎鹰、追踪猎物。" />
+    <string id="arm_cc_monastery_name" text="你在修道院学习亚美尼亚文字" />
+    <string id="arm_cc_monastery_desc" text="你跟随附近修道院的修士学会了读写亚美尼亚字母。" />
+    <string id="arm_cc_trade_name" text="你在山路上学会了经商" />
+    <string id="arm_cc_trade_desc" text="你随家族商队在山间商路上学会了讨价还价与称量货物。" />
+    <string id="arm_cc_princely_guard_name" text="你加入了亲王的近卫" />
+    <string id="arm_cc_princely_guard_desc" text="你加入了奇里乞亚亲王的近卫，与他的效忠武士一同训练长枪与剑术。" />
+    <string id="arm_cc_border_watch_name" text="你作为边境斥候守望山道" />
+    <string id="arm_cc_border_watch_desc" text="你作为斥候守望山道，随时准备预警拜占庭或塞尔柱的入侵。" />
+    <string id="arm_cc_monastery_school_name" text="你在一所著名的修道院学校求学" />
+    <string id="arm_cc_monastery_school_desc" text="你在奇里乞亚一所著名的修道院学校研习神学与文学。" />
+    <string id="arm_cc_ayrudzi_name" text="你被选入精锐的艾鲁德齐骑兵" />
+    <string id="arm_cc_ayrudzi_desc" text="你的马术为你在艾鲁德齐——奇里乞亚精锐骑兵卫队——中赢得一席之地。" />
+    <string id="arm_cc_naxarar_retainer_name" text="你成为一位纳哈拉尔领主的心腹家臣" />
+    <string id="arm_cc_naxarar_retainer_desc" text="你成为一位纳哈拉尔领主的心腹家臣，为他出谋划策并在战场上统领其部众。" />
+    <string id="arm_cc_intermediary_name" text="你在基督教与穆斯林宫廷间充当译员" />
+    <string id="arm_cc_intermediary_desc" text="凭借精通数种语言，你在基督教与穆斯林宫廷间充当译员，这是亚美尼亚人常被信任担当的角色。" />
+    <string id="arm_cc_fortress_defense_name" text="你守住了一座遭围攻的山城要塞" />
+    <string id="arm_cc_fortress_defense_desc" text="你守住了一座遭到顽强围攻的山城要塞，直到围攻者终于放弃撤退。" />
+    <string id="arm_cc_battle_name" text="你在对抗拜占庭或塞尔柱军队的会战中脱颖而出" />
+    <string id="arm_cc_battle_desc" text="你在一场对抗来犯的拜占庭或塞尔柱军队的会战中表现卓越。" />
+    <string id="arm_cc_negotiation_name" text="你为你的人民谈成了一场至关重要的休战" />
+    <string id="arm_cc_negotiation_desc" text="你谈成了一场至关重要的休战，使你的人民免于一场他们本无法取胜的战争。" />
+    <string id="krkh_cc_khan_lineage_name" text="汗族血脉的远支" />
+    <string id="krkh_cc_khan_lineage_desc" text="你出身于喀喇汗统治家族的一个旁支，成长于可汗宫廷的礼仪与权争之中。" />
+    <string id="krkh_cc_tarkhan_name" text="答剌罕贵族家族" />
+    <string id="krkh_cc_tarkhan_desc" text="你的家族拥有答剌罕的爵位，一种免税的战士贵族身份，须以骑兵回报可汗授予的草原特权。" />
+    <string id="krkh_cc_silk_merchant_name" text="撒马尔罕丝路商人家族" />
+    <string id="krkh_cc_silk_merchant_desc" text="你的家族在撒马尔罕与布哈拉的集市上经商，正处于丝绸之路财富的中心。" />
+    <string id="krkh_cc_madrasa_name" text="伊斯兰经学院学者家族" />
+    <string id="krkh_cc_madrasa_desc" text="你的家族是撒马尔罕一所经学院的学者，是喀喇汗人皈依伊斯兰教后学术浪潮的一部分。" />
+    <string id="krkh_cc_nomad_name" text="草原游牧家族" />
+    <string id="krkh_cc_nomad_desc" text="你在开阔的草原上追随畜群长大，延续着葛逻禄与样磨先祖曾经的生活方式。" />
+    <string id="krkh_cc_horseback_name" text="你在能好好走路之前就已会骑马" />
+    <string id="krkh_cc_horseback_desc" text="你在能好好走路之前就已会骑马，正如每个草原之子的成长方式。" />
+    <string id="krkh_cc_archery_name" text="你自幼便训练骑射" />
+    <string id="krkh_cc_archery_desc" text="你自幼便训练骑射，在奔跑的小马上射中目标。" />
+    <string id="krkh_cc_madrasa_child_name" text="你在清真寺学校学习古兰经与阿拉伯语" />
+    <string id="krkh_cc_madrasa_child_desc" text="你在汗国一座定居城市的清真寺学校学习古兰经与阿拉伯字母。" />
+    <string id="krkh_cc_bazaar_name" text="你在撒马尔罕的集市上学会了经商" />
+    <string id="krkh_cc_bazaar_desc" text="你在撒马尔罕熙攘的集市上学会了称量丝绸、讨价还价。" />
+    <string id="krkh_cc_khan_guard_name" text="你加入了可汗的近卫" />
+    <string id="krkh_cc_khan_guard_desc" text="你加入了可汗的近卫，与他的效忠骑兵一同训练长枪与剑术。" />
+    <string id="krkh_cc_horse_archer_name" text="你作为骑射游击手而战" />
+    <string id="krkh_cc_horse_archer_desc" text="你作为骑射游击手而战，以箭雨消耗对手后再脱离接触。" />
+    <string id="krkh_cc_madrasa_student_name" text="你在撒马尔罕求学于易卜拉欣·塔姆加赤汗的经学院" />
+    <string id="krkh_cc_madrasa_student_desc" text="你在易卜拉欣·塔姆加赤汗于撒马尔罕创立的大经学院研习法律与治国之道。" />
+    <string id="krkh_cc_tarkhan_cavalry_name" text="你加入了精锐的答剌罕重骑兵" />
+    <string id="krkh_cc_tarkhan_cavalry_desc" text="你的马术为你在汗国精锐的答剌罕重骑兵中赢得一席之地。" />
+    <string id="krkh_cc_caravan_trader_name" text="你带领商队行走于丝绸之路" />
+    <string id="krkh_cc_caravan_trader_desc" text="你带领商队行走于丝绸之路，学会了在盗匪与艰难议价中求存。" />
+    <string id="krkh_cc_court_scribe_name" text="你在可汗宫廷担任书记" />
+    <string id="krkh_cc_court_scribe_desc" text="你在可汗宫廷担任书记，起草敕令并管理国库账目。" />
+    <string id="krkh_cc_skirmish_won_name" text="你赢得了一场决定性的骑射遭遇战" />
+    <string id="krkh_cc_skirmish_won_desc" text="你赢得了一场决定性的遭遇战；敌军还未及近身搏斗，你的箭矢便已摧垮了他们的士气。" />
+    <string id="krkh_cc_caravan_defense_name" text="你击退了袭击商队的劫匪" />
+    <string id="krkh_cc_caravan_defense_desc" text="你击退了袭击一支丝路商队的劫匪，保住了货物与商人们的性命。" />
+    <string id="krkh_cc_seljuk_rival_name" text="你在对抗塞尔柱对手中脱颖而出" />
+    <string id="krkh_cc_seljuk_rival_desc" text="你在一场与争夺汗国边境的塞尔柱对手的冲突中表现卓越。" />
     <string id="geo_cc_rescue_desc" text="你穿过一条秘道，为一座被围困的山城要塞送去援助，救下了城中的百姓。" />
     <string id="geo_cc_rescue_name" text="你解救了一座被围困的山城要塞" />
     <string id="geo_cc_royal_cavalry_desc" text="你加入了在高加索边境作战的精锐王室骑兵团。" />
@@ -1005,6 +1114,47 @@
     <string id="crus_s_marash" text="马拉什" />
     <string id="crus_s_tarsus" text="塔尔苏斯" />
     <string id="crus_s_saruj" text="萨鲁季" />
+    <string id="crus_s_harim" text="哈里姆城堡" />
+    <string id="crus_s_sahyun" text="萨云城堡" />
+    <string id="crus_s_baghras" text="巴格拉斯城堡" />
+    <string id="crus_s_zerdana" text="泽尔达纳城堡" />
+    <string id="crus_s_najm" text="纳杰姆城堡" />
+    <string id="crus_s_duluk" text="杜卢克城堡" />
+    <string id="crus_s_azaz" text="阿扎兹城堡" />
+    <string id="crus_s_artah" text="阿尔塔赫" />
+    <string id="crus_s_latmin" text="拉特敏" />
+    <string id="crus_s_jisr_hadid" text="铁桥堡" />
+    <string id="crus_s_balatanos" text="巴拉塔诺斯" />
+    <string id="crus_s_trapesac" text="特拉佩萨克" />
+    <string id="crus_s_kaysun" text="凯松" />
+    <string id="crus_s_samosata" text="萨莫萨塔" />
+    <string id="crus_s_antab" text="安塔布" />
+    <string id="crus_s_qusayr" text="库塞尔" />
+    <string id="crus_s_bikisrail" text="比基斯赖尔" />
+    <string id="crus_s_til_khalid" text="泰勒哈利德" />
+    <string id="crus_s_zamanti" text="扎曼提" />
+    <string id="crus_s_sarmin" text="萨尔明" />
+    <string id="crus_s_maarrat" text="马阿拉特努曼" />
+    <string id="crus_s_albara" text="巴拉" />
+    <string id="crus_s_kafartab" text="卡法尔塔布" />
+    <string id="crus_s_apamea" text="阿帕梅亚" />
+    <string id="crus_s_jabala" text="贾巴拉" />
+    <string id="crus_s_qinnasrin" text="金纳斯林" />
+    <string id="crus_s_manbij" text="曼比季" />
+    <string id="crus_s_tell_aran" text="泰勒阿兰" />
+    <string id="crus_s_buzaa" text="布扎阿" />
+    <string id="crus_s_dabiq" text="达比克" />
+    <string id="crus_s_balis" text="巴利斯" />
+    <string id="crus_s_deir_semaan" text="代尔塞曼" />
+    <string id="crus_s_kfar_nabu" text="卡法尔纳布" />
+    <string id="crus_s_basufan" text="巴苏凡" />
+    <string id="crus_s_serjilla" text="塞尔吉拉" />
+    <string id="crus_s_ruweiha" text="鲁韦哈" />
+    <string id="crus_s_frikya" text="弗里基亚" />
+    <string id="crus_s_kafr_ambil" text="卡法尔安比勒" />
+    <string id="crus_s_tell_aqibrin" text="泰勒阿基布林" />
+    <string id="crus_s_sarmada" text="萨尔马达" />
+    <string id="crus_s_cyrrhus" text="库鲁斯" />
     <string id="crus2_t_recruit" text="十字军征召兵" />
     <string id="crus2_t_sergeant" text="步兵军士" />
     <string id="crus2_t_crossbowman" text="弩手" />
@@ -1050,6 +1200,47 @@
     <string id="arm_s_anazarbus" text="阿纳扎尔布斯" />
     <string id="arm_s_kesoun" text="凯苏恩" />
     <string id="arm_s_raban" text="拉班" />
+    <string id="arm_s_til_hamdoun" text="提尔哈姆敦城堡" />
+    <string id="arm_s_partzerpert" text="帕尔泽尔佩尔特城堡" />
+    <string id="arm_s_korikos" text="科里科斯城堡" />
+    <string id="arm_s_silifke" text="锡利夫凯城堡" />
+    <string id="arm_s_sarvandikar" text="萨尔万迪卡尔城堡" />
+    <string id="arm_s_gaban" text="加班城堡" />
+    <string id="arm_s_amuda" text="阿穆达城堡" />
+    <string id="arm_s_kizkalesi" text="克孜卡莱西" />
+    <string id="arm_s_gastria" text="加斯特里亚" />
+    <string id="arm_s_kanytelis" text="卡尼特利斯" />
+    <string id="arm_s_elaiussa" text="埃莱乌萨" />
+    <string id="arm_s_hemite" text="赫米特" />
+    <string id="arm_s_gokveli" text="格克韦利" />
+    <string id="arm_s_meydan" text="梅丹" />
+    <string id="arm_s_feke" text="费凯" />
+    <string id="arm_s_andirin" text="安德伦" />
+    <string id="arm_s_haruniye" text="哈鲁尼耶" />
+    <string id="arm_s_kadirli" text="卡德尔利" />
+    <string id="arm_s_karaisali" text="卡拉伊萨勒" />
+    <string id="arm_s_saimbeyli" text="赛姆贝伊利" />
+    <string id="arm_s_vardanus" text="瓦尔达努斯" />
+    <string id="arm_s_kokison" text="格克松" />
+    <string id="arm_s_sgevra" text="斯格夫拉" />
+    <string id="arm_s_simnados" text="西姆纳多斯" />
+    <string id="arm_s_missis" text="米西斯" />
+    <string id="arm_s_ayas" text="阿亚斯" />
+    <string id="arm_s_malavans" text="马拉万斯" />
+    <string id="arm_s_tumlu" text="图姆卢" />
+    <string id="arm_s_chandir" text="昌德尔" />
+    <string id="arm_s_geben" text="格本" />
+    <string id="arm_s_sariz" text="萨勒兹" />
+    <string id="arm_s_bahce" text="巴赫切" />
+    <string id="arm_s_hasanbeyli" text="哈桑贝伊利" />
+    <string id="arm_s_erzin" text="埃尔津" />
+    <string id="arm_s_payas" text="帕亚斯" />
+    <string id="arm_s_dortyol" text="德尔特约尔" />
+    <string id="arm_s_yarpuz" text="亚尔普兹" />
+    <string id="arm_s_kastalon" text="卡斯塔隆" />
+    <string id="arm_s_sinap" text="西纳普" />
+    <string id="arm_s_osmaniye" text="奥斯曼尼耶" />
+    <string id="arm_s_amik" text="阿米克" />
     <string id="arm2_t_recruit" text="西里西亚征召兵" />
     <string id="arm2_t_azat" text="阿扎特长枪兵" />
     <string id="arm2_t_archer" text="西里西亚弓箭手" />
@@ -1100,6 +1291,50 @@
     <string id="krkh_s_khotan" text="和田" />
     <string id="krkh_s_uzgen" text="乌兹根" />
     <string id="krkh_s_bukhara" text="布哈拉" />
+    <string id="krkh_s_tashkent" text="塔什干城堡" />
+    <string id="krkh_s_akhsikath" text="阿赫西凯特城堡" />
+    <string id="krkh_s_termez" text="铁尔梅兹城堡" />
+    <string id="krkh_s_khujand" text="苦盏城堡" />
+    <string id="krkh_s_karshi" text="卡尔希城堡" />
+    <string id="krkh_s_sayram" text="赛兰城堡" />
+    <string id="krkh_s_taraz" text="塔拉兹城堡" />
+    <string id="krkh_s_otrar" text="讹答剌城堡" />
+    <string id="krkh_s_sighnaq" text="锡格纳克城堡" />
+    <string id="krkh_s_zamin" text="扎明" />
+    <string id="krkh_s_uratepe" text="乌拉秋别" />
+    <string id="krkh_s_panjikent" text="片治肯特" />
+    <string id="krkh_s_dabusiyya" text="达布西亚" />
+    <string id="krkh_s_kish" text="基什" />
+    <string id="krkh_s_vardanzi" text="瓦尔丹济" />
+    <string id="krkh_s_paykand" text="拜康德" />
+    <string id="krkh_s_kabudjama" text="卡布贾马" />
+    <string id="krkh_s_nujkath" text="努杰卡特" />
+    <string id="krkh_s_barskhan" text="巴尔思罕" />
+    <string id="krkh_s_suyab" text="碎叶" />
+    <string id="krkh_s_navekat" text="纳维卡特" />
+    <string id="krkh_s_kulan" text="库兰" />
+    <string id="krkh_s_aspara" text="阿斯帕拉" />
+    <string id="krkh_s_merki" text="梅尔基" />
+    <string id="krkh_s_jand" text="毡的" />
+    <string id="krkh_s_yangikent" text="新城" />
+    <string id="krkh_s_sauran" text="苏兰" />
+    <string id="krkh_s_kermine" text="克尔米涅" />
+    <string id="krkh_s_ghijduvan" text="吉杜瓦尼" />
+    <string id="krkh_s_rabinjan" text="拉宾疆" />
+    <string id="krkh_s_zarafshan" text="泽拉夫尚" />
+    <string id="krkh_s_miankal" text="米安卡尔" />
+    <string id="krkh_s_dizak" text="迪扎克" />
+    <string id="krkh_s_khavas" text="哈瓦斯" />
+    <string id="krkh_s_banaket" text="巴纳基特" />
+    <string id="krkh_s_niyaz" text="尼亚兹" />
+    <string id="krkh_s_osrushana" text="乌斯鲁沙那" />
+    <string id="krkh_s_farkhar" text="法尔哈尔" />
+    <string id="krkh_s_chinaz" text="奇纳兹" />
+    <string id="krkh_s_arys" text="阿雷斯" />
+    <string id="krkh_s_karnak" text="卡尔纳克" />
+    <string id="krkh_s_turkestan" text="突厥斯坦" />
+    <string id="krkh_s_iskijkath" text="伊斯基杰卡特" />
+    <string id="krkh_s_chimkent" text="奇姆肯特" />
     <string id="kk2_t_recruit" text="喀喇汗新兵" />
     <string id="kk2_t_yigit" text="耶吉特" />
     <string id="kk2_t_okcu" text="奥克楚" />

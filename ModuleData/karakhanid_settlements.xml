@@ -6,4 +6,50 @@
   <Settlement id="town_K2" name="{=krkh_s_khotan}Khotan" />
   <Settlement id="town_K6" name="{=krkh_s_uzgen}Uzgen" />
   <Settlement id="town_K5" name="{=krkh_s_bukhara}Bukhara" />
+  <!-- Castles and villages renamed to real Kara-Khanid era Transoxiana/Turkestan cities and
+       towns (11th-12th c. Silk Road heartland). Same pattern as crusader/armenian_settlements.xml. -->
+  <Settlement id="castle_K1" name="{=krkh_s_tashkent}Tashkent Castle" />
+  <Settlement id="castle_K2" name="{=krkh_s_akhsikath}Akhsikath Castle" />
+  <Settlement id="castle_K3" name="{=krkh_s_termez}Termez Castle" />
+  <Settlement id="castle_K4" name="{=krkh_s_khujand}Khujand Castle" />
+  <Settlement id="castle_K5" name="{=krkh_s_karshi}Karshi Castle" />
+  <Settlement id="castle_K6" name="{=krkh_s_sayram}Sayram Castle" />
+  <Settlement id="castle_K7" name="{=krkh_s_taraz}Taraz Castle" />
+  <Settlement id="castle_K8" name="{=krkh_s_otrar}Otrar Castle" />
+  <Settlement id="castle_K9" name="{=krkh_s_sighnaq}Sighnaq Castle" />
+  <Settlement id="castle_village_K1_1" name="{=krkh_s_zamin}Zamin" />
+  <Settlement id="castle_village_K1_2" name="{=krkh_s_uratepe}Ura-Tepe" />
+  <Settlement id="castle_village_K2_1" name="{=krkh_s_panjikent}Panjikent" />
+  <Settlement id="castle_village_K2_2" name="{=krkh_s_dabusiyya}Dabusiyya" />
+  <Settlement id="castle_village_K3_1" name="{=krkh_s_kish}Kish" />
+  <Settlement id="castle_village_K3_2" name="{=krkh_s_vardanzi}Vardanzi" />
+  <Settlement id="castle_village_K4_1" name="{=krkh_s_paykand}Paykand" />
+  <Settlement id="castle_village_K4_2" name="{=krkh_s_kabudjama}Kabudjama" />
+  <Settlement id="castle_village_K5_1" name="{=krkh_s_nujkath}Nujkath" />
+  <Settlement id="castle_village_K5_2" name="{=krkh_s_barskhan}Barskhan" />
+  <Settlement id="castle_village_K6_1" name="{=krkh_s_suyab}Suyab" />
+  <Settlement id="castle_village_K6_2" name="{=krkh_s_navekat}Navekat" />
+  <Settlement id="castle_village_K7_1" name="{=krkh_s_kulan}Kulan" />
+  <Settlement id="castle_village_K7_2" name="{=krkh_s_aspara}Aspara" />
+  <Settlement id="castle_village_K8_1" name="{=krkh_s_merki}Merki" />
+  <Settlement id="castle_village_K8_2" name="{=krkh_s_jand}Jand" />
+  <Settlement id="castle_village_K9_1" name="{=krkh_s_yangikent}Yangikent" />
+  <Settlement id="castle_village_K9_2" name="{=krkh_s_sauran}Sauran" />
+  <Settlement id="village_K1_1" name="{=krkh_s_kermine}Kermine" />
+  <Settlement id="village_K1_2" name="{=krkh_s_ghijduvan}Ghijduvan" />
+  <Settlement id="village_K1_4" name="{=krkh_s_rabinjan}Rabinjan" />
+  <Settlement id="village_K2_1" name="{=krkh_s_zarafshan}Zarafshan" />
+  <Settlement id="village_K2_2" name="{=krkh_s_miankal}Miankal" />
+  <Settlement id="village_K3_1" name="{=krkh_s_dizak}Dizak" />
+  <Settlement id="village_K3_2" name="{=krkh_s_khavas}Khavas" />
+  <Settlement id="village_K3_3" name="{=krkh_s_banaket}Banaket" />
+  <Settlement id="village_K4_2" name="{=krkh_s_niyaz}Niyaz" />
+  <Settlement id="village_K4_3" name="{=krkh_s_osrushana}Osrushana" />
+  <Settlement id="village_K4_4" name="{=krkh_s_farkhar}Farkhar" />
+  <Settlement id="village_K5_2" name="{=krkh_s_chinaz}Chinaz" />
+  <Settlement id="village_K5_3" name="{=krkh_s_arys}Arys" />
+  <Settlement id="village_K5_4" name="{=krkh_s_karnak}Karnak" />
+  <Settlement id="village_K6_1" name="{=krkh_s_turkestan}Turkestan" />
+  <Settlement id="village_K6_2" name="{=krkh_s_iskijkath}Iskijkath" />
+  <Settlement id="village_K6_3" name="{=krkh_s_chimkent}Chimkent" />
 </Settlements>

@@ -68,7 +68,7 @@ namespace SeljukEmpire.Administration
             try
             {
                 // Mentorship experience for Seljuk governors and commanders
-                if (hero.Clan?.Kingdom?.StringId == "kingdom_seljuks" && hero.GovernorOf != null)
+                if (hero.Clan?.Kingdom?.StringId == "kingdom_seljuks" && hero.GovernorOf != null && SeljukFactionUtility.IsSeljukSettlement(hero.GovernorOf.Settlement))
                 {
                     // Daily stewardship & leadership training (Atabeylik Talimi)
                     hero.HeroDeveloper?.AddSkillXp(DefaultSkills.Steward, 35);
