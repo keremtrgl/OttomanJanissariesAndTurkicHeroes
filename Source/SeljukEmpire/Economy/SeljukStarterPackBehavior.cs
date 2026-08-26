@@ -15,8 +15,12 @@ namespace SeljukEmpire.Economy
     /// </summary>
     public class SeljukStarterPackBehavior : CampaignBehaviorBase
     {
+        // Granting on the very first null-Mission tick landed mid-cinematic-teardown for some players and hard-crashed the game (native-side, invisible to try/catch) - this many consecutive stable ticks first avoids that.
+        private const int RequiredStableTicks = 90;
+
         private bool _isStarterPackGranted;
         private bool _isNewGamePending;
+        private int _stableTicksOnMap;
 
         public override void RegisterEvents()
         {
@@ -34,16 +38,22 @@ namespace SeljukEmpire.Economy
             _isNewGamePending = true;
         }
 
-        // Only grants once Mission.Current is null and stays null - past the intro cinematic and
-        // the optional tutorial battle, both of which are Missions - so the player is actually free
-        // on the map instead of mid-cutscene or mid-fight.
+        // Only grants once Mission.Current has read null for RequiredStableTicks in a row - past the intro cinematic and the optional tutorial battle and clear of their teardown frames.
         private void OnTick(float dt)
         {
             if (!_isNewGamePending || _isStarterPackGranted) return;
 
             try
             {
-                if (Mission.Current != null || Hero.MainHero == null) return;
+                if (Mission.Current != null || Hero.MainHero == null)
+                {
+                    _stableTicksOnMap = 0;
+                    return;
+                }
+
+                _stableTicksOnMap++;
+                if (_stableTicksOnMap < RequiredStableTicks) return;
+
                 if (MobileParty.MainParty?.ItemRoster == null) return;
 
                 Hero.MainHero.Gold += 1250;
