@@ -64,18 +64,23 @@
   </Kingdom>
 
   <!-- ABBASİ HALİFELİĞİ (Native: Sultanate of the Aserai / aserai) -->
-  <!-- Ayni banner_key eksikligi buradaydi da - Native'in kendi aserai bayragi/renkleri geri eklendi. -->
+  <!-- Native'in kendi aserai bayragi altin/kahverengiydi (id 0/1); tarihi Abbasi bayragi ise
+       "Ar-Rayah" / Kara Sancak - siyah zemin. Native'in banner_icons.xml paletinde tam siyah
+       yok ama id 116 (0xff0B0C11) neredeyse ayirt edilemeyecek kadar yakin; ikon katmani da
+       goze carpsin diye id 172 (0xffffffff, sade beyaz) secildi - Ar-Rayah'in uzerindeki beyaz
+       kelime-i tevhid yazisina da uygun bir kontrast. Hukumdar hanedani clan_aserai_1'in
+       banner_key'i de (abbasid_clans.xml) ayni degere cekildi, Bizans/Gurcistan'da yapildigi gibi. -->
   <Kingdom id="aserai"
            name="{=seljuk_abbasid_name}Abbasid Caliphate"
            short_name="{=seljuk_abbasid_short}Abbasids"
            title="{=seljuk_abbasid_title}Abbasid Caliphate"
            ruler_title="{=seljuk_abbasid_ruler}Caliph"
            text="{=seljuk_abbasid_desc}The Baghdad-based Caliphate, nominal head of the Islamic world though real military power now rests with the Great Seljuk Sultans. The Sultan stands as the Caliph's protector and de facto ruler."
-           banner_key="11.0.0.4345.4345.764.764.1.0.0.463.1.1.466.466.764.764.1.0.0"
-           primary_banner_color="0xffB57A1E"
-           secondary_banner_color="0xff4E1A13"
-           color="0xffB57A1E"
-           color2="0xff4E1A13">
+           banner_key="11.116.116.4345.4345.764.764.1.0.0.463.172.172.466.466.764.764.1.0.0"
+           primary_banner_color="0xff0B0C11"
+           secondary_banner_color="0xffffffff"
+           color="0xff0B0C11"
+           color2="0xffffffff">
     <relationships>
       <relationship kingdom="Kingdom.empire_s" value="0" isAtWar="false" />
     </relationships>
