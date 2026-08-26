@@ -14,6 +14,7 @@ using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
 
@@ -42,87 +43,50 @@ namespace SeljukEmpire
 
             if (starterObject is CampaignGameStarter campaignStarter)
             {
-                try
+                // Each registration below was individually swallowed with a bare `catch (Exception)
+                // {}` and no diagnostics - unlike the mod's many per-tick defensive catches (which
+                // guard against transient engine-state edge cases and are fine), a throw HERE happens
+                // once at startup and far more likely means an actual code defect than an engine
+                // hiccup. Previously, if any one behavior failed to register, that entire feature
+                // silently vanished for the whole campaign with no crash and no way to learn why.
+                TryRegister(campaignStarter, "SeljukSettlementBehavior", () => campaignStarter.AddBehavior(new SeljukSettlementBehavior()));
+                TryRegister(campaignStarter, "SeljukCaravanInsuranceBehavior", () => campaignStarter.AddBehavior(new SeljukCaravanInsuranceBehavior()));
+                TryRegister(campaignStarter, "SeljukAtabegTitleBehavior", () => campaignStarter.AddBehavior(new SeljukAtabegTitleBehavior()));
+                TryRegister(campaignStarter, "SeljukTournamentRewardBehavior", () => campaignStarter.AddBehavior(new SeljukTournamentRewardBehavior()));
+                TryRegister(campaignStarter, "SeljukRecruitmentBehavior", () => campaignStarter.AddBehavior(new SeljukRecruitmentBehavior()));
+                TryRegister(campaignStarter, "SeljukTavernBehavior", () => campaignStarter.AddBehavior(new SeljukTavernBehavior()));
+                TryRegister(campaignStarter, "SeljukDialogueBehavior", () => campaignStarter.AddBehavior(new SeljukDialogueBehavior()));
+                TryRegister(campaignStarter, "SeljukCultureBonusModels", () =>
                 {
-                    // 1. Register Seljuk Territorial Ownership, Clan Hierarchy & City Initialization Behavior
-                    campaignStarter.AddBehavior(new SeljukSettlementBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 2. Register Seljuk Economy & Caravan Insurance Campaign Behavior
-                    campaignStarter.AddBehavior(new SeljukCaravanInsuranceBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 3. Register Historical Seljuk Atabeg & Ikta Governance System
-                    campaignStarter.AddBehavior(new SeljukAtabegTitleBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 4. Register Seljuk Festival & Tournament Mastercraft Rewards System
-                    campaignStarter.AddBehavior(new SeljukTournamentRewardBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 5. Register Seljuk Direct Village & Town Recruitment Behavior
-                    campaignStarter.AddBehavior(new SeljukRecruitmentBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 6. Register Seljuk Tavern Bard (Ozan) Ghazavat Epic Morale System
-                    campaignStarter.AddBehavior(new SeljukTavernBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 7. Register Seljuk Historical Dialogue & Greetings System
-                    campaignStarter.AddBehavior(new SeljukDialogueBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 8. Register Seljuk Culture Passive Bonus/Debuff Models
-                    //    (-10% mounted-troop wage, +10% construction speed, -15% siege engine speed,
-                    //     +15% caravan trade profit)
+                    // -10% mounted-troop wage, +10% construction speed, -15% siege engine speed, +15% caravan trade profit
                     campaignStarter.AddModel(new SeljukWageModel());
                     campaignStarter.AddModel(new SeljukConstructionSpeedModel());
                     campaignStarter.AddModel(new SeljukSiegeEngineeringModel());
                     campaignStarter.AddModel(new SeljukCaravanTradeModel());
-                }
-                catch (Exception) { }
+                });
+                // One-time Starter Pack grant (gold + gear). Must be a CampaignBehaviorBase with
+                // SyncData, not a SubModule-level flag: see SeljukStarterPackBehavior's summary for why.
+                TryRegister(campaignStarter, "SeljukStarterPackBehavior", () => campaignStarter.AddBehavior(new SeljukStarterPackBehavior()));
+                // Seljuk & rival-culture (Byzantine/Abbasid/Georgian) character creation narrative
+                // content. Must go through CampaignBehaviorBase.RegisterEvents
+                // (CampaignEvents.OnCharacterCreationInitializedEvent), not a SubModule tick poll -
+                // see each handler's class remarks for why the previous approach never actually
+                // showed any custom content in character creation.
+                TryRegister(campaignStarter, "SeljukCharacterCreationContentHandler", () => campaignStarter.AddBehavior(new SeljukCharacterCreationContentHandler()));
+                TryRegister(campaignStarter, "RivalCultureCharacterCreationContentHandler", () => campaignStarter.AddBehavior(new RivalCultureCharacterCreationContentHandler()));
+            }
+        }
 
-                try
-                {
-                    // 9. Register one-time Starter Pack grant (gold + gear). Must be a
-                    //    CampaignBehaviorBase with SyncData, not a SubModule-level flag: see
-                    //    SeljukStarterPackBehavior's summary for why.
-                    campaignStarter.AddBehavior(new SeljukStarterPackBehavior());
-                }
-                catch (Exception) { }
-
-                try
-                {
-                    // 10. Register Seljuk & rival-culture (Byzantine/Abbasid/Georgian) character
-                    //     creation narrative content. Must go through CampaignBehaviorBase.RegisterEvents
-                    //     (CampaignEvents.OnCharacterCreationInitializedEvent), not a SubModule tick poll -
-                    //     see each handler's class remarks for why the previous approach never actually
-                    //     showed any custom content in character creation.
-                    campaignStarter.AddBehavior(new SeljukCharacterCreationContentHandler());
-                    campaignStarter.AddBehavior(new RivalCultureCharacterCreationContentHandler());
-                }
-                catch (Exception) { }
+        private static void TryRegister(CampaignGameStarter campaignStarter, string name, Action register)
+        {
+            try
+            {
+                register();
+            }
+            catch (Exception ex)
+            {
+                InformationManager.DisplayMessage(new InformationMessage(
+                    $"[Seljuk Empire] Failed to register {name}: {ex.Message}", Colors.Red));
             }
         }
 

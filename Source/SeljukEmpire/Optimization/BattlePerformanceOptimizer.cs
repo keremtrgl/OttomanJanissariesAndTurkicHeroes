@@ -8,25 +8,21 @@ namespace SeljukEmpire.Optimization
 {
     /// <summary>
     /// Master Battlefield Performance & Frametime Optimizer.
-    /// Combines 2D Spatial Hash Grid targeting, dynamic ragdoll sleep manager, and distance-based LOD AI scheduling.
+    /// Combines a dynamic ragdoll sleep manager and distance-based LOD AI scheduling.
     /// Guarantees smooth frametimes and prevents CPU spikes in 500+ unit battles.
     /// </summary>
     public class BattlePerformanceOptimizer : MissionBehavior
     {
         public override MissionBehaviorType BehaviorType => MissionBehaviorType.Other;
 
-        private SpatialHashGrid _enemySpatialGrid;
         private RagdollPhysicsBudgetManager _ragdollManager;
-        private MissionTime _gridUpdateTimer;
         private MissionTime _lodTickTimer;
         private int _frameCounter;
 
         public override void AfterStart()
         {
             base.AfterStart();
-            _enemySpatialGrid = new SpatialHashGrid(35f);
             _ragdollManager = new RagdollPhysicsBudgetManager();
-            _gridUpdateTimer = MissionTime.Now;
             _lodTickTimer = MissionTime.Now;
             _frameCounter = 0;
         }
@@ -57,18 +53,7 @@ namespace SeljukEmpire.Optimization
                     _ragdollManager.Update(dt);
                 }
 
-                // 2. Rebuild 2D Spatial Hash Grid periodically (every 180ms) for O(1) targeting
-                if (_gridUpdateTimer.ElapsedSeconds > 0.18f)
-                {
-                    Team enemyTeam = Mission.Current.PlayerEnemyTeam;
-                    if (enemyTeam != null)
-                    {
-                        _enemySpatialGrid.Rebuild(enemyTeam);
-                    }
-                    _gridUpdateTimer = MissionTime.Now;
-                }
-
-                // 3. Staggered Distance-Based AI Culling for distant formations
+                // 2. Staggered Distance-Based AI Culling for distant formations
                 if (_lodTickTimer.ElapsedSeconds > 0.40f)
                 {
                     OptimizeDistantFormations();
@@ -116,7 +101,6 @@ namespace SeljukEmpire.Optimization
 
             if (Mission.Current?.Mode != MissionMode.Battle)
             {
-                _enemySpatialGrid?.Clear();
                 _ragdollManager?.Clear();
             }
         }
@@ -124,14 +108,12 @@ namespace SeljukEmpire.Optimization
         public override void OnMissionStateFinalized()
         {
             base.OnMissionStateFinalized();
-            _enemySpatialGrid?.Clear();
             _ragdollManager?.Clear();
         }
 
         public override void OnClearScene()
         {
             base.OnClearScene();
-            _enemySpatialGrid?.Clear();
             _ragdollManager?.Clear();
         }
     }

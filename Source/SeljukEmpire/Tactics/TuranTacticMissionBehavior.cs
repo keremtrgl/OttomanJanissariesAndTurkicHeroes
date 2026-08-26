@@ -50,14 +50,12 @@ namespace SeljukEmpire.Tactics
         private Vec3 _designatedKillzone;
         private Vec3 _leftFlankPosition;
         private Vec3 _rightFlankPosition;
-        private bool _isBattleWonOrLost;
 
         public override void AfterStart()
         {
             base.AfterStart();
             _currentPhase = TacticalPhase.InitialAssessment;
             _phaseTimer = MissionTime.Now;
-            _isBattleWonOrLost = false;
         }
 
         public override void OnMissionTick(float dt)
@@ -67,7 +65,7 @@ namespace SeljukEmpire.Tactics
             try
             {
                 // Execute only in active field battles
-                if (Mission.Current == null || Mission.Current.IsSiegeBattle || Mission.Current.Mode != MissionMode.Battle || _isBattleWonOrLost)
+                if (Mission.Current == null || Mission.Current.IsSiegeBattle || Mission.Current.Mode != MissionMode.Battle)
                 {
                     return;
                 }

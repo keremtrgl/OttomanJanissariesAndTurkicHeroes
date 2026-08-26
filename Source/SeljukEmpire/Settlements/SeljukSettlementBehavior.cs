@@ -36,10 +36,19 @@ namespace SeljukEmpire.Settlements
 
         private void OnSessionLaunched(CampaignGameStarter starter)
         {
-            InitializeSeljukKingdomHierarchy();
-
             if (!_isSettlementOwnershipInitialized)
             {
+                // Was called unconditionally on every session launch (not just the first), with
+                // no IsAlive check on the hardcoded leader ids - unlike SetupTown's own
+                // `clan.Leader ?? clan.Heroes.Find(h => h.IsAlive)` fallback used elsewhere in
+                // this same file. On a long campaign a named lord (e.g. Ertugrul Gazi) can die,
+                // the game hands leadership to a successor, and the player reloads - at which
+                // point this was forcing the dead hero back onto clan.Leader and unconditionally
+                // pulling every clan back into kingdom_seljuks even if it had legitimately left.
+                // Gated the same one-time-only way as InitializeSeljukTerritories() just below:
+                // establish the authored hierarchy once at campaign start, then let Native's own
+                // succession/diplomacy systems govern it from there.
+                InitializeSeljukKingdomHierarchy();
                 InitializeSeljukTerritories();
                 _isSettlementOwnershipInitialized = true;
             }
