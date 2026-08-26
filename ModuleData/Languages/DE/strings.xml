@@ -1183,5 +1183,21 @@
     <string id="byz_w_v_nauplion" text="Nauplion" />
     <string id="byz_w_v_samos" text="Samos" />
     <string id="byz_w_v_tenedos" text="Tenedos" />
+    <string id="krv_gt_name_seljuk" text="Seldschuken" />
+    <string id="krv_gt_desc_seljuk" text="Die Grossseldschuken begannen als Oghusen-Steppenkrieger aus Zentralasien, bevor sie in die islamische Welt vordrangen, das byzantinische Heer bei Manzikert schlugen und ein Reich von Chorasan bis Anatolien errichteten. Ihre Sultane regieren durch ein Buendnis turkmenischer Reiterkrieger und persisch geschulter Wesire, das die Reitertradition der Steppe mit der Verwaltungskunst der Nizamiyya verbindet." />
+    <string id="krv_gt_name_empire" text="Byzantiner" />
+    <string id="krv_gt_desc_empire" text="Die Byzantiner sind die griechischsprachigen Erben Roms im Osten und regieren seit ueber tausend Jahren von Konstantinopel aus. Trotz der seldschukischen Eroberung Anatoliens nach Manzikert bestehen sie fort - dank disziplinierter Thema-Heere, Eliteregimentern wie der Waragergarde und einer ausgekluegelten Buerokratie, die schon Dutzende Eroberervoelker vor diesem ueberdauert hat." />
+    <string id="krv_gt_name_aserai" text="Abbasiden" />
+    <string id="krv_gt_desc_aserai" text="Die Abbasiden sind die arabische Kalifendynastie von Bagdad, nominelle Oberhaeupter der islamischen Welt seit dem Sturz der Umayyaden. Auch wenn die wirkliche militaerische Macht heute bei tuerkischen Ghulam-Garden und den Grossseldschuken-Sultanen liegt, die sie beschuetzen, behalten die Kalifen gewaltige religioese Autoritaet, und ihr Hof bleibt ein Zentrum von Recht, Gelehrsamkeit und Handel zwischen Mittelmeer und Indischem Ozean." />
+    <string id="krv_gt_name_khuzait" text="Karachaniden" />
+    <string id="krv_gt_desc_khuzait" text="Die Karachaniden sind ein grosses tuerkisches Steppenvolk, das von den Karluk- und Yaghma-Staemmen abstammt, die einst dem Gokturk-Khaganat dienten. Seit ihrer Bekehrung zum Islam unter Satuq Bughra Khan haben sie ein sesshaftes Khanat zwischen Samarkand und Kaschgar errichtet, bleiben aber furchterregende berittene Bogenschuetzen und streiten mit den Grossseldschuken-Sultanen um Transoxanien und Chorasan." />
+    <string id="krv_gt_name_sturgia" text="Georgier" />
+    <string id="krv_gt_desc_sturgia" text="Die Georgier sind ein christliches Bergvolk des Kaukasus, regiert von Tiflis aus durch die Bagrationi-Dynastie. Von feindlichen Nachbarn auf allen Seiten umgeben, haben sie eine zaehe Kriegerkultur aus leichter aznauri-Kavallerie und adligen eristavi-Lanzenreitern geschmiedet, entschlossen, ihr Bergreich gegen seldschukische Reiter aus dem Sueden zu verteidigen." />
+    <string id="krv_gt_name_battania" text="Armenier" />
+    <string id="krv_gt_desc_battania" text="Die Armenier Kilikiens sind Bergherren, die sich von byzantinischer Herrschaft lossagten und im Taurusgebirge ein Fuerstentum errichteten. Abstammend vom alten armenischen Adel, halten ihre azat-Reiter und naxarar-Kriegsherren ihre Festungen in einer losen, oft zerstrittenen Konfoederation, vereinen sich aber bereitwillig gegen jeden aeusseren Anspruch auf ihre Bergzuflucht." />
+    <string id="krv_gt_name_vlandia" text="Kreuzfahrer" />
+    <string id="krv_gt_desc_vlandia" text="Die Kreuzfahrer sind fraenkische und normannische Herren, die im Ersten Kreuzzug nach Osten zogen und 1098 das Fuerstentum Antiochia und die Grafschaft Edessa errichteten. Ritter in Kettenruestung und turkopolische berittene Bogenschuetzen halten ihr neues Gebiet an der Westgrenze des Grossseldschukischen Reiches - ein Kriegeradel, der sich bei einer Belagerung ebenso zuhause fuehlt wie in offener Feldschlacht." />
+    <string id="krkh_bonus_construction" text="Tamgach Khans Bauwerke" />
+    <string id="crus_bonus_construction" text="Fraenkischer Burgenbau" />
 </strings>
 </base>

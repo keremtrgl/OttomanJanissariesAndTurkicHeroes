@@ -11,6 +11,11 @@ namespace SeljukEmpire.Economy
     /// Must live in a CampaignBehaviorBase with SyncData: a plain bool field on the
     /// SubModule itself is not part of the save graph and resets to false every time the
     /// game process restarts, so re-loading a save used to re-grant the pack every time.
+    /// Hooks OnNewGameCreatedEvent (fires once, only for a brand-new campaign, after character
+    /// creation has fully finished) rather than OnSessionLaunchedEvent - the latter also fires
+    /// while character creation is still in progress, before Native applies its own
+    /// culture-based starting equipment to MobileParty.MainParty, which was overwriting/dropping
+    /// whatever this behavior had already added to the roster.
     /// </summary>
     public class SeljukStarterPackBehavior : CampaignBehaviorBase
     {
@@ -18,7 +23,7 @@ namespace SeljukEmpire.Economy
 
         public override void RegisterEvents()
         {
-            CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
+            CampaignEvents.OnNewGameCreatedEvent.AddNonSerializedListener(this, OnNewGameCreated);
         }
 
         public override void SyncData(IDataStore dataStore)
@@ -26,7 +31,7 @@ namespace SeljukEmpire.Economy
             dataStore.SyncData("_isStarterPackGranted", ref _isStarterPackGranted);
         }
 
-        private void OnSessionLaunched(CampaignGameStarter starter)
+        private void OnNewGameCreated(CampaignGameStarter starter)
         {
             try
             {

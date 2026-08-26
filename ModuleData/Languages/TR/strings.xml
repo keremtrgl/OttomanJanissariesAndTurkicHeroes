@@ -1142,5 +1142,21 @@
     <string id="byz_w_v_nauplion" text="Nauplion" />
     <string id="byz_w_v_samos" text="Sisam" />
     <string id="byz_w_v_tenedos" text="Bozcaada" />
+    <string id="krv_gt_name_seljuk" text="Selçuklular" />
+    <string id="krv_gt_desc_seljuk" text="Büyük Selçuklu Türkleri, Orta Asya'nın bozkır savaşçıları olarak yola çıkıp İslam dünyasına yöneldi, Malazgirt'te Bizans ordusunu kırarak Horasan'dan Anadolu'ya uzanan bir imparatorluk kurdu. Sultanları, Türkmen atlı savaşçılarıyla Fars kökenli vezirlerin ortaklığıyla yönetir; bozkır süvari geleneğini Nizamiye'nin idari incelikleriyle birleştirir." />
+    <string id="krv_gt_name_empire" text="Bizanslılar" />
+    <string id="krv_gt_desc_empire" text="Bizanslılar, doğuda binlerce yıldır Konstantinopolis'ten hüküm süren, Roma'nın Yunanca konuşan varisleridir. Malazgirt'ten sonra Selçuklu fetihleriyle sarsılsalar da, disiplinli tema ordularıyla, Varanglar gibi seçkin muhafız birlikleriyle ve kendilerinden önce gelip geçen düzinelerce istilacı halktan daha uzun ömürlü kalmayı başaran gelişmiş bürokrasileriyle ayakta kalırlar." />
+    <string id="krv_gt_name_aserai" text="Abbasiler" />
+    <string id="krv_gt_desc_aserai" text="Abbasiler, Emevileri devirdikten beri İslam dünyasının nominal başı olan Bağdat'ın Arap halifelik hanedanıdır. Gerçek askeri güç artık kendilerini koruyan Türk gulam muhafızlarında ve Büyük Selçuklu Sultanlarında olsa da, halifeler büyük dini otoriteyi ellerinde tutar ve sarayları Akdeniz'i Hint Okyanusu'na bağlayan hukuk, ilim ve ticaret merkezi olmaya devam eder." />
+    <string id="krv_gt_name_khuzait" text="Karahanlılar" />
+    <string id="krv_gt_desc_khuzait" text="Karahanlılar, bir zamanlar Göktürk kağanlığına hizmet eden Karluk ve Yağma boylarından gelen büyük bir Türk bozkır halkıdır. Satuk Buğra Han döneminde İslam'a girdikten sonra Semerkant ile Kaşgar arasında yerleşik bir hanlık kurmuşlardır; yine de güçlü atlı okçular olarak kalır, Maveraünnehir ve Horasan üzerinde Büyük Selçuklu Sultanları'yla rekabet ederler." />
+    <string id="krv_gt_name_sturgia" text="Gürcüler" />
+    <string id="krv_gt_desc_sturgia" text="Gürcüler, Tiflis'ten Bagrationi hanedanı tarafından yönetilen, Kafkasya'nın Hristiyan dağ halkıdır. Her yandan düşman komşularla çevrili olan bu halk, aznauri hafif süvarileri ve eristavi asilzade mızrakçılarından oluşan dayanıklı bir savaşçı kültürü inşa etmiş, güneyden baskı yapan Selçuklu akıncılarına karşı dağlık krallıklarını korumaya kararlıdır." />
+    <string id="krv_gt_name_battania" text="Ermeniler" />
+    <string id="krv_gt_desc_battania" text="Kilikya Ermenileri, Bizans egemenliğinden koparak Toros dağlarında bir beylik kuran dağ beyleridir. Eski Ermeni asaletinden gelen azat süvarileri ve nakharar beyleri, kalelerini gevşek, sık sık çekişmeli bir konfederasyon halinde tutar, ama dağlık sığınaklarına yönelik her dış talebe karşı kolayca birleşirler." />
+    <string id="krv_gt_name_vlandia" text="Haçlılar" />
+    <string id="krv_gt_desc_vlandia" text="Haçlılar, Birinci Haçlı Seferi'nde doğuya yürüyüp 1098'de Antakya Prensliği ile Urfa Kontluğu'nu kuran Frank ve Norman beyleridir. Zırhlı şövalyeleri ve Türkopol atlı okçuları, Büyük Selçuklu Devleti'nin batı sınırındaki yeni topraklarını elinde tutar; açık meydanda düşmanı kılıçtan geçirmek kadar bir kaleyi kuşatmakta da kendini evinde hisseden bir savaşçı asalettir." />
+    <string id="krkh_bonus_construction" text="Tamgaç Han'ın İmar Faaliyetleri" />
+    <string id="crus_bonus_construction" text="Frenk Kale Ustalığı" />
 </strings>
 </base>

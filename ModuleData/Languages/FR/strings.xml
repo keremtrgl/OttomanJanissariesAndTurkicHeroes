@@ -1183,5 +1183,21 @@
     <string id="byz_w_v_nauplion" text="Nauplie" />
     <string id="byz_w_v_samos" text="Samos" />
     <string id="byz_w_v_tenedos" text="Tenedos" />
+    <string id="krv_gt_name_seljuk" text="Seldjoukides" />
+    <string id="krv_gt_desc_seljuk" text="Les Grands Seldjoukides turcs ont commence comme guerriers des steppes oghouzes d'Asie centrale avant de deferler sur le monde islamique, brisant l'armee byzantine a Manzikert et batissant un empire du Khorasan a l'Anatolie. Leurs sultans gouvernent par une alliance entre cavaliers turcomans et vizirs formes a la persane, melant tradition de cavalerie steppique et raffinement administratif de la Nizamiyya." />
+    <string id="krv_gt_name_empire" text="Byzantins" />
+    <string id="krv_gt_desc_empire" text="Les Byzantins sont les heritiers hellenophones de Rome en Orient, regnant depuis Constantinople depuis plus de mille ans. Bien qu'ebranles par la conquete seldjoukide de l'Anatolie apres Manzikert, ils subsistent grace a des armees thematiques disciplinees, des regiments d'elite comme la Garde varangienne, et une bureaucratie sophistiquee qui a survecu a une douzaine de peuples envahisseurs avant celui-ci." />
+    <string id="krv_gt_name_aserai" text="Abbassides" />
+    <string id="krv_gt_desc_aserai" text="Les Abbassides sont la dynastie califale arabe de Bagdad, chefs nominaux du monde islamique depuis le renversement des Omeyyades. Si le pouvoir militaire reel repose desormais sur les gardes ghulams turcs et les sultans seldjoukides qui les protegent, les califes conservent une immense autorite religieuse, et leur cour demeure un centre de droit, de savoir et de commerce reliant la Mediterranee a l'ocean Indien." />
+    <string id="krv_gt_name_khuzait" text="Karakhanides" />
+    <string id="krv_gt_desc_khuzait" text="Les Karakhanides sont un grand peuple turc des steppes, descendant des tribus karlouk et yaghma qui servirent jadis le khaganat gokturk. Convertis a l'islam sous Satuq Bughra Khan, ils ont batti un khanat sedentaire partage entre Samarcande et Kachgar, restant neanmoins de redoutables archers montes, disputant la Transoxiane et le Khorasan aux sultans seldjoukides." />
+    <string id="krv_gt_name_sturgia" text="Georgiens" />
+    <string id="krv_gt_desc_sturgia" text="Les Georgiens sont un peuple montagnard chretien du Caucase, gouverne depuis Tbilissi par la dynastie Bagration. Cernes de voisins hostiles de toutes parts, ils ont forge une culture guerriere endurcie de cavalerie legere aznauri et de lanciers nobles eristavi, determines a defendre leur royaume montagnard contre les raids seldjoukides venus du sud." />
+    <string id="krv_gt_name_battania" text="Armeniens" />
+    <string id="krv_gt_desc_battania" text="Les Armeniens de Cilicie sont des seigneurs montagnards qui ont rompu avec la tutelle byzantine pour batir une principaute dans le massif du Taurus. Descendants de l'ancienne noblesse armenienne, leurs cavaliers azat et leurs seigneurs de guerre naxarar tiennent leurs forteresses en une confederation lache et souvent querelleuse, mais s'unissent volontiers contre toute pretention exterieure sur leur refuge montagnard." />
+    <string id="krv_gt_name_vlandia" text="Croises" />
+    <string id="krv_gt_desc_vlandia" text="Les Croises sont des seigneurs francs et normands partis vers l'Orient lors de la Premiere Croisade, qui ont fonde la Principaute d'Antioche et le Comte d'Edesse en 1098. Chevaliers en cotte de mailles et archers montes turcoples tiennent leur nouveau domaine a la frontiere occidentale du Grand Empire seldjoukide - une noblesse guerriere aussi a l'aise dans le siege d'une forteresse que dans la bataille rangee." />
+    <string id="krkh_bonus_construction" text="Les Oeuvres de Tamgach Khan" />
+    <string id="crus_bonus_construction" text="Architecture Castrale Franque" />
 </strings>
 </base>
