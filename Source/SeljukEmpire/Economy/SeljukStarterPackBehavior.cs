@@ -20,10 +20,12 @@ namespace SeljukEmpire.Economy
     public class SeljukStarterPackBehavior : CampaignBehaviorBase
     {
         private bool _isStarterPackGranted;
+        private bool _notificationPending;
 
         public override void RegisterEvents()
         {
             CampaignEvents.OnNewGameCreatedEvent.AddNonSerializedListener(this, OnNewGameCreated);
+            CampaignEvents.TickEvent.AddNonSerializedListener(this, OnTick);
         }
 
         public override void SyncData(IDataStore dataStore)
@@ -38,6 +40,15 @@ namespace SeljukEmpire.Economy
                 GrantStarterPackIfNewGame();
             }
             catch (Exception) { }
+        }
+
+        // Deferred past the intro cinematic, which still plays for a few ticks after OnNewGameCreatedEvent and would otherwise show this notification on top of it.
+        private void OnTick(float dt)
+        {
+            if (!_notificationPending) return;
+            _notificationPending = false;
+            MBInformationManager.AddQuickInformation(
+                new TextObject("{=seljuk_starter_notif}The Grand Seljuk Gazi Starter Pack has been credited to your inventory! (+2,500 Dinars, Noble Turkoman Horse, Composite Bow, and Armor Piercing Arrows)"));
         }
 
         private void GrantStarterPackIfNewGame()
@@ -76,9 +87,7 @@ namespace SeljukEmpire.Economy
                     MobileParty.MainParty.ItemRoster.AddToCounts(arrowItem, 1);
                 }
 
-                MBInformationManager.AddQuickInformation(
-                    new TextObject("{=seljuk_starter_notif}The Grand Seljuk Gazi Starter Pack has been credited to your inventory! (+2,500 Dinars, Noble Turkoman Horse, Composite Bow, and Armor Piercing Arrows)"));
-
+                _notificationPending = true;
                 _isStarterPackGranted = true;
             }
             catch (Exception) { }

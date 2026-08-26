@@ -507,7 +507,7 @@
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
         <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
-        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.range_arrows" />
         <equipment slot="Item3" id="Item.hunting_bow" />
         <equipment slot="Horse" id="Item.khuzait_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -519,7 +519,7 @@
     <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
         <equipment slot="Item1" id="Item.khuzait_sword_2_t3" />
-        <equipment slot="Item2" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.range_arrows" />
         <equipment slot="Item3" id="Item.hunting_bow" />
         <equipment slot="Horse" id="Item.khuzait_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -549,7 +549,7 @@
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.aserai_sword_4_t4" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.steppe_arrows" />
         <equipment slot="Item3" id="Item.composite_bow" />
         <equipment slot="Horse" id="Item.steppe_war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -561,7 +561,7 @@
     <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.aserai_sword_4_t4" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.steppe_arrows" />
         <equipment slot="Item3" id="Item.composite_bow" />
         <equipment slot="Horse" id="Item.steppe_war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -591,7 +591,7 @@
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
-        <equipment slot="Item2" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.heavy_steppe_arrows" />
         <equipment slot="Item3" id="Item.composite_bow" />
         <equipment slot="Horse" id="Item.steppe_war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -603,7 +603,7 @@
     <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
-        <equipment slot="Item2" id="Item.leather_round_shield" />
+        <equipment slot="Item2" id="Item.heavy_steppe_arrows" />
         <equipment slot="Item3" id="Item.composite_bow" />
         <equipment slot="Horse" id="Item.steppe_war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -633,7 +633,7 @@
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
         <equipment slot="Item1" id="Item.aserai_noble_sword_2_t5" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.seljuk_heavy_arrows" />
         <equipment slot="Item3" id="Item.noble_bow" />
         <equipment slot="Horse" id="Item.war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -645,7 +645,7 @@
     <EquipmentRoster>
         <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
         <equipment slot="Item1" id="Item.aserai_noble_sword_2_t5" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.seljuk_heavy_arrows" />
         <equipment slot="Item3" id="Item.noble_bow" />
         <equipment slot="Horse" id="Item.war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -955,7 +955,7 @@
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.heavy_steppe_arrows" />
         <equipment slot="Item3" id="Item.composite_bow" />
         <equipment slot="Horse" id="Item.steppe_war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -967,7 +967,7 @@
     <EquipmentRoster>
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.aserai_sword_7_t5" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.heavy_steppe_arrows" />
         <equipment slot="Item3" id="Item.composite_bow" />
         <equipment slot="Horse" id="Item.steppe_war_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -996,7 +996,7 @@
       <EquipmentRoster>
         <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
         <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.seljuk_heavy_arrows" />
         <equipment slot="Item3" id="Item.noble_bow" />
         <equipment slot="Horse" id="Item.noble_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
@@ -1008,7 +1008,7 @@
     <EquipmentRoster>
         <equipment slot="Item0" id="Item.aserai_lance_1_t5" />
         <equipment slot="Item1" id="Item.aserai_noble_sword_4_t5" />
-        <equipment slot="Item2" id="Item.desert_round_shield" />
+        <equipment slot="Item2" id="Item.seljuk_heavy_arrows" />
         <equipment slot="Item3" id="Item.noble_bow" />
         <equipment slot="Horse" id="Item.noble_horse" />
         <equipment slot="HorseHarness" id="Item.half_scale_barding" />
