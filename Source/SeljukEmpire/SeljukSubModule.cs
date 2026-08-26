@@ -104,10 +104,15 @@ namespace SeljukEmpire
                     // Active in all field & siege engagements to smooth frametimes and enforce ragdoll budgets
                     mission.AddMissionBehavior(new BattlePerformanceOptimizer());
 
-                    // Multi-doctrine dynamic maneuvers active in open field battles
+                    // Multi-doctrine dynamic maneuvers active in open field battles. Both behaviors
+                    // are added to every field battle but each independently checks whether its own
+                    // culture is actually involved before taking over a team (see IsSeljukTeam /
+                    // IsByzantineTeam), and each only ever issues orders to the single team it
+                    // claims - so a Seljuk-vs-Byzantine battle runs both without conflict.
                     if (!mission.IsSiegeBattle)
                     {
                         mission.AddMissionBehavior(new TuranTacticMissionBehavior());
+                        mission.AddMissionBehavior(new ByzantineTacticMissionBehavior());
                     }
                 }
             }

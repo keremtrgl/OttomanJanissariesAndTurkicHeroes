@@ -22,11 +22,11 @@
     </Equipments>
   </NPCCharacter>
   <NPCCharacter id="lord_1_15" name="{=byz_ln_nikephoros_botaneiates}Nikephoros Botaneiates" />
-  <NPCCharacter id="lord_1_16" name="{=byz_ln_maria_alania}Maria of Alania" />
+  <NPCCharacter id="lord_1_16" name="{=byz_ln_maria_alania}Maria of Alania" is_female="true" />
   <NPCCharacter id="lord_1_17" name="{=byz_ln_andronikos_doukas}Andronikos Doukas" />
-  <NPCCharacter id="lord_1_18" name="{=byz_ln_maria_bulgaria}Maria of Bulgaria" />
+  <NPCCharacter id="lord_1_18" name="{=byz_ln_maria_bulgaria}Maria of Bulgaria" is_female="true" />
   <NPCCharacter id="lord_1_30" name="{=byz_ln_alexios_komnenos}Alexios Komnenos" />
-  <NPCCharacter id="lord_1_30_1" name="{=byz_ln_irene_doukaina}Irene Doukaina" />
+  <NPCCharacter id="lord_1_30_1" name="{=byz_ln_irene_doukaina}Irene Doukaina" is_female="true" />
   <NPCCharacter id="lord_1_63" name="{=byz_ln_nikephoros_bryennios}Nikephoros Bryennios" />
   <NPCCharacter id="lord_1_54" name="{=byz_ln_nikephoros_melissenos}Nikephoros Melissenos" />
   <NPCCharacter id="lord_1_55" name="{=byz_ln_romanos_argyros}Romanos Argyros" />

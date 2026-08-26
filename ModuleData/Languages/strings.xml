@@ -163,6 +163,8 @@
     <string id="seljuk_culture_desc" text="A Turkmen confederation forged by the Great Seljuk state and the Anatolian frontier beyliks. Cities grow rich on iqta-fed cavalry armies, Nizamiye madrasas, and Silk Road caravans." />
     <string id="seljuk_bonus_cavalry_wage" text="Seljuk Iqta Cavalry Economy" />
     <string id="seljuk_bonus_construction" text="Nizamiye Public Works" />
+    <string id="abb_bonus_construction" text="House of Wisdom" />
+    <string id="geo_bonus_construction" text="David the Builder's Works" />
     <string id="seljuk_debuff_siege_engineering" text="Weak Siege Engineering Tradition" />
     <string id="seljuk_ceri_name" text="Seljuk Cheri Footman" />
     <string id="seljuk_emir_muhafizi_name" text="Emir's Bodyguard" />
@@ -401,6 +403,12 @@
     <string id="byz_house_kekaumenos" text="House Kekaumenos" />
     <string id="byz_ln_romanos_diogenes" text="Romanos Diogenes" />
     <string id="byz_culture_name" text="Byzantine" />
+    <string id="byz_tactic_last_stand" text="[Byzantine Tactical Command] Thematic High-Ground Defense against a superior force!" />
+    <string id="byz_tactic_hammer_anvil" text="[Byzantine Tactical Command] Kataphraktoi Hammer and Anvil deployed!" />
+    <string id="byz_tactic_shield_wall" text="[Byzantine Tactical Command] Tagma Shield Wall formed at the choke point!" />
+    <string id="byz_tactic_crossfire" text="[Byzantine Tactical Command] Toxotai Crossfire formation engaged!" />
+    <string id="byz_tactic_lines_broken" text="[Kataphraktoi] The enemy line has broken cohesion! Dual-flank envelopment begins!" />
+    <string id="byz_tactic_full_assault" text="[Tagma Advance] Hammer and Anvil complete! All lines advance!" />
     <string id="abb_culture_name" text="Abbasid" />
     <string id="geo_culture_name" text="Georgian" />
     <string id="byz2_t_recruit" text="Byzantine Recruit" />
@@ -725,6 +733,26 @@
     <string id="geo_v_akhaltsikhe" text="Akhaltsikhe" />
     <string id="geo_v_khertvisi" text="Khertvisi" />
     <string id="geo_t_recruit" text="Georgian Levy" />
+    <string id="geo2_t_recruit" text="Georgian Levy" />
+    <string id="geo2_t_msakhuri" text="Msakhuri Soldier" />
+    <string id="geo2_t_mtiuli_hunter" text="Mtiuli Hunter" />
+    <string id="geo2_t_aznauri_squire" text="Aznauri Squire" />
+    <string id="geo2_t_didebuli_squire" text="Didebuli Squire" />
+    <string id="geo2_t_kartli_msakhuri" text="Kartli Msakhuri" />
+    <string id="geo2_t_mtiuli_archer" text="Mtiuli Archer" />
+    <string id="geo2_t_aznauri_horseman" text="Aznauri Horseman" />
+    <string id="geo2_t_didebuli_horseman" text="Didebuli Horseman" />
+    <string id="geo2_t_sepe_msakhuri" text="Sepe Msakhuri" />
+    <string id="geo2_t_mtiuli_veteran_archer" text="Mtiuli Veteran Archer" />
+    <string id="geo2_t_aznauri_warrior" text="Aznauri Warrior" />
+    <string id="geo2_t_eristavi_lancer" text="Eristavi Lancer" />
+    <string id="geo2_t_khevsur_guard" text="Khevsur Guard" />
+    <string id="geo2_t_svan_marksman" text="Svan Marksman" />
+    <string id="geo2_t_alan_horseguard" text="Alan Horse-Guard" />
+    <string id="geo2_t_eristavi_heavy_lancer" text="Eristavi Heavy Lancer" />
+    <string id="geo2_t_khevsur_sworn_guard" text="Khevsur Sworn Guard" />
+    <string id="geo2_t_svan_master_archer" text="Svan Master Archer" />
+    <string id="geo2_t_monaspa" text="Monaspa Royal Guardsman" />
     <string id="geo_t_aznauri_warrior" text="Aznauri Warrior" />
     <string id="geo_t_msakhuri" text="Msakhuri Soldier" />
     <string id="geo_t_didebuli_spear" text="Didebuli Spearman" />

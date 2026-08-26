@@ -23,5 +23,9 @@
        expensive mounted unit. -->
   <Culture id="empire" name="{=byz_culture_name}Byzantine" basic_troop="NPCCharacter.byz2_recruit" elite_basic_troop="NPCCharacter.byz2_skutatos" />
   <Culture id="aserai" name="{=abb_culture_name}Abbasid" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ayyar" />
-  <Culture id="sturgia" name="{=geo_culture_name}Georgian" />
+  <!-- basic_troop/elite_basic_troop redirect Georgian recruitment to the fully independent troop
+       tree in georgian_custom_troops.xml, same pattern as empire/aserai above. elite_basic_troop
+       is the tier-2 INFANTRY branch (geo2_msakhuri - axe/sword, shield, no horse), not a mounted
+       branch, for the same reason byz2_skutatos/abb2_ayyar were picked over their cavalry siblings. -->
+  <Culture id="sturgia" name="{=geo_culture_name}Georgian" basic_troop="NPCCharacter.geo2_recruit" elite_basic_troop="NPCCharacter.geo2_msakhuri" />
 </SPCultures>

@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Fully independent Georgian (Culture.sturgia) troop tree - new character ids, own upgrade
+       chain, own equipment loadouts. Does NOT reuse or touch Native's sturgian_*/varyag/druzhinnik
+       troops (those stay exactly as Native shipped them; georgian_troops.xml's rename of them is
+       now vestigial but harmless, kept for Custom Battle/tournament troop lists that still
+       reference the native ids directly - same pattern as byzantine_troops.xml/abbasid_troops.xml).
+       Every equipment item id below is a real, already-shipped Native item (verified against
+       SandBoxCore/ModuleData/items/*.xml's own <Item>/<CraftedItem> definitions, excluding nested
+       <Piece> crafting components which are not directly equippable).
+       Tier structure (6/11/16/21/26/31) and per-tier skill-point totals (90/195/360/508/676/835)
+       match this mod's own Khuzait-audited Seljuk tree and byzantine_custom_troops.xml's Byzantine
+       tree exactly - each branch below reuses that same skill-point budget per tier so Georgia's
+       tree is neither weaker nor stronger than its Byzantine/Abbasid counterparts.
+       Historical grounding: Msakhuri (noble retainer-soldier), Aznauri (lesser/service nobility,
+       light cavalry), Didebuli/Eristavi (great nobility/dukes, heavy cavalry), Khevsur and Svan
+       (real highland warrior cultures of Georgia, famous for chainmail and close-quarters combat),
+       Mtiuli (mountaineers, historically renowned hunters and archers), Alan (steppe people allied
+       to and settled in the Caucasus, supplying horse-archers to Georgian kings - David IV's own
+       reign, this mod's Georgian era, is when ~40,000 Kipchaks entered Georgian service), Monaspa
+       (the historically attested royal bodyguard corps), Kartli and Sepe (the core Kingdom of
+       Kartli region / "royal, of the crown" - used here as escalating unit-tier prefixes, mirroring
+       how byzantine_custom_troops.xml escalates Skutatos through "Thematic"/"Tagmatic" prefixes). -->
+
+  <!-- Tier 1 (6): shared recruit -->
+  <NPCCharacter id="geo2_recruit" default_group="Infantry" level="6" name="{=geo2_t_recruit}Georgian Levy" occupation="Soldier" culture="Culture.sturgia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="20" />
+      <skill id="Riding" value="10" />
+      <skill id="OneHanded" value="20" />
+      <skill id="Polearm" value="20" />
+      <skill id="Bow" value="10" />
+      <skill id="Throwing" value="10" />
+    </skills>
+    <!-- No Horse slot: this is Culture.sturgia's basic_troop once rival_culture_names.xml points
+         it here, and GetBasicVolunteer() hands basic_troop out to almost every notable/village -
+         the byz2_recruit/abb2_recruit fix earlier this session established that a Horse slot on
+         the basic_troop is what makes even the cheapest recruit register as mounted and overpriced. -->
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_axe_2_t2" />
+        <equipment slot="Head" id="Item.nordic_fur_cap" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_gambeson" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_gambeson" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets>
+      <upgrade_target id="NPCCharacter.geo2_msakhuri" />
+      <upgrade_target id="NPCCharacter.geo2_mtiuli_hunter" />
+      <upgrade_target id="NPCCharacter.geo2_aznauri_squire" />
+      <upgrade_target id="NPCCharacter.geo2_didebuli_squire" />
+    </upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 2 (11) -->
+  <NPCCharacter id="geo2_msakhuri" default_group="Infantry" level="11" name="{=geo2_t_msakhuri}Msakhuri Soldier" occupation="Soldier" culture="Culture.sturgia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="55" />
+      <skill id="OneHanded" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_axe_2_t2" />
+        <equipment slot="Item1" id="Item.sturgia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.sturgian_helmet_open" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_gambeson" />
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
+        <equipment slot="Item1" id="Item.sturgia_old_shield_a" />
+        <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
+        <equipment slot="Head" id="Item.nordic_leather_cap" />
+        <equipment slot="Body" id="Item.nordic_padded_cloth" />
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_kartli_msakhuri" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_mtiuli_hunter" default_group="Ranged" level="11" name="{=geo2_t_mtiuli_hunter}Mtiuli Hunter" occupation="Soldier" culture="Culture.sturgia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="45" />
+      <skill id="OneHanded" value="45" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.mountain_hunting_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_axe_2_t2" />
+        <equipment slot="Head" id="Item.nordic_fur_cap" />
+        <equipment slot="Body" id="Item.nordic_padded_cloth" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.hunting_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_sword_1_t2" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.nordic_sloven_leather" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_mtiuli_archer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_aznauri_squire" default_group="Cavalry" level="11" name="{=geo2_t_aznauri_squire}Aznauri Squire" occupation="Soldier" culture="Culture.sturgia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="35" />
+      <skill id="Riding" value="60" />
+      <skill id="OneHanded" value="55" />
+      <skill id="Bow" value="20" />
+      <skill id="Throwing" value="25" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nordic_leather_cap" />
+        <equipment slot="Body" id="Item.nordic_padded_cloth" />
+        <equipment slot="Horse" id="Item.sturgia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Item1" id="Item.hunting_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nomad_cap" />
+        <equipment slot="Body" id="Item.nordic_sloven_leather" />
+        <equipment slot="Horse" id="Item.sturgia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_aznauri_horseman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_didebuli_squire" default_group="Cavalry" level="11" name="{=geo2_t_didebuli_squire}Didebuli Squire" occupation="Soldier" culture="Culture.sturgia" age="24" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="30" />
+      <skill id="Riding" value="65" />
+      <skill id="OneHanded" value="70" />
+      <skill id="Polearm" value="30" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
+        <equipment slot="Item1" id="Item.sturgia_infantry_shield_a" />
+        <equipment slot="Item2" id="Item.sturgia_sword_1_t2" />
+        <equipment slot="Head" id="Item.sturgian_helmet_open" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_gambeson" />
+        <equipment slot="Horse" id="Item.sturgia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_lance_1_t4" />
+        <equipment slot="Item1" id="Item.sturgia_old_shield_a" />
+        <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
+        <equipment slot="Head" id="Item.nordic_leather_cap" />
+        <equipment slot="Body" id="Item.nordic_padded_cloth" />
+        <equipment slot="Horse" id="Item.sturgia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_didebuli_horseman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 3 (16) -->
+  <NPCCharacter id="geo2_kartli_msakhuri" default_group="Infantry" level="16" name="{=geo2_t_kartli_msakhuri}Kartli Msakhuri" occupation="Soldier" culture="Culture.sturgia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="100" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_axe_3_t3" />
+        <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.sturgian_helmet_b_open" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_base" />
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_2_t3" />
+        <equipment slot="Item1" id="Item.sturgia_old_shield_b" />
+        <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
+        <equipment slot="Head" id="Item.nordic_helmet" />
+        <equipment slot="Body" id="Item.nordic_lamellar_vest" />
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_sepe_msakhuri" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_mtiuli_archer" default_group="Ranged" level="16" name="{=geo2_t_mtiuli_archer}Mtiuli Archer" occupation="Soldier" culture="Culture.sturgia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="80" />
+      <skill id="OneHanded" value="80" />
+      <skill id="Bow" value="150" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_axe_3_t3" />
+        <equipment slot="Head" id="Item.nordic_leather_cap" />
+        <equipment slot="Body" id="Item.nordic_sloven" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_bow" />
+        <equipment slot="Item1" id="Item.range_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_sword_2_t3" />
+        <equipment slot="Head" id="Item.nomad_padded_hood" />
+        <equipment slot="Body" id="Item.nordic_tunic" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_mtiuli_veteran_archer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_aznauri_horseman" default_group="Cavalry" level="16" name="{=geo2_t_aznauri_horseman}Aznauri Horseman" occupation="Soldier" culture="Culture.sturgia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="60" />
+      <skill id="Riding" value="110" />
+      <skill id="OneHanded" value="100" />
+      <skill id="Bow" value="40" />
+      <skill id="Throwing" value="50" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_2_t3" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nordic_helmet" />
+        <equipment slot="Body" id="Item.nordic_sloven" />
+        <equipment slot="Horse" id="Item.t2_sturgia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Item1" id="Item.steppe_bow" />
+        <equipment slot="Item2" id="Item.range_arrows" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
+        <equipment slot="Body" id="Item.eastern_stitched_leather_coat" />
+        <equipment slot="Horse" id="Item.t2_sturgia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_aznauri_warrior" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_didebuli_horseman" default_group="Cavalry" level="16" name="{=geo2_t_didebuli_horseman}Didebuli Horseman" occupation="Soldier" culture="Culture.sturgia" age="26" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="50" />
+      <skill id="Riding" value="120" />
+      <skill id="OneHanded" value="130" />
+      <skill id="Polearm" value="60" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
+        <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
+        <equipment slot="Item2" id="Item.sturgia_sword_2_t3" />
+        <equipment slot="Head" id="Item.sturgian_lord_helmet_a" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_base" />
+        <equipment slot="Horse" id="Item.t2_sturgia_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_lance_1_t4" />
+        <equipment slot="Item1" id="Item.sturgia_old_shield_b" />
+        <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
+        <equipment slot="Head" id="Item.nordic_helmet" />
+        <equipment slot="Body" id="Item.nordic_lamellar_vest" />
+        <equipment slot="Horse" id="Item.t2_sturgia_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_eristavi_lancer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 4 (21) -->
+  <NPCCharacter id="geo2_sepe_msakhuri" default_group="Infantry" level="21" name="{=geo2_t_sepe_msakhuri}Sepe Msakhuri" occupation="Soldier" culture="Culture.sturgia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="155" />
+      <skill id="Polearm" value="140" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_axe_4_t4" />
+        <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.eastern_throwing_spear_1_t3" />
+        <equipment slot="Head" id="Item.sturgian_helmet_b_close" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_fortified" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_4_t4" />
+        <equipment slot="Item1" id="Item.sturgia_old_shield_c" />
+        <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
+        <equipment slot="Item3" id="Item.eastern_throwing_spear_1_t3" />
+        <equipment slot="Head" id="Item.sturgian_lord_helmet_a" />
+        <equipment slot="Body" id="Item.sturgian_chainmale_shortsleeve" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_khevsur_guard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_mtiuli_veteran_archer" default_group="Ranged" level="21" name="{=geo2_t_mtiuli_veteran_archer}Mtiuli Veteran Archer" occupation="Soldier" culture="Culture.sturgia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="OneHanded" value="110" />
+      <skill id="Bow" value="213" />
+      <skill id="Throwing" value="75" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.composite_steppe_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_axe_4_t4" />
+        <equipment slot="Head" id="Item.nordic_helmet" />
+        <equipment slot="Body" id="Item.nordic_sloven_over_mail" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_sword_4_t4" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.heavy_nordic_coat" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_svan_marksman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_aznauri_warrior" default_group="Cavalry" level="21" name="{=geo2_t_aznauri_warrior}Aznauri Warrior" occupation="Soldier" culture="Culture.sturgia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="85" />
+      <skill id="Riding" value="155" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="55" />
+      <skill id="Throwing" value="73" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_4_t4" />
+        <equipment slot="Item1" id="Item.composite_steppe_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.eastern_studded_leather" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
+        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_alan_horseguard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_eristavi_lancer" default_group="Cavalry" level="21" name="{=geo2_t_eristavi_lancer}Eristavi Lancer" occupation="Soldier" culture="Culture.sturgia" age="28" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="70" />
+      <skill id="Riding" value="170" />
+      <skill id="OneHanded" value="183" />
+      <skill id="Polearm" value="85" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
+        <equipment slot="Item2" id="Item.sturgia_sword_4_t4" />
+        <equipment slot="Head" id="Item.sturgian_lord_helmet_b" />
+        <equipment slot="Body" id="Item.sturgian_chainmale_shortsleeve" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_lance_2_t5" />
+        <equipment slot="Item1" id="Item.steppe_guardian_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.eastern_plated_leather" />
+        <equipment slot="Gloves" id="Item.eastern_plated_leather_vambraces" />
+        <equipment slot="Horse" id="Item.t2_khuzait_horse" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_eristavi_heavy_lancer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 5 (26): four branches, but geo2_alan_horseguard ends here as its own leaf (light-cavalry
+       skirmish line), matching byz2_vardariotai's role in the Byzantine tree - only the heavy
+       cavalry, infantry, and ranged branches continue to tier 6. -->
+  <NPCCharacter id="geo2_khevsur_guard" default_group="Infantry" level="26" name="{=geo2_t_khevsur_guard}Khevsur Guard" occupation="Soldier" culture="Culture.sturgia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="180" />
+      <skill id="OneHanded" value="210" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Throwing" value="86" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_2haxe_1_t4" />
+        <equipment slot="Item1" id="Item.sturgia_sword_5_t4" />
+        <equipment slot="Item2" id="Item.sturgia_infantry_shield_b" />
+        <equipment slot="Head" id="Item.sturgian_lord_helmet_b" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_fortified" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_axe_5_t5" />
+        <equipment slot="Item1" id="Item.sturgia_sword_5_t5" />
+        <equipment slot="Item2" id="Item.sturgia_old_shield_c" />
+        <equipment slot="Head" id="Item.sturgian_lord_helmet_c" />
+        <equipment slot="Body" id="Item.sturgian_chainmale_longsleeve" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_khevsur_sworn_guard" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_svan_marksman" default_group="Ranged" level="26" name="{=geo2_t_svan_marksman}Svan Marksman" occupation="Soldier" culture="Culture.sturgia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="140" />
+      <skill id="OneHanded" value="140" />
+      <skill id="Bow" value="280" />
+      <skill id="Throwing" value="116" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_sword_5_t4" />
+        <equipment slot="Head" id="Item.eastern_vendel_helmet" />
+        <equipment slot="Body" id="Item.nordic_lamellar_vest" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_3_t3" />
+        <equipment slot="Head" id="Item.nomad_helmet" />
+        <equipment slot="Body" id="Item.nordic_hauberk" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_svan_master_archer" /></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_alan_horseguard" default_group="Cavalry" level="26" name="{=geo2_t_alan_horseguard}Alan Horse-Guard" occupation="Soldier" culture="Culture.sturgia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="110" />
+      <skill id="Riding" value="210" />
+      <skill id="OneHanded" value="180" />
+      <skill id="Bow" value="80" />
+      <skill id="Throwing" value="96" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Item1" id="Item.steppe_war_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_fur" />
+        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_sword_5_t4" />
+        <equipment slot="Item1" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item2" id="Item.piercing_arrows" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_fur_harness" />
+      </EquipmentRoster>
+    </Equipments>
+    <!-- Alan Horse-Guard (allied steppe horse-archer skirmish line) is left as its own branch
+         endpoint here, mirroring byz2_vardariotai - the historical Alans served as an elite allied
+         guard corps in their own right, so they don't need a further promotion. -->
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_eristavi_heavy_lancer" default_group="Cavalry" level="26" name="{=geo2_t_eristavi_heavy_lancer}Eristavi Heavy Lancer" occupation="Soldier" culture="Culture.sturgia" age="30" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="95" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="240" />
+      <skill id="Polearm" value="121" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.steppe_guardian_shield" />
+        <equipment slot="Item2" id="Item.sturgia_sword_5_t4" />
+        <equipment slot="Head" id="Item.sturgian_lord_helmet_c" />
+        <equipment slot="Body" id="Item.sturgian_chainmale_longsleeve" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_lance_2_t5" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Head" id="Item.khuzait_noble_helmet_with_neckguard" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets><upgrade_target id="NPCCharacter.geo2_monaspa_guardsman" /></upgrade_targets>
+  </NPCCharacter>
+
+  <!-- Tier 6 (31): three separate branch endpoints (infantry, ranged, heavy cavalry) - mirrors
+       byzantine_custom_troops.xml's tier-6 structure exactly, avoiding the "everything converges
+       into one unit" bug this mod fixed for Byzantine/Abbasid earlier. -->
+  <NPCCharacter id="geo2_khevsur_sworn_guard" default_group="Infantry" level="31" name="{=geo2_t_khevsur_sworn_guard}Khevsur Sworn Guard" occupation="Soldier" culture="Culture.sturgia" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="210" />
+      <skill id="OneHanded" value="250" />
+      <skill id="TwoHanded" value="130" />
+      <skill id="Polearm" value="130" />
+      <skill id="Throwing" value="115" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_2haxe_2_t5" />
+        <equipment slot="Item1" id="Item.sturgia_sword_5_t5" />
+        <equipment slot="Item2" id="Item.sturgia_infantry_shield_b" />
+        <equipment slot="Head" id="Item.sturgian_battle_crown" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_fortified" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_axe_5_t5" />
+        <equipment slot="Item1" id="Item.sturgia_sword_5_t5" />
+        <equipment slot="Item2" id="Item.sturgia_old_shield_c" />
+        <equipment slot="Head" id="Item.sturgian_crown" />
+        <equipment slot="Body" id="Item.sturgian_chainmale_longsleeve" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_svan_master_archer" default_group="Ranged" level="31" name="{=geo2_t_svan_master_archer}Svan Master Archer" occupation="Soldier" culture="Culture.sturgia" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="165" />
+      <skill id="OneHanded" value="165" />
+      <skill id="Bow" value="330" />
+      <skill id="Throwing" value="175" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_war_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.sturgia_sword_5_t5" />
+        <equipment slot="Head" id="Item.plumed_nomad_helmet" />
+        <equipment slot="Body" id="Item.nordic_lamellar_armor" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.steppe_heavy_bow" />
+        <equipment slot="Item1" id="Item.piercing_arrows" />
+        <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
+        <equipment slot="Head" id="Item.sturgian_helmet_b_close" />
+        <equipment slot="Body" id="Item.decorated_nordic_hauberk" />
+        <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+
+  <NPCCharacter id="geo2_monaspa_guardsman" default_group="Cavalry" level="31" name="{=geo2_t_monaspa}Monaspa Royal Guardsman" occupation="Soldier" culture="Culture.sturgia" age="32" is_female="false" is_hero="false">
+    <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
+    <skills>
+      <skill id="Athletics" value="120" />
+      <skill id="Riding" value="220" />
+      <skill id="OneHanded" value="200" />
+      <skill id="TwoHanded" value="100" />
+      <skill id="Polearm" value="100" />
+      <skill id="Bow" value="60" />
+      <skill id="Throwing" value="35" />
+    </skills>
+    <Equipments>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
+        <equipment slot="Item1" id="Item.decorated_steppe_shield" />
+        <equipment slot="Item2" id="Item.sturgia_sword_5_t5" />
+        <equipment slot="Item3" id="Item.khuzait_mace_4_t5" />
+        <equipment slot="Head" id="Item.sturgian_battle_crown" />
+        <equipment slot="Body" id="Item.sturgian_lamellar_fortified" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
+      </EquipmentRoster>
+      <EquipmentRoster>
+        <equipment slot="Item0" id="Item.sturgia_lance_2_t5" />
+        <equipment slot="Item1" id="Item.steppe_guardian_shield" />
+        <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
+        <equipment slot="Item3" id="Item.sturgia_mace_2_t4" />
+        <equipment slot="Head" id="Item.khuzait_battle_crown" />
+        <equipment slot="Body" id="Item.khuzait_heavy_armor" />
+        <equipment slot="Gloves" id="Item.khuzait_heavy_armor_bracer" />
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
+        <equipment slot="Horse" id="Item.t3_khuzait_horse" />
+        <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
+      </EquipmentRoster>
+    </Equipments>
+    <upgrade_targets></upgrade_targets>
+  </NPCCharacter>
+</NPCCharacters>

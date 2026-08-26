@@ -466,6 +466,12 @@
     <string id="byz_cc_varangian_desc" text="تدربت على الفأس والسيف إلى جانب حرس الفارانج الشهير للإمبراطورية في القصر الإمبراطوري." />
     <string id="byz_cc_varangian_name" text="تدربت إلى جانب حرس الفارانج" />
     <string id="byz_culture_name" text="بيزنطي" />
+    <string id="byz_tactic_last_stand" text="[القيادة التكتيكية البيزنطية] دفاع الثيمات على المرتفعات ضد قوة متفوقة!" />
+    <string id="byz_tactic_hammer_anvil" text="[القيادة التكتيكية البيزنطية] تكتيك المطرقة والسندان للكاتافراكتوي منتشر!" />
+    <string id="byz_tactic_shield_wall" text="[القيادة التكتيكية البيزنطية] جدار دروع التاغما تشكل عند الممر الضيق!" />
+    <string id="byz_tactic_crossfire" text="[القيادة التكتيكية البيزنطية] تشكيل نيران متقاطعة للتوكسوتاي بدأ!" />
+    <string id="byz_tactic_lines_broken" text="[الكاتافراكتوي] انهار تماسك خط العدو! يبدأ التطويق من الجناحين!" />
+    <string id="byz_tactic_full_assault" text="[تقدم التاغما] اكتملت المطرقة والسندان! تقدم جميع الخطوط!" />
     <string id="byz_house_argyros" text="آل أرغيروس" />
     <string id="byz_house_botaneiates" text="آل بوتانياتيس" />
     <string id="byz_house_bryennios" text="آل بريينيوس" />
@@ -706,6 +712,26 @@
     <string id="geo_t_mtiuli_vet_bowman" text="رامي مطيولي مخضرم" />
     <string id="geo_t_mtiuli_woodsman" text="حطّاب مطيولي" />
     <string id="geo_t_recruit" text="مجند جورجي" />
+    <string id="geo2_t_recruit" text="ميليشيا جورجية" />
+    <string id="geo2_t_msakhuri" text="جندي مساخوري" />
+    <string id="geo2_t_mtiuli_hunter" text="صياد متيولي" />
+    <string id="geo2_t_aznauri_squire" text="تابع أزناوري" />
+    <string id="geo2_t_didebuli_squire" text="تابع ديديبولي" />
+    <string id="geo2_t_kartli_msakhuri" text="مساخوري كارتلي" />
+    <string id="geo2_t_mtiuli_archer" text="رامي متيولي" />
+    <string id="geo2_t_aznauri_horseman" text="فارس أزناوري" />
+    <string id="geo2_t_didebuli_horseman" text="فارس ديديبولي" />
+    <string id="geo2_t_sepe_msakhuri" text="سيبه مساخوري" />
+    <string id="geo2_t_mtiuli_veteran_archer" text="رامي متيولي مخضرم" />
+    <string id="geo2_t_aznauri_warrior" text="محارب أزناوري" />
+    <string id="geo2_t_eristavi_lancer" text="رمّاح إريستافي" />
+    <string id="geo2_t_khevsur_guard" text="حارس خيفسوري" />
+    <string id="geo2_t_svan_marksman" text="قناص سفاني" />
+    <string id="geo2_t_alan_horseguard" text="حارس فرسان آلاني" />
+    <string id="geo2_t_eristavi_heavy_lancer" text="رمّاح إريستافي ثقيل" />
+    <string id="geo2_t_khevsur_sworn_guard" text="حارس خيفسوري موثوق" />
+    <string id="geo2_t_svan_master_archer" text="رامي سفاني بارع" />
+    <string id="geo2_t_monaspa" text="حارس موناسبا الملكي" />
     <string id="geo_t_svan_heroic" text="كاسر صفوف سفاني بطولي" />
     <string id="geo_t_svan_linebreaker" text="كاسر صفوف سفاني" />
     <string id="geo_t_svan_spearman" text="رمّاح سفاني" />
@@ -780,6 +806,8 @@
     <string id="seljuk_bard_opt" text="الاستماع إلى ملحمة الغزو من شاعر السهوب (100 دينار)" />
     <string id="seljuk_bonus_cavalry_wage" text="اقتصاد إقطاع الفرسان السلجوقي" />
     <string id="seljuk_bonus_construction" text="الأعمال العامة النظامية" />
+    <string id="abb_bonus_construction" text="بيت الحكمة" />
+    <string id="geo_bonus_construction" text="أعمال داود الباني" />
     <string id="seljuk_byzantine_desc" text="الجناح الجنوبي للمقاومة البيزنطية في الأناضول بعد ملاذكرد. أعنف خصوم الدولة السلجوقية العظمى، يكافح للحفاظ على قلاعه الحدودية أمام القبائل التركمانية الزاحفة نحو قونية وأصفهان." />
     <string id="seljuk_byzantine_name" text="الإمبراطورية البيزنطية" />
     <string id="seljuk_byzantine_ruler" text="الإمبراطور" />
