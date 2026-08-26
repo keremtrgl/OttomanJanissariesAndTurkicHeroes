@@ -896,5 +896,52 @@
     <string id="geo_cc_rescue_desc" text="Te deslizaste por un paso secreto para llevar auxilio a una fortaleza de montaña sitiada, salvando a su gente." />
     <string id="geo_cc_pilgrim_name" text="Te Convertiste En Un Escudo Para Peregrinos Y Agraviados" />
     <string id="geo_cc_pilgrim_desc" text="Te ganaste renombre protegiendo caravanas de peregrinos rumbo a lugares sagrados contra los bandidos." />
+      <string id="seljuk_systems_intro_title" text="El Gran Imperio Selyúcida" />
+    <string id="seljuk_systems_intro_text" text="Habéis entrado en tierras selyúcidas. Tres instituciones distinguen a este imperio de sus vecinos:&#10;&#10;Gobernanza del Atabeg – estabiliza discretamente la lealtad, las reservas de alimentos y la seguridad en cada ciudad y castillo selyúcida, y forma a todo héroe que ejerza de gobernador.&#10;&#10;Diván de la Ruta de la Seda y Seguro de Caravanas – disponible en el menú de Comercio de cualquier ciudad selyúcida; permite asegurar vuestras caravanas contra pérdidas e invertir capital para obtener dividendos semanales.&#10;&#10;Bardo de la Taberna – en la taberna del arrabal, un bardo de la estepa recita epopeyas de Ghazavat por una módica suma, elevando la moral de vuestro ejército.&#10;&#10;Buscad estas opciones cada vez que visitéis un asentamiento selyúcida." />
+    <string id="seljuk_ok_button" text="OK" />
+    <string id="byz_romanos_greet" text="¡Forastero que osa acercarse a la Púrpura! Roma perdura, aunque sus alas de águila fueron cercenadas en Manzikert - la veré alzarse de nuevo, cueste lo que cueste a mi propio nombre. Di lo que quieres, y sé breve." />
+    <string id="abb_alqaim_greet" text="La paz sea contigo, viajero, en nombre del Comendador de los Creyentes. Bagdad se yergue como lo ha hecho durante tres siglos, su luz intacta, aunque ahora sea la espada del Sultán, no la mía, la que guarda sus puertas. ¿Qué te trae ante el trono del Califato?" />
+    <string id="geo_david_greet" text="¡Bien hallado bajo las montañas de Kartli! Georgia no seguirá siendo vasalla del capricho de invasor alguno - estoy construyendo un ejército, una iglesia y una nación que nos sobrevivirán a ambos. Habla con franqueza, ¿qué deseas?" />
+      <string id="seljuk_alp_arslan_greet_2" text="El viento de la estepa lleva noticia de tus hazañas antes de que llegues. Siéntate y dime - ¿resiste aún Rûm, o su voluntad por fin se quiebra?" />
+    <string id="seljuk_alp_arslan_greet_3" text="Todo alp que sirve honestamente al Sultanato vale por diez que sirven solo por oro. Sospecho que aún no has decidido cuál de los dos eres. Habla, y averigüémoslo." />
+    <string id="seljuk_ertugrul_greet_2" text="Siéntate junto al fuego, viajero. Aquí, en la frontera, a un hombre se le juzga por su brazo espadero y su palabra, no por su linaje. ¿Cuál de los dos me has traído hoy?" />
+    <string id="seljuk_ertugrul_greet_3" text="Los Kayi no olvidan a un amigo, ni perdonan a un enemigo. Aún no he decidido cuál eres tú - así que habla con cuidado." />
+    <string id="seljuk_nizam_greet_2" text="El orden es un jardín, hijo mío - descuidado siquiera una estación, vuelve a ser maleza. ¿Qué te trae a perturbar mis cuentas hoy?" />
+    <string id="seljuk_nizam_greet_3" text="He enterrado bajo este escritorio correspondencia suficiente para tres Sultanes, y aun así Bagdad e Isfahán me escriben como si no tuviera nada más que hacer. ¿Qué es?" />
+    <string id="byz_romanos_greet_2" text="La historia me juzgará por un solo campo fuera de Manzikert y olvidará los veinte que sostuve antes. No me importa - solo la supervivencia de Roma me concierne ahora. ¿Qué quieres?" />
+    <string id="byz_romanos_greet_3" text="Todo general en este campamento cree que lo habría hecho mejor contra los turcos. Quizás. Ninguno de ellos, sin embargo, viste la Púrpura. Habla." />
+    <string id="byz_alexios_greet_1" text="Bien hallado. Ya he combatido bajo tres emperadores y he enterrado las ambiciones de hombres más grandes que nosotros dos - así que elige tus palabras conmigo con cierto cuidado." />
+    <string id="byz_alexios_greet_2" text="Roma no necesita otro héroe, forastero - necesita a alguien dispuesto a hacer lo que los héroes no harían. Con eso he hecho las paces. ¿Y tú?" />
+    <string id="byz_alexios_greet_3" text="La corte susurra que miro demasiado hacia el trono. La corte no se equivoca. ¿Qué te trae ante mí?" />
+    <string id="abb_alqaim_greet_2" text="Un Califa sin ejército sigue siendo Califa, viajero - el sermón del viernes aún se lee en mi nombre desde El Cairo hasta Bujará. El poder no es el único trono. ¿Qué buscas?" />
+    <string id="abb_alqaim_greet_3" text="El Sultán protege mi palacio; yo protejo su legitimidad. Ninguno de los dos lo dice en voz alta, pero ambos lo sabemos. Ahora - ¿cuál es tu asunto?" />
+    <string id="abb_fakhraldawla_greet_1" text="Siéntate, si tienes paciencia - tengo peticiones de tres provincias sobre este escritorio y un Califa que quiere respuestas antes del anochecer. ¿Cuál es tu asunto?" />
+    <string id="abb_fakhraldawla_greet_2" text="En esta corte, una palabra bien colocada dura más que una espada bien colocada. He visto usarse ambas, y sé en cuál confío más. Habla." />
+    <string id="abb_fakhraldawla_greet_3" text="El tesoro de Bagdad no se equilibra solo, y su política tampoco. Administro ambos, mal algunos días. ¿Qué necesitas de mí?" />
+    <string id="geo_david_greet_2" text="Cada casa noble de este reino cree que debería gobernar en mi lugar. Pretendo demostrar, reforma tras reforma, que se equivocan. ¿Qué quieres?" />
+    <string id="geo_david_greet_3" text="Un reino no se defiende solo con murallas, sino con la lealtad de los hombres que las custodian. Aún estoy construyendo ambas cosas. ¿Qué te trae ante mí?" />
+    <string id="geo_liparit_greet_1" text="Estás en las tierras de la Casa Baghvashi, viajero - recuérdalo, sea cual sea la corona a la que respondas. ¿Qué quieres?" />
+    <string id="geo_liparit_greet_2" text="Los reyes van y vienen, pero las grandes casas de Kartli perduran. He sobrevivido a más cóleras reales de las que imaginas. Di tu asunto." />
+    <string id="geo_liparit_greet_3" text="No me inclino ante ningún trono que olvide de quién son las espadas que lo sostienen. Expón tu asunto, y cuida tu tono." />
+      <string id="byz_botaneiates_greet_1" text="Me llaman viejo, y no se equivocan - pero una larga vida observando fracasar a hombres más jóvenes me ha enseñado exactamente cómo cambian realmente de manos los imperios. ¿Qué quieres?" />
+    <string id="byz_botaneiates_greet_2" text="Todo hombre ambicioso en Constantinopla es paciente hasta el momento en que deja de serlo. Yo simplemente he sido más paciente que la mayoría. Di tu asunto." />
+    <string id="byz_andronikos_greet_1" text="Oirás decir que le di la espalda al campo en Manzikert. Le di la espalda a una batalla ya perdida, y salvé a hombres que de otro modo serían cadáveres. Júzgame como quieras - ahora, ¿qué te trae aquí?" />
+    <string id="byz_andronikos_greet_2" text="El nombre Ducas pesa en este Imperio, apruebe la turba o no. Expón tu asunto." />
+    <string id="byz_bryennios_greet_1" text="Un soldado que aún no ha decidido si el trono merece el riesgo de alcanzarlo sigue siendo, por ahora, uno leal. Habla con franqueza, ¿qué necesitas?" />
+    <string id="byz_argyros_greet_1" text="El linaje Argyros ya le dio un emperador a Roma, y podría hacerlo de nuevo. Hasta entonces, sirvo como se me pide. ¿Qué es?" />
+    <string id="byz_kekaumenos_greet_1" text="He escrito todo lo que he aprendido comandando hombres en esta frontera, para que los necios que vengan tras de mí no tengan que aprenderlo por las malas. ¿Qué quieres saber?" />
+    <string id="byz_kekaumenos_greet_2" text="Desconfía sobre todo del hombre que te diga que la guerra es gloriosa. He visto suficiente de ella para saber mejor. Di tu asunto." />
+    <string id="abb_arslankhatun_greet_1" text="El nombre de una mujer pesa en esta corte tanto como el título de cualquier hombre, escriban lo que escriban los escribas. ¿Qué te trae ante mí?" />
+    <string id="abb_arslankhatun_greet_2" text="He sobrevivido a las intrigas políticas de hombres que creían que una alianza matrimonial me dejaría sin poder. No fue así. Di tu asunto." />
+    <string id="abb_ibnalmuslima_greet_1" text="Bagdad tiene enemigos dentro de sus propios muros tan a menudo como fuera de ellos, y he hecho de conocer la diferencia la obra de mi vida. ¿Cuál es tu asunto?" />
+    <string id="abb_ibnalmuslima_greet_2" text="La fe y el arte de gobernar no son dos artes distintas en esta ciudad, viajero - son una sola. Habla con franqueza." />
+    <string id="abb_hilalalsabi_greet_1" text="Cada suceso de esta corte lo dejo por escrito para quienes vengan después de nosotros - así que cuida lo que me dices, bien podría sobrevivirnos a ambos." />
+    <string id="abb_quraysh_greet_1" text="Mi tribu poseía estas tierras antes de que llegaran los jinetes del Sultán, y las poseerá después, si Dios quiere. ¿Qué quieres?" />
+    <string id="geo_gurandukht_greet_1" text="Un reino criado por un rey niño necesita una mano firme tras el trono, viajero, y yo la he proporcionado más de una vez. ¿Qué quieres?" />
+    <string id="geo_gurandukht_greet_2" text="He enterrado a un esposo y coronado a un hijo, y ninguna de las dos tareas fue tan sencilla como la hacen sonar los cronistas. Di tu asunto." />
+    <string id="geo_orbeli_greet_1" text="La Casa Orbeli comandaba ejércitos para este reino antes incluso de que la dinastía actual supiera empuñar una espada. Recuerda de quién depende realmente la lealtad de una corona. ¿Qué quieres?" />
+    <string id="geo_orbeli_greet_2" text="Un rey que olvida qué casas sostienen su trono rara vez lo conserva mucho tiempo. Solo te recuerdo ese hecho. Habla." />
+    <string id="geo_giorgi_greet_1" text="La Iglesia y la Corona recorren el mismo camino en este reino, viajero, por incómodo que resulte. ¿Qué te trae ante mí?" />
+    <string id="geo_grigol_greet_1" text="Un Eristavi responde ante el Rey, no ante cualquier forastero errante que cruce sus tierras. Expón tu asunto con claridad." />
   </strings>
 </base>

@@ -896,5 +896,52 @@
     <string id="geo_cc_rescue_desc" text="Tu t'es faufilé par un col secret pour porter secours à une forteresse de montagne assiégée, sauvant ses habitants." />
     <string id="geo_cc_pilgrim_name" text="Tu Es Devenu Un Bouclier Pour Les Pèlerins Et Les Opprimés" />
     <string id="geo_cc_pilgrim_desc" text="Tu as gagné en renommée en protégeant des caravanes de pèlerins en route vers des lieux saints contre les bandits." />
+      <string id="seljuk_systems_intro_title" text="Le Grand Empire Seldjoukide" />
+    <string id="seljuk_systems_intro_text" text="Vous êtes entré en terre seldjoukide. Trois institutions distinguent cet empire de ses voisins :&#10;&#10;Gouvernance de l'Atabeg – stabilise discrètement la loyauté, les réserves de vivres et la sécurité dans chaque ville et château seldjoukides, et forme tout héros exerçant la charge de gouverneur.&#10;&#10;Diwan de la Route de la Soie et de l'Assurance des Caravanes – accessible depuis le menu Commerce de toute ville seldjoukide ; assurez vos caravanes contre la perte et investissez du capital pour des dividendes hebdomadaires.&#10;&#10;Barde de la Taverne – dans la taverne des faubourgs, un barde des steppes récite des épopées du Ghazavat contre une modeste rétribution, remontant le moral de votre armée.&#10;&#10;Guettez ces options chaque fois que vous visitez une colonie seldjoukide." />
+    <string id="seljuk_ok_button" text="OK" />
+    <string id="byz_romanos_greet" text="Étranger qui ose approcher la Pourpre ! Rome subsiste, bien que ses ailes d'aigle aient été rognées à Manzikert - je la verrai se relever, quel qu'en soit le prix pour mon propre nom. Dis ce que tu veux, et sois bref." />
+    <string id="abb_alqaim_greet" text="Que la paix soit sur toi, voyageur, au nom du Commandeur des Croyants. Bagdad se dresse comme elle se dresse depuis trois siècles, sa lumière intacte, même si c'est désormais l'épée du Sultan, non la mienne, qui garde ses portes. Qu'est-ce qui t'amène devant le siège du Califat ?" />
+    <string id="geo_david_greet" text="Bien trouvé sous les montagnes de Kartlie ! La Géorgie ne restera vassale d'aucun envahisseur - je bâtis une armée, une église et une nation qui nous survivront à tous deux. Parle sans détour, que veux-tu ?" />
+      <string id="seljuk_alp_arslan_greet_2" text="Le vent des steppes porte la nouvelle de tes exploits avant même ton arrivée. Assieds-toi et dis-moi - Rûm résiste-t-il encore, ou sa volonté cède-t-elle enfin ?" />
+    <string id="seljuk_alp_arslan_greet_3" text="Tout alp qui sert honnêtement le Sultanat en vaut dix qui ne servent que pour l'or. Je devine que tu n'as pas encore décidé lequel tu es. Parle, et voyons cela." />
+    <string id="seljuk_ertugrul_greet_2" text="Assieds-toi près du feu, voyageur. Ici, aux confins, un homme se juge à son bras et à sa parole, non à sa lignée. Lequel des deux m'as-tu apporté aujourd'hui ?" />
+    <string id="seljuk_ertugrul_greet_3" text="Les Kayi n'oublient jamais un ami, ni ne pardonnent à un ennemi. Je n'ai pas encore décidé lequel tu es - alors parle avec prudence." />
+    <string id="seljuk_nizam_greet_2" text="L'ordre est un jardin, mon enfant - laissé sans soin même une seule saison, il redevient friche. Qu'est-ce qui t'amène à troubler mes comptes aujourd'hui ?" />
+    <string id="seljuk_nizam_greet_3" text="J'ai enseveli sous ce bureau assez de correspondance pour trois sultans, et pourtant Bagdad et Ispahan m'écrivent comme si je n'avais rien d'autre à faire. Qu'est-ce donc ?" />
+    <string id="byz_romanos_greet_2" text="L'histoire me jugera pour un seul champ hors de Manzikert et oubliera les vingt que j'ai tenus auparavant. Peu m'importe - seule la survie de Rome me préoccupe désormais. Que veux-tu ?" />
+    <string id="byz_romanos_greet_3" text="Chaque général de ce camp croit qu'il aurait mieux fait contre les Turcs. Peut-être. Aucun d'eux ne porte cependant la Pourpre. Parle." />
+    <string id="byz_alexios_greet_1" text="Bien trouvé. J'ai déjà combattu sous trois empereurs et enterré les ambitions d'hommes plus grands que nous deux - choisis donc tes mots envers moi avec quelque prudence." />
+    <string id="byz_alexios_greet_2" text="Rome n'a pas besoin d'un nouveau héros, étranger - elle a besoin de quelqu'un prêt à faire ce que les héros ne feraient pas. Je m'en suis fait une raison. Et toi ?" />
+    <string id="byz_alexios_greet_3" text="La cour murmure que je regarde trop souvent le trône. La cour ne se trompe pas. Qu'est-ce qui t'amène à moi ?" />
+    <string id="abb_alqaim_greet_2" text="Un Calife sans armée reste un Calife, voyageur - le sermon du vendredi se lit encore en mon nom du Caire à Boukhara. Le pouvoir n'est pas le seul trône. Que cherches-tu ?" />
+    <string id="abb_alqaim_greet_3" text="Le Sultan protège mon palais ; je protège sa légitimité. Ni l'un ni l'autre ne le dit tout haut, mais tous deux le savons. Maintenant - quelle est ton affaire ?" />
+    <string id="abb_fakhraldawla_greet_1" text="Assieds-toi, si tu as de la patience - j'ai des pétitions de trois provinces sur ce bureau et un Calife qui veut des réponses avant le soir. Quelle est ton affaire ?" />
+    <string id="abb_fakhraldawla_greet_2" text="En cette cour, un mot bien placé survit à une épée bien placée. J'ai vu les deux à l'œuvre, et je sais laquelle m'inspire le plus confiance. Parle." />
+    <string id="abb_fakhraldawla_greet_3" text="Le trésor de Bagdad ne s'équilibre pas seul, ni sa politique d'ailleurs. Je gère les deux, mal certains jours. Que te faut-il de moi ?" />
+    <string id="geo_david_greet_2" text="Chaque grande maison de ce royaume croit qu'elle devrait régner à ma place. J'entends prouver, réforme après réforme, qu'elles ont tort. Que veux-tu ?" />
+    <string id="geo_david_greet_3" text="Un royaume ne se défend pas seulement par ses murailles, mais par la loyauté des hommes qui les gardent. Je bâtis encore les deux. Qu'est-ce qui t'amène à moi ?" />
+    <string id="geo_liparit_greet_1" text="Tu te tiens sur les terres de la Maison Baghvashi, voyageur - souviens-t'en, quelle que soit la couronne que tu sers. Que veux-tu ?" />
+    <string id="geo_liparit_greet_2" text="Les rois passent, mais les grandes maisons de Kartlie demeurent. J'ai survécu à plus de colères royales que tu ne l'imagines. Dis ton affaire." />
+    <string id="geo_liparit_greet_3" text="Je ne m'incline devant aucun trône qui oublie à qui appartiennent les épées qui le soutiennent. Expose ton affaire, et surveille ton ton." />
+      <string id="byz_botaneiates_greet_1" text="On me dit vieux, et on n'a pas tort - mais une longue vie passée à observer des hommes plus jeunes échouer m'a appris exactement comment les empires changent réellement de mains. Que veux-tu ?" />
+    <string id="byz_botaneiates_greet_2" text="Tout homme ambitieux à Constantinople est patient jusqu'au moment où il ne l'est plus. J'ai simplement été plus patient que la plupart. Dis ton affaire." />
+    <string id="byz_andronikos_greet_1" text="Tu entendras dire que j'ai tourné le dos au champ de bataille à Manzikert. J'ai tourné le dos à une bataille déjà perdue, et sauvé des hommes qui seraient sinon des cadavres. Juge-moi comme il te plaira - maintenant, qu'est-ce qui t'amène ?" />
+    <string id="byz_andronikos_greet_2" text="Le nom Doukas pèse dans cet Empire, que la foule m'approuve ou non. Expose ton affaire." />
+    <string id="byz_bryennios_greet_1" text="Un soldat qui n'a pas encore décidé si le trône vaut le risque d'y prétendre reste, pour l'heure, un homme loyal. Parle franchement, que te faut-il ?" />
+    <string id="byz_argyros_greet_1" text="La lignée Argyros a déjà donné un empereur à Rome, et pourrait bien le refaire. D'ici là, je sers comme on me le demande. Qu'est-ce donc ?" />
+    <string id="byz_kekaumenos_greet_1" text="J'ai consigné tout ce que j'ai appris en commandant des hommes sur cette frontière, afin que les sots qui me suivront n'aient pas à l'apprendre à leurs dépens. Que veux-tu savoir ?" />
+    <string id="byz_kekaumenos_greet_2" text="Ne fais surtout pas confiance à l'homme qui te dit que la guerre est glorieuse. J'en ai assez vu pour savoir mieux. Dis ton affaire." />
+    <string id="abb_arslankhatun_greet_1" text="Le nom d'une femme pèse autant à cette cour que le titre de n'importe quel homme, quoi que les scribes choisissent d'écrire. Qu'est-ce qui t'amène devant moi ?" />
+    <string id="abb_arslankhatun_greet_2" text="J'ai survécu aux intrigues politiques d'hommes qui croyaient qu'une alliance de mariage me rendrait impuissante. Il n'en fut rien. Dis ton affaire." />
+    <string id="abb_ibnalmuslima_greet_1" text="Bagdad compte des ennemis à l'intérieur de ses murs aussi souvent qu'au-dehors, et j'ai fait de connaître la différence l'œuvre de ma vie. Quelle est ton affaire ?" />
+    <string id="abb_ibnalmuslima_greet_2" text="La foi et l'art de gouverner ne sont pas deux arts distincts dans cette ville, voyageur - ils ne font qu'un. Parle franchement." />
+    <string id="abb_hilalalsabi_greet_1" text="Chaque événement de cette cour, je le consigne pour ceux qui viendront après nous - prends donc garde à ce que tu me dis, cela pourrait bien nous survivre à tous deux." />
+    <string id="abb_quraysh_greet_1" text="Ma tribu tenait ces terres avant l'arrivée des cavaliers du Sultan, et les tiendra après, si Dieu le veut. Que veux-tu ?" />
+    <string id="geo_gurandukht_greet_1" text="Un royaume élevé par un roi-enfant a besoin d'une main ferme derrière le trône, voyageur, et je l'ai fournie plus d'une fois. Que veux-tu ?" />
+    <string id="geo_gurandukht_greet_2" text="J'ai enterré un époux et couronné un fils, et aucune des deux tâches ne fut aussi simple que les chroniqueurs le laissent entendre. Dis ton affaire." />
+    <string id="geo_orbeli_greet_1" text="La Maison Orbeli commandait des armées pour ce royaume avant même que la dynastie actuelle ne sache tenir une épée. Souviens-toi de qui dépend vraiment la loyauté d'une couronne. Que veux-tu ?" />
+    <string id="geo_orbeli_greet_2" text="Un roi qui oublie quelles maisons soutiennent son trône le garde rarement longtemps. Je ne fais que te rappeler ce fait. Parle." />
+    <string id="geo_giorgi_greet_1" text="L'Église et la Couronne suivent la même route dans ce royaume, voyageur, aussi inconfortable soit-elle. Qu'est-ce qui t'amène à moi ?" />
+    <string id="geo_grigol_greet_1" text="Un Eristavi répond au Roi, non à chaque étranger errant qui traverse ses terres. Expose ton affaire clairement." />
   </strings>
 </base>

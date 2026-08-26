@@ -896,5 +896,52 @@
     <string id="seljuk_vil_shibalzumr" text="希巴勒祖姆尔" />
     <string id="seljuk_vil_tegresos" text="西莱" />
     <string id="seljuk_vil_veramin" text="瓦拉明" />
+      <string id="seljuk_systems_intro_title" text="大塞尔柱帝国" />
+    <string id="seljuk_systems_intro_text" text="你已进入塞尔柱领地。三项制度使这个帝国有别于邻国:&#10;&#10;阿塔贝伊治理体系——默默地稳定每座塞尔柱城镇与城堡的忠诚度、粮食储备与治安,并培养担任总督的英雄。&#10;&#10;丝绸之路与商队保险署——设于任何塞尔柱城镇的贸易菜单中,可为商队投保以防损失,并投入资本获取每周分红。&#10;&#10;酒馆游吟诗人——在后街酒馆中,一位草原诗人会以低廉的价格吟唱加齐圣战史诗,提升你军队的士气。&#10;&#10;每当你造访塞尔柱聚落时,请留意这些选项。" />
+    <string id="seljuk_ok_button" text="确定" />
+    <string id="byz_romanos_greet" text="胆敢靠近紫袍之人的陌生者!纵然罗马之鹰在曼齐克特折损了羽翼,她仍屹立不倒——无论付出我自己的名声为代价,我都要看到她再度崛起。有话直说,长话短说。" />
+    <string id="abb_alqaim_greet" text="以信士的长官之名,愿你平安,旅人。巴格达三百年来屹立如初,光辉未减,纵然如今守卫城门的是苏丹之剑,而非我之剑。是什么让你来到哈里发的宝座之前?" />
+    <string id="geo_david_greet" text="卡特利群山之下,幸会!格鲁吉亚绝不会沦为任何侵略者的附庸——我正在建立一支军队、一座教堂、以及一个将比我们二人都更长久的国家。有话直说,你想要什么?" />
+      <string id="seljuk_alp_arslan_greet_2" text="你还未抵达,草原的风便已带来你战功的消息。坐下告诉我——罗姆人仍在抵抗,还是他们的意志终于崩溃了?" />
+    <string id="seljuk_alp_arslan_greet_3" text="一个真心效忠苏丹国的战士,抵得上十个只为黄金卖命之人。我看你尚未决定自己是哪一种。说吧,让我们看看究竟。" />
+    <string id="seljuk_ertugrul_greet_2" text="坐到火边来,旅人。在这边境之地,评判一个人靠的是他的剑臂与誓言,而非血统。你今天带给我的是哪一种?" />
+    <string id="seljuk_ertugrul_greet_3" text="凯伊部落不忘恩,也不饶恕仇敌。我尚未断定你是哪一种人——所以说话要谨慎。" />
+    <string id="seljuk_nizam_greet_2" text="秩序如同一座花园,孩子——哪怕荒废一季,也会重归荒芜。今日是什么事让你来打扰我的账目?" />
+    <string id="seljuk_nizam_greet_3" text="这张桌下埋藏的公文足够三位苏丹处理,可巴格达与内沙布尔仍旧写信给我,仿佛我无事可做。到底是什么事?" />
+    <string id="byz_romanos_greet_2" text="历史会因曼齐克特城外的那一战而审判我,却会忘记我此前坚守过的二十场战役。我不在乎——如今我只关心罗马能否存续。你想要什么?" />
+    <string id="byz_romanos_greet_3" text="这营中的每位将领都以为自己面对突厥人时能做得更好。或许如此。可他们之中没有一个身披紫袍。说吧。" />
+    <string id="byz_alexios_greet_1" text="幸会。我已侍奉过三位皇帝,也埋葬过比你我都更伟大之人的野心——所以对我说话时,请斟酌你的言辞。" />
+    <string id="byz_alexios_greet_2" text="罗马不需要另一个英雄,陌生人——它需要一个愿意去做英雄不愿做之事的人。我已与此和解。你呢?" />
+    <string id="byz_alexios_greet_3" text="宫廷私语说我太常凝视王座。宫廷所言不假。是什么把你带到我面前?" />
+    <string id="abb_alqaim_greet_2" text="没有军队的哈里发仍是哈里发,旅人——从开罗到布哈拉,主麻日的呼图白仍以我之名宣读。权力并非唯一的宝座。你在寻求什么?" />
+    <string id="abb_alqaim_greet_3" text="苏丹守护我的宫殿;我守护他的正统。我们二人皆不曾言明,却都心知肚明。那么——你所为何事?" />
+    <string id="abb_fakhraldawla_greet_1" text="坐吧,若你有耐心的话——这桌上摆着三省的请愿书,还有一位要求日落前得到答复的哈里发。你所为何事?" />
+    <string id="abb_fakhraldawla_greet_2" text="在这朝廷之中,一句适时之言比一剑适时之击更为持久。我见过两者的运用,也知道自己更信赖哪一种。说吧。" />
+    <string id="abb_fakhraldawla_greet_3" text="巴格达的国库不会自行平衡,它的政局亦然。这两者皆由我打理,有些日子处理得并不好。你需要我做什么?" />
+    <string id="geo_david_greet_2" text="这王国中的每个贵族世家都认为该由自己取代我统治。我打算以一项又一项改革证明他们错了。你想要什么?" />
+    <string id="geo_david_greet_3" text="一个王国不仅靠城墙来守卫,更靠守卫者的忠诚。这两者我都仍在建设之中。是什么把你带到我这里?" />
+    <string id="geo_liparit_greet_1" text="你正站在巴格瓦什家族的领地上,旅人——不论你效忠于哪顶王冠,都请记住这一点。你想要什么?" />
+    <string id="geo_liparit_greet_2" text="君王来了又去,但卡特利的显赫世家长存不衰。我历经的王室怒火,比你能想象的还要多。说说你的来意。" />
+    <string id="geo_liparit_greet_3" text="我不会向任何忘记自己是靠谁的刀剑撑起的王座低头。说说你的来意,并注意你的语气。" />
+      <string id="byz_botaneiates_greet_1" text="他们说我老了,这话不假——但漫长的一生看着比我年轻之人失败,让我确切懂得帝国究竟是如何易主的。你想要什么?" />
+    <string id="byz_botaneiates_greet_2" text="君士坦丁堡里每个有野心之人都能耐心等待,直到耐心耗尽的那一刻。我只是比多数人更能忍耐罢了。说说你的来意。" />
+    <string id="byz_andronikos_greet_1" text="你会听说我在曼齐克特战场上转身退却。我转身离开的是一场已然败局已定的战斗,救下的是本会沦为尸首的士兵。随你如何评判我——现在,是什么把你带到这里?" />
+    <string id="byz_andronikos_greet_2" text="无论民众是否认可我,杜卡斯这个姓氏在这个帝国自有分量。说说你的来意。" />
+    <string id="byz_bryennios_greet_1" text="一个尚未决定王座是否值得冒险争取的士兵,眼下仍是一名忠诚之人。直说吧,你需要什么?" />
+    <string id="byz_argyros_greet_1" text="阿吉洛斯家族曾为罗马诞生过一位皇帝,或许还会再有一位。在那之前,人家要我做什么,我便效力什么。是什么事?" />
+    <string id="byz_kekaumenos_greet_1" text="我把在这边境统兵所学的一切都记录了下来,好让后来的蠢人不必再吃一遍苦头才能明白。你想知道什么?" />
+    <string id="byz_kekaumenos_greet_2" text="最不该相信的,就是那些告诉你战争光荣的人。我见过的战争已足够让我看清真相。说说你的来意。" />
+    <string id="abb_arslankhatun_greet_1" text="无论书记官们愿意写下什么,一个女人的名字在这朝廷中自有其分量,不亚于任何男人的头衔。是什么把你带到我面前?" />
+    <string id="abb_arslankhatun_greet_2" text="那些以为一桩联姻会让我失去权力的男人们,他们的政治阴谋我都活过来了。事实并非如此。说说你的来意。" />
+    <string id="abb_ibnalmuslima_greet_1" text="巴格达的敌人常常就在城墙之内,不亚于城外,而分辨这一点正是我毕生的功业。你所为何事?" />
+    <string id="abb_ibnalmuslima_greet_2" text="在这座城市里,信仰与治国之术并非两门不同的学问,旅人——它们本是一体。直说吧。" />
+    <string id="abb_hilalalsabi_greet_1" text="这朝廷中的每一件事,我都为后人记录下来——所以留意你对我说的话,它很可能比我们二人都更长久。" />
+    <string id="abb_quraysh_greet_1" text="在苏丹的骑兵到来之前,我的部落便据有这片土地,若真主允许,他们离去之后我们仍将据有它。你想要什么?" />
+    <string id="geo_gurandukht_greet_1" text="由幼主执掌的王国,需要一只稳健的手在王座之后操持,旅人,而我已不止一次担此重任。你想要什么?" />
+    <string id="geo_gurandukht_greet_2" text="我埋葬过丈夫,加冕过儿子,这两件事都不像编年史家说的那般轻易。说说你的来意。" />
+    <string id="geo_orbeli_greet_1" text="早在当今王朝尚握不稳剑柄之时,奥尔别利家族便已为这王国统领军队。请记住,王冠真正依靠的是谁的忠诚。你想要什么?" />
+    <string id="geo_orbeli_greet_2" text="一位忘记是哪些世家撑起自己王座的君主,很少能长久保有王位。我不过是提醒你这个事实罢了。说吧。" />
+    <string id="geo_giorgi_greet_1" text="教会与王冠在这个王国中同行一条道路,旅人,尽管走得并不总是安稳。是什么把你带到我这里?" />
+    <string id="geo_grigol_greet_1" text="埃里斯塔维只向国王负责,而非向每一个路过其领地的浪迹异乡人。清楚说明你的来意。" />
   </strings>
 </base>

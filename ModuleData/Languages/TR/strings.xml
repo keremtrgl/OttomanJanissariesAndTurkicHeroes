@@ -855,5 +855,52 @@
     <string id="geo_cc_rescue_desc" text="Muhasara altındaki bir dağ kalesine gizli bir geçitten yardım ulaştırıp halkı kurtardın." />
     <string id="geo_cc_pilgrim_name" text="Hacılara ve Mazlumlara Kalkan Oldun" />
     <string id="geo_cc_pilgrim_desc" text="Kutsal topraklara giden hacı kervanlarını haydutlardan koruyarak ün kazandın." />
+      <string id="seljuk_systems_intro_title" text="Büyük Selçuklu Devleti" />
+    <string id="seljuk_systems_intro_text" text="Selçuklu topraklarına girdiniz. Bu imparatorluğu komşularından ayıran üç kurum var:&#10;&#10;Atabeglik Yönetimi - her Selçuklu şehir ve kalesinde sadakati, erzak stoklarını ve güvenliği sessizce güçlendirir, vali olarak görev yapan kahramanları da eğitir.&#10;&#10;İpek Yolu ve Kervan Sigortası Divanı - herhangi bir Selçuklu şehrinin Ticaret menüsünde bulunur; kervanlarınızı kayba karşı sigortalamanızı ve haftalık kâr payı için sermaye yatırmanızı sağlar.&#10;&#10;Meyhane Ozanı - arka sokak meyhanesinde bir bozkır ozanı, mütevazı bir ücret karşılığında Gazavat destanları okuyarak ordunuzun moralini yükseltir.&#10;&#10;Bir Selçuklu yerleşimini her ziyaret ettiğinizde bu seçenekleri arayın." />
+    <string id="seljuk_ok_button" text="Tamam" />
+    <string id="byz_romanos_greet" text="Mora yaklaşmaya cüret eden yabancı! Roma, Malazgirt'te kanatları kırpılmış olsa da ayakta duruyor - kendi adıma ne pahasına olursa olsun onu yeniden yükselirken göreceğim. İşini söyle, kısa kes." />
+    <string id="abb_alqaim_greet" text="Müminlerin Emiri adına selam olsun sana, ey yolcu. Bağdat üç asırdır durduğu gibi ayakta, kapılarını artık benim değil Sultan'ın kılıcı korusa da ışığı sönmedi. Halifelik makamının huzuruna seni getiren nedir?" />
+    <string id="geo_david_greet" text="Kartli dağlarının altında hoş geldin! Gürcistan hiçbir istilacının keyfine bağlı bir uydu olarak kalmayacak - ben, ikimizden de uzun ömürlü olacak bir ordu, bir kilise ve bir millet inşa ediyorum. Açık konuş, ne istiyorsun?" />
+      <string id="seljuk_alp_arslan_greet_2" text="Bozkır rüzgarı, sen daha varmadan yaptıklarının haberini getiriyor. Otur da anlat - Rum hâlâ direniyor mu, yoksa azmi nihayet kırıldı mı?" />
+    <string id="seljuk_alp_arslan_greet_3" text="Sultanlığa dürüstçe hizmet eden her alp, sadece altın için hizmet eden on kişiye bedeldir. Senin henüz hangisi olduğuna karar vermediğini düşünüyorum. Konuş da öğrenelim." />
+    <string id="seljuk_ertugrul_greet_2" text="Ateşin başına otur, yolcu. Burada sınır boylarında bir adam, soyuyla değil kılıç koluyla ve sözüyle yargılanır. Bugün bana hangisini getirdin?" />
+    <string id="seljuk_ertugrul_greet_3" text="Kayı, bir dostu unutmaz, bir düşmanı da affetmez. Senin hangisi olduğuna henüz karar vermedim - o yüzden dikkatli konuş." />
+    <string id="seljuk_nizam_greet_2" text="Nizam bir bahçedir evladım - bir mevsim bile bakımsız kalsa vahşi doğaya döner. Bugün hesaplarımı bölmeye seni getiren nedir?" />
+    <string id="seljuk_nizam_greet_3" text="Bu masanın altına üç Sultan'a yetecek kadar yazışma gömdüm, yine de Bağdat ve İsfahan bana sanki başka işim yokmuş gibi yazıyor. Nedir?" />
+    <string id="byz_romanos_greet_2" text="Tarih beni Malazgirt dışındaki tek bir meydan için yargılayacak ve ondan önce tuttuğum yirmisini unutacak. Umurumda değil - şimdi tek önemsediğim Roma'nın hayatta kalması. Ne istiyorsun?" />
+    <string id="byz_romanos_greet_3" text="Bu ordugâhtaki her general, Türklere karşı daha iyisini yapabileceğine inanıyor. Belki. Ama hiçbiri Mor'u giymiyor. Konuş." />
+    <string id="byz_alexios_greet_1" text="Hoş geldin. Şimdiden üç imparator altında savaştım ve ikimizden de büyük adamların hırslarını gömdüm - o yüzden bana söyleyeceklerini biraz dikkatli seç." />
+    <string id="byz_alexios_greet_2" text="Roma'nın başka bir kahramana ihtiyacı yok, yabancı - kahramanların yapmayacağını yapmaya istekli birine ihtiyacı var. Bununla barıştım. Sen barıştın mı?" />
+    <string id="byz_alexios_greet_3" text="Saray, tahta fazla baktığımı fısıldıyor. Saray haksız değil. Seni bana getiren nedir?" />
+    <string id="abb_alqaim_greet_2" text="Ordusuz bir Halife yine de Halifedir, yolcu - Cuma hutbesi hâlâ Kahire'den Buhara'ya benim adıma okunuyor. Güç, tek taht değildir. Ne arıyorsun?" />
+    <string id="abb_alqaim_greet_3" text="Sultan sarayımı korur; ben de onun meşruiyetini korurum. İkimiz de bunu yüksek sesle söylemeyiz, ama ikimiz de biliriz. Şimdi - işin nedir?" />
+    <string id="abb_fakhraldawla_greet_1" text="Sabrın varsa otur - bu masada üç eyaletten dilekçeler var ve akşama kadar cevap isteyen bir Halife var. İşin nedir?" />
+    <string id="abb_fakhraldawla_greet_2" text="Bu sarayda, yerinde söylenmiş bir söz, yerinde vurulmuş bir kılıçtan daha uzun ömürlüdür. İkisinin de kullanıldığını gördüm ve hangisine daha çok güvendiğimi biliyorum. Konuş." />
+    <string id="abb_fakhraldawla_greet_3" text="Bağdat'ın hazinesi kendi kendine dengelenmez, siyaseti de öyle. İkisini de yönetiyorum, bazı günler kötü yönetiyorum. Benden ne istiyorsun?" />
+    <string id="geo_david_greet_2" text="Bu krallıktaki her asil hanedan, benim yerime kendisinin hükmetmesi gerektiğine inanıyor. Bir reformla diğerini, onların yanıldığını kanıtlamayı amaçlıyorum. Ne istiyorsun?" />
+    <string id="geo_david_greet_3" text="Bir krallık yalnızca duvarlarla değil, onu koruyan adamların sadakatiyle savunulur. İkisini de hâlâ inşa ediyorum. Seni bana getiren nedir?" />
+    <string id="geo_liparit_greet_1" text="Baghvashi Hanedanı'nın topraklarında duruyorsun, yolcu - hangi taca bağlı olursan ol, bunu unutma. Ne istiyorsun?" />
+    <string id="geo_liparit_greet_2" text="Krallar gelir geçer, ama Kartli'nin büyük hanedanları kalıcıdır. Tahmin edebileceğinden daha fazla kraliyet öfkesine dayandım. İşini söyle." />
+    <string id="geo_liparit_greet_3" text="Kılıçlarının kimin elinde durduğunu unutan hiçbir tahtın önünde eğilmem. İşini söyle, ve üslubuna dikkat et." />
+      <string id="byz_botaneiates_greet_1" text="Bana yaşlı diyorlar, ve haksız değiller - ama genç adamların başarısızlığını izleyerek geçirdiğim uzun bir ömür, imparatorlukların el değiştirmesinin gerçekte nasıl işlediğini bana tam olarak öğretti. Ne istiyorsun?" />
+    <string id="byz_botaneiates_greet_2" text="Konstantinopolis'teki her hırslı adam, sabrı taşana kadar sabırlıdır. Ben sadece çoğundan daha sabırlı oldum. İşini söyle." />
+    <string id="byz_andronikos_greet_1" text="Malazgirt'te meydana sırtımı döndüğümü duyacaksın. Ben zaten kaybedilmiş bir savaşa sırtımı döndüm ve aksi halde ceset olacak adamları kurtardım. Beni istediğin gibi yargıla - şimdi, seni buraya getiren nedir?" />
+    <string id="byz_andronikos_greet_2" text="Dukas adı, ayaktakımı beni onaylasa da onaylamasa da bu İmparatorlukta ağırlığını taşır. İşini söyle." />
+    <string id="byz_bryennios_greet_1" text="Tahtın, ona uzanma riskine değip değmediğine henüz karar vermemiş bir asker, şimdilik yine de sadık bir askerdir. Açık konuş, neye ihtiyacın var?" />
+    <string id="byz_argyros_greet_1" text="Argyros hanedanı Roma'ya daha önce bir imparator verdi, belki yine verir. O zamana kadar, benden istenildiği gibi hizmet ediyorum. Nedir?" />
+    <string id="byz_kekaumenos_greet_1" text="Bu sınırda adam komuta ederken öğrendiğim her şeyi yazdım, ki benden sonra gelen aptallar bunu zor yoldan öğrenmesin. Ne öğrenmek istiyorsun?" />
+    <string id="byz_kekaumenos_greet_2" text="Sana savaşın en az şanlı olduğunu söyleyen adama güven. Bunu daha iyisini bilecek kadar çok gördüm. İşini söyle." />
+    <string id="abb_arslankhatun_greet_1" text="Bir kadının adı, kâtiplerin ne yazmayı tercih ettiğine bakılmaksızın, bu sarayda herhangi bir erkeğin unvanı kadar ağırlık taşır. Seni huzuruma getiren nedir?" />
+    <string id="abb_arslankhatun_greet_2" text="Bir evlilik ittifakının beni güçsüz kıldığını sanan erkeklerin siyasi entrikalarından daha uzun yaşadım. Kılmadı. İşini söyle." />
+    <string id="abb_ibnalmuslima_greet_1" text="Bağdat'ın düşmanları, surlarının dışında olduğu kadar sık surlarının içindedir de, ve aradaki farkı bilmeyi hayatımın işi haline getirdim. İşin nedir?" />
+    <string id="abb_ibnalmuslima_greet_2" text="Bu şehirde inanç ve devlet yönetimi iki ayrı sanat değildir, yolcu - ikisi de aynı şeydir. Açık konuş." />
+    <string id="abb_hilalalsabi_greet_1" text="Bu saraydaki her olayı, bizden sonra gelenler için yazıyorum - o yüzden bana ne söylediğine dikkat et, ikimizden de daha uzun yaşayabilir." />
+    <string id="abb_quraysh_greet_1" text="Kabilem, Sultan'ın atlıları gelmeden önce bu toprakları elinde tutuyordu, Allah izin verirse ondan sonra da tutacak. Ne istiyorsun?" />
+    <string id="geo_gurandukht_greet_1" text="Bir çocuk-kral tarafından yetiştirilen bir krallığın taht arkasında sağlam bir ele ihtiyacı vardır, yolcu, ve ben bunu birden fazla kez sağladım. Ne istiyorsun?" />
+    <string id="geo_gurandukht_greet_2" text="Bir eşi gömdüm ve bir oğlu taç giydirdim, ve hiçbiri vakanüvislerin anlattığı kadar basit değildi. İşini söyle." />
+    <string id="geo_orbeli_greet_1" text="Orbeli Hanedanı, şimdiki hanedan daha kılıç tutamadan bu krallık için orduları komuta ediyordu. Bir tacın sadakatinin gerçekte kime bağlı olduğunu hatırla. Ne istiyorsun?" />
+    <string id="geo_orbeli_greet_2" text="Hangi hanedanların tahtını ayakta tuttuğunu unutan bir kral, onu nadiren uzun süre elinde tutar. Ben sadece sana bu gerçeği hatırlatıyorum. Konuş." />
+    <string id="geo_giorgi_greet_1" text="Kilise ve Taç, bu krallıkta aynı yoldan yürür, yolcu, ne kadar tedirgin olsa da. Seni bana getiren nedir?" />
+    <string id="geo_grigol_greet_1" text="Bir Eristavi, Krala hesap verir, topraklarından geçen her başıboş yabancıya değil. İşini açıkça söyle." />
   </strings>
 </base>
