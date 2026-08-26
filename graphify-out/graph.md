@@ -161,3 +161,43 @@ graph TD
 | **Kale (Castle)** | **Ahlat Kalesi (castle_K5)** | Ahlatşahlar (Sökmen) | Erciş (Balık), Adilcevaz (Ceviz) |
 | **Kale (Castle)** | **Malazgirt Kalesi (castle_K1)**| Ahlatşahlar (Sökmen) | Bulanık (Savaş Atı), Patnos (Tahıl) |
 | **Kale (Castle)** | **Korykos Kalesi (castle_A8)**| Çaka Beyliği (Çaka Bey) | Silifke (Zeytin), Erdemli (Tuz) |
+
+---
+
+## 🌍 8. Rakip Krallıklar Hiyerarşisi (Native Kingdom → Tarihi Devlet Dönüşümü)
+
+Bu bölüm, Native'in 6 orijinal krallığının bu modda gerçek tarihi devletlere dönüştürülmesini ve
+bu oturumda eklenen yeni içerikleri özetler.
+
+```mermaid
+graph TD
+    N1["Kingdom.empire_s<br/>(Native: Southern Empire)"] --> B1["🏛️ Bizans İmparatorluğu<br/>İmparator Romanos IV Diogenes"]
+    N2["Kingdom.aserai"] --> B2["🏛️ Abbasi Halifeliği<br/>Halife El-Kaim bi-Emrillah"]
+    N3["Kingdom.sturgia"] --> B3["🏛️ Gürcistan Krallığı<br/>Kral IV. David (Kurucu)"]
+    N4["Kingdom.vlandia"] --> B4["🏛️ Haçlı Devletleri (Antakya)<br/>Bohemond of Taranto"]
+    N5["Kingdom.battania"] --> B5["🏛️ Kilikya Ermeni Prensliği<br/>Ruben I (Kurucu)"]
+    N6["Kingdom.khuzait"] --> B6["🏛️ Karahanlı Devleti<br/>Şems el-Mülk Nasr"]
+    N7["Kingdom.empire_w<br/>(Native: Western Empire - bu oturumda canlandırıldı)"] --> B7["🏛️ Konstantinopolis Latin İmparatorluğu<br/>İmparator I. Henri (Flandre'li)"]
+
+    B7 --> LC1["Flandre Hanesi (clan_empire_west_2)<br/>Edirne + Amfipolis + Midilli"]
+    B7 --> LC2["Sanudo Hanesi (clan_empire_west_7)<br/>Naksos - Dük Marco Sanudo"]
+```
+
+**Bu oturumda yapılan toprak transferleri:**
+- Caleus Kalesi + köyleri: Haçlı Devletleri → Kilikya Ermeni Prensliği (kültür güncellendi)
+- Amasya (+3 köy): Bizans → Selçuklu (Danişmendliler)
+- Dorylaeum/Eskişehir (+2 köy): Bizans → Selçuklu (Kayı Boyu)
+- Midilli (Lesbos): House Kontostephanos → Flandre Hanesi (settlement-level owner override)
+
+**Latin İmparatorluğu'nun kendine özgü 20 birimli asker ağacı** (`latin_empire_custom_troops.xml`,
+Culture.empire, 6 kademe): Latin Levy → 4 dal (Frenk Piyadesi/Cenevizli Arbaletçi/Ulah Atlısı/
+Silahtar) → ... → Gasmoulos Muhafızı (piyade), Seçkin Cenevizli Arbaletçi (menzilli), Rumeli Baronu
+(ağır süvari) - Haçlı Devletleri'nin kendi ağacından tamamen farklı silah/zırh/at seçimleriyle.
+
+**Yeni C# alt sistemleri:**
+- `LatinEmpireRecruitmentBehavior` - empire_w/empire_s'in paylaştığı Culture.empire nedeniyle
+  Latin İmparatorluğu yerleşkelerinin varsayılan Bizans askeri yerine kendi lat2_ ağacını
+  sunmasını sağlar (bkz. `SeljukRecruitmentBehavior` ile aynı desen).
+- `NewKingdomsDialogueBehavior` - Haçlı (7), Ermeni (7), Karahanlı (9), Latin İmparatorluğu (2) ve
+  Bizans Batı (7) olmak üzere 32 tarihi lorda özel, gerçek tarihe dayalı 70 satırlık diyalog
+  ekler (3 varyantlı tekrar-önleme mekanizması `SeljukDialogueBehavior` ile aynı).

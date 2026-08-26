@@ -58,6 +58,7 @@ namespace SeljukEmpire
                 TryRegister(campaignStarter, "SeljukTavernBehavior", () => campaignStarter.AddBehavior(new SeljukTavernBehavior()));
                 TryRegister(campaignStarter, "SeljukDialogueBehavior", () => campaignStarter.AddBehavior(new SeljukDialogueBehavior()));
                 TryRegister(campaignStarter, "RivalCultureDialogueBehavior", () => campaignStarter.AddBehavior(new RivalCultureDialogueBehavior()));
+                TryRegister(campaignStarter, "NewKingdomsDialogueBehavior", () => campaignStarter.AddBehavior(new NewKingdomsDialogueBehavior()));
                 TryRegister(campaignStarter, "SeljukSystemsExplainerBehavior", () => campaignStarter.AddBehavior(new SeljukSystemsExplainerBehavior()));
                 TryRegister(campaignStarter, "SeljukCultureBonusModels", () =>
                 {

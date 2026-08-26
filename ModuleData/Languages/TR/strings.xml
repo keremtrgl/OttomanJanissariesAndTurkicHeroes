@@ -1197,5 +1197,75 @@
     <string id="lat2_t_gasmoulos_guard" text="Gasmoulos Muhafızı" />
     <string id="lat2_t_elite_arbalester" text="Seçkin Cenevizli Arbaletçi" />
     <string id="lat2_t_baron_romania" text="Rumeli Baronu" />
+    <string id="crus_bohemond_greet_1" text="Daha yaşlı, daha bilge adamlar alınamaz derken Antakya'yı ben aldım - babam Guiscard bana Bizans'ın vaatlerinin, arkasında duran ordu kadar değerli olduğunu öğretti, ne bir zerre fazla. Ne istiyorsun?" />
+    <string id="crus_bohemond_greet_2" text="Bana sabırsız bir prens diyorlar, haklılar da - bir yemin bozarak zaten bir prenslik kurdum, şimdi bunun için özür dileyecek değilim. Meramını söyle." />
+    <string id="crus_bohemond_greet_3" text="Bir keresinde İmparator'un gücünü kırmak için ta İlirya'ya kadar yürüdüm ve kaybettim. Aynı şekilde iki kez kaybetmem. Seni Antakya'ya getiren nedir?" />
+    <string id="crus_baldwin2_greet_1" text="Urfa hem kılıcımla hem Tanrı'nın lütfuyla benimdir, kuzenimin kanı olsun olmasın - şimdiden iki esaretten fidye ile kurtuldum, üçüncüsünü niyetim yok. Meramını söyle." />
+    <string id="crus_baldwin2_greet_2" text="Bu sınırda bir kont, savaştığı kadar dua da eder yolcu, ben ikisi arasında pek fark bulmadım. Benden ne istiyorsun?" />
+    <string id="crus_morphia_greet_1" text="Ben bir Latin konta varmadan çok önce babam Malatya'yı bir Ermeni bey olarak yönetiyordu, bu damarlarda hangi kanın aktığını unutmadım. Urfa Kontesi'nden ne istiyorsun?" />
+    <string id="crus_morphia_greet_2" text="İki kez esir düşen bir koca, karısına bir fiefi tek başına ve iyi tutmayı öğretir. Meramını söyle, sabrımı zayıflıkla karıştırma." />
+    <string id="crus_tancred_greet_1" text="Amcam Bohemond bana Bizans'ın savunmayacağı şeyi almayı öğretti, dersimi onun beklediğinden çok daha iyi öğrendim. Ne istiyorsun?" />
+    <string id="crus_tancred_greet_2" text="Boulogne'lu Baldwin ile Kilikya yüzünden birden fazla kez tartıştık, son sözün söylendiğini de sanmıyorum. Meramını söyle, çabuk ol." />
+    <string id="crus_waleran_greet_1" text="Bira Kalesi tehlikeli bir sınırda küçük bir yüktür, ama onu herhangi bir kontun Urfa'yı tuttuğu kadar sadakatle tutuyorum. Seni bana getiren nedir?" />
+    <string id="crus_waleran_greet_2" text="Bu yüzyıl bitmeden ailemin adı bu topraklarda daha çok şey ifade edecek, sözümü tut - ama her zaman bir adamın seçeceği sebeplerle değil. Meramını söyle." />
+    <string id="crus_baldwin1_greet_1" text="Kardeşim Godfrey Kudüs'ü aldı ve tacını reddetti. Ben onun vicdan azabını paylaşmadım - bir krallığın kralı olur, alçakgönüllü bir unvan ve ölü bir adamın ihtiyatı değil. Ne istiyorsun?" />
+    <string id="crus_baldwin1_greet_2" text="Kudüs tahtı beni güneye çağırmadan önce Urfa'yı ilk Latin kontu olarak ben yönettim. Bir adamın talihinin gerçekten nerede başladığını unutmam. Meramını söyle." />
+    <string id="crus_baldwin1_greet_3" text="Tanrı bu toprağı Franklara iki kez verdi - biri Antakya'da, biri Kudüs'te - ikisini de elimizde tutacağız. Buradaki işin nedir?" />
+    <string id="crus_joscelin_greet_1" text="Urfa'nın sınırı her yandan Artuklu çeliğine değiyor, Balak'ın sancaklarını herkesten daha yakından izlemeyi öğrendim. Ne istiyorsun?" />
+    <string id="crus_joscelin_greet_2" text="Bu sınırda çok kolay güvenen bir kont Artuklu zindanında son bulur - Tanrı bana ne planlamış olursa olsun, özgür ölmeyi düşünüyorum. Meramını söyle." />
+    <string id="arm_ruben1_greet_1" text="Bizans bir Ermeni'nin sadakatinin toprağından daha az değerli olduğuna karar verene kadar Bagratlı tacına dürüstçe hizmet ettim - Kars bana başka türlüsünü öğretti. Bu dağlarda ne istiyorsun?" />
+    <string id="arm_ruben1_greet_2" text="Elimdeki her kale, Bizans'ın terk ettiği adamlarla ve savunamadığı topraklarla inşa edildi. İsterlerse buna isyan desinler. Meramını söyle." />
+    <string id="arm_ruben1_greet_3" text="Toros dağları Konstantinopolis'te hangi bayrağın dalgalandığını umursamaz - sadece geçitleri kimin tuttuğunu umursar. Onları ben tutuyorum. Seni bana getiren nedir?" />
+    <string id="arm_thoros1_greet_1" text="Dedem Ruben bu prensliği sadece dağ kayası ve inatla yarattı. Kendi oğullarıma miras aldığımdan fazlasını bırakmayı düşünüyorum. Ne istiyorsun?" />
+    <string id="arm_thoros1_greet_2" text="Bu ailede bir kuzenin hırsı tehlikeli bir şeydir yolcu - kendiminkiyle ilgilendim ve pişman değilim. Meramını söyle." />
+    <string id="arm_constantine1_greet_1" text="Babam dağları tuttu; ben altındaki ovayı da tutmayı düşünüyorum, Bizans veya Haçlı iyi niyetine ne mal olursa olsun. Seni bana getiren nedir?" />
+    <string id="arm_constantine1_greet_2" text="Bir Ermeni prensi, müttefiklerini düşmanları kadar dikkatli seçerek hayatta kalır - bugün bu Antakya olabilir, yarın olmayabilir. Meramını söyle." />
+    <string id="arm_koghvasil_greet_1" text="Bizans günlüklerinde bana Haydut derler, belki de bu ismi hak ettim - Kaysun ve Raban benimdir çünkü onları aldım, bir imparator bahşettiği için değil. Ne istiyorsun?" />
+    <string id="arm_koghvasil_greet_2" text="Arkamda ne bir taç ne de eski bir hane var, sadece bir kılıç ve ona güvenen adamlar. Şimdiye kadar yeterli oldu. Meramını söyle." />
+    <string id="arm_vasildgha_greet_1" text="Babam Vasil bu beyliği yalnız çıplak hırsla kurdu ve aramızda kan bağı olmamasına rağmen bana bıraktı - güveninin yersiz olmadığını kanıtlamayı düşünüyorum. Ne istiyorsun?" />
+    <string id="arm_vasildgha_greet_2" text="Kaysun ve Raban benimkinden daha büyük güçlerin arasında duruyor, bunu iyi biliyorum. Akıllı bir varis ne zaman eğileceğini ve ne zaman sıkı duracağını bilir. Meramını söyle." />
+    <string id="arm_oshinlampron_greet_1" text="Rubenliler kendilerine Kilikya'daki tüm Ermenilerin prensleri diyor - Lampron kendi hanesinden başka kimseye hesap vermez. Seni dağıma getiren nedir?" />
+    <string id="arm_oshinlampron_greet_2" text="Kilikya üzerindeki şimdiki kavgalar unutulmuş günlük kayıtları olduktan çok sonra bile ailem bu kaleyi tutacak, sözümü tut. Ne istiyorsun?" />
+    <string id="arm_gabrielmelitene_greet_1" text="Kızım Morphia şimdi Urfa'da bir Latin kontun yanında oturuyor - daha garip ittifaklar herkesin beklediğinden daha uzun sürdü. Malatya'dan ne istiyorsun?" />
+    <string id="arm_gabrielmelitene_greet_2" text="Kilikya dağlarından bu kadar uzaktaki bir Ermeni bey, yalnızca aklı ve surlarıyla hayatta kalır. Yıllardır ikisine de güveniyorum. Meramını söyle." />
+    <string id="krkh_nasr_greet_1" text="Selçuklular Ceyhun'u geçmeden önce Maveraünnehir Karahanlı toprağıydı, amcalarım ne anlaşma imzalarsa imzalasın bunu unutmadım. Ne istiyorsun?" />
+    <string id="krkh_nasr_greet_2" text="İsfahan'daki Selçuklu sultanları sınır hakkında ne düşünürse düşünsün, Buhara ve Semerkant ikisi de haneme hesap verir. Meramını söyle." />
+    <string id="krkh_buwimaryam_greet_1" text="Bu hanenin bir hatunu, çözmek için kılıca ihtiyaç duyduğundan daha fazla kocasının hırsını gömmüştür. Benden ne istiyorsun?" />
+    <string id="krkh_buwimaryam_greet_2" text="Bozkır sarayları erkekler onu kaybetmek için at sürerken hangi kadınların hanlığı bir arada tuttuğunu hatırlar. İyi hatırlanmayı düşünüyorum. Meramını söyle." />
+    <string id="krkh_bughraharun_greet_1" text="Selçuklular zayıf göründüğünde bir kez Horasan'a girdim, geri püskürtülsem de sınırın İsfahan'ın inanmak istediği kadar sabit olmadığını kanıtladım. Ne istiyorsun?" />
+    <string id="krkh_bughraharun_greet_2" text="Bir tek seferin sonucu ne olursa olsun, bir Buğra Han hanlığına yapılan bir hakareti unutmaz. Meramını söyle." />
+    <string id="krkh_toghrulkhan_greet_1" text="Toğrul, benim olmadan önce Selçuklular arasında büyük bir isimdi - bir Karahanlının da onu aynı şekilde taşıyabileceğini kanıtlamayı düşünüyorum. Ne istiyorsun?" />
+    <string id="krkh_toghrulkhan_greet_2" text="Bozkır kimin atalarının hangi savaşı önce kazandığını umursamaz. Sadece şimdi onu kimin tuttuğunu umursar. Meramını söyle." />
+    <string id="krkh_hasanibnsulayman_greet_1" text="Bu hanenin her prensi, kılıcı düzgün tutmayı öğrenmeden önce Buhara'nın siyasetini öğrenir - şimdiye kadar ikisinde de ustalaştım. Ne istiyorsun?" />
+    <string id="krkh_alitegin_greet_1" text="Buhara'yı kendilerini benden üstün sanan hanların burnunun dibinden aldım ve o zamandan beri hem Gazneli hem Karahanlıya karşı tutuyorum. Ne istiyorsun?" />
+    <string id="krkh_alitegin_greet_2" text="Kaşgar'dan Gazne'ye kadar her sarayda bana asi derler, bu unvanı herhangi bir hanın kutsamasının verebileceğinden daha fazla gururla taşıyorum. Meramını söyle." />
+    <string id="krkh_alitegin_greet_3" text="Miras yoluyla verilen bir taht, bir adamın kendi eliyle alıp tuttuğundan daha az değerlidir - bunu şimdiden iki kez kanıtladım. Seni Buhara'ya getiren nedir?" />
+    <string id="krkh_qadirkhan_greet_1" text="Kaşgar ve Hoten şimdi ikisi de hanlığıma boyun eğiyor, benden önce hiçbir Karahanlının hüküm sürmediği kadar doğuda. Ne istiyorsun?" />
+    <string id="krkh_qadirkhan_greet_2" text="Sarayıma askerler kadar kolayca alimler ve şairler de getirdim - sadece kılıçlarıyla hatırlanan bir hanlık uzun sürmez. Meramını söyle." />
+    <string id="krkh_satukbughra_greet_1" text="Benden önce tahtı tutan öz amcamın isteğine karşı, Peygamber'in dinini kabul eden hanedanımın ilki bendim - o zamandan beri tüm bozkır liderlik ettiğim yolu izledi. Ne istiyorsun?" />
+    <string id="krkh_satukbughra_greet_2" text="Tanrısını değiştiren bir han, sarayı henüz farkına varmasa da hanlığının tüm geleceğini değiştirir. Bu seçimi bir kez yaptım ve hiç şüphe duymadım. Meramını söyle." />
+    <string id="krkh_satukbughra_greet_3" text="İslam Türk bozkırına herhangi bir sultanın ordusundan önce benim aracılığımla geldi - daha sonra kim şeref iddia ederse etsin, bunu hatırla. Beni karşına getiren nedir?" />
+    <string id="krkh_balasaguni_greet_1" text="Mürekkebim kuruduktan çok sonra hükmedecek prensler için bir hikmet kitabı yazdım yolcu - ona Kutadgu Bilig, mutluluk veren bilgi dedim. Benden ne istiyorsun?" />
+    <string id="krkh_balasaguni_greet_2" text="Bir kılıç bir öğleden sonra bir hanlık kazanır; bilge yönetim kitabı ise bir asır boyunca bir arada tutabilir. İkincisini yazmayı seçtim. Meramını söyle." />
+    <string id="krkh_balasaguni_greet_3" text="Kaşgar sarayı benden şiir istedi, ben onlara adaletle yönetme el kitabı verdim - bazı hediyeler vereninin ömrünü aşar. Ne istiyorsun?" />
+    <string id="lat_henryflanders_greet_1" text="Kardeşim Baldwin, Konstantinopolis Rumlarının sadece fetih yoluyla bir Latin tacını kabul edeceğine inanarak bir Bulgar zindanında öldü. Ben bir mızraktan çok daha iyi bir imparatorluğu bir arada tutan daha yumuşak bir yol buldum. Ne istiyorsun?" />
+    <string id="lat_henryflanders_greet_2" text="Bir Bulgar prensesle barış için evlendim, aşk için değil, bir yıl daha barışı korursa yarın yine yapardım. Bir imparatorun evlilikleri kendisine değil imparatorluğuna aittir. Meramını söyle." />
+    <string id="lat_henryflanders_greet_3" text="Bu imparatorluktaki her Rum piskoposu ve Latin baron, kendi tarafını diğerine karşı kayırmamı bekliyor. İkisini de eşit şekilde hayal kırıklığına uğratmayı öğrendim ve Romanya bu sayede daha istikrarlı. Seni Konstantinopolis'e getiren nedir?" />
+    <string id="lat_marcosanudo_greet_1" text="Konstantinopolis'teki filodan bir avuç gemiyle ayrıldım ve Naksos'u Doç'un değil kendi tacım için aldım - amcam Dandolo yerimde olsa aynısını yapardı. Ne istiyorsun?" />
+    <string id="lat_marcosanudo_greet_2" text="Kikladlar şimdi Takımadalar Dükü'ne hesap veriyor, o dük de Konstantinopolis'teki İmparator'a hesap veriyor, Ege'de başka kimseye değil. Meramını söyle." />
+    <string id="byz_laskaris_greet_1" text="Laskaris ismi bu sarayda en eskisi değil, ama vakanüvisler daha küçük adamlar hakkında ne yazmayı seçerse seçsin, unutulmayacağını düşünüyorum. Ne istiyorsun?" />
+    <string id="byz_laskaris_greet_2" text="Roma daha önce Malazgirt'te kaybedilen bir savaştan daha kötüsünü atlattı, ailem bu seferkini de atlattığında ayakta olmayı düşünüyor. Meramını söyle." />
+    <string id="byz_kontostephanos_greet_1" text="Ailem bu İmparatorluğa bir saray salonundan olduğu kadar bir savaş gemisinin güvertesinden de hizmet etti, denizin dürüstlüğüne herhangi bir saray mensubununkinden daha çok güveniyorum. Ne istiyorsun?" />
+    <string id="byz_kontostephanos_greet_2" text="Latinler onu hem antlaşma hem hıyanetle alana kadar Midilli ailemin korumasındaydı - bu borcu unutmadım. Meramını söyle." />
+    <string id="byz_raoul_greet_1" text="Dedemin dedesi Frenk topraklarından bu İmparatorluğa geldi ve kılıcını Mor'a yemin etti - tamamen kan yoluyla olmasa da yeminle Rumanım ve bu değişimden bir kez bile pişman olmadım. Ne istiyorsun?" />
+    <string id="byz_raoul_greet_2" text="Bir Raoul bu saraydaki çoğu kişiden daha iyi hem Latin hırsını hem Rum gururunu anlar - ikisiyle de büyütüldüm. Meramını söyle." />
+    <string id="byz_synadenos_greet_1" text="Synada, ben doğmadan çok önce adını haneme verdi, Frigya'da, sınırın bir adamın sadakatini herhangi bir saraydan daha çok sınadığı yerde. Ne istiyorsun?" />
+    <string id="byz_synadenos_greet_2" text="Benimki gibi taşra bir hane, başkentin bakmayı unuttuğu yerlerde İmparatorluğu bir arada tutar. Meramını söyle." />
+    <string id="byz_kamateros_greet_1" text="Ailem askerden çok katip ve diplomat yetiştirdi, bunu utanç saymıyorum - bir İmparatorluğun bir antlaşma bozan adamlar kadar yazan adamlara da ihtiyacı var. Ne istiyorsun?" />
+    <string id="byz_kamateros_greet_2" text="Yeterince Kilise konsili tartışması okudum, bu İmparatorlukta en keskin bıçağın bazen sadece iyi seçilmiş bir kelime olduğunu biliyorum. Meramını söyle." />
+    <string id="byz_kourtikios_greet_1" text="Kourtikios ismi, herhangi bir Türk büyük bir kuvvetle Fırat'ı geçmeden önce Anatolikon sınırını korudu - şimdi durmayı düşünmüyoruz. Ne istiyorsun?" />
+    <string id="byz_kourtikios_greet_2" text="Sınır ailesi, herhangi bir haberci gelmeden çok önce ufuktaki tozdan düşmanın niyetini okumayı öğrenir. Meramını söyle." />
+    <string id="byz_melias_greet_1" text="Atam Melias, bu İmparatorluk için Lykandos'u kendi kılıcı ve kendi adamlarıyla oyan bir Ermeniydi - hem bir Ermeni'nin kanını hem bir Rum'un yeminini taşıyorum, bunda bir çelişki görmüyorum. Ne istiyorsun?" />
+    <string id="byz_melias_greet_2" text="Ermeni ve Rum kanı nesiller boyunca ailemde karıştı, her iki yarı da bu İmparatorluğa iyi hizmet etti. Meramını söyle." />
 </strings>
 </base>
