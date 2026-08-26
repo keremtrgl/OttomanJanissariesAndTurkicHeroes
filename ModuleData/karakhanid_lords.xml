@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!-- Real historical Kara-Khanid lords (11th century) - face/equipment/skills Native, only name=
+       changes, same pattern as byzantine_lords.xml/abbasid_lords.xml/georgian_lords.xml/
+       crusader_lords.xml/armenian_lords.xml. -->
+  <!-- lord_6_1 (clan_khuzait_1, ruling clan) is male in Native, matching Shams al-Mulk Nasr
+       (Ibrahim Tamgach Khan/Boritigin's son and successor, Western Khanate ruler c.1068-1080) -
+       no gender override needed. -->
+  <NPCCharacter id="lord_6_1" name="{=krkh_ln_nasr}Shams al-Mulk Nasr" is_female="false" />
+  <!-- lord_6_4 (clan_khuzait_2) is female in Native (Mesui) - Buwi Maryam, real historical
+       daughter of Musa Baytash Khan, whose tomb in Kashgar is a holy site, keeps Native's own
+       gender/face/body, no override needed beyond the name - same swap pattern used for
+       lord_4_6/Morphia of Melitene in crusader_lords.xml. -->
+  <NPCCharacter id="lord_6_4" name="{=krkh_ln_buwimaryam}Buwi Maryam" is_female="true" />
+  <NPCCharacter id="lord_6_5" name="{=krkh_ln_harun}Bughra Khan Harun" is_female="false" />
+  <NPCCharacter id="lord_6_16" name="{=krkh_ln_toghrul}Yusuf Toghrul Khan" is_female="false" />
+  <NPCCharacter id="lord_6_17" name="{=krkh_ln_hasan}Hasan ibn Sulayman" is_female="false" />
+  <NPCCharacter id="lord_6_18" name="{=krkh_ln_alitegin}Ali-Tegin" is_female="false" />
+  <NPCCharacter id="lord_6_19" name="{=krkh_ln_qadirkhan}Yusuf Qadir Khan" is_female="false" />
+  <NPCCharacter id="lord_6_20" name="{=krkh_ln_satukbughra}Satuq Bughra Khan" is_female="false" />
+  <NPCCharacter id="lord_K9_l" name="{=krkh_ln_balasaguni}Yusuf Balasaguni" is_female="false" />
+</NPCCharacters>

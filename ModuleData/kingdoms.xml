@@ -177,7 +177,29 @@
       <relationship kingdom="Kingdom.battania" value="0" isAtWar="false" />
     </relationships>
   </Kingdom>
-  <Kingdom id="khuzait">
+  <!-- KARAHANLI DEVLETI (Native: Khuzait Khanate / khuzait). Real Kara-Khanid Khanate (840-1212),
+       the Great Seljuks' actual historical eastern neighbor/rival over Transoxiana and Khorasan -
+       Alp Arslan's own predecessors served under the Kara-Khanid ruler Ali-Tegin in Bukhara in the
+       1020s before their falling-out in 1034. Split into a Western Khanate (Transoxiana, capital
+       Samarkand/Bukhara) and an Eastern Khanate (Kashgar/Khotan/Balasagun) since the 1030s-40s -
+       both are folded into this one Kingdom entry, matching how Byzantine absorbed the Northern
+       Empire. Ruler title "Khagan" (Qara-Khagan) is the real supreme Kara-Khanid title, distinct
+       from Sultan/Caliph/Emperor. Banner: primary black (id 116, 0xff0B0C11) for the "Kara" (black/
+       great) in the dynasty's own name, secondary a vivid sky-blue (id 234, 0xff3995f8) for "Kok"
+       (sky) - the sacred color of Turkic Tengri/sky worship inherited from the Kara-Khanids'
+       Gokturk-descended Karluk/Yaghma tribal roots. Uses khuzait's own reserved icon mesh (461),
+       same convention as Crusader States reusing Vlandia's reserved icon (160). -->
+  <Kingdom id="khuzait"
+           name="{=krkh_faction_name}Kara-Khanid Khanate"
+           short_name="{=krkh_faction_short}Kara-Khanids"
+           title="{=krkh_faction_title}Khanate"
+           ruler_title="{=krkh_ruler_title}Khagan"
+           text="{=krkh_faction_desc}The Kara-Khanid Khanate, a great Turkic steppe power split between a Western Khanate centered on Samarkand and Bukhara and an Eastern Khanate centered on Kashgar, Khotan, and Balasagun. The Great Seljuk Empire's eastern rival over Transoxiana and Khorasan - and, a generation ago, the very land where Sultan Alp Arslan's own predecessors first served as steppe chieftains."
+           banner_key="11.116.116.4345.4345.764.764.1.0.0.461.234.234.512.512.764.764.1.0.0"
+           primary_banner_color="0xff0B0C11"
+           secondary_banner_color="0xff3995f8"
+           color="0xff0B0C11"
+           color2="0xff3995f8">
     <relationships>
       <relationship kingdom="Kingdom.empire" value="0" isAtWar="false" />
     </relationships>

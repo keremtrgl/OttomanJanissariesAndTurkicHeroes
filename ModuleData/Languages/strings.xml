@@ -1029,5 +1029,55 @@
     <string id="arm2_t_naxarar_sworn_shield" text="Naxarar Sworn Shield" />
     <string id="arm2_t_taurus_master_archer" text="Master Archer of the Taurus" />
     <string id="arm2_t_sparapet_guard" text="Sparapet's Ayrudzi" />
+    <string id="krkh_faction_name" text="Kara-Khanid Khanate" />
+    <string id="krkh_faction_short" text="Kara-Khanids" />
+    <string id="krkh_faction_title" text="Khanate" />
+    <string id="krkh_ruler_title" text="Khagan" />
+    <string id="krkh_faction_desc" text="The Kara-Khanid Khanate, a great Turkic steppe power split between a Western Khanate centered on Samarkand and Bukhara and an Eastern Khanate centered on Kashgar, Khotan, and Balasagun. The Great Seljuk Empire's eastern rival over Transoxiana and Khorasan - and, a generation ago, the very land where Sultan Alp Arslan's own predecessors first served as steppe chieftains." />
+    <string id="krkh_culture_name" text="Kara-Khanid" />
+    <string id="krkh_cn_boritigin" text="House of Boritigin" />
+    <string id="krkh_cn_musabaytash" text="House of Musa Baytash Khan" />
+    <string id="krkh_cn_bughrakhan" text="House of Bughra Khan Harun" />
+    <string id="krkh_cn_toghrulkhan" text="House of Yusuf Toghrul Khan" />
+    <string id="krkh_cn_hasansulayman" text="House of Hasan ibn Sulayman" />
+    <string id="krkh_cn_alitegin" text="House of Ali-Tegin" />
+    <string id="krkh_cn_qadirkhan" text="House of Yusuf Qadir Khan" />
+    <string id="krkh_cn_satukbughra" text="House of Satuq Bughra Khan" />
+    <string id="krkh_cn_balasaguni" text="House of Yusuf Balasaguni" />
+    <string id="krkh_ln_nasr" text="Shams al-Mulk Nasr" />
+    <string id="krkh_ln_buwimaryam" text="Buwi Maryam" />
+    <string id="krkh_ln_harun" text="Bughra Khan Harun" />
+    <string id="krkh_ln_toghrul" text="Yusuf Toghrul Khan" />
+    <string id="krkh_ln_hasan" text="Hasan ibn Sulayman" />
+    <string id="krkh_ln_alitegin" text="Ali-Tegin" />
+    <string id="krkh_ln_qadirkhan" text="Yusuf Qadir Khan" />
+    <string id="krkh_ln_satukbughra" text="Satuq Bughra Khan" />
+    <string id="krkh_ln_balasaguni" text="Yusuf Balasaguni" />
+    <string id="krkh_s_samarkand" text="Samarkand" />
+    <string id="krkh_s_kashgar" text="Kashgar" />
+    <string id="krkh_s_balasagun" text="Balasagun" />
+    <string id="krkh_s_khotan" text="Khotan" />
+    <string id="krkh_s_uzgen" text="Uzgen" />
+    <string id="krkh_s_bukhara" text="Bukhara" />
+    <string id="kk2_t_recruit" text="Kara-Khanid Recruit" />
+    <string id="kk2_t_yigit" text="Yigit" />
+    <string id="kk2_t_okcu" text="Okcu" />
+    <string id="kk2_t_alp_atli" text="Alp Atli" />
+    <string id="kk2_t_tegin_squire" text="Tegin's Squire" />
+    <string id="kk2_t_alp_eri" text="Alp Eri" />
+    <string id="kk2_t_mergen" text="Mergen" />
+    <string id="kk2_t_yagici" text="Yagici" />
+    <string id="kk2_t_tarkhan_silahtari" text="Tarkhan's Lancer" />
+    <string id="kk2_t_kulug_alp" text="Kulug Alp" />
+    <string id="kk2_t_kulug_mergen" text="Kulug Mergen" />
+    <string id="kk2_t_tarkhan_atlisi" text="Tarkhan's Rider" />
+    <string id="kk2_t_beg_suvarisi" text="Beg's Cavalryman" />
+    <string id="kk2_t_subasi" text="Subasi" />
+    <string id="kk2_t_bas_mergen" text="Bas Mergen" />
+    <string id="kk2_t_kasgar_muhafizi" text="Kashgar Horse-Guard" />
+    <string id="kk2_t_tarkhan_suvarisi" text="Tarkhan's Cavalryman" />
+    <string id="kk2_t_han_muhafizi" text="Khan's Guard" />
+    <string id="kk2_t_ordu_mergeni" text="Ordu Mergeni" />
+    <string id="kk2_t_bori_tarkhan" text="Bori Tarkhan" />
 </strings>
 </base>

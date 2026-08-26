@@ -1070,5 +1070,55 @@
     <string id="arm2_t_naxarar_sworn_shield" text="纳哈拉尔誓卫" />
     <string id="arm2_t_taurus_master_archer" text="托罗斯弓术大师" />
     <string id="arm2_t_sparapet_guard" text="斯帕拉佩特的艾鲁齐" />
+    <string id="krkh_faction_name" text="喀喇汗国" />
+    <string id="krkh_faction_short" text="喀喇汗人" />
+    <string id="krkh_faction_title" text="汗国" />
+    <string id="krkh_ruler_title" text="可汗" />
+    <string id="krkh_faction_desc" text="喀喇汗国是一个强大的突厥草原政权,分为以撒马尔罕和布哈拉为中心的西喀喇汗国,以及以喀什、和田和巴拉沙衮为中心的东喀喇汗国。它是大塞尔柱帝国在河中地区与呼罗珊的东方劲敌——一代人以前,阿尔普·阿尔斯兰苏丹的祖先们正是在这片土地上以草原酋长的身份效力。" />
+    <string id="krkh_culture_name" text="喀喇汗" />
+    <string id="krkh_cn_boritigin" text="博里特勤家族" />
+    <string id="krkh_cn_musabaytash" text="穆萨·拜塔什汗家族" />
+    <string id="krkh_cn_bughrakhan" text="布格拉汗·哈伦家族" />
+    <string id="krkh_cn_toghrulkhan" text="玉素甫·图格鲁勒汗家族" />
+    <string id="krkh_cn_hasansulayman" text="哈桑·伊本·苏莱曼家族" />
+    <string id="krkh_cn_alitegin" text="阿里特勤家族" />
+    <string id="krkh_cn_qadirkhan" text="玉素甫·卡迪尔汗家族" />
+    <string id="krkh_cn_satukbughra" text="萨图克·布格拉汗家族" />
+    <string id="krkh_cn_balasaguni" text="玉素甫·巴拉沙衮尼家族" />
+    <string id="krkh_ln_nasr" text="沙姆斯·穆勒克·纳斯尔" />
+    <string id="krkh_ln_buwimaryam" text="布维·玛利亚姆" />
+    <string id="krkh_ln_harun" text="布格拉汗·哈伦" />
+    <string id="krkh_ln_toghrul" text="玉素甫·图格鲁勒汗" />
+    <string id="krkh_ln_hasan" text="哈桑·伊本·苏莱曼" />
+    <string id="krkh_ln_alitegin" text="阿里特勤" />
+    <string id="krkh_ln_qadirkhan" text="玉素甫·卡迪尔汗" />
+    <string id="krkh_ln_satukbughra" text="萨图克·布格拉汗" />
+    <string id="krkh_ln_balasaguni" text="玉素甫·巴拉沙衮尼" />
+    <string id="krkh_s_samarkand" text="撒马尔罕" />
+    <string id="krkh_s_kashgar" text="喀什" />
+    <string id="krkh_s_balasagun" text="巴拉沙衮" />
+    <string id="krkh_s_khotan" text="和田" />
+    <string id="krkh_s_uzgen" text="乌兹根" />
+    <string id="krkh_s_bukhara" text="布哈拉" />
+    <string id="kk2_t_recruit" text="喀喇汗新兵" />
+    <string id="kk2_t_yigit" text="耶吉特" />
+    <string id="kk2_t_okcu" text="奥克楚" />
+    <string id="kk2_t_alp_atli" text="阿勒普骑兵" />
+    <string id="kk2_t_tegin_squire" text="特勤侍从" />
+    <string id="kk2_t_alp_eri" text="阿勒普勇士" />
+    <string id="kk2_t_mergen" text="梅尔根" />
+    <string id="kk2_t_yagici" text="亚吉奇" />
+    <string id="kk2_t_tarkhan_silahtari" text="达尔罕枪骑兵" />
+    <string id="kk2_t_kulug_alp" text="库鲁格阿勒普" />
+    <string id="kk2_t_kulug_mergen" text="库鲁格梅尔根" />
+    <string id="kk2_t_tarkhan_atlisi" text="达尔罕骑手" />
+    <string id="kk2_t_beg_suvarisi" text="伯克骑兵" />
+    <string id="kk2_t_subasi" text="苏巴什" />
+    <string id="kk2_t_bas_mergen" text="首席神射手" />
+    <string id="kk2_t_kasgar_muhafizi" text="喀什骑兵卫队" />
+    <string id="kk2_t_tarkhan_suvarisi" text="达尔罕精锐骑兵" />
+    <string id="kk2_t_han_muhafizi" text="可汗卫队" />
+    <string id="kk2_t_ordu_mergeni" text="全军神射手" />
+    <string id="kk2_t_bori_tarkhan" text="博里达尔罕" />
 </strings>
 </base>
