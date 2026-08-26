@@ -12,8 +12,9 @@ namespace SeljukEmpire.Tournaments
 {
     /// <summary>
     /// Historical Seljuk Imperial Festival & Tournament Reward System.
-    /// Replaces generic tournament prizes in Seljuk towns with mastercrafted Seljuk arms, armor, and Turkoman steeds.
-    /// Grants imperial renown and sultanic favor to the champion.
+    /// Adds a bonus mastercrafted Seljuk arm/armor/steed and imperial renown to a Seljuk-town
+    /// tournament's human winner, on top of (not instead of) Native's own regular prize -
+    /// the town's sultanate honors its champion in addition to the standard purse.
     /// </summary>
     public class SeljukTournamentRewardBehavior : CampaignBehaviorBase
     {

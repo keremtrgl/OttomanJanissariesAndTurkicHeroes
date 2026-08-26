@@ -22,18 +22,27 @@ namespace SeljukEmpire.Economy
         private const int INSURANCE_POLICY_COST = 1500;
         private const int BASE_CARAVAN_COMPENSATION = 18500; // Average value of lost caravan cargo & troops
         private const int INVESTMENT_TIER_1 = 10000;
-        private const int INVESTMENT_TIER_2 = 25000;
+        private const float CLAIM_COOLDOWN_DAYS = 7f;
+        private const int MIN_MEMBERS_FOR_CLAIM = 5; // Blocks farming near-empty throwaway caravans for the flat payout
 
         // Save-game persistent fields
         private bool _isPlayerCaravanInsuranceActive;
         private int _totalSilkRoadInvestedGold;
         private Dictionary<string, int> _settlementInvestments;
 
+        // Was payable on every single player-caravan loss with no limit - buy the 1,500 Dinar
+        // policy once, then deliberately route a bare-minimum caravan into hostile territory to
+        // collect 18,500 Dinars per loss, repeatable indefinitely for pure profit. Now gated by a
+        // weekly cooldown (matches this same class's own weekly dividend cadence) and a minimum
+        // party size, so a policy protects real trade losses instead of funding a farming loop.
+        private CampaignTime _lastInsuranceClaimTime;
+
         public SeljukCaravanInsuranceBehavior()
         {
             _isPlayerCaravanInsuranceActive = false;
             _totalSilkRoadInvestedGold = 0;
             _settlementInvestments = new Dictionary<string, int>();
+            _lastInsuranceClaimTime = CampaignTime.Zero;
         }
 
         public override void RegisterEvents()
@@ -48,6 +57,7 @@ namespace SeljukEmpire.Economy
             dataStore.SyncData("_isPlayerCaravanInsuranceActive", ref _isPlayerCaravanInsuranceActive);
             dataStore.SyncData("_totalSilkRoadInvestedGold", ref _totalSilkRoadInvestedGold);
             dataStore.SyncData("_settlementInvestments", ref _settlementInvestments);
+            dataStore.SyncData("_seljukInsuranceLastClaimTime", ref _lastInsuranceClaimTime);
 
             if (dataStore.IsLoading && _settlementInvestments == null)
             {
@@ -70,11 +80,19 @@ namespace SeljukEmpire.Economy
             // Check if destroyed party was a player-owned caravan
             if (mobileParty.IsCaravan && mobileParty.Party?.Owner == Hero.MainHero)
             {
+                bool onCooldown = CampaignTime.Now - _lastInsuranceClaimTime < CampaignTime.Days(CLAIM_COOLDOWN_DAYS);
+                int memberCount = mobileParty.MemberRoster?.TotalManCount ?? 0;
+                if (onCooldown || memberCount < MIN_MEMBERS_FOR_CLAIM)
+                {
+                    return;
+                }
+
                 int compensation = BASE_CARAVAN_COMPENSATION;
                 GiveGoldToPlayer(compensation);
+                _lastInsuranceClaimTime = CampaignTime.Now;
 
                 InformationManager.DisplayMessage(new InformationMessage(
-                    $"🛡️ [Selçuklu Kervan Sigortası] Kervanınız vuruldu! Selçuklu Hazine-i Âmire'si zararınızı karşıladı (+{compensation:N0} Dinar ödendi)!", 
+                    $"🛡️ [Selçuklu Kervan Sigortası] Kervanınız vuruldu! Selçuklu Hazine-i Âmire'si zararınızı karşıladı (+{compensation:N0} Dinar ödendi)!",
                     Colors.Yellow));
             }
         }
@@ -90,7 +108,8 @@ namespace SeljukEmpire.Economy
             foreach (var kvp in _settlementInvestments)
             {
                 Settlement settlement = Settlement.Find(kvp.Key);
-                if (settlement != null && settlement.IsTown && !settlement.IsUnderSiege)
+                if (settlement != null && settlement.IsTown && !settlement.IsUnderSiege
+                    && SeljukFactionUtility.IsSeljukSettlement(settlement))
                 {
                     // Town prosperity modulates return on investment
                     float prosperityMultiplier = MBMath.ClampFloat(settlement.Town.Prosperity / 5000f, 0.75f, 1.4f);
