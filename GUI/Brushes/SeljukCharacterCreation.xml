@@ -1,0 +1,42 @@
+<!--
+  Adds a "seljuk" state to Native's 4 culture-select big-panel parallax
+  brushes (Culture.Banner.Layer.1-4), reusing the seljuk_1..seljuk_4
+  sprite aliases defined in GUI\SeljukSpriteData.xml. OverrideBrush (not
+  a same-named <Brush>, which BrushFactory.LoadBrushFromFileAux would
+  overwrite wholesale) is BrushFactory's documented additive mechanism:
+  it starts from a full clone of the original brush (all 7 existing
+  culture styles intact) and layers this file's new Style on top -
+  confirmed via decompiling BrushFactory.LoadBrushFromFileAux/
+  ApplyBrushAttributesFrom, since Native itself has no in-the-wild
+  example of this attribute to copy from.
+-->
+<Brushes>
+	<Brush Name="Culture.Banner.Layer.1.SeljukOverride" OverrideBrush="Culture.Banner.Layer.1">
+		<Styles>
+			<Style Name="seljuk">
+				<BrushLayer Name="Default" Sprite="CharacterCreation\Culture\seljuk_1" />
+			</Style>
+		</Styles>
+	</Brush>
+	<Brush Name="Culture.Banner.Layer.2.SeljukOverride" OverrideBrush="Culture.Banner.Layer.2">
+		<Styles>
+			<Style Name="seljuk">
+				<BrushLayer Name="Default" Sprite="CharacterCreation\Culture\seljuk_2" />
+			</Style>
+		</Styles>
+	</Brush>
+	<Brush Name="Culture.Banner.Layer.3.SeljukOverride" OverrideBrush="Culture.Banner.Layer.3">
+		<Styles>
+			<Style Name="seljuk">
+				<BrushLayer Name="Default" Sprite="CharacterCreation\Culture\seljuk_3" />
+			</Style>
+		</Styles>
+	</Brush>
+	<Brush Name="Culture.Banner.Layer.4.SeljukOverride" OverrideBrush="Culture.Banner.Layer.4">
+		<Styles>
+			<Style Name="seljuk">
+				<BrushLayer Name="Default" Sprite="CharacterCreation\Culture\seljuk_4" />
+			</Style>
+		</Styles>
+	</Brush>
+</Brushes>
