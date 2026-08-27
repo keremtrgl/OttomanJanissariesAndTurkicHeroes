@@ -110,7 +110,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_master_qawwas" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_bedouin_horseman" default_group="Cavalry" level="11" name="{=abb2_t_bedouin_horseman}Bedouin Horseman" occupation="Soldier" culture="Culture.aserai" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_bedouin_horseman" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=abb2_t_bedouin_horseman}Bedouin Horseman" occupation="Soldier" culture="Culture.aserai" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="35" />
@@ -144,7 +144,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_faris" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_ghulam" default_group="Cavalry" level="11" name="{=abb2_t_ghulam}Ghulam" occupation="Soldier" culture="Culture.aserai" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_ghulam" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=abb2_t_ghulam}Ghulam" occupation="Soldier" culture="Culture.aserai" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -240,7 +240,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_rami_metin" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_faris" default_group="Cavalry" level="16" name="{=abb2_t_faris}Faris" occupation="Soldier" culture="Culture.aserai" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_faris" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=abb2_t_faris}Faris" occupation="Soldier" culture="Culture.aserai" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="60" />
@@ -274,7 +274,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_veteran_faris" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_ghulam_regular" default_group="Cavalry" level="16" name="{=abb2_t_ghulam_regular}Ghulam Regular" occupation="Soldier" culture="Culture.aserai" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_ghulam_regular" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=abb2_t_ghulam_regular}Ghulam Regular" occupation="Soldier" culture="Culture.aserai" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="50" />
@@ -374,7 +374,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_naffatun" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_veteran_faris" default_group="Cavalry" level="21" name="{=abb2_t_veteran_faris}Veteran Faris" occupation="Soldier" culture="Culture.aserai" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_veteran_faris" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=abb2_t_veteran_faris}Veteran Faris" occupation="Soldier" culture="Culture.aserai" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="85" />
@@ -410,7 +410,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_vanguard_faris" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_ghulam_horseman" default_group="Cavalry" level="21" name="{=abb2_t_ghulam_horseman}Ghulam Horseman" occupation="Soldier" culture="Culture.aserai" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_ghulam_horseman" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=abb2_t_ghulam_horseman}Ghulam Horseman" occupation="Soldier" culture="Culture.aserai" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="70" />
@@ -511,7 +511,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.abb2_naffatun_khassa" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_vanguard_faris" default_group="Cavalry" level="26" name="{=abb2_t_vanguard_faris}Faris al-Muqaddima" occupation="Soldier" culture="Culture.aserai" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_vanguard_faris" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=abb2_t_vanguard_faris}Faris al-Muqaddima" occupation="Soldier" culture="Culture.aserai" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="110" />
@@ -549,7 +549,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="abb2_ghulam_lancer" default_group="Cavalry" level="26" name="{=abb2_t_ghulam_lancer}Ghulam Lancer" occupation="Soldier" culture="Culture.aserai" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_ghulam_lancer" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=abb2_t_ghulam_lancer}Ghulam Lancer" occupation="Soldier" culture="Culture.aserai" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="95" />
@@ -590,7 +590,7 @@
        abb2_hujariyya_guard and abb2_naffatun get their own dedicated tier-6 below, and
        abb2_vanguard_faris stands as a tier-5 endpoint. Dar al-Khilafa ("House of the Caliphate")
        fits as the heavy-cavalry line's elite palace guard. -->
-  <NPCCharacter id="abb2_dar_alkhilafa_guard" default_group="Cavalry" level="31" name="{=abb2_t_dar_alkhilafa}Dar al-Khilafa Guard" occupation="Soldier" culture="Culture.aserai" age="32" is_female="false" is_hero="false">
+  <NPCCharacter id="abb2_dar_alkhilafa_guard" default_group="Cavalry" level="31" upgrade_requires="ItemCategory.war_horse" name="{=abb2_t_dar_alkhilafa}Dar al-Khilafa Guard" occupation="Soldier" culture="Culture.aserai" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="120" />

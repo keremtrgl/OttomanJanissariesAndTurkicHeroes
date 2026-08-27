@@ -329,7 +329,7 @@
   
 
   
-  <NPCCharacter id="seljuk_horseman" default_group="Cavalry" level="11" name="{=seljuk_turkmen_atli_name}Turcoman Rider" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_horseman" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=seljuk_turkmen_atli_name}Turcoman Rider" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -368,7 +368,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_clan_scout" default_group="HorseArcher" level="16" name="{=seljuk_boy_akinci_name}Clan Akinji Raider" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_clan_scout" default_group="HorseArcher" level="16" upgrade_requires="ItemCategory.horse" name="{=seljuk_boy_akinci_name}Clan Akinji Raider" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -409,7 +409,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_horse_archer" default_group="HorseArcher" level="21" name="{=seljuk_atli_okcu_name}Seljuk Horse Archer" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_horse_archer" default_group="HorseArcher" level="21" upgrade_requires="ItemCategory.war_horse" name="{=seljuk_atli_okcu_name}Seljuk Horse Archer" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -449,7 +449,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_heavy_raider" default_group="HorseArcher" level="26" name="{=seljuk_tugrul_akinci_name}Tughril Heavy Akinji" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_heavy_raider" default_group="HorseArcher" level="26" upgrade_requires="ItemCategory.war_horse" name="{=seljuk_tugrul_akinci_name}Tughril Heavy Akinji" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -493,7 +493,7 @@
   
 
   
-  <NPCCharacter id="seljuk_ghulam_recruit" default_group="Cavalry" level="11" name="{=seljuk_ghulam_acemi_name}Ghulam Recruit" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_ghulam_recruit" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=seljuk_ghulam_acemi_name}Ghulam Recruit" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -535,7 +535,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_armored_ghulam" default_group="Cavalry" level="16" name="{=seljuk_zirhli_gulam_name}Armored Ghulam" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_armored_ghulam" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=seljuk_zirhli_gulam_name}Armored Ghulam" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -577,7 +577,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_hassa_cavalry" default_group="Cavalry" level="21" name="{=seljuk_hassa_suvarisi_name}Royal Hassa Cavalry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_hassa_cavalry" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=seljuk_hassa_suvarisi_name}Royal Hassa Cavalry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -619,7 +619,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_emir_guard" default_group="Cavalry" level="26" name="{=seljuk_emir_muhafizi_name}Emir's Bodyguard" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_emir_guard" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=seljuk_emir_muhafizi_name}Emir's Bodyguard" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -661,7 +661,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="seljuk_iron_mask_ghulam" default_group="Cavalry" level="31" name="{=seljuk_t6_name}Iron-Masked Imperial Hassa Bahadir" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="seljuk_iron_mask_ghulam" default_group="Cavalry" level="31" upgrade_requires="ItemCategory.war_horse" name="{=seljuk_t6_name}Iron-Masked Imperial Hassa Bahadir" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -860,7 +860,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="ottoman_scout" default_group="Cavalry" level="11" name="{=ottoman_scout_name}Seljuk Scout Cavalry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="ottoman_scout" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=ottoman_scout_name}Seljuk Scout Cavalry" occupation="Soldier" culture="Culture.seljuk" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -899,7 +899,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="16" name="{=ottoman_akinji_name}Seljuk Akinji Raider" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="ottoman_akinji" default_group="HorseArcher" level="16" upgrade_requires="ItemCategory.horse" name="{=ottoman_akinji_name}Seljuk Akinji Raider" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -942,7 +942,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="timarli_sipahi" default_group="Cavalry" level="21" name="{=timarli_sipahi_name}Timarli Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="timarli_sipahi" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=timarli_sipahi_name}Timarli Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -983,7 +983,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="kapikulu_sipahi" default_group="Cavalry" level="26" name="{=kapikulu_sipahi_name}Imperial Kapikulu Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="kapikulu_sipahi" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=kapikulu_sipahi_name}Imperial Kapikulu Sipahi" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -1022,7 +1022,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="deli_cavalry" default_group="Cavalry" level="21" name="{=deli_cavalry_name}Deli Shock Cavalry" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="deli_cavalry" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=deli_cavalry_name}Deli Shock Cavalry" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
@@ -1064,7 +1064,7 @@
   </NPCCharacter>
 
   
-  <NPCCharacter id="deli_serbazi" default_group="Cavalry" level="26" name="{=deli_serbazi_name}Serdengecti Deli Captain" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="deli_serbazi" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=deli_serbazi_name}Serdengecti Deli Captain" occupation="Mercenary" culture="Culture.seljuk" is_mercenary="true" age="24" is_female="false" is_hero="false">
     <face>
       <BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
