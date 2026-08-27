@@ -4,7 +4,7 @@ Bu doküman, **"Seljuk Empire: Sword of Islam"** total conversion modundaki tüm
 doktrinli taktik yapay zeka motorunun, BattlePerformanceOptimizer FPS sisteminin, **Selçuklu Kervan
 Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**, 8 krallığın (Selçuklu + 7 rakip), klan, lord,
 yerleşke, birlik ağaçları, karakter yaratma özgeçmişleri, meyhane companion'ları, eşyalar, politikalar
-ve 8 dil desteği arasındaki ilişkileri detaylandırmaktadır. **Güncel sürüm: v1.6.7.**
+ve 8 dil desteği arasındaki ilişkileri detaylandırmaktadır. **Güncel sürüm: v1.7.0.**
 
 ---
 
@@ -315,7 +315,7 @@ asla çocuk olamıyor.
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler (v1.6.2 → v1.6.7)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.0)
 
 ```mermaid
 graph LR
@@ -323,6 +323,7 @@ graph LR
     V162 --> V165["v1.6.5<br/>GERÇEK KÖK NEDEN:<br/>seljuk_culture.xml'deki<br/>&lt;cultural_feats&gt; bloğu"]
     V165 --> V166["v1.6.6<br/>Kültür seçim ekranı<br/>TEMP doku hatası düzeltildi"]
     V166 --> V167["v1.6.7<br/>16 kategori 'ERROR: Text<br/>with id...' GameText<br/>yer tutucusu süpürüldü"]
+    V167 --> V170["v1.7.0<br/>3 krallığa özgeçmiş (108 seçenek) +<br/>14 tarihi companion + 126 yerleşke +<br/>Amasya/Eskişehir isim düzeltmesi"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
