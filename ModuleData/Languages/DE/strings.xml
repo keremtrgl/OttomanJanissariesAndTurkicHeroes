@@ -1350,6 +1350,20 @@
     <string id="krkh_s_turkestan" text="Turkestan" />
     <string id="krkh_s_iskijkath" text="Iskijkath" />
     <string id="krkh_s_chimkent" text="Tschimkent" />
+    <string id="spc_wc_khusraw_name" text="Nasir Khusraw" />
+    <string id="spc_wc_khayyam_name" text="Omar Khayyam" />
+    <string id="spc_wc_psellos_name" text="Michael Psellos" />
+    <string id="spc_wc_roussel_name" text="Roussel de Bailleul" />
+    <string id="spc_wc_ghazali_name" text="Al-Ghazali" />
+    <string id="spc_wc_usama_name" text="Usama ibn Munqidh" />
+    <string id="spc_wc_petritsi_name" text="Ioane Petritsi" />
+    <string id="spc_wc_vardan_name" text="Vardan von Swanetien" />
+    <string id="spc_wc_peterhermit_name" text="Peter der Einsiedler" />
+    <string id="spc_wc_bartholomew_name" text="Peter Bartholomäus" />
+    <string id="spc_wc_matthew_name" text="Matthäus von Edessa" />
+    <string id="spc_wc_heratsi_name" text="Mkhitar Heratsi" />
+    <string id="spc_wc_kashgari_name" text="Mahmud al-Kaschgari" />
+    <string id="spc_wc_yasawi_name" text="Ahmad Yasawi" />
     <string id="kk2_t_recruit" text="Karachanidischer Rekrut" />
     <string id="kk2_t_yigit" text="Yigit" />
     <string id="kk2_t_okcu" text="Okcu" />

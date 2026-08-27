@@ -1309,6 +1309,20 @@
     <string id="krkh_s_turkestan" text="Türkistan" />
     <string id="krkh_s_iskijkath" text="İskicket" />
     <string id="krkh_s_chimkent" text="Çimkent" />
+    <string id="spc_wc_khusraw_name" text="Nasır Hüsrev" />
+    <string id="spc_wc_khayyam_name" text="Ömer Hayyam" />
+    <string id="spc_wc_psellos_name" text="Mihail Psellos" />
+    <string id="spc_wc_roussel_name" text="Roussel de Bailleul" />
+    <string id="spc_wc_ghazali_name" text="Gazali" />
+    <string id="spc_wc_usama_name" text="Üsame bin Münkız" />
+    <string id="spc_wc_petritsi_name" text="İoane Petritsi" />
+    <string id="spc_wc_vardan_name" text="Svanetili Vardan" />
+    <string id="spc_wc_peterhermit_name" text="Keşiş Piyer" />
+    <string id="spc_wc_bartholomew_name" text="Bartholomeuslu Petrus" />
+    <string id="spc_wc_matthew_name" text="Urfalı Mateos" />
+    <string id="spc_wc_heratsi_name" text="Mıhitar Heratsi" />
+    <string id="spc_wc_kashgari_name" text="Kaşgarlı Mahmud" />
+    <string id="spc_wc_yasawi_name" text="Ahmed Yesevi" />
     <string id="kk2_t_recruit" text="Karahanlı Eri" />
     <string id="kk2_t_yigit" text="Yiğit" />
     <string id="kk2_t_okcu" text="Okçu" />

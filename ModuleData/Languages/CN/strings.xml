@@ -1350,6 +1350,20 @@
     <string id="krkh_s_turkestan" text="突厥斯坦" />
     <string id="krkh_s_iskijkath" text="伊斯基杰卡特" />
     <string id="krkh_s_chimkent" text="奇姆肯特" />
+    <string id="spc_wc_khusraw_name" text="纳西尔·霍斯陆" />
+    <string id="spc_wc_khayyam_name" text="欧玛尔·海亚姆" />
+    <string id="spc_wc_psellos_name" text="米海尔·普塞洛斯" />
+    <string id="spc_wc_roussel_name" text="鲁塞尔·德·拜约尔" />
+    <string id="spc_wc_ghazali_name" text="安萨里" />
+    <string id="spc_wc_usama_name" text="奥萨马·伊本·蒙基德" />
+    <string id="spc_wc_petritsi_name" text="约阿内·彼得里齐" />
+    <string id="spc_wc_vardan_name" text="斯瓦涅蒂的瓦尔丹" />
+    <string id="spc_wc_peterhermit_name" text="隐士彼得" />
+    <string id="spc_wc_bartholomew_name" text="彼得·巴塞洛缪" />
+    <string id="spc_wc_matthew_name" text="埃德萨的马太" />
+    <string id="spc_wc_heratsi_name" text="姆希塔尔·赫拉齐" />
+    <string id="spc_wc_kashgari_name" text="马赫穆德·喀什噶里" />
+    <string id="spc_wc_yasawi_name" text="艾哈迈德·亚萨维" />
     <string id="kk2_t_recruit" text="喀喇汗新兵" />
     <string id="kk2_t_yigit" text="耶吉特" />
     <string id="kk2_t_okcu" text="奥克楚" />

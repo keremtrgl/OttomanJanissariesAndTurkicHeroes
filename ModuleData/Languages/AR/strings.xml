@@ -1350,6 +1350,20 @@
     <string id="krkh_s_turkestan" text="تركستان" />
     <string id="krkh_s_iskijkath" text="إسكيجكث" />
     <string id="krkh_s_chimkent" text="شيمكنت" />
+    <string id="spc_wc_khusraw_name" text="ناصر خسرو" />
+    <string id="spc_wc_khayyam_name" text="عمر الخيام" />
+    <string id="spc_wc_psellos_name" text="ميخائيل بسلوس" />
+    <string id="spc_wc_roussel_name" text="روسيل دي بايول" />
+    <string id="spc_wc_ghazali_name" text="الغزالي" />
+    <string id="spc_wc_usama_name" text="أسامة بن منقذ" />
+    <string id="spc_wc_petritsi_name" text="يوانه بتريتسي" />
+    <string id="spc_wc_vardan_name" text="فاردان السفانيتي" />
+    <string id="spc_wc_peterhermit_name" text="بطرس الناسك" />
+    <string id="spc_wc_bartholomew_name" text="بطرس برتلماوس" />
+    <string id="spc_wc_matthew_name" text="متى الرهاوي" />
+    <string id="spc_wc_heratsi_name" text="مخيتار هيراتسي" />
+    <string id="spc_wc_kashgari_name" text="محمود الكاشغري" />
+    <string id="spc_wc_yasawi_name" text="أحمد يسوي" />
     <string id="kk2_t_recruit" text="مجند قراخاني" />
     <string id="kk2_t_yigit" text="ييغيت" />
     <string id="kk2_t_okcu" text="أوقچو" />

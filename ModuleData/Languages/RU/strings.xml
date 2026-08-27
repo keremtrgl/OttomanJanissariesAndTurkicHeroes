@@ -1350,6 +1350,20 @@
     <string id="krkh_s_turkestan" text="Туркестан" />
     <string id="krkh_s_iskijkath" text="Искиджкет" />
     <string id="krkh_s_chimkent" text="Чимкент" />
+    <string id="spc_wc_khusraw_name" text="Насир Хосров" />
+    <string id="spc_wc_khayyam_name" text="Омар Хайям" />
+    <string id="spc_wc_psellos_name" text="Михаил Пселл" />
+    <string id="spc_wc_roussel_name" text="Руссель де Байоль" />
+    <string id="spc_wc_ghazali_name" text="Аль-Газали" />
+    <string id="spc_wc_usama_name" text="Усама ибн Мункыз" />
+    <string id="spc_wc_petritsi_name" text="Иоанэ Петрици" />
+    <string id="spc_wc_vardan_name" text="Вардан Сванский" />
+    <string id="spc_wc_peterhermit_name" text="Пётр Пустынник" />
+    <string id="spc_wc_bartholomew_name" text="Пётр Варфоломей" />
+    <string id="spc_wc_matthew_name" text="Матфей Эдесский" />
+    <string id="spc_wc_heratsi_name" text="Мхитар Гераци" />
+    <string id="spc_wc_kashgari_name" text="Махмуд аль-Кашгари" />
+    <string id="spc_wc_yasawi_name" text="Ахмад Ясави" />
     <string id="kk2_t_recruit" text="Караханидский новобранец" />
     <string id="kk2_t_yigit" text="Йигит" />
     <string id="kk2_t_okcu" text="Окчу" />

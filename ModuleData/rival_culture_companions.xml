@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Historical wanderer companions for all 7 playable cultures (Latin Empire shares Culture.empire
+     with Byzantium, so its own taverns already draw from the empire pool below). Each is a real
+     11th/12th-century figure - not a generic "{FIRSTNAME} the X" template like Native's own
+     wanderers - built the same way Native itself builds any companion: is_template="true" +
+     occupation="Wanderer" is what TaleWorlds.CampaignSystem.CampaignBehaviors.CompanionsCampaignBehavior
+     actually scans for (InitializeCompanionTemplateList, decompiled), so a plain is_hero="true"
+     NPCCharacter would silently never spawn in any tavern. Because _aliveCompanionTemplates is a
+     per-template HashSet, only one living instance of each of these 14 exists in the campaign at a
+     time, same as any Native companion. culture= only steers their home/creation settlement and
+     starting body-property range - Bannerlord scatters all companions across every culture's towns
+     regardless, so any of these can turn up in any kingdom's tavern, same as Native's own roster. -->
+<NPCCharacters>
+
+  <!-- ===================== SELJUK (Culture.seljuk) ===================== -->
+
+  <!-- Nasir Khusraw (1004-1088): Persian poet-philosopher and Ismaili missionary who spent seven
+       years traveling in disguise across the Islamic world, recorded in his travelogue Safarnama. -->
+  <NPCCharacter id="spc_wanderer_seljuk_khusraw" name="{=spc_wc_khusraw_name}Nasir Khusraw" voice="softspoken" age="45"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.seljuk"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_khuzait" />
+    </face>
+    <skills>
+      <skill id="Scouting" value="85" />
+      <skill id="Roguery" value="65" />
+      <skill id="Charm" value="55" />
+      <skill id="Steward" value="35" />
+      <skill id="Medicine" value="20" />
+    </skills>
+    <Traits>
+      <Trait id="Honor" value="1" />
+      <Trait id="Valor" value="1" />
+      <Trait id="Calculating" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Omar Khayyam (1048-1131): mathematician and astronomer who devised the Jalali calendar under
+       Seljuk patronage (Sultan Malik-Shah I), also renowned as a poet. -->
+  <NPCCharacter id="spc_wanderer_seljuk_khayyam" name="{=spc_wc_khayyam_name}Omar Khayyam" voice="softspoken" age="35"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.seljuk"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_khuzait" />
+    </face>
+    <skills>
+      <skill id="Engineering" value="85" />
+      <skill id="Steward" value="55" />
+      <skill id="Charm" value="45" />
+      <skill id="Medicine" value="30" />
+    </skills>
+    <Traits>
+      <Trait id="Calculating" value="1" />
+      <Trait id="Mercy" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- ===================== BYZANTINE (Culture.empire) ===================== -->
+
+  <!-- Michael Psellos (1017-1078): monk, philosopher and historian who advised a succession of
+       Byzantine emperors and wrote the Chronographia. -->
+  <NPCCharacter id="spc_wanderer_empire_psellos" name="{=spc_wc_psellos_name}Michael Psellos" voice="ironic" age="50"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.empire"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.townsman_empire" />
+    </face>
+    <skills>
+      <skill id="Roguery" value="70" />
+      <skill id="Charm" value="60" />
+      <skill id="Steward" value="55" />
+      <skill id="Leadership" value="30" />
+    </skills>
+    <Traits>
+      <Trait id="Calculating" value="1" />
+      <Trait id="Honor" value="-1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_empire" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_empire" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Roussel de Bailleul (d. 1078): Norman mercenary captain who fought at Manzikert under Romanos
+       IV Diogenes, later led a Frankish rebellion in Anatolia and briefly ruled his own principality
+       at Ancyra before being suppressed with Seljuk help and handed over by Alexios Komnenos. -->
+  <NPCCharacter id="spc_wanderer_empire_roussel" name="{=spc_wc_roussel_name}Roussel de Bailleul" voice="curt" age="38"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.empire"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.fighter_empire" />
+    </face>
+    <skills>
+      <skill id="OneHanded" value="75" />
+      <skill id="Riding" value="70" />
+      <skill id="Polearm" value="55" />
+      <skill id="Leadership" value="50" />
+      <skill id="Tactics" value="40" />
+    </skills>
+    <Traits>
+      <Trait id="Valor" value="1" />
+      <Trait id="Calculating" value="1" />
+      <Trait id="Honor" value="-1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_empire" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_empire" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- ===================== ABBASID (Culture.aserai) ===================== -->
+
+  <!-- Al-Ghazali (1058-1111): Islamic theologian who taught at Baghdad's Nizamiyya madrasa, then
+       underwent a spiritual crisis and left his post to wander for years as an ascetic before
+       returning to teaching. -->
+  <NPCCharacter id="spc_wanderer_aserai_ghazali" name="{=spc_wc_ghazali_name}Al-Ghazali" voice="softspoken" age="33"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.aserai"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_aserai" />
+    </face>
+    <skills>
+      <skill id="Steward" value="70" />
+      <skill id="Charm" value="60" />
+      <skill id="Medicine" value="25" />
+      <skill id="Roguery" value="20" />
+    </skills>
+    <Traits>
+      <Trait id="Honor" value="1" />
+      <Trait id="Mercy" value="1" />
+      <Trait id="Generosity" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_aserai" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_aserai" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Usama ibn Munqidh (1095-1188): warrior-poet and diplomat from Shaizar, author of the Kitab
+       al-I'tibar, whose long career gave him extensive firsthand dealings with the Crusaders. -->
+  <NPCCharacter id="spc_wanderer_aserai_usama" name="{=spc_wc_usama_name}Usama ibn Munqidh" voice="earnest" age="30"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.aserai"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.fighter_aserai" />
+    </face>
+    <skills>
+      <skill id="OneHanded" value="70" />
+      <skill id="Charm" value="65" />
+      <skill id="Bow" value="55" />
+      <skill id="Steward" value="30" />
+    </skills>
+    <Traits>
+      <Trait id="Honor" value="1" />
+      <Trait id="Calculating" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_aserai" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_aserai" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- ===================== GEORGIAN (Culture.sturgia) ===================== -->
+
+  <!-- Ioane Petritsi (turn of the 12th c.): Neoplatonist philosopher-monk who studied at the Mangana
+       Academy in Constantinople, later headed Gelati Academy and translated Proclus into Georgian. -->
+  <NPCCharacter id="spc_wanderer_sturgia_petritsi" name="{=spc_wc_petritsi_name}Ioane Petritsi" voice="softspoken" age="40"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.sturgia"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_sturgia" />
+    </face>
+    <skills>
+      <skill id="Steward" value="75" />
+      <skill id="Charm" value="50" />
+      <skill id="Medicine" value="40" />
+    </skills>
+    <Traits>
+      <Trait id="Honor" value="1" />
+      <Trait id="Mercy" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_sturgia" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_sturgia" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Vardan, Eristavi of Svaneti: documented Georgian highland duke who rebelled against King
+       Giorgi II in 1073, shortly after his accession, stirring the Svans to revolt - here, a sword
+       for hire after that cause was lost. -->
+  <NPCCharacter id="spc_wanderer_sturgia_vardan" name="{=spc_wc_vardan_name}Vardan of Svaneti" voice="curt" age="36"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.sturgia"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.fighter_sturgia" />
+    </face>
+    <skills>
+      <skill id="Athletics" value="65" />
+      <skill id="Bow" value="60" />
+      <skill id="Polearm" value="55" />
+      <skill id="Scouting" value="45" />
+    </skills>
+    <Traits>
+      <Trait id="Valor" value="1" />
+      <Trait id="Honor" value="-1" />
+      <Trait id="Calculating" value="-1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_sturgia" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_sturgia" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- ===================== CRUSADER STATES (Culture.vlandia) ===================== -->
+
+  <!-- Peter the Hermit (c. 1050-1115): itinerant preacher who led the ragtag "People's Crusade"
+       east ahead of the main First Crusade in 1096, largely destroyed by Seljuk forces near Nicaea. -->
+  <NPCCharacter id="spc_wanderer_vlandia_peterhermit" name="{=spc_wc_peterhermit_name}Peter the Hermit" voice="earnest" age="46"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.vlandia"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_vlandia" />
+    </face>
+    <skills>
+      <skill id="Charm" value="80" />
+      <skill id="Roguery" value="40" />
+      <skill id="Steward" value="30" />
+    </skills>
+    <Traits>
+      <Trait id="Valor" value="1" />
+      <Trait id="Generosity" value="1" />
+      <Trait id="Calculating" value="-1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_vlandia" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_vlandia" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Peter Bartholomew (d. 1099): pilgrim who, during the desperate siege of Antioch in 1098,
+       claimed a vision revealing the Holy Lance; the find rallied the starving Crusaders to break
+       Kerbogha's relief army. He later died in a trial by ordeal defending the claim. -->
+  <NPCCharacter id="spc_wanderer_vlandia_bartholomew" name="{=spc_wc_bartholomew_name}Peter Bartholomew" voice="ironic" age="28"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.vlandia"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.townsman_vlandia" />
+    </face>
+    <skills>
+      <skill id="Charm" value="65" />
+      <skill id="Roguery" value="45" />
+      <skill id="Medicine" value="25" />
+    </skills>
+    <Traits>
+      <Trait id="Valor" value="1" />
+      <Trait id="Calculating" value="1" />
+      <Trait id="Honor" value="-1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_vlandia" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_vlandia" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- ===================== CILICIAN ARMENIA (Culture.battania) ===================== -->
+
+  <!-- Matthew of Edessa (c. 1070-1144): Armenian monk and chronicler whose history covers
+       Byzantine, Seljuk, Armenian and Crusader affairs across this exact era. -->
+  <NPCCharacter id="spc_wanderer_battania_matthew" name="{=spc_wc_matthew_name}Matthew of Edessa" voice="softspoken" age="34"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.battania"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_battania" />
+    </face>
+    <skills>
+      <skill id="Steward" value="65" />
+      <skill id="Charm" value="45" />
+      <skill id="Scouting" value="30" />
+    </skills>
+    <Traits>
+      <Trait id="Honor" value="1" />
+      <Trait id="Calculating" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_battania" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_battania" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Mkhitar Heratsi: Armenian physician remembered as the father of Armenian medicine, trained in
+       the Perso-Arabo-Greek medical tradition practiced across Cilician Armenia, author of the
+       treatise "Relief of Fevers". -->
+  <NPCCharacter id="spc_wanderer_battania_heratsi" name="{=spc_wc_heratsi_name}Mkhitar Heratsi" voice="earnest" age="42"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.battania"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.townsman_battania" />
+    </face>
+    <skills>
+      <skill id="Medicine" value="90" />
+      <skill id="Steward" value="40" />
+      <skill id="Charm" value="35" />
+    </skills>
+    <Traits>
+      <Trait id="Mercy" value="1" />
+      <Trait id="Honor" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_battania" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_battania" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- ===================== KARA-KHANID KHANATE (Culture.khuzait) ===================== -->
+
+  <!-- Mahmud al-Kashgari (11th c.): Kara-Khanid Turkic scholar from Kashgar who traveled across the
+       Turkic-speaking world to compile the Diwan Lughat al-Turk, the first great compendium of
+       Turkic dialects and folklore. -->
+  <NPCCharacter id="spc_wanderer_khuzait_kashgari" name="{=spc_wc_kashgari_name}Mahmud al-Kashgari" voice="curt" age="44"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.khuzait"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_khuzait" />
+    </face>
+    <skills>
+      <skill id="Scouting" value="70" />
+      <skill id="Steward" value="55" />
+      <skill id="Charm" value="40" />
+    </skills>
+    <Traits>
+      <Trait id="Honor" value="1" />
+      <Trait id="Calculating" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" />
+    </Equipments>
+  </NPCCharacter>
+
+  <!-- Ahmad Yasawi (c. 1093-1166): early Turkic Sufi mystic and poet born in Sayram, founder of the
+       Yasawi Sufi order whose verse became foundational to Central Asian Turkic spiritual literature. -->
+  <NPCCharacter id="spc_wanderer_khuzait_yasawi" name="{=spc_wc_yasawi_name}Ahmad Yasawi" voice="softspoken" age="30"
+      default_group="Infantry" is_template="true" is_hero="false" culture="Culture.khuzait"
+      occupation="Wanderer">
+    <face>
+      <face_key_template value="BodyProperty.villager_khuzait" />
+    </face>
+    <skills>
+      <skill id="Charm" value="75" />
+      <skill id="Steward" value="40" />
+      <skill id="Medicine" value="25" />
+    </skills>
+    <Traits>
+      <Trait id="Mercy" value="1" />
+      <Trait id="Honor" value="1" />
+      <Trait id="Generosity" value="1" />
+    </Traits>
+    <Equipments>
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" equipmentType="Civilian" />
+      <EquipmentSet id="npc_companion_equipment_template_khuzait" />
+    </Equipments>
+  </NPCCharacter>
+
+</NPCCharacters>
