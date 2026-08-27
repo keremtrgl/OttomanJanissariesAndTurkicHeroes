@@ -151,11 +151,10 @@
 		<default_policies>
 			<policy id="policy_feudal_inheritance" />
 		</default_policies>
-		<cultural_feats>
-			<feat id="seljuk_cheaper_recruits_mounted" />
-			<feat id="seljuk_increased_construction_speed" />
-			<feat id="seljuk_increased_caravan_profit" />
-		</cultural_feats>
+		<!-- No <cultural_feats>: unlike Native's, ours require a matching hardcoded FeatObject
+		     registration (see DefaultCulturalFeats in TaleWorlds.CampaignSystem) or the engine
+		     creates an uninitialized stub with a null Description, crashing character creation
+		     the moment the culture-select screen renders it (root cause of the v1.6.2-1.6.4 crash). -->
 		<possible_clan_banner_icon_ids>
 			<icon id="900" />
 			<icon id="901" />
