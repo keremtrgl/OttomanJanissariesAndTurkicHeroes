@@ -58,7 +58,10 @@ namespace SeljukEmpire.Tournaments
                         GainRenownAction.Apply(Hero.MainHero, 25f, true);
 
                         InformationManager.DisplayMessage(new InformationMessage(
-                            $"🏆 [Selçuklu Şenliği Zaferi] {town.Name} Meydan Turnuvası Şampiyonu Oldunuz! Sultanlık Ödülü: {seljukPrize.Name} (+25 Nam Kazandınız)!", 
+                            new TextObject("{=seljuk_tourney_victory}🏆 [Seljuk Festival Triumph] You have become the Champion of {TOWN}'s Tournament! Sultanate Prize: {PRIZE} (+25 Renown gained)!")
+                                .SetTextVariable("TOWN", town.Name)
+                                .SetTextVariable("PRIZE", seljukPrize.Name)
+                                .ToString(),
                             Colors.Yellow));
                     }
                 }

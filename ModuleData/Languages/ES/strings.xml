@@ -1685,5 +1685,16 @@
     <string id="spc_wc_yasawi_response_2" text="Versos sencillos para gente sencilla. Yo prefiero a hombres capaces de debatir puntos más finos." />
     <string id="spc_wc_yasawi_backstory_d" text="Puedo hablar a cualquier soldado común de vuestro campamento en palabras que de verdad le lleguen, y tengo más paciencia con los asustados y los afligidos de lo que la mayoría de hombres jamás se molesta en tener." />
     <string id="spc_wc_yasawi_generic_backstory" text="Me crió un maestro sufí tras perder a mi propio padre joven, y he dedicado mi vida a llevar la fe a la gente común en versos sencillos en vez de argumentación erudita. Sé cómo hablar tanto a soldados como a aldeanos, en palabras que de verdad les llegan." />
+    <string id="seljuk_tactic_high_ground" text="[Mando Táctico Selyúcida] ¡Defensa en las alturas iniciada contra un enemigo numéricamente superior!" />
+    <string id="seljuk_tactic_wolf_trap" text="[Mando Táctico Selyúcida] ¡Táctica de la Trampa del Lobo y la Media Luna de Turán en marcha!" />
+    <string id="seljuk_tactic_shield_wall" text="[Mando Táctico Selyúcida] ¡Muro de escudos Nizamiye y defensa del paso formados!" />
+    <string id="seljuk_tactic_crossfire" text="[Mando Táctico Selyúcida] ¡Formación de fuego cruzado de la Media Luna de la Estepa activada!" />
+    <string id="seljuk_tactic_lines_broken" text="[Trampa del Lobo] ¡La línea enemiga se ha roto! ¡Comienza el cerco en media luna de doble flanco!" />
+    <string id="seljuk_tactic_full_assault" text="[Avance Nizamiye] ¡Asalto de Martillo y Yunque! ¡Todas las líneas avanzan!" />
+    <string id="seljuk_ins_claim_paid" text="🛡️ [Seguro de Caravanas Selyúcida] ¡Vuestra caravana fue atacada! El Tesoro Imperial Selyúcida ha cubierto vuestras pérdidas (+{AMOUNT} dinares pagados)!" />
+    <string id="seljuk_ins_weekly_dividend" text="🪙 [Dividendo de la Ruta de la Seda] ¡Se ha cobrado vuestra parte semanal de beneficios de las inversiones en caravasares y puertos (+{AMOUNT} dinares)!" />
+    <string id="seljuk_ins_purchased" text="📜 [Seguro de Caravanas Selyúcida] ¡Vuestras caravanas están ahora bajo la garantía del Tesoro del Estado!" />
+    <string id="seljuk_ins_invested" text="🪙 [Sociedad de Beneficios] ¡Se invirtieron 10.000 dinares en el fondo del caravasar de {SETTLEMENT}! Recibiréis dividendos semanales regulares." />
+    <string id="seljuk_tourney_victory" text="🏆 [Triunfo de la Fiesta Selyúcida] ¡Os habéis convertido en el Campeón del Torneo de {TOWN}! Premio del Sultanato: {PRIZE} (+25 renombre obtenido)!" />
 </strings>
 </base>

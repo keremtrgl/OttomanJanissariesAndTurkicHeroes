@@ -1685,5 +1685,16 @@
     <string id="spc_wc_yasawi_response_2" text="Schlichte Verse für schlichte Leute. Ich selbst bevorzuge Männer, die feinere Punkte erörtern können." />
     <string id="spc_wc_yasawi_backstory_d" text="Ich kann mit jedem einfachen Soldaten in eurem Lager in Worten sprechen, die ihn wirklich erreichen, und ich habe mehr Geduld mit den Verängstigten und Trauernden, als sich die meisten Männer je die Mühe machen aufzubringen." />
     <string id="spc_wc_yasawi_generic_backstory" text="Ich wurde von einem Sufi-Meister erzogen, nachdem ich meinen eigenen Vater jung verlor, und widmete mein Leben, den einfachen Leuten den Glauben in schlichten Versen statt gelehrter Disputation zu bringen. Ich weiß, wie man zu Soldaten und Dorfbewohnern gleichermaßen spricht, in Worten, die sie wirklich erreichen." />
+    <string id="seljuk_tactic_high_ground" text="[Seldschukisches Oberkommando] Höhenverteidigung gegen einen zahlenmäßig überlegenen Feind eingeleitet!" />
+    <string id="seljuk_tactic_wolf_trap" text="[Seldschukisches Oberkommando] Wolfsfalle und Turan-Halbmond-Taktik im Gange!" />
+    <string id="seljuk_tactic_shield_wall" text="[Seldschukisches Oberkommando] Nizamiye-Schildwall und Engpassverteidigung aufgestellt!" />
+    <string id="seljuk_tactic_crossfire" text="[Seldschukisches Oberkommando] Steppen-Halbmond-Kreuzfeuer-Formation eingenommen!" />
+    <string id="seljuk_tactic_lines_broken" text="[Wolfsfalle] Die feindliche Linie ist gebrochen! Die Zangenumfassung von beiden Flanken beginnt!" />
+    <string id="seljuk_tactic_full_assault" text="[Nizamiye-Vormarsch] Hammer-und-Amboss-Angriff! Alle Linien vorwärts!" />
+    <string id="seljuk_ins_claim_paid" text="🛡️ [Seldschukische Karawanenversicherung] Eure Karawane wurde überfallen! Die seldschukische Staatskasse hat euren Verlust ausgeglichen (+{AMOUNT} Dinar ausgezahlt)!" />
+    <string id="seljuk_ins_weekly_dividend" text="🪙 [Seidenstraßen-Dividende] Euer wöchentlicher Gewinnanteil aus Karawansereien- und Hafeninvestitionen wurde ausgezahlt (+{AMOUNT} Dinar)!" />
+    <string id="seljuk_ins_purchased" text="📜 [Seldschukische Karawanenversicherung] Eure Karawanen stehen nun unter der Garantie der Staatskasse!" />
+    <string id="seljuk_ins_invested" text="🪙 [Gewinnbeteiligung] 10.000 Dinar in den Karawansereifonds von {SETTLEMENT} investiert! Ihr erhaltet künftig regelmäßige wöchentliche Dividenden." />
+    <string id="seljuk_tourney_victory" text="🏆 [Seldschukischer Festtriumph] Ihr seid Champion des Turniers von {TOWN} geworden! Preis des Sultanats: {PRIZE} (+25 Ansehen erhalten)!" />
 </strings>
 </base>

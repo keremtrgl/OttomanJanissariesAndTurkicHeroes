@@ -4,6 +4,7 @@ using TaleWorlds.CampaignSystem;
 using TaleWorlds.Core;
 using TaleWorlds.Engine;
 using TaleWorlds.Library;
+using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
 
 namespace SeljukEmpire.Tactics
@@ -208,25 +209,25 @@ namespace SeljukEmpire.Tactics
             {
                 // Outnumbered -> High-ground fortified defense & counter-ambush
                 _activeDoctrine = TacticalDoctrine.HighGroundAmbush;
-                InformationManager.DisplayMessage(new InformationMessage("[Selçuklu Taktik Zekası] Sayıca Üstün Düşmana Karşı Yüksek Tepe Savunması Başlatıldı!", Colors.Yellow));
+                DisplayDoctrineMessage("{=seljuk_tactic_high_ground}[Seljuk Tactical Command] High-Ground Defense initiated against a numerically superior enemy!", Colors.Yellow);
             }
             else if (cavRatio >= 0.30f && horseArchers >= 6)
             {
                 // Cavalry heavy -> Classic Turan Wolf-Trap & Crescent Encirclement
                 _activeDoctrine = TacticalDoctrine.TuranWolfTrap;
-                InformationManager.DisplayMessage(new InformationMessage("[Selçuklu Taktik Zekası] Kurt Kapanı & Turan Hilal Taktiği İcra Ediliyor!", Colors.Yellow));
+                DisplayDoctrineMessage("{=seljuk_tactic_wolf_trap}[Seljuk Tactical Command] Wolf-Trap and Turan Crescent tactic underway!", Colors.Yellow);
             }
             else if (infantryRatio >= 0.45f)
             {
                 // Infantry heavy -> Nizamiye Impenetrable Shield Wall
                 _activeDoctrine = TacticalDoctrine.NizamiyeShieldWall;
-                InformationManager.DisplayMessage(new InformationMessage("[Selçuklu Taktik Zekası] Nizamiye Kalkan Duvarı & Boğaz Savunması Düzeni Alındı!", Colors.Cyan));
+                DisplayDoctrineMessage("{=seljuk_tactic_shield_wall}[Seljuk Tactical Command] Nizamiye Shield Wall and choke-point defense formed!", Colors.Cyan);
             }
             else
             {
                 // Balanced / Skirmish heavy -> Steppe Crossfire
                 _activeDoctrine = TacticalDoctrine.SteppeCrossfire;
-                InformationManager.DisplayMessage(new InformationMessage("[Selçuklu Taktik Zekası] Bozkır Hilal Ateş Çemberi Nizamına Geçildi!", Colors.Green));
+                DisplayDoctrineMessage("{=seljuk_tactic_crossfire}[Seljuk Tactical Command] Steppe Crescent Crossfire formation engaged!", Colors.Green);
             }
 
             _currentPhase = TacticalPhase.StagingAndSkirmish;
@@ -315,7 +316,7 @@ namespace SeljukEmpire.Tactics
             {
                 _currentPhase = TacticalPhase.DualFlankEncirclement;
                 _phaseTimer = MissionTime.Now;
-                InformationManager.DisplayMessage(new InformationMessage("[Kurt Kapanı] Düşman Safları Bozuldu! İki Kanattan Hilal Kuşatması Başlıyor!", Colors.Yellow));
+                DisplayDoctrineMessage("{=seljuk_tactic_lines_broken}[Wolf-Trap] The enemy line has broken! Dual-flank crescent encirclement begins!", Colors.Yellow);
             }
         }
 
@@ -349,7 +350,7 @@ namespace SeljukEmpire.Tactics
             {
                 _currentPhase = TacticalPhase.DecisiveHammerCharge;
                 _phaseTimer = MissionTime.Now;
-                InformationManager.DisplayMessage(new InformationMessage("[Nizamiye Hücumu] Çekiç & Örs Taarruzu! Tüm Hatlar İleri!", Colors.Red));
+                DisplayDoctrineMessage("{=seljuk_tactic_full_assault}[Nizamiye Advance] Hammer and Anvil assault! All lines advance!", Colors.Red);
             }
         }
 
@@ -485,6 +486,11 @@ namespace SeljukEmpire.Tactics
             base.OnClearScene();
             _seljukTeam = null;
             _enemyTeam = null;
+        }
+
+        private static void DisplayDoctrineMessage(string localizedKeyAndFallback, Color color)
+        {
+            InformationManager.DisplayMessage(new InformationMessage(new TextObject(localizedKeyAndFallback).ToString(), color));
         }
     }
 }

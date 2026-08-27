@@ -1644,5 +1644,16 @@
     <string id="spc_wc_yasawi_response_2" text="Simple verse for simple people. I prefer men who can debate the finer points, myself." />
     <string id="spc_wc_yasawi_backstory_d" text="I can speak to any common soldier in your camp in words that actually reach them, and I have more patience for the frightened and the grieving than most men ever bother to have." />
     <string id="spc_wc_yasawi_generic_backstory" text="I was raised by a Sufi master after losing my own father young, and have spent my life bringing faith to common people in plain verse rather than scholarly argument. I know how to speak to soldiers and villagers alike, in words that actually reach them." />
+    <string id="seljuk_tactic_high_ground" text="[Seljuk Tactical Command] High-Ground Defense initiated against a numerically superior enemy!" />
+    <string id="seljuk_tactic_wolf_trap" text="[Seljuk Tactical Command] Wolf-Trap and Turan Crescent tactic underway!" />
+    <string id="seljuk_tactic_shield_wall" text="[Seljuk Tactical Command] Nizamiye Shield Wall and choke-point defense formed!" />
+    <string id="seljuk_tactic_crossfire" text="[Seljuk Tactical Command] Steppe Crescent Crossfire formation engaged!" />
+    <string id="seljuk_tactic_lines_broken" text="[Wolf-Trap] The enemy line has broken! Dual-flank crescent encirclement begins!" />
+    <string id="seljuk_tactic_full_assault" text="[Nizamiye Advance] Hammer and Anvil assault! All lines advance!" />
+    <string id="seljuk_ins_claim_paid" text="🛡️ [Seljuk Caravan Insurance] Your caravan was struck! The Seljuk Imperial Treasury has covered your losses (+{AMOUNT} Dinars paid)!" />
+    <string id="seljuk_ins_weekly_dividend" text="🪙 [Silk Road Dividend] Your weekly profit share from caravanserai and harbor investments has been collected (+{AMOUNT} Dinars)!" />
+    <string id="seljuk_ins_purchased" text="📜 [Seljuk Caravan Insurance] Your caravans are now under State Treasury guarantee!" />
+    <string id="seljuk_ins_invested" text="🪙 [Profit Partnership] 10,000 Dinars invested into {SETTLEMENT}'s caravanserai fund! You will receive regular weekly dividends." />
+    <string id="seljuk_tourney_victory" text="🏆 [Seljuk Festival Triumph] You have become the Champion of {TOWN}'s Tournament! Sultanate Prize: {PRIZE} (+25 Renown gained)!" />
 </strings>
 </base>

@@ -1644,5 +1644,16 @@
     <string id="spc_wc_yasawi_response_2" text="Sıradan insanlar için sade şiir. Ben incelikleri tartışabilen adamları tercih ederim." />
     <string id="spc_wc_yasawi_backstory_d" text="Kampındaki herhangi bir sıradan askerle onlara gerçekten ulaşan kelimelerle konuşabilirim, ve korkanlar ve yas tutanlar için çoğu adamın hiç zahmet etmediği kadar sabrım var." />
     <string id="spc_wc_yasawi_generic_backstory" text="Babamı genç yaşta kaybettikten sonra bir Sufi üstadı tarafından yetiştirildim ve hayatımı bilgince tartışma yerine sade şiirle inancı sıradan insanlara getirmeye adadım. Askerlere ve köylülere, onlara gerçekten ulaşan kelimelerle nasıl konuşulacağını bilirim." />
+    <string id="seljuk_tactic_high_ground" text="[Selçuklu Taktik Komutanlığı] Sayıca üstün düşmana karşı yüksek tepe savunması başlatıldı!" />
+    <string id="seljuk_tactic_wolf_trap" text="[Selçuklu Taktik Komutanlığı] Kurt Kapanı ve Turan Hilali taktiği uygulanıyor!" />
+    <string id="seljuk_tactic_shield_wall" text="[Selçuklu Taktik Komutanlığı] Nizamiye Kalkan Duvarı ve boğaz savunması düzeni alındı!" />
+    <string id="seljuk_tactic_crossfire" text="[Selçuklu Taktik Komutanlığı] Bozkır Hilali çapraz ateş nizamına geçildi!" />
+    <string id="seljuk_tactic_lines_broken" text="[Kurt Kapanı] Düşman safları bozuldu! Çift kanattan hilal kuşatması başlıyor!" />
+    <string id="seljuk_tactic_full_assault" text="[Nizamiye Taarruzu] Çekiç ve Örs taarruzu! Tüm hatlar ileri!" />
+    <string id="seljuk_ins_claim_paid" text="🛡️ [Selçuklu Kervan Sigortası] Kervanınız vuruldu! Selçuklu Hazine-i Âmire'si zararınızı karşıladı (+{AMOUNT} Dinar ödendi)!" />
+    <string id="seljuk_ins_weekly_dividend" text="🪙 [İpek Yolu Kâr Payı] Kervansaray ve liman yatırımlarınızdan haftalık kâr payı tahsil edildi (+{AMOUNT} Dinar)!" />
+    <string id="seljuk_ins_purchased" text="📜 [Selçuklu Kervan Sigortası] Kervanlarınız Devlet Hazinesi teminatı altına alındı!" />
+    <string id="seljuk_ins_invested" text="🪙 [Kâr Ortaklığı] {SETTLEMENT} kervansaray fonuna 10.000 Dinar yatırıldı! Her hafta düzenli kâr payı alacaksınız." />
+    <string id="seljuk_tourney_victory" text="🏆 [Selçuklu Şenliği Zaferi] {TOWN} Meydan Turnuvası Şampiyonu oldunuz! Sultanlık Ödülü: {PRIZE} (+25 Nam kazandınız)!" />
 </strings>
 </base>
