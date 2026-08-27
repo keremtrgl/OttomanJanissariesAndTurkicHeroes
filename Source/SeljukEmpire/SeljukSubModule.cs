@@ -71,7 +71,11 @@ namespace SeljukEmpire
                 // not a SubModule tick poll - see the handler's class remarks for why the previous
                 // approach never actually showed any custom content in character creation.
                 TryRegister(campaignStarter, "SeljukCharacterCreationContentHandler", () => campaignStarter.AddBehavior(new SeljukCharacterCreationContentHandler()));
-                // RivalCultureCharacterCreationContentHandler is deliberately NOT registered: a crash dump pinpointed CharacterCreationScreen::HandleResume, right where its 108 options (never live before the v1.6.2 priority fix let them register) first get rendered - disabled until the specific bad option is found. SeljukStarterPackBehavior removed outright per explicit request.
+                // Root cause of the v1.6.2-1.6.4 character-creation crash was seljuk_culture.xml's
+                // <cultural_feats> block (3 feat ids with no matching FeatObject registration -
+                // see seljuk_culture.xml's history), not this handler. Re-registered now that the
+                // real cause is fixed.
+                TryRegister(campaignStarter, "RivalCultureCharacterCreationContentHandler", () => campaignStarter.AddBehavior(new RivalCultureCharacterCreationContentHandler()));
             }
         }
 
