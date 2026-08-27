@@ -110,7 +110,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_veteran_crossbowman" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_vlach_horseman" default_group="Cavalry" level="11" name="{=lat2_t_vlach_horseman}Vlach Horseman" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_vlach_horseman" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=lat2_t_vlach_horseman}Vlach Horseman" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="35" />
@@ -141,7 +141,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_vlach_rider" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_squire" default_group="Cavalry" level="11" name="{=lat2_t_squire}Squire" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_squire" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=lat2_t_squire}Squire" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -237,7 +237,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_arbalester" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_vlach_rider" default_group="Cavalry" level="16" name="{=lat2_t_vlach_rider}Vlach Rider" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_vlach_rider" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=lat2_t_vlach_rider}Vlach Rider" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="60" />
@@ -270,7 +270,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_vlach_skirmisher" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_mounted_sergeant" default_group="Cavalry" level="16" name="{=lat2_t_mounted_sergeant}Mounted Sergeant" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_mounted_sergeant" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=lat2_t_mounted_sergeant}Mounted Sergeant" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="50" />
@@ -368,7 +368,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_master_arbalester" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_vlach_skirmisher" default_group="Cavalry" level="21" name="{=lat2_t_vlach_skirmisher}Vlach Skirmisher" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_vlach_skirmisher" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=lat2_t_vlach_skirmisher}Vlach Skirmisher" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="85" />
@@ -401,7 +401,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_vlach_captain" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_knight" default_group="Cavalry" level="21" name="{=lat2_t_knight}Knight" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_knight" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=lat2_t_knight}Knight" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="70" />
@@ -501,7 +501,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.lat2_elite_arbalester" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_vlach_captain" default_group="Cavalry" level="26" name="{=lat2_t_vlach_captain}Vlach Captain" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_vlach_captain" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=lat2_t_vlach_captain}Vlach Captain" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="110" />
@@ -537,7 +537,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_knight_banneret" default_group="Cavalry" level="26" name="{=lat2_t_knight_banneret}Knight Banneret" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_knight_banneret" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=lat2_t_knight_banneret}Knight Banneret" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="95" />
@@ -639,7 +639,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="lat2_baron_romania" default_group="Cavalry" level="31" name="{=lat2_t_baron_romania}Baron of Romania" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+  <NPCCharacter id="lat2_baron_romania" default_group="Cavalry" level="31" upgrade_requires="ItemCategory.war_horse" name="{=lat2_t_baron_romania}Baron of Romania" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="100" />

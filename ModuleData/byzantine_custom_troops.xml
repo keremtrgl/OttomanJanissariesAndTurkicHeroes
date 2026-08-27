@@ -112,7 +112,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_toxotes" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_trapezites" default_group="Cavalry" level="11" name="{=byz2_t_trapezites}Trapezites" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_trapezites" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=byz2_t_trapezites}Trapezites" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="35" />
@@ -146,7 +146,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_prokoursatores" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_klibanophoros" default_group="Cavalry" level="11" name="{=byz2_t_klibanophoros}Klibanophoros" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_klibanophoros" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=byz2_t_klibanophoros}Klibanophoros" occupation="Soldier" culture="Culture.empire" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -242,7 +242,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tagmatic_toxotes" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_prokoursatores" default_group="Cavalry" level="16" name="{=byz2_t_prokoursatores}Prokoursatores" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_prokoursatores" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=byz2_t_prokoursatores}Prokoursatores" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="60" />
@@ -276,7 +276,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_koursores" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_kataphraktos" default_group="Cavalry" level="16" name="{=byz2_t_kataphraktos}Kataphraktos" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_kataphraktos" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=byz2_t_kataphraktos}Kataphraktos" occupation="Soldier" culture="Culture.empire" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="50" />
@@ -376,7 +376,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tzangra_crossbowman" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_koursores" default_group="Cavalry" level="21" name="{=byz2_t_koursores}Koursores" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_koursores" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=byz2_t_koursores}Koursores" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="85" />
@@ -410,7 +410,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_vardariotai" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_vestiaritai" default_group="Cavalry" level="21" name="{=byz2_t_vestiaritai}Vestiaritai" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_vestiaritai" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=byz2_t_vestiaritai}Vestiaritai" occupation="Soldier" culture="Culture.empire" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="70" />
@@ -511,7 +511,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_tzangratores" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_vardariotai" default_group="Cavalry" level="26" name="{=byz2_t_vardariotai}Vardariotai" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_vardariotai" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=byz2_t_vardariotai}Vardariotai" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="110" />
@@ -551,7 +551,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="byz2_athanatoi" default_group="Cavalry" level="26" name="{=byz2_t_athanatoi}Athanatoi" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_athanatoi" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=byz2_t_athanatoi}Athanatoi" occupation="Soldier" culture="Culture.empire" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="95" />
@@ -592,7 +592,7 @@
        byz2_varangian_guardsman and byz2_tzangra_crossbowman get their own dedicated tier-6 below,
        and byz2_vardariotai stands as a tier-5 endpoint. Hetaireia (the Emperor's own mounted
        bodyguard) fits as the heavy-cavalry line's elite. -->
-  <NPCCharacter id="byz2_hetaireia_guardsman" default_group="Cavalry" level="31" name="{=byz2_t_hetaireia}Hetaireia Guardsman" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
+  <NPCCharacter id="byz2_hetaireia_guardsman" default_group="Cavalry" level="31" upgrade_requires="ItemCategory.war_horse" name="{=byz2_t_hetaireia}Hetaireia Guardsman" occupation="Soldier" culture="Culture.empire" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="120" />

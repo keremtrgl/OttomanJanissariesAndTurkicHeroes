@@ -112,7 +112,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_taurus_bowman" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_azat_horseman" default_group="Cavalry" level="11" name="{=arm2_t_azat_horseman}Azat Horseman" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_azat_horseman" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=arm2_t_azat_horseman}Azat Horseman" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="35" />
@@ -146,7 +146,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_ayrudzi_rider" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_azat_lancer" default_group="Cavalry" level="11" name="{=arm2_t_azat_lancer}Azat Lancer" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_azat_lancer" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=arm2_t_azat_lancer}Azat Lancer" occupation="Soldier" culture="Culture.battania" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -242,7 +242,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_veteran_archer" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_ayrudzi_rider" default_group="Cavalry" level="16" name="{=arm2_t_ayrudzi_rider}Ayrudzi Rider" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_ayrudzi_rider" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=arm2_t_ayrudzi_rider}Ayrudzi Rider" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="60" />
@@ -276,7 +276,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_ayrudzi_veteran" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_ayrudzi_lancer" default_group="Cavalry" level="16" name="{=arm2_t_ayrudzi_lancer}Ayrudzi Lancer" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_ayrudzi_lancer" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=arm2_t_ayrudzi_lancer}Ayrudzi Lancer" occupation="Soldier" culture="Culture.battania" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="50" />
@@ -374,7 +374,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_sparapet_marksman" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_ayrudzi_veteran" default_group="Cavalry" level="21" name="{=arm2_t_ayrudzi_veteran}Ayrudzi Veteran" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_ayrudzi_veteran" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=arm2_t_ayrudzi_veteran}Ayrudzi Veteran" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="85" />
@@ -408,7 +408,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_aspet_skirmisher" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_azatagund_rider" default_group="Cavalry" level="21" name="{=arm2_t_azatagund_rider}Azatagund Rider" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_azatagund_rider" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=arm2_t_azatagund_rider}Azatagund Rider" occupation="Soldier" culture="Culture.battania" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="70" />
@@ -507,7 +507,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.arm2_taurus_master_archer" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_aspet_skirmisher" default_group="Cavalry" level="26" name="{=arm2_t_aspet_skirmisher}Aspet's Skirmisher" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_aspet_skirmisher" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=arm2_t_aspet_skirmisher}Aspet's Skirmisher" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="110" />
@@ -545,7 +545,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_azatagund_elite" default_group="Cavalry" level="26" name="{=arm2_t_azatagund_elite}Azatagund Elite" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_azatagund_elite" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=arm2_t_azatagund_elite}Azatagund Elite" occupation="Soldier" culture="Culture.battania" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="95" />
@@ -644,7 +644,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="arm2_sparapet_guard" default_group="Cavalry" level="31" name="{=arm2_t_sparapet_guard}Sparapet's Ayrudzi" occupation="Soldier" culture="Culture.battania" age="32" is_female="false" is_hero="false">
+  <NPCCharacter id="arm2_sparapet_guard" default_group="Cavalry" level="31" upgrade_requires="ItemCategory.war_horse" name="{=arm2_t_sparapet_guard}Sparapet's Ayrudzi" occupation="Soldier" culture="Culture.battania" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="120" />

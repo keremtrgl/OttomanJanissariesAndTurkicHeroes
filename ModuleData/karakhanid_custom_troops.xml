@@ -97,7 +97,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_mergen" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_alp_atli" default_group="Cavalry" level="11" name="{=kk2_t_alp_atli}Alp Atli" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_alp_atli" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=kk2_t_alp_atli}Alp Atli" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="35" />
@@ -131,7 +131,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_yagici" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_tegin_squire" default_group="Cavalry" level="11" name="{=kk2_t_tegin_squire}Tegin's Squire" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_tegin_squire" default_group="Cavalry" level="11" upgrade_requires="ItemCategory.horse" name="{=kk2_t_tegin_squire}Tegin's Squire" occupation="Soldier" culture="Culture.khuzait" age="24" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="24.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="30" />
@@ -227,7 +227,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_kulug_mergen" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_yagici" default_group="Cavalry" level="16" name="{=kk2_t_yagici}Yagici" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_yagici" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=kk2_t_yagici}Yagici" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="60" />
@@ -261,7 +261,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_tarkhan_atlisi" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_tarkhan_silahtari" default_group="Cavalry" level="16" name="{=kk2_t_tarkhan_silahtari}Tarkhan's Lancer" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_tarkhan_silahtari" default_group="Cavalry" level="16" upgrade_requires="ItemCategory.horse" name="{=kk2_t_tarkhan_silahtari}Tarkhan's Lancer" occupation="Soldier" culture="Culture.khuzait" age="26" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="26.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="50" />
@@ -359,7 +359,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_bas_mergen" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_tarkhan_atlisi" default_group="Cavalry" level="21" name="{=kk2_t_tarkhan_atlisi}Tarkhan's Rider" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_tarkhan_atlisi" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=kk2_t_tarkhan_atlisi}Tarkhan's Rider" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="85" />
@@ -393,7 +393,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_kasgar_muhafizi" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_beg_suvarisi" default_group="Cavalry" level="21" name="{=kk2_t_beg_suvarisi}Beg's Cavalryman" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_beg_suvarisi" default_group="Cavalry" level="21" upgrade_requires="ItemCategory.war_horse" name="{=kk2_t_beg_suvarisi}Beg's Cavalryman" occupation="Soldier" culture="Culture.khuzait" age="28" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="28.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="70" />
@@ -490,7 +490,7 @@
     <upgrade_targets><upgrade_target id="NPCCharacter.kk2_ordu_mergeni" /></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_kasgar_muhafizi" default_group="Cavalry" level="26" name="{=kk2_t_kasgar_muhafizi}Kashgar Horse-Guard" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_kasgar_muhafizi" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=kk2_t_kasgar_muhafizi}Kashgar Horse-Guard" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.5" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="110" />
@@ -526,7 +526,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_tarkhan_suvarisi" default_group="Cavalry" level="26" name="{=kk2_t_tarkhan_suvarisi}Tarkhan's Cavalryman" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_tarkhan_suvarisi" default_group="Cavalry" level="26" upgrade_requires="ItemCategory.war_horse" name="{=kk2_t_tarkhan_suvarisi}Tarkhan's Cavalryman" occupation="Soldier" culture="Culture.khuzait" age="30" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="30.0" weight="0.5" build="0.55" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="95" />
@@ -625,7 +625,7 @@
     <upgrade_targets></upgrade_targets>
   </NPCCharacter>
 
-  <NPCCharacter id="kk2_bori_tarkhan" default_group="Cavalry" level="31" name="{=kk2_t_bori_tarkhan}Bori Tarkhan" occupation="Soldier" culture="Culture.khuzait" age="32" is_female="false" is_hero="false">
+  <NPCCharacter id="kk2_bori_tarkhan" default_group="Cavalry" level="31" upgrade_requires="ItemCategory.war_horse" name="{=kk2_t_bori_tarkhan}Bori Tarkhan" occupation="Soldier" culture="Culture.khuzait" age="32" is_female="false" is_hero="false">
     <face><BodyProperties version="4" age="32.0" weight="0.5" build="0.6" key="000B58088000200848888888888888880000000000000000000000000000000001D008430888800000000000000000000000000000000000000000003C844002" /></face>
     <skills>
       <skill id="Athletics" value="120" />
