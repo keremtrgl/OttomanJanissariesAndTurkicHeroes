@@ -16,6 +16,43 @@
   id str_faction_ruler doesn't exist! Variation: seljuk". This file adds the
   missing ".seljuk" variants, modeled on Native's "aserai" entries (Sultan/Sultana),
   matching kingdoms.xml's existing ruler_title="{=seljuk_ruler_title}Sultan".
+
+  StoryMode/ModuleData/module_strings.xml similarly defines ".<culture>" variants
+  of str_player_brother_name/str_player_little_brother_name/
+  str_player_little_sister_name for the tutorial's opening "brother" dialogue
+  (GameTextManager merges every loaded module's GameText regardless of which
+  campaign type is active, so this fires even outside StoryMode) - same missing-
+  variation ERROR text for Culture.seljuk. Added below, following Native's own
+  per-culture naming convention (every brother name starts with "N", every little
+  sister name starts with "Al").
+
+  Proactive sweep of Native/ModuleData/module_strings.xml for every other
+  "<key>.aserai"-style culture-varying GameText id turned up 6 more categories
+  (str_adjective_for_culture/str_adjective_for_faction/
+  str_faction_formal_name_for_culture/str_faction_informal_name_for_culture/
+  str_neutral_term_for_culture/str_short_term_for_faction) with the same missing-
+  ".seljuk" gap - same class of bug as str_player_brother_name above, just not
+  yet hit by a specific gameplay screen. Added below too, matching kingdoms.xml's
+  existing name="{=seljuk_faction_name}Great Seljuk Empire"/
+  short_name="{=seljuk_faction_short}Seljuks".
+
+  Same sweep of SandBox/ModuleData/module_strings.xml (a SEPARATE GameText file
+  from Native's, registered under its own XmlName id="GameText" path=
+  "module_strings" entry) found str_kingdom_formal_name/str_player_father_name/
+  str_player_mother_name with the same gap - father names are always "Ba-",
+  mother names always "T-" across all 6 Native cultures, matched below.
+
+  Same sweep of SandBox/ModuleData/comment_strings.xml (used whenever a lord
+  introduces themselves in conversation - hit on meeting essentially any Seljuk
+  lord) found str_comment_noble_introduces_self/
+  str_comment_noble_introduces_self_and_clan/str_liege_title/
+  str_liege_title_female with the same gap, added below. GameTextManager
+  merges every module's GameText into one shared dictionary regardless of
+  which file registered it (confirmed via decompile), so these belong here
+  rather than a separate "comment_strings"-named file. Native's own entries
+  carry a <tags> child for weighted selection among multiple same-culture
+  lines - omitted here since there's only one seljuk line per id, which
+  GameTextManager.AddVariationWithId treats as untagged/default weight.
 -->
 <strings>
 	<string id="str_faction_official.seljuk" text="{=seljuk_gt_faction_official}an emir" />
@@ -25,4 +62,20 @@
 	<string id="str_faction_ruler_term_in_speech.seljuk" text="{=seljuk_gt_ruler_term_in_speech}{?RULER.GENDER}Sultana{?}Sultan{\?} {RULER.NAME}" />
 	<string id="str_faction_ruler_name_with_title.seljuk" text="{=seljuk_gt_ruler_term_in_speech}{?RULER.GENDER}Sultana{?}Sultan{\?} {RULER.NAME}" />
 	<string id="str_faction_noble_name_with_title.seljuk" text="{=seljuk_gt_noble_name_with_title}{?RULER.GENDER}Emira{?}Emir{\?} {RULER.NAME}" />
+	<string id="str_player_brother_name.seljuk" text="{=seljuk_gt_player_brother_name}Nizam" />
+	<string id="str_player_little_brother_name.seljuk" text="{=seljuk_gt_player_little_brother_name}Tarkan" />
+	<string id="str_player_little_sister_name.seljuk" text="{=seljuk_gt_player_little_sister_name}Alev" />
+	<string id="str_adjective_for_culture.seljuk" text="{=seljuk_gt_adjective_for_culture}Seljuk" />
+	<string id="str_adjective_for_faction.seljuk" text="{=seljuk_gt_adjective_for_faction}Seljuk" />
+	<string id="str_faction_formal_name_for_culture.seljuk" text="{=seljuk_gt_formal_name}Great Seljuk Empire" />
+	<string id="str_faction_informal_name_for_culture.seljuk" text="{=seljuk_gt_informal_name}the Seljuks" />
+	<string id="str_neutral_term_for_culture.seljuk" text="{=seljuk_gt_neutral_term}Seljuks" />
+	<string id="str_short_term_for_faction.seljuk" text="{=seljuk_gt_short_term}Seljuks" />
+	<string id="str_kingdom_formal_name.seljuk" text="{=seljuk_gt_formal_name}Great Seljuk Empire" />
+	<string id="str_player_father_name.seljuk" text="{=seljuk_gt_player_father_name}Bayram" />
+	<string id="str_player_mother_name.seljuk" text="{=seljuk_gt_player_mother_name}Turna" />
+	<string id="str_comment_noble_introduces_self.seljuk" text="{=seljuk_gt_comment_introduces_self}I am {CONVERSATION_CHARACTER.LINK} of the {CLAN_NAME}." />
+	<string id="str_comment_noble_introduces_self_and_clan.seljuk" text="{=seljuk_gt_comment_introduces_self_and_clan}I am {CONVERSATION_CHARACTER.LINK}, of the {CLAN_NAME}, a clan of the Seljuks." />
+	<string id="str_liege_title.seljuk" text="{=seljuk_gt_liege_title}sultan of the Seljuks" />
+	<string id="str_liege_title_female.seljuk" text="{=seljuk_gt_liege_title_female}sultana of the Seljuks" />
 </strings>
