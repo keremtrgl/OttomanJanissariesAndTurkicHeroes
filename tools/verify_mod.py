@@ -846,6 +846,74 @@ def check_troop_tier_parity(issues, game_path):
                                      f"({deviation:+.0%}) - check for a typo'd skill value."))
 
 
+# --------------------------------------------------------------- check 13 --
+
+def check_workshop_conflicts(issues, game_path):
+    """Opt-in (--check-workshop-conflicts). Compares this mod's ids against every OTHER
+    Steam Workshop mod currently installed for Bannerlord and reports real overlaps.
+
+    Not part of the default run because the result depends on what the person running it
+    happens to have subscribed to, not on this repo's contents - a clean result here is
+    only ever evidence about THIS machine. It is still the single most direct answer to
+    "will my mod break someone's setup", because content mods conflict by defining the
+    same id (last module loaded silently wins, discarding the other's version) far more
+    often than by any subtler mechanism.
+    """
+    workshop = game_path.parent.parent / "workshop" / "content" / "261550"
+    if not workshop.exists():
+        issues.append(Issue("WARN", "workshop-conflicts", None,
+                             f"No Steam Workshop content folder found at {workshop} - "
+                             f"nothing to compare against."))
+        return
+
+    def ids_in(base):
+        found = {}
+        for f in base.rglob("*.xml"):
+            if "Languages" in f.parts:
+                continue
+            root = safe_parse(f)
+            if root is None:
+                continue
+            for tag in ID_BEARING_TYPES.values():
+                for e in root.iter(tag):
+                    if e.get("id"):
+                        found.setdefault(tag, set()).add(e.get("id"))
+        return found
+
+    this_module = REPO_ROOT.name
+    mine = ids_in(MODULE_DATA)
+    compared = 0
+
+    for d in sorted(p for p in workshop.iterdir() if p.is_dir()):
+        name = d.name
+        sub = d / "SubModule.xml"
+        if sub.exists():
+            root = safe_parse(sub)
+            if root is not None:
+                node = root.find("Name")
+                if node is not None and node.get("value"):
+                    name = node.get("value")
+        # skip this same mod published to the Workshop
+        if (d / "ModuleData").exists() and name.lower().startswith("seljuk empire"):
+            continue
+        other = ids_in(d)
+        if not other:
+            continue
+        compared += 1
+        for tag, ids in sorted(other.items()):
+            overlap = mine.get(tag, set()) & ids
+            if overlap:
+                sample = ", ".join(sorted(overlap)[:5])
+                more = f" (+{len(overlap) - 5} more)" if len(overlap) > 5 else ""
+                issues.append(Issue("WARN", "workshop-conflicts", None,
+                                     f'"{name}" also defines {len(overlap)} {tag} id(s) this mod '
+                                     f"defines: {sample}{more}. Whichever module loads later wins "
+                                     f"and the other's version of those entries is discarded."))
+
+    if compared:
+        print(f"  (workshop-conflicts: compared against {compared} other installed mod(s))")
+
+
 # --------------------------------------------------------------------- run --
 
 def run(args):
@@ -876,6 +944,8 @@ def run(args):
         check_gender_consistency(issues, game_path)
         check_troop_armor_slots(issues, game_path)
         check_troop_progression(issues, game_path)
+        if args.check_workshop_conflicts:
+            check_workshop_conflicts(issues, game_path)
 
     errors = [i for i in issues if i.level == "ERROR"]
     warnings = [i for i in issues if i.level == "WARN"]
@@ -905,6 +975,10 @@ def main():
     parser.add_argument("--quick", action="store_true",
                          help="Skip checks that require the game install (upgrade-target, item-id, gender-consistency).")
     parser.add_argument("--json", action="store_true", help="Print machine-readable JSON instead of a text report.")
+    parser.add_argument("--check-workshop-conflicts", action="store_true",
+                         help="Also compare this mod's ids against every other Steam Workshop mod "
+                              "installed on THIS machine and report real overlaps. Off by default "
+                              "because the result reflects the local subscription list, not the repo.")
     parser.add_argument("--update-baseline", action="store_true",
                          help="Write the current id order to tools/shipped_ids_baseline.json as the new "
                               "save-compatibility reference point, instead of running the checks. Only do "
