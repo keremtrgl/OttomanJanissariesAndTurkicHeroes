@@ -29,11 +29,13 @@
          Dinars) has no Horse slot at all, which is the actual reason it's so much cheaper. -->
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.folded_town_boots" />
         <equipment slot="Item0" id="Item.empire_mace_1_t2" />
         <equipment slot="Head" id="Item.laced_cloth_coif" />
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.folded_town_boots" />
         <equipment slot="Item0" id="Item.imperial_spear_t2" />
         <equipment slot="Head" id="Item.imperial_cloth_coif" />
         <equipment slot="Body" id="Item.gambeson_b" />
@@ -58,6 +60,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_mace_1_t2" />
         <equipment slot="Item1" id="Item.desert_oval_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
@@ -66,6 +69,7 @@
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_sword_1_t2" />
         <equipment slot="Item1" id="Item.leather_round_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
@@ -87,6 +91,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
@@ -94,6 +100,8 @@
         <equipment slot="Body" id="Item.imperial_padded_cloth" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
@@ -115,6 +123,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_mace_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -123,6 +133,8 @@
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_mace_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -144,6 +156,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_lance_2_t4" />
         <equipment slot="Item1" id="Item.desert_oval_shield" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
@@ -152,6 +166,8 @@
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.fine_town_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_lance_2_t4" />
         <equipment slot="Item1" id="Item.bound_horsemans_kite_shield" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
@@ -174,6 +190,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.stronger_reinforced_kite_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
@@ -182,6 +199,7 @@
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_sword_4_t4" />
         <equipment slot="Item1" id="Item.fortified_kite_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
@@ -203,6 +221,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
@@ -210,6 +230,8 @@
         <equipment slot="Body" id="Item.imperial_lamellar_over_leather" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.empire_sword_2_t3" />
@@ -231,6 +253,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -239,6 +263,8 @@
         <equipment slot="Horse" id="Item.t2_empire_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
+        <equipment slot="Gloves" id="Item.woven_leather_bracers" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -260,6 +286,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
         <equipment slot="Item0" id="Item.empire_lance_2_t4" />
         <equipment slot="Item1" id="Item.heavy_horsemans_kite_shield" />
         <equipment slot="Item2" id="Item.empire_sword_5_t4" />
@@ -269,6 +296,7 @@
         <equipment slot="Horse" id="Item.t2_empire_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
         <equipment slot="Item0" id="Item.empire_lance_2_t4" />
         <equipment slot="Item1" id="Item.ironrim_riders_kite_shield" />
         <equipment slot="Item2" id="Item.empire_sword_5_t4" />
@@ -327,6 +355,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
@@ -335,6 +364,7 @@
         <equipment slot="Gloves" id="Item.plated_strip_gauntlets" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_3_t4" />
@@ -357,6 +387,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
+        <equipment slot="Gloves" id="Item.padded_mitten" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -365,6 +397,8 @@
         <equipment slot="Horse" id="Item.t3_empire_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.empire_horseman_boots" />
+        <equipment slot="Gloves" id="Item.padded_mitten" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -488,6 +522,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -498,6 +533,7 @@
         <equipment slot="HorseHarness" id="Item.imperial_scale_barding" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.lamellar_plate_boots" />
         <equipment slot="Item0" id="Item.empire_sword_5_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
