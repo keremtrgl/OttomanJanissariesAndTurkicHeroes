@@ -65,7 +65,7 @@
         <equipment slot="Item1" id="Item.desert_oval_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
         <equipment slot="Head" id="Item.imperial_nasal_helm" />
-        <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
+        <equipment slot="Body" id="Item.basic_imperial_leather_armor" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
@@ -74,7 +74,7 @@
         <equipment slot="Item1" id="Item.leather_round_shield" />
         <equipment slot="Item2" id="Item.imperial_throwing_spear_1_t4" />
         <equipment slot="Head" id="Item.imperial_leather_coif" />
-        <equipment slot="Body" id="Item.empire_warrior_padded_armor_b" />
+        <equipment slot="Body" id="Item.basic_imperial_leather_armor" />
         <equipment slot="Leg" id="Item.plated_strip_boots" />
       </EquipmentRoster>
     </Equipments>
@@ -106,7 +106,7 @@
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.empire_mace_1_t2" />
         <equipment slot="Head" id="Item.imperial_cloth_coif" />
-        <equipment slot="Body" id="Item.empire_warrior_padded_armor_a" />
+        <equipment slot="Body" id="Item.basic_imperial_leather_armor" />
       </EquipmentRoster>
     </Equipments>
     <upgrade_targets><upgrade_target id="NPCCharacter.byz2_thematic_toxotes" /></upgrade_targets>
@@ -129,7 +129,7 @@
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
         <equipment slot="Head" id="Item.imperial_cloth_coif" />
-        <equipment slot="Body" id="Item.empire_warrior_padded_armor_c" />
+        <equipment slot="Body" id="Item.basic_imperial_leather_armor" />
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
@@ -139,7 +139,7 @@
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
         <equipment slot="Head" id="Item.imperial_leather_coif" />
-        <equipment slot="Body" id="Item.empire_warrior_padded_armor_d" />
+        <equipment slot="Body" id="Item.basic_imperial_leather_armor" />
         <equipment slot="Horse" id="Item.empire_horse" />
       </EquipmentRoster>
     </Equipments>
