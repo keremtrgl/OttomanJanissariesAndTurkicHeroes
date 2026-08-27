@@ -29,11 +29,13 @@
          the "170 dinar mounted recruit" bug class fixed for every other culture in this mod. -->
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.battania_leather_boots" />
         <equipment slot="Item0" id="Item.battania_mace_1_t2" />
         <equipment slot="Head" id="Item.thinhide_coif" />
         <equipment slot="Body" id="Item.battania_civil_a" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.battania_leather_boots" />
         <equipment slot="Item0" id="Item.battania_mace_2_t2" />
         <equipment slot="Head" id="Item.arming_coif" />
         <equipment slot="Body" id="Item.battania_civil_b" />
@@ -58,6 +60,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.battania_sword_1_t2" />
         <equipment slot="Item1" id="Item.battania_large_shield_a" />
         <equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
@@ -66,6 +69,7 @@
         <equipment slot="Leg" id="Item.battania_leather_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.battania_axe_1_t2" />
         <equipment slot="Item1" id="Item.battania_targe_b" />
         <equipment slot="Item2" id="Item.woodland_throwing_axe_1_t1" />
@@ -87,6 +91,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.highland_boots" />
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.battania_sword_1_t2" />
@@ -94,6 +100,8 @@
         <equipment slot="Body" id="Item.battania_light_armor_a" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.highland_boots" />
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.mountain_hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.battania_axe_1_t2" />
@@ -115,6 +123,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.highland_boots" />
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.battania_sword_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -123,6 +133,8 @@
         <equipment slot="Horse" id="Item.battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.highland_boots" />
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.battania_axe_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -144,6 +156,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.highland_boots" />
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
         <equipment slot="Item1" id="Item.battania_targe_b" />
         <equipment slot="Item2" id="Item.battania_sword_1_t2" />
@@ -152,6 +166,8 @@
         <equipment slot="Horse" id="Item.battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.highland_boots" />
+        <equipment slot="Gloves" id="Item.armwraps" />
         <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
         <equipment slot="Item1" id="Item.battania_large_shield_a" />
         <equipment slot="Item2" id="Item.battania_axe_1_t2" />
@@ -174,6 +190,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.battania_sword_2_t3" />
         <equipment slot="Item1" id="Item.battania_large_shield_b" />
         <equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
@@ -182,6 +199,7 @@
         <equipment slot="Leg" id="Item.battania_woodland_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.battania_2hsword_2_t3" />
         <equipment slot="Item1" id="Item.battania_large_shield_b" />
         <equipment slot="Item2" id="Item.highland_throwing_axe_1_t2" />
@@ -203,6 +221,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.rough_tied_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.battania_sword_2_t3" />
@@ -210,6 +230,8 @@
         <equipment slot="Body" id="Item.battania_light_armor_c" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.rough_tied_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.battania_axe_2_t4" />
@@ -231,6 +253,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.rough_tied_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.battania_sword_2_t3" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -239,6 +263,8 @@
         <equipment slot="Horse" id="Item.t2_battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.rough_tied_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.battania_axe_2_t4" />
         <equipment slot="Item1" id="Item.steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -260,6 +286,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.rough_tied_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.eastern_spear_2_t3" />
         <equipment slot="Item1" id="Item.battania_large_shield_b" />
         <equipment slot="Item2" id="Item.battania_sword_2_t3" />
@@ -268,6 +296,8 @@
         <equipment slot="Horse" id="Item.t2_battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.rough_tied_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.eastern_spear_2_t3" />
         <equipment slot="Item1" id="Item.battania_targe_b" />
         <equipment slot="Item2" id="Item.battania_axe_2_t4" />
@@ -323,6 +353,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.wrapped_leather_boots" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.battania_sword_3_t3" />
@@ -331,6 +362,7 @@
         <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.wrapped_leather_boots" />
         <equipment slot="Item0" id="Item.steppe_heavy_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.battania_axe_2_t4" />
@@ -353,6 +385,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.wrapped_leather_boots" />
+        <equipment slot="Gloves" id="Item.guarded_armwraps" />
         <equipment slot="Item0" id="Item.battania_sword_4_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -361,6 +395,8 @@
         <equipment slot="Horse" id="Item.t2_battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.wrapped_leather_boots" />
+        <equipment slot="Gloves" id="Item.guarded_armwraps" />
         <equipment slot="Item0" id="Item.battania_axe_2_t4" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -382,6 +418,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.wrapped_leather_boots" />
         <equipment slot="Item0" id="Item.eastern_spear_3_t3" />
         <equipment slot="Item1" id="Item.battania_large_shield_c" />
         <equipment slot="Item2" id="Item.battania_sword_4_t4" />
@@ -391,6 +428,7 @@
         <equipment slot="Horse" id="Item.t2_battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.wrapped_leather_boots" />
         <equipment slot="Item0" id="Item.eastern_spear_4_t4" />
         <equipment slot="Item1" id="Item.battania_targe_b" />
         <equipment slot="Item2" id="Item.battania_axe_2_t4" />
@@ -480,6 +518,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.turndown_leather_boots" />
         <equipment slot="Item0" id="Item.battania_sword_5_t5" />
         <equipment slot="Item1" id="Item.steppe_war_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -489,6 +528,7 @@
         <equipment slot="Horse" id="Item.t3_battania_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.turndown_leather_boots" />
         <equipment slot="Item0" id="Item.battania_noble_sword_1_t5" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -515,6 +555,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.turndown_leather_boots" />
         <equipment slot="Item0" id="Item.eastern_spear_5_t5" />
         <equipment slot="Item1" id="Item.battania_large_shield_c" />
         <equipment slot="Item2" id="Item.battania_sword_5_t5" />
@@ -525,6 +566,7 @@
         <equipment slot="HorseHarness" id="Item.battania_horse_harness" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.turndown_leather_boots" />
         <equipment slot="Item0" id="Item.battania_polearm_1_t5" />
         <equipment slot="Item1" id="Item.battania_targe_b" />
         <equipment slot="Item2" id="Item.battania_noble_sword_2_t5" />

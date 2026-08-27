@@ -39,11 +39,13 @@
          the basic_troop is what makes even the cheapest recruit register as mounted and overpriced. -->
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
         <equipment slot="Item0" id="Item.eastern_javelin_1_t2" />
         <equipment slot="Head" id="Item.nordic_fur_cap" />
         <equipment slot="Body" id="Item.nordic_padded_cloth" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_d" />
         <equipment slot="Item0" id="Item.sturgia_mace_1_t3" />
         <equipment slot="Head" id="Item.nomad_cap" />
         <equipment slot="Body" id="Item.nordic_sloven_leather" />
@@ -68,6 +70,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.sturgia_axe_2_t2" />
         <equipment slot="Item1" id="Item.sturgia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
@@ -76,6 +79,7 @@
         <equipment slot="Leg" id="Item.sturgia_boots_a" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
         <equipment slot="Item1" id="Item.sturgia_old_shield_a" />
         <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
@@ -97,6 +101,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.mountain_hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.sturgia_axe_2_t2" />
@@ -104,6 +110,8 @@
         <equipment slot="Body" id="Item.nordic_padded_cloth" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.hunting_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.sturgia_sword_1_t2" />
@@ -125,6 +133,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.sturgia_sword_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -133,6 +143,8 @@
         <equipment slot="Horse" id="Item.sturgia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -154,6 +166,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
         <equipment slot="Item1" id="Item.sturgia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.sturgia_sword_1_t2" />
@@ -162,6 +176,8 @@
         <equipment slot="Horse" id="Item.sturgia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_c" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.sturgia_lance_1_t4" />
         <equipment slot="Item1" id="Item.sturgia_old_shield_a" />
         <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
@@ -184,6 +200,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.sturgia_axe_3_t3" />
         <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
         <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
@@ -192,6 +209,7 @@
         <equipment slot="Leg" id="Item.sturgia_boots_b" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.sturgia_sword_2_t3" />
         <equipment slot="Item1" id="Item.sturgia_old_shield_b" />
         <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
@@ -213,6 +231,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.sturgia_axe_3_t3" />
@@ -220,6 +240,8 @@
         <equipment slot="Body" id="Item.nordic_sloven" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.sturgia_sword_2_t3" />
@@ -241,6 +263,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.sturgia_sword_2_t3" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -249,6 +273,8 @@
         <equipment slot="Horse" id="Item.t2_sturgia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
         <equipment slot="Item1" id="Item.steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -270,6 +296,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
         <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
         <equipment slot="Item2" id="Item.sturgia_sword_2_t3" />
@@ -278,6 +306,8 @@
         <equipment slot="Horse" id="Item.t2_sturgia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_a" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.sturgia_lance_1_t4" />
         <equipment slot="Item1" id="Item.sturgia_old_shield_b" />
         <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
@@ -333,6 +363,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.sturgia_axe_4_t4" />
@@ -341,6 +372,7 @@
         <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
         <equipment slot="Item0" id="Item.steppe_heavy_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.sturgia_sword_4_t4" />
@@ -363,6 +395,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.sturgia_sword_4_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -371,6 +405,8 @@
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.khuzait_sword_4_t4" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -392,6 +428,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.sturgia_infantry_shield_b" />
         <equipment slot="Item2" id="Item.sturgia_sword_4_t4" />
@@ -401,6 +438,7 @@
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.sturgia_boots_b" />
         <equipment slot="Item0" id="Item.sturgia_lance_2_t5" />
         <equipment slot="Item1" id="Item.steppe_guardian_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
@@ -490,6 +528,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.northern_plated_boots" />
         <equipment slot="Item0" id="Item.khuzait_sword_5_t4" />
         <equipment slot="Item1" id="Item.steppe_war_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -500,6 +539,7 @@
         <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.northern_plated_boots" />
         <equipment slot="Item0" id="Item.sturgia_sword_5_t4" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -526,6 +566,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.northern_plated_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.steppe_guardian_shield" />
         <equipment slot="Item2" id="Item.sturgia_sword_5_t4" />
@@ -536,6 +577,7 @@
         <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.northern_plated_boots" />
         <equipment slot="Item0" id="Item.sturgia_lance_2_t5" />
         <equipment slot="Item1" id="Item.decorated_steppe_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />

@@ -34,11 +34,13 @@
          avoids the "170 dinar mounted recruit" bug class this mod fixed for every other culture. -->
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_shoes" />
         <equipment slot="Item0" id="Item.western_spear_1_t2" />
         <equipment slot="Head" id="Item.padded_coif" />
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_shoes" />
         <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
         <equipment slot="Head" id="Item.laced_coif" />
         <equipment slot="Body" id="Item.gambeson_b" />
@@ -63,6 +65,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.western_javelin_1_t2" />
@@ -71,6 +74,7 @@
         <equipment slot="Leg" id="Item.leather_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.western_javelin_1_t2" />
@@ -92,6 +96,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.strapped_shoes" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.crossbow_a" />
         <equipment slot="Item1" id="Item.bolt_a" />
         <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
@@ -99,6 +105,8 @@
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.strapped_shoes" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.crossbow_b" />
         <equipment slot="Item1" id="Item.bolt_a" />
         <equipment slot="Item2" id="Item.vlandia_sword_1_t2" />
@@ -120,6 +128,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.strapped_shoes" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.vlandia_sword_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -128,6 +138,8 @@
         <equipment slot="Horse" id="Item.vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.strapped_shoes" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -149,6 +161,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.strapped_shoes" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.vlandia_lance_1_t3" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.vlandia_sword_1_t2" />
@@ -157,6 +171,8 @@
         <equipment slot="Horse" id="Item.vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.strapped_shoes" />
+        <equipment slot="Gloves" id="Item.leather_gloves" />
         <equipment slot="Item0" id="Item.western_spear_1_t2" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
@@ -179,6 +195,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.western_spear_3_t3" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.western_javelin_2_t3" />
@@ -187,6 +204,7 @@
         <equipment slot="Leg" id="Item.leather_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.vlandia_sword_2_t3" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.western_javelin_2_t3" />
@@ -208,6 +226,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.crossbow_c" />
         <equipment slot="Item1" id="Item.bolt_b" />
         <equipment slot="Item2" id="Item.vlandia_sword_2_t3" />
@@ -215,6 +235,8 @@
         <equipment slot="Body" id="Item.hauberk" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.crossbow_d" />
         <equipment slot="Item1" id="Item.bolt_b" />
         <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
@@ -236,6 +258,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.vlandia_sword_2_t3" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -244,6 +268,8 @@
         <equipment slot="Horse" id="Item.vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.vlandia_mace_1_t2" />
         <equipment slot="Item1" id="Item.steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -265,6 +291,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
         <equipment slot="Item1" id="Item.vlandia_infantry_shield_a" />
         <equipment slot="Item2" id="Item.vlandia_sword_2_t3" />
@@ -273,6 +301,8 @@
         <equipment slot="Horse" id="Item.t2_vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.buttoned_leather_bracers" />
         <equipment slot="Item0" id="Item.vlandia_lance_1_t3" />
         <equipment slot="Item1" id="Item.western_kite_shield" />
         <equipment slot="Item2" id="Item.vlandia_mace_1_t2" />
@@ -328,6 +358,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
         <equipment slot="Item0" id="Item.crossbow_e" />
         <equipment slot="Item1" id="Item.bolt_c" />
         <equipment slot="Item2" id="Item.vlandia_sword_3_t4" />
@@ -336,6 +367,7 @@
         <equipment slot="Gloves" id="Item.mail_mitten" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
         <equipment slot="Item0" id="Item.crossbow_f" />
         <equipment slot="Item1" id="Item.bolt_c" />
         <equipment slot="Item2" id="Item.vlandia_mace_2_t4" />
@@ -358,6 +390,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.vlandia_sword_3_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -366,6 +400,8 @@
         <equipment slot="Horse" id="Item.t2_vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
+        <equipment slot="Gloves" id="Item.padded_vambrace" />
         <equipment slot="Item0" id="Item.vlandia_mace_2_t4" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -387,6 +423,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
         <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
         <equipment slot="Item1" id="Item.western_riders_kite_shield" />
         <equipment slot="Item2" id="Item.vlandia_sword_3_t4" />
@@ -396,6 +433,7 @@
         <equipment slot="Horse" id="Item.t2_vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_cavalier_boots" />
         <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
         <equipment slot="Item1" id="Item.western_kite_shield" />
         <equipment slot="Item2" id="Item.vlandia_sword_4_t4" />
@@ -452,6 +490,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_chausses" />
         <equipment slot="Item0" id="Item.crossbow_g" />
         <equipment slot="Item1" id="Item.bolt_d" />
         <equipment slot="Item2" id="Item.vlandia_sword_4_t4" />
@@ -461,6 +500,7 @@
         <equipment slot="Gloves" id="Item.reinforced_mail_mitten" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_chausses" />
         <equipment slot="Item0" id="Item.crossbow_h" />
         <equipment slot="Item1" id="Item.bolt_d" />
         <equipment slot="Item2" id="Item.vlandia_mace_3_t5" />
@@ -484,6 +524,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_chausses" />
         <equipment slot="Item0" id="Item.vlandia_sword_4_t4" />
         <equipment slot="Item1" id="Item.steppe_war_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -493,6 +534,7 @@
         <equipment slot="Horse" id="Item.t3_vlandia_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_chausses" />
         <equipment slot="Item0" id="Item.vlandia_mace_3_t5" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -519,6 +561,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_chausses" />
         <equipment slot="Item0" id="Item.vlandia_lance_3_t5" />
         <equipment slot="Item1" id="Item.western_riders_kite_shield" />
         <equipment slot="Item2" id="Item.vlandia_noble_sword_1_t5" />
@@ -529,6 +572,7 @@
         <equipment slot="HorseHarness" id="Item.chain_horse_harness" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.mail_chausses" />
         <equipment slot="Item0" id="Item.vlandia_lance_2_t4" />
         <equipment slot="Item1" id="Item.western_riders_kite_shield" />
         <equipment slot="Item2" id="Item.vlandia_noble_sword_2_t5" />

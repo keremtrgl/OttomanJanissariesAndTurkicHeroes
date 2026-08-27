@@ -13,12 +13,14 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_boots" />
         <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
         <equipment slot="Item1" id="Item.eastern_wicker_shield" />
         <equipment slot="Head" id="Item.nomad_cap" />
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.leather_boots" />
         <equipment slot="Item0" id="Item.eastern_spear_1_t2" />
         <equipment slot="Head" id="Item.nomad_padded_hood" />
         <equipment slot="Body" id="Item.gambeson_b" />
@@ -43,6 +45,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
         <equipment slot="Item1" id="Item.eastern_wicker_shield" />
         <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
@@ -51,6 +54,7 @@
         <equipment slot="Leg" id="Item.steppe_leather_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.khuzait_mace_1_t2" />
         <equipment slot="Item1" id="Item.eastern_wicker_shield" />
         <equipment slot="Item2" id="Item.eastern_javelin_1_t2" />
@@ -72,6 +76,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
@@ -79,6 +85,8 @@
         <equipment slot="Body" id="Item.gambeson_b" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
@@ -100,6 +108,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.khuzait_sword_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -108,6 +118,8 @@
         <equipment slot="Horse" id="Item.khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.khuzait_mace_1_t2" />
         <equipment slot="Item1" id="Item.hunting_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -129,6 +141,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
         <equipment slot="Item1" id="Item.tribal_steppe_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_1_t2" />
@@ -137,6 +151,8 @@
         <equipment slot="Horse" id="Item.khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.steppe_leather_boots" />
+        <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Item0" id="Item.khuzait_lance_1_t3" />
         <equipment slot="Item1" id="Item.tribal_steppe_shield" />
         <equipment slot="Item2" id="Item.khuzait_mace_1_t2" />
@@ -159,6 +175,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
         <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
         <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
@@ -167,6 +184,7 @@
         <equipment slot="Leg" id="Item.steppe_leather_boots" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_sword_3_t3" />
         <equipment slot="Item1" id="Item.stronger_eastern_wicker_shield" />
         <equipment slot="Item2" id="Item.eastern_javelin_2_t3" />
@@ -188,6 +206,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
@@ -195,6 +215,8 @@
         <equipment slot="Body" id="Item.eastern_stitched_leather_coat" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.steppe_bow" />
         <equipment slot="Item1" id="Item.range_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_3_t3" />
@@ -216,6 +238,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_sword_2_t3" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -224,6 +248,8 @@
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_sword_3_t3" />
         <equipment slot="Item1" id="Item.steppe_bow" />
         <equipment slot="Item2" id="Item.range_arrows" />
@@ -245,6 +271,8 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
         <equipment slot="Item1" id="Item.decorated_steppe_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_2_t3" />
@@ -253,6 +281,8 @@
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.khuzait_curved_boots" />
+        <equipment slot="Gloves" id="Item.studded_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_lance_2_t4" />
         <equipment slot="Item1" id="Item.decorated_steppe_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_3_t3" />
@@ -280,7 +310,7 @@
         <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
         <equipment slot="Item3" id="Item.eastern_throwing_spear_1_t3" />
         <equipment slot="Head" id="Item.eastern_vendel_helmet" />
-        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
         <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Leg" id="Item.khuzait_curved_boots" />
       </EquipmentRoster>
@@ -290,7 +320,7 @@
         <equipment slot="Item2" id="Item.eastern_javelin_3_t4" />
         <equipment slot="Item3" id="Item.eastern_throwing_spear_1_t3" />
         <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
-        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
         <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Leg" id="Item.khuzait_curved_boots" />
       </EquipmentRoster>
@@ -308,19 +338,21 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.eastern_leather_boots" />
         <equipment slot="Item0" id="Item.steppe_heavy_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
         <equipment slot="Head" id="Item.eastern_vendel_helmet" />
-        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
         <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.eastern_leather_boots" />
         <equipment slot="Item0" id="Item.composite_steppe_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.khuzait_mace_2_t4" />
         <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
-        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
         <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
       </EquipmentRoster>
     </Equipments>
@@ -338,19 +370,23 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.eastern_leather_boots" />
+        <equipment slot="Gloves" id="Item.studded_leather_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_sword_4_t4" />
         <equipment slot="Item1" id="Item.composite_steppe_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
         <equipment slot="Head" id="Item.eastern_vendel_helmet" />
-        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.eastern_leather_boots" />
+        <equipment slot="Gloves" id="Item.studded_leather_vambraces" />
         <equipment slot="Item0" id="Item.khuzait_mace_2_t4" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
         <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
-        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
     </Equipments>
@@ -367,20 +403,22 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.eastern_leather_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.noyans_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_4_t4" />
         <equipment slot="Head" id="Item.eastern_vendel_helmet" />
-        <equipment slot="Body" id="Item.khuzait_sturdy_armor" />
+        <equipment slot="Body" id="Item.leather_lamellar_armor" />
         <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.eastern_leather_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.noyans_shield" />
         <equipment slot="Item2" id="Item.khuzait_mace_2_t4" />
         <equipment slot="Head" id="Item.khuzait_noble_helmet_with_feathers" />
-        <equipment slot="Body" id="Item.khuzait_lamellar_strapped" />
+        <equipment slot="Body" id="Item.eastern_plated_leather_vest" />
         <equipment slot="Gloves" id="Item.eastern_wrapped_armguards" />
         <equipment slot="Horse" id="Item.t2_khuzait_horse" />
       </EquipmentRoster>
@@ -431,6 +469,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.steppe_war_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
@@ -439,6 +478,7 @@
         <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.steppe_heavy_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.khuzait_mace_3_t4" />
@@ -461,6 +501,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.khuzait_sword_5_t4" />
         <equipment slot="Item1" id="Item.steppe_war_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -471,6 +512,7 @@
         <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.khuzait_mace_3_t4" />
         <equipment slot="Item1" id="Item.steppe_heavy_bow" />
         <equipment slot="Item2" id="Item.piercing_arrows" />
@@ -494,6 +536,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.steppe_guardian_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
@@ -504,6 +547,7 @@
         <equipment slot="HorseHarness" id="Item.steppe_half_barding" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.steppe_guardian_shield" />
         <equipment slot="Item2" id="Item.khuzait_mace_3_t4" />
@@ -560,6 +604,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.steppe_war_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.khuzait_mace_4_t5" />
@@ -568,6 +613,7 @@
         <equipment slot="Gloves" id="Item.steppe_leather_vambraces" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.steppe_heavy_bow" />
         <equipment slot="Item1" id="Item.piercing_arrows" />
         <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
@@ -592,6 +638,7 @@
     </skills>
     <Equipments>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.steppe_guardian_shield" />
         <equipment slot="Item2" id="Item.khuzait_mace_4_t5" />
@@ -603,6 +650,7 @@
         <equipment slot="HorseHarness" id="Item.studded_steppe_barding" />
       </EquipmentRoster>
       <EquipmentRoster>
+        <equipment slot="Leg" id="Item.reinforced_suede_boots" />
         <equipment slot="Item0" id="Item.khuzait_lance_3_t5" />
         <equipment slot="Item1" id="Item.noyans_shield" />
         <equipment slot="Item2" id="Item.khuzait_sword_5_t4" />
