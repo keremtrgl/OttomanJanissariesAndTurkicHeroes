@@ -199,4 +199,161 @@
     </stacks>
   </MBPartyTemplate>
 
+  <!-- ================================================================= -->
+  <!-- SELJUK CULTURE-DEFAULT LORD PARTY TEMPLATE                        -->
+  <!-- ================================================================= -->
+  <!-- Every other template in this file (seljuk_royal_template etc.) uses
+       Native-warband-scale stacks (12-34 per stack, 80-150+ troops total) -
+       fine for a specific large named-clan reserve, but seljuk_culture.xml's
+       Culture.seljuk default_party_template was pointing at Native's own
+       kingdom_hero_party_khuzait_template (a leftover placeholder from
+       before this mod had its own troops - see party_templates.xml's other
+       entries never being referenced anywhere). A brand new Seljuk lord's
+       personal starting retinue needs Native-lord-scale stacks (0-8 per
+       stack, ~15-25 troops total, matching kingdom_hero_party_khuzait_template
+       itself) or every single Seljuk lord spawns with an unbalanced 100+
+       troop army from turn one. Built from Seljuk's own basic troop line
+       (troops.xml), same recruit-heavy/rare-elite proportions as the 7 new
+       rival templates below. -->
+  <MBPartyTemplate id="seljuk_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.seljuk_peasant" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.seljuk_footman" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.seljuk_hunter" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.seljuk_horseman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.seljuk_ghulam_recruit" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.seljuk_armored_infantry" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.seljuk_composite_archer" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.seljuk_clan_scout" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.seljuk_armored_ghulam" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.seljuk_hassa_cavalry" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <!-- ================================================================= -->
+  <!-- RIVAL KINGDOM CULTURE-DEFAULT LORD PARTY TEMPLATES                -->
+  <!-- ================================================================= -->
+  <!-- CultureObject.DefaultPartyTemplate (XML attribute default_party_template
+       on <Culture>) is what TaleWorlds.CampaignSystem.Party.PartyComponents.
+       LordPartyComponent actually uses to populate a NEW lord's starting troop
+       roster whenever that lord's own Clan has no default_party_template of its
+       own set (Clan.DefaultPartyTemplate falls back to Culture.DefaultPartyTemplate -
+       decompiled and confirmed; every clan in this mod's own faction files has
+       zero such override, so the culture-level default governs every single lord).
+       rival_culture_names.xml never touched this attribute for any of the 7
+       rival cultures, so every rival lord's starting army was Native's own
+       kingdom_hero_party_<culture>_template - literal Native troops (Khuzait
+       Archer, Khuzait Nomad, etc.), never this mod's own byz2_/abb2_/geo2_/
+       crus2_/arm2_/kk2_/lat2_ trees. Same root cause explains rival-culture
+       tournament rosters and freed-prisoner recruits, both of which resolve
+       "a troop of this culture" through the same Native default rather than
+       this mod's own trees. Composition mirrors Native's own
+       kingdom_hero_party_khuzait_template: recruit-heavy, a handful of T2-T4
+       branches, and 0-1 of that culture's own signature T5/T6 elite. -->
+
+  <MBPartyTemplate id="byz2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.byz2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.byz2_skutatos" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.byz2_toxotes" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.byz2_trapezites" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.byz2_klibanophoros" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.byz2_thematic_skutatos" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.byz2_thematic_toxotes" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.byz2_kataphraktos" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.byz2_tagmatic_skutatos" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.byz2_varangian_guardsman" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="abb2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.abb2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.abb2_ayyar" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.abb2_qawwas" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.abb2_bedouin_horseman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.abb2_ghulam" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.abb2_hashimiyya" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.abb2_master_qawwas" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.abb2_ghulam_regular" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.abb2_veteran_faris" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.abb2_dar_alkhilafa_guard" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="geo2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.geo2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.geo2_msakhuri" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.geo2_mtiuli_hunter" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.geo2_aznauri_squire" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.geo2_didebuli_squire" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.geo2_kartli_msakhuri" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.geo2_mtiuli_archer" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.geo2_aznauri_horseman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.geo2_eristavi_lancer" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.geo2_monaspa_guardsman" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="crus2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.crus2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.crus2_sergeant" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.crus2_crossbowman" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.crus2_turcopole_recruit" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.crus2_squire" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.crus2_pikeman" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.crus2_veteran_crossbowman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.crus2_mounted_serjeant" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.crus2_knight" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.crus2_templar_knight" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="arm2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.arm2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.arm2_azat" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.arm2_archer" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.arm2_azat_horseman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.arm2_azat_lancer" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.arm2_pikeman" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.arm2_taurus_bowman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.arm2_ayrudzi_rider" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.arm2_ayrudzi_veteran" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.arm2_sparapet_guard" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="kk2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.kk2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.kk2_yigit" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.kk2_okcu" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.kk2_alp_atli" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.kk2_tegin_squire" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.kk2_alp_eri" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.kk2_mergen" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.kk2_tarkhan_silahtari" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.kk2_kulug_alp" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.kk2_bori_tarkhan" />
+    </stacks>
+  </MBPartyTemplate>
+
+  <MBPartyTemplate id="lat2_default_party_template">
+    <stacks>
+      <PartyTemplateStack min_value="4" max_value="8" troop="NPCCharacter.lat2_recruit" />
+      <PartyTemplateStack min_value="2" max_value="4" troop="NPCCharacter.lat2_footman" />
+      <PartyTemplateStack min_value="2" max_value="3" troop="NPCCharacter.lat2_crossbowman" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.lat2_vlach_horseman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.lat2_squire" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.lat2_spearman" />
+      <PartyTemplateStack min_value="1" max_value="2" troop="NPCCharacter.lat2_veteran_crossbowman" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.lat2_mounted_sergeant" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.lat2_knight" />
+      <PartyTemplateStack min_value="0" max_value="1" troop="NPCCharacter.lat2_baron_romania" />
+    </stacks>
+  </MBPartyTemplate>
+
 </partyTemplates>
