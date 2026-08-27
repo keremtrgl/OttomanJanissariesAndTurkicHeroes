@@ -53,6 +53,27 @@ Checks performed:
                             block a commit - but the gap is now visible on every single run instead of
                             silently accumulating for months (this is exactly how the mod once shipped
                             with 6 languages frozen at 228/892 keys while EN/TR kept growing).
+ 10. troop-armor-slots      [needs game install] Every equipment roster of a Soldier troop fills the
+                            same armor slots (Head/Body/Leg/Gloves) its own tier already establishes
+                            as normal across the mod's 8 troop trees. Bannerlord prices a troop purely
+                            off Tier/Level (DefaultPartyWageModel.GetCharacterWage /
+                            GetTroopRecruitmentCost, both decompiled), so an unfilled slot is not a
+                            cheaper troop - it is the same price for strictly less armor. This caught
+                            a real, shipped gap where the 7 rival trees were built from a Head+Body
+                            template and sat at 25-50% Leg / 45-55% Gloves coverage while Seljuk's
+                            tree was at 100%/100%, making an identically-priced rival tier-3
+                            cavalryman wear less than half a Seljuk one's armor.
+ 11. troop-progression      [needs game install] Within a single troop tree, average body-armor value
+                            must not go DOWN as tier goes up. Caught a real bug where Kara-Khanid
+                            tier-4 troops wore khuzait_sturdy_armor (24 armor) - less than both their
+                            own tier-1 recruits' gambeson (36) and their tier-3 coat (36).
+ 12. troop-tier-parity      Total skill points per troop, compared against the median for that same
+                            tier across all 8 trees. The trees are deliberately built to one shared
+                            per-tier curve (90/195/360/508/676/835), so a large deviation is normally
+                            a typo'd skill value rather than an intentional design choice.
+
+Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
+checks 1-8 they describe "this looks unintended", not "this is broken".
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -634,6 +655,197 @@ def update_id_order_baseline():
           f"{total_ids} id(s) tracked across {len(snapshot['files'])} file(s).")
 
 
+# ------------------------------------------------------- checks 10-12 setup --
+
+# Bannerlord's own Level -> Tier formula, from decompiling
+# DefaultCharacterStatsModel.GetTier: clamp(ceil((Level - 5) / 5), 0, MaxCharacterTier=6).
+# Wage (GetCharacterWage) and recruitment cost (GetTroopRecruitmentCost) both key off
+# Tier/Level alone, which is what makes an under-equipped troop a real balance bug
+# rather than a cheaper option: it costs the player exactly the same either way.
+def troop_tier(level):
+    import math
+    return max(0, min(6, math.ceil((level - 5) / 5)))
+
+
+ARMOR_SLOTS = ("Head", "Body", "Leg", "Gloves")
+
+
+def load_armor_values(game_path):
+    """item id -> summed armor points, over Native's catalog plus the mod's own items."""
+    values = {}
+    sources = [game_path / "Modules" / m / "ModuleData" for m in NATIVE_MODULES_FOR_ITEMS]
+    sources.append(MODULE_DATA)
+    for d in sources:
+        if not d.exists():
+            continue
+        for f in d.rglob("*.xml"):
+            if "Languages" in f.parts:
+                continue
+            root = safe_parse(f)
+            if root is None:
+                continue
+            for item in root.iter("Item"):
+                iid = item.get("id")
+                if not iid:
+                    continue
+                total = 0
+                for armor in item.iter("Armor"):
+                    for key in ("head_armor", "body_armor", "leg_armor", "arm_armor"):
+                        try:
+                            total += int(armor.get(key) or 0)
+                        except (TypeError, ValueError):
+                            pass
+                if total:
+                    values[iid] = total
+    return values
+
+
+def collect_soldier_troops():
+    """Every Soldier-occupation, non-hero troop the mod defines, grouped by source file.
+    Returns {file_rel: [ {id, tier, rosters:[{slot: item_id}]} ]}."""
+    trees = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "NPCCharacters":
+            continue
+        troops = []
+        for npc in root.iter("NPCCharacter"):
+            if (npc.get("is_hero") or "").lower() == "true":
+                continue
+            occupation = npc.get("occupation") or ""
+            if occupation != "Soldier":
+                continue
+            try:
+                level = int(npc.get("level") or 0)
+            except ValueError:
+                continue
+            rosters = []
+            for roster in npc.iter("EquipmentRoster"):
+                slots = {}
+                for eq in roster.iter("equipment"):
+                    ref = eq.get("id") or ""
+                    if ref.startswith("Item."):
+                        slots[eq.get("slot")] = ref[len("Item."):]
+                rosters.append(slots)
+            skills = {}
+            for s in npc.iter("skill"):
+                try:
+                    skills[s.get("id")] = int(s.get("value") or 0)
+                except (TypeError, ValueError):
+                    pass
+            if rosters or skills:
+                troops.append({"id": npc.get("id"), "tier": troop_tier(level),
+                                "level": level, "rosters": rosters, "skills": skills})
+        if troops:
+            trees[rel(f)] = troops
+    return trees
+
+
+# --------------------------------------------------------------- check 10 --
+
+def check_troop_armor_slots(issues, game_path):
+    trees = collect_soldier_troops()
+    if not trees:
+        return
+
+    # What counts as "normal" for a tier is decided by the mod's own content, not a
+    # hardcoded table: a slot is expected at tier N only once most rosters at that
+    # tier already fill it. That way a deliberately bare tier-1 recruit line stays
+    # quiet, while one tree lagging behind the rest is what actually gets flagged.
+    filled = {slot: {} for slot in ARMOR_SLOTS}
+    totals = {}
+    for troops in trees.values():
+        for t in troops:
+            for roster in t["rosters"]:
+                totals[t["tier"]] = totals.get(t["tier"], 0) + 1
+                for slot in ARMOR_SLOTS:
+                    if slot in roster:
+                        filled[slot][t["tier"]] = filled[slot].get(t["tier"], 0) + 1
+
+    expected = {
+        slot: {tier for tier, n in totals.items() if filled[slot].get(tier, 0) >= 0.75 * n}
+        for slot in ARMOR_SLOTS
+    }
+
+    for path, troops in sorted(trees.items()):
+        gaps = []
+        for t in troops:
+            for idx, roster in enumerate(t["rosters"]):
+                missing = [s for s in ARMOR_SLOTS if t["tier"] in expected[s] and s not in roster]
+                if missing:
+                    gaps.append((t["id"], idx, t["tier"], missing))
+        if gaps:
+            shown = "; ".join(f'{tid} roster{i} (T{tier}: {"+".join(m)})' for tid, i, tier, m in gaps[:4])
+            more = f" and {len(gaps) - 4} more" if len(gaps) > 4 else ""
+            issues.append(Issue("WARN", "troop-armor-slots", path,
+                                 f"{len(gaps)} equipment roster(s) leave an armor slot empty that "
+                                 f"most troops of the same tier already fill: {shown}{more}. Recruit "
+                                 f"cost and wage key off Tier/Level only, so these troops cost the "
+                                 f"same as a fully-equipped peer while wearing strictly less armor."))
+
+
+# --------------------------------------------------------------- check 11 --
+
+def check_troop_progression(issues, game_path):
+    armor_values = load_armor_values(game_path)
+    if not armor_values:
+        return
+    trees = collect_soldier_troops()
+
+    for path, troops in sorted(trees.items()):
+        by_tier = {}
+        for t in troops:
+            for roster in t["rosters"]:
+                body = roster.get("Body")
+                if body:
+                    by_tier.setdefault(t["tier"], []).append(armor_values.get(body, 0))
+        tiers = sorted(by_tier)
+        for prev, cur in zip(tiers, tiers[1:]):
+            prev_avg = sum(by_tier[prev]) / len(by_tier[prev])
+            cur_avg = sum(by_tier[cur]) / len(by_tier[cur])
+            # 2 points of slack: swapping between two same-grade armours of slightly
+            # different value is normal authoring noise, a real regression is far larger.
+            if cur_avg < prev_avg - 2:
+                issues.append(Issue("WARN", "troop-progression", path,
+                                     f"average body armor DROPS from tier {prev} ({prev_avg:.0f}) to "
+                                     f"tier {cur} ({cur_avg:.0f}) - the higher tier costs more to "
+                                     f"recruit and pays a higher wage while being less protected."))
+
+
+# --------------------------------------------------------------- check 12 --
+
+def check_troop_tier_parity(issues, game_path):
+    trees = collect_soldier_troops()
+    if not trees:
+        return
+
+    per_tier = {}
+    for troops in trees.values():
+        for t in troops:
+            if t["skills"]:
+                per_tier.setdefault(t["tier"], []).append(sum(t["skills"].values()))
+
+    medians = {}
+    for tier, totals in per_tier.items():
+        ordered = sorted(totals)
+        medians[tier] = ordered[len(ordered) // 2]
+
+    for path, troops in sorted(trees.items()):
+        for t in troops:
+            if not t["skills"]:
+                continue
+            median = medians.get(t["tier"])
+            if not median:
+                continue
+            total = sum(t["skills"].values())
+            deviation = (total - median) / median
+            if abs(deviation) > 0.20:
+                issues.append(Issue("WARN", "troop-tier-parity", path,
+                                     f'"{t["id"]}" (tier {t["tier"]}, level {t["level"]}) has '
+                                     f'{total} total skill points vs the tier median of {median} '
+                                     f"({deviation:+.0%}) - check for a typo'd skill value."))
+
+
 # --------------------------------------------------------------------- run --
 
 def run(args):
@@ -656,10 +868,14 @@ def run(args):
     check_localization_coverage(issues, game_path)
     check_language_sync(issues, game_path)
 
+    check_troop_tier_parity(issues, game_path)
+
     if game_path is not None:
         check_upgrade_targets(issues, game_path)
         check_item_ids(issues, game_path)
         check_gender_consistency(issues, game_path)
+        check_troop_armor_slots(issues, game_path)
+        check_troop_progression(issues, game_path)
 
     errors = [i for i in issues if i.level == "ERROR"]
     warnings = [i for i in issues if i.level == "WARN"]
