@@ -94,7 +94,9 @@ namespace SeljukEmpire.Economy
                     _lastInsuranceClaimTime = CampaignTime.Now;
 
                     InformationManager.DisplayMessage(new InformationMessage(
-                        $"🛡️ [Selçuklu Kervan Sigortası] Kervanınız vuruldu! Selçuklu Hazine-i Âmire'si zararınızı karşıladı (+{compensation:N0} Dinar ödendi)!",
+                        new TextObject("{=seljuk_ins_claim_paid}🛡️ [Seljuk Caravan Insurance] Your caravan was struck! The Seljuk Imperial Treasury has covered your losses (+{AMOUNT} Dinars paid)!")
+                            .SetTextVariable("AMOUNT", compensation.ToString("N0"))
+                            .ToString(),
                         Colors.Yellow));
                 }
             }
@@ -132,7 +134,9 @@ namespace SeljukEmpire.Economy
                 {
                     GiveGoldToPlayer(totalDividend);
                     InformationManager.DisplayMessage(new InformationMessage(
-                        $"🪙 [İpek Yolu Kâr Payı] Kervansaray ve Liman yatırımlarınızdan haftalık kâr payı tahsil edildi (+{totalDividend:N0} Dinar)!",
+                        new TextObject("{=seljuk_ins_weekly_dividend}🪙 [Silk Road Dividend] Your weekly profit share from caravanserai and harbor investments has been collected (+{AMOUNT} Dinars)!")
+                            .SetTextVariable("AMOUNT", totalDividend.ToString("N0"))
+                            .ToString(),
                         Colors.Green));
                 }
             }
@@ -198,7 +202,9 @@ namespace SeljukEmpire.Economy
                 {
                     GiveGoldAction.ApplyBetweenCharacters(Hero.MainHero, null, INSURANCE_POLICY_COST, true);
                     _isPlayerCaravanInsuranceActive = true;
-                    InformationManager.DisplayMessage(new InformationMessage("📜 [Selçuklu Kervan Sigortası] Kervanlarınız Devlet Hazinesi teminatı altına alındı!", Colors.Yellow));
+                    InformationManager.DisplayMessage(new InformationMessage(
+                        new TextObject("{=seljuk_ins_purchased}📜 [Seljuk Caravan Insurance] Your caravans are now under State Treasury guarantee!").ToString(),
+                        Colors.Yellow));
                     GameMenu.SwitchToMenu("seljuk_caravan_insurance_menu");
                 });
 
@@ -227,7 +233,11 @@ namespace SeljukEmpire.Economy
                             _settlementInvestments[s.StringId] = 0;
                         _settlementInvestments[s.StringId] += INVESTMENT_TIER_1;
 
-                        InformationManager.DisplayMessage(new InformationMessage($"🪙 [Kâr Ortaklığı] {s.Name} kervansaray fonuna 10,000 Dinar yatırıldı! Her hafta düzenli kâr payı alacaksınız.", Colors.Green));
+                        InformationManager.DisplayMessage(new InformationMessage(
+                            new TextObject("{=seljuk_ins_invested}🪙 [Profit Partnership] 10,000 Dinars invested into {SETTLEMENT}'s caravanserai fund! You will receive regular weekly dividends.")
+                                .SetTextVariable("SETTLEMENT", s.Name)
+                                .ToString(),
+                            Colors.Green));
                     }
                     GameMenu.SwitchToMenu("seljuk_caravan_insurance_menu");
                 });

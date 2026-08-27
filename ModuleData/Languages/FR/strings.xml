@@ -1685,5 +1685,16 @@
     <string id="spc_wc_yasawi_response_2" text="Des vers simples pour des gens simples. Je préfère, quant à moi, des hommes capables de débattre des points fins." />
     <string id="spc_wc_yasawi_backstory_d" text="Je puis parler à tout simple soldat de votre camp en des mots qui l'atteignent vraiment, et j'ai plus de patience envers les effrayés et les endeuillés que la plupart des hommes ne se donnent jamais la peine d'avoir." />
     <string id="spc_wc_yasawi_generic_backstory" text="J'ai été élevé par un maître soufi après avoir perdu mon propre père jeune, et j'ai consacré ma vie à apporter la foi aux gens du commun en vers simples plutôt qu'en argumentation savante. Je sais comment parler aux soldats comme aux villageois, en des mots qui les atteignent vraiment." />
+    <string id="seljuk_tactic_high_ground" text="[Commandement tactique seldjoukide] Défense des hauteurs engagée contre un ennemi numériquement supérieur !" />
+    <string id="seljuk_tactic_wolf_trap" text="[Commandement tactique seldjoukide] Tactique du Piège du Loup et du Croissant Touranien en cours !" />
+    <string id="seljuk_tactic_shield_wall" text="[Commandement tactique seldjoukide] Mur de boucliers Nizamiye et défense du goulet mis en place !" />
+    <string id="seljuk_tactic_crossfire" text="[Commandement tactique seldjoukide] Formation de tir croisé du Croissant des steppes engagée !" />
+    <string id="seljuk_tactic_lines_broken" text="[Piège du Loup] La ligne ennemie s'est brisée ! L'encerclement en croissant à double flanc commence !" />
+    <string id="seljuk_tactic_full_assault" text="[Avancée Nizamiye] Assaut du Marteau et de l'Enclume ! Toutes les lignes avancent !" />
+    <string id="seljuk_ins_claim_paid" text="🛡️ [Assurance des caravanes seldjoukides] Votre caravane a été attaquée ! Le Trésor impérial seldjoukide a couvert vos pertes (+{AMOUNT} dinars versés) !" />
+    <string id="seljuk_ins_weekly_dividend" text="🪙 [Dividende de la Route de la Soie] Votre part de bénéfice hebdomadaire des investissements dans les caravansérails et les ports a été perçue (+{AMOUNT} dinars) !" />
+    <string id="seljuk_ins_purchased" text="📜 [Assurance des caravanes seldjoukides] Vos caravanes sont désormais garanties par le Trésor d'État !" />
+    <string id="seljuk_ins_invested" text="🪙 [Partenariat de profit] 10 000 dinars investis dans le fonds du caravansérail de {SETTLEMENT} ! Vous recevrez des dividendes hebdomadaires réguliers." />
+    <string id="seljuk_tourney_victory" text="🏆 [Triomphe de la fête seldjoukide] Vous êtes devenu le champion du tournoi de {TOWN} ! Prix du sultanat : {PRIZE} (+25 renommée gagnée) !" />
 </strings>
 </base>

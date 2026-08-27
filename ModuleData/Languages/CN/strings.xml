@@ -1685,5 +1685,16 @@
     <string id="spc_wc_yasawi_response_2" text="简单诗句给简单人听。我自己更喜欢能辩论精微之处的人。" />
     <string id="spc_wc_yasawi_backstory_d" text="我能用真正打动人心的话语与你营中任何一名普通士兵交谈,对惊惧和悲伤之人,我也比大多数人更有耐心。" />
     <string id="spc_wc_yasawi_generic_backstory" text="我年幼丧父后由一位苏菲派导师抚养长大,并将一生奉献于用朴实的诗句而非学术辩论,把信仰带给平民百姓。我懂得如何用真正打动人心的话语,与士兵和村民交谈。" />
+    <string id="seljuk_tactic_high_ground" text="[塞尔柱战术指挥部]针对数量占优的敌军展开高地防御!" />
+    <string id="seljuk_tactic_wolf_trap" text="[塞尔柱战术指挥部]正在执行狼阱与突厥新月战术!" />
+    <string id="seljuk_tactic_shield_wall" text="[塞尔柱战术指挥部]尼扎米耶盾墙与隘口防御已列阵!" />
+    <string id="seljuk_tactic_crossfire" text="[塞尔柱战术指挥部]草原新月交叉火力阵型已就位!" />
+    <string id="seljuk_tactic_lines_broken" text="[狼阱]敌军阵线已被击溃!双翼新月包抄开始!" />
+    <string id="seljuk_tactic_full_assault" text="[尼扎米耶推进]铁砧与铁锤突击!全线前进!" />
+    <string id="seljuk_ins_claim_paid" text="🛡️ [塞尔柱商队保险]你的商队遭到袭击!塞尔柱帝国国库已赔偿你的损失(已支付+{AMOUNT}第纳尔)!" />
+    <string id="seljuk_ins_weekly_dividend" text="🪙 [丝绸之路分红]你在商队驿站与港口投资中的每周利润分成已入账(+{AMOUNT}第纳尔)!" />
+    <string id="seljuk_ins_purchased" text="📜 [塞尔柱商队保险]你的商队现已受国库担保保护!" />
+    <string id="seljuk_ins_invested" text="🪙 [利润合伙]已向{SETTLEMENT}的商队驿站基金投资10,000第纳尔!你将获得定期每周分红。" />
+    <string id="seljuk_tourney_victory" text="🏆 [塞尔柱庆典凯旋]你已成为{TOWN}比武大会的冠军!苏丹国奖赏:{PRIZE}(+25声望)!" />
 </strings>
 </base>
