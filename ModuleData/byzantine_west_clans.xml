@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Factions>
   <Faction id="clan_empire_west_1" name="{=byz_w_house_laskaris}House Laskaris" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_west_2" name="{=lat_house_flanders}House of Flanders" super_faction="Kingdom.empire_w" />
+  <!-- Culture.empire's default_party_template (rival_culture_names.xml) points at Byzantium's
+       byz2_ troops, correct for every clan_empire_west_* clan except these two - the only clans
+       in this mod whose kingdom (Kingdom.empire_w, Latin Empire) actually differs from what their
+       shared culture's default troops assume. Same shared-Culture.empire problem
+       LatinEmpireRecruitmentBehavior already solves for settlement recruitment; this is the
+       equivalent per-clan fix for their lords' own starting armies (Clan.DefaultPartyTemplate
+       overrides Culture.DefaultPartyTemplate when set, decompiled and confirmed). -->
+  <Faction id="clan_empire_west_2" name="{=lat_house_flanders}House of Flanders" super_faction="Kingdom.empire_w" default_party_template="PartyTemplate.lat2_default_party_template" />
   <Faction id="clan_empire_west_3" name="{=byz_w_house_kontostephanos}House Kontostephanos" super_faction="Kingdom.empire_s" />
   <Faction id="clan_empire_west_4" name="{=byz_w_house_raoul}House Raoul" super_faction="Kingdom.empire_s" />
   <Faction id="clan_empire_west_5" name="{=byz_w_house_synadenos}House Synadenos" super_faction="Kingdom.empire_s" />
   <Faction id="clan_empire_west_6" name="{=byz_w_house_kamateros}House Kamateros" super_faction="Kingdom.empire_s" />
-  <Faction id="clan_empire_west_7" name="{=lat_house_sanudo}House Sanudo" super_faction="Kingdom.empire_w" />
+  <Faction id="clan_empire_west_7" name="{=lat_house_sanudo}House Sanudo" super_faction="Kingdom.empire_w" default_party_template="PartyTemplate.lat2_default_party_template" />
   <Faction id="clan_empire_west_8" name="{=byz_w_house_kourtikios}House Kourtikios" super_faction="Kingdom.empire_s" />
   <Faction id="clan_empire_west_9" name="{=byz_w_house_melias}House Melias" super_faction="Kingdom.empire_s" />
 </Factions>
