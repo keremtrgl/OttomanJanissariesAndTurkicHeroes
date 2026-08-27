@@ -1,27 +1,82 @@
 <SpriteData>
-	<SpriteCategories>
-		<SpriteCategory>
-			<Name>seljuk_ui</Name>
-			<SpriteSheetCount>1</SpriteSheetCount>
-			<SpriteSheetSize ID="1" Width="1024" Height="128" />
-			<AlwaysLoad />
-		</SpriteCategory>
-	</SpriteCategories>
+	<!-- A loose custom texture under GUI\SpriteSheets\ is never found by the engine's
+	     native resource depot at runtime (Texture.GetFromResource) - confirmed via
+	     rgl_log's "Cannot find texture: seljuk_ui_1", logged during the native asset
+	     preload pass, before any managed SubModule code even runs. No vanilla
+	     AlwaysLoad sprite category ever hits that failure, since their pixels are
+	     baked into Native's own compiled ui_charactercreation sheet - loose per-module
+	     files aren't a supported input to that pipeline (that requires the official
+	     Modding Kit's resource compiler). Instead of a new texture, alias
+	     CharacterCreation\Culture\seljuk onto Kara-Khanid (Culture.khuzait)'s existing,
+	     already-loaded artwork - Seljuks and Kara-Khanids were both real Turkic
+	     steppe dynasties, so the reuse is historically coherent, not just a fallback. -->
 	<SpriteParts>
 		<SpritePart>
+			<SheetID>1</SheetID>
 			<Name>CharacterCreation\Culture\seljuk</Name>
 			<Width>541</Width>
 			<Height>94</Height>
-			<CategoryName>seljuk_ui</CategoryName>
+			<SheetX>3298</SheetX>
+			<SheetY>3540</SheetY>
+			<CategoryName>ui_charactercreation</CategoryName>
+		</SpritePart>
+		<SpritePart>
 			<SheetID>1</SheetID>
-			<SheetX>0</SheetX>
-			<SheetY>0</SheetY>
+			<Name>CharacterCreation\Culture\seljuk_1</Name>
+			<Width>952</Width>
+			<Height>876</Height>
+			<SheetX>1924</SheetX>
+			<SheetY>4</SheetY>
+			<CategoryName>ui_charactercreation</CategoryName>
+		</SpritePart>
+		<SpritePart>
+			<SheetID>1</SheetID>
+			<Name>CharacterCreation\Culture\seljuk_2</Name>
+			<Width>952</Width>
+			<Height>876</Height>
+			<SheetX>2884</SheetX>
+			<SheetY>4</SheetY>
+			<CategoryName>ui_charactercreation</CategoryName>
+		</SpritePart>
+		<SpritePart>
+			<SheetID>1</SheetID>
+			<Name>CharacterCreation\Culture\seljuk_3</Name>
+			<Width>952</Width>
+			<Height>876</Height>
+			<SheetX>4</SheetX>
+			<SheetY>888</SheetY>
+			<CategoryName>ui_charactercreation</CategoryName>
+		</SpritePart>
+		<SpritePart>
+			<SheetID>1</SheetID>
+			<Name>CharacterCreation\Culture\seljuk_4</Name>
+			<Width>952</Width>
+			<Height>876</Height>
+			<SheetX>964</SheetX>
+			<SheetY>888</SheetY>
+			<CategoryName>ui_charactercreation</CategoryName>
 		</SpritePart>
 	</SpriteParts>
 	<Sprites>
 		<GenericSprite>
 			<Name>CharacterCreation\Culture\seljuk</Name>
 			<SpritePartName>CharacterCreation\Culture\seljuk</SpritePartName>
+		</GenericSprite>
+		<GenericSprite>
+			<Name>CharacterCreation\Culture\seljuk_1</Name>
+			<SpritePartName>CharacterCreation\Culture\seljuk_1</SpritePartName>
+		</GenericSprite>
+		<GenericSprite>
+			<Name>CharacterCreation\Culture\seljuk_2</Name>
+			<SpritePartName>CharacterCreation\Culture\seljuk_2</SpritePartName>
+		</GenericSprite>
+		<GenericSprite>
+			<Name>CharacterCreation\Culture\seljuk_3</Name>
+			<SpritePartName>CharacterCreation\Culture\seljuk_3</SpritePartName>
+		</GenericSprite>
+		<GenericSprite>
+			<Name>CharacterCreation\Culture\seljuk_4</Name>
+			<SpritePartName>CharacterCreation\Culture\seljuk_4</SpritePartName>
 		</GenericSprite>
 	</Sprites>
 </SpriteData>
