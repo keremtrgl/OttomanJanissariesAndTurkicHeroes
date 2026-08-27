@@ -1,0 +1,27 @@
+<SpriteData>
+	<SpriteCategories>
+		<SpriteCategory>
+			<Name>seljuk_ui</Name>
+			<SpriteSheetCount>1</SpriteSheetCount>
+			<SpriteSheetSize ID="1" Width="541" Height="94" />
+			<AlwaysLoad />
+		</SpriteCategory>
+	</SpriteCategories>
+	<SpriteParts>
+		<SpritePart>
+			<Name>CharacterCreation\Culture\seljuk</Name>
+			<Width>541</Width>
+			<Height>94</Height>
+			<CategoryName>seljuk_ui</CategoryName>
+			<SheetID>1</SheetID>
+			<SheetX>0</SheetX>
+			<SheetY>0</SheetY>
+		</SpritePart>
+	</SpriteParts>
+	<Sprites>
+		<GenericSprite>
+			<Name>CharacterCreation\Culture\seljuk</Name>
+			<SpritePartName>CharacterCreation\Culture\seljuk</SpritePartName>
+		</GenericSprite>
+	</Sprites>
+</SpriteData>
