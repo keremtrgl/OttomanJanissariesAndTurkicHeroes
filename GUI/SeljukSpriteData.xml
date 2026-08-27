@@ -3,7 +3,7 @@
 		<SpriteCategory>
 			<Name>seljuk_ui</Name>
 			<SpriteSheetCount>1</SpriteSheetCount>
-			<SpriteSheetSize ID="1" Width="541" Height="94" />
+			<SpriteSheetSize ID="1" Width="1024" Height="128" />
 			<AlwaysLoad />
 		</SpriteCategory>
 	</SpriteCategories>
