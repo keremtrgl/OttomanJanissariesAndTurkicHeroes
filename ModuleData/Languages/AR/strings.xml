@@ -173,6 +173,21 @@
     <string id="seljuk_gt_faction_ruler_f" text="سلطانة" />
     <string id="seljuk_gt_ruler_term_in_speech" text="{?RULER.GENDER}سلطانة{?}سلطان{\?} {RULER.NAME}" />
     <string id="seljuk_gt_noble_name_with_title" text="{?RULER.GENDER}أميرة{?}أمير{\?} {RULER.NAME}" />
+    <string id="seljuk_gt_player_brother_name" text="نظام" />
+    <string id="seljuk_gt_player_little_brother_name" text="طرقان" />
+    <string id="seljuk_gt_player_little_sister_name" text="ألاف" />
+    <string id="seljuk_gt_adjective_for_culture" text="سلجوقي" />
+    <string id="seljuk_gt_adjective_for_faction" text="سلجوقي" />
+    <string id="seljuk_gt_formal_name" text="الدولة السلجوقية الكبرى" />
+    <string id="seljuk_gt_informal_name" text="السلاجقة" />
+    <string id="seljuk_gt_neutral_term" text="السلاجقة" />
+    <string id="seljuk_gt_short_term" text="السلاجقة" />
+    <string id="seljuk_gt_player_father_name" text="بيرام" />
+    <string id="seljuk_gt_player_mother_name" text="طرنا" />
+    <string id="seljuk_gt_comment_introduces_self" text="أنا {CONVERSATION_CHARACTER.LINK} من عشيرة {CLAN_NAME}." />
+    <string id="seljuk_gt_comment_introduces_self_and_clan" text="أنا {CONVERSATION_CHARACTER.LINK}، من عشيرة {CLAN_NAME}، إحدى عشائر السلاجقة." />
+    <string id="seljuk_gt_liege_title" text="سلطان السلاجقة" />
+    <string id="seljuk_gt_liege_title_female" text="سلطانة السلاجقة" />
     <string id="seljuk_menu_insurance_text" text="Welcome to the Seljuk Caravanserai Administration and Silk Road Insurance Divan. Here, you can place your trade caravans under Imperial Treasury guarantee and invest capital into caravanserais to receive regular weekly dividends." />
     <string id="seljuk_menu_trade_divan" text="Visit the Seljuk Silk Road &amp; Caravan Insurance Divan" />
     <string id="seljuk_nizam_name" text="Seljuk Regular Nizam Infantry" />

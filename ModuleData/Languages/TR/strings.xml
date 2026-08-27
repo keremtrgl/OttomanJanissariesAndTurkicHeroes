@@ -180,6 +180,21 @@
     <string id="seljuk_gt_faction_ruler_f" text="Sultan Hatun" />
     <string id="seljuk_gt_ruler_term_in_speech" text="{?RULER.GENDER}Sultan Hatun{?}Sultan{\?} {RULER.NAME}" />
     <string id="seljuk_gt_noble_name_with_title" text="{?RULER.GENDER}Emire{?}Emir{\?} {RULER.NAME}" />
+    <string id="seljuk_gt_player_brother_name" text="Nizam" />
+    <string id="seljuk_gt_player_little_brother_name" text="Tarkan" />
+    <string id="seljuk_gt_player_little_sister_name" text="Alev" />
+    <string id="seljuk_gt_adjective_for_culture" text="Selçuklu" />
+    <string id="seljuk_gt_adjective_for_faction" text="Selçuklu" />
+    <string id="seljuk_gt_formal_name" text="Büyük Selçuklu Devleti" />
+    <string id="seljuk_gt_informal_name" text="Selçuklular" />
+    <string id="seljuk_gt_neutral_term" text="Selçuklular" />
+    <string id="seljuk_gt_short_term" text="Selçuklular" />
+    <string id="seljuk_gt_player_father_name" text="Bayram" />
+    <string id="seljuk_gt_player_mother_name" text="Turna" />
+    <string id="seljuk_gt_comment_introduces_self" text="Ben {CLAN_NAME}'{.den} {CONVERSATION_CHARACTER.LINK}." />
+    <string id="seljuk_gt_comment_introduces_self_and_clan" text="Ben Selçuklu klanlarından biri olan {CLAN_NAME}'{.den} {CONVERSATION_CHARACTER.LINK}." />
+    <string id="seljuk_gt_liege_title" text="Selçuklu Sultanı" />
+    <string id="seljuk_gt_liege_title_female" text="Selçuklu Sultanı" />
     <string id="seljuk_menu_insurance_text" text="Selçuklu Kervansaraylar İdaresi ve İpek Yolu Sigorta Divanı'ndasınız. Buradan kervanlarınızı devlet teminatı altına alabilir ve kervansaraylara sermaye yatırarak haftalık kâr ortaklığı kurabilirsiniz." />
     <string id="seljuk_menu_trade_divan" text="Selçuklu İpek Yolu ve Kervan Sigortası Divanı'na Git" />
     <string id="seljuk_nizam_name" text="Selçuklu Nizam Piyadesi" />

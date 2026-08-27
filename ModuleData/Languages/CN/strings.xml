@@ -173,6 +173,21 @@
     <string id="seljuk_gt_faction_ruler_f" text="苏丹娜" />
     <string id="seljuk_gt_ruler_term_in_speech" text="{?RULER.GENDER}苏丹娜{?}苏丹{\?} {RULER.NAME}" />
     <string id="seljuk_gt_noble_name_with_title" text="{?RULER.GENDER}埃米拉{?}埃米尔{\?} {RULER.NAME}" />
+    <string id="seljuk_gt_player_brother_name" text="尼扎姆" />
+    <string id="seljuk_gt_player_little_brother_name" text="塔尔坎" />
+    <string id="seljuk_gt_player_little_sister_name" text="阿勒夫" />
+    <string id="seljuk_gt_adjective_for_culture" text="塞尔柱" />
+    <string id="seljuk_gt_adjective_for_faction" text="塞尔柱" />
+    <string id="seljuk_gt_formal_name" text="大塞尔柱帝国" />
+    <string id="seljuk_gt_informal_name" text="塞尔柱人" />
+    <string id="seljuk_gt_neutral_term" text="塞尔柱人" />
+    <string id="seljuk_gt_short_term" text="塞尔柱" />
+    <string id="seljuk_gt_player_father_name" text="拜拉姆" />
+    <string id="seljuk_gt_player_mother_name" text="图尔娜" />
+    <string id="seljuk_gt_comment_introduces_self" text="我是{CLAN_NAME}家族的{CONVERSATION_CHARACTER.LINK}。" />
+    <string id="seljuk_gt_comment_introduces_self_and_clan" text="我是{CONVERSATION_CHARACTER.LINK},来自{CLAN_NAME},塞尔柱人的一个家族。" />
+    <string id="seljuk_gt_liege_title" text="塞尔柱苏丹" />
+    <string id="seljuk_gt_liege_title_female" text="塞尔柱苏丹娜" />
     <string id="seljuk_menu_insurance_text" text="Welcome to the Seljuk Caravanserai Administration and Silk Road Insurance Divan. Here, you can place your trade caravans under Imperial Treasury guarantee and invest capital into caravanserais to receive regular weekly dividends." />
     <string id="seljuk_menu_trade_divan" text="Visit the Seljuk Silk Road &amp; Caravan Insurance Divan" />
     <string id="seljuk_nizam_name" text="Seljuk Regular Nizam Infantry" />
