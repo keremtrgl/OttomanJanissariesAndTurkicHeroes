@@ -9,7 +9,17 @@
 	     Modding Kit's resource compiler). Instead of a new texture, alias
 	     CharacterCreation\Culture\seljuk onto Kara-Khanid (Culture.khuzait)'s existing,
 	     already-loaded artwork - Seljuks and Kara-Khanids were both real Turkic
-	     steppe dynasties, so the reuse is historically coherent, not just a fallback. -->
+	     steppe dynasties, so the reuse is historically coherent, not just a fallback.
+
+	     SpriteData.LoadSpriteDataFromFile (TaleWorlds.TwoDimension.dll) does
+	     `foreach (XmlNode item in xmlElement["SpriteCategories"])` with NO null
+	     check - a file missing that element entirely throws NullReferenceException
+	     immediately (silently swallowed by LoadFromDepot's per-file try/catch,
+	     Debug.FailedAssert not visible in a Release build), dropping this file's
+	     SpriteParts/Sprites too since the exception fires before reaching them.
+	     An empty <SpriteCategories/> avoids that; this file doesn't declare a new
+	     category since it only aliases into Native's own ui_charactercreation. -->
+	<SpriteCategories />
 	<SpriteParts>
 		<SpritePart>
 			<SheetID>1</SheetID>
