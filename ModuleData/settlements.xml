@@ -73,4 +73,8 @@
   <Settlement id="castle_ES1" name="{=seljuk_castle_dorylaeum}Eskisehir (Dorylaeum)" owner="Faction.clan_kayi_oguz" culture="Culture.seljuk" />
   <Settlement id="castle_village_ES1_1" name="{=seljuk_vil_sivrihisar}Sivrihisar" culture="Culture.seljuk" />
   <Settlement id="castle_village_ES1_2" name="{=seljuk_vil_mihaliccik}Mihaliccik" culture="Culture.seljuk" />
+
+  <!-- Lavenia/Morenia kalelerinin unutulmuş ikinci köyleri - id sırasını bozmamak için sona eklendi. -->
+  <Settlement id="castle_village_ES4_2" name="{=seljuk_v_niksar}Niksar" culture="Culture.seljuk" />
+  <Settlement id="castle_village_ES5_2" name="{=seljuk_v_adilcevaz}Adilcevaz" culture="Culture.seljuk" />
 </Settlements>
