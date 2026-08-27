@@ -87,8 +87,10 @@ namespace SeljukEmpire.Settlements
 
                 // Castle villages
                 RenameSettlement(Settlement.Find("castle_village_ES4_1"), "{=seljuk_vil_lavenia}Lavenia");
+                RenameSettlement(Settlement.Find("castle_village_ES4_2"), "{=seljuk_v_niksar}Niksar");
                 RenameSettlement(Settlement.Find("castle_village_A6_1"), "{=seljuk_vil_shibalzumr}Shibal Zumr");
                 RenameSettlement(Settlement.Find("castle_village_ES5_1"), "{=seljuk_vil_morenia}Morenia");
+                RenameSettlement(Settlement.Find("castle_village_ES5_2"), "{=seljuk_v_adilcevaz}Adilcevaz");
 
                 // İsfahan villages
                 RenameSettlement(Settlement.Find("village_ES2_2"), "{=seljuk_vil_cuybare}Juybareh");
@@ -111,14 +113,16 @@ namespace SeljukEmpire.Settlements
                 // every session, closes the same gap for them rather than leaving them dependent
                 // on the XML override alone.
 
-                // --- Byzantine (35 settlements/villages) ---
+                // --- Byzantine (28 settlements/villages, matches byzantine_settlements.xml) ---
                 RenameSettlement(Settlement.Find("town_ES4"), "{=byz_s_ankara}Ancyra");
                 RenameSettlement(Settlement.Find("village_ES4_1"), "{=byz_v_juliopolis}Iuliopolis");
                 RenameSettlement(Settlement.Find("village_ES4_3"), "{=byz_v_germa}Germa");
-                RenameSettlement(Settlement.Find("town_ES5"), "{=byz_s_amaseia}Amaseia");
-                RenameSettlement(Settlement.Find("village_ES5_1"), "{=byz_v_andrapa}Andrapa");
-                RenameSettlement(Settlement.Find("village_ES5_2"), "{=byz_v_ibora}Ibora");
-                RenameSettlement(Settlement.Find("village_ES5_3"), "{=byz_v_sebastopolis}Sebastopolis");
+                // town_ES5 + villages are Seljuk-owned (settlements.xml), not Byzantine - reasserting
+                // the correct Seljuk name here instead of the Byzantine one it used to silently revert to.
+                RenameSettlement(Settlement.Find("town_ES5"), "{=seljuk_town_amasya}Amasya (Amaseia)");
+                RenameSettlement(Settlement.Find("village_ES5_1"), "{=seljuk_vil_merzifon}Merzifon");
+                RenameSettlement(Settlement.Find("village_ES5_2"), "{=seljuk_vil_tasova}Tasova");
+                RenameSettlement(Settlement.Find("village_ES5_3"), "{=seljuk_vil_gumushacikoy}Gumushacikoy");
                 RenameSettlement(Settlement.Find("town_ES3"), "{=byz_s_nicaea}Nicaea");
                 RenameSettlement(Settlement.Find("village_ES3_1"), "{=byz_v_prusa}Prusa");
                 RenameSettlement(Settlement.Find("village_ES3_2"), "{=byz_v_apollonia}Apollonia");
@@ -131,9 +135,11 @@ namespace SeljukEmpire.Settlements
                 RenameSettlement(Settlement.Find("village_ES7_1"), "{=byz_v_rhizaion}Rhizaion");
                 RenameSettlement(Settlement.Find("village_ES7_2"), "{=byz_v_kerasous}Kerasous");
                 RenameSettlement(Settlement.Find("castle_village_ES7_2"), "{=byz_v_eunalica2}Susurmena");
-                RenameSettlement(Settlement.Find("castle_ES1"), "{=byz_c_dorylaeum}Dorylaeum Castle");
-                RenameSettlement(Settlement.Find("castle_village_ES1_1"), "{=byz_v_nakoleia}Nakoleia");
-                RenameSettlement(Settlement.Find("castle_village_ES1_2"), "{=byz_v_midaion}Midaion");
+                // castle_ES1 + villages are Seljuk-owned (settlements.xml, Kayı Boyu) - same fix as
+                // town_ES5 above, reasserting the correct Seljuk name instead of the Byzantine one.
+                RenameSettlement(Settlement.Find("castle_ES1"), "{=seljuk_castle_dorylaeum}Eskisehir (Dorylaeum)");
+                RenameSettlement(Settlement.Find("castle_village_ES1_1"), "{=seljuk_vil_sivrihisar}Sivrihisar");
+                RenameSettlement(Settlement.Find("castle_village_ES1_2"), "{=seljuk_vil_mihaliccik}Mihaliccik");
                 RenameSettlement(Settlement.Find("castle_ES2"), "{=byz_c_nicomedia}Nicomedia Castle");
                 RenameSettlement(Settlement.Find("castle_village_ES2_1"), "{=byz_v_chalcedon}Chalcedon");
                 RenameSettlement(Settlement.Find("castle_village_ES2_2"), "{=byz_v_prainetos}Prainetos");
