@@ -1655,5 +1655,104 @@
     <string id="seljuk_ins_purchased" text="📜 [Selçuklu Kervan Sigortası] Kervanlarınız Devlet Hazinesi teminatı altına alındı!" />
     <string id="seljuk_ins_invested" text="🪙 [Kâr Ortaklığı] {SETTLEMENT} kervansaray fonuna 10.000 Dinar yatırıldı! Her hafta düzenli kâr payı alacaksınız." />
     <string id="seljuk_tourney_victory" text="🏆 [Selçuklu Şenliği Zaferi] {TOWN} Meydan Turnuvası Şampiyonu oldunuz! Sultanlık Ödülü: {PRIZE} (+25 Nam kazandınız)!" />
+	<string id="sdzaip5J" text="{FIRSTNAME} Bilgin" />
+	<string id="j2nVPqIX" text="{FIRSTNAME} Şahin" />
+	<string id="agS5lIg7" text="{FIRSTNAME} Babasız" />
+	<string id="QWbgE4bw" text="{FIRSTNAME} Demirgöz" />
+	<string id="ykTARD4b" text="{FIRSTNAME} Sürgün" />
+	<string id="q5QjQyde" text="{FIRSTNAME} Deli" />
+	<string id="seS9ZZUW" text="{FIRSTNAME} Boz Şahin" />
+	<string id="3wzexaA7" text="{FIRSTNAME} Dişi Kurt" />
+	<string id="OIXub6bS" text="{FIRSTNAME} Yalnız" />
+	<string id="KY2zbWkj" text="{FIRSTNAME} Çevik" />
+	<string id="CQOlMayc" text="{FIRSTNAME} Paçavra" />
+	<string id="spc_wc2_0_prebackstory" text="Hikâyem mi? İlgini çekiyorsa anlatmaktan çekinmem." />
+	<string id="spc_wc2_0_backstory_a" text="Babam, Sultan Alp Arslan'ın günlerinde kuşatma sanatını öğrenmiş. O yıllarda atlılarımız meydanda hiçbir orduyu yenilmez bırakmazdı, ama en sıradan bir Bizans kalesi bile bizi utandırırdı - koçbaşından, lağımdan, kuşatma kulesinden anlamazdık." />
+	<string id="spc_wc2_0_backstory_b" text="Bunun üzerine Sultan, canlı ele geçirilen her Bizanslı mühendis için ağırlığınca altın vaat etti. O esirlere, babam gibi adamlara sur yıkma sanatını öğretmeleri buyuruldu. Babam da bu sanatı bana öğretti." />
+	<string id="spc_wc2_0_backstory_c" text="Eski günlerde bir kuşatma çırağı ustasını bırakıp başka bir beye hizmet ederse, yakalandığında pek çirkin bir ölüm beklerdi onu. Ama zamanlar değişti. En zengin şehirler çoktan düştü, kalan surlar eskisinden yüksek. Beyler artık kuşatma ustasına daha az ödüyor, hem de geç ödüyor. Ben de kısmet olursa başka bir iş arıyorum." />
+	<string id="spc_wc2_0_backstory_d" text="Neyse - arzuladığın şeyle senin aranda can sıkıcı bir sur duruyorsa ve onu moloza çevirmek istiyorsan, beni nerede bulacağını biliyorsun." />
+	<string id="spc_wc2_0_response_1" text="Elbette. İyi bir mühendis her dinarını hak eder." />
+	<string id="spc_wc2_0_response_2" text="Sadakat eski günlerden bu yana ne kadar da çürümüş." />
+	<string id="spc_wc2_0_generic_backstory" text="Babam, Sultan Alp Arslan'ın esir Bizans mühendislere eğittirdiği adamlardan biriydi. Halkımız o güne dek kuşatma sanatından pek anlamazdı. Sadece Sultan'a hizmet etmekle yükümlüydü, aksi ölümle cezalandırılırdı; ama sanatını bana öğretti, ben de artık dilediğime hizmet edebiliyorum." />
+	<string id="spc_wc2_1_prebackstory" text="İnsan böyle bir handa düzgün bir kımız bulur sanır, ama bu şaraba bak sen... Neyse, hikâyemi soruyordun." />
+	<string id="spc_wc2_1_backstory_a" text="Beyim daha bey olmadan önce onun emrinde yıllarca at sürdüm. İyi bir adım, elimde dolgun bir kesem vardı. Komşu obada sessiz ama sağlam kalçalı bir kız gördüm, iyi bir eş olur diye düşündüm." />
+	<string id="spc_wc2_1_backstory_b" text="Kardeşine gidip elli koyun teklif ettim, hatırı sayılır bir başlık. 'Kız kardeşimi senin gibi birine vermem' dedi. Ne demek istediğini sordum, cevap vermedi, ben de bir yumruk attım. Belki iki, fazlası değil. Gerçek bir adamı öldürmemesi gerekirdi ama o zavallı elimde can verdi." />
+	<string id="spc_wc2_1_backstory_c" text="Gerisini tahmin edersin - akrabaları kanımı istemeye obamıza geldi. Beni bulamadılar ama kuzenlerimden birini yaraladılar. Onlara hesap sorma vaktiydi, ama kardeşlerim cesaretini kaybedip anlaşma yaptı. Beni gitmeye zorladılar. Ne dersin buna?" />
+	<string id="spc_wc2_1_backstory_d" text="Söyleyeyim ne derim: korkaklardan, kendi kanına sahip çıkmayan adamlardan bıktım." />
+	<string id="spc_wc2_1_response_1" text="Doğru söze ne denir. Namus bu günlerde tavuk dişi kadar nadir." />
+	<string id="spc_wc2_1_response_2" text="Garip, insanların başkasının kavgası uğruna ölmek istememesi." />
+	<string id="spc_wc2_1_generic_backstory" text="Yıllarca beyimin sancağı altında at sürdüm, onun ocağında şerefli bir yerim olmalıydı. Ama bir hakaret yüzünden zengin bir aileden birini öldürdüm, akrabaları kalabalıktı, kalamadım." />
+	<string id="spc_wc2_2_prebackstory" text="Ben doğuda, sınır boyundaki bir Türkmen obasındanım. Bizim töremizi bilmiyorsan anlatmaya çalışayım." />
+	<string id="spc_wc2_2_backstory_a" text="Başka bir obadan bir adam babamı öldürdü. Babam da yıllar önce onun amcasını öldürmüştü. Onun öcünü almak bana düşerdi, ama veba katilini benden önce aldı - bu sefer de kardeşini öldürmem beklendi. Bizde töre böyledir." />
+	<string id="spc_wc2_2_backstory_b" text="Ben öbür obaya gidip sözle anlaşmak istedim. Kavga bitirmekte hep bir hünerim olmuştur, kaderin bu davayı zaten kapattığı bana açıktı. Ama annem gitmemem için yalvardı, kuzenlerim yalvardı. Kan istiyorlardı, söz değil." />
+	<string id="spc_wc2_2_backstory_c" text="Ailem, öbür oba babamın adını anacak, koyunlarımıza, kız kardeşlerime göz dikecek dediler. Bana ya görevini yap ya da artık bizim kanımızdan sayılmazsın dediler. Öyle olsun. Sürgünü seçtim. Ölüm zaten borcunu ödemişken, niçin daha çok adam ölsün?" />
+	<string id="spc_wc2_2_backstory_d" text="Bir düşman meydanda karşıma dikilirse, oklarımı ona doğrultmakta tereddüt etmem. Ama bu - hiç suçu olmayan bir adamı öldürmek - buna razı olamadım. Halkımı bıraktım. Burada, ne yapacağıma en azından kendim karar veriyorum." />
+	<string id="spc_wc2_2_response_1" text="Asil bir seçim." />
+	<string id="spc_wc2_2_response_2" text="Ne yani, kimse artık ailesinin şerefine değer vermiyor mu?" />
+	<string id="spc_wc2_2_generic_backstory" text="Obam başka bir obayla yıllarca süren bir kan davasına bağlıydı, can can, kuşak kuşak. Ben bu zinciri kırmayı seçtim, bana hiç kötülüğü dokunmamış bir adamı öldürmek yerine ailemi bıraktım. Bizde zaman zaman olur bu, ama pek konuşulmaz." />
+	<string id="spc_wc2_3_prebackstory" text="Peki - sabrın varsa sana bir asker hikâyesi anlatayım." />
+	<string id="spc_wc2_3_backstory_a" text="Şimdiye dek üç ayrı beyin emrinde savaştım. Ama yaya döğüşürüm - ailem şehirli, bozkırdan değil. Bizim gibiler için hayat farklı." />
+	<string id="spc_wc2_3_backstory_b" text="At beyleri, oba süvarileri - şuraya buraya dörtnala gidip sağa sola ok atarlar. Muharebe kazanırlar, inkâr etmeyeceğim. Ama iş bitip düşman hâlâ surlarının ardından gülüyorsa, o dörtnalın hiçbir kıymeti kalmaz." />
+	<string id="spc_wc2_3_backstory_c" text="Biz piyadeler merdivenlere tırmanıp et kıymacıya giren biziz. On beş yıl yaptım bunu, üstelik atı olan bir çocuktan daha az kazanarak. Yetti artık dedim, başka iş aramaya çıktım." />
+	<string id="spc_wc2_3_backstory_d" text="Her hâlükârda, askerlerinin göze aldığı tehlikeyi kendisi de göze alan her adam için savaşırım." />
+	<string id="spc_wc2_3_response_1" text="Doğru söz. İyi piyade her ordunun belkemiğidir." />
+	<string id="spc_wc2_3_response_2" text="Kin bir orduyu zehirler. Asker verilen emri tutar." />
+	<string id="spc_wc2_3_generic_backstory" text="Mızrakçıydım, yaya döğüşürdüm - büyük bir obadan değilsen genelde böyle olur. İki kat tehlike, yarı ücret, hiç şeref yok. Bıktım artık, başka iş arıyorum." />
+	<string id="spc_wc2_4_prebackstory" text="Hikâyemi anlatayım. Beni bundan ötürü yargılamak istersen buyur, ama duymak istemiyorum." />
+	<string id="spc_wc2_4_backstory_a" text="Obam, eski yöntemle otlaktan otlağa göçen son Türkmen obalarındandı. Büyük bir oba değildi, adını duymamışsındır. Bir Bizans akıncı kolu obamızı bastığında, sürülerimizi dağıttığında daha da küçüldük. Sağ kalanlarımız adını anmayacağım daha büyük bir obanın himayesine sığındı." />
+	<string id="spc_wc2_4_backstory_b" text="Bizi korudular ama küçümseyerek. Şu odunu kes, şu suyu getir dediler. Katlandık, ihtiyarlarımız için, emzikli analarımız için. Ama genç erkeklere ağır geliyordu." />
+	<string id="spc_wc2_4_backstory_c" text="Belki de ötekilerden gururluydum, ya da çabuk öfkelenirdim. Biri soyuma hakaret etti, ben de ona hakaret ettim, sözlerim iyi seçilmemişti, çok pişman oldum sonra. Koruyucularımız aramızda kaldığım sürece bizi korumayacaklarını söylediler. Kendi obam beni kovdu." />
+	<string id="spc_wc2_4_backstory_d" text="İnsan yemek yemeli. Bir tüccarın atlarını yolda almak kolay - ama bir insan, hayvan gibi yaşamak istemiyorsa, aldığını satın alacak, ekmek ve battaniye verecek biri de bulmalı. Şu şehirlerde fazla soru sormayan tüccarlar var, bazen başka işleri de oluyor." />
+	<string id="spc_wc2_4_response_1" text="Kötü talih insanı aşağılanmaya razı etmemeli." />
+	<string id="spc_wc2_4_response_2" text="Öyle de yapmalıydılar. Koruyucularına lanet okuyan kimsenin evi olmaz." />
+	<string id="spc_wc2_4_generic_backstory" text="Obam bir Bizans akınında sürülerini ve topraklarını kaybetti, güçlü bir obanın himayesine girdik. Bize hizmetçi gibi davrandılar. Sonunda kendimi savundum ve çıkan kavgada sözde koruyuculardan birini öldürdüm. Buna büyük utanç derler - ama görüyorum ki bir kere yenilgiyi tattın mı, utanç seni ne yaparsan yap bulur." />
+	<string id="spc_wc2_5_prebackstory" text="Ah... peki, merakını giderebilirim." />
+	<string id="spc_wc2_5_backstory_a" text="Bazı çocuklar babalarıyla ekin ekmeyi öğrenir. Bazıları koyun gütmeyi. Ben çocukluğumu meyhane kapılarındaki arka sokakları hasat etmeyi öğrenerek geçirdim. Babam öğretti. Zalim bir adamdı ama iyi bir öğretmen." />
+	<string id="spc_wc2_5_backstory_b" text="Bir adam yeterince sarhoşsa, kesesini o farkına bile varmadan alabilirdim - bazen küçük bir kafa darbesi gerekse de. Sadece yolcular, ondan sonrası daha az dertli oluyor. Babamın dediği gibi, her zanaat incelik ister." />
+	<string id="spc_wc2_5_backstory_c" text="Bilge bir adamdı babam. Ama gururluydu, sonunu getiren de bu oldu. Hırsız gururlu olamaz. Muhafızlar göz yummadan uzun süre ayakta kalamayız, yeni bir kumandan babamın ödediği 'vergiyi' iki katına çıkarmak istedi. Babam reddetti. Onu astılar." />
+	<string id="spc_wc2_5_backstory_d" text="Ben de gururluyum, o yüzden hırsızlık artık bana kapalı. Muhafızların, gardiyanların keyfine boyun eğmeyeceğim bir iş arıyorum." />
+	<string id="spc_wc2_5_response_1" text="Her zanaatte usta bir adamdan öğrenilecek bir şey vardır sanırım." />
+	<string id="spc_wc2_5_response_2" text="Bana adalet gibi geldi bu." />
+	<string id="spc_wc2_5_generic_backstory" text="Babam bir hırsız, gerektiğinde bir katildi - kervansaray önündeki sarhoşları ve yolcuları avlardık. Muhafızlar sonunda babamı yakaladı. Birimizi kurtaracak kadar gümüşü vardı, beni seçti. Onu astılar, ben kaçtım." />
+	<string id="spc_wc2_6_prebackstory" text="Anlatırım, ama Sultan hanedanının yanındaysan hoşuna gitmeyebilir." />
+	<string id="spc_wc2_6_backstory_a" text="Türkmenlerin bir zamanlar açık bozkırda özgürce yaşadığını bilirsin. Ama beylerimiz konfora alıştı - saraylar, ticaret, kralların savaşları. Otuz yıl önce Sultan, her obanın yerleşip sabit toprak tutmasını buyurdu, böylece savaşçılarını sayıp askere alabilecek, sürülerini sayıp vergi koyabilecekti. Çoğu boyun eğdi - konforu özgürlüğe tercih eder olmuşlardı." />
+	<string id="spc_wc2_6_backstory_b" text="Bazıları direndi. Adlarını duymuş olabilirsin, hâlâ bozkırda yaşarlar ama artık kendi soydaşları tarafından köle avlanır oldular, kanun kaçağı sayılırlar. Benim halkım küçük parçalara bölündü - kimi gümüşle köylere çekildi, kimi avlanıp yenildi, oğulları rehin alındı." />
+	<string id="spc_wc2_6_backstory_c" text="Ben, bir nesil önce fermanı reddettiği için avlanan obalardan birindenim. Sürülerimizi aldılar. O günden beri şehir kenarlarında dilenci gibi yaşıyoruz. Uzaktaki otlak hâlâ güzelliğiyle çağırıyor bizi, ama koyunsuz oraya gidersek açlıktan ölürüz." />
+	<string id="spc_wc2_6_backstory_d" text="Bir miktar para biriktirdim - nasıl olduğunu söylemeyeceğim - bir kılıç alacak kadar. Halkımdan alınanı geri kazanmaya niyetliyim: yeniden kendi sürülerimizi. İtiraf edeyim, bozkırdan pek anlamıyorum artık, ama arka sokakları, gölgeleri, orada güçlenmeyi iyi bilirim." />
+	<string id="spc_wc2_6_response_1" text="Ne zalim bir ferman." />
+	<string id="spc_wc2_6_response_2" text="Akıllıca bir ferman. Göçebeler düzenin düşmanıdır." />
+	<string id="spc_wc2_6_generic_backstory" text="Bir nesil önce her obanın yerleşip sayılıp vergilendirilmesi buyuruldu. Halkım reddetti. Sürülerimizi aldılar, o günden beri şehir kenarlarında dilenci gibiyiz. Yeni sürüler alacak parayı kazanıp, hiçbir beyin ulaşamayacağı bozkıra geri dönmeye niyetliyim." />
+	<string id="spc_wc2_7_prebackstory" text="Evet. Anlatmaya değer bir hikâyem var." />
+	<string id="spc_wc2_7_backstory_a" text="Ben küçük bir kızken akıncılar beni aldı. Uzak bozkırda savaşçı kadınlar üzerine eski masallar anlatılır, beni satın alan da bu masalları gerçek kılmaya karar verdi - beni öteki tutsaklarla döğüştürüp konuklarını eğlendirmek için." />
+	<string id="spc_wc2_7_backstory_b" text="Belki de o eski masallarda bir hakikat payı vardır, çünkü onun için çok iyi iş çıkardım, kendisini zengin ettim. Kanun artık halka açık arenada öldürmeyi yasaklıyor, ama zenginlerin kapalı kapılar ardındaki özel eğlencelerine kimse burnunu sokmuyor - yirmiden fazla tutsak arkadaşım kılıcımı tenlerinde hissetti." />
+	<string id="spc_wc2_7_backstory_c" text="Bundan suçluluk duymuyorum. Onlar beni öldürmeye çalışıyordu, bazıları çok yaklaştı da. Gerekeni yaptım." />
+	<string id="spc_wc2_7_backstory_d" text="Anlatacak fazla bir şey yok. Efendim zalim bir hayvandı, ama kazandıklarımı bende bıraktı, zamanla özgürlüğümü satın aldım - belki o da beni istemeden elinde tutmaya devam etseydi işin nereye varacağını görmüştü. İşte buradayım, bildiğim tek yolla geçimimi sağlıyorum. İşin var mı?" />
+	<string id="spc_wc2_7_response_1" text="Sanırım yapman gerekeni yaptın." />
+	<string id="spc_wc2_7_response_2" text="Zorunluluk olsun olmasın, yaptığından gurur duyuyor gibisin." />
+	<string id="spc_wc2_7_generic_backstory" text="Küçükken tutsak alındım, şehirde satıldım, beni kendi eğlencesi için öteki tutsaklarla döğüştüren bir beyefendiye. Zamanla özgürlüğümü satın aldım, şimdi de tadını çıkarmaya niyetliyim." />
+	<string id="spc_wc2_8_prebackstory" text="İnsanın kendi soyunun ona ne kadar zalim olabileceğini bilmek istersen, sana anlatabilirim." />
+	<string id="spc_wc2_8_backstory_a" text="Annem beni karnında taşırken babam öldü. Onun tek çocuğuydum, kadınlarımızın çoğu gibi bir oğul istemişti. Beni oğul gibi yetiştirdi, bir oğuldan söz eder gibi övündü benimle - ne kadar hızlı emdiğimden, bozkır kuşlarını okumla nasıl vurduğumdan, sonra da yaşıtlarımın ilki olarak muharebede düşürdüğüm bir baş getireceğimden." />
+	<string id="spc_wc2_8_backstory_b" text="Onu sevdiğim, hem de erkeklerden daha çevik ve güçlü olduğum için, söylediklerinin hepsini yaptım. Yaşıtlarımın ilki olarak muharebede öldürdüm. Annem daha da övündü, ta ki öteki kadınlar ona nefret duyana dek. Bizi obadan kovdular. Toprağımızı, hizmetçilerimizi elden çıkarmak zorunda kaldık, yanımızda taşıyamazdık, gerçek değerinin kırıntısına sattık. Elimizde sadece koyunlarımız kaldı. Akıncılar bizi çabuk buldu. Annemi öldürdüler, sürümüzü aldılar. Ben kaçtım." />
+	<string id="spc_wc2_8_backstory_c" text="Bir süre bozkırda dolaştım, birkaç kez aç kaldım. Ama akıncıları izledim, biri ateşten uzaklaşıp def-i hacet için gittiğinde, geri dönmedi. Kesesi şimdi bende. Kılıcı da." />
+	<string id="spc_wc2_8_backstory_d" text="Halkıma dönebilirim sanırım, ama istemiyorum. İşte buradayım, şehirlerde, kılıcımla iyi para kazanıyorum, kim beni kıskanıyor umurumda değil." />
+	<string id="spc_wc2_8_response_1" text="Kaybın için üzgünüm. Hayat sana zalim davranmış." />
+	<string id="spc_wc2_8_response_2" text="Her gün göklere şükrediyorum, vahşiler arasında doğmadığım için." />
+	<string id="spc_wc2_8_generic_backstory" text="Babam ben doğmadan öldü, annem beni hiç sahip olamadığı oğul gibi yetiştirdi. Obamız kıskançlıktan bize sırt çevirince, akıncılar kıskançlığın başladığını bitirdi - annemi öldürüp sürümüzü aldılar. Onlardan bir kılıç, bir de at alıp uzaklaştım." />
+	<string id="spc_wc2_9_prebackstory" text="Bir atı övmeden satamazsın derler." />
+	<string id="spc_wc2_9_backstory_a" text="Bir kervan muhafızının veletiydim. Annemi hiç tanımadım ama babam beni yanından ayırmadı. Ticaret yolunda develerin bacakları arasında koşarak büyüdüm, kervansaraylarda tüccar dedikodularını dinledim, öteki muhafızlar bana susam kekleri aldı. Daha mutlu bir çocukluk düşünemezsin." />
+	<string id="spc_wc2_9_backstory_b" text="Ama büyüyünce, beni yola götürmek o kadar kolay olmadı - fazla genç erkek bana tuhaf tuhaf bakıyordu. Babam bana iyi bir koca bulmak istedi ama tanıdığı delikanlılar onun gözünde evlenilecek türden değildi. Ben de dedim ki: Baba, ben de senin gibi olurum, kılıç kuşanır, zengin tüccarların malını korurum. Belki kazandığım parayla, ailemin adı için değilse de kazancım için beni seven düzgün bir delikanlı çıkar. Homurdandı ama daha iyi bir fikri yoktu." />
+	<string id="spc_wc2_9_backstory_c" text="İşte buradayım. Evlilik kısmıyla pek ilgilenmiyorum, açıkçası, ama dinarları seviyorum, özgürlüğümü seviyorum. Belki bir gün onu şaşırtır, yaşlılığında rahat etsin diye güzel bir toprak alırım." />
+	<string id="spc_wc2_9_backstory_d" text="Dediğim gibi: at sürebilirim, kılıç kullanabilirim, bir kervanı idare edebilirim, kâr etmekten anlarım. Böyle birine ihtiyacı olan tanıdığın var mı?" />
+	<string id="spc_wc2_9_response_1" text="Sen mutluysan o da mutlu olur eminim." />
+	<string id="spc_wc2_9_response_2" text="Zavallı babanın kalbini kırmış olmalısın." />
+	<string id="spc_wc2_9_generic_backstory" text="Bir kervan muhafızının kızıydım, ticaret yolunda büyüdüm, uzun zaman önce eşkıyaların avı olmaktansa mala göz kulak olan taraf olmayı tercih ettim. Artık bunun için gereken becerilere sahibim." />
+	<string id="spc_wc2_10_prebackstory" text="Hı. Sor bakalım." />
+	<string id="spc_wc2_10_backstory_a" text="Buradan uzak olmayan bir köyde büyüdüm. Babam gezgin bir satıcıydı, ben de onunla kapı kapı dolaşır, kırık şeyler alır, onarır, buradan bir dinar oradan bir dinar kazanırdık. Bozkırdan gelen beylerin, vergiyi ödeyebilmek için kuruş biriktirenleri nasıl hor gördüğünü bilirsin - ekinlerimizi çiğner, oğullarımızı savaşa sürükler, biz çamurda didinirken üstümüzde eyerde kendinden hoşnut otururlar." />
+	<string id="spc_wc2_10_backstory_b" text="Neyse, o hayat bana göre değildi. Sultana boyun eğmeyen, kaçakları içine alan obalardan birine kaçmaya karar verdim. Karluk derler onlara, sınırın ötesinde. Sorun şu ki önce bir ata ihtiyacım vardı." />
+	<string id="spc_wc2_10_backstory_c" text="Pazar yerinde uygun birini arayarak dolandım. Sahibi sarhoş olmaya giderken iyi bağlamadığı güzel bir hayvan buldum. Aldım, kaçtım. Ama tahmin et ne oldu - o lanet hayvan şehirden bir fersah uzaklaşmadan beni yere attı, sarhoş sahibine dörtnala geri döndü." />
+	<string id="spc_wc2_10_backstory_d" text="Neyse, dünyada yolumu bulmak için yeni bir plan gerek. Babam gibi seyyar satıcı olmayacağım, o kadarı kesin. Belki döğüşmeyi, at sürmeyi öğrenirim, belki bir gün kendi kervanlarımı işletecek zengin bir tüccar olurum - ama şu dünyada güvercinler arasında değil, şahinler arasında yerimi bulmaya niyetliyim." />
+	<string id="spc_wc2_10_response_1" text="Eh, ruhun var demek." />
+	<string id="spc_wc2_10_response_2" text="Ha! Bütün hırsızlar senin gibi başarısız olsun." />
+	<string id="spc_wc2_10_generic_backstory" text="Köylü bir seyyar satıcının oğluydum, o hayatı istemiyorum. Döğüşmeyi, at sürmeyi öğrenmeye niyetliyim. Beyler bizi çarık dikmeye ya da saban sürmeye yarar sansa da, buralarda benim gibi delikanlı çok." />
 </strings>
 </base>

@@ -2,7 +2,7 @@
 <Module>
   <Name value="Seljuk Empire: Sword of Islam"/>
   <Id value="OttomanJanissariesAndTurkicHeroes"/>
-  <Version value="v1.7.5"/>
+  <Version value="v1.7.6"/>
   <DefaultModule value="false"/>
   <SingleplayerModule value="true"/>
   <MultiplayerModule value="false"/>
@@ -458,6 +458,14 @@
     </XmlNode>
     <XmlNode>
       <XmlName id="GameText" path="rival_culture_companion_backstories"/>
+      <IncludedGameTypes>
+        <GameType value="Campaign"/>
+        <GameType value="CampaignStoryMode"/>
+        <GameType value="CustomGame"/>
+      </IncludedGameTypes>
+    </XmlNode>
+    <XmlNode>
+      <XmlName id="GameText" path="seljuk_special_characters_backstories"/>
       <IncludedGameTypes>
         <GameType value="Campaign"/>
         <GameType value="CampaignStoryMode"/>
