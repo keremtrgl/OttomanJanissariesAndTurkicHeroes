@@ -71,9 +71,33 @@ Checks performed:
                             tier across all 8 trees. The trees are deliberately built to one shared
                             per-tier curve (90/195/360/508/676/835), so a large deviation is normally
                             a typo'd skill value rather than an intentional design choice.
+ 14. wanderer-backstory     Every is_template="true" occupation="Wanderer" NPCCharacter this mod
+                            defines has all 8 GameText categories (prebackstory/backstory_a-d/
+                            response_1-2/generic_backstory) LordConversationsCampaignBehavior needs
+                            (decompiled) for its first-meeting dialogue. This exact gap shipped twice
+                            in this mod's history in two different files, caught only by a player
+                            screenshot of the engine's own literal "ERROR: Text with id X doesn't
+                            exist!" fallback both times - nothing automated checked for it before now.
+ 15. culture-still-native   Every culture-level troop/party-template attribute this mod's own
+                            SPCultures files (seljuk_culture.xml, rival_culture_names.xml) explicitly
+                            set (basic_troop, elite_basic_troop, default_party_template, caravan_guard,
+                            veteran_caravan_guard, vassal_reward_party_template,
+                            settlement_patrol_template_level_1-3, melee/ranged_militia_troop and their
+                            elite variants, militia_party_template, rebels_party_template, and
+                            basic_mercenary_troops) actually resolves to an id this mod itself defines,
+                            not a Native troop/PartyTemplate left over from before this mod had its own
+                            content - the exact class of bug spent two whole sessions finding by hand
+                            (tavern mercenaries, caravan guards, patrols, siege militia, vassal gifts,
+                            rebels, militia). villager_party_template and
+                            tournament_team_templates_one/two/four_participant are deliberately NOT
+                            checked here: confirmed by a real XML merge test that Native's own
+                            per-culture tournament/villager characters already resolve correctly for
+                            every culture that reuses a Native base Culture id, and building
+                            fully-bespoke ones needs new blunt-weapon Item definitions, a separate,
+                            tracked follow-up rather than a "still native troops" bug.
 
 Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
-checks 1-8 they describe "this looks unintended", not "this is broken".
+checks 1-8 and 14-15 they describe "this looks unintended", not "this is broken".
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -368,6 +392,178 @@ def check_language_sync(issues, game_path):
                                  f'{{=<{key}>}} is missing from: {", ".join(missing)}{suffix} - players on '
                                  f'those languages will silently see the inline fallback text instead of a '
                                  f'real translation.'))
+
+
+# --------------------------------------------------------------- check 14 --
+
+WANDERER_BACKSTORY_CATEGORIES = (
+    "prebackstory", "backstory_a", "backstory_b", "backstory_c", "backstory_d",
+    "response_1", "response_2", "generic_backstory",
+)
+
+
+def load_gametext_entries():
+    """Returns {(category, variation): file} for every <string id="category.variation"> in every
+    ModuleData file registered as GameText in SubModule.xml. TaleWorlds.Core.GameTextManager is a
+    completely separate system from TaleWorlds.Localization (confirmed by decompiling
+    GameTextManager.LoadFromXML, which splits each <string id="..."> on the FIRST '.' into a
+    category and a variation) - a key existing in strings.xml does not mean GameTextManager can
+    find it, and vice versa."""
+    submodule_root = safe_parse(SUBMODULE_XML)
+    if submodule_root is None:
+        return {}
+    gametext_paths = {xn.get("path") for xn in submodule_root.iter("XmlName")
+                       if xn.get("id") == "GameText" and xn.get("path")}
+    entries = {}
+    for p in gametext_paths:
+        f = MODULE_DATA / f"{p}.xml"
+        root = safe_parse(f)
+        if root is None or root.tag != "strings":
+            continue
+        for s in root.iter("string"):
+            sid = s.get("id") or ""
+            if "." not in sid:
+                continue
+            category, variation = sid.split(".", 1)
+            entries[(category, variation)] = rel(f)
+    return entries
+
+
+def check_wanderer_backstory_coverage(issues):
+    gametext = load_gametext_entries()
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "NPCCharacters":
+            continue
+        for npc in root.iter("NPCCharacter"):
+            if (npc.get("is_template") or "").lower() != "true":
+                continue
+            if (npc.get("occupation") or "") != "Wanderer":
+                continue
+            wid = npc.get("id")
+            if not wid:
+                continue
+            missing = [cat for cat in WANDERER_BACKSTORY_CATEGORIES if (cat, wid) not in gametext]
+            if missing:
+                issues.append(Issue("ERROR", "wanderer-backstory", rel(f),
+                                     f'NPCCharacter "{wid}" (is_template Wanderer) is missing GameText '
+                                     f'for: {", ".join(missing)} - players will see the literal "ERROR: '
+                                     f'Text with id X doesn\'t exist!" fallback the first time they talk '
+                                     f'to this companion.'))
+
+
+# --------------------------------------------------------------- check 15 --
+
+# Attributes this mod's own SPCultures files are expected to point at content
+# this mod itself defines, once they set the attribute at all. Deliberately
+# excludes villager_party_template (non-combat civilian NPCs, never part of
+# this mod's custom-troop-tree scope) and tournament_team_templates_one/two/
+# four_participant (Native's own per-culture tournament characters already
+# resolve correctly for every reused base Culture - see check 15's docstring
+# in the module header for the full reasoning).
+CULTURE_NPCCHARACTER_ATTRS = (
+    "basic_troop", "elite_basic_troop", "caravan_guard", "veteran_caravan_guard",
+    "melee_militia_troop", "ranged_militia_troop",
+    "melee_elite_militia_troop", "ranged_elite_militia_troop",
+)
+CULTURE_PARTYTEMPLATE_ATTRS = (
+    "default_party_template", "vassal_reward_party_template",
+    "settlement_patrol_template_level_1", "settlement_patrol_template_level_2",
+    "settlement_patrol_template_level_3", "militia_party_template", "rebels_party_template",
+)
+
+
+def collect_mod_defined_party_template_ids():
+    ids = set()
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "partyTemplates":
+            continue
+        for pt in root.iter("MBPartyTemplate"):
+            pid = pt.get("id")
+            if pid:
+                ids.add(pid)
+    return ids
+
+
+def _strip_type_prefix(value):
+    return value.split(".", 1)[1] if value and "." in value else value
+
+
+def load_native_cultures_with_basic_mercenary_troops(game_path):
+    """Culture ids Native's own SandBoxCore/ModuleData/spcultures.xml defines that ALSO
+    have a <basic_mercenary_troops> block - i.e. ids where this mod's own
+    <Culture id="same-id"> override in rival_culture_names.xml is a genuine XML MERGE
+    against Native's data (Culture.empire/aserai/sturgia/vlandia/battania/khuzait), not
+    a brand-new addition (Culture.seljuk, which no Native file defines at all, so there
+    is nothing to merge against and _replaceWhileMerging is a no-op either way)."""
+    ids = set()
+    f = game_path / "Modules" / "SandBoxCore" / "ModuleData" / "spcultures.xml"
+    root = safe_parse(f)
+    if root is None:
+        return ids
+    for culture in root.iter("Culture"):
+        if culture.find("basic_mercenary_troops") is not None and culture.get("id"):
+            ids.add(culture.get("id"))
+    return ids
+
+
+def check_culture_still_native(issues, game_path):
+    mod_char_ids = collect_mod_defined_character_ids()
+    mod_party_ids = collect_mod_defined_party_template_ids()
+    native_cultures_with_mercs = load_native_cultures_with_basic_mercenary_troops(game_path) if game_path else None
+
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "SPCultures":
+            continue
+        for culture in root.iter("Culture"):
+            cid = culture.get("id", "?")
+
+            for attr in CULTURE_NPCCHARACTER_ATTRS:
+                val = culture.get(attr)
+                if val is None:
+                    continue
+                ref_id = _strip_type_prefix(val)
+                if ref_id not in mod_char_ids:
+                    issues.append(Issue("ERROR", "culture-still-native", rel(f),
+                                         f'Culture "{cid}" sets {attr}="{val}", which this mod does not '
+                                         f'define itself - it still resolves to a Native troop.'))
+
+            for attr in CULTURE_PARTYTEMPLATE_ATTRS:
+                val = culture.get(attr)
+                if val is None:
+                    continue
+                ref_id = _strip_type_prefix(val)
+                if ref_id not in mod_party_ids:
+                    issues.append(Issue("ERROR", "culture-still-native", rel(f),
+                                         f'Culture "{cid}" sets {attr}="{val}", which this mod does not '
+                                         f'define itself in any partyTemplates.xml-rooted file - it still '
+                                         f'resolves to a Native party template.'))
+
+            bmt = culture.find("basic_mercenary_troops")
+            if bmt is not None:
+                has_replace_flag = (bmt.get("_replaceWhileMerging") or "").lower() == "true"
+                is_genuine_merge = native_cultures_with_mercs is None or cid in native_cultures_with_mercs
+                if not has_replace_flag and is_genuine_merge:
+                    suffix = "" if native_cultures_with_mercs is not None else \
+                        " (not verified against Native - no game install found, pass --game-path)"
+                    issues.append(Issue("WARN", "culture-still-native", rel(f),
+                                         f'Culture "{cid}"\'s <basic_mercenary_troops> has no '
+                                         f'_replaceWhileMerging="true" attribute, and Native itself defines '
+                                         f'a <basic_mercenary_troops> for this same culture id - confirmed '
+                                         f'by decompiling MBObjectManager.MergeElements that without the '
+                                         f'flag, this mod\'s entries get ADDED alongside Native\'s own '
+                                         f'tavern mercenaries instead of replacing them, so Native troops '
+                                         f'would still show up roughly half the time.{suffix}'))
+                for tmpl in bmt.iter("template"):
+                    name = tmpl.get("name")
+                    ref_id = _strip_type_prefix(name)
+                    if ref_id not in mod_char_ids:
+                        issues.append(Issue("ERROR", "culture-still-native", rel(f),
+                                             f'Culture "{cid}"\'s <basic_mercenary_troops> references '
+                                             f'"{name}", which this mod does not define itself - it still '
+                                             f'resolves to a Native tavern mercenary.'))
 
 
 # ------------------------------------------------------- game-path helpers --
@@ -923,6 +1119,7 @@ def run(args):
     check_submodule_registration(issues)
     check_id_collisions(issues)
     check_id_order_stability(issues)
+    check_wanderer_backstory_coverage(issues)
 
     game_path = None if args.quick else find_game_path(args.game_path)
     if not args.quick and game_path is None:
@@ -933,6 +1130,7 @@ def run(args):
                              "Native keys), and upgrade-target/item-id/gender-consistency are skipped "
                              "entirely. Pass --game-path or use --quick to silence this."))
 
+    check_culture_still_native(issues, game_path)
     check_localization_coverage(issues, game_path)
     check_language_sync(issues, game_path)
 
