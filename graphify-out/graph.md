@@ -3,8 +3,9 @@
 Bu doküman, **"Seljuk Empire: Sword of Islam"** total conversion modundaki tüm modüllerin, C# çok
 doktrinli taktik yapay zeka motorunun, BattlePerformanceOptimizer FPS sisteminin, **Selçuklu Kervan
 Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**, 8 krallığın (Selçuklu + 7 rakip), klan, lord,
-yerleşke, birlik ağaçları, karakter yaratma özgeçmişleri, meyhane companion'ları, eşyalar, politikalar
-ve 8 dil desteği arasındaki ilişkileri detaylandırmaktadır. **Güncel sürüm: v1.7.0.**
+yerleşke, birlik ağaçları, lord ordu şablonları, karakter yaratma özgeçmişleri, meyhane companion'ları
+(tam GameText özgeçmişleriyle), eşyalar, politikalar ve 8 dil desteği arasındaki ilişkileri
+detaylandırmaktadır. **Güncel sürüm: v1.7.4.**
 
 ---
 
@@ -12,14 +13,14 @@ ve 8 dil desteği arasındaki ilişkileri detaylandırmaktadır. **Güncel sür�
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, ~45 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(19 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 55 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(21 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
     SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
     SM --> XML_L["8 x *_lords.xml<br/>(Tüm Krallıklarda Tarihi Lord İsimleri)"]
     SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>(Soy Ağacı & 14 Tarihi Meyhane Yoldaşı)"]
     SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
-    SM --> XML_P["party_templates.xml<br/>(Ordu Şablonları)"]
+    SM --> XML_P["party_templates.xml<br/>(8 Kültürün Lord Ordu Şablonu — v1.7.2)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
     SM --> XML_I["items.xml<br/>(12 Efsanevi Yadigar)"]
     SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
@@ -313,9 +314,19 @@ rastgele şehirlere yerleştiriyor, yani herhangi biri herhangi bir krallığın
 `AgeModel.HeroComesOfAge (18) + 5 + rastgele(0-11)` formülüyle 23-34 arası atanıyor, yani hiçbiri
 asla çocuk olamıyor.
 
+**v1.7.4 düzeltmesi — ilk tanışma diyaloğu hatası:** Yukarıdaki tanımlar sadece isim/skill/Traits/
+Equipments/face içeriyordu; Native'in her wanderer için ayrıca beklediği 8 `GameText` kategorisi
+(`prebackstory`, `backstory_a/b/c/d`, `response_1/2`, `generic_backstory` — `<kategori>.<companion_id>`
+anahtarıyla) hiç tanımlanmamıştı, bu yüzden bir companion'la ilk konuşulduğunda ekranda doğrudan
+`"ERROR: Text with id prebackstory doesn't exist! Variation: spc_wanderer_..."` görünüyordu (bkz.
+bölüm 10, v1.6.7'deki aynı `GameTextManager` mekanizması). `rival_culture_companion_backstories.xml`
+dosyasında 112 giriş (14 companion × 8 kategori) eklendi — her biri o companion'ın gerçek belgelenmiş
+hikâyesine dayalı, Native'in kendi anlatı yapısıyla (giriş/gelişme/dönüm noktası/çözüm + 2 zıt oyuncu
+yanıtı + kapanış) birebir uyumlu, 8 dilin hepsinde tam çeviriyle.
+
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.0)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.4)
 
 ```mermaid
 graph LR
@@ -324,6 +335,10 @@ graph LR
     V165 --> V166["v1.6.6<br/>Kültür seçim ekranı<br/>TEMP doku hatası düzeltildi"]
     V166 --> V167["v1.6.7<br/>16 kategori 'ERROR: Text<br/>with id...' GameText<br/>yer tutucusu süpürüldü"]
     V167 --> V170["v1.7.0<br/>3 krallığa özgeçmiş (108 seçenek) +<br/>14 tarihi companion + 126 yerleşke +<br/>Amasya/Eskişehir isim düzeltmesi"]
+    V170 --> V171["v1.7.1<br/>7 rakip ağaçta 294 eksik<br/>Bacak/Eldiven zırhı dolduruldu +<br/>verify_mod.py'ye 3 denge kontrolü"]
+    V171 --> V172["v1.7.2<br/>Lordların native ordusu:<br/>8 kültüre default_party_template<br/>bağlandı (turnuva/tutsak dahil)"]
+    V172 --> V173["v1.7.3<br/>78 atlı birime upgrade_requires<br/>eklendi (atsız yükseltme kapatıldı)"]
+    V173 --> V174["v1.7.4<br/>14 companion'ın 112 GameText<br/>girişi tamamlandı + 10 sabit<br/>mesaj {=key}'e taşındı"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -340,6 +355,36 @@ graph LR
   `"ERROR: Text with id X doesn't exist!"` metni döndürüyor. Native/StoryMode/SandBox'ın
   `.vlandia`/`.aserai` gibi kültür varyantı tanımladığı tüm kategoriler taranıp `.seljuk` karşılığı
   eklendi (16 kategori, ilk raporlanan 3'ün çok ötesinde).
+- **v1.7.1 kök neden:** Bannerlord'un asker ücreti/alım maliyeti sadece Tier/Level'e bakıyor
+  (decompile: `DefaultPartyWageModel.GetCharacterWage`/`GetTroopRecruitmentCost`,
+  `DefaultCharacterStatsModel.GetTier => clamp(ceil((Level-5)/5),0,6)`), zırha bakmıyor — yani
+  Selçuklu'nun ağacı %100 Bacak/Eldiven kaplarken 7 rakip ağacın %25-50'de kalması, aynı tier'de aynı
+  maliyete yarı zırh demekti: sessiz ama gerçek bir denge hatası. 294 eksik slot her kültürün kendi
+  Native taban kültüründen alınan tier-uygun eşyalarla dolduruldu; `verify_mod.py`'ye bunu bir daha
+  yakalayacak `troop-armor-slots`/`troop-progression`/`troop-tier-parity` kontrolleri eklendi.
+- **v1.7.2 kök neden (oyuncu tarafından bildirildi — Chaka Bey'in ordusu tamamen native Karahanlı
+  askerinden oluşuyordu):** `LordPartyComponent`, her yeni lordun başlangıç rosterini
+  `owner.Clan.DefaultPartyTemplate` → boşsa `Culture.DefaultPartyTemplate`'ten kuruyor (decompile ile
+  doğrulandı). 8 kültürün hiçbirinde bu attribute set değildi — Selçuklu'nunki bile hâlâ Native'in
+  `kingdom_hero_party_khuzait_template`'ine işaret eden eski bir yer tutucuydu. Sonuç: her lordun
+  başlangıç ordusu (dolayısıyla turnuvalardaki ve haydut/tutsak kaynaklı askerlerin çoğu) hep Native
+  askerlerinden oluşuyordu; sadece oyun başladıktan sonra alınan/yükseltilen askerler doğruydu. 8
+  kültüre kendi ağacından inşa edilmiş yeni şablonlar bağlandı (`party_templates.xml`); Culture.empire'ı
+  Bizans'la paylaşan Latin İmparatorluğu'nun 2 klanına ayrıca klan-seviyesi override eklendi.
+- **v1.7.3 kök neden (oyuncu tarafından bildirildi — at olmadan atlı birliğe yükseltilebiliyordu):**
+  Atlı yükseltmenin at-sahipliği kontrolü tamamen hedef birliğin kendi `upgrade_requires=
+  "ItemCategory.X"` attribute'una bağlı (decompile: `DefaultPartyTroopUpgradeModel`,
+  `CharacterObject.UpgradeRequiresItemFromCategory`) — modun sekiz dosyaya yayılan 78 atlı biriminin
+  hiçbirinde bu attribute yoktu (grep: mod genelinde sıfır sonuç). Native'in kendi tier kuralına göre
+  (orta kademe `ItemCategory.horse`, ağır süvari `ItemCategory.war_horse`) eklendi.
+- **v1.7.4 kök neden (oyuncu tarafından bildirildi — companion diyaloğunda "ERROR: Text with id
+  prebackstory doesn't exist!"):** 14 companion'ın sadece isim/skill/Traits/Equipments/face'i
+  tanımlıydı; Native'in her wanderer için ayrıca beklediği 8 `GameText` kategorisi (`prebackstory`,
+  `backstory_a/b/c/d`, `response_1/2`, `generic_backstory`) hiç yoktu — v1.6.7'deki aynı
+  `GameTextManager` mekanizması (bkz. yukarı) burada da devreye girdi. 112 giriş (14×8), her biri
+  companion'ın gerçek tarihine dayalı, 8 dilde eklendi (`rival_culture_companion_backstories.xml`).
+  Ayrıca bu segmentte 10 sabit kodlanmış Türkçe oyun-içi mesaj (taktik AI çağrıları, kervan sigortası
+  bildirimleri, turnuva mesajı) `{=key}` lokalizasyon sistemine taşındı.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).
