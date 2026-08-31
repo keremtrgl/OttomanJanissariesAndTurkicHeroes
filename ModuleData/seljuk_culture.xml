@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SPCultures>
+	<!-- caravan_guard/veteran_caravan_guard/melee_(elite_)militia_troop/ranged_(elite_)militia_troop/
+	     vassal_reward_party_template/settlement_patrol_template_level_1-3/basic_mercenary_troops
+	     were still all pointing at Native's Khuzait troops - a leftover from when this culture was
+	     first copy-pasted from Khuzait, before Seljuk had its own troop tree (see the equivalent
+	     comment in rival_culture_names.xml, same root cause: none of these are Culture.BasicTroop-
+	     style indirections, every one is a hardcoded specific troop id/PartyTemplate). Repointed at
+	     Seljuk's own tree; new PartyTemplate entries in party_templates.xml. villager_party_template/
+	     militia_party_template/rebels_party_template and tournament_team_templates are still Native -
+	     left open, same as for the 7 rival cultures. -->
 	<Culture
 		id="seljuk"
 		name="{=seljuk_culture_name}Seljuk"
@@ -10,27 +19,27 @@
 		color2="0xFFD4AF37"
 		elite_basic_troop="NPCCharacter.seljuk_ghulam_recruit"
 		basic_troop="NPCCharacter.seljuk_peasant"
-		melee_militia_troop="NPCCharacter.khuzait_militia_spearman"
-		ranged_militia_troop="NPCCharacter.khuzait_militia_archer"
-		melee_elite_militia_troop="NPCCharacter.khuzait_militia_veteran_spearman"
-		ranged_elite_militia_troop="NPCCharacter.khuzait_militia_veteran_archer"
+		melee_militia_troop="NPCCharacter.seljuk_footman"
+		ranged_militia_troop="NPCCharacter.seljuk_hunter"
+		melee_elite_militia_troop="NPCCharacter.seljuk_armored_infantry"
+		ranged_elite_militia_troop="NPCCharacter.seljuk_composite_archer"
 		can_have_settlement="true"
 		villager_party_template="PartyTemplate.villager_khuzait_template"
 		default_party_template="PartyTemplate.seljuk_default_party_template"
-		settlement_patrol_template_level_1="PartyTemplate.patrol_party_khuzait_template_level_1"
-		settlement_patrol_template_level_2="PartyTemplate.patrol_party_khuzait_template_level_2"
-		settlement_patrol_template_level_3="PartyTemplate.patrol_party_khuzait_template_level_3"
+		settlement_patrol_template_level_1="PartyTemplate.seljuk_patrol_template_level_1"
+		settlement_patrol_template_level_2="PartyTemplate.seljuk_patrol_template_level_2"
+		settlement_patrol_template_level_3="PartyTemplate.seljuk_patrol_template_level_3"
 		militia_party_template="PartyTemplate.militia_khuzait_template"
 		rebels_party_template="PartyTemplate.rebels_khuzait_template"
-		vassal_reward_party_template="PartyTemplate.vassal_reward_troops_khuzait"
+		vassal_reward_party_template="PartyTemplate.seljuk_vassal_reward_template"
 		encounter_background_mesh="encounter_khuzait"
 		faction_banner_key="11.142.142.1536.1536.768.768.1.0.0.103.143.143.512.512.768.768.1.0.0"
 		text="{=seljuk_culture_desc}A Turkmen confederation forged by the Great Seljuk state and the Anatolian frontier beyliks. Cities grow rich on iqta-fed cavalry armies, Nizamiye madrasas, and Silk Road caravans."
 		tournament_master="NPCCharacter.tournament_master_khuzait"
 		villager="NPCCharacter.villager_khuzait"
 		caravan_master="NPCCharacter.caravan_master_khuzait"
-		caravan_guard="NPCCharacter.caravan_guard_khuzait"
-		veteran_caravan_guard="NPCCharacter.veteran_caravan_guard_khuzait"
+		caravan_guard="NPCCharacter.seljuk_nizam_infantry"
+		veteran_caravan_guard="NPCCharacter.seljuk_subasi_guard"
 		prison_guard="NPCCharacter.prison_guard_khuzait"
 		guard="NPCCharacter.guard_khuzait"
 		blacksmith="NPCCharacter.blacksmith_khuzait"
@@ -145,8 +154,8 @@
 			<template name="NPCCharacter.tournament_template_khuzait_four_participant_set_v3" />
 		</tournament_team_templates_four_participant>
 		<basic_mercenary_troops>
-			<template name="NPCCharacter.eastern_mercenary" />
-			<template name="NPCCharacter.sword_sisters_sister_t3" />
+			<template name="NPCCharacter.seljuk_armored_infantry" />
+			<template name="NPCCharacter.seljuk_clan_scout" />
 		</basic_mercenary_troops>
 		<default_policies>
 			<policy id="policy_feudal_inheritance" />

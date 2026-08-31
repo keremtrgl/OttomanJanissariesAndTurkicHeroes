@@ -29,22 +29,166 @@
        new lord's starting roster from Native's own kingdom_hero_party_<culture>_template (pure
        Native troops - Khuzait Archer, Khuzait Nomad, etc. for every Kara-Khanid lord, and the
        equivalent for every other rival culture), never this mod's own byz2_/abb2_/geo2_/crus2_/
-       arm2_/kk2_ trees. Same root cause as rival-culture tournament rosters and freed-prisoner
-       recruits - both resolve "a troop of this culture" the same way. New templates defined in
-       party_templates.xml. -->
-  <Culture id="empire" name="{=byz_culture_name}Byzantine" basic_troop="NPCCharacter.byz2_recruit" elite_basic_troop="NPCCharacter.byz2_skutatos" default_party_template="PartyTemplate.byz2_default_party_template" />
-  <Culture id="aserai" name="{=abb_culture_name}Abbasid" basic_troop="NPCCharacter.abb2_recruit" elite_basic_troop="NPCCharacter.abb2_ayyar" default_party_template="PartyTemplate.abb2_default_party_template" />
+       arm2_/kk2_ trees. New templates defined in party_templates.xml. -->
+  <!-- The 11 attributes/elements added below this session (melee_militia_troop through
+       basic_mercenary_troops) fix a second wave of the exact same class of bug, found by
+       decompiling RecruitmentCampaignBehavior.UpdateCurrentMercenaryTroopAndCount (tavern
+       mercenaries: town.Culture.BasicMercenaryTroops), spcultures.xml's own attribute list
+       (caravan_guard/veteran_caravan_guard/vassal_reward_party_template/
+       settlement_patrol_template_level_1-3/melee_militia_troop/ranged_militia_troop/
+       melee_elite_militia_troop/ranged_elite_militia_troop), and Sandbox/ModuleData/
+       partyTemplates.xml (every one of those PartyTemplate/NPCCharacter targets is a hardcoded
+       specific troop id, not a Culture.BasicTroop-style indirection - fixing basic_troop alone
+       never touched any of them). None of these were set for any of the 7 rival cultures before
+       now, so tavern mercenaries, caravan/settlement guards, siege militia, roaming settlement
+       patrols, and the one-time "become my vassal" troop gift were all still 100% Native troops
+       even after this mod's own recruitment/starting-army/tournament-adjacent fixes. Correction
+       to the default_party_template comment above: tournament rosters do NOT share that root
+       cause - decompiling LordConversationsCampaignBehavior and spcultures.xml show tournaments
+       draw from a separate <tournament_team_templates_one/two/four_participant> list of
+       dedicated tournament-equipment NPCCharacters (Native's own tournament_template_<culture>_
+       *_participant_set_v1-3), still pointing at Native for all 7 rival cultures and not
+       addressed by this fix - confirmed still open, left for a follow-up session since it needs
+       new equipment-set characters per culture rather than a reference to an existing troop.
+       villager_party_template/militia_party_template/rebels_party_template are also still
+       Native for the same reason and are also left open; patrol/mercenary/caravan-guard/vassal-
+       gift/militia were prioritized as the ones actually reported by a player. New
+       *_vassal_reward_template/*_patrol_template_level_1-3 templates defined in
+       party_templates.xml, built from each culture's own tier-2/3/4/5/6 troops (same tier
+       source as each culture's *_default_party_template above). -->
+  <Culture
+    id="empire"
+    name="{=byz_culture_name}Byzantine"
+    basic_troop="NPCCharacter.byz2_recruit"
+    elite_basic_troop="NPCCharacter.byz2_skutatos"
+    default_party_template="PartyTemplate.byz2_default_party_template"
+    melee_militia_troop="NPCCharacter.byz2_skutatos"
+    ranged_militia_troop="NPCCharacter.byz2_toxotes"
+    melee_elite_militia_troop="NPCCharacter.byz2_thematic_skutatos"
+    ranged_elite_militia_troop="NPCCharacter.byz2_thematic_toxotes"
+    caravan_guard="NPCCharacter.byz2_tagmatic_skutatos"
+    veteran_caravan_guard="NPCCharacter.byz2_athanatoi"
+    vassal_reward_party_template="PartyTemplate.byz2_vassal_reward_template"
+    settlement_patrol_template_level_1="PartyTemplate.byz2_patrol_template_level_1"
+    settlement_patrol_template_level_2="PartyTemplate.byz2_patrol_template_level_2"
+    settlement_patrol_template_level_3="PartyTemplate.byz2_patrol_template_level_3">
+    <basic_mercenary_troops _replaceWhileMerging="true">
+      <template name="NPCCharacter.byz2_thematic_skutatos" />
+      <template name="NPCCharacter.byz2_prokoursatores" />
+    </basic_mercenary_troops>
+  </Culture>
+  <Culture
+    id="aserai"
+    name="{=abb_culture_name}Abbasid"
+    basic_troop="NPCCharacter.abb2_recruit"
+    elite_basic_troop="NPCCharacter.abb2_ayyar"
+    default_party_template="PartyTemplate.abb2_default_party_template"
+    melee_militia_troop="NPCCharacter.abb2_ghulam"
+    ranged_militia_troop="NPCCharacter.abb2_qawwas"
+    melee_elite_militia_troop="NPCCharacter.abb2_ghulam_regular"
+    ranged_elite_militia_troop="NPCCharacter.abb2_master_qawwas"
+    caravan_guard="NPCCharacter.abb2_rami_metin"
+    veteran_caravan_guard="NPCCharacter.abb2_hujariyya_guard"
+    vassal_reward_party_template="PartyTemplate.abb2_vassal_reward_template"
+    settlement_patrol_template_level_1="PartyTemplate.abb2_patrol_template_level_1"
+    settlement_patrol_template_level_2="PartyTemplate.abb2_patrol_template_level_2"
+    settlement_patrol_template_level_3="PartyTemplate.abb2_patrol_template_level_3">
+    <basic_mercenary_troops _replaceWhileMerging="true">
+      <template name="NPCCharacter.abb2_ghulam_regular" />
+      <template name="NPCCharacter.abb2_faris" />
+    </basic_mercenary_troops>
+  </Culture>
   <!-- basic_troop/elite_basic_troop redirect Georgian recruitment to the fully independent troop
        tree in georgian_custom_troops.xml, same pattern as empire/aserai above. elite_basic_troop
        is the tier-2 INFANTRY branch (geo2_msakhuri - axe/sword, shield, no horse), not a mounted
        branch, for the same reason byz2_skutatos/abb2_ayyar were picked over their cavalry siblings. -->
-  <Culture id="sturgia" name="{=geo_culture_name}Georgian" basic_troop="NPCCharacter.geo2_recruit" elite_basic_troop="NPCCharacter.geo2_msakhuri" default_party_template="PartyTemplate.geo2_default_party_template" />
+  <Culture
+    id="sturgia"
+    name="{=geo_culture_name}Georgian"
+    basic_troop="NPCCharacter.geo2_recruit"
+    elite_basic_troop="NPCCharacter.geo2_msakhuri"
+    default_party_template="PartyTemplate.geo2_default_party_template"
+    melee_militia_troop="NPCCharacter.geo2_msakhuri"
+    ranged_militia_troop="NPCCharacter.geo2_mtiuli_hunter"
+    melee_elite_militia_troop="NPCCharacter.geo2_kartli_msakhuri"
+    ranged_elite_militia_troop="NPCCharacter.geo2_mtiuli_archer"
+    caravan_guard="NPCCharacter.geo2_sepe_msakhuri"
+    veteran_caravan_guard="NPCCharacter.geo2_khevsur_guard"
+    vassal_reward_party_template="PartyTemplate.geo2_vassal_reward_template"
+    settlement_patrol_template_level_1="PartyTemplate.geo2_patrol_template_level_1"
+    settlement_patrol_template_level_2="PartyTemplate.geo2_patrol_template_level_2"
+    settlement_patrol_template_level_3="PartyTemplate.geo2_patrol_template_level_3">
+    <basic_mercenary_troops _replaceWhileMerging="true">
+      <template name="NPCCharacter.geo2_kartli_msakhuri" />
+      <template name="NPCCharacter.geo2_aznauri_horseman" />
+    </basic_mercenary_troops>
+  </Culture>
   <!-- elite_basic_troop is the tier-2 INFANTRY branch (crus2_sergeant - sword, shield, no horse),
        not a mounted branch, for the same reason byz2_skutatos/abb2_ayyar/geo2_msakhuri were
        picked over their cavalry siblings. -->
-  <Culture id="vlandia" name="{=crus_culture_name}Crusader" basic_troop="NPCCharacter.crus2_recruit" elite_basic_troop="NPCCharacter.crus2_sergeant" default_party_template="PartyTemplate.crus2_default_party_template" />
+  <Culture
+    id="vlandia"
+    name="{=crus_culture_name}Crusader"
+    basic_troop="NPCCharacter.crus2_recruit"
+    elite_basic_troop="NPCCharacter.crus2_sergeant"
+    default_party_template="PartyTemplate.crus2_default_party_template"
+    melee_militia_troop="NPCCharacter.crus2_sergeant"
+    ranged_militia_troop="NPCCharacter.crus2_crossbowman"
+    melee_elite_militia_troop="NPCCharacter.crus2_pikeman"
+    ranged_elite_militia_troop="NPCCharacter.crus2_veteran_crossbowman"
+    caravan_guard="NPCCharacter.crus2_frankish_serjeant"
+    veteran_caravan_guard="NPCCharacter.crus2_hospitaller_sergeant"
+    vassal_reward_party_template="PartyTemplate.crus2_vassal_reward_template"
+    settlement_patrol_template_level_1="PartyTemplate.crus2_patrol_template_level_1"
+    settlement_patrol_template_level_2="PartyTemplate.crus2_patrol_template_level_2"
+    settlement_patrol_template_level_3="PartyTemplate.crus2_patrol_template_level_3">
+    <basic_mercenary_troops _replaceWhileMerging="true">
+      <template name="NPCCharacter.crus2_pikeman" />
+      <template name="NPCCharacter.crus2_mounted_serjeant" />
+    </basic_mercenary_troops>
+  </Culture>
   <!-- elite_basic_troop is the tier-2 INFANTRY branch (arm2_azat - spear/shield, no horse), not a
        mounted branch, for the same reason as every other culture's elite_basic_troop above. -->
-  <Culture id="battania" name="{=arm_culture_name}Armenian" basic_troop="NPCCharacter.arm2_recruit" elite_basic_troop="NPCCharacter.arm2_azat" default_party_template="PartyTemplate.arm2_default_party_template" />
-  <Culture id="khuzait" name="{=krkh_culture_name}Kara-Khanid" basic_troop="NPCCharacter.kk2_recruit" elite_basic_troop="NPCCharacter.kk2_yigit" default_party_template="PartyTemplate.kk2_default_party_template" />
+  <Culture
+    id="battania"
+    name="{=arm_culture_name}Armenian"
+    basic_troop="NPCCharacter.arm2_recruit"
+    elite_basic_troop="NPCCharacter.arm2_azat"
+    default_party_template="PartyTemplate.arm2_default_party_template"
+    melee_militia_troop="NPCCharacter.arm2_azat"
+    ranged_militia_troop="NPCCharacter.arm2_archer"
+    melee_elite_militia_troop="NPCCharacter.arm2_pikeman"
+    ranged_elite_militia_troop="NPCCharacter.arm2_taurus_bowman"
+    caravan_guard="NPCCharacter.arm2_vanguard"
+    veteran_caravan_guard="NPCCharacter.arm2_naxarar_footguard"
+    vassal_reward_party_template="PartyTemplate.arm2_vassal_reward_template"
+    settlement_patrol_template_level_1="PartyTemplate.arm2_patrol_template_level_1"
+    settlement_patrol_template_level_2="PartyTemplate.arm2_patrol_template_level_2"
+    settlement_patrol_template_level_3="PartyTemplate.arm2_patrol_template_level_3">
+    <basic_mercenary_troops _replaceWhileMerging="true">
+      <template name="NPCCharacter.arm2_pikeman" />
+      <template name="NPCCharacter.arm2_ayrudzi_rider" />
+    </basic_mercenary_troops>
+  </Culture>
+  <Culture
+    id="khuzait"
+    name="{=krkh_culture_name}Kara-Khanid"
+    basic_troop="NPCCharacter.kk2_recruit"
+    elite_basic_troop="NPCCharacter.kk2_yigit"
+    default_party_template="PartyTemplate.kk2_default_party_template"
+    melee_militia_troop="NPCCharacter.kk2_yigit"
+    ranged_militia_troop="NPCCharacter.kk2_okcu"
+    melee_elite_militia_troop="NPCCharacter.kk2_alp_eri"
+    ranged_elite_militia_troop="NPCCharacter.kk2_mergen"
+    caravan_guard="NPCCharacter.kk2_kulug_alp"
+    veteran_caravan_guard="NPCCharacter.kk2_subasi"
+    vassal_reward_party_template="PartyTemplate.kk2_vassal_reward_template"
+    settlement_patrol_template_level_1="PartyTemplate.kk2_patrol_template_level_1"
+    settlement_patrol_template_level_2="PartyTemplate.kk2_patrol_template_level_2"
+    settlement_patrol_template_level_3="PartyTemplate.kk2_patrol_template_level_3">
+    <basic_mercenary_troops _replaceWhileMerging="true">
+      <template name="NPCCharacter.kk2_alp_eri" />
+      <template name="NPCCharacter.kk2_tarkhan_silahtari" />
+    </basic_mercenary_troops>
+  </Culture>
 </SPCultures>
