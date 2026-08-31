@@ -71,7 +71,9 @@
     vassal_reward_party_template="PartyTemplate.byz2_vassal_reward_template"
     settlement_patrol_template_level_1="PartyTemplate.byz2_patrol_template_level_1"
     settlement_patrol_template_level_2="PartyTemplate.byz2_patrol_template_level_2"
-    settlement_patrol_template_level_3="PartyTemplate.byz2_patrol_template_level_3">
+    settlement_patrol_template_level_3="PartyTemplate.byz2_patrol_template_level_3"
+    militia_party_template="PartyTemplate.byz2_militia_party_template"
+    rebels_party_template="PartyTemplate.byz2_rebels_party_template">
     <basic_mercenary_troops _replaceWhileMerging="true">
       <template name="NPCCharacter.byz2_thematic_skutatos" />
       <template name="NPCCharacter.byz2_prokoursatores" />
@@ -92,7 +94,9 @@
     vassal_reward_party_template="PartyTemplate.abb2_vassal_reward_template"
     settlement_patrol_template_level_1="PartyTemplate.abb2_patrol_template_level_1"
     settlement_patrol_template_level_2="PartyTemplate.abb2_patrol_template_level_2"
-    settlement_patrol_template_level_3="PartyTemplate.abb2_patrol_template_level_3">
+    settlement_patrol_template_level_3="PartyTemplate.abb2_patrol_template_level_3"
+    militia_party_template="PartyTemplate.abb2_militia_party_template"
+    rebels_party_template="PartyTemplate.abb2_rebels_party_template">
     <basic_mercenary_troops _replaceWhileMerging="true">
       <template name="NPCCharacter.abb2_ghulam_regular" />
       <template name="NPCCharacter.abb2_faris" />
@@ -117,7 +121,9 @@
     vassal_reward_party_template="PartyTemplate.geo2_vassal_reward_template"
     settlement_patrol_template_level_1="PartyTemplate.geo2_patrol_template_level_1"
     settlement_patrol_template_level_2="PartyTemplate.geo2_patrol_template_level_2"
-    settlement_patrol_template_level_3="PartyTemplate.geo2_patrol_template_level_3">
+    settlement_patrol_template_level_3="PartyTemplate.geo2_patrol_template_level_3"
+    militia_party_template="PartyTemplate.geo2_militia_party_template"
+    rebels_party_template="PartyTemplate.geo2_rebels_party_template">
     <basic_mercenary_troops _replaceWhileMerging="true">
       <template name="NPCCharacter.geo2_kartli_msakhuri" />
       <template name="NPCCharacter.geo2_aznauri_horseman" />
@@ -141,7 +147,9 @@
     vassal_reward_party_template="PartyTemplate.crus2_vassal_reward_template"
     settlement_patrol_template_level_1="PartyTemplate.crus2_patrol_template_level_1"
     settlement_patrol_template_level_2="PartyTemplate.crus2_patrol_template_level_2"
-    settlement_patrol_template_level_3="PartyTemplate.crus2_patrol_template_level_3">
+    settlement_patrol_template_level_3="PartyTemplate.crus2_patrol_template_level_3"
+    militia_party_template="PartyTemplate.crus2_militia_party_template"
+    rebels_party_template="PartyTemplate.crus2_rebels_party_template">
     <basic_mercenary_troops _replaceWhileMerging="true">
       <template name="NPCCharacter.crus2_pikeman" />
       <template name="NPCCharacter.crus2_mounted_serjeant" />
@@ -164,7 +172,9 @@
     vassal_reward_party_template="PartyTemplate.arm2_vassal_reward_template"
     settlement_patrol_template_level_1="PartyTemplate.arm2_patrol_template_level_1"
     settlement_patrol_template_level_2="PartyTemplate.arm2_patrol_template_level_2"
-    settlement_patrol_template_level_3="PartyTemplate.arm2_patrol_template_level_3">
+    settlement_patrol_template_level_3="PartyTemplate.arm2_patrol_template_level_3"
+    militia_party_template="PartyTemplate.arm2_militia_party_template"
+    rebels_party_template="PartyTemplate.arm2_rebels_party_template">
     <basic_mercenary_troops _replaceWhileMerging="true">
       <template name="NPCCharacter.arm2_pikeman" />
       <template name="NPCCharacter.arm2_ayrudzi_rider" />
@@ -185,7 +195,9 @@
     vassal_reward_party_template="PartyTemplate.kk2_vassal_reward_template"
     settlement_patrol_template_level_1="PartyTemplate.kk2_patrol_template_level_1"
     settlement_patrol_template_level_2="PartyTemplate.kk2_patrol_template_level_2"
-    settlement_patrol_template_level_3="PartyTemplate.kk2_patrol_template_level_3">
+    settlement_patrol_template_level_3="PartyTemplate.kk2_patrol_template_level_3"
+    militia_party_template="PartyTemplate.kk2_militia_party_template"
+    rebels_party_template="PartyTemplate.kk2_rebels_party_template">
     <basic_mercenary_troops _replaceWhileMerging="true">
       <template name="NPCCharacter.kk2_alp_eri" />
       <template name="NPCCharacter.kk2_tarkhan_silahtari" />
