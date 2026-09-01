@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Compiled directly (not via ProjectReference to SeljukTactics.csproj) so this test
+         project never needs the Bannerlord game install or its engine DLLs to build or run -
+         TacticalSituationAssessor.cs is required to have zero TaleWorlds.* references, so this
+         is always safe. -->
+    <Compile Include="..\SeljukEmpire\Tactics\TacticalSituationAssessor.cs" />
+  </ItemGroup>
+
+</Project>
