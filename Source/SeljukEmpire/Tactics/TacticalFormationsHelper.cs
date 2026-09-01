@@ -78,6 +78,20 @@ namespace SeljukEmpire.Tactics
         }
 
         /// <summary>
+        /// Computes a point directly away from the enemy - the mirror of CalculateFlankVector.
+        /// Used to kite a ranged formation back out of melee range, or to send a disengaging
+        /// formation toward a rally point.
+        /// </summary>
+        public static Vec3 CalculateFallbackVector(Vec3 selfPos, Vec3 enemyPos, float distance)
+        {
+            Vec2 awayFromEnemy = (selfPos.AsVec2 - enemyPos.AsVec2).Normalized();
+            Vec2 target2D = selfPos.AsVec2 + (awayFromEnemy * distance);
+            float z = Mission.Current?.Scene != null ? Mission.Current.Scene.GetTerrainHeight(target2D) : selfPos.z;
+
+            return ClampToMapBoundaries(new Vec3(target2D.x, target2D.y, z));
+        }
+
+        /// <summary>
         /// Checks if a formation has exhausted most of its missile ammunition.
         /// </summary>
         public static bool IsRangedAmmoDepleted(Formation formation, float threshold = 0.20f)
