@@ -404,7 +404,9 @@ namespace SeljukEmpire.Tactics
             foreach (var formation in _seljukTeam.FormationsIncludingEmpty)
             {
                 if (formation.CountOfUnits <= 0) continue;
-                totalCasualtyRatio += formation.QuerySystem.CasualtyRatio;
+                // CasualtyRatio is Native's surviving fraction (alive / (alive+dead)), not a
+                // casualty fraction - invert it so this variable means what its name says.
+                totalCasualtyRatio += (1f - formation.QuerySystem.CasualtyRatio);
                 formationCount++;
             }
 
@@ -438,10 +440,20 @@ namespace SeljukEmpire.Tactics
             {
                 case FormationStance.HoldAndSkirmish:
                     horseArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
-                    Vec3 archerPos = horseArchers.OrderPosition.ToVec3();
-                    Vec3 enemyPos = GetTeamCenterPosition(_enemyTeam);
-                    Vec3 kitePos = TacticalFormationsHelper.CalculateFallbackVector(archerPos, enemyPos, 25f);
-                    horseArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, kitePos)));
+                    if (hasSignificantEnemy)
+                    {
+                        Vec3 archerPos = horseArchers.CachedAveragePosition.ToVec3();
+                        Vec3 enemyPos = closestEnemyQs.Formation.CachedAveragePosition.ToVec3();
+                        float kiteRange = horseArchers.QuerySystem.MissileRangeAdjusted * 0.85f;
+                        // Only reposition when the enemy is actually close enough to shoot at -
+                        // otherwise leave the current order alone rather than chasing a fallback
+                        // point computed from a moving live position every tick.
+                        if (archerPos.DistanceSquared(enemyPos) < kiteRange * kiteRange)
+                        {
+                            Vec3 kitePos = TacticalFormationsHelper.CalculateFallbackVector(archerPos, enemyPos, 25f);
+                            horseArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, kitePos)));
+                        }
+                    }
                     break;
 
                 case FormationStance.Pursue:
@@ -471,16 +483,16 @@ namespace SeljukEmpire.Tactics
             bool isDefensivePosture = _activeDoctrine == TacticalDoctrine.HighGroundAmbush;
 
             FormationStance stance = TacticalSituationAssessor.AssessShockCavalryStance(
-                _shockCavalryCommittedToCharge,
-                hasSignificantEnemy,
-                hasSignificantEnemy ? closestEnemyQs.MovementSpeedMaximum : 0f,
-                hasSignificantEnemy ? closestEnemyQs.InfantryUnitRatio : 0f,
-                hasSignificantEnemy ? closestEnemyQs.HasShieldUnitRatio : 0f,
-                hasSignificantEnemy ? closestEnemyQs.CasualtyRatio : 0f,
-                secondsWaiting,
-                shockCavalry.QuerySystem.CasualtyRatio,
-                shockCavalry.QuerySystem.LocalPowerRatio,
-                isDefensivePosture);
+                isCurrentlyCharging: _shockCavalryCommittedToCharge,
+                hasSignificantEnemyFormation: hasSignificantEnemy,
+                enemyCurrentSpeed: hasSignificantEnemy ? closestEnemyQs.Formation.CachedCurrentVelocity.Length : 0f,
+                enemyInfantryUnitRatio: hasSignificantEnemy ? closestEnemyQs.InfantryUnitRatio : 0f,
+                enemyHasShieldUnitRatio: hasSignificantEnemy ? closestEnemyQs.HasShieldUnitRatio : 0f,
+                enemyCasualtyRatio: hasSignificantEnemy ? (1f - closestEnemyQs.CasualtyRatio) : 0f,
+                secondsSinceAwaitOpeningStarted: secondsWaiting,
+                selfCasualtyRatio: (1f - shockCavalry.QuerySystem.CasualtyRatio),
+                selfLocalPowerRatio: shockCavalry.QuerySystem.LocalPowerRatio,
+                isDefensivePosture: isDefensivePosture);
 
             switch (stance)
             {
