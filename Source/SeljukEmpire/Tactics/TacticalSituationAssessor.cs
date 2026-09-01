@@ -26,10 +26,11 @@ namespace SeljukEmpire.Tactics
         private const float BracedLineCompositionThreshold = 0.5f;
         private const float EnemySoftenedCasualtyThreshold = 0.15f;
         private const float AwaitOpeningTimeoutSeconds = 25f;
-        private const float CavalryDisengageCasualtyThreshold = 0.35f;
-        private const float CavalryDisengageCasualtyThresholdDefensive = 0.25f;
+        private const float MeleeDisengageCasualtyThreshold = 0.35f;
+        private const float MeleeDisengageCasualtyThresholdDefensive = 0.25f;
         private const float DoctrineDowngradeCasualtyThreshold = 0.40f;
         private const float CavalryThreatRatioThreshold = 0.30f;
+        private const float InfantryHoldTimeoutSeconds = 35f;
 
         public static FormationStance AssessHorseArcherStance(
             bool hasAmmo,
@@ -64,8 +65,8 @@ namespace SeljukEmpire.Tactics
             if (isCurrentlyCharging)
             {
                 float disengageThreshold = isDefensivePosture
-                    ? CavalryDisengageCasualtyThresholdDefensive
-                    : CavalryDisengageCasualtyThreshold;
+                    ? MeleeDisengageCasualtyThresholdDefensive
+                    : MeleeDisengageCasualtyThreshold;
 
                 bool losingBadly = selfCasualtyRatio > disengageThreshold
                     && selfLocalPowerRatio <= FavorablePowerRatioThreshold;
@@ -101,6 +102,42 @@ namespace SeljukEmpire.Tactics
         {
             return (hasSignificantEnemyFormation && enemyCavalryUnitRatio >= CavalryThreatRatioThreshold)
                 || isUnderHeavyRangedAttack;
+        }
+
+        public static FormationStance AssessInfantryStance(
+            bool isCurrentlyAdvancing,
+            bool hasSignificantEnemyFormation,
+            float enemyCavalryUnitRatio,
+            bool isUnderHeavyRangedAttack,
+            float enemyCasualtyRatio,
+            float secondsSinceHoldStarted,
+            float selfCasualtyRatio,
+            float selfLocalPowerRatio,
+            bool isDefensivePosture)
+        {
+            if (isCurrentlyAdvancing)
+            {
+                float disengageThreshold = isDefensivePosture
+                    ? MeleeDisengageCasualtyThresholdDefensive
+                    : MeleeDisengageCasualtyThreshold;
+
+                bool losingBadly = selfCasualtyRatio > disengageThreshold
+                    && selfLocalPowerRatio <= FavorablePowerRatioThreshold;
+
+                return losingBadly ? FormationStance.Regroup : FormationStance.AdvanceAndCharge;
+            }
+
+            bool shouldBrace = ShouldFormShieldWall(hasSignificantEnemyFormation, enemyCavalryUnitRatio, isUnderHeavyRangedAttack);
+
+            if (!shouldBrace)
+            {
+                return FormationStance.AdvanceAndCharge;
+            }
+
+            bool enemySoftened = enemyCasualtyRatio > EnemySoftenedCasualtyThreshold;
+            bool timedOut = secondsSinceHoldStarted >= InfantryHoldTimeoutSeconds;
+
+            return (enemySoftened || timedOut) ? FormationStance.AdvanceAndCharge : FormationStance.AwaitOpening;
         }
     }
 }
