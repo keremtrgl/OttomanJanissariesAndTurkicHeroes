@@ -28,6 +28,7 @@ namespace SeljukEmpire.Tactics
         private const float AwaitOpeningTimeoutSeconds = 25f;
         private const float CavalryDisengageCasualtyThreshold = 0.35f;
         private const float CavalryDisengageCasualtyThresholdDefensive = 0.25f;
+        private const float DoctrineDowngradeCasualtyThreshold = 0.40f;
 
         public static FormationStance AssessHorseArcherStance(
             bool hasAmmo,
@@ -81,6 +82,11 @@ namespace SeljukEmpire.Tactics
             bool timedOut = secondsSinceAwaitOpeningStarted >= AwaitOpeningTimeoutSeconds;
 
             return (enemySoftened || timedOut) ? FormationStance.AdvanceAndCharge : FormationStance.AwaitOpening;
+        }
+
+        public static bool ShouldDowngradeToDefensiveDoctrine(float teamAverageCasualtyRatio)
+        {
+            return teamAverageCasualtyRatio > DoctrineDowngradeCasualtyThreshold;
         }
     }
 }
