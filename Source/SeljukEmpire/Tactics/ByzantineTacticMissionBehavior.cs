@@ -289,7 +289,8 @@ namespace SeljukEmpire.Tactics
 
                 FormationQuerySystem closestInfantryEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
                 bool infantryHasSignificantEnemy = closestInfantryEnemyQs != null;
-                float infantryEnemyCavalryRatio = infantryHasSignificantEnemy ? closestInfantryEnemyQs.CavalryUnitRatio : 0f;
+                // Combine with RangedCavalryUnitRatio - horse archers are a separate FormationClass (decompile-verified).
+                float infantryEnemyCavalryRatio = infantryHasSignificantEnemy ? (closestInfantryEnemyQs.CavalryUnitRatio + closestInfantryEnemyQs.RangedCavalryUnitRatio) : 0f;
                 bool infantryUnderRangedAttack = infantry.QuerySystem.IsUnderRangedAttack;
 
                 infantry.SetArrangementOrder(
@@ -557,19 +558,31 @@ namespace SeljukEmpire.Tactics
             switch (stance)
             {
                 case FormationStance.HoldAndSkirmish:
+                {
                     footArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
-                    if (hasSignificantEnemy)
+                    Vec3 archerPos = footArchers.CachedAveragePosition.ToVec3();
+                    Vec3 referenceEnemyPos = hasSignificantEnemy
+                        ? closestEnemyQs.Formation.CachedAveragePosition.ToVec3()
+                        : GetTeamCenterPosition(_enemyTeam);
+                    float kiteRange = footArchers.QuerySystem.MissileRangeAdjusted * 0.85f;
+                    bool enemyInKiteRange = hasSignificantEnemy && archerPos.DistanceSquared(referenceEnemyPos) < kiteRange * kiteRange;
+
+                    if (enemyInKiteRange)
                     {
-                        Vec3 archerPos = footArchers.CachedAveragePosition.ToVec3();
-                        Vec3 enemyPos = closestEnemyQs.Formation.CachedAveragePosition.ToVec3();
-                        float kiteRange = footArchers.QuerySystem.MissileRangeAdjusted * 0.85f;
-                        if (archerPos.DistanceSquared(enemyPos) < kiteRange * kiteRange)
-                        {
-                            Vec3 kitePos = TacticalFormationsHelper.CalculateFallbackVector(archerPos, enemyPos, 25f);
-                            footArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, kitePos)));
-                        }
+                        Vec3 kitePos = TacticalFormationsHelper.CalculateFallbackVector(archerPos, referenceEnemyPos, 25f);
+                        footArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, kitePos)));
+                    }
+                    else
+                    {
+                        // Enemy not close enough to kite from yet - hold the same anchor-relative
+                        // position staging used before this stance existed, instead of ceding
+                        // positioning to native team AI for the whole approach.
+                        Vec3 enemyDir = (referenceEnemyPos - _anchorHighGround).NormalizedCopy();
+                        Vec3 anchorRelativePos = _anchorHighGround - (enemyDir * 12f);
+                        footArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, TacticalFormationsHelper.ClampToMapBoundaries(anchorRelativePos))));
                     }
                     break;
+                }
 
                 case FormationStance.Pursue:
                     footArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
@@ -595,7 +608,8 @@ namespace SeljukEmpire.Tactics
 
             FormationQuerySystem closestEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
             bool hasSignificantEnemy = closestEnemyQs != null;
-            float enemyCavalryRatio = hasSignificantEnemy ? closestEnemyQs.CavalryUnitRatio : 0f;
+            // Combine with RangedCavalryUnitRatio - see ExecuteStagingAndSkirmish's comment.
+            float enemyCavalryRatio = hasSignificantEnemy ? (closestEnemyQs.CavalryUnitRatio + closestEnemyQs.RangedCavalryUnitRatio) : 0f;
             bool isUnderHeavyRangedAttack = infantry.QuerySystem.IsUnderRangedAttack;
             float secondsHolding = _infantryHoldStartTime.HasValue ? _infantryHoldStartTime.Value.ElapsedSeconds : 0f;
             bool isDefensivePosture = _activeDoctrine == TacticalDoctrine.ThematicLastStand;
