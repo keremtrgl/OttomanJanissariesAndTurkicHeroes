@@ -70,6 +70,9 @@ namespace SeljukEmpire.Tactics
         private bool _shockCavalryRegrouped;
         private MissionTime? _awaitOpeningStartTime;
         private MissionTime _doctrineReevalTimer;
+        private bool _infantryCommittedToAdvance;
+        private bool _infantryRegrouped;
+        private MissionTime? _infantryHoldStartTime;
 
         public override void AfterStart()
         {
@@ -81,6 +84,9 @@ namespace SeljukEmpire.Tactics
             _shockCavalryCommittedToCharge = false;
             _shockCavalryRegrouped = false;
             _awaitOpeningStartTime = null;
+            _infantryCommittedToAdvance = false;
+            _infantryRegrouped = false;
+            _infantryHoldStartTime = null;
         }
 
         public override void OnMissionTick(float dt)
@@ -275,23 +281,25 @@ namespace SeljukEmpire.Tactics
             _leftFlankPosition = TacticalFormationsHelper.CalculateFlankVector(_anchorHighGround, enemyPos, true, 85f);
             _rightFlankPosition = TacticalFormationsHelper.CalculateFlankVector(_anchorHighGround, enemyPos, false, 85f);
 
-            // Tagma infantry anchors the line on high ground
+            // Tagma infantry anchors the line on high ground - shield wall only when actually needed
             if (infantry != null && infantry.CountOfUnits > 0)
             {
                 WorldPosition anchorWorldPos = new WorldPosition(Mission.Current.Scene, _anchorHighGround);
                 infantry.SetMovementOrder(MovementOrder.MovementOrderMove(anchorWorldPos));
-                infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderShieldWall);
+
+                FormationQuerySystem closestInfantryEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
+                bool infantryHasSignificantEnemy = closestInfantryEnemyQs != null;
+                float infantryEnemyCavalryRatio = infantryHasSignificantEnemy ? closestInfantryEnemyQs.CavalryUnitRatio : 0f;
+                bool infantryUnderRangedAttack = infantry.QuerySystem.IsUnderRangedAttack;
+
+                infantry.SetArrangementOrder(
+                    TacticalSituationAssessor.ShouldFormShieldWall(infantryHasSignificantEnemy, infantryEnemyCavalryRatio, infantryUnderRangedAttack)
+                        ? ArrangementOrder.ArrangementOrderShieldWall
+                        : ArrangementOrder.ArrangementOrderLine);
             }
 
-            // Toxotai foot archers placed right behind the shield wall
-            if (footArchers != null && footArchers.CountOfUnits > 0)
-            {
-                Vec3 enemyDir = (enemyPos - _anchorHighGround).NormalizedCopy();
-                Vec3 archerPos = _anchorHighGround - (enemyDir * 12f);
-                WorldPosition archerWorldPos = new WorldPosition(Mission.Current.Scene, TacticalFormationsHelper.ClampToMapBoundaries(archerPos));
-                footArchers.SetMovementOrder(MovementOrder.MovementOrderMove(archerWorldPos));
-                footArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
-            }
+            // Toxotai foot archers placed right behind the line - reactive stance, never a blind melee charge
+            ApplyFootArcherStance(footArchers);
 
             // Kataphraktoi shock cavalry staged on the flank, held back for the decisive blow
             if (shockCavalry != null && shockCavalry.CountOfUnits > 0)
@@ -352,9 +360,13 @@ namespace SeljukEmpire.Tactics
         {
             Formation shockCavalry = _byzantineTeam.GetFormation(FormationClass.Cavalry);
             Formation horseArchers = _byzantineTeam.GetFormation(FormationClass.HorseArcher);
+            Formation infantry = _byzantineTeam.GetFormation(FormationClass.Infantry);
+            Formation footArchers = _byzantineTeam.GetFormation(FormationClass.Ranged);
 
             ApplyShockCavalryStance(shockCavalry);
             ApplyHorseArcherStance(horseArchers);
+            ApplyInfantryStance(infantry);
+            ApplyFootArcherStance(footArchers);
 
             // Only let the fixed-time/distance transition push the battle into the all-in final
             // phase once shock cavalry has actually committed to a charge (or already made its
@@ -381,17 +393,8 @@ namespace SeljukEmpire.Tactics
             Formation shockCav = _byzantineTeam.GetFormation(FormationClass.Cavalry);
             Formation horseArchers = _byzantineTeam.GetFormation(FormationClass.HorseArcher);
 
-            // All formations unleash full frontal and flanking assault
-            if (infantry != null && infantry.CountOfUnits > 0)
-            {
-                infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderLine);
-                infantry.SetMovementOrder(MovementOrder.MovementOrderCharge);
-            }
-
-            if (footArchers != null && footArchers.CountOfUnits > 0)
-            {
-                footArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
-            }
+            ApplyInfantryStance(infantry);
+            ApplyFootArcherStance(footArchers);
 
             ApplyShockCavalryStance(shockCav);
             ApplyHorseArcherStance(horseArchers);
@@ -534,6 +537,105 @@ namespace SeljukEmpire.Tactics
             }
         }
 
+        /// <summary>
+        /// 9. Foot archer stance: identical decision logic to horse archers (a ranged formation's
+        /// hold-and-skirmish/pursue/regroup choice doesn't depend on being mounted) - reuses
+        /// AssessHorseArcherStance directly. Only order translation differs: no
+        /// ArrangementOrderSkein (a cavalry wedge formation, meaningless without horses).
+        /// </summary>
+        private void ApplyFootArcherStance(Formation footArchers)
+        {
+            if (footArchers == null || footArchers.CountOfUnits <= 0) return;
+
+            bool hasAmmo = !TacticalFormationsHelper.IsRangedAmmoDepleted(footArchers);
+            FormationQuerySystem closestEnemyQs = footArchers.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
+            bool hasSignificantEnemy = closestEnemyQs != null;
+            float enemyPowerRatio = hasSignificantEnemy ? closestEnemyQs.LocalPowerRatio : 0f;
+
+            FormationStance stance = TacticalSituationAssessor.AssessHorseArcherStance(hasAmmo, hasSignificantEnemy, enemyPowerRatio);
+
+            switch (stance)
+            {
+                case FormationStance.HoldAndSkirmish:
+                    footArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
+                    if (hasSignificantEnemy)
+                    {
+                        Vec3 archerPos = footArchers.CachedAveragePosition.ToVec3();
+                        Vec3 enemyPos = closestEnemyQs.Formation.CachedAveragePosition.ToVec3();
+                        float kiteRange = footArchers.QuerySystem.MissileRangeAdjusted * 0.85f;
+                        if (archerPos.DistanceSquared(enemyPos) < kiteRange * kiteRange)
+                        {
+                            Vec3 kitePos = TacticalFormationsHelper.CalculateFallbackVector(archerPos, enemyPos, 25f);
+                            footArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, kitePos)));
+                        }
+                    }
+                    break;
+
+                case FormationStance.Pursue:
+                    footArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
+                    footArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
+                    break;
+
+                case FormationStance.Regroup:
+                    footArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, _anchorHighGround)));
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 10. Infantry stance: shield wall only when facing a cavalry-heavy enemy or already
+        /// under missile fire (ShouldFormShieldWall), commits to an advance only when that's
+        /// actually favorable, and disengages a losing advance instead of fighting to the last
+        /// man. See design spec section "Infantry".
+        /// </summary>
+        private void ApplyInfantryStance(Formation infantry)
+        {
+            if (infantry == null || infantry.CountOfUnits <= 0) return;
+            if (_infantryRegrouped) return; // one-way disengage for the rest of this battle
+
+            FormationQuerySystem closestEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
+            bool hasSignificantEnemy = closestEnemyQs != null;
+            float enemyCavalryRatio = hasSignificantEnemy ? closestEnemyQs.CavalryUnitRatio : 0f;
+            bool isUnderHeavyRangedAttack = infantry.QuerySystem.IsUnderRangedAttack;
+            float secondsHolding = _infantryHoldStartTime.HasValue ? _infantryHoldStartTime.Value.ElapsedSeconds : 0f;
+            bool isDefensivePosture = _activeDoctrine == TacticalDoctrine.ThematicLastStand;
+
+            FormationStance stance = TacticalSituationAssessor.AssessInfantryStance(
+                isCurrentlyAdvancing: _infantryCommittedToAdvance,
+                hasSignificantEnemyFormation: hasSignificantEnemy,
+                enemyCavalryUnitRatio: enemyCavalryRatio,
+                isUnderHeavyRangedAttack: isUnderHeavyRangedAttack,
+                enemyCasualtyRatio: hasSignificantEnemy ? (1f - closestEnemyQs.CasualtyRatio) : 0f,
+                secondsSinceHoldStarted: secondsHolding,
+                selfCasualtyRatio: (1f - infantry.QuerySystem.CasualtyRatio),
+                selfLocalPowerRatio: infantry.QuerySystem.LocalPowerRatio,
+                isDefensivePosture: isDefensivePosture);
+
+            switch (stance)
+            {
+                case FormationStance.AwaitOpening:
+                    if (!_infantryHoldStartTime.HasValue)
+                    {
+                        _infantryHoldStartTime = MissionTime.Now;
+                    }
+                    infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderShieldWall);
+                    infantry.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, _anchorHighGround)));
+                    break;
+
+                case FormationStance.AdvanceAndCharge:
+                    _infantryCommittedToAdvance = true;
+                    infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderLine);
+                    infantry.SetMovementOrder(MovementOrder.MovementOrderCharge);
+                    break;
+
+                case FormationStance.Regroup:
+                    _infantryRegrouped = true;
+                    infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderShieldWall);
+                    infantry.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, _anchorHighGround)));
+                    break;
+            }
+        }
+
         private static void DisplayDoctrineMessage(string localizedKeyAndFallback, Color color)
         {
             InformationManager.DisplayMessage(new InformationMessage(new TextObject(localizedKeyAndFallback).ToString(), color));
@@ -628,6 +730,9 @@ namespace SeljukEmpire.Tactics
             _shockCavalryCommittedToCharge = false;
             _shockCavalryRegrouped = false;
             _awaitOpeningStartTime = null;
+            _infantryCommittedToAdvance = false;
+            _infantryRegrouped = false;
+            _infantryHoldStartTime = null;
         }
 
         public override void OnClearScene()
