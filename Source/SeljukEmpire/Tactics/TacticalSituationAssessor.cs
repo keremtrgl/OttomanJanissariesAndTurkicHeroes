@@ -29,6 +29,7 @@ namespace SeljukEmpire.Tactics
         private const float CavalryDisengageCasualtyThreshold = 0.35f;
         private const float CavalryDisengageCasualtyThresholdDefensive = 0.25f;
         private const float DoctrineDowngradeCasualtyThreshold = 0.40f;
+        private const float CavalryThreatRatioThreshold = 0.30f;
 
         public static FormationStance AssessHorseArcherStance(
             bool hasAmmo,
@@ -91,6 +92,15 @@ namespace SeljukEmpire.Tactics
         public static bool ShouldDowngradeToDefensiveDoctrine(float teamAverageCasualtyRatio)
         {
             return teamAverageCasualtyRatio > DoctrineDowngradeCasualtyThreshold;
+        }
+
+        public static bool ShouldFormShieldWall(
+            bool hasSignificantEnemyFormation,
+            float enemyCavalryUnitRatio,
+            bool isUnderHeavyRangedAttack)
+        {
+            return (hasSignificantEnemyFormation && enemyCavalryUnitRatio >= CavalryThreatRatioThreshold)
+                || isUnderHeavyRangedAttack;
         }
     }
 }
