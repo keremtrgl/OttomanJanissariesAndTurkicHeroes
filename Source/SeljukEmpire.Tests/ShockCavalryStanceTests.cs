@@ -11,7 +11,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: false,
-                enemyMovementSpeedMaximum: 0f,
+                enemyCurrentSpeed: 0f,
                 enemyInfantryUnitRatio: 0f,
                 enemyHasShieldUnitRatio: 0f,
                 enemyCasualtyRatio: 0f,
@@ -29,7 +29,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.1f,
+                enemyCurrentSpeed: 0.1f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.0f,
@@ -47,7 +47,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.1f,
+                enemyCurrentSpeed: 0.1f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.2f,
@@ -65,7 +65,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.1f,
+                enemyCurrentSpeed: 0.1f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.0f,
@@ -83,7 +83,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 3.5f,
+                enemyCurrentSpeed: 3.5f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.0f,
@@ -101,7 +101,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.1f,
@@ -119,7 +119,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.1f,
@@ -138,7 +138,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.6f,
@@ -158,7 +158,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.1f,
@@ -177,7 +177,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.1f,
@@ -197,7 +197,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.1f,
@@ -217,7 +217,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: true,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 2f,
+                enemyCurrentSpeed: 2f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.5f,
                 enemyCasualtyRatio: 0.1f,
@@ -232,11 +232,11 @@ namespace SeljukEmpire.Tests
         [Fact]
         public void NotCharging_EnemySpeedExactlyAtEpsilon_TreatedAsNotBraced_Charges()
         {
-            // enemyMovementSpeedMaximum == 0.5 exactly should NOT count as stationary (strict '<').
+            // enemyCurrentSpeed == 0.5 exactly should NOT count as stationary (strict '<').
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.5f,
+                enemyCurrentSpeed: 0.5f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.0f,
@@ -256,7 +256,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.1f,
+                enemyCurrentSpeed: 0.1f,
                 enemyInfantryUnitRatio: 0.5f,
                 enemyHasShieldUnitRatio: 0.2f,
                 enemyCasualtyRatio: 0.0f,
@@ -275,7 +275,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.1f,
+                enemyCurrentSpeed: 0.1f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.15f,
@@ -294,7 +294,7 @@ namespace SeljukEmpire.Tests
             var stance = TacticalSituationAssessor.AssessShockCavalryStance(
                 isCurrentlyCharging: false,
                 hasSignificantEnemyFormation: true,
-                enemyMovementSpeedMaximum: 0.1f,
+                enemyCurrentSpeed: 0.1f,
                 enemyInfantryUnitRatio: 0.8f,
                 enemyHasShieldUnitRatio: 0.9f,
                 enemyCasualtyRatio: 0.0f,

@@ -40,14 +40,18 @@ namespace SeljukEmpire.Tactics
                 return FormationStance.HoldAndSkirmish;
             }
 
-            bool favorable = hasSignificantEnemyFormation && enemyLocalPowerRatio > FavorablePowerRatioThreshold;
+            // enemyLocalPowerRatio is the ENEMY formation's own view of local power (their
+            // ally / their enemy, i.e. them / us) - a value ABOVE 1.0 means the enemy considers
+            // itself stronger, which is unfavorable to us. Strict '<' keeps a tied ratio (1.0)
+            // on the unfavorable/Regroup side, the same safe-default the existing tests pin down.
+            bool favorable = hasSignificantEnemyFormation && enemyLocalPowerRatio < FavorablePowerRatioThreshold;
             return favorable ? FormationStance.Pursue : FormationStance.Regroup;
         }
 
         public static FormationStance AssessShockCavalryStance(
             bool isCurrentlyCharging,
             bool hasSignificantEnemyFormation,
-            float enemyMovementSpeedMaximum,
+            float enemyCurrentSpeed,
             float enemyInfantryUnitRatio,
             float enemyHasShieldUnitRatio,
             float enemyCasualtyRatio,
@@ -69,7 +73,7 @@ namespace SeljukEmpire.Tactics
             }
 
             bool enemyIsBracedLine = hasSignificantEnemyFormation
-                && enemyMovementSpeedMaximum < BracedLineSpeedEpsilon
+                && enemyCurrentSpeed < BracedLineSpeedEpsilon
                 && (enemyInfantryUnitRatio >= BracedLineCompositionThreshold
                     || enemyHasShieldUnitRatio >= BracedLineCompositionThreshold);
 
