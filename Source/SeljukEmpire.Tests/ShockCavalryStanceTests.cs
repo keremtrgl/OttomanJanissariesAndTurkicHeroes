@@ -169,5 +169,141 @@ namespace SeljukEmpire.Tests
 
             Assert.Equal(FormationStance.Regroup, stance);
         }
+
+        [Fact]
+        public void Charging_ExactlyAtDisengageThreshold_NormalPosture_KeepsCharging()
+        {
+            // selfCasualtyRatio == 0.35 exactly should NOT trip the strict '>' comparison.
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: true,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 2f,
+                enemyInfantryUnitRatio: 0.5f,
+                enemyHasShieldUnitRatio: 0.5f,
+                enemyCasualtyRatio: 0.1f,
+                secondsSinceAwaitOpeningStarted: 0f,
+                selfCasualtyRatio: 0.35f,
+                selfLocalPowerRatio: 0.9f,
+                isDefensivePosture: false);
+
+            Assert.Equal(FormationStance.AdvanceAndCharge, stance);
+        }
+
+        [Fact]
+        public void Charging_ExactlyAtDisengageThreshold_DefensivePosture_KeepsCharging()
+        {
+            // selfCasualtyRatio == 0.25 exactly (the tighter defensive threshold) should NOT trip
+            // the strict '>' comparison either.
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: true,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 2f,
+                enemyInfantryUnitRatio: 0.5f,
+                enemyHasShieldUnitRatio: 0.5f,
+                enemyCasualtyRatio: 0.1f,
+                secondsSinceAwaitOpeningStarted: 0f,
+                selfCasualtyRatio: 0.25f,
+                selfLocalPowerRatio: 0.9f,
+                isDefensivePosture: true);
+
+            Assert.Equal(FormationStance.AdvanceAndCharge, stance);
+        }
+
+        [Fact]
+        public void Charging_HeavyCasualties_ExactlyEvenPowerRatio_Regroups()
+        {
+            // selfLocalPowerRatio == 1.0 exactly is unfavorable (<=), so with casualties above
+            // threshold this should disengage.
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: true,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 2f,
+                enemyInfantryUnitRatio: 0.5f,
+                enemyHasShieldUnitRatio: 0.5f,
+                enemyCasualtyRatio: 0.1f,
+                secondsSinceAwaitOpeningStarted: 0f,
+                selfCasualtyRatio: 0.5f,
+                selfLocalPowerRatio: 1.0f,
+                isDefensivePosture: false);
+
+            Assert.Equal(FormationStance.Regroup, stance);
+        }
+
+        [Fact]
+        public void NotCharging_EnemySpeedExactlyAtEpsilon_TreatedAsNotBraced_Charges()
+        {
+            // enemyMovementSpeedMaximum == 0.5 exactly should NOT count as stationary (strict '<').
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: false,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 0.5f,
+                enemyInfantryUnitRatio: 0.8f,
+                enemyHasShieldUnitRatio: 0.9f,
+                enemyCasualtyRatio: 0.0f,
+                secondsSinceAwaitOpeningStarted: 0f,
+                selfCasualtyRatio: 0f,
+                selfLocalPowerRatio: 1f,
+                isDefensivePosture: false);
+
+            Assert.Equal(FormationStance.AdvanceAndCharge, stance);
+        }
+
+        [Fact]
+        public void NotCharging_InfantryRatioExactlyAtCompositionThreshold_CountsAsBraced_AwaitsOpening()
+        {
+            // enemyInfantryUnitRatio == 0.5 exactly should count (inclusive '>='), even with
+            // enemyHasShieldUnitRatio below the threshold.
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: false,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 0.1f,
+                enemyInfantryUnitRatio: 0.5f,
+                enemyHasShieldUnitRatio: 0.2f,
+                enemyCasualtyRatio: 0.0f,
+                secondsSinceAwaitOpeningStarted: 3f,
+                selfCasualtyRatio: 0f,
+                selfLocalPowerRatio: 1f,
+                isDefensivePosture: false);
+
+            Assert.Equal(FormationStance.AwaitOpening, stance);
+        }
+
+        [Fact]
+        public void NotCharging_EnemyCasualtyRatioExactlyAtSoftenedThreshold_StillAwaitsOpening()
+        {
+            // enemyCasualtyRatio == 0.15 exactly should NOT count as softened (strict '>').
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: false,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 0.1f,
+                enemyInfantryUnitRatio: 0.8f,
+                enemyHasShieldUnitRatio: 0.9f,
+                enemyCasualtyRatio: 0.15f,
+                secondsSinceAwaitOpeningStarted: 3f,
+                selfCasualtyRatio: 0f,
+                selfLocalPowerRatio: 1f,
+                isDefensivePosture: false);
+
+            Assert.Equal(FormationStance.AwaitOpening, stance);
+        }
+
+        [Fact]
+        public void NotCharging_ExactlyAtTimeoutThreshold_ChargesAnyway()
+        {
+            // secondsSinceAwaitOpeningStarted == 25 exactly should count as timed out (inclusive '>=').
+            var stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                isCurrentlyCharging: false,
+                hasSignificantEnemyFormation: true,
+                enemyMovementSpeedMaximum: 0.1f,
+                enemyInfantryUnitRatio: 0.8f,
+                enemyHasShieldUnitRatio: 0.9f,
+                enemyCasualtyRatio: 0.0f,
+                secondsSinceAwaitOpeningStarted: 25f,
+                selfCasualtyRatio: 0f,
+                selfLocalPowerRatio: 1f,
+                isDefensivePosture: false);
+
+            Assert.Equal(FormationStance.AdvanceAndCharge, stance);
+        }
     }
 }
