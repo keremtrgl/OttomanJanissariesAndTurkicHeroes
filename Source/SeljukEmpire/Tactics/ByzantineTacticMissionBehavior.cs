@@ -66,6 +66,10 @@ namespace SeljukEmpire.Tactics
         private Vec3 _designatedKillzone;
         private Vec3 _leftFlankPosition;
         private Vec3 _rightFlankPosition;
+        private bool _shockCavalryCommittedToCharge;
+        private bool _shockCavalryRegrouped;
+        private MissionTime? _awaitOpeningStartTime;
+        private MissionTime _doctrineReevalTimer;
 
         public override void AfterStart()
         {
@@ -73,6 +77,10 @@ namespace SeljukEmpire.Tactics
             _currentPhase = TacticalPhase.InitialAssessment;
             _phaseTimer = MissionTime.Now;
             _tickThrottleTimer = MissionTime.Now;
+            _doctrineReevalTimer = MissionTime.Now;
+            _shockCavalryCommittedToCharge = false;
+            _shockCavalryRegrouped = false;
+            _awaitOpeningStartTime = null;
         }
 
         public override void OnMissionTick(float dt)
@@ -107,6 +115,11 @@ namespace SeljukEmpire.Tactics
         private void ExecuteTacticalDecisionLoop()
         {
             if (_activeDoctrine == TacticalDoctrine.StandardEngineFallback) return;
+
+            if (_currentPhase != TacticalPhase.InitialAssessment && _currentPhase != TacticalPhase.BattleEnded)
+            {
+                MaybeDowngradeDoctrine();
+            }
 
             switch (_currentPhase)
             {
@@ -288,12 +301,9 @@ namespace SeljukEmpire.Tactics
                 shockCavalry.SetArrangementOrder(ArrangementOrder.ArrangementOrderSkein);
             }
 
-            // Horse archers (Vardariotai-style) probing and skirmishing
-            if (horseArchers != null && horseArchers.CountOfUnits > 0)
-            {
-                horseArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
-                horseArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
-            }
+            // Horse archers (Vardariotai-style) probing and skirmishing - reactive stance, never
+            // a blind melee charge
+            ApplyHorseArcherStance(horseArchers);
 
             // Transition Trigger: When enemy gets close (90m) or 20 seconds of skirmishing have passed
             if (_phaseTimer.ElapsedSeconds > 22f || IsEnemyWithinDistance(90f))
@@ -343,25 +353,17 @@ namespace SeljukEmpire.Tactics
             Formation shockCavalry = _byzantineTeam.GetFormation(FormationClass.Cavalry);
             Formation horseArchers = _byzantineTeam.GetFormation(FormationClass.HorseArcher);
 
-            // Kataphraktoi shock cavalry pincer strike on enemy flanks
-            if (shockCavalry != null && shockCavalry.CountOfUnits > 0)
-            {
-                shockCavalry.SetArrangementOrder(ArrangementOrder.ArrangementOrderSkein);
-                shockCavalry.SetMovementOrder(MovementOrder.MovementOrderCharge);
-            }
+            ApplyShockCavalryStance(shockCavalry);
+            ApplyHorseArcherStance(horseArchers);
 
-            // Horse archers circle the rear
-            if (horseArchers != null && horseArchers.CountOfUnits > 0)
-            {
-                // If horse archers ran out of ammo, they charge with swords/lances!
-                if (TacticalFormationsHelper.IsRangedAmmoDepleted(horseArchers))
-                {
-                    horseArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderSkein);
-                }
-                horseArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
-            }
+            // Only let the fixed-time/distance transition push the battle into the all-in final
+            // phase once shock cavalry has actually committed to a charge (or already made its
+            // regroup call) - otherwise this would drag a formation still correctly waiting out a
+            // braced enemy line into a forced charge.
+            bool cavalryReadyToAdvance = shockCavalry == null || shockCavalry.CountOfUnits <= 0
+                || _shockCavalryCommittedToCharge || _shockCavalryRegrouped;
 
-            if (_phaseTimer.ElapsedSeconds > 16f || IsEnemyWithinDistance(30f))
+            if (cavalryReadyToAdvance && (_phaseTimer.ElapsedSeconds > 16f || IsEnemyWithinDistance(30f)))
             {
                 _currentPhase = TacticalPhase.DecisiveHammerCharge;
                 _phaseTimer = MissionTime.Now;
@@ -391,20 +393,132 @@ namespace SeljukEmpire.Tactics
                 footArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
             }
 
-            if (shockCav != null && shockCav.CountOfUnits > 0)
-            {
-                shockCav.SetMovementOrder(MovementOrder.MovementOrderCharge);
-            }
-
-            if (horseArchers != null && horseArchers.CountOfUnits > 0)
-            {
-                horseArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
-            }
+            ApplyShockCavalryStance(shockCav);
+            ApplyHorseArcherStance(horseArchers);
 
             // Once the decisive melee begins, return control smoothly to standard native engine
             if (_phaseTimer.ElapsedSeconds > 35f)
             {
                 _activeDoctrine = TacticalDoctrine.StandardEngineFallback;
+            }
+        }
+
+        /// <summary>
+        /// 6. Periodic doctrine re-evaluation. One-way: once downgraded to ThematicLastStand for
+        /// heavy losses, this battle never upgrades back to a more aggressive doctrine.
+        /// </summary>
+        private void MaybeDowngradeDoctrine()
+        {
+            if (_activeDoctrine == TacticalDoctrine.ThematicLastStand) return;
+            if (_doctrineReevalTimer.ElapsedSeconds < 9f) return;
+
+            _doctrineReevalTimer = MissionTime.Now;
+
+            float totalCasualtyRatio = 0f;
+            int formationCount = 0;
+
+            foreach (var formation in _byzantineTeam.FormationsIncludingEmpty)
+            {
+                if (formation.CountOfUnits <= 0) continue;
+                totalCasualtyRatio += formation.QuerySystem.CasualtyRatio;
+                formationCount++;
+            }
+
+            if (formationCount == 0) return;
+
+            float averageCasualtyRatio = totalCasualtyRatio / formationCount;
+
+            if (TacticalSituationAssessor.ShouldDowngradeToDefensiveDoctrine(averageCasualtyRatio))
+            {
+                _activeDoctrine = TacticalDoctrine.ThematicLastStand;
+            }
+        }
+
+        /// <summary>
+        /// 7. Horse archer stance: extracts primitives from Formation.QuerySystem and asks
+        /// TacticalSituationAssessor what to do, then translates the answer into actual orders.
+        /// Never issues a blind melee charge - see design spec section "Horse archers".
+        /// </summary>
+        private void ApplyHorseArcherStance(Formation horseArchers)
+        {
+            if (horseArchers == null || horseArchers.CountOfUnits <= 0) return;
+
+            bool hasAmmo = !TacticalFormationsHelper.IsRangedAmmoDepleted(horseArchers);
+            FormationQuerySystem closestEnemyQs = horseArchers.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
+            bool hasSignificantEnemy = closestEnemyQs != null;
+            float enemyPowerRatio = hasSignificantEnemy ? closestEnemyQs.LocalPowerRatio : 0f;
+
+            FormationStance stance = TacticalSituationAssessor.AssessHorseArcherStance(hasAmmo, hasSignificantEnemy, enemyPowerRatio);
+
+            switch (stance)
+            {
+                case FormationStance.HoldAndSkirmish:
+                    horseArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderLoose);
+                    Vec3 archerPos = horseArchers.OrderPosition.ToVec3();
+                    Vec3 enemyPos = GetTeamCenterPosition(_enemyTeam);
+                    Vec3 kitePos = TacticalFormationsHelper.CalculateFallbackVector(archerPos, enemyPos, 25f);
+                    horseArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, kitePos)));
+                    break;
+
+                case FormationStance.Pursue:
+                    horseArchers.SetArrangementOrder(ArrangementOrder.ArrangementOrderSkein);
+                    horseArchers.SetMovementOrder(MovementOrder.MovementOrderCharge);
+                    break;
+
+                case FormationStance.Regroup:
+                    horseArchers.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, _anchorHighGround)));
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 8. Shock cavalry stance: gates the charge behind a braced-line check before committing,
+        /// then keeps polling every tick while charging so a losing fight gets recalled instead of
+        /// fought to the last horse. See design spec section "Shock cavalry".
+        /// </summary>
+        private void ApplyShockCavalryStance(Formation shockCavalry)
+        {
+            if (shockCavalry == null || shockCavalry.CountOfUnits <= 0) return;
+            if (_shockCavalryRegrouped) return; // one-way disengage for the rest of this battle
+
+            FormationQuerySystem closestEnemyQs = shockCavalry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
+            bool hasSignificantEnemy = closestEnemyQs != null;
+            float secondsWaiting = _awaitOpeningStartTime.HasValue ? _awaitOpeningStartTime.Value.ElapsedSeconds : 0f;
+            bool isDefensivePosture = _activeDoctrine == TacticalDoctrine.ThematicLastStand;
+
+            FormationStance stance = TacticalSituationAssessor.AssessShockCavalryStance(
+                _shockCavalryCommittedToCharge,
+                hasSignificantEnemy,
+                hasSignificantEnemy ? closestEnemyQs.MovementSpeedMaximum : 0f,
+                hasSignificantEnemy ? closestEnemyQs.InfantryUnitRatio : 0f,
+                hasSignificantEnemy ? closestEnemyQs.HasShieldUnitRatio : 0f,
+                hasSignificantEnemy ? closestEnemyQs.CasualtyRatio : 0f,
+                secondsWaiting,
+                shockCavalry.QuerySystem.CasualtyRatio,
+                shockCavalry.QuerySystem.LocalPowerRatio,
+                isDefensivePosture);
+
+            switch (stance)
+            {
+                case FormationStance.AwaitOpening:
+                    if (!_awaitOpeningStartTime.HasValue)
+                    {
+                        _awaitOpeningStartTime = MissionTime.Now;
+                    }
+                    shockCavalry.SetArrangementOrder(ArrangementOrder.ArrangementOrderSkein);
+                    shockCavalry.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, _leftFlankPosition)));
+                    break;
+
+                case FormationStance.AdvanceAndCharge:
+                    _shockCavalryCommittedToCharge = true;
+                    shockCavalry.SetArrangementOrder(ArrangementOrder.ArrangementOrderSkein);
+                    shockCavalry.SetMovementOrder(MovementOrder.MovementOrderCharge);
+                    break;
+
+                case FormationStance.Regroup:
+                    _shockCavalryRegrouped = true;
+                    shockCavalry.SetMovementOrder(MovementOrder.MovementOrderMove(new WorldPosition(Mission.Current.Scene, _anchorHighGround)));
+                    break;
             }
         }
 
@@ -499,6 +613,9 @@ namespace SeljukEmpire.Tactics
             _enemyTeam = null;
             _activeDoctrine = TacticalDoctrine.Undecided;
             _currentPhase = TacticalPhase.BattleEnded;
+            _shockCavalryCommittedToCharge = false;
+            _shockCavalryRegrouped = false;
+            _awaitOpeningStartTime = null;
         }
 
         public override void OnClearScene()
