@@ -3,9 +3,10 @@
 Bu doküman, **"Seljuk Empire: Sword of Islam"** total conversion modundaki tüm modüllerin, C# çok
 doktrinli taktik yapay zeka motorunun, BattlePerformanceOptimizer FPS sisteminin, **Selçuklu Kervan
 Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**, 8 krallığın (Selçuklu + 7 rakip), klan, lord,
-yerleşke, birlik ağaçları, lord ordu şablonları, karakter yaratma özgeçmişleri, meyhane companion'ları
-(tam GameText özgeçmişleriyle), eşyalar, politikalar ve 8 dil desteği arasındaki ilişkileri
-detaylandırmaktadır. **Güncel sürüm: v1.7.4.**
+yerleşke, birlik ağaçları, lord ordu şablonları (+ meyhane/muhafız/milis/isyancı asker yönlendirmesi),
+karakter yaratma özgeçmişleri, meyhane companion'ları (tam GameText özgeçmişleriyle, hem 14 tarihi hem
+11 jenerik Selçuklu gezgini), eşyalar, politikalar ve 8 dil desteği arasındaki ilişkileri
+detaylandırmaktadır. **Güncel sürüm: v1.7.8.**
 
 ---
 
@@ -13,14 +14,14 @@ detaylandırmaktadır. **Güncel sürüm: v1.7.4.**
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, 55 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(21 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(21 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
     SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
     SM --> XML_L["8 x *_lords.xml<br/>(Tüm Krallıklarda Tarihi Lord İsimleri)"]
-    SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>(Soy Ağacı & 14 Tarihi Meyhane Yoldaşı)"]
+    SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>+ seljuk_special_characters.xml<br/>(Soy Ağacı, 14 Tarihi + 11 Jenerik Meyhane Yoldaşı)"]
     SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
-    SM --> XML_P["party_templates.xml<br/>(8 Kültürün Lord Ordu Şablonu — v1.7.2)"]
+    SM --> XML_P["party_templates.xml<br/>(8 Kültürün Lord Ordu Şablonu — v1.7.2<br/>+ Meyhane/Muhafız/Devriye/Milis/İsyancı Yönlendirmesi — v1.7.5/v1.7.7)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
     SM --> XML_I["items.xml<br/>(12 Efsanevi Yadigar)"]
     SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
@@ -326,7 +327,28 @@ yanıtı + kapanış) birebir uyumlu, 8 dilin hepsinde tam çeviriyle.
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.4)
+## 🎭 9b. 11 Jenerik Selçuklu Gezgini (seljuk_special_characters.xml) — v1.7.6 & v1.7.8
+
+`rival_culture_companion_backstories.xml` (v1.7.4) sadece 14 **isimli** rakip-kültür companion'ını
+kapsıyordu. `ModuleData/seljuk_special_characters.xml` içindeki 11 **jenerik** Selçuklu gezgini
+(`spc_wanderer_seljuk_0` – `_10`) tamamen ayrı bir dosya — Native'in kendi `spc_wanderer_khuzait_0-10`
+şablonlarının (aynı yüz/ekipman/skill_template referanslarıyla) modun kendi askeri ağacı henüz yokken
+yapılmış bir kopyala-yapıştır kalıntısı — ve v1.7.4'ün süpürmesine hiç girmemişti.
+
+```mermaid
+graph LR
+    BUG["Ekranda görülen:<br/>'ERROR: Text with id<br/>prebackstory doesn't exist!<br/>Variation: spc_wanderer_seljuk_9'"] --> ROOT["Kök neden: seljuk_special_characters.xml'deki<br/>11 gezgin de 8 GameText kategorisinden<br/>(prebackstory/backstory_a-d/response_1-2/generic_backstory)<br/>YOKSUN — v1.6.7/v1.7.4 ile aynı GameTextManager mekanizması"]
+    ROOT --> V176["v1.7.6: 88 giriş (11×8) + 11 görünen ad<br/>yazıldı — sadece EN+TR"]
+    V176 --> V178["v1.7.8: Kalan 6 dile (DE/FR/ES/RU/AR/CN)<br/>tam çeviri — verify_mod.py artık<br/>0 hata / 0 uyarı raporluyor"]
+```
+
+Bu, aynı `GameTextManager` açığının (bkz. bölüm 10, v1.6.7 ve v1.7.4) üçüncü kez farklı bir dosyada
+bulunuşu — Native'in her wanderer şablonu için 8 kategoriyi ayrı ayrı beklediği, eksik olanı sessizce
+atlamadığı, ekrana literal bir hata metni bastığı ders bu mod genelinde artık üç kez doğrulandı.
+
+---
+
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.8)
 
 ```mermaid
 graph LR
@@ -339,6 +361,10 @@ graph LR
     V171 --> V172["v1.7.2<br/>Lordların native ordusu:<br/>8 kültüre default_party_template<br/>bağlandı (turnuva/tutsak dahil)"]
     V172 --> V173["v1.7.3<br/>78 atlı birime upgrade_requires<br/>eklendi (atsız yükseltme kapatıldı)"]
     V173 --> V174["v1.7.4<br/>14 companion'ın 112 GameText<br/>girişi tamamlandı + 10 sabit<br/>mesaj {=key}'e taşındı"]
+    V174 --> V175["v1.7.5<br/>Meyhane/kervan/devriye/kuşatma<br/>milisi/vasal hediyesi: 28 yeni<br/>PartyTemplate ile Native'den<br/>kendi ağaçlarına yönlendirildi"]
+    V175 --> V176["v1.7.6<br/>11 jenerik Selçuklu gezgininin<br/>88 GameText girişi + 11 ad<br/>(EN+TR)"]
+    V176 --> V177["v1.7.7<br/>rebels_party_template +<br/>militia_party_template: 8<br/>kültüre özel şablon + 2 yeni<br/>otomatik denge kontrolü"]
+    V177 --> V178["v1.7.8<br/>11 gezginin 88 girişi kalan<br/>6 dile çevrildi — verify_mod.py<br/>0 hata/0 uyarı"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -385,6 +411,28 @@ graph LR
   companion'ın gerçek tarihine dayalı, 8 dilde eklendi (`rival_culture_companion_backstories.xml`).
   Ayrıca bu segmentte 10 sabit kodlanmış Türkçe oyun-içi mesaj (taktik AI çağrıları, kervan sigortası
   bildirimleri, turnuva mesajı) `{=key}` lokalizasyon sistemine taşındı.
+- **v1.7.5 kök neden (oyuncu tarafından bildirildi — meyhaneler hâlâ native asker sunuyordu):**
+  `RecruitmentCampaignBehavior` (decompile) meyhane paralı askerini `town.Culture.
+  BasicMercenaryTroops`'tan çekiyor; `Sandbox/ModuleData/partyTemplates.xml`'deki `<Culture>` üzerindeki
+  diğer tüm asker-seçim attribute/element'leri de (kervan muhafızı, vasal hediyesi, yerleşke devriyesi,
+  kuşatma milisi) aynı şekilde — bir `Culture.BasicTroop` dolaylaması değil, doğrudan sabit Native
+  troop/PartyTemplate id'si. Daha önceki `basic_troop`/`elite_basic_troop`/`default_party_template`
+  düzeltmeleri (v1.7.0-v1.7.2) bunların hiçbirine dokunmamıştı. 8 kültüre (Selçuklu dahil, hâlâ
+  Khuzait'ten kalma kopya) `party_templates.xml`'de 28 yeni `MBPartyTemplate` bağlandı.
+- **v1.7.6 kök neden (oyuncu tarafından bildirildi — "Nafisa the Swift" vb. gezginlerde "ERROR: Text
+  with id prebackstory doesn't exist!"):** v1.7.4'ün süpürdüğü 14 isimli companion'dan tamamen ayrı,
+  `seljuk_special_characters.xml`'deki 11 jenerik Selçuklu gezgini (`spc_wanderer_seljuk_0-10` —
+  Native'in `spc_wanderer_khuzait_0-10`'undan kopyala-yapıştır kalıntısı) 8 GameText kategorisinin
+  hiçbirine sahip değildi. 88 giriş (11×8) + 11 görünen ad yazıldı, önce sadece EN+TR ile.
+- **v1.7.7 kök neden (bu oturumda, önceki fix'in kapsamı taranırken bulundu):** `rebels_party_template`
+  ve `militia_party_template` (isyancı ve milis-destek orduları), bir önceki commit'te düzeltilen
+  `melee_militia_troop`/`ranged_militia_troop`'tan tamamen ayrı bir `PartyTemplate` referansı — 8
+  kültürün hepsinde hâlâ ham Native asker (`imperial_recruit`, `khuzait_militia_spearman` vb.)
+  kullanıyordu. 8 kültüre kendi ağacından şablon eklendi; bu ve önceki fix'in yakaladığı hata sınıfını
+  bir daha yakalayacak otomatik kontroller `verify_mod.py`'ye eklendi.
+- **v1.7.8 kök neden:** v1.7.6'da 11 jenerik gezginin 88 girişi + 11 adı sadece EN+TR ile eklenmişti;
+  modun zorunlu 8 dil senkron kuralına göre eksikti. Kalan 6 dile (DE/FR/ES/RU/AR/CN) tam çeviri
+  eklendi — `verify_mod.py` bu oturumda ilk kez 0 hata VE 0 uyarı raporladı.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).
