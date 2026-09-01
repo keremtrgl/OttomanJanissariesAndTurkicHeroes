@@ -22,6 +22,12 @@ namespace SeljukEmpire.Tactics
     public static class TacticalSituationAssessor
     {
         private const float FavorablePowerRatioThreshold = 1.0f;
+        private const float BracedLineSpeedEpsilon = 0.5f;
+        private const float BracedLineCompositionThreshold = 0.5f;
+        private const float EnemySoftenedCasualtyThreshold = 0.15f;
+        private const float AwaitOpeningTimeoutSeconds = 25f;
+        private const float CavalryDisengageCasualtyThreshold = 0.35f;
+        private const float CavalryDisengageCasualtyThresholdDefensive = 0.25f;
 
         public static FormationStance AssessHorseArcherStance(
             bool hasAmmo,
@@ -35,6 +41,46 @@ namespace SeljukEmpire.Tactics
 
             bool favorable = hasSignificantEnemyFormation && enemyLocalPowerRatio > FavorablePowerRatioThreshold;
             return favorable ? FormationStance.Pursue : FormationStance.Regroup;
+        }
+
+        public static FormationStance AssessShockCavalryStance(
+            bool isCurrentlyCharging,
+            bool hasSignificantEnemyFormation,
+            float enemyMovementSpeedMaximum,
+            float enemyInfantryUnitRatio,
+            float enemyHasShieldUnitRatio,
+            float enemyCasualtyRatio,
+            float secondsSinceAwaitOpeningStarted,
+            float selfCasualtyRatio,
+            float selfLocalPowerRatio,
+            bool isDefensivePosture)
+        {
+            if (isCurrentlyCharging)
+            {
+                float disengageThreshold = isDefensivePosture
+                    ? CavalryDisengageCasualtyThresholdDefensive
+                    : CavalryDisengageCasualtyThreshold;
+
+                bool losingBadly = selfCasualtyRatio > disengageThreshold
+                    && selfLocalPowerRatio <= FavorablePowerRatioThreshold;
+
+                return losingBadly ? FormationStance.Regroup : FormationStance.AdvanceAndCharge;
+            }
+
+            bool enemyIsBracedLine = hasSignificantEnemyFormation
+                && enemyMovementSpeedMaximum < BracedLineSpeedEpsilon
+                && (enemyInfantryUnitRatio >= BracedLineCompositionThreshold
+                    || enemyHasShieldUnitRatio >= BracedLineCompositionThreshold);
+
+            if (!enemyIsBracedLine)
+            {
+                return FormationStance.AdvanceAndCharge;
+            }
+
+            bool enemySoftened = enemyCasualtyRatio > EnemySoftenedCasualtyThreshold;
+            bool timedOut = secondsSinceAwaitOpeningStarted >= AwaitOpeningTimeoutSeconds;
+
+            return (enemySoftened || timedOut) ? FormationStance.AdvanceAndCharge : FormationStance.AwaitOpening;
         }
     }
 }
