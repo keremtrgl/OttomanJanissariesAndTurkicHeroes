@@ -219,7 +219,13 @@ namespace SeljukEmpire.Tactics
             // slope-search evaluator when infantry exists to run it from (named distinctly
             // from the pre-existing 'infantry' int headcount local a few lines above).
             Formation anchorInfantryFormation = _seljukTeam.GetFormation(FormationClass.Infantry);
-            _anchorHighGround = TacticalFormationsHelper.FindOptimalHighGround(teamCenter, 80f, anchorInfantryFormation?.QuerySystem);
+            // Team.GetFormation never returns null (all formation slots are pre-created) - guard on
+            // CountOfUnits explicitly, or an infantry-less army passes a never-ticked Formation
+            // (CachedAveragePosition == (0,0), invalid CachedMedianPosition) into the native search.
+            FormationQuerySystem anchorQuerySystem = (anchorInfantryFormation != null && anchorInfantryFormation.CountOfUnits > 0)
+                ? anchorInfantryFormation.QuerySystem
+                : null;
+            _anchorHighGround = TacticalFormationsHelper.FindOptimalHighGround(teamCenter, 80f, anchorQuerySystem);
             _designatedKillzone = teamCenter;
 
             float cavRatio = (float)(horseArchers + shockCav) / totalFriendly;
@@ -274,19 +280,31 @@ namespace SeljukEmpire.Tactics
             // Positioning Infantry on High Ground Anchor - shield wall only when actually needed
             if (infantry != null && infantry.CountOfUnits > 0)
             {
-                WorldPosition anchorWorldPos = new WorldPosition(Mission.Current.Scene, _anchorHighGround);
-                infantry.SetMovementOrder(MovementOrder.MovementOrderMove(anchorWorldPos));
+                // Emergency override: an enemy shock-cavalry charge is about to strike our front
+                // within ~15 seconds - brace immediately even while still marching to the anchor,
+                // rather than only reacting once DualFlankEncirclement begins (that phase can start
+                // up to 22s / 90m into the battle, well after this signal would have fired first).
+                if (infantry.QuerySystem.IsUnderCavalryChargeFromFront)
+                {
+                    infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderShieldWall);
+                    infantry.SetMovementOrder(MovementOrder.MovementOrderStop);
+                }
+                else
+                {
+                    WorldPosition anchorWorldPos = new WorldPosition(Mission.Current.Scene, _anchorHighGround);
+                    infantry.SetMovementOrder(MovementOrder.MovementOrderMove(anchorWorldPos));
 
-                FormationQuerySystem closestInfantryEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
-                bool infantryHasSignificantEnemy = closestInfantryEnemyQs != null;
-                // Combine with RangedCavalryUnitRatio - horse archers are a separate FormationClass (decompile-verified).
-                float infantryEnemyCavalryRatio = infantryHasSignificantEnemy ? (closestInfantryEnemyQs.CavalryUnitRatio + closestInfantryEnemyQs.RangedCavalryUnitRatio) : 0f;
-                bool infantryUnderRangedAttack = infantry.QuerySystem.IsUnderRangedAttack;
+                    FormationQuerySystem closestInfantryEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
+                    bool infantryHasSignificantEnemy = closestInfantryEnemyQs != null;
+                    // Combine with RangedCavalryUnitRatio - horse archers are a separate FormationClass (decompile-verified).
+                    float infantryEnemyCavalryRatio = infantryHasSignificantEnemy ? (closestInfantryEnemyQs.CavalryUnitRatio + closestInfantryEnemyQs.RangedCavalryUnitRatio) : 0f;
+                    bool infantryUnderRangedAttack = infantry.QuerySystem.IsUnderRangedAttack;
 
-                infantry.SetArrangementOrder(
-                    TacticalSituationAssessor.ShouldFormShieldWall(infantryHasSignificantEnemy, infantryEnemyCavalryRatio, infantryUnderRangedAttack)
-                        ? ArrangementOrder.ArrangementOrderShieldWall
-                        : ArrangementOrder.ArrangementOrderLine);
+                    infantry.SetArrangementOrder(
+                        TacticalSituationAssessor.ShouldFormShieldWall(infantryHasSignificantEnemy, infantryEnemyCavalryRatio, infantryUnderRangedAttack)
+                            ? ArrangementOrder.ArrangementOrderShieldWall
+                            : ArrangementOrder.ArrangementOrderLine);
+                }
             }
 
             // Foot archers placed right behind the line - reactive stance, never a blind melee charge
