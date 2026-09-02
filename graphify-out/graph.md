@@ -1,12 +1,14 @@
 # Seljuk Empire: Sword of Islam — Mod Mimari & Bağlantı Grafiği (Architecture Graph)
 
 Bu doküman, **"Seljuk Empire: Sword of Islam"** total conversion modundaki tüm modüllerin, C# çok
-doktrinli taktik yapay zeka motorunun, BattlePerformanceOptimizer FPS sisteminin, **Selçuklu Kervan
-Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**, 8 krallığın (Selçuklu + 7 rakip), klan, lord,
-yerleşke, birlik ağaçları, lord ordu şablonları (+ meyhane/muhafız/milis/isyancı asker yönlendirmesi),
-karakter yaratma özgeçmişleri, meyhane companion'ları (tam GameText özgeçmişleriyle, hem 14 tarihi hem
-11 jenerik Selçuklu gezgini), eşyalar, politikalar ve 8 dil desteği arasındaki ilişkileri
-detaylandırmaktadır. **Güncel sürüm: v1.7.8.**
+doktrinli **reaktif** taktik yapay zeka motorunun (artık sabit senaryo değil, `Formation.
+QuerySystem`'den her tick canlı muharebe verisi okuyan paylaşılan bir karar katmanı —
+`TacticalSituationAssessor`, 43 birim testiyle), BattlePerformanceOptimizer FPS sisteminin,
+**Selçuklu Kervan Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**, 8 krallığın (Selçuklu +
+7 rakip), klan, lord, yerleşke, birlik ağaçları, lord ordu şablonları (+ meyhane/muhafız/milis/
+isyancı asker yönlendirmesi), karakter yaratma özgeçmişleri, meyhane companion'ları (tam GameText
+özgeçmişleriyle, hem 14 tarihi hem 11 jenerik Selçuklu gezgini), eşyalar, politikalar ve 8 dil
+desteği arasındaki ilişkileri detaylandırmaktadır. **Güncel sürüm: v1.8.1.**
 
 ---
 
@@ -14,7 +16,7 @@ detaylandırmaktadır. **Güncel sürüm: v1.7.8.**
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(21 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(22 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
     SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
@@ -27,9 +29,10 @@ graph TD
     SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
 
-    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM)"]
-    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM)"]
-    CSHARP --> TACTIC_MATH["TacticalFormationsHelper<br/>(Sıfır-GC Tepe & Sınır Güvenliği)"]
+    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM,<br/>artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM,<br/>artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_ASSESS["TacticalSituationAssessor<br/>(Motordan Bağımsız Paylaşılan Karar Katmanı<br/>— 43 Birim Testi, v1.7.9-v1.8.1)"]
+    CSHARP --> TACTIC_MATH["TacticalFormationsHelper<br/>(Sıfır-GC Tepe & Sınır Güvenliği<br/>+ Native Eğim Araması Tercihi — v1.8.1)"]
     CSHARP --> PERF_OPT["BattlePerformanceOptimizer<br/>+ RagdollPhysicsBudgetManager<br/>(FPS & Frametime Dengeleyici, sadece tarla savaşları)"]
     CSHARP --> ECON_INS["SeljukCaravanInsuranceBehavior<br/>(Devlet Sigortası & İpek Yolu Fonu)"]
     CSHARP --> ADMIN["SeljukAtabegTitleBehavior<br/>(Atabeglik XP — sadece Selçuklu yerleşimi yöneten valilere)"]
@@ -87,7 +90,15 @@ sadece `mission.Mode == MissionMode.Battle` durumunda etkin; taktik doktrin FSM'
 
 ---
 
-## 🏹 4. Çok Doktrinli Taktik Yapay Zeka Motoru (Multi-Doctrine AI)
+## 🏹 4. Çok Doktrinli Reaktif Taktik Yapay Zeka Motoru (Multi-Doctrine Reactive AI)
+
+Doktrin seçimi hâlâ savaşın başında aynı 4'e ayrılan mantıkla çalışıyor — ama v1.7.9-v1.8.1'de üç
+ayrı oturumda yapılan (ve her birinde final incelemesinde gerçek, decompile ile doğrulanmış hatalar
+bulunup düzeltilen) bir dizi geçişle, fazların **yürütülmesi** artık sabit bir senaryo değil:
+`TacticalSituationAssessor` adlı, motordan tamamen bağımsız (sıfır `TaleWorlds.*` referansı), 43
+birim testiyle kilitlenmiş paylaşılan bir karar katmanı, her 1.25 saniyede bir `Formation.
+QuerySystem`'in zaten hesapladığı canlı muharebe verisini (kayıp oranı, yerel güç dengesi, düşman
+bileşimi, gelen şarj tehdidi) okuyarak karar veriyor.
 
 ```mermaid
 graph TD
@@ -100,17 +111,38 @@ graph TD
     SELJUK_EVAL -->|Düşman >= 1.8x Sayıca Fazla| D3["3. DOKTRİN: Yüksek Tepe Karşı Pususu<br/>(Stratejik Tepe Kilitleme + Çekiç-Örs)"]
     SELJUK_EVAL -->|Dengeli Ordu| D4["4. DOKTRİN: Bozkır Çapraz Ateş Çemberi<br/>(Bileşik Yaylım Ateşi + Yandan Kuşatma)"]
 
-    D1 --> PHASE_1["Aşama 1: Atlı Okçu Tacizi & Yemleme"]
-    PHASE_1 --> PHASE_2["Aşama 2: Sahte Çekilme (Feigned Retreat)"]
-    PHASE_2 --> PHASE_3["Aşama 3: İki Kanattan Hassa Süvari Baskını"]
-    PHASE_3 --> PHASE_4["Aşama 4: Topyekûn Çekiç & Örs İmhası"]
+    D1 --> ASSESS["TacticalSituationAssessor<br/>(reaktif karar katmanı — aşağıya bkz.)"]
+    D2 --> ASSESS
+    D3 --> ASSESS
+    D4 --> ASSESS
+    ASSESS -.->|"Ordu geneli kayıp > %40<br/>(9sn'de bir yeniden değerlendirme)"| DOWNGRADE["Doktrin tek-yönlü olarak<br/>Yüksek Tepe Savunmasına düşer"]
 
     BYZ_EVAL --> BYZ_D["Bizans Tagma Formasyon Disiplini<br/>(Kendi takımına sadece kendi doktrinini uygular,<br/>Selçuklu FSM'siyle çakışmadan aynı savaşta paralel çalışır)"]
+    BYZ_D --> ASSESS
 ```
 
 Her iki behavior da her tarla savaşına eklenir, ama her biri kendi kültürünün takımı sahada var mı diye
 (`IsSeljukTeam`/`IsByzantineTeam`) kontrol edip sadece kendi hak ettiği tek takıma emir veriyor — bir
 Selçuklu-Bizans savaşında ikisi de çakışmadan paralel çalışıyor.
+
+### 4b. TacticalSituationAssessor — Birim Tipine Göre Reaktif Davranış
+
+| Birim Tipi | Eski Davranış (v1.7.8'e kadar) | Yeni Davranış (v1.7.9-v1.8.1) |
+| :--- | :--- | :--- |
+| **Şok Süvarisi** | Faza girince koşulsuz şarj | Düşman mızrak/kalkan duvarı kurup duruyorsa (canlı hız verisiyle tespit) bekler; şarj kötü gidiyorsa (`kayıp > %35, güç dengesi aleyhte`) kontrollü geri çekilir |
+| **Atlı Okçu** | Faz başında koşulsuz şarj, mermi bitince yakın dövüş | Mermi varken hep mesafe korur/vur-kaç yapar; mermi bitince yerel güce göre kovalar ya da çekilir |
+| **Piyade** | Her savaşta koşulsuz kalkan duvarı, faz sonunda koşulsuz şarj | Kalkan duvarını sadece süvari tehdidi (atlı okçu dahil) ya da ok yağmuru altındayken kurar; ilerleyiş kaybediyorsa kontrollü çekilir; **gelen bir süvari şarjını (15sn içinde çarpacak) anında algılayıp duraklayıp kalkan duvarına geçer** (v1.8.1) |
+| **Yaya Okçu** | Faz sonunda koşulsuz yakın dövüş şarjı | Atlı okçuyla birebir aynı mantığı kullanır (aynı test edilmiş fonksiyon, sadece kama formasyonu yerine gevşek dizilim) |
+
+**Arazi seçimi (v1.8.1):** `TacticalFormationsHelper.FindOptimalHighGround` artık önce motorun
+kendi `HighGroundCloseToForeseenBattleGround` eğim-arama sonucunu deniyor (öngörülen muharebe
+hattına göre yönlenmiş, düşmana olan mesafeye göre ölçeklenen gerçek bir arazi analizi) — sadece
+piyadesiz bir ordu ya da dejenere bir sonuç durumunda modun eski 8 noktalı sabit taramasına düşüyor.
+
+Üçü de decompile ile doğrulanmış gerçek motor semantiğine dayanıyor — üç ayrı final incelemesi,
+property isimlerinden varsayım yapmanın (`CasualtyRatio` aslında hayatta kalma oranı,
+`MovementSpeedMaximum` aslında azami hız kapasitesi, `CavalryUnitRatio` atlı okçuları saymıyor)
+gerçek hatalara yol açtığını üç kez ayrı ayrı kanıtladı; her seferinde bulunup düzeltildi.
 
 ---
 
@@ -348,7 +380,7 @@ atlamadığı, ekrana literal bir hata metni bastığı ders bu mod genelinde ar
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.8)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.1)
 
 ```mermaid
 graph LR
@@ -365,6 +397,9 @@ graph LR
     V175 --> V176["v1.7.6<br/>11 jenerik Selçuklu gezgininin<br/>88 GameText girişi + 11 ad<br/>(EN+TR)"]
     V176 --> V177["v1.7.7<br/>rebels_party_template +<br/>militia_party_template: 8<br/>kültüre özel şablon + 2 yeni<br/>otomatik denge kontrolü"]
     V177 --> V178["v1.7.8<br/>11 gezginin 88 girişi kalan<br/>6 dile çevrildi — verify_mod.py<br/>0 hata/0 uyarı"]
+    V178 --> V179["v1.7.9<br/>Reaktif süvari AI:<br/>TacticalSituationAssessor<br/>doğdu (24 test)"]
+    V179 --> V180["v1.8.0<br/>Reaktif piyade & okçu AI<br/>(43 test)"]
+    V180 --> V181["v1.8.1<br/>Cepheden şarj tepkisi +<br/>native arazi ustalığı"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -433,6 +468,36 @@ graph LR
 - **v1.7.8 kök neden:** v1.7.6'da 11 jenerik gezginin 88 girişi + 11 adı sadece EN+TR ile eklenmişti;
   modun zorunlu 8 dil senkron kuralına göre eksikti. Kalan 6 dile (DE/FR/ES/RU/AR/CN) tam çeviri
   eklendi — `verify_mod.py` bu oturumda ilk kez 0 hata VE 0 uyarı raporladı.
+- **v1.7.9 kök neden (oyuncu tarafından bildirildi — "atlılarla bodozlama düşmana kafa atıp atlıları
+  kaybedip geri geliyorlar"):** `TuranTacticMissionBehavior`'ın taktik fazları tamamen sabit zaman/
+  mesafe eşikleriyle çalışıyordu — atlı okçular faz başında koşulsuz şarj alıyordu, 4 doktrinin hepsi
+  kuşatma fazına gelince aynı koşulsuz şarj koduna düşüyordu, hiçbir yerde kayıp oranı/düşman
+  bileşimi okunmuyordu. Yeni, motordan bağımsız `TacticalSituationAssessor` katmanı yazıldı
+  (`Formation.QuerySystem` — decompile ile doğrulandı). Final incelemesi 3 gerçek hata buldu ve
+  düzeltti: `CasualtyRatio` aslında hayatta kalma oranıydı (her formasyon savaşın başında "yüksek
+  kayıp" gibi okunuyordu), `MovementSpeedMaximum` azami hız *kapasitesiydi* (mızrak duvarı tespiti
+  hiç tetiklenmiyordu), atlı okçu geri çekilme hedefi son verilen emrin konumunu kullanıyordu (harita
+  kenarına doğru katlanarak uzaklaşıyordu).
+- **v1.8.0 kök neden (kullanıcı isteğiyle — "aşırı iyi olsun" hedefiyle piyade/okçulara genişletildi):**
+  Piyade her savaşta koşulsuz kalkan duvarı kurup faz sonunda koşulsuz şarj ediyordu; yaya okçular
+  mermi bitince koşulsuz yakın dövüşe giriyordu — süvaride düzeltilen kusurun aynısı. Yaya okçular
+  zaten test edilmiş `AssessHorseArcherStance`'i birebir yeniden kullandı; piyade için yeni
+  `AssessInfantryStance` + `ShouldFormShieldWall` yazıldı (süvari tehdidi ya da ok yağmuru altında
+  kalkan duvarı). Final incelemesi 2 gerçek hata buldu: `CavalryUnitRatio` atlı okçuları saymıyordu
+  (motorun kendi `FormationClass.Cavalry`/`FormationClass.HorseArcher` ayrımı nedeniyle — modun
+  imzası olan bozkır atlı okçusu tehdidi hiç algılanmıyordu), foot archer mevzi konumlandırması
+  (12m arkada, cepheye dönük) silinmiş ama yerine hiçbir şey konmamıştı.
+- **v1.8.1 kök neden (kullanıcı isteğiyle — motorun kullanılmayan iki sinyali):** `IsUnderCavalryChargeFromFront`
+  (en yakın büyük düşman şok süvarisi mi, bize mi geliyor, cepheden mi, 15sn içinde mi çarpacak —
+  hepsi decompile ile doğrulandı) piyadeye acil-durum kısa devresi olarak eklendi;
+  `HighGroundCloseToForeseenBattleGround` (öngörülen muharebe hattına göre yönlenmiş gerçek eğim
+  araması) `FindOptimalHighGround`'a tercih edilen yol olarak eklendi. Final incelemesi 1 kritik + 3
+  önemli hata buldu: `Team.GetFormation` asla null dönmüyor (piyadesiz bir ordu, hiç tick almamış bir
+  formasyonu doğrudan native aramaya besleyip haritanın köşesine anchor olabiliyordu), arama yarıçapı
+  motor yolunda hiç uygulanmıyordu, sağlamlık kontrolü yanlış referans noktasıyla karşılaştırma
+  yapıyordu, şarj tepkisi sadece iki fazda vardı (erken bir süvari hücumunun tam kaçırıldığı
+  `StagingAndSkirmish` fazında yoktu). Hepsi aynı oturumda bulunup düzeltildi, sonra Steam
+  Workshop'a (item 3789607078) canlı yayınlandı — Steam Web API ile doğrulandı.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).
