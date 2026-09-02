@@ -27,10 +27,17 @@ namespace SeljukEmpire.Tactics
             if (preferredFormationQuerySystem != null)
             {
                 Vec2 engineSuggestion = preferredFormationQuerySystem.HighGroundCloseToForeseenBattleGround;
-                if (engineSuggestion.DistanceSquared(centerPos.AsVec2) > 1f && Mission.Current?.Scene != null)
+                // Compare against the formation's OWN position (not centerPos, the team-wide mean) -
+                // that's what "nothing better found" actually looks like from the engine, and bound
+                // the result to searchRadius so this path honors the same contract callers expect
+                // from the 8-point scan below (both decompile-verified gaps from the final review).
+                Vec2 formationOwnPosition = preferredFormationQuerySystem.Formation.CachedAveragePosition;
+                float distSqFromFormation = engineSuggestion.DistanceSquared(formationOwnPosition);
+                float distSqFromCenter = engineSuggestion.DistanceSquared(centerPos.AsVec2);
+                if (distSqFromFormation > 1f && distSqFromCenter <= searchRadius * searchRadius && Mission.Current?.Scene != null)
                 {
-                    float engineZ = Mission.Current.Scene.GetTerrainHeight(engineSuggestion);
-                    return ClampToMapBoundaries(new Vec3(engineSuggestion.x, engineSuggestion.y, engineZ));
+                    // z is recomputed by ClampToMapBoundaries below - no need to look it up twice.
+                    return ClampToMapBoundaries(new Vec3(engineSuggestion.x, engineSuggestion.y, centerPos.z));
                 }
             }
 
