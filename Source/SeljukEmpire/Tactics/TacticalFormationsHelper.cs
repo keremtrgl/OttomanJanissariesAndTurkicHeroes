@@ -17,8 +17,23 @@ namespace SeljukEmpire.Tactics
         /// <summary>
         /// Finds the safest high-ground anchor position near the friendly deployment zone.
         /// </summary>
-        public static Vec3 FindOptimalHighGround(Vec3 centerPos, float searchRadius = 70f)
+        public static Vec3 FindOptimalHighGround(Vec3 centerPos, float searchRadius = 70f, FormationQuerySystem preferredFormationQuerySystem = null)
         {
+            // Prefer Native's own slope-search terrain evaluator (oriented toward the
+            // anticipated battle line, radius-scaled to distance) when a formation is given.
+            // Fall back to the 8-point scan below if it looks degenerate (essentially our
+            // current position - most likely Team.MedianTargetFormationPosition hasn't settled
+            // yet, very early in a battle) or if no formation was provided at all.
+            if (preferredFormationQuerySystem != null)
+            {
+                Vec2 engineSuggestion = preferredFormationQuerySystem.HighGroundCloseToForeseenBattleGround;
+                if (engineSuggestion.DistanceSquared(centerPos.AsVec2) > 1f && Mission.Current?.Scene != null)
+                {
+                    float engineZ = Mission.Current.Scene.GetTerrainHeight(engineSuggestion);
+                    return ClampToMapBoundaries(new Vec3(engineSuggestion.x, engineSuggestion.y, engineZ));
+                }
+            }
+
             if (Mission.Current?.Scene == null) return centerPos;
 
             Scene scene = Mission.Current.Scene;
