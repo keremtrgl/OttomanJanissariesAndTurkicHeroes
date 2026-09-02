@@ -215,8 +215,11 @@ namespace SeljukEmpire.Tactics
 
             Vec3 teamCenter = GetTeamCenterPosition(_seljukTeam);
 
-            // Establish terrain anchor on closest highest ground
-            _anchorHighGround = TacticalFormationsHelper.FindOptimalHighGround(teamCenter, 80f);
+            // Establish terrain anchor on closest highest ground - prefer Native's own
+            // slope-search evaluator when infantry exists to run it from (named distinctly
+            // from the pre-existing 'infantry' int headcount local a few lines above).
+            Formation anchorInfantryFormation = _seljukTeam.GetFormation(FormationClass.Infantry);
+            _anchorHighGround = TacticalFormationsHelper.FindOptimalHighGround(teamCenter, 80f, anchorInfantryFormation?.QuerySystem);
             _designatedKillzone = teamCenter;
 
             float cavRatio = (float)(horseArchers + shockCav) / totalFriendly;
@@ -588,6 +591,18 @@ namespace SeljukEmpire.Tactics
         private void ApplyInfantryStance(Formation infantry)
         {
             if (infantry == null || infantry.CountOfUnits <= 0) return;
+
+            // Emergency override: an enemy shock-cavalry charge is about to strike our front
+            // within ~15 seconds (decompile-verified: excludes horse archers and flank/rear
+            // hits by design). Snap to a brace immediately, regardless of what the stance
+            // machine below was doing - it resumes on its own once the window passes.
+            if (infantry.QuerySystem.IsUnderCavalryChargeFromFront)
+            {
+                infantry.SetArrangementOrder(ArrangementOrder.ArrangementOrderShieldWall);
+                infantry.SetMovementOrder(MovementOrder.MovementOrderStop);
+                return;
+            }
+
             if (_infantryRegrouped) return; // one-way disengage for the rest of this battle
 
             FormationQuerySystem closestEnemyQs = infantry.QuerySystem.ClosestSignificantlyLargeEnemyFormation;
