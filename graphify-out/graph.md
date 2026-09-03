@@ -6,9 +6,10 @@ VE kuşatmalar), **Selçuklu Kervan Devlet Sigortası & İpek Yolu Kâr Ortaklı
 (Selçuklu + 7 rakip), klan, lord, yerleşke, birlik ağaçları, her kültürün 8 farklı ordu/parti şablonu
 (lord başlangıç ordusu, han paralı askeri, kervan/yerleşke muhafızı, devriye × 3 kademe, kuşatma
 milisi, isyancı partisi, bağlılık yemini hediyesi), karakter yaratma özgeçmişleri, 25 meyhane
-companion'ı (tam GameText özgeçmişleriyle, 8 dilde), eşyalar, politikalar, 8 dil desteği ve modun
-kendi 15 kontrollü otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri
-detaylandırmaktadır. **Güncel sürüm: v1.7.8.**
+companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş metni, 8
+kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 16 kontrollü
+otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri detaylandırmaktadır.
+**Güncel sürüm: v1.7.9.**
 
 ---
 
@@ -16,7 +17,7 @@ detaylandırmaktadır. **Güncel sürüm: v1.7.8.**
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(21 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(22 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
     SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
@@ -24,11 +25,12 @@ graph TD
     SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>+ seljuk_special_characters*.xml<br/>(Soy Ağacı & 25 Meyhane Yoldaşı: 14 Tarihi + 11 Jenerik)"]
     SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
     SM --> XML_P["party_templates.xml + rival_culture_names.xml<br/>(8 Kültürün 8 Ordu/Parti Şablonu — Lord Ordusu v1.7.2,<br/>Han/Muhafız/Devriye/Milis/İsyancı/Hediye v1.7.5 & v1.7.7, 64 Şablon)"]
+    SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml<br/>(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.7.9)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
-    SM --> XML_I["items.xml<br/>(12 Efsanevi Yadigar)"]
+    SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.7.9)"]
     SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
-    SM -.denetler.-> VERIFY["tools/verify_mod.py<br/>(15 Otomatik Bütünlük Kontrolü — v1.7.7'den beri<br/>CI-tarzı, 0 Hata / 0 Uyarı)"]
+    SM -.denetler.-> VERIFY["tools/verify_mod.py<br/>(16 Otomatik Bütünlük Kontrolü<br/>CI-tarzı, 0 Hata / 0 Uyarı)"]
 
     CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM)"]
     CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM)"]
@@ -41,7 +43,7 @@ graph TD
     CSHARP --> TAVERN["SeljukTavernBehavior<br/>(Ozan/moral sistemi)"]
     CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(32+ tarihi lorda özel diyalog)"]
     CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior<br/>(Yeni oyuncu için sistem tanıtımı)"]
-    CSHARP --> TOURNEY["SeljukTournamentRewardBehavior"]
+    CSHARP --> TOURNEY["SeljukTournamentRewardBehavior<br/>+ RivalCultureTournamentRewardBehavior — v1.7.9<br/>(8 Kültürün Turnuva Şampiyonu Ödülü)"]
     CSHARP --> CULTBONUS["SeljukCultureBonusBehavior<br/>(SeljukWageModel/ConstructionSpeedModel/<br/>SiegeEngineeringModel/CaravanTradeModel)"]
     CSHARP --> CHARGEN["SeljukCharacterCreationContentHandler<br/>+ RivalCultureCharacterCreationContentHandler<br/>(7 kültürde özgeçmiş içeriği)"]
 ```
@@ -385,7 +387,7 @@ Bizans sınır boyu temasına özgün olarak uyarlandı. v1.7.6'da sadece İngil
 
 ### 9c. Otomatik Bütünlük Denetleyicisi (tools/verify_mod.py)
 
-Mod artık kendi 15 kontrollü, ~1200 satırlık Python doğrulama aracını taşıyor — her yayından önce
+Mod artık kendi 16 kontrollü, ~1300 satırlık Python doğrulama aracını taşıyor — her yayından önce
 çalıştırılan bir CI-tarzı güvenlik ağı. v1.7.5-v1.7.7 arasında bu oturumda bulunan iki gerçek
 regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol eklendi:
 
@@ -401,6 +403,13 @@ regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol 
   troops`) `_replaceWhileMerging="true"` eksikse WARN üretir — bu ayrım, Seljuk gibi Native karşılığı
   olmayan kültürlerde yanlış pozitif üretmemek için özellikle eklendi (bkz. bölüm 10, v1.7.7).
 
+- **Check 16 — `item-mesh-validity` (ERROR, v1.7.9):** Modun kendi tanımladığı her `<Item>`'ın
+  `mesh=` değerinin, Native'in gerçekten kullandığı bir mesh'e karşılık geldiğini denetler. Mod hiç
+  kendi 3B varlığı taşımıyor (`AssetPackages/` klasörü yok) — her eşya, `seljuk_royal_feather_helm`'in
+  `khuzait_lord_helmet_a`'yı yeniden kullanması gibi, bilinçli olarak Native'in mevcut bir mesh'ini
+  yeniden kullanıyor; bu yüzden listede olmayan bir `mesh=` neredeyse kesin bir yazım hatasıdır (oyunda
+  görünmeyen/varsayılan geometri olarak render edilir, yükleme hatası vermez).
+
 **Yanlış alarm düzeltmeleri (bu oturumda, "fix" değil "düzelt" — gerçek bulgular):** İki önceki-tur
 iddiası, gerçek motor decompile'ı ile yeniden doğrulanınca **yanlış** çıktı: (1) turnuva katılımcı
 şablonları (`tournament_team_templates_one/two/four_participant`) — 6/7 rakip kültür Native'in
@@ -409,9 +418,21 @@ doğru miras yoluyla çözülüyor; (2) `BattlePerformanceOptimizer`'ın kuşatm
 `MissionMode` enum'unda ayrı bir Siege değeri yok, kuşatma hücumları da `MissionMode.Battle`. Her
 ikisi de gereksiz "düzeltme" içeriği üretmek yerine kullanıcıya açıkça düzeltildi.
 
+**v1.7.9'da prototiplenip geri çekilen bir kontrol:** Check 12'nin (skill puanı) silah karşılığı
+olarak bir "silah gücü paritesi" kontrolü (`Item0`/`Item1`'in `thrust_damage`+`swing_damage`
+toplamını tier medyanıyla karşılaştıran) gerçek mod verisiyle test edildi. Skill puanlarının aksine
+(Native'in kendi tier eğrisi zaten normalize ediyor), ham silah hasarı aynı tier'deki farklı silah
+TÜRLERİ arasında doğal olarak karşılaştırılabilir değil (bir arbalet, Bannerlord'un kendi tasarımı
+gereği bir kılıçtan çok daha sert vurur, bu ateş hızıyla dengelenir, modun hatası değil) — gerçek
+mod verisiyle çalıştırılınca 43 uyarı üretti ve bunların büyük çoğunluğu bu doğal varyanstan
+kaynaklanıyordu, gerçek yazım hatası değil. Bu, aracın diğer tüm uyarılarına duyulan güveni
+zedeleyecek gürültü olurdu, bu yüzden gönderilmeden geri çekildi — check 10-12 halihazırdaki sayısal
+denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS matematiği (isabet,
+`speed_rating`, `weapon_length`) gerektirir, gelecekteki bir fikir olarak not edildi, zorla eklenmedi.
+
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.8)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.9)
 
 ```mermaid
 graph LR
@@ -428,6 +449,7 @@ graph LR
     V175 --> V176["v1.7.6<br/>11 jenerik Selçuklu gezgininin<br/>İKİNCİ, ayrı GameText boşluğu<br/>kapatıldı (88 giriş, EN/TR)"]
     V176 --> V177["v1.7.7<br/>İsyancı/milis parti şablonu<br/>native'e sızıntısı fix (16 şablon) +<br/>verify_mod.py'ye 2 yeni kontrol +<br/>2 yanlış alarm iddiası düzeltildi"]
     V177 --> V178["v1.7.8<br/>11 gezginin 6 kalan dili<br/>tamamlandı (DE/FR/ES/RU/AR/CN,<br/>792 giriş) — 0 hata / 0 uyarı"]
+    V178 --> V179["v1.7.9<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + verify_mod.py check 16"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -508,6 +530,27 @@ graph LR
 - **v1.7.8 — kapanış:** 11 jenerik gezginin 6 kalan dili (DE/FR/ES/RU/AR/CN, 792 giriş) tamamlandı;
   `verify_mod.py`'nin 15 kontrolü bu oturumda ilk kez 0 hata **VE** 0 uyarıyla geçti. Steam
   Workshop'a konsoldan yayınlandı (item 3789607078).
+- **v1.7.9 (kullanıcının "modu her açıdan profesyonelce geliştir" önceliklendirmesinden):**
+  Decompile ile `TaleWorlds.CampaignSystem.CultureObject.EncyclopediaText`'in `<Culture text=...>`
+  attribute'undan geldiği doğrulandı (Native'in `khuzait` kültüründe zaten kullanılan bir alan);
+  Seljuk'ta zaten vardı ama 6 rakip kültürün (`rival_culture_names.xml`) hiçbirinde yoktu — oyun içi
+  Ansiklopedi'de hâlâ Native'in kendi Vlandia/Khuzait/vb. metnini gösteriyorlardı. 6 kültüre orijinal
+  tarihi lore metni eklendi (8 dilde, 48 yeni string). `SeljukTournamentRewardBehavior`'ın sadece
+  Selçuklu şehirlerini kapsadığı asimetrisi, yeni `RivalCultureTournamentRewardBehavior` ile
+  giderildi — `settlement.OwnerClan.Kingdom.StringId` bazlı 7 rakip krallığın her birine, o kültürün
+  kendi Native taban kültüründeki gerçek bir "lord tier" mesh'ini yeniden kullanan 1'er turnuva
+  şampiyonu ödül eşyası eklendi (`items.xml`, 27 eşyaya çıktı); `Kingdom.empire_w` (Latin
+  İmparatorluğu) ile `Kingdom.empire_s` (Bizans) `Culture.empire`'ı paylaşsa da farklı Kingdom id'leri
+  taşıdıkları için farklı ödül eşyaları alabildi - char-creation seviyesinde imkânsız olan Latin/Bizans
+  ayrımına mekanik bir katman eklendi (bkz. bölüm 5b). `verify_mod.py`'ye check 16
+  (`item-mesh-validity`) eklendi. Aynı oturumda prototiplenen bir "silah gücü paritesi" kontrolü,
+  gerçek veriyle 43 gürültülü uyarı ürettiği için dürüstçe geri çekildi (bkz. bölüm 9c). Ayrıca
+  incelenen üç madde - kampanya haritası AI performansı (Harmony olmadan hiçbir güvenli hook yok,
+  modun kendi C#'ı zaten sadece ucuz/seyrek event'ler kullanıyor, decompile+grep ile doğrulandı),
+  evlilik mekaniği (Bannerlord'un vanilla evlilik sistemi zaten herhangi bir uygun companion/lord'u
+  moddan bağımsız kapsıyor, ek kod gerekmiyor) ve 9. bir dil eklenmesi (mevcut 8 dilin her biri
+  ~1750 anahtar taşıyor - aceleye getirilmiş bir çeviri turu kalite riski taşır) - gerçek bulgu
+  olmadığı ya da ayrı bir oturumu hak ettiği için kullanıcıya açıkça bu şekilde raporlandı.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).

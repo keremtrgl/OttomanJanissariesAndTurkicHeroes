@@ -1754,5 +1754,19 @@
 	<string id="spc_wc2_10_response_1" text="Well - I suppose you've got spirit." />
 	<string id="spc_wc2_10_response_2" text="Ha! May every thief fail as badly as you did." />
 	<string id="spc_wc2_10_generic_backstory" text="I was a village peddler's son, and that's not the life I want. I mean to learn to fight and ride. There are plenty of lads like me in these parts, whatever the horse-lords think of us." />
-</strings>
+    <string id="byz_culture_desc" text="The Roman Empire never fell in the east - only shrank. After Manzikert broke its Anatolian heartland, the Purple-born emperors of Constantinople still command the last true heirs of Rome: disciplined Tagmata regiments, Varangian axemen, and a bureaucracy that has outlasted a thousand years of invasion. Gold solidi buy allies the sword cannot win, and every general who forgets that Rome survives on diplomacy as much as steel finds his reign a short one." />
+    <string id="abb_culture_desc" text="From Baghdad's round city, the Abbasid Caliphate once ruled from the Atlantic to the Indus, uniting a golden age of scholars, astronomers, and physicians under the banner of Islam. That unity has long since splintered into emirates and sultanates owing only nominal fealty to the Caliph, yet Baghdad's markets, libraries, and canals remain unmatched - and its call to the faithful still carries weight far beyond its shrunken borders." />
+    <string id="geo_culture_desc" text="Wedged between the Byzantine, Seljuk, and Caucasian mountain lords, the Kingdom of Georgia has learned to survive through Orthodox faith, mountain fortresses, and a nobility as fierce in the saddle as any steppe horseman. King David's line dreams of a unified Caucasus free of foreign tribute - a dream that will one day be called the Georgian Golden Age, if the kingdom can first survive the century that made it." />
+    <string id="crus_culture_desc" text="Answering the call of Rome and Constantinople alike, knights from every corner of Western Christendom carved the Crusader States from the Levantine coast after the First Crusade. Antioch, Edessa, and Jerusalem stand as fortress-cities of a foreign nobility ruling over an Arab, Greek, and Armenian majority - a conquest that must now hold what it took, one castle and one uneasy treaty at a time." />
+    <string id="arm_culture_desc" text="Driven from their highland homeland by Byzantine annexation and Seljuk conquest, Armenian lords rebuilt their nation in the Cilician passes along the Mediterranean coast. Prince Ruben's line rules a kingdom of mountain fortresses and trade roads between Crusader Antioch and the Anatolian interior - a refuge forged in exile, and a bridge between Christian East and West that no neighbor can safely ignore." />
+    <string id="krkh_culture_desc" text="The first Turkic dynasty to embrace Islam as a state religion, the Kara-Khanid Khanate rules the cities and pastures of Transoxiana from Kashgar to Samarkand. Its khans balance the old law of the steppe with the new faith of the mosque, commanding both settled Silk Road merchants and mounted archers who never forgot how to live in the saddle - a khanate built on the same restless energy that once carried Turkic peoples across all of Central Asia." />
+      <string id="item_byz2_champion_helm" text="Tagmatic Champion's Helm" />
+    <string id="item_lat2_champion_helm" text="Latin Imperial Champion's Helm" />
+    <string id="item_abb2_champion_helm" text="Caliph's Champion Helm" />
+    <string id="item_geo2_champion_helm" text="Georgian Royal Champion's Helm" />
+    <string id="item_crus2_champion_helm" text="Crusader Champion's Crowned Helm" />
+    <string id="item_arm2_champion_helm" text="Cilician Champion's Helm" />
+    <string id="item_kk2_champion_helm" text="Kara-Khanid Champion's Battle Crown" />
+    <string id="rival_tourney_victory" text="🏆 [Tournament Champion] You have become the Champion of {TOWN}'s Tournament! Prize: {PRIZE} (+20 Renown gained)!" />
+  </strings>
 </base>

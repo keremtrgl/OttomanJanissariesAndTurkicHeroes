@@ -95,9 +95,27 @@ Checks performed:
                             every culture that reuses a Native base Culture id, and building
                             fully-bespoke ones needs new blunt-weapon Item definitions, a separate,
                             tracked follow-up rather than a "still native troops" bug.
+ 16. item-mesh-validity    [needs game install] Every mesh= this mod sets on its own <Item> entries
+                            (items.xml) must match a mesh some Native item already uses - the mod
+                            ships no custom 3D assets of its own, so every item deliberately reuses an
+                            existing Native mesh (e.g. seljuk_royal_feather_helm -> khuzait_lord_
+                            helmet_a) the same way the v1.7.9 tournament-champion helms do. Catches a
+                            typo'd mesh id - which renders as missing/default geometry in-game, not a
+                            load error - before a player screenshot has to catch it instead.
+
+A weapon-damage-based numeric sibling to check 12 (comparing Item0/Item1 thrust/swing damage
+against a tier median, the way check 12 does for skill points) was prototyped and run against the
+real mod during this same session, but retracted before shipping: unlike skill points, which
+Native's own tier curve already normalizes, raw weapon damage is NOT naturally comparable across
+weapon types at a fixed tier (a crossbow legitimately hits far harder per shot than a sword by
+Bannerlord's own design, compensated by rate of fire, not by the mod). Run for real, it produced
+43 warnings dominated by that natural per-weapon-type variance, not by genuine authoring bugs -
+noise that would have eroded trust in every other WARN this tool produces. Checks 10-12 remain the
+project's numeric balance signal; a real weapon-parity check would need full DPS math (accuracy,
+speed_rating, weapon_length), tracked as a future idea rather than forced in as-is.
 
 Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
-checks 1-8 and 14-15 they describe "this looks unintended", not "this is broken".
+checks 1-8, 14-15, and 16, they describe "this looks unintended", not "this is broken".
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -1042,6 +1060,49 @@ def check_troop_tier_parity(issues, game_path):
                                      f"({deviation:+.0%}) - check for a typo'd skill value."))
 
 
+# --------------------------------------------------------------- check 16 --
+
+def load_native_item_mesh_ids(game_path):
+    """Every mesh= value used by any Native <Item>, across the modules the mod's own
+    items already reuse assets from (SandBoxCore/Native - same scope as
+    load_native_item_ids). The mod ships zero custom 3D assets of its own (no
+    AssetPackages/ dir) - every item.xml entry it defines, including the v1.7.9
+    tournament-champion helms, deliberately reuses an existing Native mesh id the same
+    way seljuk_royal_feather_helm reuses khuzait_lord_helmet_a - so a mesh= that isn't
+    in this set is a typo, not a legitimate custom asset reference."""
+    meshes = set()
+    for f in native_module_xml_files(game_path, NATIVE_MODULES_FOR_ITEMS):
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for item in root.iter("Item"):
+            mesh = item.get("mesh")
+            if mesh:
+                meshes.add(mesh)
+    return meshes
+
+
+def check_item_mesh_validity(issues, game_path):
+    native_meshes = load_native_item_mesh_ids(game_path)
+    if not native_meshes:
+        return
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for item in root.iter("Item"):
+            iid = item.get("id")
+            mesh = item.get("mesh")
+            if not iid or not mesh:
+                continue
+            if mesh not in native_meshes:
+                issues.append(Issue("ERROR", "item-mesh-validity", rel(f),
+                                     f'Item "{iid}" has mesh="{mesh}", which does not match any mesh '
+                                     f"used by a Native item - the mod ships no custom 3D assets of its "
+                                     f"own, so this is very likely a typo that will render as missing/"
+                                     f"default geometry in-game rather than a real asset reference."))
+
+
 # --------------------------------------------------------------- check 13 --
 
 def check_workshop_conflicts(issues, game_path):
@@ -1142,6 +1203,7 @@ def run(args):
         check_gender_consistency(issues, game_path)
         check_troop_armor_slots(issues, game_path)
         check_troop_progression(issues, game_path)
+        check_item_mesh_validity(issues, game_path)
         if args.check_workshop_conflicts:
             check_workshop_conflicts(issues, game_path)
 
