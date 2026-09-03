@@ -7,9 +7,9 @@ VE kuşatmalar), **Selçuklu Kervan Devlet Sigortası & İpek Yolu Kâr Ortaklı
 (lord başlangıç ordusu, han paralı askeri, kervan/yerleşke muhafızı, devriye × 3 kademe, kuşatma
 milisi, isyancı partisi, bağlılık yemini hediyesi), karakter yaratma özgeçmişleri, 25 meyhane
 companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş metni, 8
-kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 16 kontrollü
+kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 17 kontrollü
 otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri detaylandırmaktadır.
-**Güncel sürüm: v1.7.9.**
+**Güncel sürüm: v1.7.10.**
 
 ---
 
@@ -30,7 +30,7 @@ graph TD
     SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.7.9)"]
     SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
-    SM -.denetler.-> VERIFY["tools/verify_mod.py<br/>(16 Otomatik Bütünlük Kontrolü<br/>CI-tarzı, 0 Hata / 0 Uyarı)"]
+    SM -.denetler.-> VERIFY["tools/verify_mod.py<br/>(17 Otomatik Bütünlük Kontrolü<br/>CI-tarzı, 0 Hata / 0 Uyarı)"]
 
     CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM)"]
     CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM)"]
@@ -41,7 +41,7 @@ graph TD
     CSHARP --> SETTLE["SeljukSettlementBehavior<br/>(Selçuklu mülkiyet/sahiplik runtime yönetimi)"]
     CSHARP --> RECRUIT["SeljukRecruitmentBehavior<br/>+ LatinEmpireRecruitmentBehavior<br/>(Culture.empire paylaşımı sorunu için özel askere alma mantığı)"]
     CSHARP --> TAVERN["SeljukTavernBehavior<br/>(Ozan/moral sistemi)"]
-    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(32+ tarihi lorda özel diyalog)"]
+    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(32+ tarihi lorda özel diyalog — v1.7.10'da<br/>117 satırın yanlış diyalog durumu düzeltildi)"]
     CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior<br/>(Yeni oyuncu için sistem tanıtımı)"]
     CSHARP --> TOURNEY["SeljukTournamentRewardBehavior<br/>+ RivalCultureTournamentRewardBehavior — v1.7.9<br/>(8 Kültürün Turnuva Şampiyonu Ödülü)"]
     CSHARP --> CULTBONUS["SeljukCultureBonusBehavior<br/>(SeljukWageModel/ConstructionSpeedModel/<br/>SiegeEngineeringModel/CaravanTradeModel)"]
@@ -387,7 +387,7 @@ Bizans sınır boyu temasına özgün olarak uyarlandı. v1.7.6'da sadece İngil
 
 ### 9c. Otomatik Bütünlük Denetleyicisi (tools/verify_mod.py)
 
-Mod artık kendi 16 kontrollü, ~1300 satırlık Python doğrulama aracını taşıyor — her yayından önce
+Mod artık kendi 17 kontrollü, ~1340 satırlık Python doğrulama aracını taşıyor — her yayından önce
 çalıştırılan bir CI-tarzı güvenlik ağı. v1.7.5-v1.7.7 arasında bu oturumda bulunan iki gerçek
 regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol eklendi:
 
@@ -409,6 +409,15 @@ regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol 
   `khuzait_lord_helmet_a`'yı yeniden kullanması gibi, bilinçli olarak Native'in mevcut bir mesh'ini
   yeniden kullanıyor; bu yüzden listede olmayan bir `mesh=` neredeyse kesin bir yazım hatasıdır (oyunda
   görünmeyen/varsayılan geometri olarak render edilir, yükleme hatası vermez).
+- **Check 17 — `dialogue-hero-ids` (ERROR, v1.7.10):** `Source/**/*.cs`'deki her
+  `Hero.OneToOneConversationHero.StringId == "X"` koşulunu (bir özel diyalog satırının HANGİ
+  karaktere ait olduğunu belirleyen mekanizma) tarar ve `X`'in gerçek bir Native veya mod-tanımlı
+  karakter id'sine karşılık geldiğini doğrular. Yazım hatası burada hiç hata mesajı vermez — koşul
+  sessizce hep yanlış olur, o karakter özel satırını asla göstermez ve fark edilmeden Native'in
+  jenerik selamlamasına düşer. Aynı 3 dosyanın (bölüm 10, v1.7.10) `"lord_pretalk"` hatası
+  denetlenirken bulundu; test sırasında 2 zararsız ama artık gereksiz OR-yedek id kontrolü de
+  temizlendi (`ertugrul_gazi`/`lord_seljuk_nizamulmulk` zaten doğruydu, ikinci alternatif hiç
+  gerçek değildi).
 
 **Yanlış alarm düzeltmeleri (bu oturumda, "fix" değil "düzelt" — gerçek bulgular):** İki önceki-tur
 iddiası, gerçek motor decompile'ı ile yeniden doğrulanınca **yanlış** çıktı: (1) turnuva katılımcı
@@ -432,7 +441,7 @@ denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS mate
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.9)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.10)
 
 ```mermaid
 graph LR
@@ -450,6 +459,7 @@ graph LR
     V176 --> V177["v1.7.7<br/>İsyancı/milis parti şablonu<br/>native'e sızıntısı fix (16 şablon) +<br/>verify_mod.py'ye 2 yeni kontrol +<br/>2 yanlış alarm iddiası düzeltildi"]
     V177 --> V178["v1.7.8<br/>11 gezginin 6 kalan dili<br/>tamamlandı (DE/FR/ES/RU/AR/CN,<br/>792 giriş) — 0 hata / 0 uyarı"]
     V178 --> V179["v1.7.9<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + verify_mod.py check 16"]
+    V179 --> V1710["v1.7.10<br/>117 özel lord/yoldaş selamlaması<br/>yanlış diyalog durumuna gidiyordu<br/>('lord_pretalk' → 'lord_start') +<br/>verify_mod.py check 17"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -551,6 +561,25 @@ graph LR
   moddan bağımsız kapsıyor, ek kod gerekmiyor) ve 9. bir dil eklenmesi (mevcut 8 dilin her biri
   ~1750 anahtar taşıyor - aceleye getirilmiş bir çeviri turu kalite riski taşır) - gerçek bulgu
   olmadığı ya da ayrı bir oturumu hak ettiği için kullanıcıya açıkça bu şekilde raporlandı.
+- **v1.7.10 (kullanıcının "genel bir hata/bug taraması yap" isteğinden — decompile ile bulunan,
+  önceki hiçbir sürümde raporlanmamış bir bulgu):** `TaleWorlds.CampaignSystem.CampaignBehaviors.
+  LordConversationsCampaignBehavior`'ın kendisi decompile edilip Native'in KENDİ "start" durumundan
+  çıkan HER lord selamlama satırı incelendi (`start_default`, `parley_2`, `start_attacking_met` vb.)
+  — hepsi istisnasız `"start"` girdisinden `"lord_start"` çıktısına gidiyor, `"lord_pretalk"`'a giden
+  SIFIR örnek var. Modun kendi 3 diyalog dosyası (`SeljukDialogueBehavior`,
+  `RivalCultureDialogueBehavior`, `NewKingdomsDialogueBehavior` — 32+ tarihi lord/yoldaşın TÜM özel
+  selamlamaları) ise **117 satırın hepsinde** `"start" → "lord_pretalk"` kullanıyordu. Etkisi:
+  `lord_pretalk`'ın tek koşulsuz devamı `"Is there anything else?"` (native'in kendisi bunu farklı,
+  ara durumlardan gelen bir takip cümlesi olarak kullanıyor) - yani her özel selamlamadan hemen sonra
+  bağlamsız, tuhaf bir satır gösteriliyor ve Native'in `lord_start`'tan gelen kendi ortam
+  yorumlarının hepsi atlanıyordu (konuşma çökmüyordu, sadece hep bu garip ekstra adımdan geçiyordu -
+  klasik "sessiz, hatasız ama yanlış" hata sınıfı). 117 satırın hepsinde `"lord_pretalk"` →
+  `"lord_start"` düzeltildi (tek, tutarlı string replace, build 0 hata). Aynı denetim sırasında,
+  `Hero.OneToOneConversationHero.StringId` karşılaştırmalarının tamamı (52 benzersiz id) Native +
+  mod karakter id'lerine karşı çapraz kontrol edildi — 50'si geçerliydi, 2'si (`lord_seljuk_
+  ertugrul_gazi`, `lord_seljuk_nizam_al_mulk`) zaten doğru bir id ile OR'lanmış zararsız ama gereksiz
+  yedek kontrollerdi, temizlendi. `verify_mod.py`'ye bu tam bulgu sınıfını (yazım hatalı/geçersiz
+  `Hero.StringId` koşulu) bir daha yakalayacak check 17 (`dialogue-hero-ids`) eklendi.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).

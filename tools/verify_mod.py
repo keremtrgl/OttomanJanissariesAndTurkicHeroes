@@ -102,6 +102,15 @@ Checks performed:
                             helmet_a) the same way the v1.7.9 tournament-champion helms do. Catches a
                             typo'd mesh id - which renders as missing/default geometry in-game, not a
                             load error - before a player screenshot has to catch it instead.
+ 17. dialogue-hero-ids     [needs game install] Every Hero.OneToOneConversationHero.StringId == "X"
+                            condition across Source/**/*.cs (how SeljukDialogueBehavior/
+                            RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior pick which
+                            character a custom greeting belongs to) must reference a real Native or
+                            mod-defined character id. A typo here has no error and no crash - the
+                            condition is just always false, so that one character's custom line
+                            silently never shows and Native's generic greeting is used instead. Added
+                            in v1.7.10 while auditing the exact same 3 files for the "start"/
+                            "lord_pretalk" bug below.
 
 A weapon-damage-based numeric sibling to check 12 (comparing Item0/Item1 thrust/swing damage
 against a tier median, the way check 12 does for skill points) was prototyped and run against the
@@ -115,7 +124,7 @@ project's numeric balance signal; a real weapon-parity check would need full DPS
 speed_rating, weapon_length), tracked as a future idea rather than forced in as-is.
 
 Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
-checks 1-8, 14-15, and 16, they describe "this looks unintended", not "this is broken".
+checks 1-8 and 14-17, they describe "this looks unintended", not "this is broken".
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -1103,6 +1112,48 @@ def check_item_mesh_validity(issues, game_path):
                                      f"default geometry in-game rather than a real asset reference."))
 
 
+# --------------------------------------------------------------- check 17 --
+
+DIALOGUE_HERO_ID_PATTERN = re.compile(r'Hero\.OneToOneConversationHero\.StringId\s*==\s*"([a-zA-Z0-9_]+)"')
+
+
+def collect_dialogue_hero_id_references():
+    """{hero_id: [file_rel, ...]} for every Hero.OneToOneConversationHero.StringId == "X"
+    condition in Source/**/*.cs - this is how every custom lord/companion greeting in
+    SeljukDialogueBehavior/RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior decides
+    WHICH character a line belongs to. A typo'd id here has no error message and no crash:
+    the condition is simply always false, so that one character silently never gets their
+    custom line and always falls back to Native's generic greeting instead - the same
+    "wrong troop"/"wrong GameText" silent-failure shape as several other bugs this project's
+    checks already guard against, just one layer further down the stack (C# condition
+    string, not an XML id= attribute)."""
+    refs = {}
+    if not SOURCE_DIR.exists():
+        return refs
+    for f in SOURCE_DIR.rglob("*.cs"):
+        text = f.read_text(encoding="utf-8", errors="ignore")
+        for m in DIALOGUE_HERO_ID_PATTERN.finditer(text):
+            refs.setdefault(m.group(1), []).append(rel(f))
+    return refs
+
+
+def check_dialogue_hero_ids(issues, game_path):
+    refs = collect_dialogue_hero_id_references()
+    if not refs:
+        return
+    native_ids, _, _ = load_native_characters(game_path)
+    mod_ids = collect_mod_defined_character_ids()
+    all_ids = native_ids | mod_ids
+    for hero_id, files in sorted(refs.items()):
+        if hero_id not in all_ids:
+            shown = ", ".join(sorted(set(files)))
+            issues.append(Issue("ERROR", "dialogue-hero-ids", shown,
+                                 f'Hero.OneToOneConversationHero.StringId == "{hero_id}" does not match any '
+                                 f"Native or mod-defined character id - this condition can never be true, so "
+                                 f"the custom dialogue line(s) gated on it will silently never show (the "
+                                 f"character just gets Native's generic greeting instead, with no error)."))
+
+
 # --------------------------------------------------------------- check 13 --
 
 def check_workshop_conflicts(issues, game_path):
@@ -1204,6 +1255,7 @@ def run(args):
         check_troop_armor_slots(issues, game_path)
         check_troop_progression(issues, game_path)
         check_item_mesh_validity(issues, game_path)
+        check_dialogue_hero_ids(issues, game_path)
         if args.check_workshop_conflicts:
             check_workshop_conflicts(issues, game_path)
 
