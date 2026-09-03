@@ -1809,5 +1809,16 @@
     <string id="item_arm2_champion_helm" text="Casque du Champion Cilicien" />
     <string id="item_kk2_champion_helm" text="Couronne de Bataille du Champion Kara-Khanide" />
     <string id="rival_tourney_victory" text="🏆 [Champion du Tournoi] Vous êtes devenu le Champion du Tournoi de {TOWN} ! Prix : {PRIZE} (+20 Renommée gagnée) !" />
+      <string id="abb_tirad_greet_1" text="Chaque descendant du Prophète dans cette ville répond à mon registre avant de répondre à l'appel de quelque émir que ce soit. Quelle est votre affaire avec la maison Zaynabi ?" />
+    <string id="abb_tirad_greet_2" text="La lignée est une armée à elle seule à Bagdad, voyageur - la mienne a déjà survécu à plusieurs sultans. Exposez votre affaire." />
+    <string id="abb_damaghani_greet_1" text="J'ai jugé des hommes bien plus grands que vous, et la loi ne s'est pliée pour aucun d'eux. Exposez votre affaire." />
+    <string id="abb_damaghani_greet_2" text="Une ville aussi ancienne a besoin d'un juge plus que d'une épée de plus - Bagdad en a eu assez de cette dernière. Que cherchez-vous ?" />
+    <string id="abb_ibnayyub_greet_1" text="Mon épée sert le sultanat depuis plus longtemps que la plupart des hommes de cette cour ne sont en vie. Exposez votre affaire, et faites vite." />
+    <string id="geo_aghsartan_greet_1" text="La Kakhétie s'est déjà agenouillée devant la couronne de Tbilissi une fois, du souvenir de ma famille - je n'ai pas l'intention d'en faire une habitude. Que voulez-vous ?" />
+    <string id="geo_aghsartan_greet_2" text="Un royaume montagnard survit en ne faisant jamais tout à fait confiance à ses plus grands voisins, même les géorgiens. Exposez votre affaire." />
+    <string id="geo_arishiani_greet_1" text="J'ai parcouru chaque col entre ici et la frontière de Kartli plus de fois que je ne saurais compter. Exposez votre affaire clairement." />
+    <string id="geo_kavtar_greet_1" text="La maison Baramisdze tient ses terres autant par l'épée que par la faveur du roi, voyageur. Qu'est-ce qui vous amène à moi ?" />
+    <string id="geo_kakhaber_greet_1" text="Kartli est le cœur de ce royaume, et je le gouverne depuis assez longtemps pour connaître chaque maison noble qui s'y trouve par son nom. Exposez votre affaire." />
+    <string id="geo_kakhaber_greet_2" text="Un duc qui ne peut tenir sa propre province n'a aucune raison de conseiller un roi sur la façon de tenir un royaume. Je tiens bien la mienne. Que voulez-vous ?" />
   </strings>
 </base>

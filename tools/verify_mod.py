@@ -111,6 +111,18 @@ Checks performed:
                             silently never shows and Native's generic greeting is used instead. Added
                             in v1.7.10 while auditing the exact same 3 files for the "start"/
                             "lord_pretalk" bug below.
+ 18. banner-icon-usage      [ERROR always; WARN needs game install] Two checks on this mod's own
+                            <Icon id="X"> entries in banner_icons.xml: (ERROR) no id may collide
+                            with one Native's own banner_icons.xml already uses - this exact
+                            collision class froze/crashed the New Campaign screen once before (see
+                            that file's own header comment); (WARN) every id should be referenced
+                            by at least one banner_key/faction_banner_key in the mod's own content
+                            (a Kingdom/Faction/Culture's actual default banner), or explicitly
+                            listed in KNOWN_SPARE_BANNER_ICON_IDS as a deliberate picker-only
+                            option - added in v1.8.3 after finding all 13 of this mod's custom
+                            Seljuk/Turkic tamgas were registered but not one was ever assigned to
+                            an actual clan/kingdom/culture banner (11 now are; 2 stay deliberate
+                            spares).
 
 A weapon-damage-based numeric sibling to check 12 (comparing Item0/Item1 thrust/swing damage
 against a tier median, the way check 12 does for skill points) was prototyped and run against the
@@ -124,7 +136,8 @@ project's numeric balance signal; a real weapon-parity check would need full DPS
 speed_rating, weapon_length), tracked as a future idea rather than forced in as-is.
 
 Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
-checks 1-8 and 14-17, they describe "this looks unintended", not "this is broken".
+checks 1-8 and 14-18, they describe "this looks unintended", not "this is broken". (Check 18 is
+part ERROR, part WARN - see above.)
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -1154,6 +1167,109 @@ def check_dialogue_hero_ids(issues, game_path):
                                  f"character just gets Native's generic greeting instead, with no error)."))
 
 
+# --------------------------------------------------------------- check 18 --
+
+# banner_icons.xml's own header comment documents id 900-912 as a deliberate move to avoid
+# colliding with Native's own 100-535 range (a real past bug: reusing Native's ids froze the
+# New Campaign screen the first time the banner editor loaded). 911/912 are explicitly commented
+# there as spare picker options never meant to be any specific clan/kingdom/culture's DEFAULT
+# banner - every other custom icon this mod defines (900-910) is now assigned to exactly one of
+# the 11 Seljuk clans, Kingdom.kingdom_seljuks, or Culture.seljuk (v1.8.3).
+KNOWN_SPARE_BANNER_ICON_IDS = {911, 912}
+
+BANNER_KEY_ATTRS = ("banner_key", "faction_banner_key")
+
+
+def collect_mod_defined_banner_icon_ids():
+    """{icon_id: file_rel} for every <Icon id="X"> this mod defines in its own banner_icons.xml
+    (or any other mod XML - the tag isn't file-specific)."""
+    ids = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for icon in root.iter("Icon"):
+            iid = icon.get("id")
+            if iid and iid.isdigit():
+                ids.setdefault(int(iid), rel(f))
+    return ids
+
+
+def _icon_ids_from_banner_key(value):
+    """Banner.TryGetBannerDataFromCode (decompiled from TaleWorlds.Core.dll): a banner_key is a
+    '.'-separated string parsed in fixed chunks of 10 fields per layer - iconId, colorId1,
+    colorId2, sizeX, sizeY, posX, posY, drawStroke(0/1), mirror(0/1), rotationUnits. Only the
+    first field of each 10-field chunk (the icon id) matters here."""
+    parts = value.split(".")
+    ids = []
+    for i in range(0, len(parts) - 9, 10):
+        try:
+            ids.append(int(parts[i]))
+        except ValueError:
+            pass
+    return ids
+
+
+def collect_banner_key_icon_usage():
+    """Every icon id actually referenced by a banner_key/faction_banner_key anywhere in the
+    mod's own content - i.e. an icon a Kingdom/Faction(clan)/Culture actually displays by
+    default, as opposed to one merely available for players to pick by hand in the banner
+    editor."""
+    used = set()
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for elem in root.iter():
+            for attr in BANNER_KEY_ATTRS:
+                value = elem.get(attr)
+                if value:
+                    used.update(_icon_ids_from_banner_key(value))
+    return used
+
+
+def load_native_banner_icon_ids(game_path):
+    ids = set()
+    for f in native_module_xml_files(game_path, ["Native"]):
+        if f.name != "banner_icons.xml":
+            continue
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for icon in root.iter("Icon"):
+            iid = icon.get("id")
+            if iid and iid.isdigit():
+                ids.add(int(iid))
+    return ids
+
+
+def check_banner_icon_usage(issues, game_path):
+    mod_icons = collect_mod_defined_banner_icon_ids()
+    if not mod_icons:
+        return
+
+    if game_path is not None:
+        native_icons = load_native_banner_icon_ids(game_path)
+        collisions = sorted(i for i in mod_icons if i in native_icons)
+        if collisions:
+            issues.append(Issue("ERROR", "banner-icon-usage", "ModuleData/banner_icons.xml",
+                                 f"Custom <Icon id=\"X\"> value(s) {collisions} collide with an id Native's own "
+                                 f"banner_icons.xml already uses - this exact class of collision froze/crashed "
+                                 f"the New Campaign screen once before (see this file's own header comment); "
+                                 f"move the colliding id(s) to an unused number instead."))
+
+    used = collect_banner_key_icon_usage()
+    unused = sorted(i for i in mod_icons if i not in used and i not in KNOWN_SPARE_BANNER_ICON_IDS)
+    if unused:
+        shown = ", ".join(str(i) for i in unused)
+        issues.append(Issue("WARN", "banner-icon-usage", "ModuleData/banner_icons.xml",
+                             f"Custom banner icon id(s) {shown} are defined but never referenced by any "
+                             f"banner_key/faction_banner_key in the mod's own content - available for a player "
+                             f"to pick by hand in the banner editor, but no Kingdom/Faction(clan)/Culture "
+                             f"actually displays them by default. If this is deliberate (a spare picker option), "
+                             f"add it to KNOWN_SPARE_BANNER_ICON_IDS with a comment saying why."))
+
+
 # --------------------------------------------------------------- check 13 --
 
 def check_workshop_conflicts(issues, game_path):
@@ -1247,6 +1363,7 @@ def run(args):
     check_language_sync(issues, game_path)
 
     check_troop_tier_parity(issues, game_path)
+    check_banner_icon_usage(issues, game_path)
 
     if game_path is not None:
         check_upgrade_targets(issues, game_path)

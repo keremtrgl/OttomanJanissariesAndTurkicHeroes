@@ -1809,5 +1809,16 @@
     <string id="item_arm2_champion_helm" text="Yelmo del Campeón Cilicio" />
     <string id="item_kk2_champion_helm" text="Corona de Batalla del Campeón Karajánida" />
     <string id="rival_tourney_victory" text="🏆 [Campeón del Torneo] ¡Te has convertido en el Campeón del Torneo de {TOWN}! Premio: {PRIZE} (¡+20 de Renombre obtenido)!" />
+      <string id="abb_tirad_greet_1" text="Todo descendiente del Profeta en esta ciudad responde a mi registro antes de responder a la llamada de cualquier emir. ¿Cuál es tu asunto con la Casa Zaynabi?" />
+    <string id="abb_tirad_greet_2" text="El linaje es su propio tipo de ejército en Bagdad, viajero - el mío ya ha sobrevivido a varios sultanes. Expón tu asunto." />
+    <string id="abb_damaghani_greet_1" text="He juzgado a hombres mucho más grandes que tú, y la ley no se dobló para ninguno de ellos. Expón tu asunto." />
+    <string id="abb_damaghani_greet_2" text="Una ciudad tan antigua necesita un juez más que otra espada - Bagdad ya ha tenido suficiente de esta última. ¿Qué buscas?" />
+    <string id="abb_ibnayyub_greet_1" text="Mi espada ha servido al Sultanato más tiempo del que la mayoría de los hombres de esta corte llevan vivos. Expón tu asunto, y sé rápido." />
+    <string id="geo_aghsartan_greet_1" text="Kajetia ya se arrodilló ante la corona de Tiflis una vez, en el recuerdo de mi familia - no pretendo convertirlo en costumbre. ¿Qué quieres?" />
+    <string id="geo_aghsartan_greet_2" text="Un reino de montaña sobrevive sin confiar nunca del todo en sus vecinos más grandes, ni siquiera en los georgianos. Expón tu asunto." />
+    <string id="geo_arishiani_greet_1" text="He cabalgado cada paso entre aquí y la frontera de Kartli más veces de las que puedo contar. Expón tu asunto con claridad." />
+    <string id="geo_kavtar_greet_1" text="La Casa Baramisdze mantiene sus tierras tanto por la espada como por el favor del rey, viajero. ¿Qué te trae ante mí?" />
+    <string id="geo_kakhaber_greet_1" text="Kartli es el corazón de este reino, y lo he gobernado el tiempo suficiente para conocer por nombre a cada casa noble en él. Expón tu asunto." />
+    <string id="geo_kakhaber_greet_2" text="Un duque que no puede sostener su propia provincia no tiene por qué aconsejar a un rey sobre cómo sostener un reino. Yo sostengo la mía bien. ¿Qué quieres?" />
   </strings>
 </base>

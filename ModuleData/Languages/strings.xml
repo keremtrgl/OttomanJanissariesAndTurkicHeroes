@@ -1768,5 +1768,16 @@
     <string id="item_arm2_champion_helm" text="Cilician Champion's Helm" />
     <string id="item_kk2_champion_helm" text="Kara-Khanid Champion's Battle Crown" />
     <string id="rival_tourney_victory" text="🏆 [Tournament Champion] You have become the Champion of {TOWN}'s Tournament! Prize: {PRIZE} (+20 Renown gained)!" />
+      <string id="abb_tirad_greet_1" text="Every descendant of the Prophet in this city answers to my register before he answers to any emir's summons. What is your business with House Zaynabi?" />
+    <string id="abb_tirad_greet_2" text="Lineage is its own kind of army in Baghdad, traveler - mine has outlasted several Sultans already. Speak your business." />
+    <string id="abb_damaghani_greet_1" text="I have sat in judgment over men far greater than you, and the law did not bend for any of them either. State your business." />
+    <string id="abb_damaghani_greet_2" text="A city this old needs a judge more than it needs another sword - Baghdad has had enough of the latter. What do you seek?" />
+    <string id="abb_ibnayyub_greet_1" text="My sword has served the Sultanate longer than most men at this court have been alive. Speak your business, and be quick about it." />
+    <string id="geo_aghsartan_greet_1" text="Kakheti bent its knee to Tbilisi's crown once already in my family's memory - I do not intend to make a habit of it. What do you want?" />
+    <string id="geo_aghsartan_greet_2" text="A mountain kingdom survives by never quite trusting its larger neighbors, even the Georgian ones. Speak your business." />
+    <string id="geo_arishiani_greet_1" text="I have ridden every pass between here and the Kartli border more times than I can count. State your business plainly." />
+    <string id="geo_kavtar_greet_1" text="House Baramisdze holds its lands by the sword as much as by the King's favor, traveler. What brings you to me?" />
+    <string id="geo_kakhaber_greet_1" text="Kartli is the heart of this kingdom, and I have governed it long enough to know every noble house within it by name. Speak your business." />
+    <string id="geo_kakhaber_greet_2" text="A duke who cannot hold his own province has no business advising a king on how to hold a kingdom. I hold mine well. What do you want?" />
   </strings>
 </base>
