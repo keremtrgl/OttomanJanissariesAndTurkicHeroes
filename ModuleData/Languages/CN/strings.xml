@@ -1809,5 +1809,16 @@
     <string id="item_arm2_champion_helm" text="西里西亚冠军头盔" />
     <string id="item_kk2_champion_helm" text="喀喇汗冠军战冠" />
     <string id="rival_tourney_victory" text="🏆 [比武冠军] 你已成为{TOWN}比武大会的冠军!奖励:{PRIZE}(获得+20声望)!" />
+      <string id="abb_tirad_greet_1" text="这座城市里每一位先知的后裔都先向我的名册负责,而后才响应任何埃米尔的召唤。你与扎伊纳比家族有何贵干?" />
+    <string id="abb_tirad_greet_2" text="在巴格达,血统本身就是一支军队,旅人——我的血统已经比好几位苏丹更长久了。说说你的来意吧。" />
+    <string id="abb_damaghani_greet_1" text="我审判过比你伟大得多的人,律法对他们中的任何一个都没有屈服过。说明你的来意。" />
+    <string id="abb_damaghani_greet_2" text="如此古老的城市需要的是一位法官,而不是再多一把剑——巴格达对后者已经受够了。你在寻找什么?" />
+    <string id="abb_ibnayyub_greet_1" text="我的剑为苏丹国效力的时间,比这宫廷里大多数人活着的时间还长。说说你的来意,速战速决。" />
+    <string id="geo_aghsartan_greet_1" text="在我家族的记忆里,卡赫季曾向第比利斯的王冠俯首过一次——我不打算让这成为习惯。你想要什么?" />
+    <string id="geo_aghsartan_greet_2" text="一个山地王国之所以能存续,靠的是从不完全信任它那些更强大的邻居,即便是格鲁吉亚人也不例外。说说你的来意。" />
+    <string id="geo_arishiani_greet_1" text="从这里到卡特利边境的每一个山口,我骑马走过的次数已经数不清了。直说你的来意。" />
+    <string id="geo_kavtar_greet_1" text="巴拉米斯泽家族守住领地,既靠国王的恩宠,也靠刀剑,旅人。你来找我所为何事?" />
+    <string id="geo_kakhaber_greet_1" text="卡特利是这个王国的心脏,我治理它已足够长久,足以叫出这里每一个贵族世家的名字。说说你的来意。" />
+    <string id="geo_kakhaber_greet_2" text="一位连自己的行省都守不住的公爵,没资格教国王如何守住一个王国。我把自己的守得很好。你想要什么?" />
   </strings>
 </base>

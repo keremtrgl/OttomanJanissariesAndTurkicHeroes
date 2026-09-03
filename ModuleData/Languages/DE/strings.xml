@@ -1809,5 +1809,16 @@
     <string id="item_arm2_champion_helm" text="Kilikischer Champion-Helm" />
     <string id="item_kk2_champion_helm" text="Kara-Chanidische Kampfkrone des Champions" />
     <string id="rival_tourney_victory" text="🏆 [Turniersieger] Ihr seid Champion des Turniers von {TOWN} geworden! Preis: {PRIZE} (+20 Ansehen erhalten)!" />
+      <string id="abb_tirad_greet_1" text="Jeder Nachkomme des Propheten in dieser Stadt antwortet zuerst meinem Register, bevor er dem Ruf irgendeines Emirs folgt. Was ist Euer Anliegen mit dem Haus Zaynabi?" />
+    <string id="abb_tirad_greet_2" text="Abstammung ist in Bagdad eine eigene Art von Armee, Reisender - meine hat schon mehrere Sultane überdauert. Sprecht Euer Anliegen aus." />
+    <string id="abb_damaghani_greet_1" text="Ich habe über weit größere Männer als Euch zu Gericht gesessen, und das Gesetz beugte sich für keinen von ihnen. Nennt Euer Anliegen." />
+    <string id="abb_damaghani_greet_2" text="Eine so alte Stadt braucht einen Richter mehr als noch ein Schwert - von Letzterem hat Bagdad genug gehabt. Was sucht Ihr?" />
+    <string id="abb_ibnayyub_greet_1" text="Mein Schwert dient dem Sultanat länger, als die meisten Männer an diesem Hof überhaupt leben. Sprecht Euer Anliegen, und macht es kurz." />
+    <string id="geo_aghsartan_greet_1" text="Kachetien hat sich der Krone von Tiflis schon einmal gebeugt, in der Erinnerung meiner Familie - ich beabsichtige nicht, daraus eine Gewohnheit zu machen. Was wollt Ihr?" />
+    <string id="geo_aghsartan_greet_2" text="Ein Bergkönigreich überlebt, indem es seinen größeren Nachbarn nie ganz vertraut, selbst den georgischen nicht. Sprecht Euer Anliegen." />
+    <string id="geo_arishiani_greet_1" text="Ich bin jeden Pass zwischen hier und der Grenze von Kartli öfter geritten, als ich zählen kann. Nennt Euer Anliegen unverblümt." />
+    <string id="geo_kavtar_greet_1" text="Das Haus Baramisdze hält seine Ländereien ebenso mit dem Schwert wie mit der Gunst des Königs, Reisender. Was führt Euch zu mir?" />
+    <string id="geo_kakhaber_greet_1" text="Kartli ist das Herz dieses Königreichs, und ich regiere es schon lange genug, um jedes Adelshaus darin beim Namen zu kennen. Sprecht Euer Anliegen." />
+    <string id="geo_kakhaber_greet_2" text="Ein Herzog, der seine eigene Provinz nicht halten kann, hat keinen Grund, einem König zu raten, wie man ein Königreich hält. Ich halte meine gut. Was wollt Ihr?" />
   </strings>
 </base>

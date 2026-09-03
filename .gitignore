@@ -1,4 +1,8 @@
 Source/SeljukEmpire/obj/
+Source/SeljukEmpire.Tests/bin/
+Source/SeljukEmpire.Tests/obj/
+Source/SeljukEmpire.Benchmarks/bin/
+Source/SeljukEmpire.Benchmarks/obj/
 .vs/
 *.user
 *.suo

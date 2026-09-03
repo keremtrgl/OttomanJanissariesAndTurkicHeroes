@@ -230,6 +230,75 @@ namespace SeljukEmpire.Immersion
                 starter.AddDialogLine("geo_grigol_greeting_1", "start", "lord_start",
                     "{=geo_grigol_greet_1}An Eristavi answers to the King, not to every wandering stranger who rides through his lands. State your business plainly.",
                     IsGrigolEristavi, null, 200);
+
+                // ============================================================================
+                // THIRD WAVE (v1.8.3): the last 7 named lords across Abbasid/Georgian left with
+                // no custom line after the second wave above - closes out both kingdoms' full
+                // named-lord rosters. Same lighter 1-2-line treatment as the second wave.
+                // ============================================================================
+
+                // ABBASID NAQIB AL-ASHRAF TIRAD AL-ZAYNABI (marshal of the Prophet's descendants
+                // in Baghdad, a real hereditary Abbasid-era court office) (salt 16)
+                bool IsTiradAlZaynabi() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_3_16";
+
+                starter.AddDialogLine("abb_tirad_greeting_1", "start", "lord_start",
+                    "{=abb_tirad_greet_1}Every descendant of the Prophet in this city answers to my register before he answers to any emir's summons. What is your business with House Zaynabi?",
+                    () => IsTiradAlZaynabi() && GetGreetingVariant(16, 2) == 0, null, 200);
+                starter.AddDialogLine("abb_tirad_greeting_2", "start", "lord_start",
+                    "{=abb_tirad_greet_2}Lineage is its own kind of army in Baghdad, traveler - mine has outlasted several Sultans already. Speak your business.",
+                    () => IsTiradAlZaynabi() && GetGreetingVariant(16, 2) == 1, null, 200);
+
+                // ABBASID CHIEF QADI ABU ABDALLAH AL-DAMAGHANI (salt 17)
+                bool IsAlDamaghani() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_3_17";
+
+                starter.AddDialogLine("abb_damaghani_greeting_1", "start", "lord_start",
+                    "{=abb_damaghani_greet_1}I have sat in judgment over men far greater than you, and the law did not bend for any of them either. State your business.",
+                    () => IsAlDamaghani() && GetGreetingVariant(17, 2) == 0, null, 200);
+                starter.AddDialogLine("abb_damaghani_greeting_2", "start", "lord_start",
+                    "{=abb_damaghani_greet_2}A city this old needs a judge more than it needs another sword - Baghdad has had enough of the latter. What do you seek?",
+                    () => IsAlDamaghani() && GetGreetingVariant(17, 2) == 1, null, 200);
+
+                // ABBASID EMIR IBN AYYUB (1 line)
+                bool IsIbnAyyub() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_3_22";
+
+                starter.AddDialogLine("abb_ibnayyub_greeting_1", "start", "lord_start",
+                    "{=abb_ibnayyub_greet_1}My sword has served the Sultanate longer than most men at this court have been alive. Speak your business, and be quick about it.",
+                    IsIbnAyyub, null, 200);
+
+                // GEORGIAN KING AGHSARTAN II OF KAKHETI-HERETI (a rival eastern Georgian kingdom,
+                // not yet absorbed into David IV's unified crown) (salt 18)
+                bool IsAghsartan() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_2_16";
+
+                starter.AddDialogLine("geo_aghsartan_greeting_1", "start", "lord_start",
+                    "{=geo_aghsartan_greet_1}Kakheti bent its knee to Tbilisi's crown once already in my family's memory - I do not intend to make a habit of it. What do you want?",
+                    () => IsAghsartan() && GetGreetingVariant(18, 2) == 0, null, 200);
+                starter.AddDialogLine("geo_aghsartan_greeting_2", "start", "lord_start",
+                    "{=geo_aghsartan_greet_2}A mountain kingdom survives by never quite trusting its larger neighbors, even the Georgian ones. Speak your business.",
+                    () => IsAghsartan() && GetGreetingVariant(18, 2) == 1, null, 200);
+
+                // GEORGIAN NOBLE ARISHIANI (1 line)
+                bool IsArishiani() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_2_17";
+
+                starter.AddDialogLine("geo_arishiani_greeting_1", "start", "lord_start",
+                    "{=geo_arishiani_greet_1}I have ridden every pass between here and the Kartli border more times than I can count. State your business plainly.",
+                    IsArishiani, null, 200);
+
+                // GEORGIAN NOBLE KAVTAR BARAMISDZE (1 line)
+                bool IsKavtarBaramisdze() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_2_19";
+
+                starter.AddDialogLine("geo_kavtar_greeting_1", "start", "lord_start",
+                    "{=geo_kavtar_greet_1}House Baramisdze holds its lands by the sword as much as by the King's favor, traveler. What brings you to me?",
+                    IsKavtarBaramisdze, null, 200);
+
+                // GEORGIAN DUKE KAKHABER KAKHABERISDZE OF KARTLI (salt 19)
+                bool IsKakhaber() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_2_20";
+
+                starter.AddDialogLine("geo_kakhaber_greeting_1", "start", "lord_start",
+                    "{=geo_kakhaber_greet_1}Kartli is the heart of this kingdom, and I have governed it long enough to know every noble house within it by name. Speak your business.",
+                    () => IsKakhaber() && GetGreetingVariant(19, 2) == 0, null, 200);
+                starter.AddDialogLine("geo_kakhaber_greeting_2", "start", "lord_start",
+                    "{=geo_kakhaber_greet_2}A duke who cannot hold his own province has no business advising a king on how to hold a kingdom. I hold mine well. What do you want?",
+                    () => IsKakhaber() && GetGreetingVariant(19, 2) == 1, null, 200);
             }
             catch (Exception)
             {

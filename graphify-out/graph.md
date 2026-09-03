@@ -11,7 +11,7 @@ ordu/parti şablonu (lord başlangıç ordusu, han paralı askeri, kervan/yerle�
 25 meyhane companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş
 metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 17
 kontrollü otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri
-detaylandırmaktadır. **Güncel sürüm: v1.8.2.**
+detaylandırmaktadır. **Güncel sürüm: v1.8.3.**
 
 ---
 
@@ -30,9 +30,9 @@ graph TD
     SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml<br/>(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.8.2)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
     SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.8.2)"]
-    SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
+    SM --> XML_B["banner_icons.xml<br/>(13 Selçuklu Tamgası — 11'i artık her klanın/Kingdom'ın/<br/>Culture'ın gerçek banner_key'inde, v1.8.3)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
-    SM -.denetler.-> VERIFY["tools/verify_mod.py<br/>(17 Otomatik Bütünlük Kontrolü<br/>CI-tarzı, 0 Hata / 0 Uyarı)"]
+    SM -.denetler.-> VERIFY["tools/run_all_checks.py<br/>(verify_mod.py'nin 18 kontrolü + dotnet test'in<br/>43 taktik AI testi, tek komut, v1.8.3)"]
 
     CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM,<br/>artık reaktif faz yürütme)"]
     CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM,<br/>artık reaktif faz yürütme)"]
@@ -419,7 +419,7 @@ Bizans sınır boyu temasına özgün olarak uyarlandı. v1.7.6'da sadece İngil
 
 ### 9c. Otomatik Bütünlük Denetleyicisi (tools/verify_mod.py)
 
-Mod artık kendi 17 kontrollü, ~1340 satırlık Python doğrulama aracını taşıyor — her yayından önce
+Mod artık kendi 18 kontrollü, ~1450 satırlık Python doğrulama aracını taşıyor — her yayından önce
 çalıştırılan bir CI-tarzı güvenlik ağı. v1.7.5-v1.7.7 arasında bu oturumda bulunan iki gerçek
 regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol eklendi:
 
@@ -450,6 +450,20 @@ regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol 
   denetlenirken bulundu; test sırasında 2 zararsız ama artık gereksiz OR-yedek id kontrolü de
   temizlendi (`ertugrul_gazi`/`lord_seljuk_nizamulmulk` zaten doğruydu, ikinci alternatif hiç
   gerçek değildi).
+- **Check 18 — `banner-icon-usage` (ERROR + koşullu WARN, v1.8.3):** `TaleWorlds.Core.Banner.
+  TryGetBannerDataFromCode` decompile edilip `banner_key`/`faction_banner_key`'in tam tel
+  formatı (10'luk bloklar, her bloğun ilk alanı icon id) doğrulandı. (ERROR) modun kendi
+  `<Icon id="X">`'i Native'in banner_icons.xml'inde zaten kullanılan bir id ile çakışamaz —
+  bu tam çakışma sınıfı New Campaign ekranını daha önce gerçekten dondurmuş/çökertmişti
+  (banner_icons.xml'in kendi başlık yorumuna bakın). (WARN) her özel icon en az bir
+  banner_key/faction_banner_key'de kullanılmalı, yoksa `KNOWN_SPARE_BANNER_ICON_IDS`'te
+  bilinçli yedek olarak belgelenmeli. İlk çalıştırmada 13 özel Selçuklu/Türk tamgasının
+  **hiçbirinin** hiçbir klan/Kingdom/Culture'ın gerçek bayrağında kullanılmadığı bulundu —
+  hepsi motora kayıtlıydı (bayrak düzenleyicide seçilebilir) ama hiçbiri varsayılan olarak
+  gösterilmiyordu. 11'i artık ilgili klana atandı (6'sı isim eşleşmesiyle bire bir: Kayı
+  Boyu/Çaka Beyliği/Saltuklular/Mengücekliler/Ahi Evran Ocağı/Âl-i Selçuk, kalan 5'i temaya
+  göre); 2'si (Kızıl/Gök Sancak) bilinçli olarak serbest bayrak editörü seçeneği olarak
+  kaldı.
 
 **Yanlış alarm düzeltmeleri (bu oturumda, "fix" değil "düzelt" — gerçek bulgular):** İki önceki-tur
 iddiası, gerçek motor decompile'ı ile yeniden doğrulanınca **yanlış** çıktı: (1) turnuva katılımcı
@@ -473,7 +487,7 @@ denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS mate
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.2)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.3)
 
 ```mermaid
 graph LR
@@ -494,6 +508,7 @@ graph LR
     V179 --> V180["v1.8.0<br/>Reaktif piyade & okçu AI<br/>(43 test)"]
     V180 --> V181["v1.8.1<br/>Cepheden şarj tepkisi +<br/>native arazi ustalığı"]
     V181 --> V182["v1.8.2<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + 117 lord/yoldaş selamlaması<br/>yanlış diyalog durumundan düzeltildi<br/>('lord_pretalk' → 'lord_start') +<br/>verify_mod.py check 16-17"]
+    V182 --> V183["v1.8.3<br/>13 tamganın hiçbiri hiçbir klanda<br/>kullanılmıyordu, 11'i düzeltildi +<br/>7 yeni Abbasi/Gürcü lord selamlaması +<br/>verify_mod.py check 18 +<br/>run_all_checks.py + AI benchmark"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -644,6 +659,20 @@ graph LR
   ertugrul_gazi`, `lord_seljuk_nizam_al_mulk`) zaten doğru bir id ile OR'lanmış zararsız ama gereksiz
   yedek kontrollerdi, temizlendi. `verify_mod.py`'ye bu tam bulgu sınıfını (yazım hatalı/geçersiz
   `Hero.StringId` koşulu) bir daha yakalayacak check 17 (`dialogue-hero-ids`) eklendi.
+- **v1.8.3 (kullanıcının "daha fazla öneri" turundan seçtiği 5 madde):** `dotnet test` +
+  `verify_mod.py` tek `tools/run_all_checks.py` komutunda birleştirildi (pre-commit hook ve
+  README güncellendi). `TacticalSituationAssessor` için gerçek bir mikro-benchmark eklendi
+  (`Source/SeljukEmpire.Benchmarks/`, aynı motor-bağımsız desen) — ölçülen sonuç: en pahalı
+  çağrı ~30ns, throttle'lı tick başına (12 formasyon × 2 takım, kötü senaryo) ~0.7µs, 60fps'lik
+  bir frame'in **%0.004**'ü, 75 frame'de bir. `TaleWorlds.Core.Banner.TryGetBannerDataFromCode`
+  decompile edilip `banner_key` tel formatı doğrulandı — bu, 13 özel Selçuklu tamgasının
+  **hiçbirinin** hiçbir klanın/Kingdom'ın/Culture'ın gerçek bayrağında kullanılmadığını ortaya
+  çıkardı (motora kayıtlı ama görünmez). 11 tamga ilgili klana atandı, `verify_mod.py`'ye check
+  18 eklendi. Abbasi (3) ve Gürcistan'ın (4) kalan isimli lordlarına — küçük kültürlerin son
+  "jenerik" kalan lordları — 3. dalga selamlama satırları eklendi (8 dilde). Steam mağaza
+  açıklaması (EN+TR) 25 companion, reaktif AI, 8 krallığın turnuva ödülü ve Ansiklopedi
+  içeriğini yansıtacak şekilde konsoldan güncellendi (sadece metadata, içerik yeniden
+  yüklenmedi).
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).
