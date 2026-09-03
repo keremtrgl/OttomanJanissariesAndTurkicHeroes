@@ -1,15 +1,17 @@
 # Seljuk Empire: Sword of Islam — Mod Mimari & Bağlantı Grafiği (Architecture Graph)
 
 Bu doküman, **"Seljuk Empire: Sword of Islam"** total conversion modundaki tüm modüllerin, C# çok
-doktrinli taktik yapay zeka motorunun, BattlePerformanceOptimizer FPS sisteminin (tarla savaşları
-VE kuşatmalar), **Selçuklu Kervan Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**, 8 krallığın
-(Selçuklu + 7 rakip), klan, lord, yerleşke, birlik ağaçları, her kültürün 8 farklı ordu/parti şablonu
-(lord başlangıç ordusu, han paralı askeri, kervan/yerleşke muhafızı, devriye × 3 kademe, kuşatma
-milisi, isyancı partisi, bağlılık yemini hediyesi), karakter yaratma özgeçmişleri, 25 meyhane
-companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş metni, 8
-kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 17 kontrollü
-otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri detaylandırmaktadır.
-**Güncel sürüm: v1.7.10.**
+doktrinli **reaktif** taktik yapay zeka motorunun (artık sabit senaryo değil, `Formation.
+QuerySystem`'den her tick canlı muharebe verisi okuyan paylaşılan bir karar katmanı —
+`TacticalSituationAssessor`, 43 birim testiyle), BattlePerformanceOptimizer FPS sisteminin (tarla
+savaşları VE kuşatmalar), **Selçuklu Kervan Devlet Sigortası & İpek Yolu Kâr Ortaklığı sisteminin**,
+8 krallığın (Selçuklu + 7 rakip), klan, lord, yerleşke, birlik ağaçları, her kültürün 8 farklı
+ordu/parti şablonu (lord başlangıç ordusu, han paralı askeri, kervan/yerleşke muhafızı, devriye ×
+3 kademe, kuşatma milisi, isyancı partisi, bağlılık yemini hediyesi), karakter yaratma özgeçmişleri,
+25 meyhane companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş
+metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 17
+kontrollü otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri
+detaylandırmaktadır. **Güncel sürüm: v1.8.2.**
 
 ---
 
@@ -25,25 +27,26 @@ graph TD
     SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>+ seljuk_special_characters*.xml<br/>(Soy Ağacı & 25 Meyhane Yoldaşı: 14 Tarihi + 11 Jenerik)"]
     SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
     SM --> XML_P["party_templates.xml + rival_culture_names.xml<br/>(8 Kültürün 8 Ordu/Parti Şablonu — Lord Ordusu v1.7.2,<br/>Han/Muhafız/Devriye/Milis/İsyancı/Hediye v1.7.5 & v1.7.7, 64 Şablon)"]
-    SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml<br/>(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.7.9)"]
+    SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml<br/>(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.8.2)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
-    SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.7.9)"]
+    SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.8.2)"]
     SM --> XML_B["banner_icons.xml<br/>(11 Selçuklu Tamgası)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
     SM -.denetler.-> VERIFY["tools/verify_mod.py<br/>(17 Otomatik Bütünlük Kontrolü<br/>CI-tarzı, 0 Hata / 0 Uyarı)"]
 
-    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM)"]
-    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM)"]
-    CSHARP --> TACTIC_MATH["TacticalFormationsHelper<br/>(Sıfır-GC Tepe & Sınır Güvenliği)"]
+    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM,<br/>artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM,<br/>artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_ASSESS["TacticalSituationAssessor<br/>(Motordan Bağımsız Paylaşılan Karar Katmanı<br/>— 43 Birim Testi, v1.7.9-v1.8.1)"]
+    CSHARP --> TACTIC_MATH["TacticalFormationsHelper<br/>(Sıfır-GC Tepe & Sınır Güvenliği<br/>+ Native Eğim Araması Tercihi — v1.8.1)"]
     CSHARP --> PERF_OPT["BattlePerformanceOptimizer<br/>+ RagdollPhysicsBudgetManager<br/>(FPS & Frametime Dengeleyici — tarla savaşları VE kuşatmalar)"]
     CSHARP --> ECON_INS["SeljukCaravanInsuranceBehavior<br/>(Devlet Sigortası & İpek Yolu Fonu)"]
     CSHARP --> ADMIN["SeljukAtabegTitleBehavior<br/>(Atabeglik XP — sadece Selçuklu yerleşimi yöneten valilere)"]
     CSHARP --> SETTLE["SeljukSettlementBehavior<br/>(Selçuklu mülkiyet/sahiplik runtime yönetimi)"]
     CSHARP --> RECRUIT["SeljukRecruitmentBehavior<br/>+ LatinEmpireRecruitmentBehavior<br/>(Culture.empire paylaşımı sorunu için özel askere alma mantığı)"]
     CSHARP --> TAVERN["SeljukTavernBehavior<br/>(Ozan/moral sistemi)"]
-    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(32+ tarihi lorda özel diyalog — v1.7.10'da<br/>117 satırın yanlış diyalog durumu düzeltildi)"]
+    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(32+ tarihi lorda özel diyalog — v1.8.2'de<br/>117 satırın yanlış diyalog durumu düzeltildi)"]
     CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior<br/>(Yeni oyuncu için sistem tanıtımı)"]
-    CSHARP --> TOURNEY["SeljukTournamentRewardBehavior<br/>+ RivalCultureTournamentRewardBehavior — v1.7.9<br/>(8 Kültürün Turnuva Şampiyonu Ödülü)"]
+    CSHARP --> TOURNEY["SeljukTournamentRewardBehavior<br/>+ RivalCultureTournamentRewardBehavior — v1.8.2<br/>(8 Kültürün Turnuva Şampiyonu Ödülü)"]
     CSHARP --> CULTBONUS["SeljukCultureBonusBehavior<br/>(SeljukWageModel/ConstructionSpeedModel/<br/>SiegeEngineeringModel/CaravanTradeModel)"]
     CSHARP --> CHARGEN["SeljukCharacterCreationContentHandler<br/>+ RivalCultureCharacterCreationContentHandler<br/>(7 kültürde özgeçmiş içeriği)"]
 ```
@@ -96,7 +99,15 @@ yüzden yalnız açık alan muharebelerinde çalışır (formasyon manevra AI'ı
 
 ---
 
-## 🏹 4. Çok Doktrinli Taktik Yapay Zeka Motoru (Multi-Doctrine AI)
+## 🏹 4. Çok Doktrinli Reaktif Taktik Yapay Zeka Motoru (Multi-Doctrine Reactive AI)
+
+Doktrin seçimi hâlâ savaşın başında aynı 4'e ayrılan mantıkla çalışıyor — ama v1.7.9-v1.8.1'de üç
+ayrı oturumda yapılan (ve her birinde final incelemesinde gerçek, decompile ile doğrulanmış hatalar
+bulunup düzeltilen) bir dizi geçişle, fazların **yürütülmesi** artık sabit bir senaryo değil:
+`TacticalSituationAssessor` adlı, motordan tamamen bağımsız (sıfır `TaleWorlds.*` referansı), 43
+birim testiyle kilitlenmiş paylaşılan bir karar katmanı, her 1.25 saniyede bir `Formation.
+QuerySystem`'in zaten hesapladığı canlı muharebe verisini (kayıp oranı, yerel güç dengesi, düşman
+bileşimi, gelen şarj tehdidi) okuyarak karar veriyor.
 
 ```mermaid
 graph TD
@@ -109,17 +120,38 @@ graph TD
     SELJUK_EVAL -->|Düşman >= 1.8x Sayıca Fazla| D3["3. DOKTRİN: Yüksek Tepe Karşı Pususu<br/>(Stratejik Tepe Kilitleme + Çekiç-Örs)"]
     SELJUK_EVAL -->|Dengeli Ordu| D4["4. DOKTRİN: Bozkır Çapraz Ateş Çemberi<br/>(Bileşik Yaylım Ateşi + Yandan Kuşatma)"]
 
-    D1 --> PHASE_1["Aşama 1: Atlı Okçu Tacizi & Yemleme"]
-    PHASE_1 --> PHASE_2["Aşama 2: Sahte Çekilme (Feigned Retreat)"]
-    PHASE_2 --> PHASE_3["Aşama 3: İki Kanattan Hassa Süvari Baskını"]
-    PHASE_3 --> PHASE_4["Aşama 4: Topyekûn Çekiç & Örs İmhası"]
+    D1 --> ASSESS["TacticalSituationAssessor<br/>(reaktif karar katmanı — aşağıya bkz.)"]
+    D2 --> ASSESS
+    D3 --> ASSESS
+    D4 --> ASSESS
+    ASSESS -.->|"Ordu geneli kayıp > %40<br/>(9sn'de bir yeniden değerlendirme)"| DOWNGRADE["Doktrin tek-yönlü olarak<br/>Yüksek Tepe Savunmasına düşer"]
 
     BYZ_EVAL --> BYZ_D["Bizans Tagma Formasyon Disiplini<br/>(Kendi takımına sadece kendi doktrinini uygular,<br/>Selçuklu FSM'siyle çakışmadan aynı savaşta paralel çalışır)"]
+    BYZ_D --> ASSESS
 ```
 
 Her iki behavior da her tarla savaşına eklenir, ama her biri kendi kültürünün takımı sahada var mı diye
 (`IsSeljukTeam`/`IsByzantineTeam`) kontrol edip sadece kendi hak ettiği tek takıma emir veriyor — bir
 Selçuklu-Bizans savaşında ikisi de çakışmadan paralel çalışıyor.
+
+### 4b. TacticalSituationAssessor — Birim Tipine Göre Reaktif Davranış
+
+| Birim Tipi | Eski Davranış (v1.7.8'e kadar) | Yeni Davranış (v1.7.9-v1.8.1) |
+| :--- | :--- | :--- |
+| **Şok Süvarisi** | Faza girince koşulsuz şarj | Düşman mızrak/kalkan duvarı kurup duruyorsa (canlı hız verisiyle tespit) bekler; şarj kötü gidiyorsa (`kayıp > %35, güç dengesi aleyhte`) kontrollü geri çekilir |
+| **Atlı Okçu** | Faz başında koşulsuz şarj, mermi bitince yakın dövüş | Mermi varken hep mesafe korur/vur-kaç yapar; mermi bitince yerel güce göre kovalar ya da çekilir |
+| **Piyade** | Her savaşta koşulsuz kalkan duvarı, faz sonunda koşulsuz şarj | Kalkan duvarını sadece süvari tehdidi (atlı okçu dahil) ya da ok yağmuru altındayken kurar; ilerleyiş kaybediyorsa kontrollü çekilir; **gelen bir süvari şarjını (15sn içinde çarpacak) anında algılayıp duraklayıp kalkan duvarına geçer** (v1.8.1) |
+| **Yaya Okçu** | Faz sonunda koşulsuz yakın dövüş şarjı | Atlı okçuyla birebir aynı mantığı kullanır (aynı test edilmiş fonksiyon, sadece kama formasyonu yerine gevşek dizilim) |
+
+**Arazi seçimi (v1.8.1):** `TacticalFormationsHelper.FindOptimalHighGround` artık önce motorun
+kendi `HighGroundCloseToForeseenBattleGround` eğim-arama sonucunu deniyor (öngörülen muharebe
+hattına göre yönlenmiş, düşmana olan mesafeye göre ölçeklenen gerçek bir arazi analizi) — sadece
+piyadesiz bir ordu ya da dejenere bir sonuç durumunda modun eski 8 noktalı sabit taramasına düşüyor.
+
+Üçü de decompile ile doğrulanmış gerçek motor semantiğine dayanıyor — üç ayrı final incelemesi,
+property isimlerinden varsayım yapmanın (`CasualtyRatio` aslında hayatta kalma oranı,
+`MovementSpeedMaximum` aslında azami hız kapasitesi, `CavalryUnitRatio` atlı okçuları saymıyor)
+gerçek hatalara yol açtığını üç kez ayrı ayrı kanıtladı; her seferinde bulunup düzeltildi.
 
 ---
 
@@ -403,18 +435,18 @@ regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol 
   troops`) `_replaceWhileMerging="true"` eksikse WARN üretir — bu ayrım, Seljuk gibi Native karşılığı
   olmayan kültürlerde yanlış pozitif üretmemek için özellikle eklendi (bkz. bölüm 10, v1.7.7).
 
-- **Check 16 — `item-mesh-validity` (ERROR, v1.7.9):** Modun kendi tanımladığı her `<Item>`'ın
+- **Check 16 — `item-mesh-validity` (ERROR, v1.8.2):** Modun kendi tanımladığı her `<Item>`'ın
   `mesh=` değerinin, Native'in gerçekten kullandığı bir mesh'e karşılık geldiğini denetler. Mod hiç
   kendi 3B varlığı taşımıyor (`AssetPackages/` klasörü yok) — her eşya, `seljuk_royal_feather_helm`'in
   `khuzait_lord_helmet_a`'yı yeniden kullanması gibi, bilinçli olarak Native'in mevcut bir mesh'ini
   yeniden kullanıyor; bu yüzden listede olmayan bir `mesh=` neredeyse kesin bir yazım hatasıdır (oyunda
   görünmeyen/varsayılan geometri olarak render edilir, yükleme hatası vermez).
-- **Check 17 — `dialogue-hero-ids` (ERROR, v1.7.10):** `Source/**/*.cs`'deki her
+- **Check 17 — `dialogue-hero-ids` (ERROR, v1.8.2):** `Source/**/*.cs`'deki her
   `Hero.OneToOneConversationHero.StringId == "X"` koşulunu (bir özel diyalog satırının HANGİ
   karaktere ait olduğunu belirleyen mekanizma) tarar ve `X`'in gerçek bir Native veya mod-tanımlı
   karakter id'sine karşılık geldiğini doğrular. Yazım hatası burada hiç hata mesajı vermez — koşul
   sessizce hep yanlış olur, o karakter özel satırını asla göstermez ve fark edilmeden Native'in
-  jenerik selamlamasına düşer. Aynı 3 dosyanın (bölüm 10, v1.7.10) `"lord_pretalk"` hatası
+  jenerik selamlamasına düşer. Aynı 3 dosyanın (bölüm 10, v1.8.2) `"lord_pretalk"` hatası
   denetlenirken bulundu; test sırasında 2 zararsız ama artık gereksiz OR-yedek id kontrolü de
   temizlendi (`ertugrul_gazi`/`lord_seljuk_nizamulmulk` zaten doğruydu, ikinci alternatif hiç
   gerçek değildi).
@@ -427,7 +459,7 @@ doğru miras yoluyla çözülüyor; (2) `BattlePerformanceOptimizer`'ın kuşatm
 `MissionMode` enum'unda ayrı bir Siege değeri yok, kuşatma hücumları da `MissionMode.Battle`. Her
 ikisi de gereksiz "düzeltme" içeriği üretmek yerine kullanıcıya açıkça düzeltildi.
 
-**v1.7.9'da prototiplenip geri çekilen bir kontrol:** Check 12'nin (skill puanı) silah karşılığı
+**v1.8.2'de prototiplenip geri çekilen bir kontrol:** Check 12'nin (skill puanı) silah karşılığı
 olarak bir "silah gücü paritesi" kontrolü (`Item0`/`Item1`'in `thrust_damage`+`swing_damage`
 toplamını tier medyanıyla karşılaştıran) gerçek mod verisiyle test edildi. Skill puanlarının aksine
 (Native'in kendi tier eğrisi zaten normalize ediyor), ham silah hasarı aynı tier'deki farklı silah
@@ -441,7 +473,7 @@ denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS mate
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.7.10)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.2)
 
 ```mermaid
 graph LR
@@ -458,8 +490,10 @@ graph LR
     V175 --> V176["v1.7.6<br/>11 jenerik Selçuklu gezgininin<br/>İKİNCİ, ayrı GameText boşluğu<br/>kapatıldı (88 giriş, EN/TR)"]
     V176 --> V177["v1.7.7<br/>İsyancı/milis parti şablonu<br/>native'e sızıntısı fix (16 şablon) +<br/>verify_mod.py'ye 2 yeni kontrol +<br/>2 yanlış alarm iddiası düzeltildi"]
     V177 --> V178["v1.7.8<br/>11 gezginin 6 kalan dili<br/>tamamlandı (DE/FR/ES/RU/AR/CN,<br/>792 giriş) — 0 hata / 0 uyarı"]
-    V178 --> V179["v1.7.9<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + verify_mod.py check 16"]
-    V179 --> V1710["v1.7.10<br/>117 özel lord/yoldaş selamlaması<br/>yanlış diyalog durumuna gidiyordu<br/>('lord_pretalk' → 'lord_start') +<br/>verify_mod.py check 17"]
+    V178 --> V179["v1.7.9<br/>Reaktif süvari AI:<br/>TacticalSituationAssessor<br/>doğdu (24 test)"]
+    V179 --> V180["v1.8.0<br/>Reaktif piyade & okçu AI<br/>(43 test)"]
+    V180 --> V181["v1.8.1<br/>Cepheden şarj tepkisi +<br/>native arazi ustalığı"]
+    V181 --> V182["v1.8.2<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + 117 lord/yoldaş selamlaması<br/>yanlış diyalog durumundan düzeltildi<br/>('lord_pretalk' → 'lord_start') +<br/>verify_mod.py check 16-17"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -540,7 +574,37 @@ graph LR
 - **v1.7.8 — kapanış:** 11 jenerik gezginin 6 kalan dili (DE/FR/ES/RU/AR/CN, 792 giriş) tamamlandı;
   `verify_mod.py`'nin 15 kontrolü bu oturumda ilk kez 0 hata **VE** 0 uyarıyla geçti. Steam
   Workshop'a konsoldan yayınlandı (item 3789607078).
-- **v1.7.9 (kullanıcının "modu her açıdan profesyonelce geliştir" önceliklendirmesinden):**
+- **v1.7.9 kök neden (oyuncu tarafından bildirildi — "atlılarla bodozlama düşmana kafa atıp atlıları
+  kaybedip geri geliyorlar"):** `TuranTacticMissionBehavior`'ın taktik fazları tamamen sabit zaman/
+  mesafe eşikleriyle çalışıyordu — atlı okçular faz başında koşulsuz şarj alıyordu, 4 doktrinin hepsi
+  kuşatma fazına gelince aynı koşulsuz şarj koduna düşüyordu, hiçbir yerde kayıp oranı/düşman
+  bileşimi okunmuyordu. Yeni, motordan bağımsız `TacticalSituationAssessor` katmanı yazıldı
+  (`Formation.QuerySystem` — decompile ile doğrulandı). Final incelemesi 3 gerçek hata buldu ve
+  düzeltti: `CasualtyRatio` aslında hayatta kalma oranıydı (her formasyon savaşın başında "yüksek
+  kayıp" gibi okunuyordu), `MovementSpeedMaximum` azami hız *kapasitesiydi* (mızrak duvarı tespiti
+  hiç tetiklenmiyordu), atlı okçu geri çekilme hedefi son verilen emrin konumunu kullanıyordu (harita
+  kenarına doğru katlanarak uzaklaşıyordu).
+- **v1.8.0 kök neden (kullanıcı isteğiyle — "aşırı iyi olsun" hedefiyle piyade/okçulara genişletildi):**
+  Piyade her savaşta koşulsuz kalkan duvarı kurup faz sonunda koşulsuz şarj ediyordu; yaya okçular
+  mermi bitince koşulsuz yakın dövüşe giriyordu — süvaride düzeltilen kusurun aynısı. Yaya okçular
+  zaten test edilmiş `AssessHorseArcherStance`'i birebir yeniden kullandı; piyade için yeni
+  `AssessInfantryStance` + `ShouldFormShieldWall` yazıldı (süvari tehdidi ya da ok yağmuru altında
+  kalkan duvarı). Final incelemesi 2 gerçek hata buldu: `CavalryUnitRatio` atlı okçuları saymıyordu
+  (motorun kendi `FormationClass.Cavalry`/`FormationClass.HorseArcher` ayrımı nedeniyle — modun
+  imzası olan bozkır atlı okçusu tehdidi hiç algılanmıyordu), foot archer mevzi konumlandırması
+  (12m arkada, cepheye dönük) silinmiş ama yerine hiçbir şey konmamıştı.
+- **v1.8.1 kök neden (kullanıcı isteğiyle — motorun kullanılmayan iki sinyali):** `IsUnderCavalryChargeFromFront`
+  (en yakın büyük düşman şok süvarisi mi, bize mi geliyor, cepheden mi, 15sn içinde mi çarpacak —
+  hepsi decompile ile doğrulandı) piyadeye acil-durum kısa devresi olarak eklendi;
+  `HighGroundCloseToForeseenBattleGround` (öngörülen muharebe hattına göre yönlenmiş gerçek eğim
+  araması) `FindOptimalHighGround`'a tercih edilen yol olarak eklendi. Final incelemesi 1 kritik + 3
+  önemli hata buldu: `Team.GetFormation` asla null dönmüyor (piyadesiz bir ordu, hiç tick almamış bir
+  formasyonu doğrudan native aramaya besleyip haritanın köşesine anchor olabiliyordu), arama yarıçapı
+  motor yolunda hiç uygulanmıyordu, sağlamlık kontrolü yanlış referans noktasıyla karşılaştırma
+  yapıyordu, şarj tepkisi sadece iki fazda vardı (erken bir süvari hücumunun tam kaçırıldığı
+  `StagingAndSkirmish` fazında yoktu). Hepsi aynı oturumda bulunup düzeltildi, sonra Steam
+  Workshop'a (item 3789607078) canlı yayınlandı — Steam Web API ile doğrulandı.
+- **v1.8.2, bölüm 1 (kullanıcının "modu her açıdan profesyonelce geliştir" önceliklendirmesinden):**
   Decompile ile `TaleWorlds.CampaignSystem.CultureObject.EncyclopediaText`'in `<Culture text=...>`
   attribute'undan geldiği doğrulandı (Native'in `khuzait` kültüründe zaten kullanılan bir alan);
   Seljuk'ta zaten vardı ama 6 rakip kültürün (`rival_culture_names.xml`) hiçbirinde yoktu — oyun içi
@@ -561,8 +625,8 @@ graph LR
   moddan bağımsız kapsıyor, ek kod gerekmiyor) ve 9. bir dil eklenmesi (mevcut 8 dilin her biri
   ~1750 anahtar taşıyor - aceleye getirilmiş bir çeviri turu kalite riski taşır) - gerçek bulgu
   olmadığı ya da ayrı bir oturumu hak ettiği için kullanıcıya açıkça bu şekilde raporlandı.
-- **v1.7.10 (kullanıcının "genel bir hata/bug taraması yap" isteğinden — decompile ile bulunan,
-  önceki hiçbir sürümde raporlanmamış bir bulgu):** `TaleWorlds.CampaignSystem.CampaignBehaviors.
+- **v1.8.2, bölüm 2 (kullanıcının "genel bir hata/bug taraması yap" isteğinden — decompile ile
+  bulunan, önceki hiçbir sürümde raporlanmamış bir bulgu):** `TaleWorlds.CampaignSystem.CampaignBehaviors.
   LordConversationsCampaignBehavior`'ın kendisi decompile edilip Native'in KENDİ "start" durumundan
   çıkan HER lord selamlama satırı incelendi (`start_default`, `parley_2`, `start_attacking_met` vb.)
   — hepsi istisnasız `"start"` girdisinden `"lord_start"` çıktısına gidiyor, `"lord_pretalk"`'a giden

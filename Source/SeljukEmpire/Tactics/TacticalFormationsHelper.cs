@@ -17,8 +17,30 @@ namespace SeljukEmpire.Tactics
         /// <summary>
         /// Finds the safest high-ground anchor position near the friendly deployment zone.
         /// </summary>
-        public static Vec3 FindOptimalHighGround(Vec3 centerPos, float searchRadius = 70f)
+        public static Vec3 FindOptimalHighGround(Vec3 centerPos, float searchRadius = 70f, FormationQuerySystem preferredFormationQuerySystem = null)
         {
+            // Prefer Native's own slope-search terrain evaluator (oriented toward the
+            // anticipated battle line, radius-scaled to distance) when a formation is given.
+            // Fall back to the 8-point scan below if it looks degenerate (essentially our
+            // current position - most likely Team.MedianTargetFormationPosition hasn't settled
+            // yet, very early in a battle) or if no formation was provided at all.
+            if (preferredFormationQuerySystem != null)
+            {
+                Vec2 engineSuggestion = preferredFormationQuerySystem.HighGroundCloseToForeseenBattleGround;
+                // Compare against the formation's OWN position (not centerPos, the team-wide mean) -
+                // that's what "nothing better found" actually looks like from the engine, and bound
+                // the result to searchRadius so this path honors the same contract callers expect
+                // from the 8-point scan below (both decompile-verified gaps from the final review).
+                Vec2 formationOwnPosition = preferredFormationQuerySystem.Formation.CachedAveragePosition;
+                float distSqFromFormation = engineSuggestion.DistanceSquared(formationOwnPosition);
+                float distSqFromCenter = engineSuggestion.DistanceSquared(centerPos.AsVec2);
+                if (distSqFromFormation > 1f && distSqFromCenter <= searchRadius * searchRadius && Mission.Current?.Scene != null)
+                {
+                    // z is recomputed by ClampToMapBoundaries below - no need to look it up twice.
+                    return ClampToMapBoundaries(new Vec3(engineSuggestion.x, engineSuggestion.y, centerPos.z));
+                }
+            }
+
             if (Mission.Current?.Scene == null) return centerPos;
 
             Scene scene = Mission.Current.Scene;
@@ -73,6 +95,20 @@ namespace SeljukEmpire.Tactics
             
             Vec2 target2D = center.AsVec2 + (perpendicular * flankDistance);
             float z = Mission.Current?.Scene != null ? Mission.Current.Scene.GetTerrainHeight(target2D) : center.z;
+
+            return ClampToMapBoundaries(new Vec3(target2D.x, target2D.y, z));
+        }
+
+        /// <summary>
+        /// Computes a point directly away from the enemy - the mirror of CalculateFlankVector.
+        /// Used to kite a ranged formation back out of melee range, or to send a disengaging
+        /// formation toward a rally point.
+        /// </summary>
+        public static Vec3 CalculateFallbackVector(Vec3 selfPos, Vec3 enemyPos, float distance)
+        {
+            Vec2 awayFromEnemy = (selfPos.AsVec2 - enemyPos.AsVec2).Normalized();
+            Vec2 target2D = selfPos.AsVec2 + (awayFromEnemy * distance);
+            float z = Mission.Current?.Scene != null ? Mission.Current.Scene.GetTerrainHeight(target2D) : selfPos.z;
 
             return ClampToMapBoundaries(new Vec3(target2D.x, target2D.y, z));
         }
