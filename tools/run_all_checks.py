@@ -65,7 +65,7 @@ def run_dotnet_test():
 def run_verify_mod(extra_args):
     print()
     print("=" * 70)
-    print("verify_mod.py - content integrity (18 checks)")
+    print("verify_mod.py - content integrity (19 checks)")
     print("=" * 70)
 
     python = sys.executable or "python3"

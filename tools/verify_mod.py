@@ -123,6 +123,27 @@ Checks performed:
                             Seljuk/Turkic tamgas were registered but not one was ever assigned to
                             an actual clan/kingdom/culture banner (11 now are; 2 stay deliberate
                             spares).
+ 19. settlement-culture-kingdom [ERROR always; stronger ERROR needs game install] Every
+                            <Settlement owner="Faction.clan_X"> this mod's own *settlements.xml
+                            files set, where clan_X is a clan this mod itself gives an explicit
+                            culture= (in practice: the 11 Seljuk clans, the only ones that set it -
+                            rival-kingdom clans inherit Native's own, already-self-consistent
+                            culture untouched): (ERROR, no game install needed) if this same
+                            Settlement element ALSO sets its own culture= and it disagrees with
+                            the owning clan's - a same-file typo, e.g. a border settlement handed
+                            to a Seljuk clan but stamped with the wrong culture id; (ERROR, needs
+                            game install) if this Settlement sets no culture= override at all,
+                            compares against Native's OWN original culture for that same
+                            settlement id (SandBox/ModuleData/settlements.xml) - if it differs from
+                            the owning clan's culture, the settlement silently still displays
+                            Native's old culture in-game (exactly the "Danustica" -> "Konya" case:
+                            reassigning owner to clan_seljuk_royal without ALSO flipping culture
+                            from Native's inherited Culture.empire to Culture.seljuk would leave a
+                            Seljuk-owned capital showing Byzantine notables/visuals). Falls back to
+                            WARN, same as checks 4/9, when no game install is found to verify
+                            against. Villages are out of scope - none of this mod's own overrides
+                            set owner= on a Village (that ownership is implicit via Native's own
+                            nested <Village bound="..."> element, never touched here).
 
 A weapon-damage-based numeric sibling to check 12 (comparing Item0/Item1 thrust/swing damage
 against a tier median, the way check 12 does for skill points) was prototyped and run against the
@@ -136,8 +157,8 @@ project's numeric balance signal; a real weapon-parity check would need full DPS
 speed_rating, weapon_length), tracked as a future idea rather than forced in as-is.
 
 Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
-checks 1-8 and 14-18, they describe "this looks unintended", not "this is broken". (Check 18 is
-part ERROR, part WARN - see above.)
+checks 1-8 and 14-19, they describe "this looks unintended", not "this is broken". (Checks 18 and
+19 are part ERROR, part WARN - see above.)
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -1270,6 +1291,106 @@ def check_banner_icon_usage(issues, game_path):
                              f"add it to KNOWN_SPARE_BANNER_ICON_IDS with a comment saying why."))
 
 
+# --------------------------------------------------------------- check 19 --
+
+def collect_mod_defined_clan_cultures():
+    """{clan_id: culture_id} for every <Faction id="X" culture="Culture.Y"> this mod's own
+    *factions*.xml/*clans*.xml files define. Rival-kingdom clan files (byzantine_clans.xml,
+    armenian_clans.xml, etc.) deliberately do NOT set this attribute at all - only this mod's
+    own 11 Seljuk clans (factions.xml) do, which is exactly the intended scope: Native's own,
+    untouched political map is self-consistent by construction, and only a reassignment THIS
+    mod makes can introduce the mismatch this check looks for."""
+    cultures = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "Factions":
+            continue
+        for faction in root.iter("Faction"):
+            fid = faction.get("id")
+            culture = faction.get("culture")
+            if fid and culture:
+                cultures[fid] = _strip_type_prefix(culture)
+    return cultures
+
+
+def collect_mod_settlement_owner_culture():
+    """{settlement_id: (owner_clan_id_or_None, culture_id_or_None, file_rel)} for every
+    <Settlement> this mod's own *settlements.xml files define that sets owner= and/or culture=
+    directly on the element (most village-level overrides only set culture=; only town/castle-
+    level overrides carry owner=, matching how this mod's content is actually authored)."""
+    entries = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "Settlements":
+            continue
+        for settlement in root.iter("Settlement"):
+            sid = settlement.get("id")
+            owner = settlement.get("owner")
+            culture = settlement.get("culture")
+            if not sid or (owner is None and culture is None):
+                continue
+            entries[sid] = (
+                _strip_type_prefix(owner) if owner else None,
+                _strip_type_prefix(culture) if culture else None,
+                rel(f),
+            )
+    return entries
+
+
+def load_native_settlement_cultures(game_path):
+    """{settlement_id: culture_id} scanned from Native's own settlements.xml (confirmed at
+    SandBox/ModuleData/settlements.xml - reuses NATIVE_MODULES_FOR_CHARACTERS, which already
+    includes "SandBox")."""
+    cultures = {}
+    for f in native_module_xml_files(game_path, NATIVE_MODULES_FOR_CHARACTERS):
+        root = safe_parse(f)
+        if root is None or root.tag != "Settlements":
+            continue
+        for settlement in root.iter("Settlement"):
+            sid = settlement.get("id")
+            culture = settlement.get("culture")
+            if sid and culture:
+                cultures[sid] = _strip_type_prefix(culture)
+    return cultures
+
+
+def check_settlement_culture_kingdom(issues, game_path):
+    clan_cultures = collect_mod_defined_clan_cultures()
+    if not clan_cultures:
+        return
+    settlements = collect_mod_settlement_owner_culture()
+    native_cultures = load_native_settlement_cultures(game_path) if game_path is not None else None
+
+    for sid, (owner, culture, file) in sorted(settlements.items()):
+        if owner is None or owner not in clan_cultures:
+            continue
+        expected = clan_cultures[owner]
+
+        if culture is not None:
+            if culture != expected:
+                issues.append(Issue("ERROR", "settlement-culture-kingdom", file,
+                                     f'Settlement "{sid}" is owned by clan "{owner}" (culture="{expected}") '
+                                     f'but this same element sets culture="{culture}" instead - one of the '
+                                     f'two is very likely a typo.'))
+            continue
+
+        # No culture= override on this element - it silently keeps whatever culture it had
+        # before this mod's owner= reassignment (Native's original, unless another mod file
+        # also touches this same id, which check 3 already guards against).
+        if native_cultures is not None:
+            native_culture = native_cultures.get(sid)
+            if native_culture is not None and native_culture != expected:
+                issues.append(Issue("ERROR", "settlement-culture-kingdom", file,
+                                     f'Settlement "{sid}" was reassigned to clan "{owner}" (culture="{expected}") '
+                                     f'but has no culture= override of its own, so it still shows Native\'s '
+                                     f'original culture="{native_culture}" in-game.'))
+        else:
+            issues.append(Issue("WARN", "settlement-culture-kingdom", file,
+                                 f'Settlement "{sid}" was reassigned to clan "{owner}" (culture="{expected}") '
+                                 f'with no culture= override of its own - not verified against Native\'s '
+                                 f'original culture for this id - no game install found, pass --game-path.'))
+
+
 # --------------------------------------------------------------- check 13 --
 
 def check_workshop_conflicts(issues, game_path):
@@ -1364,6 +1485,7 @@ def run(args):
 
     check_troop_tier_parity(issues, game_path)
     check_banner_icon_usage(issues, game_path)
+    check_settlement_culture_kingdom(issues, game_path)
 
     if game_path is not None:
         check_upgrade_targets(issues, game_path)

@@ -299,6 +299,154 @@ namespace SeljukEmpire.Immersion
                 starter.AddDialogLine("geo_kakhaber_greeting_2", "start", "lord_start",
                     "{=geo_kakhaber_greet_2}A duke who cannot hold his own province has no business advising a king on how to hold a kingdom. I hold mine well. What do you want?",
                     () => IsKakhaber() && GetGreetingVariant(19, 2) == 1, null, 200);
+
+                // ============================================================================
+                // FOURTH WAVE (v1.8.4): the last 15 named Byzantine lords with no custom line -
+                // all 9 from byzantine_north_lords.xml (zero of the North roster had a line
+                // before this wave) plus the 6 remaining from byzantine_lords.xml (South). West
+                // (byzantine_west_lords.xml) was already fully covered in NewKingdomsDialogueBehavior.
+                // Same lighter 1-2-line treatment as the second/third waves.
+                // ============================================================================
+
+                // BYZANTINE NORTH GENERAL GEORGIOS PALAIOLOGOS (Alexios I's brother-in-law,
+                // key general in the 1081 coup and the defense of Dyrrhachium) (salt 20)
+                bool IsPalaiologos() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_1";
+
+                starter.AddDialogLine("byz_n_palaiologos_greeting_1", "start", "lord_start",
+                    "{=byz_n_palaiologos_greet_1}I have helped raise an emperor to his throne before, stranger, and I did not do it for gratitude - I did it because Rome needed a steady hand more than it needed the man already wearing the crown. What do you want?",
+                    () => IsPalaiologos() && GetGreetingVariant(20, 2) == 0, null, 200);
+                starter.AddDialogLine("byz_n_palaiologos_greeting_2", "start", "lord_start",
+                    "{=byz_n_palaiologos_greet_2}I have held Dyrrhachium's walls against men who thought Rome too weak to defend her own coastline. They were wrong then, and they would be wrong now. Speak your business.",
+                    () => IsPalaiologos() && GetGreetingVariant(20, 2) == 1, null, 200);
+
+                // BYZANTINE NORTH KONSTANTINOS ANGELOS (married into the Komnenos line; founder
+                // of the Angelos house's later rise to the throne) (1 line)
+                bool IsKAngelos() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_3";
+
+                starter.AddDialogLine("byz_n_angelos_greeting_1", "start", "lord_start",
+                    "{=byz_n_angelos_greet_1}My marriage bound the Angelos name to the blood of emperors, traveler - what my grandsons make of that is not yet written. What is your business with me?",
+                    IsKAngelos, null, 200);
+
+                // BYZANTINE NORTH IOANNES KANTAKOUZENOS (doux/general; ancestor of the later
+                // Kantakouzenos imperial line) (1 line)
+                bool IsKantakouzenos() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_5";
+
+                starter.AddDialogLine("byz_n_kantakouzenos_greeting_1", "start", "lord_start",
+                    "{=byz_n_kantakouzenos_greet_1}The Kantakouzenos name commands soldiers on this frontier today, whatever it commands in Constantinople tomorrow. State your business plainly.",
+                    IsKantakouzenos, null, 200);
+
+                // BYZANTINE NORTH BARDAS PHOKAS (led the 989 revolt against Basil II; scion of
+                // the great rival military dynasty to the Skleroi) (salt 21)
+                bool IsPhokas() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_20";
+
+                starter.AddDialogLine("byz_n_phokas_greeting_1", "start", "lord_start",
+                    "{=byz_n_phokas_greet_1}The Phokas name has worn the Purple before and buried more rivals than I care to count. Mind that, whatever business brings you before me.",
+                    () => IsPhokas() && GetGreetingVariant(21, 2) == 0, null, 200);
+                starter.AddDialogLine("byz_n_phokas_greeting_2", "start", "lord_start",
+                    "{=byz_n_phokas_greet_2}Every emperor in Constantinople watches this family a little too closely, and for good reason. Speak, and be quick about it.",
+                    () => IsPhokas() && GetGreetingVariant(21, 2) == 1, null, 200);
+
+                // BYZANTINE NORTH ROMANOS SKLEROS (Skleros house, the Phokas family's great
+                // rivals, own revolt against Basil II in 976-979) (1 line)
+                bool IsRSkleros() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_50";
+
+                starter.AddDialogLine("byz_n_skleros_greeting_1", "start", "lord_start",
+                    "{=byz_n_skleros_greet_1}The Skleros house has raised its banner against an emperor once already within living memory - remember that before you mistake me for an easy man to command. What do you want?",
+                    IsRSkleros, null, 200);
+
+                // BYZANTINE NORTH LEON KOURKOUAS (descendant of John Kourkouas, the great 10th
+                // century general who pushed Rome's eastern border further than any before him) (1 line)
+                bool IsLKourkouas() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_51";
+
+                starter.AddDialogLine("byz_n_kourkouas_greeting_1", "start", "lord_start",
+                    "{=byz_n_kourkouas_greet_1}My grandfather's grandfather carried Rome's eagles further east than any general before or since. I intend to hold what he won. Speak your business.",
+                    IsLKourkouas, null, 200);
+
+                // BYZANTINE NORTH MICHAEL XIPHILINOS (Xiphilinos house, which produced a
+                // Patriarch of Constantinople - a family of the law and the Church, not the sword) (1 line)
+                bool IsXiphilinos() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_58";
+
+                starter.AddDialogLine("byz_n_xiphilinos_greeting_1", "start", "lord_start",
+                    "{=byz_n_xiphilinos_greet_1}My family has served the Church and the law as faithfully as others have served the sword, traveler. State your business, and mind your words.",
+                    IsXiphilinos, null, 200);
+
+                // BYZANTINE NORTH NIKEPHOROS VATATZES (general; ancestor line of the Vatatzes
+                // emperors who would one day rule from Nicaea) (1 line)
+                bool IsVatatzes() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_NE8_l";
+
+                starter.AddDialogLine("byz_n_vatatzes_greeting_1", "start", "lord_start",
+                    "{=byz_n_vatatzes_greet_1}The Vatatzes name is not yet a great one in Constantinople, but give it a century or two. What brings you to me today?",
+                    IsVatatzes, null, 200);
+
+                // BYZANTINE NORTH THEODOROS GABRAS (real semi-independent doux of Trebizond who
+                // held the frontier against the Turkoman tribes until his death in battle against
+                // them) (salt 22)
+                bool IsGabras() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_NE9_l";
+
+                starter.AddDialogLine("byz_n_gabras_greeting_1", "start", "lord_start",
+                    "{=byz_n_gabras_greet_1}Trebizond answers to Constantinople in name and to me in practice, and I have held this frontier against the Turkoman tribes longer than any garrison sent from the capital could manage alone. What is your business?",
+                    () => IsGabras() && GetGreetingVariant(22, 2) == 0, null, 200);
+                starter.AddDialogLine("byz_n_gabras_greeting_2", "start", "lord_start",
+                    "{=byz_n_gabras_greet_2}Every raid out of the Turkoman hills tests whether Trebizond still has teeth. It does. Speak plainly, what do you want?",
+                    () => IsGabras() && GetGreetingVariant(22, 2) == 1, null, 200);
+
+                // BYZANTINE SOUTH MARIA OF ALANIA (Georgian princess, empress twice over under
+                // two different husbands - Michael VII Doukas, then Nikephoros III Botaneiates) (salt 23)
+                bool IsMariaAlania() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_16";
+
+                starter.AddDialogLine("byz_mariaalania_greeting_1", "start", "lord_start",
+                    "{=byz_mariaalania_greet_1}I came from Georgia's mountains to wear Rome's crown - twice, in fact, under two different husbands. Neither throne surprised me as much as you might expect. What do you want?",
+                    () => IsMariaAlania() && GetGreetingVariant(23, 2) == 0, null, 200);
+                starter.AddDialogLine("byz_mariaalania_greeting_2", "start", "lord_start",
+                    "{=byz_mariaalania_greet_2}An empress learns quickly that a crown outlasts the man wearing it, if she is patient enough. I have been very patient. Speak your business.",
+                    () => IsMariaAlania() && GetGreetingVariant(23, 2) == 1, null, 200);
+
+                // BYZANTINE SOUTH MARIA OF BULGARIA (Bulgarian-origin noblewoman at the
+                // Byzantine court, from the generations absorbed after Bulgaria's 1018 annexation) (1 line)
+                bool IsMariaBulgaria() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_18";
+
+                starter.AddDialogLine("byz_mariabulgaria_greeting_1", "start", "lord_start",
+                    "{=byz_mariabulgaria_greet_1}My family knelt to the Purple when Bulgaria fell, traveler, and I have made my peace with a Constantinople that still forgets we were ever a kingdom of our own. What is your business?",
+                    IsMariaBulgaria, null, 200);
+
+                // BYZANTINE SOUTH IRENE DOUKAINA (Alexios I's empress, mother of the historian
+                // Anna Komnene) (salt 24)
+                bool IsIreneDoukaina() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_30_1";
+
+                starter.AddDialogLine("byz_irenedoukaina_greeting_1", "start", "lord_start",
+                    "{=byz_irenedoukaina_greet_1}My husband did not want me at his side when he first took the throne. He learned otherwise soon enough, and so will you if you underestimate me. Speak.",
+                    () => IsIreneDoukaina() && GetGreetingVariant(24, 2) == 0, null, 200);
+                starter.AddDialogLine("byz_irenedoukaina_greeting_2", "start", "lord_start",
+                    "{=byz_irenedoukaina_greet_2}My daughter writes down everything her father does, for history to judge. I make sure she has the full truth to write, not merely the flattering half. What do you want?",
+                    () => IsIreneDoukaina() && GetGreetingVariant(24, 2) == 1, null, 200);
+
+                // BYZANTINE SOUTH NIKEPHOROS MELISSENOS (rival claimant to the throne in 1081,
+                // stood down when Alexios moved first and was made Caesar instead) (salt 25)
+                bool IsMelissenos() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_54";
+
+                starter.AddDialogLine("byz_melissenos_greeting_1", "start", "lord_start",
+                    "{=byz_melissenos_greet_1}I raised my own claim to the throne the same year Alexios raised his. I chose to stand down rather than tear the Empire apart over it - a choice that still costs me less sleep than you might think. What do you want?",
+                    () => IsMelissenos() && GetGreetingVariant(25, 2) == 0, null, 200);
+                starter.AddDialogLine("byz_melissenos_greeting_2", "start", "lord_start",
+                    "{=byz_melissenos_greet_2}A Caesar's title is a fine consolation for a throne I never had to bloody myself winning. Speak your business.",
+                    () => IsMelissenos() && GetGreetingVariant(25, 2) == 1, null, 200);
+
+                // BYZANTINE SOUTH JOSEPH TARCHANEIOTES (his detachment left the field at
+                // Manzikert before the main battle - one more figure this court still quietly
+                // blames for 1071, alongside Andronikos Doukas above) (1 line)
+                bool IsTarchaneiotes() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_72";
+
+                starter.AddDialogLine("byz_tarchaneiotes_greeting_1", "start", "lord_start",
+                    "{=byz_tarchaneiotes_greet_1}They still whisper that my men left the field at Manzikert before the battle was lost. I have stopped correcting them - the whispering does the fighting for me now. What brings you here?",
+                    IsTarchaneiotes, null, 200);
+
+                // BYZANTINE SOUTH ANNA DIOGENISSA (Romanos IV Diogenes's daughter, per this
+                // mod's own renaming of Native's "Ira" - see byzantine_lords.xml) (1 line)
+                bool IsAnnaDiogenissa() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "lord_1_37";
+
+                starter.AddDialogLine("byz_annadiogenissa_greeting_1", "start", "lord_start",
+                    "{=byz_annadiogenissa_greet_1}My father lost an empire at Manzikert, and I have spent my life since watching lesser men pretend they would have done better in his place. What do you want?",
+                    IsAnnaDiogenissa, null, 200);
             }
             catch (Exception)
             {

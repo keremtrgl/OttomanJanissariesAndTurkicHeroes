@@ -1779,5 +1779,26 @@
     <string id="geo_kavtar_greet_1" text="House Baramisdze holds its lands by the sword as much as by the King's favor, traveler. What brings you to me?" />
     <string id="geo_kakhaber_greet_1" text="Kartli is the heart of this kingdom, and I have governed it long enough to know every noble house within it by name. Speak your business." />
     <string id="geo_kakhaber_greet_2" text="A duke who cannot hold his own province has no business advising a king on how to hold a kingdom. I hold mine well. What do you want?" />
+    <string id="byz_n_palaiologos_greet_1" text="I have helped raise an emperor to his throne before, stranger, and I did not do it for gratitude - I did it because Rome needed a steady hand more than it needed the man already wearing the crown. What do you want?" />
+    <string id="byz_n_palaiologos_greet_2" text="I have held Dyrrhachium's walls against men who thought Rome too weak to defend her own coastline. They were wrong then, and they would be wrong now. Speak your business." />
+    <string id="byz_n_angelos_greet_1" text="My marriage bound the Angelos name to the blood of emperors, traveler - what my grandsons make of that is not yet written. What is your business with me?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="The Kantakouzenos name commands soldiers on this frontier today, whatever it commands in Constantinople tomorrow. State your business plainly." />
+    <string id="byz_n_phokas_greet_1" text="The Phokas name has worn the Purple before and buried more rivals than I care to count. Mind that, whatever business brings you before me." />
+    <string id="byz_n_phokas_greet_2" text="Every emperor in Constantinople watches this family a little too closely, and for good reason. Speak, and be quick about it." />
+    <string id="byz_n_skleros_greet_1" text="The Skleros house has raised its banner against an emperor once already within living memory - remember that before you mistake me for an easy man to command. What do you want?" />
+    <string id="byz_n_kourkouas_greet_1" text="My grandfather's grandfather carried Rome's eagles further east than any general before or since. I intend to hold what he won. Speak your business." />
+    <string id="byz_n_xiphilinos_greet_1" text="My family has served the Church and the law as faithfully as others have served the sword, traveler. State your business, and mind your words." />
+    <string id="byz_n_vatatzes_greet_1" text="The Vatatzes name is not yet a great one in Constantinople, but give it a century or two. What brings you to me today?" />
+    <string id="byz_n_gabras_greet_1" text="Trebizond answers to Constantinople in name and to me in practice, and I have held this frontier against the Turkoman tribes longer than any garrison sent from the capital could manage alone. What is your business?" />
+    <string id="byz_n_gabras_greet_2" text="Every raid out of the Turkoman hills tests whether Trebizond still has teeth. It does. Speak plainly, what do you want?" />
+    <string id="byz_mariaalania_greet_1" text="I came from Georgia's mountains to wear Rome's crown - twice, in fact, under two different husbands. Neither throne surprised me as much as you might expect. What do you want?" />
+    <string id="byz_mariaalania_greet_2" text="An empress learns quickly that a crown outlasts the man wearing it, if she is patient enough. I have been very patient. Speak your business." />
+    <string id="byz_mariabulgaria_greet_1" text="My family knelt to the Purple when Bulgaria fell, traveler, and I have made my peace with a Constantinople that still forgets we were ever a kingdom of our own. What is your business?" />
+    <string id="byz_irenedoukaina_greet_1" text="My husband did not want me at his side when he first took the throne. He learned otherwise soon enough, and so will you if you underestimate me. Speak." />
+    <string id="byz_irenedoukaina_greet_2" text="My daughter writes down everything her father does, for history to judge. I make sure she has the full truth to write, not merely the flattering half. What do you want?" />
+    <string id="byz_melissenos_greet_1" text="I raised my own claim to the throne the same year Alexios raised his. I chose to stand down rather than tear the Empire apart over it - a choice that still costs me less sleep than you might think. What do you want?" />
+    <string id="byz_melissenos_greet_2" text="A Caesar's title is a fine consolation for a throne I never had to bloody myself winning. Speak your business." />
+    <string id="byz_tarchaneiotes_greet_1" text="They still whisper that my men left the field at Manzikert before the battle was lost. I have stopped correcting them - the whispering does the fighting for me now. What brings you here?" />
+    <string id="byz_annadiogenissa_greet_1" text="My father lost an empire at Manzikert, and I have spent my life since watching lesser men pretend they would have done better in his place. What do you want?" />
   </strings>
 </base>

@@ -9,9 +9,9 @@ savaşları VE kuşatmalar), **Selçuklu Kervan Devlet Sigortası & İpek Yolu K
 ordu/parti şablonu (lord başlangıç ordusu, han paralı askeri, kervan/yerleşke muhafızı, devriye ×
 3 kademe, kuşatma milisi, isyancı partisi, bağlılık yemini hediyesi), karakter yaratma özgeçmişleri,
 25 meyhane companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş
-metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 17
+metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 19
 kontrollü otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri
-detaylandırmaktadır. **Güncel sürüm: v1.8.3.**
+detaylandırmaktadır. **Güncel sürüm: v1.8.4.**
 
 ---
 
@@ -32,7 +32,7 @@ graph TD
     SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.8.2)"]
     SM --> XML_B["banner_icons.xml<br/>(13 Selçuklu Tamgası — 11'i artık her klanın/Kingdom'ın/<br/>Culture'ın gerçek banner_key'inde, v1.8.3)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
-    SM -.denetler.-> VERIFY["tools/run_all_checks.py<br/>(verify_mod.py'nin 18 kontrolü + dotnet test'in<br/>43 taktik AI testi, tek komut, v1.8.3)"]
+    SM -.denetler.-> VERIFY["tools/run_all_checks.py<br/>(verify_mod.py'nin 19 kontrolü + dotnet test'in<br/>43 taktik AI testi, tek komut, v1.8.4)"]
 
     CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM,<br/>artık reaktif faz yürütme)"]
     CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM,<br/>artık reaktif faz yürütme)"]
@@ -44,7 +44,7 @@ graph TD
     CSHARP --> SETTLE["SeljukSettlementBehavior<br/>(Selçuklu mülkiyet/sahiplik runtime yönetimi)"]
     CSHARP --> RECRUIT["SeljukRecruitmentBehavior<br/>+ LatinEmpireRecruitmentBehavior<br/>(Culture.empire paylaşımı sorunu için özel askere alma mantığı)"]
     CSHARP --> TAVERN["SeljukTavernBehavior<br/>(Ozan/moral sistemi)"]
-    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(32+ tarihi lorda özel diyalog — v1.8.2'de<br/>117 satırın yanlış diyalog durumu düzeltildi)"]
+    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(47+ tarihi lorda özel diyalog, v1.8.4'te tüm Bizans<br/>Kuzey+Güney rosterı tamamlandı — v1.8.2'de<br/>117 satırın yanlış diyalog durumu düzeltildi)"]
     CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior<br/>(Yeni oyuncu için sistem tanıtımı)"]
     CSHARP --> TOURNEY["SeljukTournamentRewardBehavior<br/>+ RivalCultureTournamentRewardBehavior — v1.8.2<br/>(8 Kültürün Turnuva Şampiyonu Ödülü)"]
     CSHARP --> CULTBONUS["SeljukCultureBonusBehavior<br/>(SeljukWageModel/ConstructionSpeedModel/<br/>SiegeEngineeringModel/CaravanTradeModel)"]
@@ -419,7 +419,7 @@ Bizans sınır boyu temasına özgün olarak uyarlandı. v1.7.6'da sadece İngil
 
 ### 9c. Otomatik Bütünlük Denetleyicisi (tools/verify_mod.py)
 
-Mod artık kendi 18 kontrollü, ~1450 satırlık Python doğrulama aracını taşıyor — her yayından önce
+Mod artık kendi 19 kontrollü, ~1550 satırlık Python doğrulama aracını taşıyor — her yayından önce
 çalıştırılan bir CI-tarzı güvenlik ağı. v1.7.5-v1.7.7 arasında bu oturumda bulunan iki gerçek
 regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol eklendi:
 
@@ -464,6 +464,22 @@ regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol 
   Boyu/Çaka Beyliği/Saltuklular/Mengücekliler/Ahi Evran Ocağı/Âl-i Selçuk, kalan 5'i temaya
   göre); 2'si (Kızıl/Gök Sancak) bilinçli olarak serbest bayrak editörü seçeneği olarak
   kaldı.
+- **Check 19 — `settlement-culture-kingdom` (ERROR + koşullu WARN, v1.8.4):** Modun kendi
+  `<Settlement owner="Faction.clan_X">` atadığı her yerleşke için — `clan_X`'in kendisi de bu
+  modun `culture=` atadığı bir klan olduğunda (pratikte: sadece 11 Selçuklu klanı; rakip
+  krallık klanları bu attribute'u hiç set etmiyor, Native'in zaten kendi içinde tutarlı
+  siyasi haritasını olduğu gibi devralıyorlar) — iki katmanlı doğrulama: (ERROR, oyun kurulumu
+  gerekmez) aynı `<Settlement>` elemanı kendi `culture=`'unu da set ediyorsa ve bu, sahibi
+  klanın kültürüyle uyuşmuyorsa (tek dosya içi yazım hatası); (ERROR, oyun kurulumu gerekir)
+  bu elemanda hiç `culture=` override'ı yoksa, Native'in aynı id için orijinal kültürünü
+  (`SandBox/ModuleData/settlements.xml`) sahibi klanın kültürüyle karşılaştırır — farklıysa,
+  yerleşke sahiplik değişse de oyunda hâlâ Native'in eski kültürünü gösterir demektir (tam
+  olarak "Danustica" → "Konya" durumu: `clan_seljuk_royal`'a devredilirken `culture=`
+  Native'in miras `Culture.empire`'ından `Culture.seljuk`'a bilinçli çevrilmediyse, Selçuklu
+  başkenti Bizans figüranlarıyla görünürdü). Oyun kurulumu bulunamazsa check 4/9'daki gibi
+  WARN'a düşer. Köyler kapsam dışı — bu modun override'larının hiçbiri bir `<Village>`'a
+  `owner=` set etmiyor (o sahiplik Native'in kendi iç içe `<Village bound="...">` elemanı
+  üzerinden zımni).
 
 **Yanlış alarm düzeltmeleri (bu oturumda, "fix" değil "düzelt" — gerçek bulgular):** İki önceki-tur
 iddiası, gerçek motor decompile'ı ile yeniden doğrulanınca **yanlış** çıktı: (1) turnuva katılımcı
@@ -487,7 +503,7 @@ denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS mate
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.3)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.4)
 
 ```mermaid
 graph LR
@@ -509,6 +525,7 @@ graph LR
     V180 --> V181["v1.8.1<br/>Cepheden şarj tepkisi +<br/>native arazi ustalığı"]
     V181 --> V182["v1.8.2<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + 117 lord/yoldaş selamlaması<br/>yanlış diyalog durumundan düzeltildi<br/>('lord_pretalk' → 'lord_start') +<br/>verify_mod.py check 16-17"]
     V182 --> V183["v1.8.3<br/>13 tamganın hiçbiri hiçbir klanda<br/>kullanılmıyordu, 11'i düzeltildi +<br/>7 yeni Abbasi/Gürcü lord selamlaması +<br/>verify_mod.py check 18 +<br/>run_all_checks.py + AI benchmark"]
+    V183 --> V184["v1.8.4<br/>Bizans Kuzey (9/9) + Güney'in<br/>kalan 6 lordu tamamlandı (15 yeni<br/>selamlama, 8 dilde) +<br/>verify_mod.py check 19<br/>(yerleşke↔klan kültür tutarlılığı)"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -673,6 +690,15 @@ graph LR
   açıklaması (EN+TR) 25 companion, reaktif AI, 8 krallığın turnuva ödülü ve Ansiklopedi
   içeriğini yansıtacak şekilde konsoldan güncellendi (sadece metadata, içerik yeniden
   yüklenmedi).
+- **v1.8.4 (kullanıcının Tier-2 seçimi):** Bizans lord rosterının kalan tamamı grep ile tek tek
+  doğrulandı — Kuzey'in **9**'unun da (`byzantine_north_lords.xml`), Güney'in kalan **6**'sının
+  (`byzantine_lords.xml`) hiçbirinde özel selamlama yoktu (Batı zaten tamdı). `RivalCultureDialogueBehavior.cs`'e
+  "FOURTH WAVE" bloğuyla 21 yeni satır + 8 dilde çeviri eklendi (Theodoros Gabras/Trabzon gibi
+  gerçek tarihi Türkmen-sınırı figürleri dahil). `verify_mod.py`'ye check 19
+  (`settlement-culture-kingdom`) eklendi: modun kendi klan-kültür ile yerleşke sahiplik/kültür
+  atamaları arasındaki tutarlılığı, `SandBox/ModuleData/settlements.xml`'in gerçek şeması
+  decompile-doğrulanarak (Native `owner=`/`culture=` alanları, `<Village bound=...>` iç içe
+  yapısı) kontrol ediyor — 0 hata/0 uyarı ile mevcut 900+ yerleşkeye karşı temiz geçti.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).
