@@ -1820,5 +1820,26 @@
     <string id="geo_kavtar_greet_1" text="巴拉米斯泽家族守住领地,既靠国王的恩宠,也靠刀剑,旅人。你来找我所为何事?" />
     <string id="geo_kakhaber_greet_1" text="卡特利是这个王国的心脏,我治理它已足够长久,足以叫出这里每一个贵族世家的名字。说说你的来意。" />
     <string id="geo_kakhaber_greet_2" text="一位连自己的行省都守不住的公爵,没资格教国王如何守住一个王国。我把自己的守得很好。你想要什么?" />
+    <string id="byz_n_palaiologos_greet_1" text="陌生人,我曾助一位皇帝登上皇位,并非出于感恩之心——我这样做,是因为罗马需要一双稳健的手,胜过需要那个已经戴着王冠的人。你想要什么?" />
+    <string id="byz_n_palaiologos_greet_2" text="我守住了迪拉基乌姆的城墙,抵御那些以为罗马太弱、守不住自己海岸的人。他们那时错了,现在也一样会错。说说你的事吧。" />
+    <string id="byz_n_angelos_greet_1" text="我的婚姻将安杰洛斯这个名字与皇室血脉联系了起来,旅人——我的孙辈会如何利用这一点,尚未写定。你找我有何事?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="坎塔库泽努斯这个名字今日在这条边境上统率士兵,明日它在君士坦丁堡能统率什么,那是另一回事。有话直说。" />
+    <string id="byz_n_phokas_greet_1" text="福卡斯家族早已穿过紫袍,埋葬的对手多得我都不愿去数。不管你带着什么事来见我,都记住这一点。" />
+    <string id="byz_n_phokas_greet_2" text="君士坦丁堡的每一位皇帝都盯着这个家族看得稍微太紧了些,而且有充分的理由。说吧,快点说。" />
+    <string id="byz_n_skleros_greet_1" text="斯克莱罗斯家族曾经竖起旗帜反抗过一位皇帝,那记忆还很鲜活——在你以为我是个容易驾驭的人之前,先记住这一点。你想要什么?" />
+    <string id="byz_n_kourkouas_greet_1" text="我祖父的祖父把罗马的鹰旗带到了比任何将领都更远的东方,不论前人还是后人都未能及。我打算守住他赢得的一切。说说你的事吧。" />
+    <string id="byz_n_xiphilinos_greet_1" text="我的家族侍奉教会与法律,忠诚不亚于旁人侍奉刀剑,旅人。说说你的事吧,措辞要谨慎。" />
+    <string id="byz_n_vatatzes_greet_1" text="瓦塔泽斯这个名字在君士坦丁堡还算不上显赫,但再给它一两个世纪吧。今日你来找我有何事?" />
+    <string id="byz_n_gabras_greet_1" text="特拉布宗名义上听命于君士坦丁堡,实际上听命于我,而我守住这条边境、抵御突厥曼部落的时间,比任何从京城派来的孤立驻军所能做到的都更长。你有何事?" />
+    <string id="byz_n_gabras_greet_2" text="每一次从突厥曼山地发起的袭击,都是在试探特拉布宗是否仍有牙齿。它有。直说吧,你想要什么?" />
+    <string id="byz_mariaalania_greet_1" text="我从格鲁吉亚的群山而来,戴上了罗马的王冠——事实上是两次,嫁了两位不同的丈夫。没有一个王座像你想的那样令我意外。你想要什么?" />
+    <string id="byz_mariaalania_greet_2" text="一位皇后很快就会明白,只要足够耐心,王冠比戴着它的男人活得更久。我一直很有耐心。说说你的事吧。" />
+    <string id="byz_mariabulgaria_greet_1" text="保加利亚陷落那天,我的家族向紫袍屈膝了,旅人,而我已与一个至今仍忘记我们曾是自己王国的君士坦丁堡和解。你有何事?" />
+    <string id="byz_irenedoukaina_greet_1" text="我的丈夫初登皇位时并不想让我在他身边。他很快就明白了并非如此,若你小看我,你也会一样明白。说吧。" />
+    <string id="byz_irenedoukaina_greet_2" text="我的女儿把她父亲所做的一切都记录下来,留给历史去评判。我确保她掌握的是完整的真相,而不仅仅是讨好人的那一半。你想要什么?" />
+    <string id="byz_melissenos_greet_1" text="我提出对皇位的主张,与阿历克塞提出他的主张,是同一年。我选择了退让,而不是为此撕裂帝国——这个选择至今让我损失的睡眠,比你想的要少。你想要什么?" />
+    <string id="byz_melissenos_greet_2" text="凯撒这个头衔,对一个我从未用血去赢取的王位来说,是个不错的安慰。说说你的事吧。" />
+    <string id="byz_tarchaneiotes_greet_1" text="至今仍有人低声说,我的部下在曼齐克特战败之前就离开了战场。我已不再纠正他们了——如今这些低语替我打这场仗。是什么把你带到这里来?" />
+    <string id="byz_annadiogenissa_greet_1" text="我父亲在曼齐克特失去了一个帝国,自那以后我这一生都在看着那些不如他的人,自以为若换了他们会做得更好。你想要什么?" />
   </strings>
 </base>

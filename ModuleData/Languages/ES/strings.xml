@@ -1820,5 +1820,26 @@
     <string id="geo_kavtar_greet_1" text="La Casa Baramisdze mantiene sus tierras tanto por la espada como por el favor del rey, viajero. ¿Qué te trae ante mí?" />
     <string id="geo_kakhaber_greet_1" text="Kartli es el corazón de este reino, y lo he gobernado el tiempo suficiente para conocer por nombre a cada casa noble en él. Expón tu asunto." />
     <string id="geo_kakhaber_greet_2" text="Un duque que no puede sostener su propia provincia no tiene por qué aconsejar a un rey sobre cómo sostener un reino. Yo sostengo la mía bien. ¿Qué quieres?" />
+    <string id="byz_n_palaiologos_greet_1" text="Ya he ayudado antes a elevar a un emperador a su trono, extranjero, y no lo hice por gratitud - lo hice porque Roma necesitaba una mano firme más de lo que necesitaba al hombre que ya portaba la corona. ¿Qué quieres?" />
+    <string id="byz_n_palaiologos_greet_2" text="He sostenido las murallas de Dirraquio contra hombres que creían a Roma demasiado débil para defender su propia costa. Se equivocaban entonces, y se equivocarían ahora. Expón tu asunto." />
+    <string id="byz_n_angelos_greet_1" text="Mi matrimonio unió el nombre Angelos a la sangre de los emperadores, viajero - lo que mis nietos hagan con eso aún no está escrito. ¿Cuál es tu asunto conmigo?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="El nombre Kantakouzenos comanda soldados en esta frontera hoy; lo que comandará en Constantinopla mañana es otro asunto. Expón tu asunto con claridad." />
+    <string id="byz_n_phokas_greet_1" text="El nombre Phokas ya ha vestido la púrpura y enterrado más rivales de los que me importa contar. Ten eso en cuenta, cualquiera que sea el asunto que te traiga ante mí." />
+    <string id="byz_n_phokas_greet_2" text="Todo emperador en Constantinopla vigila a esta familia un poco demasiado de cerca, y con buena razón. Habla, y sé breve." />
+    <string id="byz_n_skleros_greet_1" text="La casa Skleros ya alzó su estandarte contra un emperador, dentro de la memoria viva - recuérdalo antes de creer que soy fácil de mandar. ¿Qué quieres?" />
+    <string id="byz_n_kourkouas_greet_1" text="El abuelo de mi abuelo llevó las águilas de Roma más al este que ningún general antes o después de él. Tengo intención de conservar lo que él ganó. Expón tu asunto." />
+    <string id="byz_n_xiphilinos_greet_1" text="Mi familia ha servido a la Iglesia y a la ley tan fielmente como otros han servido a la espada, viajero. Expón tu asunto, y elige bien tus palabras." />
+    <string id="byz_n_vatatzes_greet_1" text="El nombre Vatatzes todavía no es grande en Constantinopla, pero dale un siglo o dos. ¿Qué te trae hoy ante mí?" />
+    <string id="byz_n_gabras_greet_1" text="Trebisonda obedece a Constantinopla de nombre y a mí en la práctica, y he sostenido esta frontera contra las tribus turcomanas más tiempo del que cualquier guarnición enviada desde la capital podría sostenerla sola. ¿Cuál es tu asunto?" />
+    <string id="byz_n_gabras_greet_2" text="Cada incursión desde las colinas turcomanas pone a prueba si Trebisonda aún tiene dientes. Los tiene. Habla con claridad, ¿qué quieres?" />
+    <string id="byz_mariaalania_greet_1" text="Vine de las montañas de Georgia para portar la corona de Roma - dos veces, de hecho, bajo dos esposos distintos. Ningún trono me sorprendió tanto como podrías esperar. ¿Qué quieres?" />
+    <string id="byz_mariaalania_greet_2" text="Una emperatriz aprende rápido que una corona sobrevive al hombre que la porta, si es lo bastante paciente. Yo he sido muy paciente. Expón tu asunto." />
+    <string id="byz_mariabulgaria_greet_1" text="Mi familia se inclinó ante la púrpura cuando Bulgaria cayó, viajero, y he hecho las paces con una Constantinopla que todavía olvida que una vez fuimos un reino propio. ¿Cuál es tu asunto?" />
+    <string id="byz_irenedoukaina_greet_1" text="Mi esposo no me quería a su lado cuando subió al trono por primera vez. Aprendió lo contrario bastante rápido, y tú también lo aprenderás si me subestimas. Habla." />
+    <string id="byz_irenedoukaina_greet_2" text="Mi hija escribe todo lo que hace su padre, para que la historia lo juzgue. Me aseguro de que tenga la verdad completa, no solo la mitad halagadora. ¿Qué quieres?" />
+    <string id="byz_melissenos_greet_1" text="Alcé mi propia pretensión al trono el mismo año en que Alejo alzó la suya. Elegí retirarme antes que desgarrar el Imperio por ello - una elección que todavía me cuesta menos sueño de lo que podrías pensar. ¿Qué quieres?" />
+    <string id="byz_melissenos_greet_2" text="El título de César es un fino consuelo por un trono que nunca tuve que ganar con sangre. Expón tu asunto." />
+    <string id="byz_tarchaneiotes_greet_1" text="Todavía susurran que mis hombres abandonaron el campo en Manzikert antes de que la batalla se perdiera. He dejado de corregirlos - el susurro pelea la batalla por mí ahora. ¿Qué te trae aquí?" />
+    <string id="byz_annadiogenissa_greet_1" text="Mi padre perdió un imperio en Manzikert, y desde entonces he pasado mi vida viendo a hombres menores fingir que lo habrían hecho mejor en su lugar. ¿Qué quieres?" />
   </strings>
 </base>

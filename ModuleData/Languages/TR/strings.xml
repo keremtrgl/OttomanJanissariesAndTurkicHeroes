@@ -1779,5 +1779,26 @@
     <string id="geo_kavtar_greet_1" text="Baramisdze Hanesi topraklarını Kral'ın lütfu kadar kılıçla da tutar, gezgin. Beni ne için ziyaret ettin?" />
     <string id="geo_kakhaber_greet_1" text="Kartli bu krallığın kalbidir ve onu, içindeki her asil haneyi isimleriyle bilecek kadar uzun süredir yönetiyorum. İşini söyle." />
     <string id="geo_kakhaber_greet_2" text="Kendi vilayetini tutamayan bir dük, bir krala bir krallığı nasıl tutacağını öğütleme hakkına sahip değildir. Ben kendiminkini iyi tutuyorum. Ne istiyorsun?" />
+    <string id="byz_n_palaiologos_greet_1" text="Bir imparatoru tahtına çıkarmama yardım ettim yabancı, ve bunu minnet için yapmadım - Roma'nın, tacı zaten taşıyan adamdan daha çok sağlam bir ele ihtiyacı olduğu için yaptım. Ne istiyorsun?" />
+    <string id="byz_n_palaiologos_greet_2" text="Dyrrhachium'un surlarını, Roma'nın kendi kıyısını savunamayacak kadar zayıf olduğunu düşünen adamlara karşı tuttum. O zaman da yanılıyorlardı, şimdi de yanılırlardı. İşini söyle." />
+    <string id="byz_n_angelos_greet_1" text="Evliliğim Angelos adını imparatorların kanına bağladı, yolcu - torunlarımın bundan ne yapacağı henüz yazılmadı. Benimle işin ne?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="Kantakouzenos adı bugün bu sınırda askerlere komuta ediyor, yarın Konstantinopolis'te neye komuta edeceği ise başka mesele. İşini açıkça söyle." />
+    <string id="byz_n_phokas_greet_1" text="Phokas adı daha önce Mor'u giymişti ve saymaktan vazgeçtiğim kadar çok rakip gömdü. Önüme getirdiğin her ne iş olursa olsun, bunu akılda tut." />
+    <string id="byz_n_phokas_greet_2" text="Konstantinopolis'teki her imparator bu aileyi biraz fazla yakından izler, ve haklı sebeplerle. Söyle, ve çabuk ol." />
+    <string id="byz_n_skleros_greet_1" text="Skleros hanesi, hâlâ hafızalarda tazeyken bir imparatora karşı bayrağını kaldırmıştı bir kez - beni buyruk altına almanın kolay olacağını düşünmeden önce bunu hatırla. Ne istiyorsun?" />
+    <string id="byz_n_kourkouas_greet_1" text="Dedemin dedesi, Roma'nın kartallarını ondan önce ya da sonra hiçbir generalin taşımadığı kadar doğuya taşıdı. Onun kazandığını korumaya niyetliyim. İşini söyle." />
+    <string id="byz_n_xiphilinos_greet_1" text="Ailem Kilise'ye ve kanuna, başkalarının kılıca hizmet ettiği kadar sadakatle hizmet etti, yolcu. İşini söyle, ve sözlerine dikkat et." />
+    <string id="byz_n_vatatzes_greet_1" text="Vatatzes adı Konstantinopolis'te henüz büyük bir ad değil, ama ona bir yüzyıl ya da iki tanı. Bugün beni ne için görmeye geldin?" />
+    <string id="byz_n_gabras_greet_1" text="Trabzon adına Konstantinopolis'e, uygulamada ise bana bağlıdır, ve bu sınırı başkentten gönderilen hiçbir garnizonun tek başına yönetemeyeceği kadar uzun süre Türkmen boylarına karşı tuttum. İşin ne?" />
+    <string id="byz_n_gabras_greet_2" text="Türkmen tepelerinden gelen her akın, Trabzon'un hâlâ dişleri olup olmadığını sınar. Var. Açıkça söyle, ne istiyorsun?" />
+    <string id="byz_mariaalania_greet_1" text="Gürcistan'ın dağlarından gelip Roma'nın tacını giydim - hem de iki kez, iki farklı kocanın altında. Hiçbir taht beklediğimden fazla şaşırtmadı beni. Ne istiyorsun?" />
+    <string id="byz_mariaalania_greet_2" text="Bir imparatoriçe, yeterince sabırlıysa, bir tacın onu taşıyan adamdan daha uzun ömürlü olduğunu çabuk öğrenir. Ben çok sabırlı oldum. İşini söyle." />
+    <string id="byz_mariabulgaria_greet_1" text="Bulgaristan düştüğünde ailem Mor'a diz çöktü, yolcu, ve bizim bir zamanlar kendi krallığımız olduğunu hâlâ unutan bir Konstantinopolis'le barıştım. İşin ne?" />
+    <string id="byz_irenedoukaina_greet_1" text="Kocam tahta ilk çıktığında beni yanında istemedi. Bunun tersini yeterince çabuk öğrendi, sen de beni hafife alırsan öğrenirsin. Söyle." />
+    <string id="byz_irenedoukaina_greet_2" text="Kızım, babasının yaptığı her şeyi tarihin yargılaması için yazıyor. Yazacağı şeyin sadece pohpohlayan yarısı değil, tam gerçek olmasını sağlıyorum. Ne istiyorsun?" />
+    <string id="byz_melissenos_greet_1" text="Alexios tahta kendi hakkını ileri sürdüğü yıl ben de kendi hakkımı ileri sürdüm. İmparatorluğu bu yüzden parçalamak yerine geri çekilmeyi seçtim - bu seçim hâlâ düşündüğünden daha az uykumu kaçırıyor. Ne istiyorsun?" />
+    <string id="byz_melissenos_greet_2" text="Bir Kaisar unvanı, kendimi kanlandırmadan kazanmadığım bir taht için güzel bir tazminat. İşini söyle." />
+    <string id="byz_tarchaneiotes_greet_1" text="Hâlâ benim adamlarımın Malazgirt'te savaş kaybedilmeden önce meydanı terk ettiğini fısıldıyorlar. Onları düzeltmekten vazgeçtim - fısıldamak, dövüşü artık benim yerime yapıyor. Seni buraya ne getirdi?" />
+    <string id="byz_annadiogenissa_greet_1" text="Babam Malazgirt'te bir imparatorluk kaybetti, ve o zamandan beri hayatımı, kendisinin yerinde olsalardı daha iyisini yapacaklarını sanan küçük adamları izleyerek geçirdim. Ne istiyorsun?" />
   </strings>
 </base>
