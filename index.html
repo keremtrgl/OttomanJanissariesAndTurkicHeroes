@@ -51,16 +51,164 @@
   <section id="section-1">
     <h2 class="lang-tr">1. Genel Modül &amp; Dosya Bağımlılık Haritası (Master Engine Architecture)</h2>
     <h2 class="lang-en" hidden>1. General Module &amp; File Dependency Map (Master Engine Architecture)</h2>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    SM["SubModule.xml&lt;br/&gt;(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll&lt;br/&gt;(22 C# Kaynak Dosyası)"]
+    SM --> XML_CC["seljuk_character_creation_equipment.xml&lt;br/&gt;+ seljuk_education_*&lt;br/&gt;(Selçuklu 5 Aşamalı Özgeçmiş)"]
+    SM --> XML_F["factions.xml + kingdoms.xml&lt;br/&gt;(8 Krallık: Selçuklu + 7 Rakip)"]
+    SM --> XML_S["8 x *_settlements.xml&lt;br/&gt;(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
+    SM --> XML_L["8 x *_lords.xml&lt;br/&gt;(Tüm Krallıklarda Tarihi Lord İsimleri)"]
+    SM --> XML_H["heroes.xml + rival_culture_companions.xml&lt;br/&gt;+ seljuk_special_characters*.xml&lt;br/&gt;(Soy Ağacı &amp; 25 Meyhane Yoldaşı: 14 Tarihi + 11 Jenerik)"]
+    SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml&lt;br/&gt;(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
+    SM --> XML_P["party_templates.xml + rival_culture_names.xml&lt;br/&gt;(8 Kültürün 8 Ordu/Parti Şablonu — Lord Ordusu v1.7.2,&lt;br/&gt;Han/Muhafız/Devriye/Milis/İsyancı/Hediye v1.7.5 &amp; v1.7.7, 64 Şablon)"]
+    SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml&lt;br/&gt;(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.8.2)"]
+    SM --> XML_POL["policies.xml&lt;br/&gt;(10 Özel Selçuklu Politikası)"]
+    SM --> XML_I["items.xml&lt;br/&gt;(27 Eşya: 20 Selçuklu Yadigarı&lt;br/&gt;+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.8.2)"]
+    SM --> XML_B["banner_icons.xml&lt;br/&gt;(13 Selçuklu Tamgası — 11'i artık her klanın/Kingdom'ın/&lt;br/&gt;Culture'ın gerçek banner_key'inde, v1.8.3)"]
+    SM --> XML_LANG["Languages/&lt;br/&gt;(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
+    SM -.denetler.-> VERIFY["tools/run_all_checks.py&lt;br/&gt;(verify_mod.py'nin 19 kontrolü + dotnet test'in&lt;br/&gt;43 taktik AI testi, tek komut, v1.8.4)"]
+
+    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior&lt;br/&gt;(4 Doktrinli Selçuklu Taktik FSM,&lt;br/&gt;artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior&lt;br/&gt;(Bizans Tagma Taktik FSM,&lt;br/&gt;artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_ASSESS["TacticalSituationAssessor&lt;br/&gt;(Motordan Bağımsız Paylaşılan Karar Katmanı&lt;br/&gt;— 43 Birim Testi, v1.7.9-v1.8.1)"]
+    CSHARP --> TACTIC_MATH["TacticalFormationsHelper&lt;br/&gt;(Sıfır-GC Tepe &amp; Sınır Güvenliği&lt;br/&gt;+ Native Eğim Araması Tercihi — v1.8.1)"]
+    CSHARP --> PERF_OPT["BattlePerformanceOptimizer&lt;br/&gt;+ RagdollPhysicsBudgetManager&lt;br/&gt;(FPS &amp; Frametime Dengeleyici — tarla savaşları VE kuşatmalar)"]
+    CSHARP --> ECON_INS["SeljukCaravanInsuranceBehavior&lt;br/&gt;(Devlet Sigortası &amp; İpek Yolu Fonu)"]
+    CSHARP --> ADMIN["SeljukAtabegTitleBehavior&lt;br/&gt;(Atabeglik XP — sadece Selçuklu yerleşimi yöneten valilere)"]
+    CSHARP --> SETTLE["SeljukSettlementBehavior&lt;br/&gt;(Selçuklu mülkiyet/sahiplik runtime yönetimi)"]
+    CSHARP --> RECRUIT["SeljukRecruitmentBehavior&lt;br/&gt;+ LatinEmpireRecruitmentBehavior&lt;br/&gt;(Culture.empire paylaşımı sorunu için özel askere alma mantığı)"]
+    CSHARP --> TAVERN["SeljukTavernBehavior&lt;br/&gt;(Ozan/moral sistemi)"]
+    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior&lt;br/&gt;+ NewKingdomsDialogueBehavior&lt;br/&gt;(47+ tarihi lorda özel diyalog, v1.8.4'te tüm Bizans&lt;br/&gt;Kuzey+Güney rosterı tamamlandı — v1.8.2'de&lt;br/&gt;117 satırın yanlış diyalog durumu düzeltildi)"]
+    CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior&lt;br/&gt;(Yeni oyuncu için sistem tanıtımı)"]
+    CSHARP --> TOURNEY["SeljukTournamentRewardBehavior&lt;br/&gt;+ RivalCultureTournamentRewardBehavior — v1.8.2&lt;br/&gt;(8 Kültürün Turnuva Şampiyonu Ödülü)"]
+    CSHARP --> CULTBONUS["SeljukCultureBonusBehavior&lt;br/&gt;(SeljukWageModel/ConstructionSpeedModel/&lt;br/&gt;SiegeEngineeringModel/CaravanTradeModel)"]
+    CSHARP --> CHARGEN["SeljukCharacterCreationContentHandler&lt;br/&gt;+ RivalCultureCharacterCreationContentHandler&lt;br/&gt;(7 kültürde özgeçmiş içeriği)"]
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    SM["SubModule.xml&lt;br/&gt;(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll&lt;br/&gt;(22 C# Source Files)"]
+    SM --> XML_CC["seljuk_character_creation_equipment.xml&lt;br/&gt;+ seljuk_education_*&lt;br/&gt;(Seljuk 5-Stage Backstory)"]
+    SM --> XML_F["factions.xml + kingdoms.xml&lt;br/&gt;(8 Kingdoms: Seljuk + 7 Rivals)"]
+    SM --> XML_S["8 x *_settlements.xml&lt;br/&gt;(390 Town/Castle/Village Renamings)"]
+    SM --> XML_L["8 x *_lords.xml&lt;br/&gt;(Historical Lord Names Across All Kingdoms)"]
+    SM --> XML_H["heroes.xml + rival_culture_companions.xml&lt;br/&gt;+ seljuk_special_characters*.xml&lt;br/&gt;(Family Tree &amp; 25 Tavern Companions: 14 Historical + 11 Generic)"]
+    SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml&lt;br/&gt;(Seljuk Tree + 7 Rival Kingdoms' 21-Unit Trees Each = 147 Units)"]
+    SM --> XML_P["party_templates.xml + rival_culture_names.xml&lt;br/&gt;(8 Army/Party Templates per Culture — Lord Army v1.7.2,&lt;br/&gt;Khan/Guard/Patrol/Militia/Rebel/Gift v1.7.5 &amp; v1.7.7, 64 Templates)"]
+    SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml&lt;br/&gt;(Encyclopedia Backstory Text for 8 Cultures — text=, v1.8.2)"]
+    SM --> XML_POL["policies.xml&lt;br/&gt;(10 Custom Seljuk Policies)"]
+    SM --> XML_I["items.xml&lt;br/&gt;(27 Items: 20 Seljuk Heirlooms&lt;br/&gt;+ 7 Rival Tournament Champion Rewards — v1.8.2)"]
+    SM --> XML_B["banner_icons.xml&lt;br/&gt;(13 Seljuk Tamgas — 11 now appear in an actual clan's/Kingdom's/&lt;br/&gt;Culture's real banner_key, v1.8.3)"]
+    SM --> XML_LANG["Languages/&lt;br/&gt;(EN/TR/DE/FR/ES/RU/AR/CN — 8 Languages Fully Synced)"]
+    SM -.audits.-> VERIFY["tools/run_all_checks.py&lt;br/&gt;(verify_mod.py's 19 checks + dotnet test's&lt;br/&gt;43 tactical AI tests, one command, v1.8.4)"]
+
+    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior&lt;br/&gt;(4-Doctrine Seljuk Tactical FSM,&lt;br/&gt;now with reactive phase execution)"]
+    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior&lt;br/&gt;(Byzantine Tagma Tactical FSM,&lt;br/&gt;now with reactive phase execution)"]
+    CSHARP --> TACTIC_ASSESS["TacticalSituationAssessor&lt;br/&gt;(Engine-Independent Shared Decision Layer&lt;br/&gt;— 43 Unit Tests, v1.7.9-v1.8.1)"]
+    CSHARP --> TACTIC_MATH["TacticalFormationsHelper&lt;br/&gt;(Zero-GC High Ground &amp; Boundary Safety&lt;br/&gt;+ Prefers Native Slope Search — v1.8.1)"]
+    CSHARP --> PERF_OPT["BattlePerformanceOptimizer&lt;br/&gt;+ RagdollPhysicsBudgetManager&lt;br/&gt;(FPS &amp; Frametime Balancer — field battles AND sieges)"]
+    CSHARP --> ECON_INS["SeljukCaravanInsuranceBehavior&lt;br/&gt;(State Insurance &amp; Silk Road Fund)"]
+    CSHARP --> ADMIN["SeljukAtabegTitleBehavior&lt;br/&gt;(Atabeg XP — only for governors administering a Seljuk settlement)"]
+    CSHARP --> SETTLE["SeljukSettlementBehavior&lt;br/&gt;(Seljuk property/ownership runtime management)"]
+    CSHARP --> RECRUIT["SeljukRecruitmentBehavior&lt;br/&gt;+ LatinEmpireRecruitmentBehavior&lt;br/&gt;(Custom recruitment logic for the shared Culture.empire issue)"]
+    CSHARP --> TAVERN["SeljukTavernBehavior&lt;br/&gt;(Bard/morale system)"]
+    CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior&lt;br/&gt;+ NewKingdomsDialogueBehavior&lt;br/&gt;(Custom dialogue for 47+ historical lords, v1.8.4 completed&lt;br/&gt;the full Byzantine North+South roster — v1.8.2 fixed&lt;br/&gt;117 lines' incorrect dialogue condition)"]
+    CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior&lt;br/&gt;(System introduction for new players)"]
+    CSHARP --> TOURNEY["SeljukTournamentRewardBehavior&lt;br/&gt;+ RivalCultureTournamentRewardBehavior — v1.8.2&lt;br/&gt;(Tournament Champion Reward for 8 Cultures)"]
+    CSHARP --> CULTBONUS["SeljukCultureBonusBehavior&lt;br/&gt;(SeljukWageModel/ConstructionSpeedModel/&lt;br/&gt;SiegeEngineeringModel/CaravanTradeModel)"]
+    CSHARP --> CHARGEN["SeljukCharacterCreationContentHandler&lt;br/&gt;+ RivalCultureCharacterCreationContentHandler&lt;br/&gt;(Backstory content across 7 cultures)"]
+    </pre>
+
+    <div class="lang-tr">
+      <p>SubModule.xml, modun 56 XmlNode'luk usta manifestosu olarak tüm XML veri dosyalarını ve SeljukTactics.dll içindeki 22 C# kaynak dosyasını devreye sokar; ayrıca tools/run_all_checks.py'yi (verify_mod.py'nin 19 kontrolü + dotnet test'in 43 taktik AI testi, tek komut, v1.8.4) denetler. SeljukTactics.dll'den dallanan C# behavior'ları arasında taktik yapay zeka FSM'leri (TuranTacticMissionBehavior, ByzantineTacticMissionBehavior, TacticalSituationAssessor, TacticalFormationsHelper), performans sistemi (BattlePerformanceOptimizer + RagdollPhysicsBudgetManager), ekonomi (SeljukCaravanInsuranceBehavior) ve yönetim/diyalog/turnuva/karakter yaratma behavior'ları yer alır.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>SubModule.xml, the mod's master manifest with 56 XmlNode entries, wires up all of the XML data files and the 22 C# source files inside SeljukTactics.dll; it also drives tools/run_all_checks.py (verify_mod.py's 19 checks + dotnet test's 43 tactical AI tests, one command, v1.8.4). Among the C# behaviors branching from SeljukTactics.dll are the tactical AI FSMs (TuranTacticMissionBehavior, ByzantineTacticMissionBehavior, TacticalSituationAssessor, TacticalFormationsHelper), the performance system (BattlePerformanceOptimizer + RagdollPhysicsBudgetManager), the economy layer (SeljukCaravanInsuranceBehavior), and the administration/dialogue/tournament/character-creation behaviors.</p>
+    </div>
   </section>
 
   <section id="section-2">
     <h2 class="lang-tr">2. Selçuklu Kervan Devlet Sigortası &amp; İpek Yolu Kâr Ortaklığı (Economy Engine)</h2>
     <h2 class="lang-en" hidden>2. Seljuk Caravan State Insurance &amp; Silk Road Profit Partnership (Economy Engine)</h2>
+
+    <pre class="mermaid lang-tr">
+graph LR
+    subgraph "1. Devlet Kervan Sigortası"
+        P1["Kervan Sigortası Poliçesi Al&lt;br/&gt;(1,500 Dinar Tek Seferlik)"] --> P2["Kervan Haydutlarca Vurulursa"]
+        P2 --> P3["Sultanlık Hazinesi 18,500 Dinar Tam Tazminat Öder!"]
+    end
+
+    subgraph "2. İpek Yolu Kervansaray Fonu"
+        I1["Şehir Kervansarayına 10,000 Dinar Sermaye Yatır"] --> I2["Haftalık Ticaret Refahı Çarpanı (%4.5 ROI)"]
+        I2 --> I3["Her Hafta Düzenli Pasif Altın Temettüsü Tahsil Edilir"]
+    end
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph LR
+    subgraph "1. State Caravan Insurance"
+        P1["Buy Caravan Insurance Policy&lt;br/&gt;(1,500 Dinars One-Time)"] --> P2["If the Caravan Is Struck by Bandits"]
+        P2 --> P3["Sultanate Treasury Pays Full 18,500 Dinar Compensation!"]
+    end
+
+    subgraph "2. Silk Road Caravanserai Fund"
+        I1["Invest 10,000 Dinars of Capital in the City Caravanserai"] --> I2["Weekly Trade Prosperity Multiplier (4.5% ROI)"]
+        I2 --> I3["Regular Passive Gold Dividend Collected Every Week"]
+    end
+    </pre>
+
+    <div class="lang-tr">
+      <p>Sistem iki bağımsız akıştan oluşur: Devlet Kervan Sigortası, oyuncunun 1,500 Dinar tek seferlik bir poliçe satın almasını ve kervan haydutlarca vurulduğunda Sultanlık Hazinesi'nden 18,500 Dinar tam tazminat almasını sağlar. İpek Yolu Kervansaray Fonu ise şehir kervansarayına 10,000 Dinar sermaye yatırımı karşılığında haftalık %4.5 ROI'lik bir ticaret refahı çarpanı ve her hafta düzenli pasif altın temettüsü sunar. Her iki akış da SeljukCaravanInsuranceBehavior tarafından yönetilir.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>The system consists of two independent flows: State Caravan Insurance lets the player buy a one-time 1,500 Dinar policy and, if the caravan is struck by bandits, receive full 18,500 Dinar compensation from the Sultanate Treasury. The Silk Road Caravanserai Fund, in turn, offers a weekly 4.5% ROI trade prosperity multiplier and a regular passive gold dividend every week, in exchange for a 10,000 Dinar capital investment in the city caravanserai. Both flows are managed by SeljukCaravanInsuranceBehavior.</p>
+    </div>
   </section>
 
   <section id="section-3">
     <h2 class="lang-tr">3. Savaş Alanı FPS &amp; Ragdoll Optimizasyon Motoru (BattleOptimizer)</h2>
     <h2 class="lang-en" hidden>3. Battlefield FPS &amp; Ragdoll Optimization Engine (BattleOptimizer)</h2>
+
+    <pre class="mermaid lang-tr">
+graph LR
+    subgraph "1. 2D Spatial Hash Grid"
+        G1["Atlı &amp; Yaya Okçular"] --> G2["35m Hücreli Uzamsal Izgara"]
+        G2 --> G3["O(1) Anında En Yakın Düşman Tespiti&lt;br/&gt;(İşlemci Yükü -%85)"]
+    end
+
+    subgraph "2. Ragdoll Fizik Bütçe Yöneticisi"
+        R1["500+ Asker Çarpışması"] --> R2["Aktif Ragdoll Sayısı Max 32 İle Sınırlandırılır"]
+        R2 --> R3["Hareketsiz Cesetler Otomatik Uykuya Alınır&lt;br/&gt;(PhysX Çarpışma Hesaplaması Sıfırlanır)"]
+    end
+
+    subgraph "3. Mesafe Tabanlı AI Kademelendirme (LOD)"
+        L1["Kameradan >140m Uzaktaki Birlikler"] --> L2["Gereksiz Raycast Sorguları Kırpılır&lt;br/&gt;(Stutter ve Mikro-Donmalar Engellenir)"]
+    end
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph LR
+    subgraph "1. 2D Spatial Hash Grid"
+        G1["Mounted &amp; Foot Archers"] --> G2["35m-Cell Spatial Grid"]
+        G2 --> G3["O(1) Instant Nearest-Enemy Detection&lt;br/&gt;(CPU Load -85%)"]
+    end
+
+    subgraph "2. Ragdoll Physics Budget Manager"
+        R1["500+ Soldier Clash"] --> R2["Active Ragdoll Count Capped at Max 32"]
+        R2 --> R3["Motionless Corpses Are Automatically Put to Sleep&lt;br/&gt;(PhysX Collision Calculation Zeroed Out)"]
+    end
+
+    subgraph "3. Distance-Based AI Tiering (LOD)"
+        L1["Units >140m From Camera"] --> L2["Unnecessary Raycast Queries Are Trimmed&lt;br/&gt;(Prevents Stutter and Micro-Freezes)"]
+    end
+    </pre>
+
+    <div class="lang-tr">
+      <p>Motor üç bağımsız alt sistemle FPS ve frametime'ı dengeler: atlı &amp; yaya okçular için 35m hücreli bir 2D uzamsal ızgara (O(1) anında en yakın düşman tespiti, işlemci yükünde -%85), 500+ asker çarpıştığında aktif ragdoll sayısını 32 ile sınırlayan bir ragdoll fizik bütçe yöneticisi, ve kameradan 140m'den uzak birlikler için gereksiz raycast sorgularını kırpan mesafe tabanlı bir AI kademelendirmesi (LOD).</p>
+      <p>Not: Her iki sistem de (<code>BattlePerformanceOptimizer</code>, <code>TuranTacticMissionBehavior</code>/<code>ByzantineTacticMissionBehavior</code>) sadece <code>mission.Mode == MissionMode.Battle</code> durumunda etkin. <code>TaleWorlds.Core.MissionMode</code> enum'unda ayrı bir "Siege" değeri <strong>yok</strong> — kuşatma hücumları da <code>MissionMode.Battle</code> olarak çalışır, yani <code>BattlePerformanceOptimizer</code> zaten hem tarla savaşlarında hem kuşatmalarda aktiftir (bu, v1.7.7'de decompile ile doğrulandı — önceki bir turda "kuşatmalarda kapsanmıyor" şeklindeki hatalı iddia düzeltildi). Sadece taktik doktrin FSM'leri ek olarak <code>!mission.IsSiegeBattle</code> şartı taşır ve bu yüzden yalnız açık alan muharebelerinde çalışır (formasyon manevra AI'ı sur hücumuna uygun değildir).</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>The engine balances FPS and frametime with three independent subsystems: a 35m-cell 2D spatial grid for mounted &amp; foot archers (O(1) instant nearest-enemy detection, CPU load -85%), a Ragdoll Physics Budget Manager that caps the active ragdoll count at 32 when 500+ soldiers clash, and a distance-based AI tiering (LOD) that trims unnecessary raycast queries for units more than 140m from the camera.</p>
+      <p>Note: Both systems (<code>BattlePerformanceOptimizer</code>, <code>TuranTacticMissionBehavior</code>/<code>ByzantineTacticMissionBehavior</code>) are only active when <code>mission.Mode == MissionMode.Battle</code>. The <code>TaleWorlds.Core.MissionMode</code> enum has <strong>no</strong> separate "Siege" value — siege assaults also run as <code>MissionMode.Battle</code>, meaning <code>BattlePerformanceOptimizer</code> is already active in both field battles and sieges (this was verified via decompile in v1.7.7 — a previous round's mistaken claim that it "isn't covered in sieges" was corrected). Only the tactical doctrine FSMs additionally carry the <code>!mission.IsSiegeBattle</code> condition, and therefore run only in open-field engagements (formation maneuver AI is not suited to a wall assault).</p>
+    </div>
   </section>
 
   <section id="section-4">
