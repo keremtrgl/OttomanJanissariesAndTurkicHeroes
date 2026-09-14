@@ -1,0 +1,247 @@
+/*
+  Seljuk Empire: Sword of Islam — Architecture Wiki
+  Shared "manuscript" design system: parchment + gold, illuminated-
+  manuscript pigment accents (gold leaf, verdigris teal, lapis lazuli,
+  brick/vermillion red). Light palette on bare :root, dark overrides
+  layered on top via prefers-color-scheme and an explicit [data-theme].
+*/
+
+:root {
+  --bg: #f4ecd8;
+  --paper: #faf3e3;
+  --paper-2: #efe4c8;
+  --ink: #2b1d0e;
+  --ink-muted: #6b5a40;
+  --rule: #d8c69a;
+  --gold: #c9a227;
+  --gold-strong: #9c7a1a;
+  --teal: #2f6f62;
+  --lapis: #1f4e79;
+  --brick: #9c3b2c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16110a;
+    --paper: #1f1811;
+    --paper-2: #2a2015;
+    --ink: #f0e6cf;
+    --ink-muted: #b9a888;
+    --rule: #3c2f1d;
+    --gold: #d4af37;
+    --gold-strong: #e8c766;
+    --teal: #4fa392;
+    --lapis: #5b8fc7;
+    --brick: #d1684f;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #16110a;
+  --paper: #1f1811;
+  --paper-2: #2a2015;
+  --ink: #f0e6cf;
+  --ink-muted: #b9a888;
+  --rule: #3c2f1d;
+  --gold: #d4af37;
+  --gold-strong: #e8c766;
+  --teal: #4fa392;
+  --lapis: #5b8fc7;
+  --brick: #d1684f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Language toggle visibility ---- */
+
+.lang-tr[hidden],
+.lang-en[hidden] {
+  display: none;
+}
+
+/* ---- Headings & labels ---- */
+
+h1,
+h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 900;
+  margin: 0.2em 0 0.3em;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4em;
+}
+
+.eyebrow,
+#toc,
+#toc a,
+.toc-brand {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-strong);
+  margin: 0;
+}
+
+.dek {
+  color: var(--ink-muted);
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 0 1.6em;
+}
+
+/* ---- Header ---- */
+
+.page-header {
+  padding-top: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---- Sticky table of contents ---- */
+
+#toc {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.toc-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 24px;
+}
+
+.toc-brand {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-strong);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.toc-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.toc-links a {
+  display: inline-block;
+  padding: 4px 2px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.toc-links a:hover,
+.toc-links a:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+}
+
+#lang-toggle {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: var(--paper-2);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#lang-toggle:hover,
+#lang-toggle:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold-strong);
+}
+
+/* ---- Main content ---- */
+
+main {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* ---- Code / mono content ---- */
+
+code,
+pre {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+pre.mermaid {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* ---- Small screens ---- */
+
+@media (max-width: 640px) {
+  .toc-inner {
+    flex-wrap: wrap;
+  }
+
+  .toc-links {
+    order: 3;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
