@@ -160,7 +160,7 @@
     <string id="seljuk_castle_korykos" text="Korykos Castle" />
     <string id="seljuk_castle_malazgirt" text="Manzikert Castle" />
     <string id="seljuk_culture_name" text="Seljuk" />
-    <string id="seljuk_culture_desc" text="A Turkmen confederation forged by the Great Seljuk state and the Anatolian frontier beyliks. Cities grow rich on iqta-fed cavalry armies, Nizamiye madrasas, and Silk Road caravans." />
+    <string id="seljuk_culture_desc" text="Tughril Beg rode out of the Oghuz steppe to seize Baghdad and humble a caliph who still, nominally, outranks every sultan. His nephew Alp Arslan broke Byzantium's field army at Manzikert and opened Anatolia to Turkmen settlement; under Malik-Shah and vizier Nizam al-Mulk's tireless administration, the Great Seljuk state stretched from the Bosphorus to the Oxus, its iqta-fed cavalry and Nizamiye madrasas as renowned as its Silk Road wealth. Succession has always been its weakness - every strong sultan is one crisis away from a dozen rival beyliks." />
     <string id="seljuk_bonus_cavalry_wage" text="Seljuk Iqta Cavalry Economy" />
     <string id="seljuk_bonus_construction" text="Nizamiye Public Works" />
     <string id="abb_bonus_construction" text="House of Wisdom" />
