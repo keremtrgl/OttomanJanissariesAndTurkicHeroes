@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seljuk Empire: Sword of Islam — Architecture Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.min.js" integrity="sha384-xzghz1GQ5u9HCpVskeDPqMsdogD1yvuMQbEK53+wi+G70+6J1AG0L2cfi9PHjDWI" crossorigin="anonymous"></script>
+<script src="wiki.js" defer></script>
+</head>
+<body>
+
+<header class="page-header page" id="top">
+  <p class="eyebrow lang-tr">Selçuklu İmparatorluğu: İslam'ın Kılıcı</p>
+  <p class="eyebrow lang-en" hidden>Seljuk Empire: Sword of Islam</p>
+  <h1>
+    <span class="lang-tr">Mimari Viki</span>
+    <span class="lang-en" hidden>Architecture Wiki</span>
+  </h1>
+  <p class="dek lang-tr">Modun iç mimarisine — ekonomi motorundan taktik yapay zekaya — teknik bir bakış.</p>
+  <p class="dek lang-en" hidden>A technical look at the mod's internal architecture, from the economy engine to tactical AI.</p>
+</header>
+
+<nav id="toc" aria-label="Table of contents">
+  <div class="toc-inner">
+    <a class="toc-brand" href="#top">
+      <span class="lang-tr">Mimari Viki</span>
+      <span class="lang-en" hidden>Architecture Wiki</span>
+    </a>
+    <ul class="toc-links">
+      <li><a href="#section-1"><span class="lang-tr">Modül Haritası</span><span class="lang-en" hidden>Module Map</span></a></li>
+      <li><a href="#section-2"><span class="lang-tr">Ekonomi Motoru</span><span class="lang-en" hidden>Economy Engine</span></a></li>
+      <li><a href="#section-3"><span class="lang-tr">FPS Optimizasyonu</span><span class="lang-en" hidden>FPS Optimizer</span></a></li>
+      <li><a href="#section-4"><span class="lang-tr">Taktik Yapay Zeka</span><span class="lang-en" hidden>Tactical AI</span></a></li>
+      <li><a href="#section-5"><span class="lang-tr">Karakter Yaratma</span><span class="lang-en" hidden>Character Creation</span></a></li>
+      <li><a href="#section-6"><span class="lang-tr">Beylik Hiyerarşisi</span><span class="lang-en" hidden>Beylik Hierarchy</span></a></li>
+      <li><a href="#section-7"><span class="lang-tr">Mülkiyet Dağılımı</span><span class="lang-en" hidden>Settlement Ownership</span></a></li>
+      <li><a href="#section-8"><span class="lang-tr">Rakip Krallıklar</span><span class="lang-en" hidden>Rival Kingdoms</span></a></li>
+      <li><a href="#section-9"><span class="lang-tr">Meyhane Yoldaşları</span><span class="lang-en" hidden>Tavern Companions</span></a></li>
+      <li><a href="#section-10"><span class="lang-tr">Sürüm Geçmişi</span><span class="lang-en" hidden>Version History</span></a></li>
+    </ul>
+    <button id="lang-toggle" type="button">EN</button>
+  </div>
+</nav>
+
+<main class="page">
+
+  <section id="section-1">
+    <h2 class="lang-tr">1. Genel Modül &amp; Dosya Bağımlılık Haritası (Master Engine Architecture)</h2>
+    <h2 class="lang-en" hidden>1. General Module &amp; File Dependency Map (Master Engine Architecture)</h2>
+  </section>
+
+  <section id="section-2">
+    <h2 class="lang-tr">2. Selçuklu Kervan Devlet Sigortası &amp; İpek Yolu Kâr Ortaklığı (Economy Engine)</h2>
+    <h2 class="lang-en" hidden>2. Seljuk Caravan State Insurance &amp; Silk Road Profit Partnership (Economy Engine)</h2>
+  </section>
+
+  <section id="section-3">
+    <h2 class="lang-tr">3. Savaş Alanı FPS &amp; Ragdoll Optimizasyon Motoru (BattleOptimizer)</h2>
+    <h2 class="lang-en" hidden>3. Battlefield FPS &amp; Ragdoll Optimization Engine (BattleOptimizer)</h2>
+  </section>
+
+  <section id="section-4">
+    <h2 class="lang-tr">4. Çok Doktrinli Reaktif Taktik Yapay Zeka Motoru (Multi-Doctrine Reactive AI)</h2>
+    <h2 class="lang-en" hidden>4. Multi-Doctrine Reactive Tactical AI Engine (Multi-Doctrine Reactive AI)</h2>
+  </section>
+
+  <section id="section-5">
+    <h2 class="lang-tr">5. Selçuklu Karakter Yaratma Özgeçmiş Aşamaları</h2>
+    <h2 class="lang-en" hidden>5. Seljuk Character Creation Backstory Stages</h2>
+  </section>
+
+  <section id="section-6">
+    <h2 class="lang-tr">6. Krallık, Beylikler ve Tarihi Liderler Hiyerarşisi (Selçuklu)</h2>
+    <h2 class="lang-en" hidden>6. Kingdom, Beyliks and Historical Leaders Hierarchy (Seljuk)</h2>
+  </section>
+
+  <section id="section-7">
+    <h2 class="lang-tr">7. Şehirler, Kaleler ve Bağlı Köylerin Mülkiyet Dağılımı (Örnek — Selçuklu)</h2>
+    <h2 class="lang-en" hidden>7. Ownership Distribution of Cities, Castles and Bound Villages (Example — Seljuk)</h2>
+  </section>
+
+  <section id="section-8">
+    <h2 class="lang-tr">8. Rakip Krallıklar Hiyerarşisi (Native Kingdom → Tarihi Devlet Dönüşümü)</h2>
+    <h2 class="lang-en" hidden>8. Rival Kingdoms Hierarchy (Native Kingdom → Historical State Conversion)</h2>
+  </section>
+
+  <section id="section-9">
+    <h2 class="lang-tr">9. Meyhane Companion'ları — 25 Yoldaş (14 Tarihi + 11 Jenerik Selçuklu)</h2>
+    <h2 class="lang-en" hidden>9. Tavern Companions — 25 Companions (14 Historical + 11 Generic Seljuk)</h2>
+  </section>
+
+  <section id="section-10">
+    <h2 class="lang-tr">10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.4)</h2>
+    <h2 class="lang-en" hidden>10. Version History — Critical Fixes and Content (v1.6.2 → v1.8.4)</h2>
+  </section>
+
+</main>
+
+</body>
+</html>
