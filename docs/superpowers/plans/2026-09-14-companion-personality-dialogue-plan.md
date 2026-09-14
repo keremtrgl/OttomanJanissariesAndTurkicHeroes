@@ -4,7 +4,7 @@
 
 **Goal:** Give all 25 recruitable companions 3 rotating greeting-variant lines each for repeated in-party conversations, using the exact same mechanism already proven for Seljuk clan leaders.
 
-**Architecture:** One new `CampaignBehaviorBase`, `CompanionPersonalityDialogueBehavior.cs`, registered alongside the mod's other Immersion behaviors. Each companion gets a private `IsX()` predicate checking `Hero.OneToOneConversationHero.StringId` and 3 `AddDialogLine` calls on `"start"→"lord_pretalk"` gated by a per-companion salted `GetGreetingVariant`, mirroring `SeljukDialogueBehavior.cs` line-for-line in structure.
+**Architecture:** One new `CampaignBehaviorBase`, `CompanionPersonalityDialogueBehavior.cs`, registered alongside the mod's other Immersion behaviors. Each companion gets a private `IsX()` predicate checking `Hero.OneToOneConversationHero.StringId` and 3 `AddDialogLine` calls on `"start"→"lord_start"` gated by a per-companion salted `GetGreetingVariant`, mirroring `SeljukDialogueBehavior.cs` line-for-line in structure.
 
 **Tech Stack:** C# / `TaleWorlds.CampaignSystem` (`CampaignBehaviorBase`, `CampaignGameStarter.AddDialogLine`), `netstandard2.0` (`SeljukTactics.csproj`).
 
@@ -45,8 +45,8 @@ Matthew=57, Heratsi=58, Kashgari=59, Yasawi=60, wanderer_0=61 .. wanderer_10=71.
 
 **Files:**
 - Create: `Source/SeljukEmpire/Immersion/CompanionPersonalityDialogueBehavior.cs`
-- Modify: `Source/SeljukEmpire/SeljukSubModule.cs:61` (insert a new `TryRegister` line immediately
-  after the existing `"NewKingdomsDialogueBehavior"` line)
+- Modify: `Source/SeljukEmpire/SeljukSubModule.cs:62` (insert a new `TryRegister` line immediately
+  after the existing `"NewKingdomsDialogueBehavior"` line (now line 62, one line later than originally noted, after this session merged in the v1.8.2-v1.8.4 branch which added a RivalCultureTournamentRewardBehavior registration at line 56))
 
 **Interfaces:**
 - Produces: `CompanionPersonalityDialogueBehavior` class with a `RegisterEvents()`/`OnSessionLaunched(CampaignGameStarter)` shape identical to `SeljukDialogueBehavior`, and a private static `GetGreetingVariant(int salt, int variantCount)` (`((int)CampaignTime.Now.ToHours + salt) % variantCount`, copied from `SeljukDialogueBehavior.cs:37-40` — this mod's established convention is one private copy per file, not a shared helper).
@@ -115,13 +115,13 @@ following `SeljukDialogueBehavior.cs`'s exact call shape:
 ```csharp
 bool IsKhayyam() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_khayyam";
 
-starter.AddDialogLine("companion_khayyam_greeting_1", "start", "lord_pretalk",
+starter.AddDialogLine("companion_khayyam_greeting_1", "start", "lord_start",
     "{=companion_khayyam_greet_1}Back so soon? I was in the middle of a calculation the tavern-keeper will never understand. What troubles you now?",
     () => IsKhayyam() && GetGreetingVariant(48, 3) == 0, null, 200);
-starter.AddDialogLine("companion_khayyam_greeting_2", "start", "lord_pretalk",
+starter.AddDialogLine("companion_khayyam_greeting_2", "start", "lord_start",
     "{=companion_khayyam_greet_2}The stars keep their own counsel, {PLAYER.NAME}, same as I do. What is it you actually want to ask me?",
     () => IsKhayyam() && GetGreetingVariant(48, 3) == 1, null, 200);
-starter.AddDialogLine("companion_khayyam_greeting_3", "start", "lord_pretalk",
+starter.AddDialogLine("companion_khayyam_greeting_3", "start", "lord_start",
     "{=companion_khayyam_greet_3}A wise man doubts twice before he answers once. Go on, then - ask, and let me doubt.",
     () => IsKhayyam() && GetGreetingVariant(48, 3) == 2, null, 200);
 ```
@@ -138,7 +138,7 @@ aphoristic). Use the next sequential salt for each (49 through 60, in the roster
 
 - [ ] **Step 4: Register the behavior**
 
-In `Source/SeljukEmpire/SeljukSubModule.cs`, immediately after line 61
+In `Source/SeljukEmpire/SeljukSubModule.cs`, immediately after line 62
 (`TryRegister(campaignStarter, "NewKingdomsDialogueBehavior", ...)`), insert:
 
 ```csharp
@@ -193,13 +193,13 @@ index 3 (Demirgöz, marksman):
 ```csharp
 bool IsWanderer3() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_3";
 
-starter.AddDialogLine("companion_wanderer3_greeting_1", "start", "lord_pretalk",
+starter.AddDialogLine("companion_wanderer3_greeting_1", "start", "lord_start",
     "{=companion_wanderer3_greet_1}Still breathing, I see. Good - means you haven't needed me yet.",
     () => IsWanderer3() && GetGreetingVariant(64, 3) == 0, null, 200);
-starter.AddDialogLine("companion_wanderer3_greeting_2", "start", "lord_pretalk",
+starter.AddDialogLine("companion_wanderer3_greeting_2", "start", "lord_start",
     "{=companion_wanderer3_greet_2}Keep your voice down. A man who talks too much in camp dies quietly later.",
     () => IsWanderer3() && GetGreetingVariant(64, 3) == 1, null, 200);
-starter.AddDialogLine("companion_wanderer3_greeting_3", "start", "lord_pretalk",
+starter.AddDialogLine("companion_wanderer3_greeting_3", "start", "lord_start",
     "{=companion_wanderer3_greet_3}I've been counting arrows. We have enough. For now.",
     () => IsWanderer3() && GetGreetingVariant(64, 3) == 2, null, 200);
 ```
