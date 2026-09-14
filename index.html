@@ -36,6 +36,7 @@
       <li><a href="#section-3"><span class="lang-tr">FPS Optimizasyonu</span><span class="lang-en" hidden>FPS Optimizer</span></a></li>
       <li><a href="#section-4"><span class="lang-tr">Taktik Yapay Zeka</span><span class="lang-en" hidden>Tactical AI</span></a></li>
       <li><a href="#section-5"><span class="lang-tr">Karakter Yaratma</span><span class="lang-en" hidden>Character Creation</span></a></li>
+      <li><a href="#section-5b"><span class="lang-tr">Rakip Özgeçmişler</span><span class="lang-en" hidden>Rival Backstories</span></a></li>
       <li><a href="#section-6"><span class="lang-tr">Beylik Hiyerarşisi</span><span class="lang-en" hidden>Beylik Hierarchy</span></a></li>
       <li><a href="#section-7"><span class="lang-tr">Mülkiyet Dağılımı</span><span class="lang-en" hidden>Settlement Ownership</span></a></li>
       <li><a href="#section-8"><span class="lang-tr">Rakip Krallıklar</span><span class="lang-en" hidden>Rival Kingdoms</span></a></li>
@@ -386,14 +387,120 @@ graph LR
     </pre>
   </section>
 
+  <section id="section-5b">
+    <h2 class="lang-tr">5b. Rakip Krallıkların Karakter Yaratma Özgeçmişleri (RivalCultureCharacterCreationContentHandler)</h2>
+    <h2 class="lang-en" hidden>5b. Rival Kingdoms' Character Creation Backstories (RivalCultureCharacterCreationContentHandler)</h2>
+
+    <div class="lang-tr">
+      <p>Selçuklu dışındaki 6 kültürün (Bizans, Abbasi, Gürcistan, Haçlı Devletleri, Kilikya Ermenistanı, Karahanlı) her biri kendi 18 seçenekli (5 aile geçmişi + 4 çocukluk + 3 gençlik + 3 kariyer + 3 kahramanlık) tam özgeçmiş zincirine sahip — toplam 108 seçenek, 8 dilde tam çeviri ile.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>Each of the 6 cultures besides the Seljuks (Byzantine, Abbasid, Georgian, Crusader States, Cilician Armenian, Karakhanid) has its own complete 18-option backstory chain (5 family backgrounds + 4 childhood + 3 youth + 3 career + 3 acts of heroism) — 108 options in total, with full translation into 8 languages.</p>
+    </div>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    RCH["RivalCultureCharacterCreationContentHandler"] --> BYZ["Bizans (Culture.empire)<br/>18 seçenek"]
+    RCH --> ABB["Abbasi (Culture.aserai)<br/>18 seçenek"]
+    RCH --> GEO["Gürcistan (Culture.sturgia)<br/>18 seçenek"]
+    RCH --> CRUS["Haçlı Devletleri (Culture.vlandia)<br/>18 seçenek"]
+    RCH --> ARM["Kilikya Ermenistanı (Culture.battania)<br/>18 seçenek"]
+    RCH --> KRKH["Karahanlı (Culture.khuzait)<br/>18 seçenek"]
+    RCH -.->|"culture=Culture.empire paylaşımı<br/>nedeniyle ayrı içerik YOK"| LAT["Latin İmparatorluğu<br/>(Bizans seçenekleriyle otomatik kapsanır)"]
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    RCH["RivalCultureCharacterCreationContentHandler"] --> BYZ["Byzantine (Culture.empire)<br/>18 options"]
+    RCH --> ABB["Abbasid (Culture.aserai)<br/>18 options"]
+    RCH --> GEO["Georgian (Culture.sturgia)<br/>18 options"]
+    RCH --> CRUS["Crusader States (Culture.vlandia)<br/>18 options"]
+    RCH --> ARM["Cilician Armenian (Culture.battania)<br/>18 options"]
+    RCH --> KRKH["Karakhanid (Culture.khuzait)<br/>18 options"]
+    RCH -.->|"due to shared culture=Culture.empire<br/>NO separate content"| LAT["Latin Empire<br/>(automatically covered by Byzantine options)"]
+    </pre>
+
+    <div class="lang-tr">
+      <p><strong>Latin İmparatorluğu'nun neden ayrı özgeçmişi yok:</strong> Kingdom.empire_w, Bizans ile aynı <code>Culture.empire</code>'ı paylaşıyor ve özgeçmiş görünürlüğü krallığa değil kültüre göre belirleniyor — yeni bir <code>is_main_culture</code> eklemek bu modun geçmişinde çökmeye yol açtığı için (bkz. bölüm 10), mimari olarak ayrı içerik mümkün değil; Bizans seçenekleri zaten o oyuncuları kapsıyor.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>Why the Latin Empire has no separate backstory:</strong> Kingdom.empire_w shares the same <code>Culture.empire</code> as Byzantium, and backstory visibility is determined by culture, not by kingdom — since adding a new <code>is_main_culture</code> caused crashes earlier in this mod's history (see section 10), separate content is architecturally impossible; the Byzantine options already cover those players.</p>
+    </div>
+  </section>
+
   <section id="section-6">
     <h2 class="lang-tr">6. Krallık, Beylikler ve Tarihi Liderler Hiyerarşisi (Selçuklu)</h2>
     <h2 class="lang-en" hidden>6. Kingdom, Beyliks and Historical Leaders Hierarchy (Seljuk)</h2>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    KS["Büyük Selçuklu Devleti<br/>(Kingdom.kingdom_seljuks)"] --> CL1["Âl-i Selçuk (T6)<br/>Sultan Alp Arslan"]
+    KS --> CL2["Nizamiye Vezirler Divanı (T5)<br/>Hâce Nizamülmülk"]
+    KS --> CL3["Danişmendliler (T5)<br/>Melik Danişmend Gazi"]
+    KS --> CL4["Artuklular (T5)<br/>Artuk Bey &amp; İlgazi"]
+    KS --> CL5["Mengücekliler (T4)<br/>Mengücek Gazi"]
+    KS --> CL6["Saltuklular (T4)<br/>Emir Saltuk"]
+    KS --> CL7["Çaka Beyliği (T4)<br/>Çaka Bey"]
+    KS --> CL8["Ahlatşahlar (T4)<br/>Sökmen el-Kutbî"]
+    KS --> CL9["Karamanoğulları (T4)<br/>Kerimüddin Karaman Bey"]
+    KS --> CL10["Kayı Boyu (T3)<br/>Ertuğrul Gazi &amp; Hanedan"]
+    KS --> CL11["Ahi Evran Ocağı (T3)<br/>Ahi Evran"]
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    KS["Great Seljuk State<br/>(Kingdom.kingdom_seljuks)"] --> CL1["Âl-i Selçuk (T6)<br/>Sultan Alp Arslan"]
+    KS --> CL2["Nizamiye Council of Viziers (T5)<br/>Hâce Nizamülmülk"]
+    KS --> CL3["Danişmendliler (T5)<br/>Melik Danişmend Gazi"]
+    KS --> CL4["Artuklular (T5)<br/>Artuk Bey &amp; İlgazi"]
+    KS --> CL5["Mengücekliler (T4)<br/>Mengücek Gazi"]
+    KS --> CL6["Saltuklular (T4)<br/>Emir Saltuk"]
+    KS --> CL7["Çaka Beyliği (T4)<br/>Çaka Bey"]
+    KS --> CL8["Ahlatşahlar (T4)<br/>Sökmen el-Kutbî"]
+    KS --> CL9["Karamanoğulları (T4)<br/>Kerimüddin Karaman Bey"]
+    KS --> CL10["Kayı Tribe (T3)<br/>Ertuğrul Gazi &amp; Dynasty"]
+    KS --> CL11["Ahi Evran Hearth (T3)<br/>Ahi Evran"]
+    </pre>
   </section>
 
   <section id="section-7">
     <h2 class="lang-tr">7. Şehirler, Kaleler ve Bağlı Köylerin Mülkiyet Dağılımı (Örnek — Selçuklu)</h2>
     <h2 class="lang-en" hidden>7. Ownership Distribution of Cities, Castles and Bound Villages (Example — Seljuk)</h2>
+
+    <div class="lang-tr">
+      <table>
+        <thead><tr><th>Yerleşke Türü</th><th>Yerleşke Adı</th><th>Sahibi Olan Klan</th><th>Bağlı Köyler</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Şehir (Town)</strong></td><td><strong>Konya (town_ES1)</strong></td><td>Âl-i Selçuk (Alp Arslan)</td><td>Meram, Sille, Karatay</td></tr>
+          <tr><td><strong>Şehir (Town)</strong></td><td><strong>İsfahan (town_ES2)</strong></td><td>Âl-i Selçuk (Sultanlık Hassa Toprağı)</td><td>Juybareh, Lenban, Hasanabad</td></tr>
+          <tr><td><strong>Şehir (Town)</strong></td><td><strong>Söğüt (town_A2)</strong></td><td>Kayı Boyu (Ertuğrul)</td><td>Domaniç, Bozüyük</td></tr>
+          <tr><td><strong>Şehir (Town)</strong></td><td><strong>Nişabur (town_A4)</strong></td><td>Âl-i Selçuk (Sultanlık Hassa Toprağı)</td><td>Bostanabad, Şadyah, Kohandezh</td></tr>
+          <tr><td><strong>Şehir (Town)</strong></td><td><strong>Amasya (town_ES5)</strong></td><td>Danişmendliler (Bizans'tan alındı)</td><td>Merzifon, Taşova, Gümüşhacıköy</td></tr>
+          <tr><td><strong>Kale (Castle)</strong></td><td><strong>Lavenia Kalesi (castle_ES4)</strong></td><td>Danişmendliler</td><td>Lavenia</td></tr>
+          <tr><td><strong>Kale (Castle)</strong></td><td><strong>Şibal Zümr Kalesi (castle_A6)</strong></td><td>Artuklular</td><td>Şibal Zümr</td></tr>
+          <tr><td><strong>Kale (Castle)</strong></td><td><strong>Moreniya Kalesi (castle_ES5)</strong></td><td>Ahlatşahlar</td><td>Moreniya</td></tr>
+          <tr><td><strong>Kale (Castle)</strong></td><td><strong>Rey Kalesi (castle_A8)</strong></td><td>Âl-i Selçuk (Sultanlık Hassa Toprağı)</td><td>Çeşmedeh, Varamin</td></tr>
+          <tr><td><strong>Kale (Castle)</strong></td><td><strong>Eskişehir/Dorylaeum (castle_ES1)</strong></td><td>Kayı Boyu (Bizans'tan alındı)</td><td>Sivrihisar, Mihalıççık</td></tr>
+        </tbody>
+      </table>
+      <p>Bu tablo örnek amaçlıdır — modun tam yerleşke listesi için <code>ModuleData/settlements.xml</code> ve sahiplik/mülkiyet runtime yönetimi için <code>Source/SeljukEmpire/Settlements/SeljukSettlementBehavior.cs</code>'e bakınız.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <table>
+        <thead><tr><th>Settlement Type</th><th>Settlement Name</th><th>Owning Clan</th><th>Attached Villages</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Town</strong></td><td><strong>Konya (town_ES1)</strong></td><td>Âl-i Selçuk (Alp Arslan)</td><td>Meram, Sille, Karatay</td></tr>
+          <tr><td><strong>Town</strong></td><td><strong>Isfahan (town_ES2)</strong></td><td>Âl-i Selçuk (Sultanate's Hassa Land)</td><td>Juybareh, Lenban, Hasanabad</td></tr>
+          <tr><td><strong>Town</strong></td><td><strong>Söğüt (town_A2)</strong></td><td>Kayı Tribe (Ertuğrul)</td><td>Domaniç, Bozüyük</td></tr>
+          <tr><td><strong>Town</strong></td><td><strong>Nishapur (town_A4)</strong></td><td>Âl-i Selçuk (Sultanate's Hassa Land)</td><td>Bostanabad, Şadyah, Kohandezh</td></tr>
+          <tr><td><strong>Town</strong></td><td><strong>Amasya (town_ES5)</strong></td><td>Danişmendliler (taken from Byzantium)</td><td>Merzifon, Taşova, Gümüşhacıköy</td></tr>
+          <tr><td><strong>Castle</strong></td><td><strong>Lavenia Castle (castle_ES4)</strong></td><td>Danişmendliler</td><td>Lavenia</td></tr>
+          <tr><td><strong>Castle</strong></td><td><strong>Şibal Zümr Castle (castle_A6)</strong></td><td>Artuklular</td><td>Şibal Zümr</td></tr>
+          <tr><td><strong>Castle</strong></td><td><strong>Moreniya Castle (castle_ES5)</strong></td><td>Ahlatşahlar</td><td>Moreniya</td></tr>
+          <tr><td><strong>Castle</strong></td><td><strong>Rey Castle (castle_A8)</strong></td><td>Âl-i Selçuk (Sultanate's Hassa Land)</td><td>Çeşmedeh, Varamin</td></tr>
+          <tr><td><strong>Castle</strong></td><td><strong>Eskişehir/Dorylaeum (castle_ES1)</strong></td><td>Kayı Tribe (taken from Byzantium)</td><td>Sivrihisar, Mihalıççık</td></tr>
+        </tbody>
+      </table>
+      <p>This table is for illustrative purposes only — see <code>ModuleData/settlements.xml</code> for the mod's full settlement list, and <code>Source/SeljukEmpire/Settlements/SeljukSettlementBehavior.cs</code> for runtime ownership management.</p>
+    </div>
   </section>
 
   <section id="section-8">
