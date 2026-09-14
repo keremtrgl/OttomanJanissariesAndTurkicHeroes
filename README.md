@@ -31,26 +31,38 @@ This requires the game to be installed locally, since the project references Ban
 
 ## Verifying content changes
 
-Before committing any change to `ModuleData/`, run the integrity checker:
+Before committing any change, run the checker:
 
 ```bash
-python tools/verify_mod.py
+python tools/run_all_checks.py
 ```
 
-It checks XML validity, that every content file is registered in `SubModule.xml`, that no
-id is defined twice across the mod's own files, that every `{=key}` used anywhere has a
-matching localization string in both `strings.xml` and `TR/strings.xml` (and, as a warning,
-in the mod's other 6 shipped languages — see "Keeping all 8 languages in sync" below), and —
-when a local Bannerlord install is found (or passed via `--game-path`) — that every equipped
-item id and troop upgrade target actually exists, and that renamed Native characters keep a
-consistent gender flag. Run with `--quick` to skip the game-install-dependent checks, or
-`--json` for machine-readable output. Every one of these checks has caught a real bug during
-this mod's development at least once.
+This is the single entry point for both of the mod's independent check systems: `tools/
+verify_mod.py` (content integrity — see below) and `dotnet test` on `Source/
+SeljukEmpire.Tests/` (the reactive tactical AI's own decision-logic unit tests — 43 as of
+v1.8.1, covering `TacticalSituationAssessor`). Either suite is skipped gracefully (not failed)
+if its tool isn't available on the machine (`dotnet`, or no local Bannerlord install for
+verify_mod.py's game-dependent checks). Any flag `run_all_checks.py` doesn't recognize itself
+(`--game-path`, `--quick`, `--json`, `--check-workshop-conflicts`, `--update-baseline`) is
+forwarded straight through to `verify_mod.py`; use `--skip-dotnet-test` or `--skip-verify-mod`
+to run only one suite.
+
+`verify_mod.py` on its own can still be run directly the same way it always has
+(`python tools/verify_mod.py ...`) if you only want the content-integrity half. It checks XML
+validity, that every content file is registered in `SubModule.xml`, that no id is defined
+twice across the mod's own files, that every `{=key}` used anywhere has a matching
+localization string in both `strings.xml` and `TR/strings.xml` (and, as a warning, in the
+mod's other 6 shipped languages — see "Keeping all 8 languages in sync" below), and — when a
+local Bannerlord install is found (or passed via `--game-path`) — that every equipped item id
+and troop upgrade target actually exists, that renamed Native characters keep a consistent
+gender flag, and several other checks documented in its own module docstring. Run with
+`--quick` to skip the game-install-dependent checks, or `--json` for machine-readable output.
+Every one of these checks has caught a real bug during this mod's development at least once.
 
 ### Automatic pre-commit check
 
-Run once per clone to make `verify_mod.py` run automatically before every commit, blocking
-the commit if it finds an ERROR-level issue:
+Run once per clone to make `run_all_checks.py` run automatically before every commit, blocking
+the commit if it finds an issue:
 
 ```bash
 tools/install-hooks.sh          # Git Bash / macOS / Linux
@@ -99,10 +111,36 @@ the point of the check. If it fails, either move your change so it only appends 
 existing entries, or, if breaking existing saves for this change is a deliberate, accepted
 tradeoff, update the baseline knowingly.
 
+### Reactive tactical AI performance
+
+`Source/SeljukEmpire.Benchmarks/` is a small microbenchmark for
+`TacticalSituationAssessor` (the pure decision-logic layer `TuranTacticMissionBehavior`/
+`ByzantineTacticMissionBehavior` call from their own tick handler), built the same
+engine-independent way as `Source/SeljukEmpire.Tests/`:
+
+```bash
+dotnet run -c Release --project Source/SeljukEmpire.Benchmarks
+```
+
+It measures nanoseconds-per-call for each stance-assessment method and reports that cost
+against the actual call frequency: both tactical mission behaviors gate their entire decision
+loop behind a 1.25-second throttle timer (`_tickThrottleTimer` in each `OnMissionTick`), the
+same "don't do the expensive thing every frame" approach `BattlePerformanceOptimizer` already
+uses elsewhere. This can't measure the engine-side cost of reading `Formation.QuerySystem` or
+issuing orders (that only exists inside a running mission), but it does confirm the assessor's
+own logic — even at a deliberately pessimistic call count — is a negligible fraction of a
+60fps frame budget. Re-run this if `TacticalSituationAssessor.cs` ever grows a loop or
+allocation it doesn't have today; that's the kind of change this benchmark exists to catch.
+
 ## Repository layout
 
 - `ModuleData/` — troops, heroes, kingdoms, factions, settlements, items, localization, etc.
 - `Source/SeljukEmpire/` — the mod's C# gameplay behaviors.
-- `tools/` — `verify_mod.py`, the content integrity checker, and `install-hooks.sh`/`.ps1` (see above).
+- `Source/SeljukEmpire.Tests/` — xUnit unit tests for the reactive tactical AI's decision logic
+  (`TacticalSituationAssessor`); builds and runs without the game installed.
+- `Source/SeljukEmpire.Benchmarks/` — microbenchmark for the same decision logic's raw CPU cost
+  (see "Reactive tactical AI performance" below); also builds and runs without the game.
+- `tools/` — `run_all_checks.py` (single entry point for both check systems), `verify_mod.py`
+  (the content integrity checker), and `install-hooks.sh`/`.ps1` (see above).
 - `.githooks/` — the tracked `pre-commit` hook that `install-hooks.sh`/`.ps1` wires up.
 - `bin/` — prebuilt `SeljukTactics.dll` (already included, so building from source is optional for players).

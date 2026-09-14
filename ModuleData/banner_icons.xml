@@ -48,6 +48,12 @@
       <!-- 11. Hakan Güneş Kursu -->
       <Icon id="910" material_name="custom_banner_icons_14" texture_index="6" />
 
+      <!-- 12-13: Bilinçli olarak hiçbir klana sabit atanmadı - kullanıcı isteğiyle eklenen serbest
+           bayrak seçenekleri, oyun içi bayrak düzenleyicide (mercenary/custom klan oluştururken)
+           elle seçilebilir kalsınlar diye. 900-910, v1.8.3'te 11 Selçuklu klanının/Kingdom'ının/
+           Culture'ının varsayılan banner_key'ine atandı (bkz. factions.xml, kingdoms.xml,
+           seljuk_culture.xml) - tools/verify_mod.py'nin banner-icon-usage kontrolü bu ikisini
+           bilinçli olarak WARN olarak değil, hiç raporlamaz. -->
       <!-- 12. Kızıl Sancak: Hilal ve Yıldız (kullanıcı istekli bayrak - kırmızı zemin üstünde beyaz hilal-yıldız) -->
       <Icon id="911" material_name="custom_banner_icons_09" texture_index="13" />
 

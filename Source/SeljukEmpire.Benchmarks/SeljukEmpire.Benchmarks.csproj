@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Compiled directly (not via ProjectReference to SeljukTactics.csproj), same reason as
+         Source/SeljukEmpire.Tests/SeljukEmpire.Tests.csproj: TacticalSituationAssessor.cs has
+         zero TaleWorlds.* references on purpose, so this project never needs the Bannerlord
+         game install or its engine DLLs to build or run. -->
+    <Compile Include="..\SeljukEmpire\Tactics\TacticalSituationAssessor.cs" />
+  </ItemGroup>
+
+</Project>

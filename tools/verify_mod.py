@@ -95,9 +95,70 @@ Checks performed:
                             every culture that reuses a Native base Culture id, and building
                             fully-bespoke ones needs new blunt-weapon Item definitions, a separate,
                             tracked follow-up rather than a "still native troops" bug.
+ 16. item-mesh-validity    [needs game install] Every mesh= this mod sets on its own <Item> entries
+                            (items.xml) must match a mesh some Native item already uses - the mod
+                            ships no custom 3D assets of its own, so every item deliberately reuses an
+                            existing Native mesh (e.g. seljuk_royal_feather_helm -> khuzait_lord_
+                            helmet_a) the same way the v1.7.9 tournament-champion helms do. Catches a
+                            typo'd mesh id - which renders as missing/default geometry in-game, not a
+                            load error - before a player screenshot has to catch it instead.
+ 17. dialogue-hero-ids     [needs game install] Every Hero.OneToOneConversationHero.StringId == "X"
+                            condition across Source/**/*.cs (how SeljukDialogueBehavior/
+                            RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior pick which
+                            character a custom greeting belongs to) must reference a real Native or
+                            mod-defined character id. A typo here has no error and no crash - the
+                            condition is just always false, so that one character's custom line
+                            silently never shows and Native's generic greeting is used instead. Added
+                            in v1.7.10 while auditing the exact same 3 files for the "start"/
+                            "lord_pretalk" bug below.
+ 18. banner-icon-usage      [ERROR always; WARN needs game install] Two checks on this mod's own
+                            <Icon id="X"> entries in banner_icons.xml: (ERROR) no id may collide
+                            with one Native's own banner_icons.xml already uses - this exact
+                            collision class froze/crashed the New Campaign screen once before (see
+                            that file's own header comment); (WARN) every id should be referenced
+                            by at least one banner_key/faction_banner_key in the mod's own content
+                            (a Kingdom/Faction/Culture's actual default banner), or explicitly
+                            listed in KNOWN_SPARE_BANNER_ICON_IDS as a deliberate picker-only
+                            option - added in v1.8.3 after finding all 13 of this mod's custom
+                            Seljuk/Turkic tamgas were registered but not one was ever assigned to
+                            an actual clan/kingdom/culture banner (11 now are; 2 stay deliberate
+                            spares).
+ 19. settlement-culture-kingdom [ERROR always; stronger ERROR needs game install] Every
+                            <Settlement owner="Faction.clan_X"> this mod's own *settlements.xml
+                            files set, where clan_X is a clan this mod itself gives an explicit
+                            culture= (in practice: the 11 Seljuk clans, the only ones that set it -
+                            rival-kingdom clans inherit Native's own, already-self-consistent
+                            culture untouched): (ERROR, no game install needed) if this same
+                            Settlement element ALSO sets its own culture= and it disagrees with
+                            the owning clan's - a same-file typo, e.g. a border settlement handed
+                            to a Seljuk clan but stamped with the wrong culture id; (ERROR, needs
+                            game install) if this Settlement sets no culture= override at all,
+                            compares against Native's OWN original culture for that same
+                            settlement id (SandBox/ModuleData/settlements.xml) - if it differs from
+                            the owning clan's culture, the settlement silently still displays
+                            Native's old culture in-game (exactly the "Danustica" -> "Konya" case:
+                            reassigning owner to clan_seljuk_royal without ALSO flipping culture
+                            from Native's inherited Culture.empire to Culture.seljuk would leave a
+                            Seljuk-owned capital showing Byzantine notables/visuals). Falls back to
+                            WARN, same as checks 4/9, when no game install is found to verify
+                            against. Villages are out of scope - none of this mod's own overrides
+                            set owner= on a Village (that ownership is implicit via Native's own
+                            nested <Village bound="..."> element, never touched here).
+
+A weapon-damage-based numeric sibling to check 12 (comparing Item0/Item1 thrust/swing damage
+against a tier median, the way check 12 does for skill points) was prototyped and run against the
+real mod during this same session, but retracted before shipping: unlike skill points, which
+Native's own tier curve already normalizes, raw weapon damage is NOT naturally comparable across
+weapon types at a fixed tier (a crossbow legitimately hits far harder per shot than a sword by
+Bannerlord's own design, compensated by rate of fire, not by the mod). Run for real, it produced
+43 warnings dominated by that natural per-weapon-type variance, not by genuine authoring bugs -
+noise that would have eroded trust in every other WARN this tool produces. Checks 10-12 remain the
+project's numeric balance signal; a real weapon-parity check would need full DPS math (accuracy,
+speed_rating, weapon_length), tracked as a future idea rather than forced in as-is.
 
 Checks 10-12 are balance/design signals, so they report WARN and never fail the run - unlike
-checks 1-8 and 14-15 they describe "this looks unintended", not "this is broken".
+checks 1-8 and 14-19, they describe "this looks unintended", not "this is broken". (Checks 18 and
+19 are part ERROR, part WARN - see above.)
 
 Exit code 0 if every check passes (warnings do not fail the run), 1 if any ERROR is found.
 """
@@ -1042,6 +1103,294 @@ def check_troop_tier_parity(issues, game_path):
                                      f"({deviation:+.0%}) - check for a typo'd skill value."))
 
 
+# --------------------------------------------------------------- check 16 --
+
+def load_native_item_mesh_ids(game_path):
+    """Every mesh= value used by any Native <Item>, across the modules the mod's own
+    items already reuse assets from (SandBoxCore/Native - same scope as
+    load_native_item_ids). The mod ships zero custom 3D assets of its own (no
+    AssetPackages/ dir) - every item.xml entry it defines, including the v1.7.9
+    tournament-champion helms, deliberately reuses an existing Native mesh id the same
+    way seljuk_royal_feather_helm reuses khuzait_lord_helmet_a - so a mesh= that isn't
+    in this set is a typo, not a legitimate custom asset reference."""
+    meshes = set()
+    for f in native_module_xml_files(game_path, NATIVE_MODULES_FOR_ITEMS):
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for item in root.iter("Item"):
+            mesh = item.get("mesh")
+            if mesh:
+                meshes.add(mesh)
+    return meshes
+
+
+def check_item_mesh_validity(issues, game_path):
+    native_meshes = load_native_item_mesh_ids(game_path)
+    if not native_meshes:
+        return
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for item in root.iter("Item"):
+            iid = item.get("id")
+            mesh = item.get("mesh")
+            if not iid or not mesh:
+                continue
+            if mesh not in native_meshes:
+                issues.append(Issue("ERROR", "item-mesh-validity", rel(f),
+                                     f'Item "{iid}" has mesh="{mesh}", which does not match any mesh '
+                                     f"used by a Native item - the mod ships no custom 3D assets of its "
+                                     f"own, so this is very likely a typo that will render as missing/"
+                                     f"default geometry in-game rather than a real asset reference."))
+
+
+# --------------------------------------------------------------- check 17 --
+
+DIALOGUE_HERO_ID_PATTERN = re.compile(r'Hero\.OneToOneConversationHero\.StringId\s*==\s*"([a-zA-Z0-9_]+)"')
+
+
+def collect_dialogue_hero_id_references():
+    """{hero_id: [file_rel, ...]} for every Hero.OneToOneConversationHero.StringId == "X"
+    condition in Source/**/*.cs - this is how every custom lord/companion greeting in
+    SeljukDialogueBehavior/RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior decides
+    WHICH character a line belongs to. A typo'd id here has no error message and no crash:
+    the condition is simply always false, so that one character silently never gets their
+    custom line and always falls back to Native's generic greeting instead - the same
+    "wrong troop"/"wrong GameText" silent-failure shape as several other bugs this project's
+    checks already guard against, just one layer further down the stack (C# condition
+    string, not an XML id= attribute)."""
+    refs = {}
+    if not SOURCE_DIR.exists():
+        return refs
+    for f in SOURCE_DIR.rglob("*.cs"):
+        text = f.read_text(encoding="utf-8", errors="ignore")
+        for m in DIALOGUE_HERO_ID_PATTERN.finditer(text):
+            refs.setdefault(m.group(1), []).append(rel(f))
+    return refs
+
+
+def check_dialogue_hero_ids(issues, game_path):
+    refs = collect_dialogue_hero_id_references()
+    if not refs:
+        return
+    native_ids, _, _ = load_native_characters(game_path)
+    mod_ids = collect_mod_defined_character_ids()
+    all_ids = native_ids | mod_ids
+    for hero_id, files in sorted(refs.items()):
+        if hero_id not in all_ids:
+            shown = ", ".join(sorted(set(files)))
+            issues.append(Issue("ERROR", "dialogue-hero-ids", shown,
+                                 f'Hero.OneToOneConversationHero.StringId == "{hero_id}" does not match any '
+                                 f"Native or mod-defined character id - this condition can never be true, so "
+                                 f"the custom dialogue line(s) gated on it will silently never show (the "
+                                 f"character just gets Native's generic greeting instead, with no error)."))
+
+
+# --------------------------------------------------------------- check 18 --
+
+# banner_icons.xml's own header comment documents id 900-912 as a deliberate move to avoid
+# colliding with Native's own 100-535 range (a real past bug: reusing Native's ids froze the
+# New Campaign screen the first time the banner editor loaded). 911/912 are explicitly commented
+# there as spare picker options never meant to be any specific clan/kingdom/culture's DEFAULT
+# banner - every other custom icon this mod defines (900-910) is now assigned to exactly one of
+# the 11 Seljuk clans, Kingdom.kingdom_seljuks, or Culture.seljuk (v1.8.3).
+KNOWN_SPARE_BANNER_ICON_IDS = {911, 912}
+
+BANNER_KEY_ATTRS = ("banner_key", "faction_banner_key")
+
+
+def collect_mod_defined_banner_icon_ids():
+    """{icon_id: file_rel} for every <Icon id="X"> this mod defines in its own banner_icons.xml
+    (or any other mod XML - the tag isn't file-specific)."""
+    ids = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for icon in root.iter("Icon"):
+            iid = icon.get("id")
+            if iid and iid.isdigit():
+                ids.setdefault(int(iid), rel(f))
+    return ids
+
+
+def _icon_ids_from_banner_key(value):
+    """Banner.TryGetBannerDataFromCode (decompiled from TaleWorlds.Core.dll): a banner_key is a
+    '.'-separated string parsed in fixed chunks of 10 fields per layer - iconId, colorId1,
+    colorId2, sizeX, sizeY, posX, posY, drawStroke(0/1), mirror(0/1), rotationUnits. Only the
+    first field of each 10-field chunk (the icon id) matters here."""
+    parts = value.split(".")
+    ids = []
+    for i in range(0, len(parts) - 9, 10):
+        try:
+            ids.append(int(parts[i]))
+        except ValueError:
+            pass
+    return ids
+
+
+def collect_banner_key_icon_usage():
+    """Every icon id actually referenced by a banner_key/faction_banner_key anywhere in the
+    mod's own content - i.e. an icon a Kingdom/Faction(clan)/Culture actually displays by
+    default, as opposed to one merely available for players to pick by hand in the banner
+    editor."""
+    used = set()
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for elem in root.iter():
+            for attr in BANNER_KEY_ATTRS:
+                value = elem.get(attr)
+                if value:
+                    used.update(_icon_ids_from_banner_key(value))
+    return used
+
+
+def load_native_banner_icon_ids(game_path):
+    ids = set()
+    for f in native_module_xml_files(game_path, ["Native"]):
+        if f.name != "banner_icons.xml":
+            continue
+        root = safe_parse(f)
+        if root is None:
+            continue
+        for icon in root.iter("Icon"):
+            iid = icon.get("id")
+            if iid and iid.isdigit():
+                ids.add(int(iid))
+    return ids
+
+
+def check_banner_icon_usage(issues, game_path):
+    mod_icons = collect_mod_defined_banner_icon_ids()
+    if not mod_icons:
+        return
+
+    if game_path is not None:
+        native_icons = load_native_banner_icon_ids(game_path)
+        collisions = sorted(i for i in mod_icons if i in native_icons)
+        if collisions:
+            issues.append(Issue("ERROR", "banner-icon-usage", "ModuleData/banner_icons.xml",
+                                 f"Custom <Icon id=\"X\"> value(s) {collisions} collide with an id Native's own "
+                                 f"banner_icons.xml already uses - this exact class of collision froze/crashed "
+                                 f"the New Campaign screen once before (see this file's own header comment); "
+                                 f"move the colliding id(s) to an unused number instead."))
+
+    used = collect_banner_key_icon_usage()
+    unused = sorted(i for i in mod_icons if i not in used and i not in KNOWN_SPARE_BANNER_ICON_IDS)
+    if unused:
+        shown = ", ".join(str(i) for i in unused)
+        issues.append(Issue("WARN", "banner-icon-usage", "ModuleData/banner_icons.xml",
+                             f"Custom banner icon id(s) {shown} are defined but never referenced by any "
+                             f"banner_key/faction_banner_key in the mod's own content - available for a player "
+                             f"to pick by hand in the banner editor, but no Kingdom/Faction(clan)/Culture "
+                             f"actually displays them by default. If this is deliberate (a spare picker option), "
+                             f"add it to KNOWN_SPARE_BANNER_ICON_IDS with a comment saying why."))
+
+
+# --------------------------------------------------------------- check 19 --
+
+def collect_mod_defined_clan_cultures():
+    """{clan_id: culture_id} for every <Faction id="X" culture="Culture.Y"> this mod's own
+    *factions*.xml/*clans*.xml files define. Rival-kingdom clan files (byzantine_clans.xml,
+    armenian_clans.xml, etc.) deliberately do NOT set this attribute at all - only this mod's
+    own 11 Seljuk clans (factions.xml) do, which is exactly the intended scope: Native's own,
+    untouched political map is self-consistent by construction, and only a reassignment THIS
+    mod makes can introduce the mismatch this check looks for."""
+    cultures = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "Factions":
+            continue
+        for faction in root.iter("Faction"):
+            fid = faction.get("id")
+            culture = faction.get("culture")
+            if fid and culture:
+                cultures[fid] = _strip_type_prefix(culture)
+    return cultures
+
+
+def collect_mod_settlement_owner_culture():
+    """{settlement_id: (owner_clan_id_or_None, culture_id_or_None, file_rel)} for every
+    <Settlement> this mod's own *settlements.xml files define that sets owner= and/or culture=
+    directly on the element (most village-level overrides only set culture=; only town/castle-
+    level overrides carry owner=, matching how this mod's content is actually authored)."""
+    entries = {}
+    for f in mod_xml_files():
+        root = safe_parse(f)
+        if root is None or root.tag != "Settlements":
+            continue
+        for settlement in root.iter("Settlement"):
+            sid = settlement.get("id")
+            owner = settlement.get("owner")
+            culture = settlement.get("culture")
+            if not sid or (owner is None and culture is None):
+                continue
+            entries[sid] = (
+                _strip_type_prefix(owner) if owner else None,
+                _strip_type_prefix(culture) if culture else None,
+                rel(f),
+            )
+    return entries
+
+
+def load_native_settlement_cultures(game_path):
+    """{settlement_id: culture_id} scanned from Native's own settlements.xml (confirmed at
+    SandBox/ModuleData/settlements.xml - reuses NATIVE_MODULES_FOR_CHARACTERS, which already
+    includes "SandBox")."""
+    cultures = {}
+    for f in native_module_xml_files(game_path, NATIVE_MODULES_FOR_CHARACTERS):
+        root = safe_parse(f)
+        if root is None or root.tag != "Settlements":
+            continue
+        for settlement in root.iter("Settlement"):
+            sid = settlement.get("id")
+            culture = settlement.get("culture")
+            if sid and culture:
+                cultures[sid] = _strip_type_prefix(culture)
+    return cultures
+
+
+def check_settlement_culture_kingdom(issues, game_path):
+    clan_cultures = collect_mod_defined_clan_cultures()
+    if not clan_cultures:
+        return
+    settlements = collect_mod_settlement_owner_culture()
+    native_cultures = load_native_settlement_cultures(game_path) if game_path is not None else None
+
+    for sid, (owner, culture, file) in sorted(settlements.items()):
+        if owner is None or owner not in clan_cultures:
+            continue
+        expected = clan_cultures[owner]
+
+        if culture is not None:
+            if culture != expected:
+                issues.append(Issue("ERROR", "settlement-culture-kingdom", file,
+                                     f'Settlement "{sid}" is owned by clan "{owner}" (culture="{expected}") '
+                                     f'but this same element sets culture="{culture}" instead - one of the '
+                                     f'two is very likely a typo.'))
+            continue
+
+        # No culture= override on this element - it silently keeps whatever culture it had
+        # before this mod's owner= reassignment (Native's original, unless another mod file
+        # also touches this same id, which check 3 already guards against).
+        if native_cultures is not None:
+            native_culture = native_cultures.get(sid)
+            if native_culture is not None and native_culture != expected:
+                issues.append(Issue("ERROR", "settlement-culture-kingdom", file,
+                                     f'Settlement "{sid}" was reassigned to clan "{owner}" (culture="{expected}") '
+                                     f'but has no culture= override of its own, so it still shows Native\'s '
+                                     f'original culture="{native_culture}" in-game.'))
+        else:
+            issues.append(Issue("WARN", "settlement-culture-kingdom", file,
+                                 f'Settlement "{sid}" was reassigned to clan "{owner}" (culture="{expected}") '
+                                 f'with no culture= override of its own - not verified against Native\'s '
+                                 f'original culture for this id - no game install found, pass --game-path.'))
+
+
 # --------------------------------------------------------------- check 13 --
 
 def check_workshop_conflicts(issues, game_path):
@@ -1135,6 +1484,8 @@ def run(args):
     check_language_sync(issues, game_path)
 
     check_troop_tier_parity(issues, game_path)
+    check_banner_icon_usage(issues, game_path)
+    check_settlement_culture_kingdom(issues, game_path)
 
     if game_path is not None:
         check_upgrade_targets(issues, game_path)
@@ -1142,6 +1493,8 @@ def run(args):
         check_gender_consistency(issues, game_path)
         check_troop_armor_slots(issues, game_path)
         check_troop_progression(issues, game_path)
+        check_item_mesh_validity(issues, game_path)
+        check_dialogue_hero_ids(issues, game_path)
         if args.check_workshop_conflicts:
             check_workshop_conflicts(issues, game_path)
 

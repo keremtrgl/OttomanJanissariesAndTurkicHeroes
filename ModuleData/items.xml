@@ -185,4 +185,60 @@
       <Armor body_armor="70" mane_cover_type="none" family_type="1" reins_mesh="horse_harness_khuzait_c_rein" material_type="Plate" modifier_group="plate" />
     </ItemComponent>
   </Item>
+
+  <!-- ================================================================================= -->
+  <!-- 2. RAKİP KRALLIK TURNUVA ŞAMPİYONU ÖDÜLLERİ (v1.7.9 - RivalCultureTournamentReward   -->
+  <!-- Behavior). Her biri o kültürün kendi Native taban kültüründeki gerçek, var olan bir  -->
+  <!-- "lord tier" mesh'i yeniden kullanır (yeni sanat yok - Seljuk'un kendi 20 ödül eşyası  -->
+  <!-- ile aynı, ilk paylaşılan güvenli desen). Sadece id/isim/değer bu mod'a özgü. -->
+  <!-- ================================================================================= -->
+
+  <Item id="byz2_champion_helm" name="{=item_byz2_champion_helm}Tagmatic Champion's Helm" mesh="empire_lord_helmet_a" culture="Culture.empire" weight="3.2" value="14000" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="46" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type4" material_type="Plate" modifier_group="plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+
+  <Item id="lat2_champion_helm" name="{=item_lat2_champion_helm}Latin Imperial Champion's Helm" mesh="empire_lord_helmet_b" culture="Culture.empire" weight="3.7" value="14500" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="51" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type3" material_type="Plate" modifier_group="plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+
+  <Item id="abb2_champion_helm" name="{=item_abb2_champion_helm}Caliph's Champion Helm" mesh="aserai_lord_helmet_a" culture="Culture.aserai" weight="3.4" value="14000" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="45" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type3" material_type="Plate" modifier_group="plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+
+  <Item id="geo2_champion_helm" name="{=item_geo2_champion_helm}Georgian Royal Champion's Helm" mesh="sturgia_masked_helm_a" culture="Culture.sturgia" weight="3.65" value="14000" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="51" has_gender_variations="false" hair_cover_type="all" beard_cover_type="all" material_type="Chainmail" modifier_group="chain" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+
+  <Item id="crus2_champion_helm" name="{=item_crus2_champion_helm}Crusader Champion's Crowned Helm" mesh="vlandia_lord_helmet_a" culture="Culture.vlandia" weight="3.4" value="14000" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="46" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type3" material_type="Plate" modifier_group="plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+
+  <Item id="arm2_champion_helm" name="{=item_arm2_champion_helm}Cilician Champion's Helm" mesh="battania_lord_helmet_a" culture="Culture.battania" weight="3.3" value="14000" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="46" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type2" material_type="Plate" modifier_group="plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
+
+  <Item id="kk2_champion_helm" name="{=item_kk2_champion_helm}Kara-Khanid Champion's Battle Crown" mesh="khuzait_battle_crown" culture="Culture.khuzait" weight="2.7" value="13000" appearance="1" is_merchandise="false" Type="HeadArmor">
+    <ItemComponent>
+      <Armor head_armor="36" has_gender_variations="false" hair_cover_type="all" beard_cover_type="type2" material_type="Plate" modifier_group="plate" />
+    </ItemComponent>
+    <Flags UseTeamColor="true" />
+  </Item>
 </Items>

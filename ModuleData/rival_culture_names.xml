@@ -59,6 +59,7 @@
   <Culture
     id="empire"
     name="{=byz_culture_name}Byzantine"
+    text="{=byz_culture_desc}The Roman Empire never fell in the east - only shrank. After Manzikert broke its Anatolian heartland, the Purple-born emperors of Constantinople still command the last true heirs of Rome: disciplined Tagmata regiments, Varangian axemen, and a bureaucracy that has outlasted a thousand years of invasion. Gold solidi buy allies the sword cannot win, and every general who forgets that Rome survives on diplomacy as much as steel finds his reign a short one."
     basic_troop="NPCCharacter.byz2_recruit"
     elite_basic_troop="NPCCharacter.byz2_skutatos"
     default_party_template="PartyTemplate.byz2_default_party_template"
@@ -82,6 +83,7 @@
   <Culture
     id="aserai"
     name="{=abb_culture_name}Abbasid"
+    text="{=abb_culture_desc}From Baghdad's round city, the Abbasid Caliphate once ruled from the Atlantic to the Indus, uniting a golden age of scholars, astronomers, and physicians under the banner of Islam. That unity has long since splintered into emirates and sultanates owing only nominal fealty to the Caliph, yet Baghdad's markets, libraries, and canals remain unmatched - and its call to the faithful still carries weight far beyond its shrunken borders."
     basic_troop="NPCCharacter.abb2_recruit"
     elite_basic_troop="NPCCharacter.abb2_ayyar"
     default_party_template="PartyTemplate.abb2_default_party_template"
@@ -109,6 +111,7 @@
   <Culture
     id="sturgia"
     name="{=geo_culture_name}Georgian"
+    text="{=geo_culture_desc}Wedged between the Byzantine, Seljuk, and Caucasian mountain lords, the Kingdom of Georgia has learned to survive through Orthodox faith, mountain fortresses, and a nobility as fierce in the saddle as any steppe horseman. King David's line dreams of a unified Caucasus free of foreign tribute - a dream that will one day be called the Georgian Golden Age, if the kingdom can first survive the century that made it."
     basic_troop="NPCCharacter.geo2_recruit"
     elite_basic_troop="NPCCharacter.geo2_msakhuri"
     default_party_template="PartyTemplate.geo2_default_party_template"
@@ -135,6 +138,7 @@
   <Culture
     id="vlandia"
     name="{=crus_culture_name}Crusader"
+    text="{=crus_culture_desc}Answering the call of Rome and Constantinople alike, knights from every corner of Western Christendom carved the Crusader States from the Levantine coast after the First Crusade. Antioch, Edessa, and Jerusalem stand as fortress-cities of a foreign nobility ruling over an Arab, Greek, and Armenian majority - a conquest that must now hold what it took, one castle and one uneasy treaty at a time."
     basic_troop="NPCCharacter.crus2_recruit"
     elite_basic_troop="NPCCharacter.crus2_sergeant"
     default_party_template="PartyTemplate.crus2_default_party_template"
@@ -160,6 +164,7 @@
   <Culture
     id="battania"
     name="{=arm_culture_name}Armenian"
+    text="{=arm_culture_desc}Driven from their highland homeland by Byzantine annexation and Seljuk conquest, Armenian lords rebuilt their nation in the Cilician passes along the Mediterranean coast. Prince Ruben's line rules a kingdom of mountain fortresses and trade roads between Crusader Antioch and the Anatolian interior - a refuge forged in exile, and a bridge between Christian East and West that no neighbor can safely ignore."
     basic_troop="NPCCharacter.arm2_recruit"
     elite_basic_troop="NPCCharacter.arm2_azat"
     default_party_template="PartyTemplate.arm2_default_party_template"
@@ -183,6 +188,7 @@
   <Culture
     id="khuzait"
     name="{=krkh_culture_name}Kara-Khanid"
+    text="{=krkh_culture_desc}The first Turkic dynasty to embrace Islam as a state religion, the Kara-Khanid Khanate rules the cities and pastures of Transoxiana from Kashgar to Samarkand. Its khans balance the old law of the steppe with the new faith of the mosque, commanding both settled Silk Road merchants and mounted archers who never forgot how to live in the saddle - a khanate built on the same restless energy that once carried Turkic peoples across all of Central Asia."
     basic_troop="NPCCharacter.kk2_recruit"
     elite_basic_troop="NPCCharacter.kk2_yigit"
     default_party_template="PartyTemplate.kk2_default_party_template"
