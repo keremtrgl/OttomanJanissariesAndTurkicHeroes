@@ -111,7 +111,7 @@ Checks performed:
                             silently never shows and Native's generic greeting is used instead. Added
                             in v1.7.10 while auditing the exact same 3 files for the "start"/
                             "lord_pretalk" bug below.
- 18. banner-icon-usage      [ERROR always; WARN needs game install] Two checks on this mod's own
+ 18. banner-icon-usage      [ERROR needs game install; WARN always] Two checks on this mod's own
                             <Icon id="X"> entries in banner_icons.xml: (ERROR) no id may collide
                             with one Native's own banner_icons.xml already uses - this exact
                             collision class froze/crashed the New Campaign screen once before (see
