@@ -8,6 +8,10 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
   const btn = document.getElementById('lang-toggle');
   if (btn) btn.textContent = lang === 'tr' ? 'EN' : 'TR';
+  // TR and EN nav labels differ in length, so #toc can wrap to a different
+  // number of rows per language at some viewport widths — re-measure so a
+  // TOC-link click right after a toggle still lands below the nav.
+  updateTocOffset();
 }
 
 function getInitialLanguage() {
