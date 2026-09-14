@@ -68,6 +68,18 @@ body {
   padding: 0 24px;
 }
 
+/*
+  Offset anchor/TOC-link scrolling by the sticky nav's real height so a
+  jump to a section doesn't land its heading under the nav. #toc wraps to
+  a different number of rows (and so a different height) depending on
+  viewport width, so the value is measured live by wiki.js into --toc-h;
+  the fallback here is the nav's own measured height at a typical desktop
+  width, for the brief instant before that JS runs (or if it can't).
+*/
+html {
+  scroll-padding-top: var(--toc-h, 90px);
+}
+
 /* ---- Language toggle visibility ---- */
 
 .lang-tr[hidden],
@@ -142,6 +154,8 @@ h2 {
   display: flex;
   align-items: center;
   gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 10px 24px;
 }
 
