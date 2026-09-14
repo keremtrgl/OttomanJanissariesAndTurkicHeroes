@@ -34,7 +34,7 @@
 		vassal_reward_party_template="PartyTemplate.seljuk_vassal_reward_template"
 		encounter_background_mesh="encounter_khuzait"
 		faction_banner_key="11.142.142.1536.1536.768.768.1.0.0.900.143.143.512.512.768.768.1.0.0"
-		text="{=seljuk_culture_desc}A Turkmen confederation forged by the Great Seljuk state and the Anatolian frontier beyliks. Cities grow rich on iqta-fed cavalry armies, Nizamiye madrasas, and Silk Road caravans."
+		text="{=seljuk_culture_desc}Tughril Beg rode out of the Oghuz steppe to seize Baghdad and humble a caliph who still, nominally, outranks every sultan. His nephew Alp Arslan broke Byzantium's field army at Manzikert and opened Anatolia to Turkmen settlement; under Malik-Shah and vizier Nizam al-Mulk's tireless administration, the Great Seljuk state stretched from the Bosphorus to the Oxus, its iqta-fed cavalry and Nizamiye madrasas as renowned as its Silk Road wealth. Succession has always been its weakness - every strong sultan is one crisis away from a dozen rival beyliks."
 		tournament_master="NPCCharacter.tournament_master_khuzait"
 		villager="NPCCharacter.villager_khuzait"
 		caravan_master="NPCCharacter.caravan_master_khuzait"
