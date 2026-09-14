@@ -2,6 +2,8 @@
 
 A Mount & Blade II: Bannerlord mod that adds the Great Seljuk Empire (Büyük Selçuklu Devleti) as a playable historical faction — 11 Seljuk/Turkic clans and beyliks, custom troop trees, historical lords, and dedicated campaign systems (recruitment, diplomacy, tournaments, caravans, dialogue).
 
+See [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
+
 ## Requirements
 
 - Mount & Blade II: Bannerlord (current live branch)
