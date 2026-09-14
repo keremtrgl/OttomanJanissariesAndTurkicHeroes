@@ -32,7 +32,149 @@ namespace SeljukEmpire.Immersion
             try
             {
                 // Named historical companions (salts 47-60) go here in Step 3.
-                // Generic Seljuk wanderers (salts 61-71) go here in Task 2.
+
+                // WANDERER 0 "THE KNOWING" DIALOGUE (salt 61)
+                bool IsWanderer0() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_0";
+
+                starter.AddDialogLine("companion_wanderer0_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer0_greet_1}My father learned to break walls from Byzantine captives who once thought they had nothing to teach a Turkmen. I stopped being surprised by what a man learns when the alternative is dying. What is it you want broken, {PLAYER.NAME}?",
+                    () => IsWanderer0() && GetGreetingVariant(61, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer0_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer0_greet_2}Every wall looks eternal until you know exactly where to strike it. My father taught me that lesson before he taught me my letters. Is there some wall of yours that needs reducing to rubble?",
+                    () => IsWanderer0() && GetGreetingVariant(61, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer0_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer0_greet_3}The beys pay less for a siege-master than they once did, and pay it late besides. Perhaps that is its own kind of lesson too, about walls and about promises. What do you need?",
+                    () => IsWanderer0() && GetGreetingVariant(61, 3) == 2, null, 200);
+
+                // WANDERER 1 "THE HAWK" DIALOGUE (salt 62)
+                bool IsWanderer1() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_1";
+
+                starter.AddDialogLine("companion_wanderer1_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer1_greet_1}Fifty sheep was a fair bride-price. Her brother called it not enough, then had no answer when I asked what would be. Some questions get answered with a fist instead of a word.",
+                    () => IsWanderer1() && GetGreetingVariant(62, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer1_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer1_greet_2}My own brothers struck a bargain to save their skins rather than stand behind mine. I watch men closely now, {PLAYER.NAME} - to see which sort would do the same.",
+                    () => IsWanderer1() && GetGreetingVariant(62, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer1_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer1_greet_3}Speak plainly. I have little patience left for men who talk around a thing instead of through it.",
+                    () => IsWanderer1() && GetGreetingVariant(62, 3) == 2, null, 200);
+
+                // WANDERER 2 "THE FATHERLESS" DIALOGUE (salt 63)
+                bool IsWanderer2() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_2";
+
+                starter.AddDialogLine("companion_wanderer2_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer2_greet_1}Plague took the man who owed my father's blood before I ever raised a hand to him. My own kin wanted me to spend his brother's life to settle the account anyway. I chose otherwise.",
+                    () => IsWanderer2() && GetGreetingVariant(63, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer2_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer2_greet_2}I have a gift for ending quarrels with words instead of knives, {PLAYER.NAME} - my family didn't thank me for it. Let's see what sort of man you are before I decide how much of that gift you're owed.",
+                    () => IsWanderer2() && GetGreetingVariant(63, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer2_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer2_greet_3}Here, at least, I choose what I do and for whom I do it. That is worth more to me than any clan's good opinion. What do you want?",
+                    () => IsWanderer2() && GetGreetingVariant(63, 3) == 2, null, 200);
+
+                // WANDERER 3 "IRONEYE" DIALOGUE (salt 64)
+                bool IsWanderer3() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_3";
+
+                starter.AddDialogLine("companion_wanderer3_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer3_greet_1}Still breathing, I see. Good - means you haven't needed me yet.",
+                    () => IsWanderer3() && GetGreetingVariant(64, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer3_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer3_greet_2}Keep your voice down. A man who talks too much in camp dies quietly later.",
+                    () => IsWanderer3() && GetGreetingVariant(64, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer3_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer3_greet_3}I've been counting arrows. We have enough. For now.",
+                    () => IsWanderer3() && GetGreetingVariant(64, 3) == 2, null, 200);
+
+                // WANDERER 4 "THE OUTCAST" DIALOGUE (salt 65)
+                bool IsWanderer4() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_4";
+
+                starter.AddDialogLine("companion_wanderer4_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer4_greet_1}My own clan cast me out for killing a man who called us servants once too often. I don't regret the blow. I regret what it cost me - every fire I once called mine.",
+                    () => IsWanderer4() && GetGreetingVariant(65, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer4_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer4_greet_2}There are merchants in these towns who ask no questions about where a man's coin comes from. I've dealt with enough of them to know exactly what silence like that is worth.",
+                    () => IsWanderer4() && GetGreetingVariant(65, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer4_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer4_greet_3}We lost our flocks to a Byzantine raid, and our pride to the clan that sheltered us afterward. I got the pride back the hard way, {PLAYER.NAME}. What do you want?",
+                    () => IsWanderer4() && GetGreetingVariant(65, 3) == 2, null, 200);
+
+                // WANDERER 5 "THE MAD" DIALOGUE (salt 66)
+                bool IsWanderer5() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_5";
+
+                starter.AddDialogLine("companion_wanderer5_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer5_greet_1}My father taught me to work a drunk man's purse before I could grow a proper beard. He also taught me pride costs more than it's worth - he just learned that lesson on the gallows instead of before it.",
+                    () => IsWanderer5() && GetGreetingVariant(66, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer5_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer5_greet_2}Mind how you speak to me tonight. I'm in one of my moods, and moods like mine have hurt better men than you. ...Sit anyway, if you like. I don't bite everyone.",
+                    () => IsWanderer5() && GetGreetingVariant(66, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer5_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer5_greet_3}Every trade wants finesse, my father used to say - right before his pride got him hanged for refusing to pay a guard captain what he asked. I try to remember the finesse more than the pride.",
+                    () => IsWanderer5() && GetGreetingVariant(66, 3) == 2, null, 200);
+
+                // WANDERER 6 "THE GREY FALCON" DIALOGUE (salt 67)
+                bool IsWanderer6() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_6";
+
+                starter.AddDialogLine("companion_wanderer6_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer6_greet_1}My people refused the Sultan's decree to settle down and be counted like sheep for the tax rolls. We got hunted down and counted anyway - just with fewer flocks left over.",
+                    () => IsWanderer6() && GetGreetingVariant(67, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer6_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer6_greet_2}I know little of the steppe these days, if I'm honest, {PLAYER.NAME}. Spend a generation in back alleys instead of open grass and see how much of it you remember.",
+                    () => IsWanderer6() && GetGreetingVariant(67, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer6_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer6_greet_3}I mean to earn back what was taken from my people - new herds, and grass to graze them on. Slow work, buying freedom one coin at a time. Have you got some for me?",
+                    () => IsWanderer6() && GetGreetingVariant(67, 3) == 2, null, 200);
+
+                // WANDERER 7 "THE SHE-WOLF" DIALOGUE (salt 68)
+                bool IsWanderer7() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_7";
+
+                starter.AddDialogLine("companion_wanderer7_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer7_greet_1}More than a score of men have felt my blade in a rich man's private arena, and every one of them was trying to kill me first. Spare me the look - I've seen it before, and it's never once impressed me.",
+                    () => IsWanderer7() && GetGreetingVariant(68, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer7_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer7_greet_2}I bought my own freedom with winnings from fights I never chose to be in. I didn't do it to be admired, and I don't need your permission to be proud of it.",
+                    () => IsWanderer7() && GetGreetingVariant(68, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer7_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer7_greet_3}I fought for another man's amusement long enough to know exactly what condescension looks like on a face, {PLAYER.NAME}. Watch yours, if you mean to keep talking to me.",
+                    () => IsWanderer7() && GetGreetingVariant(68, 3) == 2, null, 200);
+
+                // WANDERER 8 "THE ALONE" DIALOGUE (salt 69)
+                bool IsWanderer8() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_8";
+
+                starter.AddDialogLine("companion_wanderer8_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer8_greet_1}My mother raised me as the son she never had. She's gone now. So is the clan that turned on us for it. I don't much want to talk about which came first.",
+                    () => IsWanderer8() && GetGreetingVariant(69, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer8_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer8_greet_2}I took a sword and a horse off the man who helped end my mother's life. That's most of what you need to know about me.",
+                    () => IsWanderer8() && GetGreetingVariant(69, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer8_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer8_greet_3}Say what you need. I've never been one for long talk, before or after.",
+                    () => IsWanderer8() && GetGreetingVariant(69, 3) == 2, null, 200);
+
+                // WANDERER 9 "THE SWIFT" DIALOGUE (salt 70)
+                bool IsWanderer9() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_9";
+
+                starter.AddDialogLine("companion_wanderer9_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer9_greet_1}I grew up running between camel legs on the trade road, and I've never quite stopped running since. Say your piece quickly - I'm no good at standing still.",
+                    () => IsWanderer9() && GetGreetingVariant(70, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer9_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer9_greet_2}My father wanted a husband found for me. I told him I'd rather carry a blade and guard the goods myself, {PLAYER.NAME}. He grumbled, but here I am, and here's my blade.",
+                    () => IsWanderer9() && GetGreetingVariant(70, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer9_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer9_greet_3}Even sitting still, some part of me is watching the door - old habit, from years guarding caravans on the road. What do you need?",
+                    () => IsWanderer9() && GetGreetingVariant(70, 3) == 2, null, 200);
+
+                // WANDERER 10 "THE RAGGED" DIALOGUE (salt 71)
+                bool IsWanderer10() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_10";
+
+                starter.AddDialogLine("companion_wanderer10_greeting_1", "start", "lord_start",
+                    "{=companion_wanderer10_greet_1}I tried to steal a horse once, to run off and start a new life among the free clans. The wretched animal threw me before I'd gone a mile and trotted straight back to its owner. I've learned to laugh about it since - mostly.",
+                    () => IsWanderer10() && GetGreetingVariant(71, 3) == 0, null, 200);
+                starter.AddDialogLine("companion_wanderer10_greeting_2", "start", "lord_start",
+                    "{=companion_wanderer10_greet_2}My father was a peddler, mending broken things door to door for a coin here, a coin there. I don't want that life, {PLAYER.NAME}. I don't rightly know what I want instead, but I'm grateful for any road that isn't his.",
+                    () => IsWanderer10() && GetGreetingVariant(71, 3) == 1, null, 200);
+                starter.AddDialogLine("companion_wanderer10_greeting_3", "start", "lord_start",
+                    "{=companion_wanderer10_greet_3}I mean to be one of the hawks in this world someday, not one of the pigeons the horse-lords ride over. It's a small thing to hope for. Doesn't stop me hoping it.",
+                    () => IsWanderer10() && GetGreetingVariant(71, 3) == 2, null, 200);
 
                 // NASIR KHUSRAW DIALOGUE (salt 47)
                 bool IsKhusraw() => Hero.OneToOneConversationHero != null && Hero.OneToOneConversationHero.StringId == "spc_wanderer_seljuk_khusraw";
