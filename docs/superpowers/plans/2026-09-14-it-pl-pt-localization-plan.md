@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add full Italian, Polish, and Brazilian Portuguese translations (~1757 keys each, matching every key in `ModuleData/Languages/strings.xml`) at the same optional/WARN tier as the mod's existing DE/FR/ES/RU/AR/CN languages.
+**Goal:** Add full Italian, Polish, and Brazilian Portuguese translations (~1795 keys each, matching every key in `ModuleData/Languages/strings.xml`) at the same optional/WARN tier as the mod's existing DE/FR/ES/RU/AR/CN languages.
 
 **Architecture:** Three new sibling folders under `ModuleData/Languages/` (`IT/`, `PL/`, `PT/`), each with a minimal `language_data.xml` and a full `strings.xml` translation. No code changes — this is content-only, mirroring the existing 6 optional languages' file shape exactly.
 
@@ -14,14 +14,15 @@
 - Every `<string id="X" text="...">` in the EN source (`ModuleData/Languages/strings.xml`) must have a matching `id="X"` entry in each new file — same id set, full coverage, not a partial subset.
 - `{PLAYER.NAME}`, `{FACTION_LEADER}`, `[if:...]`, `[ib:...]`, `{=key}` and any other bracketed/braced token inside a `text=` value is a game-engine placeholder, not translatable content — copy it through unchanged in every translated string.
 - XML attribute values must stay valid: escape `&` as `&amp;`, `<` as `&lt;`, `>` as `&gt;`, and preserve the file's `utf-8` encoding (accented characters written directly, not as numeric entities, matching how the existing DE/FR/ES files already handle `ä`/`é`/`ñ` etc.).
-- This pass covers EN+TR-sourced content only (the current 1757-key file) — content added after this pass ships is a normal follow-up commit, not a gap to backfill retroactively here.
+- This pass covers EN+TR-sourced content only (the current ~1795-key file) — content added after this pass ships is a normal follow-up commit, not a gap to backfill retroactively here.
 
 ## Source file shape (confirmed)
 
-`ModuleData/Languages/strings.xml` is 1757 lines, one `<string id="..." text="..." />` per line after
-a 4-line XML header (`<?xml version='1.0' encoding='utf-8'?>`, `<base type="string">`, `<tags>`,
-`<tag language="English" />`, `</tags>`), closed by `</base>`. Every existing non-English language file
-mirrors this exact shape with translated `text=` values and identical `id=` values.
+`ModuleData/Languages/strings.xml` is 1803 lines: a 6-line header (`<?xml version='1.0' encoding='utf-8'?>`,
+`<base type="string">`, `<tags>`, `<tag language="English" />`, `</tags>`, `<strings>`), 1795
+`<string id="..." text="..." />` entries (lines 7-1801), then a 2-line closer (`</strings>`,
+`</base>`). Every existing non-English language file mirrors this exact shape with translated
+`text=` values and identical `id=` values.
 
 ---
 
@@ -49,12 +50,12 @@ Read `ModuleData/Languages/strings.xml`. For each of the following line ranges, 
 unchanged (per Global Constraints), keeping proper nouns (clan names, place names, character names)
 transliterated consistently the same way across all 6 batches, not re-decided per batch:
 
-- Batch 1: lines 5-304
-- Batch 2: lines 305-604
-- Batch 3: lines 605-904
-- Batch 4: lines 905-1204
-- Batch 5: lines 1205-1504
-- Batch 6: lines 1505-1756 (through the closing `</base>`)
+- Batch 1: lines 7-305
+- Batch 2: lines 306-604
+- Batch 3: lines 605-903
+- Batch 4: lines 904-1202
+- Batch 5: lines 1203-1501
+- Batch 6: lines 1502-1801 (up to, not including, the closing `</strings>`/`</base>`)
 
 These 6 batches may be translated as parallel background tasks since they don't depend on each
 other's output, but all 6 write into the same `IT/strings.xml`, wrapped in the same header/footer
@@ -100,7 +101,7 @@ literal word-for-word calque), and that no engine token got mistranslated or dro
 ```bash
 git add ModuleData/Languages/IT/
 git commit -m "$(cat <<'EOF'
-Add full Italian localization (1757 keys)
+Add full Italian localization (~1795 keys)
 
 Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
 EOF
@@ -156,7 +157,7 @@ Step 2.
 ```bash
 git add ModuleData/Languages/PL/
 git commit -m "$(cat <<'EOF'
-Add full Polish localization (1757 keys)
+Add full Polish localization (~1795 keys)
 
 Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
 EOF
@@ -210,7 +211,7 @@ Same as Task 1 Step 5, in Brazilian Portuguese.
 ```bash
 git add ModuleData/Languages/PT/
 git commit -m "$(cat <<'EOF'
-Add full Brazilian Portuguese localization (1757 keys)
+Add full Brazilian Portuguese localization (~1795 keys)
 
 Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
 EOF
