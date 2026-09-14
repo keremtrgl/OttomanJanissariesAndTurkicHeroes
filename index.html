@@ -214,11 +214,176 @@ graph LR
   <section id="section-4">
     <h2 class="lang-tr">4. Çok Doktrinli Reaktif Taktik Yapay Zeka Motoru (Multi-Doctrine Reactive AI)</h2>
     <h2 class="lang-en" hidden>4. Multi-Doctrine Reactive Tactical AI Engine (Multi-Doctrine Reactive AI)</h2>
+
+    <div class="lang-tr">
+      <p>Doktrin seçimi hâlâ savaşın başında aynı 4'e ayrılan mantıkla çalışıyor — ama v1.7.9-v1.8.1'de üç ayrı oturumda yapılan (ve her birinde final incelemesinde gerçek, decompile ile doğrulanmış hatalar bulunup düzeltilen) bir dizi geçişle, fazların <strong>yürütülmesi</strong> artık sabit bir senaryo değil: <code>TacticalSituationAssessor</code> adlı, motordan tamamen bağımsız (sıfır <code>TaleWorlds.*</code> referansı), 43 birim testiyle kilitlenmiş paylaşılan bir karar katmanı, her 1.25 saniyede bir <code>Formation.QuerySystem</code>'in zaten hesapladığı canlı muharebe verisini (kayıp oranı, yerel güç dengesi, düşman bileşimi, gelen şarj tehdidi) okuyarak karar veriyor.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>Doctrine selection still runs on the same 4-way split at the start of battle — but across a series of passes made in three separate v1.7.9-v1.8.1 sessions (each of which turned up real, decompile-verified bugs during its final review, and fixed them), the <strong>execution</strong> of the phases is no longer a fixed script: a shared decision layer called <code>TacticalSituationAssessor</code>, completely independent of the engine (zero <code>TaleWorlds.*</code> references) and locked down by 43 unit tests, makes its call every 1.25 seconds by reading the live battle data — casualty ratio, local power balance, enemy composition, incoming charge threat — that <code>Formation.QuerySystem</code> has already computed.</p>
+    </div>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    START["Muharebe Başlangıcı"] --> WHO{"Hangi Kültür Sahada?"}
+    WHO -->|Selçuklu Takımı Var| SELJUK_EVAL["Ordu &amp; Arazi Analizi (Selçuklu)"]
+    WHO -->|Bizans Takımı Var| BYZ_EVAL["Tagma Doktrin Analizi (Bizans)"]
+
+    SELJUK_EVAL -->|Süvari &amp; Atlı Okçu >= %30| D1["1. DOKTRİN: Kurt Kapanı &amp; Hilal Taktiği&lt;br/&gt;(Sahte Geri Çekilme + Çift Kanat Pusu)"]
+    SELJUK_EVAL -->|Piyade >= %45| D2["2. DOKTRİN: Nizamiye Kalkan Duvarı&lt;br/&gt;(Yüksek Tepe Savunması + Mızrak Seddi)"]
+    SELJUK_EVAL -->|Düşman >= 1.8x Sayıca Fazla| D3["3. DOKTRİN: Yüksek Tepe Karşı Pususu&lt;br/&gt;(Stratejik Tepe Kilitleme + Çekiç-Örs)"]
+    SELJUK_EVAL -->|Dengeli Ordu| D4["4. DOKTRİN: Bozkır Çapraz Ateş Çemberi&lt;br/&gt;(Bileşik Yaylım Ateşi + Yandan Kuşatma)"]
+
+    D1 --> ASSESS["TacticalSituationAssessor&lt;br/&gt;(reaktif karar katmanı — aşağıya bkz.)"]
+    D2 --> ASSESS
+    D3 --> ASSESS
+    D4 --> ASSESS
+    ASSESS -.->|"Ordu geneli kayıp > %40&lt;br/&gt;(9sn'de bir yeniden değerlendirme)"| DOWNGRADE["Doktrin tek-yönlü olarak&lt;br/&gt;Yüksek Tepe Savunmasına düşer"]
+
+    BYZ_EVAL --> BYZ_D["Bizans Tagma Formasyon Disiplini&lt;br/&gt;(Kendi takımına sadece kendi doktrinini uygular,&lt;br/&gt;Selçuklu FSM'siyle çakışmadan aynı savaşta paralel çalışır)"]
+    BYZ_D --> ASSESS
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    START["Battle Start"] --> WHO{"Which Culture Is on the Field?"}
+    WHO -->|Seljuk Team Present| SELJUK_EVAL["Army &amp; Terrain Analysis (Seljuk)"]
+    WHO -->|Byzantine Team Present| BYZ_EVAL["Tagma Doctrine Analysis (Byzantine)"]
+
+    SELJUK_EVAL -->|Cavalry &amp; Horse Archers >= 30%| D1["DOCTRINE 1: Wolf Trap &amp; Crescent Tactic&lt;br/&gt;(Feigned Retreat + Double-Flank Ambush)"]
+    SELJUK_EVAL -->|Infantry >= 45%| D2["DOCTRINE 2: Nizamiye Shield Wall&lt;br/&gt;(High Ground Defense + Spear Rampart)"]
+    SELJUK_EVAL -->|Enemy >= 1.8x Numerical Superiority| D3["DOCTRINE 3: High Ground Counter-Ambush&lt;br/&gt;(Strategic Hill Lock + Hammer-and-Anvil)"]
+    SELJUK_EVAL -->|Balanced Army| D4["DOCTRINE 4: Steppe Crossfire Ring&lt;br/&gt;(Composite Volley Fire + Flanking Envelopment)"]
+
+    D1 --> ASSESS["TacticalSituationAssessor&lt;br/&gt;(reactive decision layer — see below)"]
+    D2 --> ASSESS
+    D3 --> ASSESS
+    D4 --> ASSESS
+    ASSESS -.->|"Army-wide casualties > 40%&lt;br/&gt;(reassessed every 9s)"| DOWNGRADE["Doctrine one-way downgrades&lt;br/&gt;to High Ground Defense"]
+
+    BYZ_EVAL --> BYZ_D["Byzantine Tagma Formation Discipline&lt;br/&gt;(Applies its own doctrine only to its own team,&lt;br/&gt;runs in parallel with the Seljuk FSM in the same battle without conflict)"]
+    BYZ_D --> ASSESS
+    </pre>
+
+    <div class="lang-tr">
+      <p>Her iki behavior da her tarla savaşına eklenir, ama her biri kendi kültürünün takımı sahada var mı diye (<code>IsSeljukTeam</code>/<code>IsByzantineTeam</code>) kontrol edip sadece kendi hak ettiği tek takıma emir veriyor — bir Selçuklu-Bizans savaşında ikisi de çakışmadan paralel çalışıyor.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>Both behaviors are added to every field battle, but each one checks whether its own culture's team is present on the field (<code>IsSeljukTeam</code>/<code>IsByzantineTeam</code>) and only issues orders to the single team it's responsible for — in a Seljuk-Byzantine battle, both run in parallel without conflicting.</p>
+    </div>
+
+    <h3 class="lang-tr">4b. TacticalSituationAssessor — Birim Tipine Göre Reaktif Davranış</h3>
+    <h3 class="lang-en" hidden>4b. TacticalSituationAssessor — Reactive Behavior by Unit Type</h3>
+
+    <div class="lang-tr">
+      <table>
+        <thead><tr><th>Birim Tipi</th><th>Eski Davranış (v1.7.8'e kadar)</th><th>Yeni Davranış (v1.7.9-v1.8.1)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Şok Süvarisi</strong></td><td>Faza girince koşulsuz şarj</td><td>Düşman mızrak/kalkan duvarı kurup duruyorsa (canlı hız verisiyle tespit) bekler; şarj kötü gidiyorsa (<code>kayıp > %35, güç dengesi aleyhte</code>) kontrollü geri çekilir</td></tr>
+          <tr><td><strong>Atlı Okçu</strong></td><td>Faz başında koşulsuz şarj, mermi bitince yakın dövüş</td><td>Mermi varken hep mesafe korur/vur-kaç yapar; mermi bitince yerel güce göre kovalar ya da çekilir</td></tr>
+          <tr><td><strong>Piyade</strong></td><td>Her savaşta koşulsuz kalkan duvarı, faz sonunda koşulsuz şarj</td><td>Kalkan duvarını sadece süvari tehdidi (atlı okçu dahil) ya da ok yağmuru altındayken kurar; ilerleyiş kaybediyorsa kontrollü çekilir; <strong>gelen bir süvari şarjını (15sn içinde çarpacak) anında algılayıp duraklayıp kalkan duvarına geçer</strong> (v1.8.1)</td></tr>
+          <tr><td><strong>Yaya Okçu</strong></td><td>Faz sonunda koşulsuz yakın dövüş şarjı</td><td>Atlı okçuyla birebir aynı mantığı kullanır (aynı test edilmiş fonksiyon, sadece kama formasyonu yerine gevşek dizilim)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="lang-en" hidden>
+      <table>
+        <thead><tr><th>Unit Type</th><th>Old Behavior (through v1.7.8)</th><th>New Behavior (v1.7.9-v1.8.1)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Shock Cavalry</strong></td><td>Charges unconditionally on entering the phase</td><td>Waits if the enemy has formed a spear/shield wall and is holding (detected via live speed data); if the charge is going badly (<code>casualties > 35%, power balance unfavorable</code>) it falls back in a controlled retreat</td></tr>
+          <tr><td><strong>Horse Archer</strong></td><td>Charges unconditionally at the start of the phase, melees once out of ammo</td><td>Keeps its distance / hit-and-runs the whole time it has ammo; once out of ammo, pursues or withdraws based on local power balance</td></tr>
+          <tr><td><strong>Infantry</strong></td><td>Unconditional shield wall in every battle, unconditional charge at the end of the phase</td><td>Forms the shield wall only under cavalry threat (horse archers included) or under arrow fire; falls back in a controlled retreat if it's losing ground; <strong>instantly detects an incoming cavalry charge (set to hit within 15s) and pauses into the shield wall</strong> (v1.8.1)</td></tr>
+          <tr><td><strong>Foot Archer</strong></td><td>Unconditional melee charge at the end of the phase</td><td>Uses the exact same logic as horse archers (the same tested function, just a loose formation instead of a wedge)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="lang-tr">
+      <p><strong>Arazi seçimi (v1.8.1):</strong> <code>TacticalFormationsHelper.FindOptimalHighGround</code> artık önce motorun kendi <code>HighGroundCloseToForeseenBattleGround</code> eğim-arama sonucunu deniyor (öngörülen muharebe hattına göre yönlenmiş, düşmana olan mesafeye göre ölçeklenen gerçek bir arazi analizi) — sadece piyadesiz bir ordu ya da dejenere bir sonuç durumunda modun eski 8 noktalı sabit taramasına düşüyor.</p>
+      <p>Üçü de decompile ile doğrulanmış gerçek motor semantiğine dayanıyor — üç ayrı final incelemesi, property isimlerinden varsayım yapmanın (<code>CasualtyRatio</code> aslında hayatta kalma oranı, <code>MovementSpeedMaximum</code> aslında azami hız kapasitesi, <code>CavalryUnitRatio</code> atlı okçuları saymıyor) gerçek hatalara yol açtığını üç kez ayrı ayrı kanıtladı; her seferinde bulunup düzeltildi.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>Terrain selection (v1.8.1):</strong> <code>TacticalFormationsHelper.FindOptimalHighGround</code> now first tries the engine's own <code>HighGroundCloseToForeseenBattleGround</code> slope-search result (a real terrain analysis oriented to the projected battle line and scaled by distance to the enemy) — it only falls back to the mod's old fixed 8-point scan for an army with no infantry, or in a degenerate result.</p>
+      <p>All three of them rest on real, decompile-verified engine semantics — three separate final reviews each independently proved that assuming meaning from a property's name (<code>CasualtyRatio</code> is actually the survival ratio, <code>MovementSpeedMaximum</code> is actually the maximum speed capacity, <code>CavalryUnitRatio</code> doesn't count horse archers) leads to real bugs; each time, the bug was found and fixed.</p>
+    </div>
   </section>
 
   <section id="section-5">
     <h2 class="lang-tr">5. Selçuklu Karakter Yaratma Özgeçmiş Aşamaları</h2>
     <h2 class="lang-en" hidden>5. Seljuk Character Creation Backstory Stages</h2>
+
+    <pre class="mermaid lang-tr">
+graph LR
+    subgraph "1. Soy ve Aile Kökeni"
+        H1["Oğuz Boyu Beyzadesi"]
+        H2["Nizamiye Müderrisi Evladı"]
+        H3["Ahi Demir Ustası Çırağı"]
+        H4["Sultan Hassa Gulamı Soyu"]
+        H5["Uç Boyu Türkmen Göçeri"]
+    end
+
+    subgraph "2. Çocukluk Çağı"
+        C1["Bozkırda At Üstünde"]
+        C2["İkta Kışlasında Güreş &amp; Kılıç"]
+        C3["İpek Yolu Yıldızları"]
+        C4["Ahi Ocağında Körük"]
+    end
+
+    subgraph "3. Gençlik &amp; Tahsil"
+        Y1["Nizamiye Medresesi (İlim)"]
+        Y2["Akıncı Çerisi (Gaza)"]
+        Y3["Subaşı Muhafızı (Asayiş)"]
+        Y4["Kervan Muhafızlığı"]
+    end
+
+    subgraph "4. İlk Meslek &amp; Hizmet"
+        CR1["Hassa Gulam Kıtası"]
+        CR2["Danişmend Uç Alpi"]
+        CR3["Ahi Yiğitbaşısı"]
+        CR4["Çaka Bey Deniz Akıncısı"]
+    end
+
+    subgraph "5. Nam &amp; Yiğitlik"
+        D1["Kuşatmayı Yarma"]
+        D2["Düşman Sancağını Devirme"]
+        D3["Mazlumu Koruma"]
+    end
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph LR
+    subgraph "1. Lineage &amp; Family Origin"
+        H1["Oğuz Tribal Beyzade"]
+        H2["Child of a Nizamiye Müderris"]
+        H3["Apprentice to an Ahi Master Blacksmith"]
+        H4["Lineage of a Sultan's Hassa Gulam"]
+        H5["Frontier Türkmen Nomad"]
+    end
+
+    subgraph "2. Childhood"
+        C1["On Horseback on the Steppe"]
+        C2["Wrestling &amp; Swordplay in the İkta Barracks"]
+        C3["Stars of the Silk Road"]
+        C4["Bellows at the Ahi Hearth"]
+    end
+
+    subgraph "3. Youth &amp; Education"
+        Y1["Nizamiye Medrese (Scholarship)"]
+        Y2["Akıncı Corps (Gaza)"]
+        Y3["Subaşı's Guard (Public Order)"]
+        Y4["Caravan Guard Duty"]
+    end
+
+    subgraph "4. First Profession &amp; Service"
+        CR1["Hassa Gulam Regiment"]
+        CR2["Danişmend Frontier Alp"]
+        CR3["Ahi Yiğitbaşı"]
+        CR4["Çaka Bey's Naval Akıncı"]
+    end
+
+    subgraph "5. Renown &amp; Valor"
+        D1["Breaking a Siege"]
+        D2["Toppling the Enemy Banner"]
+        D3["Protecting the Oppressed"]
+    end
+    </pre>
   </section>
 
   <section id="section-6">
