@@ -1754,5 +1754,51 @@
 	<string id="spc_wc2_10_response_1" text="Eh, ruhun var demek." />
 	<string id="spc_wc2_10_response_2" text="Ha! Bütün hırsızlar senin gibi başarısız olsun." />
 	<string id="spc_wc2_10_generic_backstory" text="Köylü bir seyyar satıcının oğluydum, o hayatı istemiyorum. Döğüşmeyi, at sürmeyi öğrenmeye niyetliyim. Beyler bizi çarık dikmeye ya da saban sürmeye yarar sansa da, buralarda benim gibi delikanlı çok." />
-</strings>
+    <string id="byz_culture_desc" text="Roma İmparatorluğu doğuda hiç yıkılmadı - sadece küçüldü. Malazgirt, Anadolu kalbini kırdıktan sonra bile, Konstantinopolis'in mor doğumlu imparatorları hâlâ Roma'nın gerçek mirasçılarını yönetiyor: disiplinli Tagma alayları, Vareg baltalı muhafızlar ve bin yıllık istilalara direnmiş bir bürokrasi. Altın solidus, kılıcın kazanamayacağı müttefikleri satın alır; Roma'nın kılıç kadar diplomasiyle de ayakta durduğunu unutan her general, kısa bir saltanat sürer." />
+    <string id="abb_culture_desc" text="Bağdat'ın yuvarlak şehrinden, Abbasi Halifeliği bir zamanlar Atlas Okyanusu'ndan İndus'a kadar hükmetmiş, İslam bayrağı altında alimlerin, gökbilimcilerin ve hekimlerin altın çağını birleştirmişti. Bu birlik uzun zamandır emirliklere ve sultanlıklara bölünmüş, artık Halife'ye yalnızca sözde bağlılık gösteriyor olsa da, Bağdat'ın pazarları, kütüphaneleri ve kanalları hâlâ eşsizdir - ve inananlara çağrısı küçülmüş sınırlarının çok ötesinde ağırlığını koruyor." />
+    <string id="geo_culture_desc" text="Bizans, Selçuklu ve Kafkas dağ beyleri arasında sıkışmış Gürcistan Krallığı, Ortodoks inancı, dağ kaleleri ve bozkır atlısı kadar sert bir asaletle hayatta kalmayı öğrendi. Kral David'in hanedanı, yabancı haraçtan bağımsız birleşik bir Kafkasya hayali kuruyor - krallık, önce kendisini var eden bu yüzyılı atlatabilirse, bir gün Gürcü Altın Çağı olarak anılacak bir hayal." />
+    <string id="crus_culture_desc" text="Hem Roma'nın hem Konstantinopolis'in çağrısına yanıt veren, Batı Hristiyanlığının her köşesinden şövalyeler, Birinci Haçlı Seferi'nin ardından Levant kıyısından Haçlı Devletleri'ni oydular. Antakya, Urfa ve Kudüs, Arap, Rum ve Ermeni çoğunluğu yöneten yabancı bir asaletin kale-şehirleri olarak duruyor - artık aldığını elinde tutmak zorunda olan bir fetih, kale kale ve huzursuz antlaşma antlaşma." />
+    <string id="arm_culture_desc" text="Bizans ilhakı ve Selçuklu fethiyle yayla anavatanlarından sürülen Ermeni beyleri, milletlerini Akdeniz kıyısındaki Kilikya geçitlerinde yeniden kurdu. Prens Ruben'in hanedanı, Haçlı Antakyası ile Anadolu içleri arasında dağ kaleleri ve ticaret yollarından oluşan bir krallığa hükmediyor - sürgünde inşa edilmiş bir sığınak ve hiçbir komşunun güvenle görmezden gelemeyeceği, Hristiyan Doğu ile Batı arasında bir köprü." />
+    <string id="krkh_culture_desc" text="İslam'ı devlet dini olarak kabul eden ilk Türk hanedanı olan Karahanlı Hanlığı, Kaşgar'dan Semerkant'a kadar Maveraünnehir'in şehirlerine ve otlaklarına hükmeder. Hanları, bozkırın eski yasasını caminin yeni inancıyla dengeler; hem yerleşik İpek Yolu tüccarlarını hem de eyerde yaşamayı hiç unutmamış atlı okçuları yönetirler - bir zamanlar Türk halklarını tüm Orta Asya'ya taşıyan aynı yorulmaz enerjiyle kurulmuş bir hanlık." />
+      <string id="item_byz2_champion_helm" text="Tagmatik Şampiyon Miğferi" />
+    <string id="item_lat2_champion_helm" text="Latin İmparatorluk Şampiyon Miğferi" />
+    <string id="item_abb2_champion_helm" text="Halifenin Şampiyon Miğferi" />
+    <string id="item_geo2_champion_helm" text="Gürcü Kraliyet Şampiyon Miğferi" />
+    <string id="item_crus2_champion_helm" text="Haçlı Şampiyonu'nun Taçlı Miğferi" />
+    <string id="item_arm2_champion_helm" text="Kilikya Şampiyon Miğferi" />
+    <string id="item_kk2_champion_helm" text="Karahanlı Şampiyonu'nun Muharebe Tacı" />
+    <string id="rival_tourney_victory" text="🏆 [Turnuva Şampiyonu] {TOWN} Turnuvası'nın Şampiyonu oldunuz! Ödül: {PRIZE} (+20 Ün kazanıldı)!" />
+      <string id="abb_tirad_greet_1" text="Bu şehirdeki Peygamber soyundan gelen herkes, herhangi bir emirin çağrısına cevap vermeden önce benim kayıtlarıma cevap verir. House Zaynabi ile işin nedir?" />
+    <string id="abb_tirad_greet_2" text="Bağdat'ta soy, kendi başına bir ordu gibidir, gezgin - benimki birkaç Sultan'dan daha uzun ömürlü oldu bile. İşini söyle." />
+    <string id="abb_damaghani_greet_1" text="Senden çok daha büyük adamlar üzerinde hüküm verdim ve kanun onlardan hiçbiri için bükülmedi. İşini bildir." />
+    <string id="abb_damaghani_greet_2" text="Bu kadar eski bir şehrin bir kılıçtan çok bir yargıca ihtiyacı var - Bağdat sonuncusundan yeterince gördü. Ne arıyorsun?" />
+    <string id="abb_ibnayyub_greet_1" text="Kılıcım, bu saraydaki çoğu adamın yaşadığından daha uzun süredir Sultanlığa hizmet ediyor. İşini söyle, çabuk ol." />
+    <string id="geo_aghsartan_greet_1" text="Kaheti, ailemin hatırasında bir kez zaten Tiflis'in tacına diz çöktü - bunu alışkanlık haline getirmeyi düşünmüyorum. Ne istiyorsun?" />
+    <string id="geo_aghsartan_greet_2" text="Bir dağ krallığı, büyük komşularına -Gürcü olanlara bile- asla tam güvenmeyerek hayatta kalır. İşini söyle." />
+    <string id="geo_arishiani_greet_1" text="Buradan Kartli sınırına kadar her geçidi sayamayacağım kadar çok kez geçtim. İşini açıkça bildir." />
+    <string id="geo_kavtar_greet_1" text="Baramisdze Hanesi topraklarını Kral'ın lütfu kadar kılıçla da tutar, gezgin. Beni ne için ziyaret ettin?" />
+    <string id="geo_kakhaber_greet_1" text="Kartli bu krallığın kalbidir ve onu, içindeki her asil haneyi isimleriyle bilecek kadar uzun süredir yönetiyorum. İşini söyle." />
+    <string id="geo_kakhaber_greet_2" text="Kendi vilayetini tutamayan bir dük, bir krala bir krallığı nasıl tutacağını öğütleme hakkına sahip değildir. Ben kendiminkini iyi tutuyorum. Ne istiyorsun?" />
+    <string id="byz_n_palaiologos_greet_1" text="Bir imparatoru tahtına çıkarmama yardım ettim yabancı, ve bunu minnet için yapmadım - Roma'nın, tacı zaten taşıyan adamdan daha çok sağlam bir ele ihtiyacı olduğu için yaptım. Ne istiyorsun?" />
+    <string id="byz_n_palaiologos_greet_2" text="Dyrrhachium'un surlarını, Roma'nın kendi kıyısını savunamayacak kadar zayıf olduğunu düşünen adamlara karşı tuttum. O zaman da yanılıyorlardı, şimdi de yanılırlardı. İşini söyle." />
+    <string id="byz_n_angelos_greet_1" text="Evliliğim Angelos adını imparatorların kanına bağladı, yolcu - torunlarımın bundan ne yapacağı henüz yazılmadı. Benimle işin ne?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="Kantakouzenos adı bugün bu sınırda askerlere komuta ediyor, yarın Konstantinopolis'te neye komuta edeceği ise başka mesele. İşini açıkça söyle." />
+    <string id="byz_n_phokas_greet_1" text="Phokas adı daha önce Mor'u giymişti ve saymaktan vazgeçtiğim kadar çok rakip gömdü. Önüme getirdiğin her ne iş olursa olsun, bunu akılda tut." />
+    <string id="byz_n_phokas_greet_2" text="Konstantinopolis'teki her imparator bu aileyi biraz fazla yakından izler, ve haklı sebeplerle. Söyle, ve çabuk ol." />
+    <string id="byz_n_skleros_greet_1" text="Skleros hanesi, hâlâ hafızalarda tazeyken bir imparatora karşı bayrağını kaldırmıştı bir kez - beni buyruk altına almanın kolay olacağını düşünmeden önce bunu hatırla. Ne istiyorsun?" />
+    <string id="byz_n_kourkouas_greet_1" text="Dedemin dedesi, Roma'nın kartallarını ondan önce ya da sonra hiçbir generalin taşımadığı kadar doğuya taşıdı. Onun kazandığını korumaya niyetliyim. İşini söyle." />
+    <string id="byz_n_xiphilinos_greet_1" text="Ailem Kilise'ye ve kanuna, başkalarının kılıca hizmet ettiği kadar sadakatle hizmet etti, yolcu. İşini söyle, ve sözlerine dikkat et." />
+    <string id="byz_n_vatatzes_greet_1" text="Vatatzes adı Konstantinopolis'te henüz büyük bir ad değil, ama ona bir yüzyıl ya da iki tanı. Bugün beni ne için görmeye geldin?" />
+    <string id="byz_n_gabras_greet_1" text="Trabzon adına Konstantinopolis'e, uygulamada ise bana bağlıdır, ve bu sınırı başkentten gönderilen hiçbir garnizonun tek başına yönetemeyeceği kadar uzun süre Türkmen boylarına karşı tuttum. İşin ne?" />
+    <string id="byz_n_gabras_greet_2" text="Türkmen tepelerinden gelen her akın, Trabzon'un hâlâ dişleri olup olmadığını sınar. Var. Açıkça söyle, ne istiyorsun?" />
+    <string id="byz_mariaalania_greet_1" text="Gürcistan'ın dağlarından gelip Roma'nın tacını giydim - hem de iki kez, iki farklı kocanın altında. Hiçbir taht beklediğimden fazla şaşırtmadı beni. Ne istiyorsun?" />
+    <string id="byz_mariaalania_greet_2" text="Bir imparatoriçe, yeterince sabırlıysa, bir tacın onu taşıyan adamdan daha uzun ömürlü olduğunu çabuk öğrenir. Ben çok sabırlı oldum. İşini söyle." />
+    <string id="byz_mariabulgaria_greet_1" text="Bulgaristan düştüğünde ailem Mor'a diz çöktü, yolcu, ve bizim bir zamanlar kendi krallığımız olduğunu hâlâ unutan bir Konstantinopolis'le barıştım. İşin ne?" />
+    <string id="byz_irenedoukaina_greet_1" text="Kocam tahta ilk çıktığında beni yanında istemedi. Bunun tersini yeterince çabuk öğrendi, sen de beni hafife alırsan öğrenirsin. Söyle." />
+    <string id="byz_irenedoukaina_greet_2" text="Kızım, babasının yaptığı her şeyi tarihin yargılaması için yazıyor. Yazacağı şeyin sadece pohpohlayan yarısı değil, tam gerçek olmasını sağlıyorum. Ne istiyorsun?" />
+    <string id="byz_melissenos_greet_1" text="Alexios tahta kendi hakkını ileri sürdüğü yıl ben de kendi hakkımı ileri sürdüm. İmparatorluğu bu yüzden parçalamak yerine geri çekilmeyi seçtim - bu seçim hâlâ düşündüğünden daha az uykumu kaçırıyor. Ne istiyorsun?" />
+    <string id="byz_melissenos_greet_2" text="Bir Kaisar unvanı, kendimi kanlandırmadan kazanmadığım bir taht için güzel bir tazminat. İşini söyle." />
+    <string id="byz_tarchaneiotes_greet_1" text="Hâlâ benim adamlarımın Malazgirt'te savaş kaybedilmeden önce meydanı terk ettiğini fısıldıyorlar. Onları düzeltmekten vazgeçtim - fısıldamak, dövüşü artık benim yerime yapıyor. Seni buraya ne getirdi?" />
+    <string id="byz_annadiogenissa_greet_1" text="Babam Malazgirt'te bir imparatorluk kaybetti, ve o zamandan beri hayatımı, kendisinin yerinde olsalardı daha iyisini yapacaklarını sanan küçük adamları izleyerek geçirdim. Ne istiyorsun?" />
+  </strings>
 </base>

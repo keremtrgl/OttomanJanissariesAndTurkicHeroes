@@ -1795,5 +1795,51 @@
 	<string id="spc_wc2_10_response_1" text="呃——看来你倒是有几分血性。" />
 	<string id="spc_wc2_10_response_2" text="哈!但愿所有盗贼都像你这样倒霉。" />
 	<string id="spc_wc2_10_generic_backstory" text="我是村中货郎之子,那不是我想要的生活。我打算学习打仗和骑马。这一带像我这样的小伙子多得很,不管那些骑马的老爷怎么看我们。" />
-</strings>
+    <string id="byz_culture_desc" text="罗马帝国在东方从未真正灭亡——只是不断萎缩。曼齐刻尔特一役击碎了安纳托利亚腹地之后,君士坦丁堡那些紫袍加身的皇帝依然统领着罗马最后的真正传人:纪律严明的塔格玛塔军团、瓦兰吉亚斧卫,以及历经千年侵袭而不倒的官僚体系。金索里都能买到刀剑赢不来的盟友;而任何忘记罗马靠外交与钢铁并存的将领,其统治都不会长久。" />
+    <string id="abb_culture_desc" text="从巴格达的圆形之城出发,阿拔斯哈里发国一度统治着从大西洋到印度河的辽阔疆域,在伊斯兰的旗帜下汇聚了学者、天文学家与医师的黄金时代。如今这一统早已分裂为只对哈里发名义效忠的埃米尔国与苏丹国,但巴格达的市集、图书馆与运河依旧无可匹敌——它对信众的召唤,影响力仍远超其已然萎缩的疆界。" />
+    <string id="geo_culture_desc" text="格鲁吉亚王国夹在拜占庭、塞尔柱与高加索山地领主之间,靠着东正教信仰、山地要塞,以及一群骑术不输草原骑手的贵族才得以存续。大卫王的血脉梦想着一个摆脱外邦贡赋、统一的高加索——若王国能先熬过塑造了它的这个世纪,这个梦想终将被称为格鲁吉亚的黄金时代。" />
+    <string id="crus_culture_desc" text="响应罗马与君士坦丁堡共同的号召,来自西方基督教世界各个角落的骑士们,在第一次十字军东征之后从黎凡特海岸开辟出十字军国家。安条克、埃德萨与耶路撒冷,是外来贵族统治阿拉伯、希腊与亚美尼亚多数居民的要塞之城——如今这场征服必须一座城堡接一座城堡、一纸脆弱条约接一纸脆弱条约地守住当初夺得的一切。" />
+    <string id="arm_culture_desc" text="亚美尼亚领主们被拜占庭吞并与塞尔柱征服逐出高原故土,转而在地中海沿岸的西里西亚山口重建了自己的国家。鲁本亲王一脉统治着一个由山地要塞与商路构成的王国,夹在十字军的安条克与安纳托利亚腹地之间——这是一处在流亡中锻造出的庇护所,也是任何邻邦都无法安然无视的基督教东西方之间的桥梁。" />
+    <string id="krkh_culture_desc" text="喀喇汗国是第一个将伊斯兰教奉为国教的突厥王朝,统治着从喀什噶尔到撒马尔罕、河中地区的城市与牧场。历代可汗在草原古法与清真寺新信仰之间寻求平衡,既统领着定居的丝路商贾,也统率着从未忘记马背生活的骑射手——这个汗国,正建立在那股曾经将突厥诸部族带遍整个中亚的不息活力之上。" />
+      <string id="item_byz2_champion_helm" text="塔格玛冠军头盔" />
+    <string id="item_lat2_champion_helm" text="拉丁帝国冠军头盔" />
+    <string id="item_abb2_champion_helm" text="哈里发冠军头盔" />
+    <string id="item_geo2_champion_helm" text="格鲁吉亚皇家冠军头盔" />
+    <string id="item_crus2_champion_helm" text="十字军冠军加冕头盔" />
+    <string id="item_arm2_champion_helm" text="西里西亚冠军头盔" />
+    <string id="item_kk2_champion_helm" text="喀喇汗冠军战冠" />
+    <string id="rival_tourney_victory" text="🏆 [比武冠军] 你已成为{TOWN}比武大会的冠军!奖励:{PRIZE}(获得+20声望)!" />
+      <string id="abb_tirad_greet_1" text="这座城市里每一位先知的后裔都先向我的名册负责,而后才响应任何埃米尔的召唤。你与扎伊纳比家族有何贵干?" />
+    <string id="abb_tirad_greet_2" text="在巴格达,血统本身就是一支军队,旅人——我的血统已经比好几位苏丹更长久了。说说你的来意吧。" />
+    <string id="abb_damaghani_greet_1" text="我审判过比你伟大得多的人,律法对他们中的任何一个都没有屈服过。说明你的来意。" />
+    <string id="abb_damaghani_greet_2" text="如此古老的城市需要的是一位法官,而不是再多一把剑——巴格达对后者已经受够了。你在寻找什么?" />
+    <string id="abb_ibnayyub_greet_1" text="我的剑为苏丹国效力的时间,比这宫廷里大多数人活着的时间还长。说说你的来意,速战速决。" />
+    <string id="geo_aghsartan_greet_1" text="在我家族的记忆里,卡赫季曾向第比利斯的王冠俯首过一次——我不打算让这成为习惯。你想要什么?" />
+    <string id="geo_aghsartan_greet_2" text="一个山地王国之所以能存续,靠的是从不完全信任它那些更强大的邻居,即便是格鲁吉亚人也不例外。说说你的来意。" />
+    <string id="geo_arishiani_greet_1" text="从这里到卡特利边境的每一个山口,我骑马走过的次数已经数不清了。直说你的来意。" />
+    <string id="geo_kavtar_greet_1" text="巴拉米斯泽家族守住领地,既靠国王的恩宠,也靠刀剑,旅人。你来找我所为何事?" />
+    <string id="geo_kakhaber_greet_1" text="卡特利是这个王国的心脏,我治理它已足够长久,足以叫出这里每一个贵族世家的名字。说说你的来意。" />
+    <string id="geo_kakhaber_greet_2" text="一位连自己的行省都守不住的公爵,没资格教国王如何守住一个王国。我把自己的守得很好。你想要什么?" />
+    <string id="byz_n_palaiologos_greet_1" text="陌生人,我曾助一位皇帝登上皇位,并非出于感恩之心——我这样做,是因为罗马需要一双稳健的手,胜过需要那个已经戴着王冠的人。你想要什么?" />
+    <string id="byz_n_palaiologos_greet_2" text="我守住了迪拉基乌姆的城墙,抵御那些以为罗马太弱、守不住自己海岸的人。他们那时错了,现在也一样会错。说说你的事吧。" />
+    <string id="byz_n_angelos_greet_1" text="我的婚姻将安杰洛斯这个名字与皇室血脉联系了起来,旅人——我的孙辈会如何利用这一点,尚未写定。你找我有何事?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="坎塔库泽努斯这个名字今日在这条边境上统率士兵,明日它在君士坦丁堡能统率什么,那是另一回事。有话直说。" />
+    <string id="byz_n_phokas_greet_1" text="福卡斯家族早已穿过紫袍,埋葬的对手多得我都不愿去数。不管你带着什么事来见我,都记住这一点。" />
+    <string id="byz_n_phokas_greet_2" text="君士坦丁堡的每一位皇帝都盯着这个家族看得稍微太紧了些,而且有充分的理由。说吧,快点说。" />
+    <string id="byz_n_skleros_greet_1" text="斯克莱罗斯家族曾经竖起旗帜反抗过一位皇帝,那记忆还很鲜活——在你以为我是个容易驾驭的人之前,先记住这一点。你想要什么?" />
+    <string id="byz_n_kourkouas_greet_1" text="我祖父的祖父把罗马的鹰旗带到了比任何将领都更远的东方,不论前人还是后人都未能及。我打算守住他赢得的一切。说说你的事吧。" />
+    <string id="byz_n_xiphilinos_greet_1" text="我的家族侍奉教会与法律,忠诚不亚于旁人侍奉刀剑,旅人。说说你的事吧,措辞要谨慎。" />
+    <string id="byz_n_vatatzes_greet_1" text="瓦塔泽斯这个名字在君士坦丁堡还算不上显赫,但再给它一两个世纪吧。今日你来找我有何事?" />
+    <string id="byz_n_gabras_greet_1" text="特拉布宗名义上听命于君士坦丁堡,实际上听命于我,而我守住这条边境、抵御突厥曼部落的时间,比任何从京城派来的孤立驻军所能做到的都更长。你有何事?" />
+    <string id="byz_n_gabras_greet_2" text="每一次从突厥曼山地发起的袭击,都是在试探特拉布宗是否仍有牙齿。它有。直说吧,你想要什么?" />
+    <string id="byz_mariaalania_greet_1" text="我从格鲁吉亚的群山而来,戴上了罗马的王冠——事实上是两次,嫁了两位不同的丈夫。没有一个王座像你想的那样令我意外。你想要什么?" />
+    <string id="byz_mariaalania_greet_2" text="一位皇后很快就会明白,只要足够耐心,王冠比戴着它的男人活得更久。我一直很有耐心。说说你的事吧。" />
+    <string id="byz_mariabulgaria_greet_1" text="保加利亚陷落那天,我的家族向紫袍屈膝了,旅人,而我已与一个至今仍忘记我们曾是自己王国的君士坦丁堡和解。你有何事?" />
+    <string id="byz_irenedoukaina_greet_1" text="我的丈夫初登皇位时并不想让我在他身边。他很快就明白了并非如此,若你小看我,你也会一样明白。说吧。" />
+    <string id="byz_irenedoukaina_greet_2" text="我的女儿把她父亲所做的一切都记录下来,留给历史去评判。我确保她掌握的是完整的真相,而不仅仅是讨好人的那一半。你想要什么?" />
+    <string id="byz_melissenos_greet_1" text="我提出对皇位的主张,与阿历克塞提出他的主张,是同一年。我选择了退让,而不是为此撕裂帝国——这个选择至今让我损失的睡眠,比你想的要少。你想要什么?" />
+    <string id="byz_melissenos_greet_2" text="凯撒这个头衔,对一个我从未用血去赢取的王位来说,是个不错的安慰。说说你的事吧。" />
+    <string id="byz_tarchaneiotes_greet_1" text="至今仍有人低声说,我的部下在曼齐克特战败之前就离开了战场。我已不再纠正他们了——如今这些低语替我打这场仗。是什么把你带到这里来?" />
+    <string id="byz_annadiogenissa_greet_1" text="我父亲在曼齐克特失去了一个帝国,自那以后我这一生都在看着那些不如他的人,自以为若换了他们会做得更好。你想要什么?" />
+  </strings>
 </base>

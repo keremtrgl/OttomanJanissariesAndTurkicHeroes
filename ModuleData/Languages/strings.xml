@@ -1754,5 +1754,51 @@
 	<string id="spc_wc2_10_response_1" text="Well - I suppose you've got spirit." />
 	<string id="spc_wc2_10_response_2" text="Ha! May every thief fail as badly as you did." />
 	<string id="spc_wc2_10_generic_backstory" text="I was a village peddler's son, and that's not the life I want. I mean to learn to fight and ride. There are plenty of lads like me in these parts, whatever the horse-lords think of us." />
-</strings>
+    <string id="byz_culture_desc" text="The Roman Empire never fell in the east - only shrank. After Manzikert broke its Anatolian heartland, the Purple-born emperors of Constantinople still command the last true heirs of Rome: disciplined Tagmata regiments, Varangian axemen, and a bureaucracy that has outlasted a thousand years of invasion. Gold solidi buy allies the sword cannot win, and every general who forgets that Rome survives on diplomacy as much as steel finds his reign a short one." />
+    <string id="abb_culture_desc" text="From Baghdad's round city, the Abbasid Caliphate once ruled from the Atlantic to the Indus, uniting a golden age of scholars, astronomers, and physicians under the banner of Islam. That unity has long since splintered into emirates and sultanates owing only nominal fealty to the Caliph, yet Baghdad's markets, libraries, and canals remain unmatched - and its call to the faithful still carries weight far beyond its shrunken borders." />
+    <string id="geo_culture_desc" text="Wedged between the Byzantine, Seljuk, and Caucasian mountain lords, the Kingdom of Georgia has learned to survive through Orthodox faith, mountain fortresses, and a nobility as fierce in the saddle as any steppe horseman. King David's line dreams of a unified Caucasus free of foreign tribute - a dream that will one day be called the Georgian Golden Age, if the kingdom can first survive the century that made it." />
+    <string id="crus_culture_desc" text="Answering the call of Rome and Constantinople alike, knights from every corner of Western Christendom carved the Crusader States from the Levantine coast after the First Crusade. Antioch, Edessa, and Jerusalem stand as fortress-cities of a foreign nobility ruling over an Arab, Greek, and Armenian majority - a conquest that must now hold what it took, one castle and one uneasy treaty at a time." />
+    <string id="arm_culture_desc" text="Driven from their highland homeland by Byzantine annexation and Seljuk conquest, Armenian lords rebuilt their nation in the Cilician passes along the Mediterranean coast. Prince Ruben's line rules a kingdom of mountain fortresses and trade roads between Crusader Antioch and the Anatolian interior - a refuge forged in exile, and a bridge between Christian East and West that no neighbor can safely ignore." />
+    <string id="krkh_culture_desc" text="The first Turkic dynasty to embrace Islam as a state religion, the Kara-Khanid Khanate rules the cities and pastures of Transoxiana from Kashgar to Samarkand. Its khans balance the old law of the steppe with the new faith of the mosque, commanding both settled Silk Road merchants and mounted archers who never forgot how to live in the saddle - a khanate built on the same restless energy that once carried Turkic peoples across all of Central Asia." />
+      <string id="item_byz2_champion_helm" text="Tagmatic Champion's Helm" />
+    <string id="item_lat2_champion_helm" text="Latin Imperial Champion's Helm" />
+    <string id="item_abb2_champion_helm" text="Caliph's Champion Helm" />
+    <string id="item_geo2_champion_helm" text="Georgian Royal Champion's Helm" />
+    <string id="item_crus2_champion_helm" text="Crusader Champion's Crowned Helm" />
+    <string id="item_arm2_champion_helm" text="Cilician Champion's Helm" />
+    <string id="item_kk2_champion_helm" text="Kara-Khanid Champion's Battle Crown" />
+    <string id="rival_tourney_victory" text="🏆 [Tournament Champion] You have become the Champion of {TOWN}'s Tournament! Prize: {PRIZE} (+20 Renown gained)!" />
+      <string id="abb_tirad_greet_1" text="Every descendant of the Prophet in this city answers to my register before he answers to any emir's summons. What is your business with House Zaynabi?" />
+    <string id="abb_tirad_greet_2" text="Lineage is its own kind of army in Baghdad, traveler - mine has outlasted several Sultans already. Speak your business." />
+    <string id="abb_damaghani_greet_1" text="I have sat in judgment over men far greater than you, and the law did not bend for any of them either. State your business." />
+    <string id="abb_damaghani_greet_2" text="A city this old needs a judge more than it needs another sword - Baghdad has had enough of the latter. What do you seek?" />
+    <string id="abb_ibnayyub_greet_1" text="My sword has served the Sultanate longer than most men at this court have been alive. Speak your business, and be quick about it." />
+    <string id="geo_aghsartan_greet_1" text="Kakheti bent its knee to Tbilisi's crown once already in my family's memory - I do not intend to make a habit of it. What do you want?" />
+    <string id="geo_aghsartan_greet_2" text="A mountain kingdom survives by never quite trusting its larger neighbors, even the Georgian ones. Speak your business." />
+    <string id="geo_arishiani_greet_1" text="I have ridden every pass between here and the Kartli border more times than I can count. State your business plainly." />
+    <string id="geo_kavtar_greet_1" text="House Baramisdze holds its lands by the sword as much as by the King's favor, traveler. What brings you to me?" />
+    <string id="geo_kakhaber_greet_1" text="Kartli is the heart of this kingdom, and I have governed it long enough to know every noble house within it by name. Speak your business." />
+    <string id="geo_kakhaber_greet_2" text="A duke who cannot hold his own province has no business advising a king on how to hold a kingdom. I hold mine well. What do you want?" />
+    <string id="byz_n_palaiologos_greet_1" text="I have helped raise an emperor to his throne before, stranger, and I did not do it for gratitude - I did it because Rome needed a steady hand more than it needed the man already wearing the crown. What do you want?" />
+    <string id="byz_n_palaiologos_greet_2" text="I have held Dyrrhachium's walls against men who thought Rome too weak to defend her own coastline. They were wrong then, and they would be wrong now. Speak your business." />
+    <string id="byz_n_angelos_greet_1" text="My marriage bound the Angelos name to the blood of emperors, traveler - what my grandsons make of that is not yet written. What is your business with me?" />
+    <string id="byz_n_kantakouzenos_greet_1" text="The Kantakouzenos name commands soldiers on this frontier today, whatever it commands in Constantinople tomorrow. State your business plainly." />
+    <string id="byz_n_phokas_greet_1" text="The Phokas name has worn the Purple before and buried more rivals than I care to count. Mind that, whatever business brings you before me." />
+    <string id="byz_n_phokas_greet_2" text="Every emperor in Constantinople watches this family a little too closely, and for good reason. Speak, and be quick about it." />
+    <string id="byz_n_skleros_greet_1" text="The Skleros house has raised its banner against an emperor once already within living memory - remember that before you mistake me for an easy man to command. What do you want?" />
+    <string id="byz_n_kourkouas_greet_1" text="My grandfather's grandfather carried Rome's eagles further east than any general before or since. I intend to hold what he won. Speak your business." />
+    <string id="byz_n_xiphilinos_greet_1" text="My family has served the Church and the law as faithfully as others have served the sword, traveler. State your business, and mind your words." />
+    <string id="byz_n_vatatzes_greet_1" text="The Vatatzes name is not yet a great one in Constantinople, but give it a century or two. What brings you to me today?" />
+    <string id="byz_n_gabras_greet_1" text="Trebizond answers to Constantinople in name and to me in practice, and I have held this frontier against the Turkoman tribes longer than any garrison sent from the capital could manage alone. What is your business?" />
+    <string id="byz_n_gabras_greet_2" text="Every raid out of the Turkoman hills tests whether Trebizond still has teeth. It does. Speak plainly, what do you want?" />
+    <string id="byz_mariaalania_greet_1" text="I came from Georgia's mountains to wear Rome's crown - twice, in fact, under two different husbands. Neither throne surprised me as much as you might expect. What do you want?" />
+    <string id="byz_mariaalania_greet_2" text="An empress learns quickly that a crown outlasts the man wearing it, if she is patient enough. I have been very patient. Speak your business." />
+    <string id="byz_mariabulgaria_greet_1" text="My family knelt to the Purple when Bulgaria fell, traveler, and I have made my peace with a Constantinople that still forgets we were ever a kingdom of our own. What is your business?" />
+    <string id="byz_irenedoukaina_greet_1" text="My husband did not want me at his side when he first took the throne. He learned otherwise soon enough, and so will you if you underestimate me. Speak." />
+    <string id="byz_irenedoukaina_greet_2" text="My daughter writes down everything her father does, for history to judge. I make sure she has the full truth to write, not merely the flattering half. What do you want?" />
+    <string id="byz_melissenos_greet_1" text="I raised my own claim to the throne the same year Alexios raised his. I chose to stand down rather than tear the Empire apart over it - a choice that still costs me less sleep than you might think. What do you want?" />
+    <string id="byz_melissenos_greet_2" text="A Caesar's title is a fine consolation for a throne I never had to bloody myself winning. Speak your business." />
+    <string id="byz_tarchaneiotes_greet_1" text="They still whisper that my men left the field at Manzikert before the battle was lost. I have stopped correcting them - the whispering does the fighting for me now. What brings you here?" />
+    <string id="byz_annadiogenissa_greet_1" text="My father lost an empire at Manzikert, and I have spent my life since watching lesser men pretend they would have done better in his place. What do you want?" />
+  </strings>
 </base>
