@@ -1800,5 +1800,47 @@
     <string id="byz_melissenos_greet_2" text="Bir Kaisar unvanı, kendimi kanlandırmadan kazanmadığım bir taht için güzel bir tazminat. İşini söyle." />
     <string id="byz_tarchaneiotes_greet_1" text="Hâlâ benim adamlarımın Malazgirt'te savaş kaybedilmeden önce meydanı terk ettiğini fısıldıyorlar. Onları düzeltmekten vazgeçtim - fısıldamak, dövüşü artık benim yerime yapıyor. Seni buraya ne getirdi?" />
     <string id="byz_annadiogenissa_greet_1" text="Babam Malazgirt'te bir imparatorluk kaybetti, ve o zamandan beri hayatımı, kendisinin yerinde olsalardı daha iyisini yapacaklarını sanan küçük adamları izleyerek geçirdim. Ne istiyorsun?" />
+    <string id="companion_khusraw_greet_1" text="Yollarda geçen yedi yıl bana bir yabancının sorusuna, bir alimin cevabından daha çok güvenmeyi öğretti. Peki - gerçekten öğrenmek istediğin nedir?" />
+    <string id="companion_khusraw_greet_2" text="Horasan'dan beri yürümeyi hiç bırakmadım, {PLAYER.NAME}, en azından gerçek anlamda. Bu gece seni ne rahatsız ediyor - ve bana duymamı beklediğin cevabı verme." />
+    <string id="companion_khusraw_greet_3" text="Geçtiğim her şehrin kendine göre bir kesinlik anlayışı vardı, ve her biri bir konuda yanılıyordu. Seninki nedir?" />
+    <string id="companion_khayyam_greet_1" text="Bu kadar çabuk mu döndün? Meyhanecinin asla anlayamayacağı bir hesabın tam ortasındaydım. Şimdi seni ne dertlendiriyor?" />
+    <string id="companion_khayyam_greet_2" text="Yıldızlar kendi sırlarını saklar, {PLAYER.NAME}, tıpkı benim gibi. Bana gerçekten sormak istediğin nedir?" />
+    <string id="companion_khayyam_greet_3" text="Bilge bir adam bir kez cevap vermeden önce iki kez şüphe eder. Hadi öyleyse - sor, bırak şüphe edeyim." />
+    <string id="companion_psellos_greet_1" text="Ah, geri döndün - ben de seferin hakkında söyleyecek pohpohlayıcı sözlerimin tükendiğini sanmıştım. Otur, otur. Kötü haberi strateji gibi göstermekteki o özel yeteneğimi hangi taze kriz gerektiriyor, söyle bana." />
+    <string id="companion_psellos_greet_2" text="Dört imparatorun bana olan iyi düşüncesinden de, saltanatlarının çoğundan da daha uzun yaşadım, {PLAYER.NAME}. Ne soracaksan sor, çok daha görkemli meclislerden çok daha kötü sorulara göğüs gerdiğime söz veririm." />
+    <string id="companion_psellos_greet_3" text="Bir hatibin yeteneği, bir insanın akşam yemeğinden önce ne kadar gerçeğe dayanabileceğini tam olarak bilmektir. Sorunu sor, cevabımı ona göre ayarlayayım." />
+    <string id="companion_roussel_greet_1" text="Hâlâ buradayım, hâlâ nefes alıyorum - beni Anadolu'ya kadar takip eden çoğu adamın söyleyebileceğinden fazlası bu. Ne istiyorsun?" />
+    <string id="companion_roussel_greet_2" text="Bir zamanlar bir şehri sadece kendi mızraklarımla ve kendi cesaretimle elimde tuttum. Açık konuş, {PLAYER.NAME} - başka bir şeye sabrım kalmadı." />
+    <string id="companion_roussel_greet_3" text="Zincirler bana Malazgirt'in öğrettiğinden daha çok sabır öğretti. Sadede gel." />
+    <string id="companion_ghazali_greet_1" text="Bir zamanlar duymak için iyi para ödeyen adamlara kesinlik öğretirdim. Artık bu kadar kolay gelen bir kesinliğe güvenmiyorum - ne kendiminkine, ne seninkine. Ne arıyorsun?" />
+    <string id="companion_ghazali_greet_2" text="Şimdi giydiğim bu cübbe bana Bağdat'taki en seçkin öğretmenlik makamına mal oldu, ve bu takasa bir kez bile pişman olmadım. Konuş, bir zamanlar tartıştığım kadar dikkatle dinleyeceğim." />
+    <string id="companion_ghazali_greet_3" text="Kendisine öğretilen her şeyden şüphe etmiş bir adam, sözlerini harcamadan önce tartmayı öğrenir. Öyleyse - sen de tart, ve seni ne rahatsız ediyor söyle." />
+    <string id="companion_usama_greet_1" text="Şeyzer'de herhangi birine sor - kılıç ile dize arasında bir kez bile seçim yapmak zorunda kalmadım, ve şimdi başlayacak da değilim. Neye ihtiyacın var, kılıca mı, söze mi?" />
+    <string id="companion_usama_greet_2" text="Aslan avladım, Frenk şövalyeleriyle mızrak çaprazladım, ve çizmelerimdeki mürekkep kurumadan üçü hakkında da şiir yazdım. Seni rahatsız eden nedir?" />
+    <string id="companion_usama_greet_3" text="Sadece kılıcı bilen bir adam benim gözümde yarım bir adamdır, {PLAYER.NAME} - ve Franklarla yeterince sofra paylaştım, birkaçının bana hak verdiğini bilecek kadar. Konuş." />
+    <string id="companion_petritsi_greet_1" text="Kendi rahiplerimizin hâlâ şüpheyle baktığı bir pagan filozofu çevirmekle yıllarımı geçirdim, ve bu tartışmayı asla tam olarak bitiremeyeceğimle barıştım. Bu gece aradığın nedir?" />
+    <string id="companion_petritsi_greet_2" text="Konstantinopolis'ten getirdiğim şeye kimileri sapkınlık, kimileri hikmet diyor. İkisini de nazikçe kabullenmeyi öğrendim. Konuş, aynı şekilde dinleyeceğim." />
+    <string id="companion_petritsi_greet_3" text="Bir filozof sabrı bitmemiş sorulardan öğrenir, {PLAYER.NAME} - bende bunlardan çok var. Seninki nedir?" />
+    <string id="companion_vardan_greet_1" text="Vadilerimizi bütünüyle yutmak isteyen bir krala karşı Svanları ayaklandırdım. Bana neye mal olursa olsun, yine yapardım. Ne istiyorsun?" />
+    <string id="companion_vardan_greet_2" text="Dukalık gitti; geriye kılıç ve kin kaldı. İşini söyle ve çabuk ol." />
+    <string id="companion_vardan_greet_3" text="Ovalar ne derse desin, Svaneti kalbimde hâlâ kendi kendine hesap verir. Nedir?" />
+    <string id="companion_peterhermit_greet_1" text="Bir zamanlar binlerce kişiyi sadece imanla doğuya götürdüm, ve Kutsal Topraklara varmadan çoğunu toprağa verdim. Hâlâ inanıyorum, {PLAYER.NAME} - sadece kendi kesinliğime, kendimden başka kimseyi yönetmesi için güvenmemeyi öğrendim. Nedir?" />
+    <string id="companion_peterhermit_greet_2" text="İznik'te Tanrı yolumuzu açmadı, beni izleyen mü'minlere ne söz vermiş olursam olayım. Hâlâ nefes aldığım her gün bunu taşıyorum. Konuş, seni ne rahatsız ediyor?" />
+    <string id="companion_peterhermit_greet_3" text="İmanımdan utanmıyorum - sadece bana fazlasıyla güvenen adamlara imanımın neye mal olduğundan utanıyorum. Neye ihtiyacın olduğunu söyle, kolay cevaplarım varmış gibi davranmayacağım." />
+    <string id="companion_bartholomew_greet_1" text="Hiçbir şeyi kalmamış, aç bir ordunun önünde Mızrağı yukarı kaldırdım, ve kuşatma ertesi gün kırıldı. Görüm hakkında istediğine inan - ben ne gördüğümü biliyorum. Ne istiyorsun?" />
+    <string id="companion_bartholomew_greet_2" text="Kimse dinlemezken Aziz Andreas bana geldi, {PLAYER.NAME}. Bunu ispatlamak için bir kez ateşin içinden yürüdüm. İkinci kez yapmayacağım, ama bunun için özür de dilemeyeceğim. Konuş." />
+    <string id="companion_bartholomew_greet_3" text="Bazı adamlar hâlâ duymadığımı sandıklarında 'sahtekar' diye fısıldıyor. Görümün bana kazmamı söylediği yeri kazdım, ve Mızrak oradaydı. Neye ihtiyacın var?" />
+    <string id="companion_matthew_greet_1" text="Kendi ömrümde bu toprakların üç farklı hükümdarının anlatımını kayda geçirdim, ve ikisi bile saklamaya değer tek bir gerçekte anlaşmadı. Bu gece kayda ne geçirmek istersin?" />
+    <string id="companion_matthew_greet_2" text="Sadece galipler tarafından yazılan tarih, tarih değildir, {PLAYER.NAME} - daha güzel bir el yazısıyla yazılmış pohpohlamadır. Konuş, hangi sayfayı hangi beye göstereceğime daha sonra karar veririm." />
+    <string id="companion_matthew_greet_3" text="Urfa o kadar çok el değiştirdi ki, sadece hükümdarları için ayrı bir defter tutuyorum. İşin nedir?" />
+    <string id="companion_heratsi_greet_1" text="Ateşler hakkında bildiğim her şeyi yazdım ki, kimsenin hatırlamayacağı bir çadırda benimle birlikte ölüp gitmesin. Bu gece seni rahatsız eden nedir - yoksa bu bir hekimin tedavi edemeyeceği bir şey mi?" />
+    <string id="companion_heratsi_greet_2" text="Eğitimli bir elin fark edebileceği bir yaradan ölen bir adam, benim için kişisel bir ölümdür, {PLAYER.NAME}. Neyin yanlış olduğunu söyle, ciddi olup olmadığına ben karar vereyim." />
+    <string id="companion_heratsi_greet_3" text="Loncam bilgimi paylaşmaktansa saklamamı tercih ederdi. Onlarla her gün aynı fikirde değilim. Neye ihtiyacın var?" />
+    <string id="companion_kashgari_greet_1" text="Kaydettiğim her ağızın, başka hiçbir oymağın tam olarak paylaşmadığı kendi 'yurt' kelimesi vardı. Söyle bana, {PLAYER.NAME} - senin kendi dilin nereli olduğunu söylüyor?" />
+    <string id="companion_kashgari_greet_2" text="Oğuzların, Kıpçakların ve Karlukların hepsinin tek bir ağacın dalları olduğunu kanıtlamak için Kaşgar yakınlarındaki rahat hayatımdan vazgeçtim. Hâlâ kanıt topluyorum. Bugün bana ne getirdin?" />
+    <string id="companion_kashgari_greet_3" text="Bir adamın konuşması, kendisinin göstermek istediğinden daha çok şey söyler nereli olduğu hakkında. Açık konuş - sadece yarı dikkatimle ağzını dinleyeceğime söz veriyorum." />
+    <string id="companion_yasawi_greet_1" text="Bir insanın Tanrı'yı bulmak için Arapça bir kanıta ihtiyacı yoktur, sadece kendi dilinde taşıyabileceği bir dizeye. Bu gece sen ne taşıyorsun?" />
+    <string id="companion_yasawi_greet_2" text="Babamı küçük yaşta kaybettim ve onun yerine bir öğretmen buldum. İzin verirsen kayıp bunu yapar. Seni ne rahatsız ediyor, {PLAYER.NAME}?" />
+    <string id="companion_yasawi_greet_3" text="Şehirlerdeki alimler benim dizelerimi basit buluyor. Yanlarında oturduğum korkmuş adamlar ise onları yeterli buluyor. Konuş, onları dinlediğim gibi seni de dinleyeceğim." />
   </strings>
 </base>
