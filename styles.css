@@ -243,9 +243,49 @@ pre.mermaid {
   padding: 16px;
 }
 
+/* ---- Tables ---- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th {
+  background: var(--paper-2);
+  color: var(--gold-strong);
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+td {
+  background: var(--paper);
+}
+
+tbody tr:nth-child(even) td {
+  background: var(--paper-2);
+}
+
 /* ---- Small screens ---- */
 
 @media (max-width: 640px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
   .toc-inner {
     flex-wrap: wrap;
   }
