@@ -1800,5 +1800,47 @@
     <string id="byz_melissenos_greet_2" text="A Caesar's title is a fine consolation for a throne I never had to bloody myself winning. Speak your business." />
     <string id="byz_tarchaneiotes_greet_1" text="They still whisper that my men left the field at Manzikert before the battle was lost. I have stopped correcting them - the whispering does the fighting for me now. What brings you here?" />
     <string id="byz_annadiogenissa_greet_1" text="My father lost an empire at Manzikert, and I have spent my life since watching lesser men pretend they would have done better in his place. What do you want?" />
+    <string id="companion_khusraw_greet_1" text="Seven years on the road taught me to trust a stranger's question more than a scholar's answer. So - what is it you actually want to know?" />
+    <string id="companion_khusraw_greet_2" text="I have not stopped walking since Khorasan, {PLAYER.NAME}, not in any way that matters. What troubles you tonight - and don't give me the answer you think I want." />
+    <string id="companion_khusraw_greet_3" text="Every city I passed through had its own version of certainty, and every one of them was wrong about something. What's yours?" />
+    <string id="companion_khayyam_greet_1" text="Back so soon? I was in the middle of a calculation the tavern-keeper will never understand. What troubles you now?" />
+    <string id="companion_khayyam_greet_2" text="The stars keep their own counsel, {PLAYER.NAME}, same as I do. What is it you actually want to ask me?" />
+    <string id="companion_khayyam_greet_3" text="A wise man doubts twice before he answers once. Go on, then - ask, and let me doubt." />
+    <string id="companion_psellos_greet_1" text="Ah, you return - and here I thought I'd exhausted my store of flattering things to say about your campaign. Sit, sit. Tell me what fresh crisis requires my particular talent for making bad news sound like strategy." />
+    <string id="companion_psellos_greet_2" text="I have outlived four emperors' good opinion of me and most of their reigns besides, {PLAYER.NAME}. Whatever you're about to ask, I promise I've survived worse questions from far grander company." />
+    <string id="companion_psellos_greet_3" text="A rhetorician's gift is knowing exactly how much truth a man can bear before dinner. Ask your question, and I shall calibrate my answer accordingly." />
+    <string id="companion_roussel_greet_1" text="Still here, still breathing - that's more than most men who followed me into Anatolia can say. What do you want?" />
+    <string id="companion_roussel_greet_2" text="I held a city once with nothing but my own lances and my own nerve. Speak plainly, {PLAYER.NAME} - I've no patience left for anything else." />
+    <string id="companion_roussel_greet_3" text="Chains taught me more patience than Manzikert ever did. Get to the point." />
+    <string id="companion_ghazali_greet_1" text="I once taught certainty to men who paid well to hear it. I no longer trust a certainty that comes that easily - mine or yours. What is it you seek?" />
+    <string id="companion_ghazali_greet_2" text="The robe I wear now cost me the finest teaching post in Baghdad, and I have never once regretted the trade. Speak, and I will listen as carefully as I once argued." />
+    <string id="companion_ghazali_greet_3" text="A man who has doubted everything he was taught learns to measure his words before he spends them. So - measure yours, and tell me what troubles you." />
+    <string id="companion_usama_greet_1" text="Ask any man in Shaizar - I have never once had to choose between the blade and the verse, and I'm not about to start now. What do you need, sword or word?" />
+    <string id="companion_usama_greet_2" text="I have hunted lions, crossed spears with Frankish knights, and written poetry about all three before the ink on my boots had dried. What's troubling you?" />
+    <string id="companion_usama_greet_3" text="A man who knows only the sword is half a man in my eyes, {PLAYER.NAME} - and I've shared enough tables with Franks to know a few of them agree with me. Speak." />
+    <string id="companion_petritsi_greet_1" text="I spent years translating a pagan philosopher our own priests still eye with suspicion, and I have made my peace with never fully finishing that argument. What is it you're searching for tonight?" />
+    <string id="companion_petritsi_greet_2" text="Some call what I brought back from Constantinople heresy, others call it wisdom. I have learned to hold both possibilities gently. Speak, and I will listen the same way." />
+    <string id="companion_petritsi_greet_3" text="A philosopher learns patience from unfinished questions, {PLAYER.NAME} - I have a great many of those. What is yours?" />
+    <string id="companion_vardan_greet_1" text="I raised the Svans against a king who wanted to swallow our valleys whole. I'd do it again, whatever it cost me. What do you want?" />
+    <string id="companion_vardan_greet_2" text="The duchy is gone; the sword and the grudge remain. Speak your business and be quick about it." />
+    <string id="companion_vardan_greet_3" text="Svaneti still answers to itself in my heart, whatever the lowlands say. What is it?" />
+    <string id="companion_peterhermit_greet_1" text="I led thousands east on faith alone once, and buried most of them before we ever reached the Holy Land. I still believe, {PLAYER.NAME} - I have simply learned not to trust my own certainty to lead anyone but myself. What is it?" />
+    <string id="companion_peterhermit_greet_2" text="God did not clear our path at Nicaea, whatever I promised the faithful who followed me. I carry that every day I still draw breath. Speak, what troubles you?" />
+    <string id="companion_peterhermit_greet_3" text="I am not ashamed of the faith - only of what my faith cost the men who trusted me too completely. Tell me what you need, and I will not pretend to have easy answers." />
+    <string id="companion_bartholomew_greet_1" text="I held the Lance up before a starving army with nothing left, and the siege broke the very next day. Believe what you like about the vision - I know what I saw. What do you want?" />
+    <string id="companion_bartholomew_greet_2" text="Saint Andrew came to me when no one else would listen, {PLAYER.NAME}. I walked through fire to prove it once. I won't do it twice, but I won't apologize for it either. Speak." />
+    <string id="companion_bartholomew_greet_3" text="Some men still whisper 'fraud' when they think I can't hear it. I dug where the vision told me to dig, and the Lance was there. What is it you need?" />
+    <string id="companion_matthew_greet_1" text="I have recorded three different rulers' versions of this land in my own lifetime, and no two of them agreed on a single fact worth keeping. What would you like entered into the record tonight?" />
+    <string id="companion_matthew_greet_2" text="History written only by the victors is not history, {PLAYER.NAME} - it is flattery with better handwriting. Speak, and I will judge later which page to show which lord." />
+    <string id="companion_matthew_greet_3" text="Edessa has changed hands so many times I keep a separate ledger just for its rulers. What is your business?" />
+    <string id="companion_heratsi_greet_1" text="I have written down everything I know of fevers so it doesn't die with me in some tent no one remembers. What ails you tonight - or is it something a physician can't treat?" />
+    <string id="companion_heratsi_greet_2" text="A man who dies of a wound a trained hand could have caught is a death I take personally, {PLAYER.NAME}. Tell me what's wrong, and let me judge whether it's serious." />
+    <string id="companion_heratsi_greet_3" text="My guild would rather I guarded my knowledge than gave it away. I disagree with them daily. What do you need?" />
+    <string id="companion_kashgari_greet_1" text="Every dialect I ever recorded had its own word for 'home' that no other tribe quite shared. Tell me, {PLAYER.NAME} - where does your own tongue say you're from?" />
+    <string id="companion_kashgari_greet_2" text="I gave up a comfortable life near Kashgar to prove that Oghuz and Kipchak and Karluk are all branches of one tree. I'm still collecting proof. What have you brought me today?" />
+    <string id="companion_kashgari_greet_3" text="A man's speech tells me more about where he's from than he usually means to reveal. Speak plainly - I promise I'm only half listening for the dialect." />
+    <string id="companion_yasawi_greet_1" text="A man does not need Arabic argument to find God, only a verse he can carry in his own tongue. What is it you carry tonight?" />
+    <string id="companion_yasawi_greet_2" text="I lost my father young and found a teacher instead. Loss has a way of doing that, if you let it. What troubles you, {PLAYER.NAME}?" />
+    <string id="companion_yasawi_greet_3" text="The scholars in the cities call my verses simple. The frightened men I've sat with call them enough. Speak, and I will listen the way I listen to them." />
   </strings>
 </base>

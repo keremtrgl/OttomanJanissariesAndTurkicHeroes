@@ -60,6 +60,7 @@ namespace SeljukEmpire
                 TryRegister(campaignStarter, "SeljukDialogueBehavior", () => campaignStarter.AddBehavior(new SeljukDialogueBehavior()));
                 TryRegister(campaignStarter, "RivalCultureDialogueBehavior", () => campaignStarter.AddBehavior(new RivalCultureDialogueBehavior()));
                 TryRegister(campaignStarter, "NewKingdomsDialogueBehavior", () => campaignStarter.AddBehavior(new NewKingdomsDialogueBehavior()));
+                TryRegister(campaignStarter, "CompanionPersonalityDialogueBehavior", () => campaignStarter.AddBehavior(new CompanionPersonalityDialogueBehavior()));
                 TryRegister(campaignStarter, "SeljukSystemsExplainerBehavior", () => campaignStarter.AddBehavior(new SeljukSystemsExplainerBehavior()));
                 // Registered independently (not one bundled call) so another mod's model of the same
                 // base type misbehaving on Initialize can't take the other three down with it.
