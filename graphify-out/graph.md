@@ -19,13 +19,13 @@ detaylandırmaktadır. **Güncel sürüm: v1.8.4.**
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(22 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(23 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
-    SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
+    SM --> XML_S["8 x *_settlements.xml<br/>(392 Şehir/Kale/Köy Yeniden Adlandırması)"]
     SM --> XML_L["8 x *_lords.xml<br/>(Tüm Krallıklarda Tarihi Lord İsimleri)"]
     SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>+ seljuk_special_characters*.xml<br/>(Soy Ağacı & 25 Meyhane Yoldaşı: 14 Tarihi + 11 Jenerik)"]
-    SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
+    SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu'nun 21 Birimlik Ağacı + 7 Rakip Krallığın 20'şer Birimlik Ağacı = 140 Birim)"]
     SM --> XML_P["party_templates.xml + rival_culture_names.xml<br/>(8 Kültürün 8 Ordu/Parti Şablonu — Lord Ordusu v1.7.2,<br/>Han/Muhafız/Devriye/Milis/İsyancı/Hediye v1.7.5 & v1.7.7, 64 Şablon)"]
     SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml<br/>(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.8.2)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
@@ -296,11 +296,12 @@ graph TD
 - **Atabeglik XP kapsam düzeltmesi** — `SeljukAtabegTitleBehavior` artık sadece gerçekten
   Selçuklu'ya ait bir yerleşimi yöneten Selçuklu klanı kahramanlarına günlük XP veriyor.
 
-**Latin İmparatorluğu'nun kendine özgü 21 birimli asker ağacı** (`latin_empire_custom_troops.xml`,
+**Latin İmparatorluğu'nun kendine özgü 20 birimli asker ağacı** (`latin_empire_custom_troops.xml`,
 Culture.empire, 6 kademe): Latin Levy → 4 dal (Frenk Piyadesi/Cenevizli Arbaletçi/Ulah Atlısı/
 Silahtar) → ... → Gasmoulos Muhafızı (piyade), Seçkin Cenevizli Arbaletçi (menzilli), Rumeli Baronu
 (ağır süvari) - Haçlı Devletleri'nin kendi ağacından tamamen farklı silah/zırh/at seçimleriyle. Diğer
-6 rakip krallığın her birinin de kendi 21 birimlik özel ağacı var (7 x 21 = 147 rakip birim toplam).
+6 rakip krallığın her birinin de kendi 20 birimlik özel ağacı var (7 x 20 = 140 rakip birim toplam;
+Selçuklu'nun kendi ağacı 21 birim).
 
 **C# alt sistemleri (erken oturumlarda eklendi):**
 - `LatinEmpireRecruitmentBehavior` - empire_w/empire_s'in paylaştığı Culture.empire nedeniyle
