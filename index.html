@@ -506,11 +506,255 @@ graph TD
   <section id="section-8">
     <h2 class="lang-tr">8. Rakip Krallıklar Hiyerarşisi (Native Kingdom → Tarihi Devlet Dönüşümü)</h2>
     <h2 class="lang-en" hidden>8. Rival Kingdoms Hierarchy (Native Kingdom → Historical State Conversion)</h2>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    N1["Kingdom.empire_s&lt;br/&gt;(Native: Southern Empire)"] --> B1["🏛️ Bizans İmparatorluğu&lt;br/&gt;İmparator Romanos IV Diogenes"]
+    N2["Kingdom.aserai"] --> B2["🏛️ Abbasi Halifeliği&lt;br/&gt;Halife El-Kaim bi-Emrillah"]
+    N3["Kingdom.sturgia"] --> B3["🏛️ Gürcistan Krallığı&lt;br/&gt;Kral IV. David (Kurucu)"]
+    N4["Kingdom.vlandia"] --> B4["🏛️ Haçlı Devletleri (Antakya)&lt;br/&gt;Bohemond of Taranto"]
+    N5["Kingdom.battania"] --> B5["🏛️ Kilikya Ermeni Prensliği&lt;br/&gt;Ruben I (Kurucu)"]
+    N6["Kingdom.khuzait"] --> B6["🏛️ Karahanlı Devleti&lt;br/&gt;Şems el-Mülk Nasr"]
+    N7["Kingdom.empire_w&lt;br/&gt;(Native: Western Empire)"] --> B7["🏛️ Konstantinopolis Latin İmparatorluğu&lt;br/&gt;İmparator I. Henri (Flandre'li)"]
+
+    B7 --> LC1["Flandre Hanesi (clan_empire_west_2)&lt;br/&gt;Edirne + Amfipolis + Midilli"]
+    B7 --> LC2["Sanudo Hanesi (clan_empire_west_7)&lt;br/&gt;Naksos - Dük Marco Sanudo"]
+
+    B1 -.->|Culture.empire paylaşımı| B7
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    N1["Kingdom.empire_s&lt;br/&gt;(Native: Southern Empire)"] --> B1["🏛️ Byzantine Empire&lt;br/&gt;Emperor Romanos IV Diogenes"]
+    N2["Kingdom.aserai"] --> B2["🏛️ Abbasid Caliphate&lt;br/&gt;Caliph El-Kaim bi-Emrillah"]
+    N3["Kingdom.sturgia"] --> B3["🏛️ Kingdom of Georgia&lt;br/&gt;King David IV (Founder)"]
+    N4["Kingdom.vlandia"] --> B4["🏛️ Crusader States (Antioch)&lt;br/&gt;Bohemond of Taranto"]
+    N5["Kingdom.battania"] --> B5["🏛️ Armenian Principality of Cilicia&lt;br/&gt;Ruben I (Founder)"]
+    N6["Kingdom.khuzait"] --> B6["🏛️ Karakhanid State&lt;br/&gt;Şems el-Mülk Nasr"]
+    N7["Kingdom.empire_w&lt;br/&gt;(Native: Western Empire)"] --> B7["🏛️ Latin Empire of Constantinople&lt;br/&gt;Emperor Henri I of Flanders"]
+
+    B7 --> LC1["House of Flanders (clan_empire_west_2)&lt;br/&gt;Edirne + Amphipolis + Lesbos"]
+    B7 --> LC2["House of Sanudo (clan_empire_west_7)&lt;br/&gt;Naxos - Duke Marco Sanudo"]
+
+    B1 -.->|shared Culture.empire| B7
+    </pre>
+
+    <div class="lang-tr">
+      <p><strong>Erken oturumlarda yapılan toprak transferleri:</strong></p>
+      <ul>
+        <li>Caleus Kalesi + köyleri (castle_V6): Haçlı Devletleri → Kilikya Ermeni Prensliği (Lampron, Oshin'in gerçek koltuğu)</li>
+        <li>Amasya (+3 köy): Bizans → Selçuklu (Danişmendliler)</li>
+        <li>Dorylaeum/Eskişehir (+2 köy): Bizans → Selçuklu (Kayı Boyu)</li>
+        <li>Midilli (Lesbos): House Kontostephanos → Flandre Hanesi (settlement-level owner override)</li>
+      </ul>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>Territory transfers made in earlier sessions:</strong></p>
+      <ul>
+        <li>Caleus Castle + its villages (castle_V6): Crusader States → Armenian Principality of Cilicia (Lampron, Oshin's actual seat)</li>
+        <li>Amasya (+3 villages): Byzantium → Seljuk (Danişmendliler)</li>
+        <li>Dorylaeum/Eskişehir (+2 villages): Byzantium → Seljuk (Kayı Tribe)</li>
+        <li>Lesbos (Midilli): House Kontostephanos → House of Flanders (settlement-level owner override)</li>
+      </ul>
+    </div>
+
+    <div class="lang-tr">
+      <p><strong>Bu oturumda tamamlanan içerik (v1.6.1 sonrası, bu segment):</strong></p>
+      <ul>
+        <li><strong>126 köy/kale yeniden adlandırması</strong> — Haçlı Devletleri (41), Kilikya Ermenistanı (41), Karahanlı (44) krallıklarının şehir seviyesinde tamamlanmış ama köy/kale seviyesinde eksik kalan yeniden adlandırma çalışması bitirildi (Harim, Baghras, Samosata; Til Hamdoun, Korikos, Kızkalesi; Taşkent, Termez, Otrar gibi gerçek tarihi isimlerle), 8 dilde tam çeviri ile.</li>
+        <li><strong>Anna Diogenissa (lord_1_37)</strong> — Native'in "Ira"sı, artık erkek olan Romanos Diogenes'in (lord_1_14) kızı temasına uygun olarak yeniden adlandırıldı; eski "Rhagaea'nın kızı" çerçevesi sadece bir dev-yorumdaydı (oyun içi hiç görünmüyordu), ama isim uyumsuzluğu giderildi.</li>
+        <li><strong>Atabeglik XP kapsam düzeltmesi</strong> — <code>SeljukAtabegTitleBehavior</code> artık sadece gerçekten Selçuklu'ya ait bir yerleşimi yöneten Selçuklu klanı kahramanlarına günlük XP veriyor.</li>
+      </ul>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>Content completed this session (post-v1.6.1, this segment):</strong></p>
+      <ul>
+        <li><strong>126 village/castle renamings</strong> — completed the renaming work for the Crusader States (41), Cilician Armenia (41), and Karakhanid (44) kingdoms, which had been finished at the town level but left incomplete at the village/castle level (using real historical names like Harim, Baghras, Samosata; Til Hamdoun, Korikos, Kızkalesi; Tashkent, Termez, Otrar), with full translation into 8 languages.</li>
+        <li><strong>Anna Diogenissa (lord_1_37)</strong> — Native's "Ira" was renamed to fit the theme of being the daughter of Romanos Diogenes (lord_1_14), who is now male; the old "daughter of Rhagaea" framing existed only as a dev comment (it never appeared in-game), but the name mismatch has been fixed.</li>
+        <li><strong>Atabeg XP scope fix</strong> — <code>SeljukAtabegTitleBehavior</code> now only grants daily XP to Seljuk clan heroes who actually govern a settlement belonging to the Seljuks.</li>
+      </ul>
+    </div>
+
+    <div class="lang-tr">
+      <p><strong>Latin İmparatorluğu'nun kendine özgü 21 birimli asker ağacı</strong> (<code>latin_empire_custom_troops.xml</code>, Culture.empire, 6 kademe): Latin Levy → 4 dal (Frenk Piyadesi/Cenevizli Arbaletçi/Ulah Atlısı/Silahtar) → ... → Gasmoulos Muhafızı (piyade), Seçkin Cenevizli Arbaletçi (menzilli), Rumeli Baronu (ağır süvari) - Haçlı Devletleri'nin kendi ağacından tamamen farklı silah/zırh/at seçimleriyle. Diğer 6 rakip krallığın her birinin de kendi 21 birimlik özel ağacı var (7 x 21 = 147 rakip birim toplam).</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>The Latin Empire's own dedicated 21-unit troop tree</strong> (<code>latin_empire_custom_troops.xml</code>, Culture.empire, 6 tiers): Latin Levy → 4 branches (Frankish Infantry / Genoese Crossbowman / Vlach Horseman / Man-at-Arms) → ... → Gasmoulos Guard (infantry), Elite Genoese Crossbowman (ranged), Baron of Rumelia (heavy cavalry) — with weapon/armor/horse choices completely distinct from the Crusader States' own tree. Each of the other 6 rival kingdoms also has its own 21-unit custom tree (7 x 21 = 147 rival units total).</p>
+    </div>
+
+    <div class="lang-tr">
+      <p><strong>C# alt sistemleri (erken oturumlarda eklendi):</strong></p>
+      <ul>
+        <li><code>LatinEmpireRecruitmentBehavior</code> - empire_w/empire_s'in paylaştığı Culture.empire nedeniyle Latin İmparatorluğu yerleşkelerinin varsayılan Bizans askeri yerine kendi lat2_ ağacını sunmasını sağlar (bkz. <code>SeljukRecruitmentBehavior</code> ile aynı desen).</li>
+        <li><code>NewKingdomsDialogueBehavior</code> - Haçlı (7), Ermeni (7), Karahanlı (9), Latin İmparatorluğu (2) ve Bizans Batı (7) olmak üzere 32 tarihi lorda özel, gerçek tarihe dayalı 70 satırlık diyalog ekler (3 varyantlı tekrar-önleme mekanizması <code>SeljukDialogueBehavior</code> ile aynı).</li>
+      </ul>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>C# subsystems (added in earlier sessions):</strong></p>
+      <ul>
+        <li><code>LatinEmpireRecruitmentBehavior</code> - because empire_w/empire_s share Culture.empire, this makes Latin Empire settlements offer their own lat2_ tree instead of the default Byzantine recruits (see the same pattern as <code>SeljukRecruitmentBehavior</code>).</li>
+        <li><code>NewKingdomsDialogueBehavior</code> - adds 70 lines of dialogue grounded in real history, custom to 32 historical lords: Crusader (7), Armenian (7), Karakhanid (9), Latin Empire (2), and Byzantine West (7) (same 3-variant repeat-prevention mechanism as <code>SeljukDialogueBehavior</code>).</li>
+      </ul>
+    </div>
   </section>
 
   <section id="section-9">
     <h2 class="lang-tr">9. Meyhane Companion'ları — 25 Yoldaş (14 Tarihi + 11 Jenerik Selçuklu)</h2>
     <h2 class="lang-en" hidden>9. Tavern Companions — 25 Companions (14 Historical + 11 Generic Seljuk)</h2>
+
+    <div class="lang-tr">
+      <p>Mod artık toplam <strong>25 meyhane companion'ı</strong> taşıyor: 7 rakip kültürün her birine gerçek 11./12. yüzyıl kişileriyle işlenmiş 2'şer companion (<code>rival_culture_companions.xml</code>, toplam 14) ve Selçuklu'nun kendi 11 jenerik gezgin arketipi (<code>seljuk_special_characters.xml</code>, bölüm 9b). Her ikisi de Native'in beklediği tüm <code>GameText</code> tanışma-diyaloğu içeriğiyle 8 dilde tam donanımlı.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>The mod now carries a total of <strong>25 tavern companions</strong>: 2 companions apiece for each of the 7 rival cultures, crafted around real 11th/12th-century historical figures (<code>rival_culture_companions.xml</code>, 14 total), plus the Seljuks' own 11 generic wanderer archetypes (<code>seljuk_special_characters.xml</code>, section 9b). Both sets are fully equipped, in all 8 languages, with all the <code>GameText</code> introduction-dialogue content Native expects.</p>
+    </div>
+
+    <h3 id="section-9a"><span class="lang-tr">9a. Gerçek Tarihi Yoldaşlar (rival_culture_companions.xml)</span><span class="lang-en" hidden>9a. Real Historical Companions (rival_culture_companions.xml)</span></h3>
+
+    <div class="lang-tr">
+      <p>7 rakip kültürün her birine, Native'in jenerik <code>{FIRSTNAME} the X</code> şablonları yerine, <strong>gerçek 11./12. yüzyıl kişileriyle</strong> işlenmiş 2'şer companion eklendi (toplam 14) — beceri ve kişilik özellikleri her birinin belgelenmiş gerçek hikâyesine göre ayarlandı.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>Instead of Native's generic <code>{FIRSTNAME} the X</code> templates, each of the 7 rival cultures received 2 companions apiece (14 total), crafted around <strong>real 11th/12th-century figures</strong> — skills and personality traits tuned to each one's documented real-life story.</p>
+    </div>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    RCC["rival_culture_companions.xml&lt;br/&gt;(14 companion, is_template=true)"] --> SEL["Selçuklu"]
+    RCC --> BYZ2["Bizans"]
+    RCC --> ABB2["Abbasi"]
+    RCC --> GEO2["Gürcistan"]
+    RCC --> CRUS2["Haçlı Devletleri"]
+    RCC --> ARM2["Kilikya Ermenistanı"]
+    RCC --> KRKH2["Karahanlı"]
+
+    SEL --> S1["Nasir Khusraw&lt;br/&gt;(gezgin-şair → Scouting/Roguery)"]
+    SEL --> S2["Ömer Hayyam&lt;br/&gt;(müneccim-matematikçi → Engineering)"]
+    BYZ2 --> B1_["Michael Psellos&lt;br/&gt;(saray filozofu → Roguery/Charm)"]
+    BYZ2 --> B2_["Roussel de Bailleul&lt;br/&gt;(Norman paralı asker → ağır süvari)"]
+    ABB2 --> A1["Gazali&lt;br/&gt;(teolog-zahit → Steward/Charm)"]
+    ABB2 --> A2["Usame bin Münkız&lt;br/&gt;(savaşçı-şair → OneHanded/Bow)"]
+    GEO2 --> G1["İoane Petritsi&lt;br/&gt;(filozof-keşiş → Steward/Medicine)"]
+    GEO2 --> G2["Svanetili Vardan&lt;br/&gt;(asi dağ beyi → Athletics/Bow)"]
+    CRUS2 --> C1["Keşiş Piyer&lt;br/&gt;(vaiz → Charm/Roguery)"]
+    CRUS2 --> C2["Bartholomeuslu Petrus&lt;br/&gt;(hacı-vizyoner → Charm/Medicine)"]
+    ARM2 --> AR1["Urfalı Mateos&lt;br/&gt;(tarihçi-keşiş → Steward/Scouting)"]
+    ARM2 --> AR2["Mıhitar Heratsi&lt;br/&gt;(hekim → Medicine 90)"]
+    KRKH2 --> K1["Kaşgarlı Mahmud&lt;br/&gt;(dilbilimci-gezgin → Scouting/Steward)"]
+    KRKH2 --> K2["Ahmed Yesevi&lt;br/&gt;(mutasavvıf → Charm/Steward)"]
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    RCC["rival_culture_companions.xml&lt;br/&gt;(14 companions, is_template=true)"] --> SEL["Seljuk"]
+    RCC --> BYZ2["Byzantine"]
+    RCC --> ABB2["Abbasid"]
+    RCC --> GEO2["Georgian"]
+    RCC --> CRUS2["Crusader States"]
+    RCC --> ARM2["Cilician Armenia"]
+    RCC --> KRKH2["Karakhanid"]
+
+    SEL --> S1["Nasir Khusraw&lt;br/&gt;(wandering poet → Scouting/Roguery)"]
+    SEL --> S2["Omar Khayyam&lt;br/&gt;(astronomer-mathematician → Engineering)"]
+    BYZ2 --> B1_["Michael Psellos&lt;br/&gt;(court philosopher → Roguery/Charm)"]
+    BYZ2 --> B2_["Roussel de Bailleul&lt;br/&gt;(Norman mercenary → heavy cavalry)"]
+    ABB2 --> A1["Al-Ghazali&lt;br/&gt;(theologian-ascetic → Steward/Charm)"]
+    ABB2 --> A2["Usama ibn Munqidh&lt;br/&gt;(warrior-poet → OneHanded/Bow)"]
+    GEO2 --> G1["Ioane Petritsi&lt;br/&gt;(philosopher-monk → Steward/Medicine)"]
+    GEO2 --> G2["Vardan of Svaneti&lt;br/&gt;(rebel mountain lord → Athletics/Bow)"]
+    CRUS2 --> C1["Peter the Hermit&lt;br/&gt;(preacher → Charm/Roguery)"]
+    CRUS2 --> C2["Peter Bartholomew&lt;br/&gt;(pilgrim-visionary → Charm/Medicine)"]
+    ARM2 --> AR1["Matthew of Edessa&lt;br/&gt;(historian-monk → Steward/Scouting)"]
+    ARM2 --> AR2["Mkhitar Heratsi&lt;br/&gt;(physician → Medicine 90)"]
+    KRKH2 --> K1["Mahmud al-Kashgari&lt;br/&gt;(linguist-traveler → Scouting/Steward)"]
+    KRKH2 --> K2["Ahmad Yasawi&lt;br/&gt;(Sufi mystic → Charm/Steward)"]
+    </pre>
+
+    <div class="lang-tr">
+      <p><strong>Motor doğrulaması (decompile ile teyit edildi):</strong> <code>TaleWorlds.CampaignSystem.CampaignBehaviors.CompanionsCampaignBehavior.InitializeCompanionTemplateList</code> sadece <code>is_template="true" &amp;&amp; Occupation.Wanderer</code> olan <code>CharacterObject</code>'leri tarıyor — sabit <code>is_hero="true"</code> bir tanım hiçbir meyhanede hiç doğmazdı (sessiz, hatasız bir bütünleşme boşluğu olurdu). <code>_aliveCompanionTemplates</code> bir <code>HashSet</code> olduğundan her şablondan aynı anda sadece 1 canlı örnek var — yani her biri gerçekten "tek" bir karakter gibi davranıyor. <code>culture=</code> sadece doğum/görünüm şablonunu belirliyor; Native'in kendi companion dağıtım mantığı kültür gözetmeksizin rastgele şehirlere yerleştiriyor, yani herhangi biri herhangi bir krallığın meyhanesinde çıkabilir (Native'in kendi roster'ı için de böyle — hata değil). Doğuş yaşı da XML'deki <code>age=</code> değil, <code>AgeModel.HeroComesOfAge (18) + 5 + rastgele(0-11)</code> formülüyle 23-34 arası atanıyor, yani hiçbiri asla çocuk olamıyor.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>Engine verification (confirmed via decompile):</strong> <code>TaleWorlds.CampaignSystem.CampaignBehaviors.CompanionsCampaignBehavior.InitializeCompanionTemplateList</code> only scans <code>CharacterObject</code>s with <code>is_template="true" &amp;&amp; Occupation.Wanderer</code> — a fixed <code>is_hero="true"</code> definition would never spawn in any tavern at all (a silent, error-free integration gap). Since <code>_aliveCompanionTemplates</code> is a <code>HashSet</code>, only 1 live instance of each template can exist at a time — so each one genuinely behaves like a "unique" character. <code>culture=</code> only determines the birth/appearance template; Native's own companion-distribution logic places them in random towns without regard to culture, meaning any one of them can turn up in any kingdom's tavern (this is also how Native's own roster works — not a bug). Spawn age likewise isn't the <code>age=</code> from the XML but is assigned in the range 23-34 by the formula <code>AgeModel.HeroComesOfAge (18) + 5 + random(0-11)</code>, so none of them can ever be a child.</p>
+    </div>
+
+    <div class="lang-tr">
+      <p><strong>v1.7.4 düzeltmesi — ilk tanışma diyaloğu hatası:</strong> Yukarıdaki tanımlar sadece isim/skill/Traits/Equipments/face içeriyordu; Native'in her wanderer için ayrıca beklediği 8 <code>GameText</code> kategorisi (<code>prebackstory</code>, <code>backstory_a/b/c/d</code>, <code>response_1/2</code>, <code>generic_backstory</code> — <code>&lt;kategori&gt;.&lt;companion_id&gt;</code> anahtarıyla) hiç tanımlanmamıştı, bu yüzden bir companion'la ilk konuşulduğunda ekranda doğrudan <code>"ERROR: Text with id prebackstory doesn't exist! Variation: spc_wanderer_..."</code> görünüyordu (bkz. bölüm 10, v1.6.7'deki aynı <code>GameTextManager</code> mekanizması). <code>rival_culture_companion_backstories.xml</code> dosyasında 112 giriş (14 companion × 8 kategori) eklendi — her biri o companion'ın gerçek belgelenmiş hikâyesine dayalı, Native'in kendi anlatı yapısıyla (giriş/gelişme/dönüm noktası/çözüm + 2 zıt oyuncu yanıtı + kapanış) birebir uyumlu, 8 dilin hepsinde tam çeviriyle.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>v1.7.4 fix — the first introduction-dialogue bug:</strong> The definitions above only contained name/skill/Traits/Equipments/face content; the 8 <code>GameText</code> categories Native additionally expects for every wanderer (<code>prebackstory</code>, <code>backstory_a/b/c/d</code>, <code>response_1/2</code>, <code>generic_backstory</code> — keyed as <code>&lt;category&gt;.&lt;companion_id&gt;</code>) had never been defined at all, so the first time a player talked to a companion, the screen showed the literal text <code>"ERROR: Text with id prebackstory doesn't exist! Variation: spc_wanderer_..."</code> (see section 10, the same <code>GameTextManager</code> mechanism as v1.6.7). 112 entries (14 companions × 8 categories) were added in <code>rival_culture_companion_backstories.xml</code> — each grounded in that companion's real documented story, matching Native's own narrative structure one-to-one (opening/development/turning point/resolution + 2 opposed player responses + closing), with full translation into all 8 languages.</p>
+    </div>
+
+    <h3 id="section-9b"><span class="lang-tr">9b. Selçuklu'nun 11 Jenerik Gezgin Arketipi (seljuk_special_characters.xml)</span><span class="lang-en" hidden>9b. The Seljuks' 11 Generic Wanderer Archetypes (seljuk_special_characters.xml)</span></h3>
+
+    <div class="lang-tr">
+      <p><code>seljuk_special_characters.xml</code> içinde <code>spc_wanderer_seljuk_0</code>…<code>_10</code> id'leriyle tanımlı 11 generic wanderer, Native'in <code>spc_wanderer_khuzait_0</code>…<code>_10</code> arketiplerinin (bkz. Native'in kendi <code>SkillSet.spc_wanderer_khuzait_N_skills</code> yorum satırları) Selçuklu/Türkmen-Bizans sınır boyu temasına uyarlanmış karşılıkları: "Bilge" (bozkır alimi), "Şahin" (atlı okçu), "Babasız" (yetim serseri), "Demirgöz" (nişancı), "Dışlanmış" (sürgün savaşçı), "Deli" (berserker), "Boz Şahin" (veteran atlı okçu), "Dişi Kurt" (kadın savaşçı), "Yalnız" (tek başına hayatta kalan), "Çevik" (haberci-öncü), "Perişan" (yoksul hayatta kalan).</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>The 11 generic wanderers defined in <code>seljuk_special_characters.xml</code> under the ids <code>spc_wanderer_seljuk_0</code>…<code>_10</code> are counterparts to Native's <code>spc_wanderer_khuzait_0</code>…<code>_10</code> archetypes (see Native's own <code>SkillSet.spc_wanderer_khuzait_N_skills</code> comment lines), adapted to the Seljuk/Turkmen-Byzantine borderland theme: "Bilge" (the Wise, steppe scholar), "Şahin" (the Falcon, horse archer), "Babasız" (the Fatherless, orphaned vagrant), "Demirgöz" (Iron-Eye, marksman), "Dışlanmış" (the Outcast, exiled warrior), "Deli" (the Mad, berserker), "Boz Şahin" (the Grey Falcon, veteran horse archer), "Dişi Kurt" (the She-Wolf, woman warrior), "Yalnız" (the Solitary, lone survivor), "Çevik" (the Swift, messenger-scout), "Perişan" (the Wretched, destitute survivor).</p>
+    </div>
+
+    <pre class="mermaid lang-tr">
+graph TD
+    SSC["seljuk_special_characters.xml&lt;br/&gt;(11 generic wanderer, spc_wanderer_seljuk_0..10)"] --> W0["0: Bilge — bozkır alimi"]
+    SSC --> W1["1: Şahin — atlı okçu"]
+    SSC --> W2["2: Babasız — yetim serseri"]
+    SSC --> W3["3: Demirgöz — nişancı"]
+    SSC --> W4["4: Dışlanmış — sürgün savaşçı"]
+    SSC --> W5["5: Deli — berserker"]
+    SSC --> W6["6: Boz Şahin — veteran atlı okçu"]
+    SSC --> W7["7: Dişi Kurt — kadın savaşçı"]
+    SSC --> W8["8: Yalnız — tek başına hayatta kalan"]
+    SSC --> W9["9: Çevik — haberci-öncü"]
+    SSC --> W10["10: Perişan — yoksul hayatta kalan"]
+    </pre>
+    <pre class="mermaid lang-en" hidden>
+graph TD
+    SSC["seljuk_special_characters.xml&lt;br/&gt;(11 generic wanderers, spc_wanderer_seljuk_0..10)"] --> W0["0: Bilge — the Wise, steppe scholar"]
+    SSC --> W1["1: Şahin — the Falcon, horse archer"]
+    SSC --> W2["2: Babasız — the Fatherless, orphaned vagrant"]
+    SSC --> W3["3: Demirgöz — Iron-Eye, marksman"]
+    SSC --> W4["4: Dışlanmış — the Outcast, exiled warrior"]
+    SSC --> W5["5: Deli — the Mad, berserker"]
+    SSC --> W6["6: Boz Şahin — the Grey Falcon, veteran horse archer"]
+    SSC --> W7["7: Dişi Kurt — the She-Wolf, woman warrior"]
+    SSC --> W8["8: Yalnız — the Solitary, lone survivor"]
+    SSC --> W9["9: Çevik — the Swift, messenger-scout"]
+    SSC --> W10["10: Perişan — the Wretched, destitute survivor"]
+    </pre>
+
+    <div class="lang-tr">
+      <p><strong>v1.7.6 düzeltmesi — ikinci, ayrı bir GameText hatası:</strong> v1.7.4'te 14 tarihi companion'ın <code>GameText</code> eksikliği giderildikten sonra oyuncu, farklı iki karakterin ("Nafisa the Swift" / <code>spc_wanderer_seljuk_9</code> ve "Al-Ghazali" / <code>spc_wanderer_aserai_ghazali</code>) tanışma diyaloğunda hâlâ aynı <code>"ERROR: Text with id..."</code> metnini gösteren ekran görüntüleri paylaştı. İlk fix'in gerçekten doğru çalıştığı özel bir C# test harness'iyle (<code>gtsim</code> — <code>GameTextManager.LoadFromXML</code>'i reflection ile çağırıp kategori/companion-id kombinasyonlarını tüketen bir dotnet konsol projesi) kanıtlandıktan sonra, bunun <strong>ayrı, ikinci bir eksiklik</strong> olduğu anlaşıldı: bu 11 jenerik gezgin, 14 tarihi companion'ın aksine hiç <code>GameText</code> içeriği almamıştı. Yeni <code>seljuk_special_characters_backstories.xml</code> dosyasında 88 giriş (11 × 8 kategori, <code>spc_wc2_&lt;N&gt;_&lt;kategori&gt;</code> anahtar deseniyle) eklendi — içerik Native'in <code>wanderer_strings.xml</code>'indeki khuzait_0-10 arketiplerinden kopyalanmadan, Selçuklu/Türkmen-Bizans sınır boyu temasına özgün olarak uyarlandı. v1.7.6'da sadece İngilizce/Türkçe eklendi; <strong>v1.7.8'de</strong> kalan 6 dil (Almanca/Fransızca/İspanyolca/Rusça/Arapça/Çince) tamamlanarak 792 giriş (99 anahtar × 8 dil) tam senkron hale getirildi — bu, <code>verify_mod.py</code>'nin bu oturumda ilk kez 0 hata <strong>VE</strong> 0 uyarıyla geçtiği andı.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p><strong>v1.7.6 fix — a second, separate GameText bug:</strong> After the <code>GameText</code> gap for the 14 historical companions was fixed in v1.7.4, a player still shared screenshots showing the same <code>"ERROR: Text with id..."</code> text in the introduction dialogue of two different characters ("Nafisa the Swift" / <code>spc_wanderer_seljuk_9</code> and "Al-Ghazali" / <code>spc_wanderer_aserai_ghazali</code>). After proving with a dedicated C# test harness (<code>gtsim</code> — a dotnet console project that calls <code>GameTextManager.LoadFromXML</code> via reflection and exhausts every category/companion-id combination) that the first fix really was working correctly, it turned out to be a <strong>separate, second gap</strong>: unlike the 14 historical companions, these 11 generic wanderers had never received any <code>GameText</code> content at all. 88 entries (11 × 8 categories, keyed with the pattern <code>spc_wc2_&lt;N&gt;_&lt;category&gt;</code>) were added in the new <code>seljuk_special_characters_backstories.xml</code> — the content was not copied from the khuzait_0-10 archetypes in Native's <code>wanderer_strings.xml</code>, but adapted natively to the Seljuk/Turkmen-Byzantine borderland theme. Only English/Turkish were added in v1.7.6; <strong>in v1.7.8</strong> the remaining 6 languages (German/French/Spanish/Russian/Arabic/Chinese) were completed, bringing all 792 entries (99 keys × 8 languages) into full sync — this was the first time in this session that <code>verify_mod.py</code> passed with 0 errors <strong>AND</strong> 0 warnings.</p>
+    </div>
+
+    <h3 id="section-9c"><span class="lang-tr">9c. Otomatik Bütünlük Denetleyicisi (tools/verify_mod.py)</span><span class="lang-en" hidden>9c. Automated Integrity Checker (tools/verify_mod.py)</span></h3>
+
+    <div class="lang-tr">
+      <p>Mod artık kendi 19 kontrollü, ~1550 satırlık Python doğrulama aracını taşıyor — her yayından önce çalıştırılan bir CI-tarzı güvenlik ağı. v1.7.5-v1.7.7 arasında bu oturumda bulunan iki gerçek regresyon sınıfını bir daha asla sessizce göndermemek için 2 yeni kontrol eklendi:</p>
+      <ul>
+        <li><strong>Check 14 — <code>wanderer-backstory-coverage</code> (ERROR):</strong> <code>SubModule.xml</code>'deki tüm <code>id="GameText"</code> <code>XmlNode</code> yollarını tarar, her wanderer şablonu (<code>Hero.Template.StringId</code>) için 8 zorunlu kategoriyi (<code>prebackstory</code>, <code>backstory_a/b/c/d</code>, <code>response_1/2</code>, <code>generic_backstory</code>) kontrol eder — v1.7.4 ve v1.7.6'da bulunan iki <code>GameText</code> boşluğu sınıfını hedefler.</li>
+        <li><strong>Check 15 — <code>culture-still-native</code> (ERROR + koşullu WARN):</strong> Her 8 kültürün <code>basic_troop</code>, <code>caravan_guard</code>, <code>militia_party_template</code>, <code>rebels_party_template</code>, <code>settlement_patrol_template_level_1/2/3</code>, <code>vassal_reward_party_template</code> gibi attribute'larının hâlâ Native id'lerine işaret edip etmediğini denetler (ERROR); ayrıca Native'in gerçekten aynı kültür id'siyle <code>&lt;basic_mercenary_troops&gt;</code> tanımladığı kültürlerde (<code>load_native_cultures_with_basic_mercenary_troops</code>) <code>_replaceWhileMerging="true"</code> eksikse WARN üretir — bu ayrım, Seljuk gibi Native karşılığı olmayan kültürlerde yanlış pozitif üretmemek için özellikle eklendi (bkz. bölüm 10, v1.7.7).</li>
+        <li><strong>Check 16 — <code>item-mesh-validity</code> (ERROR, v1.8.2):</strong> Modun kendi tanımladığı her <code>&lt;Item&gt;</code>'ın <code>mesh=</code> değerinin, Native'in gerçekten kullandığı bir mesh'e karşılık geldiğini denetler. Mod hiç kendi 3B varlığı taşımıyor (<code>AssetPackages/</code> klasörü yok) — her eşya, <code>seljuk_royal_feather_helm</code>'in <code>khuzait_lord_helmet_a</code>'yı yeniden kullanması gibi, bilinçli olarak Native'in mevcut bir mesh'ini yeniden kullanıyor; bu yüzden listede olmayan bir <code>mesh=</code> neredeyse kesin bir yazım hatasıdır (oyunda görünmeyen/varsayılan geometri olarak render edilir, yükleme hatası vermez).</li>
+        <li><strong>Check 17 — <code>dialogue-hero-ids</code> (ERROR, v1.8.2):</strong> <code>Source/**/*.cs</code>'deki her <code>Hero.OneToOneConversationHero.StringId == "X"</code> koşulunu (bir özel diyalog satırının HANGİ karaktere ait olduğunu belirleyen mekanizma) tarar ve <code>X</code>'in gerçek bir Native veya mod-tanımlı karakter id'sine karşılık geldiğini doğrular. Yazım hatası burada hiç hata mesajı vermez — koşul sessizce hep yanlış olur, o karakter özel satırını asla göstermez ve fark edilmeden Native'in jenerik selamlamasına düşer. Aynı 3 dosyanın (bölüm 10, v1.8.2) <code>"lord_pretalk"</code> hatası denetlenirken bulundu; test sırasında 2 zararsız ama artık gereksiz OR-yedek id kontrolü de temizlendi (<code>ertugrul_gazi</code>/<code>lord_seljuk_nizamulmulk</code> zaten doğruydu, ikinci alternatif hiç gerçek değildi).</li>
+        <li><strong>Check 18 — <code>banner-icon-usage</code> (ERROR oyun kurulumu gerektirir, WARN koşulsuz çalışır, v1.8.3):</strong> <code>TaleWorlds.Core.Banner.TryGetBannerDataFromCode</code> decompile edilip <code>banner_key</code>/<code>faction_banner_key</code>'in tam tel formatı (10'luk bloklar, her bloğun ilk alanı icon id) doğrulandı. (ERROR, yalnızca oyun kurulumu bulunduğunda çalışır) modun kendi <code>&lt;Icon id="X"&gt;</code>'i Native'in banner_icons.xml'inde zaten kullanılan bir id ile çakışamaz — bu tam çakışma sınıfı New Campaign ekranını daha önce gerçekten dondurmuş/çökertmişti (banner_icons.xml'in kendi başlık yorumuna bakın). (WARN, oyun kurulumu olsun olmasın her zaman çalışır) her özel icon en az bir banner_key/faction_banner_key'de kullanılmalı, yoksa <code>KNOWN_SPARE_BANNER_ICON_IDS</code>'te bilinçli yedek olarak belgelenmeli. İlk çalıştırmada 13 özel Selçuklu/Türk tamgasının <strong>hiçbirinin</strong> hiçbir klan/Kingdom/Culture'ın gerçek bayrağında kullanılmadığı bulundu — hepsi motora kayıtlıydı (bayrak düzenleyicide seçilebilir) ama hiçbiri varsayılan olarak gösterilmiyordu. 11'i artık ilgili klana atandı (6'sı isim eşleşmesiyle bire bir: Kayı Boyu/Çaka Beyliği/Saltuklular/Mengücekliler/Ahi Evran Ocağı/Âl-i Selçuk, kalan 5'i temaya göre); 2'si (Kızıl/Gök Sancak) bilinçli olarak serbest bayrak editörü seçeneği olarak kaldı.</li>
+        <li><strong>Check 19 — <code>settlement-culture-kingdom</code> (ERROR + koşullu WARN, v1.8.4):</strong> Modun kendi <code>&lt;Settlement owner="Faction.clan_X"&gt;</code> atadığı her yerleşke için — <code>clan_X</code>'in kendisi de bu modun <code>culture=</code> atadığı bir klan olduğunda (pratikte: sadece 11 Selçuklu klanı; rakip krallık klanları bu attribute'u hiç set etmiyor, Native'in zaten kendi içinde tutarlı siyasi haritasını olduğu gibi devralıyorlar) — iki katmanlı doğrulama: (ERROR, oyun kurulumu gerekmez) aynı <code>&lt;Settlement&gt;</code> elemanı kendi <code>culture=</code>'unu da set ediyorsa ve bu, sahibi klanın kültürüyle uyuşmuyorsa (tek dosya içi yazım hatası); (ERROR, oyun kurulumu gerekir) bu elemanda hiç <code>culture=</code> override'ı yoksa, Native'in aynı id için orijinal kültürünü (<code>SandBox/ModuleData/settlements.xml</code>) sahibi klanın kültürüyle karşılaştırır — farklıysa, yerleşke sahiplik değişse de oyunda hâlâ Native'in eski kültürünü gösterir demektir (tam olarak "Danustica" → "Konya" durumu: <code>clan_seljuk_royal</code>'a devredilirken <code>culture=</code> Native'in miras <code>Culture.empire</code>'ından <code>Culture.seljuk</code>'a bilinçli çevrilmediyse, Selçuklu başkenti Bizans figüranlarıyla görünürdü). Oyun kurulumu bulunamazsa check 4/9'daki gibi WARN'a düşer. Köyler kapsam dışı — bu modun override'larının hiçbiri bir <code>&lt;Village&gt;</code>'a <code>owner=</code> set etmiyor (o sahiplik Native'in kendi iç içe <code>&lt;Village bound="..."&gt;</code> elemanı üzerinden zımni).</li>
+      </ul>
+      <p><strong>Yanlış alarm düzeltmeleri (bu oturumda, "fix" değil "düzelt" — gerçek bulgular):</strong> İki önceki-tur iddiası, gerçek motor decompile'ı ile yeniden doğrulanınca <strong>yanlış</strong> çıktı: (1) turnuva katılımcı şablonları (<code>tournament_team_templates_one/two/four_participant</code>) — 6/7 rakip kültür Native'in taban kültür id'sini paylaştığından, Native'in kendi kültüre-özel turnuva karakterleri zaten doğru miras yoluyla çözülüyor; (2) <code>BattlePerformanceOptimizer</code>'ın kuşatmaları kapsamadığı iddiası — <code>MissionMode</code> enum'unda ayrı bir Siege değeri yok, kuşatma hücumları da <code>MissionMode.Battle</code>. Her ikisi de gereksiz "düzeltme" içeriği üretmek yerine kullanıcıya açıkça düzeltildi.</p>
+      <p><strong>v1.8.2'de prototiplenip geri çekilen bir kontrol:</strong> Check 12'nin (skill puanı) silah karşılığı olarak bir "silah gücü paritesi" kontrolü (<code>Item0</code>/<code>Item1</code>'in <code>thrust_damage</code>+<code>swing_damage</code> toplamını tier medyanıyla karşılaştıran) gerçek mod verisiyle test edildi. Skill puanlarının aksine (Native'in kendi tier eğrisi zaten normalize ediyor), ham silah hasarı aynı tier'deki farklı silah TÜRLERİ arasında doğal olarak karşılaştırılabilir değil (bir arbalet, Bannerlord'un kendi tasarımı gereği bir kılıçtan çok daha sert vurur, bu ateş hızıyla dengelenir, modun hatası değil) — gerçek mod verisiyle çalıştırılınca 43 uyarı üretti ve bunların büyük çoğunluğu bu doğal varyanstan kaynaklanıyordu, gerçek yazım hatası değil. Bu, aracın diğer tüm uyarılarına duyulan güveni zedeleyecek gürültü olurdu, bu yüzden gönderilmeden geri çekildi — check 10-12 halihazırdaki sayısal denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS matematiği (isabet, <code>speed_rating</code>, <code>weapon_length</code>) gerektirir, gelecekteki bir fikir olarak not edildi, zorla eklenmedi.</p>
+    </div>
+    <div class="lang-en" hidden>
+      <p>The mod now carries its own ~1550-line, 19-check Python verification tool — a CI-style safety net run before every release. To make sure two real regression classes found in this session between v1.7.5-v1.7.7 never ship silently again, 2 new checks were added:</p>
+      <ul>
+        <li><strong>Check 14 — <code>wanderer-backstory-coverage</code> (ERROR):</strong> Scans every <code>id="GameText"</code> <code>XmlNode</code> path in <code>SubModule.xml</code>, and checks each wanderer template (<code>Hero.Template.StringId</code>) for the 8 mandatory categories (<code>prebackstory</code>, <code>backstory_a/b/c/d</code>, <code>response_1/2</code>, <code>generic_backstory</code>) — targets the two <code>GameText</code> gap classes found in v1.7.4 and v1.7.6.</li>
+        <li><strong>Check 15 — <code>culture-still-native</code> (ERROR + conditional WARN):</strong> Checks whether each of the 8 cultures' attributes — <code>basic_troop</code>, <code>caravan_guard</code>, <code>militia_party_template</code>, <code>rebels_party_template</code>, <code>settlement_patrol_template_level_1/2/3</code>, <code>vassal_reward_party_template</code> — still point at Native ids (ERROR); also raises a WARN when a culture where Native genuinely defines <code>&lt;basic_mercenary_troops&gt;</code> under the same culture id (<code>load_native_cultures_with_basic_mercenary_troops</code>) is missing <code>_replaceWhileMerging="true"</code> — this distinction was added specifically so cultures with no Native counterpart, like Seljuk, don't produce false positives (see section 10, v1.7.7).</li>
+        <li><strong>Check 16 — <code>item-mesh-validity</code> (ERROR, v1.8.2):</strong> Checks that the <code>mesh=</code> value of every <code>&lt;Item&gt;</code> the mod defines itself corresponds to a mesh Native actually uses. The mod carries no 3D assets of its own at all (no <code>AssetPackages/</code> folder) — every item deliberately reuses an existing Native mesh, the way <code>seljuk_royal_feather_helm</code> reuses <code>khuzait_lord_helmet_a</code>; so a <code>mesh=</code> value that isn't on the list is almost certainly a typo (it renders as invisible/default geometry in-game rather than throwing a load error).</li>
+        <li><strong>Check 17 — <code>dialogue-hero-ids</code> (ERROR, v1.8.2):</strong> Scans every <code>Hero.OneToOneConversationHero.StringId == "X"</code> condition in <code>Source/**/*.cs</code> (the mechanism that decides WHICH character a custom dialogue line belongs to) and verifies that <code>X</code> corresponds to a real Native or mod-defined character id. A typo here throws no error message at all — the condition just silently stays false forever, that character's custom line never shows, and the game unnoticeably falls back to Native's generic greeting. It was found while auditing the same 3 files (section 10, v1.8.2) for the <code>"lord_pretalk"</code> bug; during testing, 2 harmless but now-redundant OR-fallback id checks were also cleaned up (<code>ertugrul_gazi</code>/<code>lord_seljuk_nizamulmulk</code> were already correct — the second alternative was never real).</li>
+        <li><strong>Check 18 — <code>banner-icon-usage</code> (ERROR requires a game install; WARN always runs, v1.8.3):</strong> <code>TaleWorlds.Core.Banner.TryGetBannerDataFromCode</code> was decompiled and the exact wire format of <code>banner_key</code>/<code>faction_banner_key</code> was verified (10-field blocks, the first field of each block being the icon id). (ERROR, only runs when a game install is found) the mod's own <code>&lt;Icon id="X"&gt;</code> may not collide with an id Native's own banner_icons.xml already uses — this exact class of collision had actually frozen/crashed the New Campaign screen before (see this file's own header comment). (WARN, always runs regardless of a game install) every custom icon must be used in at least one banner_key/faction_banner_key, or else be documented as a deliberate spare in <code>KNOWN_SPARE_BANNER_ICON_IDS</code>. The first run found that <strong>none</strong> of the 13 custom Seljuk/Turkic tamgas were used in any clan's/Kingdom's/Culture's actual flag — all were registered with the engine (selectable in the banner editor) but none were shown by default. 11 of them are now assigned to their matching clan (6 by an exact name match: Kayı Tribe / Çaka Beyliği / Saltuklular / Mengücekliler / Ahi Evran Ocağı / Âl-i Selçuk, the remaining 5 by theme); 2 (Red/Sky-Blue Banner) deliberately remain a free banner-editor option.</li>
+        <li><strong>Check 19 — <code>settlement-culture-kingdom</code> (ERROR + conditional WARN, v1.8.4):</strong> For every settlement the mod itself assigns via <code>&lt;Settlement owner="Faction.clan_X"&gt;</code> — where <code>clan_X</code> is itself a clan this mod assigns a <code>culture=</code> to (in practice: only the 11 Seljuk clans; rival kingdom clans never set this attribute, they simply inherit Native's already-internally-consistent political map as-is) — a two-layer check: (ERROR, no game install needed) if that same <code>&lt;Settlement&gt;</code> element also sets its own <code>culture=</code> and it doesn't match the owning clan's culture (a same-file typo); (ERROR, needs a game install) if that element has no <code>culture=</code> override at all, it compares Native's original culture for the same id (<code>SandBox/ModuleData/settlements.xml</code>) against the owning clan's culture — if they differ, it means the settlement's ownership changed but the game still shows Native's old culture (exactly the "Danustica" → "Konya" case: when handed to <code>clan_seljuk_royal</code>, if <code>culture=</code> wasn't deliberately converted from Native's inherited <code>Culture.empire</code> to <code>Culture.seljuk</code>, the Seljuk capital would show Byzantine extras). If no game install is found, it falls back to WARN the same way checks 4/9 do. Villages are out of scope — none of this mod's overrides set <code>owner=</code> on a <code>&lt;Village&gt;</code> (that ownership is implicit via Native's own nested <code>&lt;Village bound="..."&gt;</code> element).</li>
+      </ul>
+      <p><strong>False-alarm corrections (this session — "corrected," not "fixed": genuine findings):</strong> Two claims from an earlier round turned out to be <strong>false</strong> once re-verified against a real engine decompile: (1) the tournament participant templates (<code>tournament_team_templates_one/two/four_participant</code>) — since 6 of the 7 rival cultures share Native's base culture id, Native's own culture-specific tournament characters already resolve correctly through inheritance; (2) the claim that <code>BattlePerformanceOptimizer</code> doesn't cover sieges — the <code>MissionMode</code> enum has no separate Siege value, siege assaults also run as <code>MissionMode.Battle</code>. Both were explicitly corrected for the user rather than generating needless "fix" content.</p>
+      <p><strong>A check prototyped in v1.8.2 and then withdrawn:</strong> As a weapon-side counterpart to check 12 (skill points), a "weapon power parity" check (comparing the sum of <code>Item0</code>/<code>Item1</code>'s <code>thrust_damage</code>+<code>swing_damage</code> against the tier median) was tested against real mod data. Unlike skill points (which Native's own tier curve already normalizes), raw weapon damage isn't naturally comparable across different weapon TYPES within the same tier (a crossbow hits far harder than a sword by Bannerlord's own design, balanced by its rate of fire — not a mod bug) — run against real mod data it produced 43 warnings, and the large majority of them came from this natural variance, not genuine typos. That would have been noise that undermined trust in all of the tool's other warnings, so it was withdrawn before shipping — checks 10-12 remain as the existing numeric-balance signal; a genuine weapon-parity check would need full DPS math (hit chance, <code>speed_rating</code>, <code>weapon_length</code>), noted as a future idea, not forced in.</p>
+    </div>
   </section>
 
   <section id="section-10">
