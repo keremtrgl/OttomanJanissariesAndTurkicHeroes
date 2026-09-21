@@ -8,8 +8,8 @@ savaşları VE kuşatmalar), **Selçuklu Kervan Devlet Sigortası & İpek Yolu K
 8 krallığın (Selçuklu + 7 rakip), klan, lord, yerleşke, birlik ağaçları, her kültürün 8 farklı
 ordu/parti şablonu (lord başlangıç ordusu, han paralı askeri, kervan/yerleşke muhafızı, devriye ×
 3 kademe, kuşatma milisi, isyancı partisi, bağlılık yemini hediyesi), karakter yaratma özgeçmişleri,
-25 meyhane companion'ı (tam GameText özgeçmişleriyle, 8 dilde), 8 kültürün Ansiklopedi özgeçmiş
-metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 8 dil desteği ve modun kendi 19
+25 meyhane companion'ı (tam GameText özgeçmişleriyle, 11 dilde), 8 kültürün Ansiklopedi özgeçmiş
+metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 11 dil desteği ve modun kendi 19
 kontrollü otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri
 detaylandırmaktadır. **Güncel sürüm: v1.8.4.**
 
@@ -31,7 +31,7 @@ graph TD
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
     SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.8.2)"]
     SM --> XML_B["banner_icons.xml<br/>(13 Selçuklu Tamgası — 11'i artık her klanın/Kingdom'ın/<br/>Culture'ın gerçek banner_key'inde, v1.8.3)"]
-    SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN — 8 Dil Tam Senkron)"]
+    SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN/IT/PL/PT — 11 Dil Tam Senkron)"]
     SM -.denetler.-> VERIFY["tools/run_all_checks.py<br/>(verify_mod.py'nin 19 kontrolü + dotnet test'in<br/>43 taktik AI testi, tek komut, v1.8.4)"]
 
     CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM,<br/>artık reaktif faz yürütme)"]
@@ -201,7 +201,7 @@ graph LR
 
 Selçuklu dışındaki 6 kültürün (Bizans, Abbasi, Gürcistan, Haçlı Devletleri, Kilikya Ermenistanı,
 Karahanlı) her biri kendi 18 seçenekli (5 aile geçmişi + 4 çocukluk + 3 gençlik + 3 kariyer + 3
-kahramanlık) tam özgeçmiş zincirine sahip — toplam 108 seçenek, 8 dilde tam çeviri ile.
+kahramanlık) tam özgeçmiş zincirine sahip — toplam 108 seçenek, 11 dilde tam çeviri ile.
 
 ```mermaid
 graph TD
@@ -317,7 +317,7 @@ Silahtar) → ... → Gasmoulos Muhafızı (piyade), Seçkin Cenevizli Arbaletç
 Mod artık toplam **25 meyhane companion'ı** taşıyor: 7 rakip kültürün her birine gerçek 11./12.
 yüzyıl kişileriyle işlenmiş 2'şer companion (`rival_culture_companions.xml`, toplam 14) ve
 Selçuklu'nun kendi 11 jenerik gezgin arketipi (`seljuk_special_characters.xml`, bölüm 9b). Her
-ikisi de Native'in beklediği tüm `GameText` tanışma-diyaloğu içeriğiyle 8 dilde tam donanımlı.
+ikisi de Native'in beklediği tüm `GameText` tanışma-diyaloğu içeriğiyle 11 dilde tam donanımlı.
 
 ### 9a. Gerçek Tarihi Yoldaşlar (rival_culture_companions.xml)
 

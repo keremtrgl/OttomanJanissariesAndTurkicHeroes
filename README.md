@@ -54,7 +54,7 @@ to run only one suite.
 validity, that every content file is registered in `SubModule.xml`, that no id is defined
 twice across the mod's own files, that every `{=key}` used anywhere has a matching
 localization string in both `strings.xml` and `TR/strings.xml` (and, as a warning, in the
-mod's other 6 shipped languages — see "Keeping all 8 languages in sync" below), and — when a
+mod's other 9 shipped languages — see "Keeping all 11 languages in sync" below), and — when a
 local Bannerlord install is found (or passed via `--game-path`) — that every equipped item id
 and troop upgrade target actually exists, that renamed Native characters keep a consistent
 gender flag, and several other checks documented in its own module docstring. Run with
@@ -77,17 +77,18 @@ This points git at the tracked `.githooks/` directory (`git config core.hooksPat
 — `.git/hooks/` itself is never committed, so every clone needs this one-time step. To bypass
 deliberately for a single commit (not recommended), use `git commit --no-verify`.
 
-### Keeping all 8 languages in sync
+### Keeping all 11 languages in sync
 
-The mod ships full localization in 8 languages, but only `strings.xml` (EN) and
+The mod ships full localization in 11 languages, but only `strings.xml` (EN) and
 `TR/strings.xml` are treated as required — English is what an unset or mistranslated key
 falls back to at runtime, and Turkish is this mod's original authoring language, so those two
-fail the check with an ERROR. The other 6 (`DE`/`FR`/`ES`/`RU`/`AR`/`CN`) are checked too, but
-as a WARN, listing exactly which languages a newly-added `{=key}` hasn't reached yet — visible
-on every run instead of silently drifting for months, which is exactly how this mod once
-shipped with those 6 languages frozen at 228 of 892 keys while EN/TR kept growing untranslated
-underneath them. Translating a new key into all 6 languages in a follow-up commit is a normal
-workflow and this check will never block it; it only makes sure the gap can't go unnoticed.
+fail the check with an ERROR. The other 9 (`DE`/`FR`/`ES`/`RU`/`AR`/`CN`/`IT`/`PL`/`PT`) are
+checked too, but as a WARN, listing exactly which languages a newly-added `{=key}` hasn't
+reached yet — visible on every run instead of silently drifting for months, which is exactly
+how this mod once shipped with its original 6 secondary languages frozen at 228 of 892 keys
+while EN/TR kept growing untranslated underneath them. Translating a new key into all 9
+languages in a follow-up commit is a normal workflow and this check will never block it; it
+only makes sure the gap can't go unnoticed.
 
 ### Save compatibility (id order)
 

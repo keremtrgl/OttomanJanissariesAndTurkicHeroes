@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <base type="string">
   <tags>
-    <tag language="English" />
+    <tag language="Polski" />
   </tags>
   <strings>
     <string id="acemi_janissary_name" text="Janczar Acemi" />
@@ -134,7 +134,7 @@
     <string id="lord_mesud" text="Książę Mesud" />
     <string id="lord_nizamulmulk" text="Chodża Nizam al-Mulk" />
     <string id="lord_sokmen_bey" text="Sokmen al-Kutbi" />
-    <string id="lord_terken_hatun" text="Terken Hatun" />
+    <string id="lord_terken_hatun" text="Terken Khatun" />
     <string id="ottoman_akinji_name" text="Seldżucki Najeźdźca Akinji" />
     <string id="ottoman_scout_name" text="Seldżucka Kawaleria Zwiadowcza" />
     <string id="policy_ahi_desc" text="Cechy rzemieślnicze zostają uregulowane. Dochody warsztatów rosną o 25%, wzrastają opłaty karawanowe, a mieszczanie dołączają do obrony podczas oblężeń jako milicja." />
@@ -700,7 +700,7 @@
     <string id="abb_c_ukbara" text="Zamek Ukbara" />
     <string id="abb_v_dujayl" text="Dujayl" />
     <string id="abb_v_maskin" text="Maskin" />
-    <string id="abb_t_recruit" text="Abbasydzki Poborowy" />
+    <string id="abb_t_recruit" text="Abbasydzki Rekrut" />
     <string id="abb_t_tribesman" text="Koczownik Beduiński" />
     <string id="abb_t_ayyar" text="Ayyar" />
     <string id="abb_t_skirmisher" text="Beduiński Harcownik" />
