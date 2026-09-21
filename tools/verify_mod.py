@@ -48,7 +48,7 @@ Checks performed:
                             --update-baseline (only right after confirming a release is safe to ship)
                             to advance the snapshot.
   9. language-sync          Every {=key} that check 4 confirms exists in EN and TR is also looked up
-                            in the mod's other 6 shipped languages (DE/FR/ES/RU/AR/CN). Reported as
+                            in the mod's other 9 shipped languages (DE/FR/ES/RU/AR/CN/IT/PL/PT). Reported as
                             WARN, never ERROR, so adding a key now and translating it later doesn't
                             block a commit - but the gap is now visible on every single run instead of
                             silently accumulating for months (this is exactly how the mod once shipped
@@ -183,11 +183,11 @@ SUBMODULE_XML = REPO_ROOT / "SubModule.xml"
 LANG_EN = MODULE_DATA / "Languages" / "strings.xml"
 LANG_TR = MODULE_DATA / "Languages" / "TR" / "strings.xml"
 
-# The mod's other 6 shipped languages - not required for check 4 (EN/TR must
+# The mod's other 9 shipped languages - not required for check 4 (EN/TR must
 # always be complete since English is what every unset/mistranslated key
 # falls back to and Turkish is this mod's original authoring language), but
 # tracked by check 9 (language-sync) so a newly added key that only reaches
-# EN/TR doesn't silently drift the other 6 out of sync again.
+# EN/TR doesn't silently drift the other 9 out of sync again.
 SECONDARY_LANG_FILES = [
     ("DE", MODULE_DATA / "Languages" / "DE" / "strings.xml"),
     ("FR", MODULE_DATA / "Languages" / "FR" / "strings.xml"),
@@ -195,6 +195,9 @@ SECONDARY_LANG_FILES = [
     ("RU", MODULE_DATA / "Languages" / "RU" / "strings.xml"),
     ("AR", MODULE_DATA / "Languages" / "AR" / "strings.xml"),
     ("CN", MODULE_DATA / "Languages" / "CN" / "strings.xml"),
+    ("IT", MODULE_DATA / "Languages" / "IT" / "strings.xml"),
+    ("PL", MODULE_DATA / "Languages" / "PL" / "strings.xml"),
+    ("PT", MODULE_DATA / "Languages" / "PT" / "strings.xml"),
 ]
 
 ID_ORDER_BASELINE = REPO_ROOT / "tools" / "shipped_ids_baseline.json"
@@ -421,12 +424,12 @@ def check_localization_coverage(issues, game_path):
 # ---------------------------------------------------------------- check 9 --
 
 def check_language_sync(issues, game_path):
-    """Extends check 4's EN/TR-only coverage to the mod's other 6 shipped
-    languages (DE/FR/ES/RU/AR/CN). This is precisely the gap that let the mod
-    ship for months with those 6 languages frozen at 228/892 keys while
-    EN/TR kept growing with every new feature, undetected until a player
-    reported seeing the wrong language everywhere. Reported as WARN, never
-    ERROR: adding a key now and translating it into all 6 languages in a
+    """Extends check 4's EN/TR-only coverage to the mod's other 9 shipped
+    languages (DE/FR/ES/RU/AR/CN/IT/PL/PT). This is precisely the gap that let
+    the mod ship for months with its original 6 secondary languages frozen at
+    228/892 keys while EN/TR kept growing with every new feature, undetected
+    until a player reported seeing the wrong language everywhere. Reported as WARN, never
+    ERROR: adding a key now and translating it into all 9 languages in a
     later, separate commit is a normal and legitimate workflow, so this
     check must never block a commit for that - it only needs to make the
     gap impossible to miss on every single run, instead of letting it

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <base type="string">
   <tags>
-    <tag language="English" />
+    <tag language="Português (BR)" />
   </tags>
   <strings>
     <string id="acemi_janissary_name" text="Janízaro Acemi" />
