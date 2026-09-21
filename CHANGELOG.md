@@ -7,6 +7,22 @@ contributors.
 
 [ TÜRKÇE ] için aşağı kaydırın.
 
+## v1.9.0 — 2026-09-21
+
+- **Three new languages: Italian, Polish, and Brazilian Portuguese.** All ~1,900 of the mod's strings —
+  troops, lords, dialogue, Encyclopedia entries, UI — are translated, for 11 languages in total. These are
+  fresh translations, so wording fixes from native speakers are very welcome.
+- **Your companions now have personalities.** Each of the 25 recruitable companions — the 14 named
+  historical figures and the 11 Seljuk wanderers — has three distinct greetings that rotate whenever you
+  talk to them again after their opening introduction, so a returning conversation no longer repeats one
+  canned line. (Translated in English, Turkish, Italian, Polish, and Portuguese; the other six languages
+  show the English text for these lines until they are translated.)
+- **A richer Seljuk Encyclopedia entry.** The culture's in-game history now runs from Tughril Beg's march
+  on Baghdad, through Alp Arslan at Manzikert, to Malik-Shah's iqta cavalry and Nizamiye madrasas — and the
+  succession crises that always followed.
+- For contributors: a public architecture wiki (English + Turkish) is now online at
+  https://keremtrgl.github.io/OttomanJanissariesAndTurkicHeroes/, and the language-sync check now covers the three new languages.
+
 ## v1.8.4 — 2026-09-07
 
 - Byzantine lords across the whole empire — north, south, and west — now all have their own
@@ -78,6 +94,22 @@ contributors.
 ---
 
 ## [ TÜRKÇE ]
+
+## v1.9.0 — 2026-09-21
+
+- **Üç yeni dil: İtalyanca, Lehçe ve Brezilya Portekizcesi.** Modun yaklaşık 1.900 metninin tamamı —
+  birlikler, lordlar, diyaloglar, Ansiklopedi maddeleri, arayüz — çevrildi; toplam 11 dil. Çeviriler yeni
+  olduğundan, ana dili konuşanların düzeltmeleri çok değerli.
+- **Yoldaşlarınızın artık kişilikleri var.** 25 işe alınabilir yoldaşın her biri — 14 adlı tarihi figür ve
+  11 Selçuklu gezgini — ilk tanışma konuşmasından sonra her sohbetinizde dönüşümlü olarak değişen üç ayrı
+  karşılama repliğine sahip; tekrar eden konuşmalar artık hep aynı kalıp cümleyi söylemiyor. (Türkçe,
+  İngilizce, İtalyanca, Lehçe ve Portekizce çevrildi; diğer altı dil bu satırlar çevrilene kadar İngilizce
+  metni gösterir.)
+- **Daha zengin bir Selçuklu Ansiklopedi maddesi.** Kültürün oyun içi tarihi artık Tuğrul Bey'in Bağdat
+  seferinden Malazgirt'te Alp Arslan'a, Melikşah'ın ikta süvarileri ve Nizamiye medreselerine, ardından gelen
+  veraset krizlerine kadar uzanıyor.
+- Katkıcılar için: herkese açık, İngilizce + Türkçe mimari viki artık yayında: https://keremtrgl.github.io/OttomanJanissariesAndTurkicHeroes/ —
+  dil-senkron kontrolü de üç yeni dili kapsıyor.
 
 ## v1.8.4 — 2026-09-07
 
