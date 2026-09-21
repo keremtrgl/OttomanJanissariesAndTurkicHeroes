@@ -7,7 +7,7 @@ contributors.
 
 [ TÜRKÇE ] için aşağı kaydırın.
 
-## v1.9.0 — 2026-09-21
+## v1.9.0 — 2026-09-22
 
 - **Three new languages: Italian, Polish, and Brazilian Portuguese.** All ~1,900 of the mod's strings —
   troops, lords, dialogue, Encyclopedia entries, UI — are translated, for 11 languages in total. These are
@@ -95,7 +95,7 @@ contributors.
 
 ## [ TÜRKÇE ]
 
-## v1.9.0 — 2026-09-21
+## v1.9.0 — 2026-09-22
 
 - **Üç yeni dil: İtalyanca, Lehçe ve Brezilya Portekizcesi.** Modun yaklaşık 1.900 metninin tamamı —
   birlikler, lordlar, diyaloglar, Ansiklopedi maddeleri, arayüz — çevrildi; toplam 11 dil. Çeviriler yeni
