@@ -11,7 +11,7 @@ ordu/parti şablonu (lord başlangıç ordusu, han paralı askeri, kervan/yerle�
 25 meyhane companion'ı (tam GameText özgeçmişleriyle, 11 dilde), 8 kültürün Ansiklopedi özgeçmiş
 metni, 8 kültürün turnuva şampiyonu ödülü, eşyalar, politikalar, 11 dil desteği ve modun kendi 19
 kontrollü otomatik bütünlük denetleyicisi (`verify_mod.py`) arasındaki ilişkileri
-detaylandırmaktadır. **Güncel sürüm: v1.8.4.**
+detaylandırmaktadır. **Güncel sürüm: v1.9.0.**
 
 ---
 
@@ -19,13 +19,13 @@ detaylandırmaktadır. **Güncel sürüm: v1.8.4.**
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(22 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(24 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
     SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
     SM --> XML_L["8 x *_lords.xml<br/>(Tüm Krallıklarda Tarihi Lord İsimleri)"]
     SM --> XML_H["heroes.xml + rival_culture_companions.xml<br/>+ seljuk_special_characters*.xml<br/>(Soy Ağacı & 25 Meyhane Yoldaşı: 14 Tarihi + 11 Jenerik)"]
-    SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 21'er Birimlik Ağacı = 147 Birim)"]
+    SM --> XML_T["8 x *_troops.xml / *_custom_troops.xml<br/>(Selçuklu Ağacı + 7 Rakip Krallığın 20'şer Birimlik Ağacı = 140 Birim)"]
     SM --> XML_P["party_templates.xml + rival_culture_names.xml<br/>(8 Kültürün 8 Ordu/Parti Şablonu — Lord Ordusu v1.7.2,<br/>Han/Muhafız/Devriye/Milis/İsyancı/Hediye v1.7.5 & v1.7.7, 64 Şablon)"]
     SM --> XML_ENC["seljuk_culture.xml + rival_culture_names.xml<br/>(8 Kültürün Ansiklopedi Özgeçmiş Metni — text=, v1.8.2)"]
     SM --> XML_POL["policies.xml<br/>(10 Özel Selçuklu Politikası)"]
@@ -74,20 +74,20 @@ graph LR
 
 ```mermaid
 graph LR
-    subgraph "1. 2D Spatial Hash Grid"
-        G1["Atlı & Yaya Okçular"] --> G2["35m Hücreli Uzamsal Izgara"]
-        G2 --> G3["O(1) Anında En Yakın Düşman Tespiti<br/>(İşlemci Yükü -%85)"]
+    subgraph "1. Ragdoll Fizik Bütçe Yöneticisi"
+        R1["500+ Asker Çarpışması"] --> R2["Aynı Anda Max 32 Aktif Ragdoll<br/>(32'yi Aşınca En Eski Ceset Anında Dondurulur)"]
+        R2 --> R3["3.5 sn'den Eski Cesetler Uykuya Alınır<br/>(Her 4. Karede En Fazla 4 Ceset Denetlenir)"]
     end
 
-    subgraph "2. Ragdoll Fizik Bütçe Yöneticisi"
-        R1["500+ Asker Çarpışması"] --> R2["Aktif Ragdoll Sayısı Max 32 İle Sınırlandırılır"]
-        R2 --> R3["Hareketsiz Cesetler Otomatik Uykuya Alınır<br/>(PhysX Çarpışma Hesaplaması Sıfırlanır)"]
-    end
-
-    subgraph "3. Mesafe Tabanlı AI Kademelendirme (LOD)"
-        L1["Kameradan >140m Uzaktaki Birlikler"] --> L2["Gereksiz Raycast Sorguları Kırpılır<br/>(Stutter ve Mikro-Donmalar Engellenir)"]
+    subgraph "2. Mesafe Tabanlı Formasyon Kademelendirme (LOD)"
+        L1["Kameradan >140m Uzaktaki Formasyonlar<br/>(0.40 sn'de Bir Denetlenir)"] --> L2["ResetArrangementOrderTickTimer() Çağrılır<br/>(Uzak Formasyonun Düzen Güncellemesi Ertelenir)"]
     end
 ```
+
+Düzeltme (v1.9.0): bu bölümde önceden 35 m'lik bir "2D Spatial Hash Grid" alt sistemi (O(1) en yakın düşman
+tespiti, "işlemci yükü -%85") anlatılıyordu. `BattlePerformanceOptimizer`/`RagdollPhysicsBudgetManager` kaynağında
+böyle bir sistem **yoktur** — yalnızca yukarıdaki iki alt sistem (ragdoll bütçesi + mesafe tabanlı LOD) vardır;
+yanlış iddia kaldırıldı.
 
 Not: Her iki sistem de (`BattlePerformanceOptimizer`, `TuranTacticMissionBehavior`/`ByzantineTacticMissionBehavior`)
 sadece `mission.Mode == MissionMode.Battle` durumunda etkin. `TaleWorlds.Core.MissionMode` enum'unda
@@ -226,15 +226,15 @@ mimari olarak ayrı içerik mümkün değil; Bizans seçenekleri zaten o oyuncul
 ```mermaid
 graph TD
     KS["Büyük Selçuklu Devleti<br/>(Kingdom.kingdom_seljuks)"] --> CL1["Âl-i Selçuk (T6)<br/>Sultan Alp Arslan"]
-    KS --> CL2["Nizamiye Vezirler Divanı (T5)<br/>Hâce Nizamülmülk"]
+    KS --> CL2["Nizamiye Vezirler Divanı (T4)<br/>Hâce Nizamülmülk"]
     KS --> CL3["Danişmendliler (T5)<br/>Melik Danişmend Gazi"]
-    KS --> CL4["Artuklular (T5)<br/>Artuk Bey &amp; İlgazi"]
-    KS --> CL5["Mengücekliler (T4)<br/>Mengücek Gazi"]
-    KS --> CL6["Saltuklular (T4)<br/>Emir Saltuk"]
-    KS --> CL7["Çaka Beyliği (T4)<br/>Çaka Bey"]
+    KS --> CL4["Artuklular (T4)<br/>Artuk Bey &amp; İlgazi"]
+    KS --> CL5["Mengücekliler (T3)<br/>Mengücek Gazi"]
+    KS --> CL6["Saltuklular (T3)<br/>Emir Saltuk"]
+    KS --> CL7["Çaka Beyliği (T3)<br/>Çaka Bey"]
     KS --> CL8["Ahlatşahlar (T4)<br/>Sökmen el-Kutbî"]
-    KS --> CL9["Karamanoğulları (T4)<br/>Kerimüddin Karaman Bey"]
-    KS --> CL10["Kayı Boyu (T3)<br/>Ertuğrul Gazi &amp; Hanedan"]
+    KS --> CL9["Karamanoğulları (T3)<br/>Kerimüddin Karaman Bey"]
+    KS --> CL10["Kayı Boyu (T2)<br/>Ertuğrul Gazi &amp; Hanedan"]
     KS --> CL11["Ahi Evran Ocağı (T3)<br/>Ahi Evran"]
 ```
 
@@ -296,11 +296,11 @@ graph TD
 - **Atabeglik XP kapsam düzeltmesi** — `SeljukAtabegTitleBehavior` artık sadece gerçekten
   Selçuklu'ya ait bir yerleşimi yöneten Selçuklu klanı kahramanlarına günlük XP veriyor.
 
-**Latin İmparatorluğu'nun kendine özgü 21 birimli asker ağacı** (`latin_empire_custom_troops.xml`,
+**Latin İmparatorluğu'nun kendine özgü 20 birimli asker ağacı** (`latin_empire_custom_troops.xml`,
 Culture.empire, 6 kademe): Latin Levy → 4 dal (Frenk Piyadesi/Cenevizli Arbaletçi/Ulah Atlısı/
 Silahtar) → ... → Gasmoulos Muhafızı (piyade), Seçkin Cenevizli Arbaletçi (menzilli), Rumeli Baronu
 (ağır süvari) - Haçlı Devletleri'nin kendi ağacından tamamen farklı silah/zırh/at seçimleriyle. Diğer
-6 rakip krallığın her birinin de kendi 21 birimlik özel ağacı var (7 x 21 = 147 rakip birim toplam).
+6 rakip krallığın her birinin de kendi 20 birimlik özel ağacı var (7 x 20 = 140 rakip birim toplam).
 
 **C# alt sistemleri (erken oturumlarda eklendi):**
 - `LatinEmpireRecruitmentBehavior` - empire_w/empire_s'in paylaştığı Culture.empire nedeniyle
@@ -335,12 +335,12 @@ graph TD
     RCC --> ARM2["Kilikya Ermenistanı"]
     RCC --> KRKH2["Karahanlı"]
 
-    SEL --> S1["Nasir Khusraw<br/>(gezgin-şair → Scouting/Roguery)"]
+    SEL --> S1["Nasır Hüsrev<br/>(gezgin-şair → Scouting/Roguery)"]
     SEL --> S2["Ömer Hayyam<br/>(müneccim-matematikçi → Engineering)"]
-    BYZ2 --> B1_["Michael Psellos<br/>(saray filozofu → Roguery/Charm)"]
+    BYZ2 --> B1_["Mihail Psellos<br/>(saray filozofu → Roguery/Charm)"]
     BYZ2 --> B2_["Roussel de Bailleul<br/>(Norman paralı asker → ağır süvari)"]
     ABB2 --> A1["Gazali<br/>(teolog-zahit → Steward/Charm)"]
-    ABB2 --> A2["Usame bin Münkız<br/>(savaşçı-şair → OneHanded/Bow)"]
+    ABB2 --> A2["Üsame bin Münkız<br/>(savaşçı-şair → OneHanded/Bow)"]
     GEO2 --> G1["İoane Petritsi<br/>(filozof-keşiş → Steward/Medicine)"]
     GEO2 --> G2["Svanetili Vardan<br/>(asi dağ beyi → Athletics/Bow)"]
     CRUS2 --> C1["Keşiş Piyer<br/>(vaiz → Charm/Roguery)"]
@@ -503,7 +503,7 @@ denge sinyali olarak kalıyor; gerçek bir silah-paritesi kontrolü tam DPS mate
 
 ---
 
-## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.2 → v1.8.4)
+## 🩹 10. Sürüm Geçmişi — Kritik Düzeltmeler ve İçerik (v1.6.1 → v1.9.0)
 
 ```mermaid
 graph LR
@@ -526,6 +526,7 @@ graph LR
     V181 --> V182["v1.8.2<br/>8 kültüre Ansiklopedi metni +<br/>7 rakip krallığa turnuva şampiyonu<br/>ödülü + 117 lord/yoldaş selamlaması<br/>yanlış diyalog durumundan düzeltildi<br/>('lord_pretalk' → 'lord_start') +<br/>verify_mod.py check 16-17"]
     V182 --> V183["v1.8.3<br/>13 tamganın hiçbiri hiçbir klanda<br/>kullanılmıyordu, 11'i düzeltildi +<br/>7 yeni Abbasi/Gürcü lord selamlaması +<br/>verify_mod.py check 18 +<br/>run_all_checks.py + AI benchmark"]
     V183 --> V184["v1.8.4<br/>Bizans Kuzey (9/9) + Güney'in<br/>kalan 6 lordu tamamlandı (15 yeni<br/>selamlama, 8 dilde) +<br/>verify_mod.py check 19<br/>(yerleşke↔klan kültür tutarlılığı)"]
+    V184 --> V190["v1.9.0<br/>IT/PL/PT dilleri eklendi (toplam 11) +<br/>25 companion'a kişilik-bazlı<br/>selamlama varyasyonu (3'er) +<br/>zenginleştirilmiş Selçuklu<br/>Ansiklopedi metni"]
 ```
 
 - **v1.6.5 kök neden:** Bannerlord'da özel kültür feat'leri (Native'in aksine) mutlaka C#'ta
@@ -699,6 +700,19 @@ graph LR
   atamaları arasındaki tutarlılığı, `SandBox/ModuleData/settlements.xml`'in gerçek şeması
   decompile-doğrulanarak (Native `owner=`/`culture=` alanları, `<Village bound=...>` iç içe
   yapısı) kontrol ediyor — 0 hata/0 uyarı ile mevcut 900+ yerleşkeye karşı temiz geçti.
+- **v1.9.0:** İtalyanca (`Italiano`), Lehçe (`Polski`) ve Brezilya Portekizcesi (`Português (BR)`)
+  tam yerelleştirmeleri eklendi (`ModuleData/Languages/IT|PL|PT/`, her biri EN `strings.xml` ile
+  birebir 1912 giriş). Motor `Languages/**/language_data.xml` dosyalarını otomatik keşfeder (SubModule.xml
+  kaydı gerekmez) ve birleştirmeyi klasör adına değil `<LanguageData id="...">` değerine göre yapar
+  (decompile-doğrulandı); bu yüzden Native'in kendi İtalyanca/Lehçe/BR-Portekizce girişleriyle tek dil
+  olarak birleşmeleri beklenir — oyun içi dil seçici doğrulaması henüz yapılmadı.
+  `CompanionPersonalityDialogueBehavior` 25 companion'a (14 adlı + 11 Selçuklu gezgini) 3'er
+  kişilik-bazlı selamlama ekler: `lord_start` token'ına, öncelik 200, `GetGreetingVariant` saat
+  rotasyonuyla; yalnızca tanışma sonrası tekrar konuşmalarda (`IsRepeatTalkWith` = `Hero.HasMet` +
+  StringId) devreye girer, çünkü ilk sürümde bu satırlar backstory tanışma diyaloğunu sessizce
+  engelliyordu (208e416). `verify_mod.py`'nin dil-senkron kontrolü artık IT/PL/PT'yi de izliyor; 75
+  yeni companion anahtarı DE/FR/ES/RU/AR/CN'de henüz çevrilmedi (WARN). Selçuklu Ansiklopedi metni
+  (`seljuk_culture_desc`) zenginleştirildi; check 18'in docstring'i düzeltildi.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).

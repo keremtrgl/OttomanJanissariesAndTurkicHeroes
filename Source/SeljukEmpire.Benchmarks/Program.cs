@@ -18,8 +18,8 @@ namespace SeljukEmpire.Benchmarks
     /// ByzantineTacticMissionBehavior.OnMissionTick gate the entire decision loop behind a
     /// _tickThrottleTimer.ElapsedSeconds > 1.25f check, so the assessor (and the QuerySystem reads
     /// that feed it) run at most ~0.8 times/second per team, not every frame - the same "throttle
-    /// the expensive path" philosophy BattlePerformanceOptimizer already uses (spatial hash grid,
-    /// ragdoll budget, LOD distance culling). The numbers below exist to confirm that even a
+    /// the expensive path" philosophy BattlePerformanceOptimizer already uses (ragdoll budget,
+    /// LOD distance culling). The numbers below exist to confirm that even a
     /// deliberately pessimistic per-call cost estimate, multiplied out at that throttled frequency
     /// and a generous formation count, stays a negligible fraction of a 60fps frame budget.
     /// </summary>
