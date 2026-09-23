@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Seljuk Empire — Dairesel Güneş Kursu Mimarisi (Radial Orbit)</title>
-  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <!-- Pinned + Subresource Integrity: the unversioned URL silently followed every new major
+       release (it had already jumped to 10.x), and without SRI a compromised CDN file would run
+       unchecked on the published wiki. -->
+  <script type="text/javascript" src="https://unpkg.com/vis-network@10.1.2/standalone/umd/vis-network.min.js"
+          integrity="sha384-RDdG1CLOxjNlTHh4JYx/rnAueaMHbkBHmeHwrEyljMQw3LF0it4SkuNotIY/FPxD"
+          crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -225,7 +230,7 @@
     </div>
 
     <div class="status-badge">
-      ☀️ <b>Dairesel Güneş Kursu Düzeni</b> | 155 Düğüm, 147 Işınsal Bağ (Maksimum Okunabilirlik)
+      ☀️ <b>Dairesel Güneş Kursu Düzeni</b> | <span id="graph-stats">155 Düğüm, 147 Işınsal Bağ</span> (Maksimum Okunabilirlik)
     </div>
   </div>
 
@@ -254,6 +259,17 @@
     const rawEdges = [{"from": "root_kingdom", "to": "clan_seljuk_royal", "color": "#d4af37", "width": 2.5}, {"from": "clan_seljuk_royal", "to": "lord_seljuk_alp_arslan", "color": "#f43f5e", "width": 1.5}, {"from": "clan_seljuk_royal", "to": "lord_seljuk_terken_hatun", "color": "#fb7185", "width": 1.5}, {"from": "clan_seljuk_royal", "to": "lord_seljuk_meliksah", "color": "#fb7185", "width": 1.5}, {"from": "clan_seljuk_royal", "to": "lord_seljuk_mesud", "color": "#fb7185", "width": 1.5}, {"from": "clan_seljuk_royal", "to": "town_K1", "color": "#10b981", "width": 1.8}, {"from": "town_K1", "to": "v_sille", "color": "#22c55e", "width": 1.2}, {"from": "town_K1", "to": "v_aksehir", "color": "#22c55e", "width": 1.2}, {"from": "town_K1", "to": "v_ladik", "color": "#22c55e", "width": 1.2}, {"from": "clan_seljuk_royal", "to": "town_K4", "color": "#10b981", "width": 1.8}, {"from": "town_K4", "to": "v_zara", "color": "#22c55e", "width": 1.2}, {"from": "town_K4", "to": "v_kangal", "color": "#22c55e", "width": 1.2}, {"from": "town_K4", "to": "v_yildizeli", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_nizamiye", "color": "#d4af37", "width": 2.5}, {"from": "clan_nizamiye", "to": "lord_seljuk_nizamulmulk", "color": "#f43f5e", "width": 1.5}, {"from": "root_kingdom", "to": "clan_danismend", "color": "#d4af37", "width": 2.5}, {"from": "clan_danismend", "to": "lord_seljuk_danismend_gazi", "color": "#f43f5e", "width": 1.5}, {"from": "clan_danismend", "to": "town_ES4", "color": "#10b981", "width": 1.8}, {"from": "town_ES4", "to": "v_develi", "color": "#22c55e", "width": 1.2}, {"from": "town_ES4", "to": "v_talas", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_artuk", "color": "#d4af37", "width": 2.5}, {"from": "clan_artuk", "to": "lord_seljuk_artuk_bey", "color": "#f43f5e", "width": 1.5}, {"from": "clan_artuk", "to": "lord_seljuk_ilgazi_bey", "color": "#fb7185", "width": 1.5}, {"from": "clan_artuk", "to": "town_ES2", "color": "#10b981", "width": 1.8}, {"from": "town_ES2", "to": "v_ergani", "color": "#22c55e", "width": 1.2}, {"from": "town_ES2", "to": "v_silvan", "color": "#22c55e", "width": 1.2}, {"from": "town_ES2", "to": "v_bismil", "color": "#22c55e", "width": 1.2}, {"from": "clan_artuk", "to": "castle_ES3", "color": "#10b981", "width": 1.8}, {"from": "castle_ES3", "to": "v_palu", "color": "#22c55e", "width": 1.2}, {"from": "castle_ES3", "to": "v_keban", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_mengucek", "color": "#d4af37", "width": 2.5}, {"from": "clan_mengucek", "to": "lord_seljuk_mengucek_gazi", "color": "#f43f5e", "width": 1.5}, {"from": "clan_mengucek", "to": "castle_K2", "color": "#10b981", "width": 1.8}, {"from": "castle_K2", "to": "v_cetinkaya", "color": "#22c55e", "width": 1.2}, {"from": "castle_K2", "to": "v_kemaliye", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_saltuk", "color": "#d4af37", "width": 2.5}, {"from": "clan_saltuk", "to": "lord_seljuk_emir_saltuk", "color": "#f43f5e", "width": 1.5}, {"from": "clan_saltuk", "to": "town_K6", "color": "#10b981", "width": 1.8}, {"from": "town_K6", "to": "v_pasinler", "color": "#22c55e", "width": 1.2}, {"from": "town_K6", "to": "v_tortum", "color": "#22c55e", "width": 1.2}, {"from": "town_K6", "to": "v_oltu", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_caka", "color": "#d4af37", "width": 2.5}, {"from": "clan_caka", "to": "lord_seljuk_caka_bey", "color": "#f43f5e", "width": 1.5}, {"from": "clan_caka", "to": "town_A4", "color": "#10b981", "width": 1.8}, {"from": "town_A4", "to": "v_manavgat", "color": "#22c55e", "width": 1.2}, {"from": "town_A4", "to": "v_gazipasa", "color": "#22c55e", "width": 1.2}, {"from": "town_A4", "to": "v_anamur", "color": "#22c55e", "width": 1.2}, {"from": "clan_caka", "to": "castle_A8", "color": "#10b981", "width": 1.8}, {"from": "castle_A8", "to": "v_silifke", "color": "#22c55e", "width": 1.2}, {"from": "castle_A8", "to": "v_erdemli", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_ahlatsah", "color": "#d4af37", "width": 2.5}, {"from": "clan_ahlatsah", "to": "lord_seljuk_sokmen_bey", "color": "#f43f5e", "width": 1.5}, {"from": "clan_ahlatsah", "to": "castle_K5", "color": "#10b981", "width": 1.8}, {"from": "castle_K5", "to": "v_ercis", "color": "#22c55e", "width": 1.2}, {"from": "castle_K5", "to": "v_adilcevaz", "color": "#22c55e", "width": 1.2}, {"from": "clan_ahlatsah", "to": "castle_K1", "color": "#10b981", "width": 1.8}, {"from": "castle_K1", "to": "v_bulanik", "color": "#22c55e", "width": 1.2}, {"from": "castle_K1", "to": "v_patnos", "color": "#22c55e", "width": 1.2}, {"from": "root_kingdom", "to": "clan_karaman", "color": "#d4af37", "width": 2.5}, {"from": "clan_karaman", "to": "lord_seljuk_karaman_bey", "color": "#f43f5e", "width": 1.5}, {"from": "root_kingdom", "to": "clan_kayi_oguz", "color": "#d4af37", "width": 2.5}, {"from": "clan_kayi_oguz", "to": "hayme_ana", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "ertugrul_gazi", "color": "#f43f5e", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "halime_hatun", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "gundogdu_bey", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "sungur_tekin", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "gunduz_alp", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "savci_bey", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "osman_gazi", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "abdurrahman_gazi", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "akcakoca", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "bamsi_the_brave", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "turgut_the_hammer", "color": "#fb7185", "width": 1.5}, {"from": "clan_kayi_oguz", "to": "dundar_the_hawk", "color": "#fb7185", "width": 1.5}, {"from": "root_kingdom", "to": "clan_ahi_order", "color": "#d4af37", "width": 2.5}, {"from": "clan_ahi_order", "to": "lord_seljuk_ahi_evran", "color": "#f43f5e", "width": 1.5}, {"from": "root_kingdom", "to": "cs_turan", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_perf", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_econ", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_atabeg", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_recruit", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_tourney", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_cc", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_latin_recruit", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_new_dialogue", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_companions", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_partytemplate", "color": "#eab308", "width": 1.5}, {"from": "rival_root_byz", "to": "clan_empire_south_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_empire_south_1", "to": "lord_1_14", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_byz", "to": "clan_empire_south_4", "color": "#d4af37", "width": 2.0}, {"from": "clan_empire_south_4", "to": "lord_1_30", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_byz", "to": "clan_empire_west_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_empire_west_1", "to": "lord_1_7", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_byz", "to": "byz_town_ES4", "color": "#10b981", "width": 1.6}, {"from": "rival_root_byz", "to": "byz_castle_ES2", "color": "#10b981", "width": 1.6}, {"from": "rival_root_abb", "to": "clan_aserai_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_aserai_1", "to": "lord_3_1", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_abb", "to": "clan_aserai_2", "color": "#d4af37", "width": 2.0}, {"from": "clan_aserai_2", "to": "lord_3_3", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_abb", "to": "clan_aserai_3", "color": "#d4af37", "width": 2.0}, {"from": "clan_aserai_3", "to": "lord_3_5", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_abb", "to": "town_A1", "color": "#10b981", "width": 1.6}, {"from": "rival_root_geo", "to": "clan_sturgia_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_sturgia_1", "to": "lord_2_1", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_geo", "to": "clan_sturgia_2", "color": "#d4af37", "width": 2.0}, {"from": "clan_sturgia_2", "to": "lord_2_3", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_geo", "to": "clan_sturgia_3", "color": "#d4af37", "width": 2.0}, {"from": "clan_sturgia_3", "to": "lord_2_5", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_geo", "to": "town_S1", "color": "#10b981", "width": 1.6}, {"from": "rival_root_crus", "to": "clan_vlandia_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_vlandia_1", "to": "lord_4_1", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_crus", "to": "clan_vlandia_7", "color": "#d4af37", "width": 2.0}, {"from": "clan_vlandia_7", "to": "lord_4_23", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_crus", "to": "clan_vlandia_3", "color": "#d4af37", "width": 2.0}, {"from": "clan_vlandia_3", "to": "lord_4_6", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_crus", "to": "clan_vlandia_8", "color": "#d4af37", "width": 2.0}, {"from": "clan_vlandia_8", "to": "lord_4_24", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_crus", "to": "town_V1", "color": "#10b981", "width": 1.6}, {"from": "rival_root_crus", "to": "town_V3", "color": "#10b981", "width": 1.6}, {"from": "rival_root_arm", "to": "clan_battania_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_battania_1", "to": "lord_5_1", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_arm", "to": "clan_battania_6", "color": "#d4af37", "width": 2.0}, {"from": "clan_battania_6", "to": "lord_5_17", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_arm", "to": "clan_battania_7", "color": "#d4af37", "width": 2.0}, {"from": "clan_battania_7", "to": "lord_5_15", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_arm", "to": "town_B2", "color": "#10b981", "width": 1.6}, {"from": "rival_root_arm", "to": "castle_V6", "color": "#10b981", "width": 1.6}, {"from": "rival_root_krkh", "to": "clan_khuzait_1", "color": "#d4af37", "width": 2.0}, {"from": "clan_khuzait_1", "to": "lord_6_1", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_krkh", "to": "clan_khuzait_6", "color": "#d4af37", "width": 2.0}, {"from": "clan_khuzait_6", "to": "lord_6_18", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_krkh", "to": "clan_khuzait_8", "color": "#d4af37", "width": 2.0}, {"from": "clan_khuzait_8", "to": "lord_6_20", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_krkh", "to": "clan_khuzait_9", "color": "#d4af37", "width": 2.0}, {"from": "clan_khuzait_9", "to": "lord_K9_l", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_krkh", "to": "krkh_town_K5", "color": "#10b981", "width": 1.6}, {"from": "rival_root_krkh", "to": "krkh_town_K1", "color": "#10b981", "width": 1.6}, {"from": "rival_root_lat", "to": "clan_empire_west_2", "color": "#d4af37", "width": 2.0}, {"from": "clan_empire_west_2", "to": "lord_1_9", "color": "#f43f5e", "width": 1.5}, {"from": "rival_root_lat", "to": "clan_empire_west_7", "color": "#d4af37", "width": 2.0}, {"from": "clan_empire_west_7", "to": "lord_1_53", "color": "#fb7185", "width": 1.5}, {"from": "rival_root_lat", "to": "town_EW4", "color": "#10b981", "width": 1.6}, {"from": "rival_root_lat", "to": "castle_EW5", "color": "#10b981", "width": 1.6}, {"from": "root_kingdom", "to": "cs_verifymod", "color": "#eab308", "width": 1.5}, {"from": "root_kingdom", "to": "cs_encyclopedia", "color": "#eab308", "width": 1.5},
 {"from": "root_kingdom", "to": "cs_banner_fix", "color": "#eab308", "width": 1.5},
 {"from": "root_kingdom", "to": "cs_rival_dialogue", "color": "#eab308", "width": 1.5}];
+
+    // The page is useless without vis-network (CDN blocked, offline, or an SRI mismatch after a
+    // tampered file) - say so instead of leaving a silent black screen.
+    if (typeof vis === 'undefined') {
+      const container = document.getElementById('network');
+      container.textContent = 'Görselleştirme kütüphanesi (vis-network) yüklenemedi. İnternet bağlantınızı kontrol edip sayfayı yenileyin.';
+      container.style.cssText += ';display:flex;align-items:center;justify-content:center;padding:24px;color:#9ca3af;text-align:center;';
+      throw new Error('vis-network failed to load');
+    }
+
+    const nodesById = new Map(rawNodes.map(n => [n.id, n]));
 
     const nodesData = rawNodes.map(n => {
       const st = groupStyles[n.group] || { background: '#1e293b', border: '#94a3b8', fontColor: '#fff', fontSize: 9 };
@@ -291,6 +307,9 @@
       smooth: false
     }));
 
+    document.getElementById('graph-stats').textContent =
+      `${rawNodes.length} Düğüm, ${rawEdges.length} Işınsal Bağ`;
+
     const container = document.getElementById('network');
     const data = {
       nodes: new vis.DataSet(nodesData),
@@ -317,52 +336,76 @@
     const dTitle = document.getElementById('d-title');
     const dContent = document.getElementById('d-content');
 
+    // Built with DOM nodes + textContent, never innerHTML: several info texts quote XML such as
+    // "<Culture>" or "<Item mesh=...>", which innerHTML parsed as (unknown) tags and silently
+    // deleted from the sentence.
+    function showDetails(node) {
+      dTitle.textContent = node.label.split('\n')[0];
+      const rows = document.createDocumentFragment();
+      for (const [key, value] of Object.entries(node.info || {})) {
+        const row = document.createElement('div');
+        row.className = 'detail-row';
+        const keyCell = document.createElement('span');
+        keyCell.textContent = key.toUpperCase();
+        const valueCell = document.createElement('span');
+        valueCell.textContent = value;
+        row.append(keyCell, valueCell);
+        rows.appendChild(row);
+      }
+      dContent.replaceChildren(rows);
+      drawer.style.display = 'block';
+    }
+
+    function hideDetails() {
+      drawer.style.display = 'none';
+    }
+
     network.on('click', function(params) {
-      if (params.nodes.length > 0) {
-        const node = rawNodes.find(n => n.id === params.nodes[0]);
-        if (node) {
-          dTitle.innerText = node.label.split('\n')[0];
-          let html = '';
-          if (node.info) {
-            for (const [k, v] of Object.entries(node.info)) {
-              html += `<div class="detail-row"><span>${k.toUpperCase()}</span><span>${v}</span></div>`;
-            }
-          }
-          dContent.innerHTML = html;
-          drawer.style.display = 'block';
-        }
+      const node = params.nodes.length > 0 ? nodesById.get(params.nodes[0]) : null;
+      if (node) {
+        showDetails(node);
       } else {
-        drawer.style.display = 'none';
+        hideDetails();
       }
     });
 
-    document.getElementById('d-close').onclick = () => { drawer.style.display = 'none'; };
+    document.getElementById('d-close').onclick = hideDetails;
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideDetails(); });
     document.getElementById('btn-fit').onclick = () => { network.fit({ animation: true }); };
 
     window.focusNode = function(id) {
+      const node = nodesById.get(id);
+      if (!node) return;
+      network.selectNodes([id]);
       network.focus(id, { scale: 1.3, animation: { duration: 500, easingFunction: 'easeInOutQuad' } });
-      const node = rawNodes.find(n => n.id === id);
-      if (node) {
-        dTitle.innerText = node.label.split('\n')[0];
-        let html = '';
-        if (node.info) {
-          for (const [k, v] of Object.entries(node.info)) {
-            html += `<div class="detail-row"><span>${k.toUpperCase()}</span><span>${v}</span></div>`;
-          }
-        }
-        dContent.innerHTML = html;
-        drawer.style.display = 'block';
-      }
+      showDetails(node);
     };
 
-    // Instant Search
+    // Turkish-aware, accent-insensitive matching: plain toLowerCase() turns "İkta" into
+    // "i̇kta" (i + combining dot), so the placeholder's own example "İkta" could not be found by
+    // typing "ikta"; and "sogut" should find "Söğüt". Fold both sides to bare ASCII-ish letters.
+    function fold(text) {
+      return text
+        .toLocaleLowerCase('tr-TR')
+        .replace(/ı/g, 'i')
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '');
+    }
+
+    const searchIndex = rawNodes.map(n => ({ id: n.id, text: fold(n.label + ' ' + n.id) }));
+
+    // Instant Search (debounced so each keystroke doesn't restart the camera animation)
+    let searchTimer = null;
     document.getElementById('search').addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
+      clearTimeout(searchTimer);
+      const q = fold(e.target.value.trim());
       if (!q) return;
-      const found = rawNodes.find(n => n.label.toLowerCase().includes(q) || n.id.toLowerCase().includes(q));
-      if (found) {
-        focusNode(found.id);
-      }
+      searchTimer = setTimeout(() => {
+        const found = searchIndex.find(entry => entry.text.includes(q));
+        if (found) {
+          focusNode(found.id);
+        }
+      }, 150);
     });
   </script>
 </body>
