@@ -15,9 +15,13 @@
   <ItemGroup>
     <!-- Compiled directly (not via ProjectReference to SeljukTactics.csproj) so this test
          project never needs the Bannerlord game install or its engine DLLs to build or run -
-         TacticalSituationAssessor.cs is required to have zero TaleWorlds.* references, so this
-         is always safe. -->
+         every file listed here is required to have zero TaleWorlds.* references, so this is
+         always safe. -->
     <Compile Include="..\SeljukEmpire\Tactics\TacticalSituationAssessor.cs" />
+    <!-- Same rule for every other engine-free policy file below: zero TaleWorlds.* references. -->
+    <Compile Include="..\SeljukEmpire\Recruitment\VolunteerSlotPolicy.cs" />
+    <Compile Include="..\SeljukEmpire\Economy\CaravanInsurancePolicy.cs" />
+    <Compile Include="..\SeljukEmpire\Immersion\GreetingVariety.cs" />
   </ItemGroup>
 
 </Project>
