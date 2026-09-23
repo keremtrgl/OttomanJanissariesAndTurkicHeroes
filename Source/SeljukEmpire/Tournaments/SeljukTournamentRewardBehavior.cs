@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using SeljukEmpire;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
@@ -65,7 +64,7 @@ namespace SeljukEmpire.Tournaments
                             Colors.Yellow));
                     }
                 }
-                else if (winner.HeroObject != null && winner.HeroObject.Clan?.Kingdom?.StringId == "kingdom_seljuks")
+                else if (winner.HeroObject != null && winner.HeroObject.Clan?.Kingdom?.StringId == SeljukFactionUtility.SeljukKingdomId)
                 {
                     // AI Seljuk champion gains renown & loyalty
                     GainRenownAction.Apply(winner.HeroObject, 15f, false);
@@ -77,25 +76,24 @@ namespace SeljukEmpire.Tournaments
             }
         }
 
+        /// <summary>
+        /// Uniformly random prize among the ids that actually resolve to a loaded item, picked with
+        /// reservoir sampling so no temporary list is allocated per tournament.
+        /// </summary>
         private static ItemObject GetRandomSeljukPrize()
         {
-            List<ItemObject> validItems = new List<ItemObject>();
+            ItemObject chosen = null;
+            int validCount = 0;
             foreach (var id in SeljukPrizeItemIds)
             {
                 ItemObject item = Game.Current.ObjectManager.GetObject<ItemObject>(id);
-                if (item != null)
+                if (item != null && MBRandom.RandomInt(++validCount) == 0)
                 {
-                    validItems.Add(item);
+                    chosen = item;
                 }
             }
 
-            if (validItems.Count > 0)
-            {
-                int index = MBRandom.RandomInt(validItems.Count);
-                return validItems[index];
-            }
-
-            return null;
+            return chosen;
         }
 
     }

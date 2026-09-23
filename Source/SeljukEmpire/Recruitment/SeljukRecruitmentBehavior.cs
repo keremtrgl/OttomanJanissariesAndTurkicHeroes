@@ -1,150 +1,23 @@
-using System;
-using SeljukEmpire;
-using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.Party;
-using TaleWorlds.CampaignSystem.Settlements;
-using TaleWorlds.Core;
-
 namespace SeljukEmpire.Recruitment
 {
     /// <summary>
-    /// Ensures that all notables across 34+ Seljuk settlements (villages, castles, towns)
-    /// offer authentic, affordable Tier 1 Seljuk and Ottoman recruits (20-50 Dinars) in their volunteer slots.
+    /// Notables across Seljuk-owned settlements (villages, castles, towns) offer authentic,
+    /// affordable Seljuk and Ottoman recruits - peasants, azaps, scouts, ghulam recruits and
+    /// janissary cadets - in place of whatever troop tree the settlement's own culture would hand
+    /// out. Slot layout: <see cref="VolunteerSlotPolicy.GetSeljukCandidates"/>.
     /// </summary>
-    public class SeljukRecruitmentBehavior : CampaignBehaviorBase
+    public class SeljukRecruitmentBehavior : KingdomVolunteerRecruitmentBehaviorBase
     {
-        public override void RegisterEvents()
+        protected override string KingdomId => SeljukFactionUtility.SeljukKingdomId;
+
+        protected override bool ShouldReplaceVolunteer(string currentTroopId)
         {
-            CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
-            CampaignEvents.DailyTickSettlementEvent.AddNonSerializedListener(this, OnDailyTickSettlement);
-            CampaignEvents.SettlementEntered.AddNonSerializedListener(this, OnSettlementEntered);
+            return VolunteerSlotPolicy.ShouldReplaceSeljukVolunteer(currentTroopId);
         }
 
-        public override void SyncData(IDataStore dataStore)
+        protected override string[] GetCandidates(bool isVillage, bool isTownOrCastle, int slotIndex, float notablePower, bool isArtisan)
         {
-            // Dynamic runtime behavior
+            return VolunteerSlotPolicy.GetSeljukCandidates(isVillage, isTownOrCastle, slotIndex, notablePower, isArtisan);
         }
-
-        private void OnSessionLaunched(CampaignGameStarter starter)
-        {
-            RefreshAllSeljukNotables();
-        }
-
-        private void OnDailyTickSettlement(Settlement settlement)
-        {
-            try
-            {
-                if (settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
-                {
-                    RefreshSettlementNotables(settlement);
-                }
-            }
-            catch (Exception)
-            {
-                // Engine safety catch - fires once per settlement per day, must never crash the tick
-            }
-        }
-
-        private void OnSettlementEntered(MobileParty party, Settlement settlement, Hero hero)
-        {
-            try
-            {
-                if (party != null && party.IsMainParty && settlement != null && SeljukFactionUtility.IsSeljukSettlement(settlement))
-                {
-                    RefreshSettlementNotables(settlement);
-                }
-            }
-            catch (Exception)
-            {
-                // Engine safety catch - fires on every settlement visit, must never crash the game
-            }
-        }
-
-        private void RefreshAllSeljukNotables()
-        {
-            try
-            {
-                if (Settlement.All == null) return;
-
-                foreach (var settlement in Settlement.All)
-                {
-                    if (SeljukFactionUtility.IsSeljukSettlement(settlement))
-                    {
-                        RefreshSettlementNotables(settlement);
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                // Engine safety catch
-            }
-        }
-
-        private void RefreshSettlementNotables(Settlement settlement)
-        {
-            if (settlement?.Notables == null) return;
-
-            var iktaPeasant = CharacterObject.Find("seljuk_peasant") ?? Game.Current?.ObjectManager?.GetObject<CharacterObject>("seljuk_peasant");
-            var gulamRecruit = CharacterObject.Find("seljuk_ghulam_recruit") ?? Game.Current?.ObjectManager?.GetObject<CharacterObject>("seljuk_ghulam_recruit");
-            var acemiJanissary = CharacterObject.Find("acemi_janissary") ?? Game.Current?.ObjectManager?.GetObject<CharacterObject>("acemi_janissary");
-            var azapRecruit = CharacterObject.Find("azap_recruit") ?? Game.Current?.ObjectManager?.GetObject<CharacterObject>("azap_recruit");
-            var ottomanScout = CharacterObject.Find("ottoman_scout") ?? Game.Current?.ObjectManager?.GetObject<CharacterObject>("ottoman_scout");
-
-            if (iktaPeasant == null) return;
-
-            foreach (var notable in settlement.Notables)
-            {
-                if (notable == null || !notable.IsAlive || notable.VolunteerTypes == null) continue;
-
-                for (int i = 0; i < notable.VolunteerTypes.Length; i++)
-                {
-                    var currentRecruit = notable.VolunteerTypes[i];
-                    if (currentRecruit == null || (!currentRecruit.StringId.StartsWith("seljuk_") && !currentRecruit.StringId.Contains("janissary") && !currentRecruit.StringId.Contains("azap") && !currentRecruit.StringId.Contains("ottoman")))
-                    {
-                        if (settlement.IsVillage)
-                        {
-                            // Slot 0, 1, 2, 3: Tier 1 Seljuk Peasant (20 Dinars)
-                            // Slot 4, 5 (Notable Power >= 150): Tier 2 Ghulam Recruit (50 Dinars)
-                            if (i >= 4 && notable.Power >= 150f && gulamRecruit != null)
-                            {
-                                notable.VolunteerTypes[i] = gulamRecruit;
-                            }
-                            else
-                            {
-                                notable.VolunteerTypes[i] = iktaPeasant;
-                            }
-                        }
-                        else if (settlement.IsTown || settlement.IsCastle)
-                        {
-                            // Town basic slots: Tier 1 Peasant or Tier 1 Azap (20 Dinars)
-                            if (i <= 2)
-                            {
-                                notable.VolunteerTypes[i] = (i % 2 == 0) ? iktaPeasant : (azapRecruit ?? iktaPeasant);
-                            }
-                            else if (i == 3)
-                            {
-                                notable.VolunteerTypes[i] = (ottomanScout ?? iktaPeasant);
-                            }
-                            else // High tier slots (Slot 4, 5) for prominent merchants / artisans
-                            {
-                                if (notable.IsArtisan && acemiJanissary != null)
-                                {
-                                    notable.VolunteerTypes[i] = acemiJanissary;
-                                }
-                                else if (gulamRecruit != null)
-                                {
-                                    notable.VolunteerTypes[i] = gulamRecruit;
-                                }
-                                else
-                                {
-                                    notable.VolunteerTypes[i] = iktaPeasant;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
     }
 }

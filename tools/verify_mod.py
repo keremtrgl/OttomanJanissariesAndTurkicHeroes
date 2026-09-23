@@ -103,8 +103,8 @@ Checks performed:
                             typo'd mesh id - which renders as missing/default geometry in-game, not a
                             load error - before a player screenshot has to catch it instead.
  17. dialogue-hero-ids     [needs game install] Every Hero.OneToOneConversationHero.StringId == "X"
-                            condition across Source/**/*.cs (how SeljukDialogueBehavior/
-                            RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior pick which
+                            (or IsRepeatTalkWith("X")) condition across Source/**/*.cs (how
+                            the lord and companion dialogue behaviors pick which
                             character a custom greeting belongs to) must reference a real Native or
                             mod-defined character id. A typo here has no error and no crash - the
                             condition is just always false, so that one character's custom line
@@ -1151,13 +1151,19 @@ def check_item_mesh_validity(issues, game_path):
 
 # --------------------------------------------------------------- check 17 --
 
-DIALOGUE_HERO_ID_PATTERN = re.compile(r'Hero\.OneToOneConversationHero\.StringId\s*==\s*"([a-zA-Z0-9_]+)"')
+# Both ways a greeting condition names its character: the lord behaviors' inline
+# `Hero.OneToOneConversationHero.StringId == "X"`, and CompanionPersonalityDialogueBehavior's
+# `IsRepeatTalkWith("X")` helper (which adds a HasMet gate on top). The second form used to be
+# invisible to this check, so all 25 companions' greeting ids were never validated.
+DIALOGUE_HERO_ID_PATTERN = re.compile(
+    r'(?:Hero\.OneToOneConversationHero\.StringId\s*==\s*|IsRepeatTalkWith\(\s*)"([a-zA-Z0-9_]+)"')
 
 
 def collect_dialogue_hero_id_references():
-    """{hero_id: [file_rel, ...]} for every Hero.OneToOneConversationHero.StringId == "X"
-    condition in Source/**/*.cs - this is how every custom lord/companion greeting in
-    SeljukDialogueBehavior/RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior decides
+    """{hero_id: [file_rel, ...]} for every Hero.OneToOneConversationHero.StringId == "X" (or
+    IsRepeatTalkWith("X")) condition in Source/**/*.cs - this is how every custom lord/companion
+    greeting in SeljukDialogueBehavior/RivalCultureDialogueBehavior/NewKingdomsDialogueBehavior/
+    CompanionPersonalityDialogueBehavior decides
     WHICH character a line belongs to. A typo'd id here has no error message and no crash:
     the condition is simply always false, so that one character silently never gets their
     custom line and always falls back to Native's generic greeting instead - the same
@@ -1185,7 +1191,7 @@ def check_dialogue_hero_ids(issues, game_path):
         if hero_id not in all_ids:
             shown = ", ".join(sorted(set(files)))
             issues.append(Issue("ERROR", "dialogue-hero-ids", shown,
-                                 f'Hero.OneToOneConversationHero.StringId == "{hero_id}" does not match any '
+                                 f'dialogue condition on character id "{hero_id}" does not match any '
                                  f"Native or mod-defined character id - this condition can never be true, so "
                                  f"the custom dialogue line(s) gated on it will silently never show (the "
                                  f"character just gets Native's generic greeting instead, with no error)."))

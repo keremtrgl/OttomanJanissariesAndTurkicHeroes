@@ -56,7 +56,7 @@ namespace SeljukEmpire.CharacterCreation
                 // (aserai/battania/empire/khuzait/sturgia/vlandia) to the culture-select stage - Culture.seljuk
                 // was never in that list, so it could never appear there no matter what is_main_culture is
                 // set to in seljuk_culture.xml. Add it explicitly here.
-                var seljukCulture = Game.Current?.ObjectManager?.GetObject<CultureObject>("seljuk");
+                var seljukCulture = Game.Current?.ObjectManager?.GetObject<CultureObject>(SeljukFactionUtility.SeljukCultureId);
                 if (seljukCulture != null)
                 {
                     characterCreationManager.CharacterCreationContent.AddCharacterCreationCulture(seljukCulture, 1, 10);
@@ -189,7 +189,7 @@ namespace SeljukEmpire.CharacterCreation
         {
             try
             {
-                return manager?.CharacterCreationContent?.SelectedCulture?.StringId == "seljuk";
+                return manager?.CharacterCreationContent?.SelectedCulture?.StringId == SeljukFactionUtility.SeljukCultureId;
             }
             catch (Exception)
             {

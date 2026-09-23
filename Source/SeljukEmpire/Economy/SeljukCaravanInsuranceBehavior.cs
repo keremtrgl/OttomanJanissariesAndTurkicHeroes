@@ -4,6 +4,7 @@ using SeljukEmpire;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.GameMenus;
+using TaleWorlds.CampaignSystem.MapEvents;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
@@ -20,10 +21,10 @@ namespace SeljukEmpire.Economy
     public class SeljukCaravanInsuranceBehavior : CampaignBehaviorBase
     {
         private const int INSURANCE_POLICY_COST = 1500;
-        private const int BASE_CARAVAN_COMPENSATION = 18500; // Average value of lost caravan cargo & troops
         private const int INVESTMENT_TIER_1 = 10000;
-        private const float CLAIM_COOLDOWN_DAYS = 7f;
-        private const int MIN_MEMBERS_FOR_CLAIM = 5; // Blocks farming near-empty throwaway caravans for the flat payout
+
+        /// <summary>A crew snapshot older than this no longer describes the fight that destroyed a caravan.</summary>
+        private const float CREW_SNAPSHOT_MAX_AGE_DAYS = 1f;
 
         // Save-game persistent fields
         private bool _isPlayerCaravanInsuranceActive;
@@ -37,6 +38,18 @@ namespace SeljukEmpire.Economy
         // party size, so a policy protects real trade losses instead of funding a farming loop.
         private CampaignTime _lastInsuranceClaimTime;
 
+        // Transient: each insured player caravan's crew when its most recent battle began - the
+        // crew actually at risk (see CaravanInsurancePolicy.IsClaimEligible's crewAtRisk). Not
+        // saved: a battle starts and resolves within one play session, and after a load the claim
+        // simply falls back to the live roster.
+        private readonly Dictionary<MobileParty, CrewSnapshot> _crewAtBattleStart = new Dictionary<MobileParty, CrewSnapshot>();
+
+        private struct CrewSnapshot
+        {
+            public int Crew;
+            public CampaignTime Time;
+        }
+
         public SeljukCaravanInsuranceBehavior()
         {
             _isPlayerCaravanInsuranceActive = false;
@@ -48,6 +61,7 @@ namespace SeljukEmpire.Economy
         public override void RegisterEvents()
         {
             CampaignEvents.MobilePartyDestroyed.AddNonSerializedListener(this, OnMobilePartyDestroyed);
+            CampaignEvents.MapEventStarted.AddNonSerializedListener(this, OnMapEventStarted);
             CampaignEvents.WeeklyTickEvent.AddNonSerializedListener(this, OnWeeklyTick);
             CampaignEvents.OnSessionLaunchedEvent.AddNonSerializedListener(this, OnSessionLaunched);
         }
@@ -70,35 +84,73 @@ namespace SeljukEmpire.Economy
             AddSeljukTradeMenus(starter);
         }
 
+        private void OnMapEventStarted(MapEvent mapEvent, PartyBase attackerParty, PartyBase defenderParty)
+        {
+            try
+            {
+                if (!_isPlayerCaravanInsuranceActive) return;
+
+                RecordCrewIfInsuredCaravan(attackerParty?.MobileParty);
+                RecordCrewIfInsuredCaravan(defenderParty?.MobileParty);
+            }
+            catch (Exception)
+            {
+                // Safety: bookkeeping only, never let it disturb a battle starting
+            }
+        }
+
+        private void RecordCrewIfInsuredCaravan(MobileParty party)
+        {
+            if (party == null || !IsPlayerCaravan(party)) return;
+
+            _crewAtBattleStart[party] = new CrewSnapshot
+            {
+                Crew = party.MemberRoster?.TotalManCount ?? 0,
+                Time = CampaignTime.Now
+            };
+        }
+
+        private static bool IsPlayerCaravan(MobileParty party)
+        {
+            return party.IsCaravan && party.Party?.Owner == Hero.MainHero;
+        }
+
         /// <summary>
-        /// Handles Caravan destruction. If insured, Sultanate treasury immediately reimburses the player.
+        /// Handles caravan destruction. If insured, the Sultanate treasury reimburses the player.
         /// </summary>
         private void OnMobilePartyDestroyed(MobileParty mobileParty, PartyBase destroyerParty)
         {
             try
             {
-                if (mobileParty == null || !_isPlayerCaravanInsuranceActive) return;
+                if (mobileParty == null) return;
 
-                // Check if destroyed party was a player-owned caravan
-                if (mobileParty.IsCaravan && mobileParty.Party?.Owner == Hero.MainHero)
+                int crewAtRisk = mobileParty.MemberRoster?.TotalManCount ?? 0;
+                if (_crewAtBattleStart.TryGetValue(mobileParty, out CrewSnapshot snapshot))
                 {
-                    bool onCooldown = CampaignTime.Now - _lastInsuranceClaimTime < CampaignTime.Days(CLAIM_COOLDOWN_DAYS);
-                    int memberCount = mobileParty.MemberRoster?.TotalManCount ?? 0;
-                    if (onCooldown || memberCount < MIN_MEMBERS_FOR_CLAIM)
+                    _crewAtBattleStart.Remove(mobileParty);
+                    if ((CampaignTime.Now - snapshot.Time).ToDays <= CREW_SNAPSHOT_MAX_AGE_DAYS)
                     {
-                        return;
+                        crewAtRisk = Math.Max(crewAtRisk, snapshot.Crew);
                     }
-
-                    int compensation = BASE_CARAVAN_COMPENSATION;
-                    GiveGoldToPlayer(compensation);
-                    _lastInsuranceClaimTime = CampaignTime.Now;
-
-                    InformationManager.DisplayMessage(new InformationMessage(
-                        new TextObject("{=seljuk_ins_claim_paid}🛡️ [Seljuk Caravan Insurance] Your caravan was struck! The Seljuk Imperial Treasury has covered your losses (+{AMOUNT} Dinars paid)!")
-                            .SetTextVariable("AMOUNT", compensation.ToString("N0"))
-                            .ToString(),
-                        Colors.Yellow));
                 }
+
+                bool eligible = CaravanInsurancePolicy.IsClaimEligible(
+                    policyActive: _isPlayerCaravanInsuranceActive,
+                    isPlayerOwnedCaravan: IsPlayerCaravan(mobileParty),
+                    wasDisbanding: mobileParty.IsDisbanding,
+                    daysSinceLastClaim: (CampaignTime.Now - _lastInsuranceClaimTime).ToDays,
+                    crewAtRisk: crewAtRisk);
+                if (!eligible) return;
+
+                int compensation = CaravanInsurancePolicy.CompensationAmount;
+                GiveGoldToPlayer(compensation);
+                _lastInsuranceClaimTime = CampaignTime.Now;
+
+                InformationManager.DisplayMessage(new InformationMessage(
+                    new TextObject("{=seljuk_ins_claim_paid}🛡️ [Seljuk Caravan Insurance] Your caravan was struck! The Seljuk Imperial Treasury has covered your losses (+{AMOUNT} Dinars paid)!")
+                        .SetTextVariable("AMOUNT", compensation.ToString("N0"))
+                        .ToString(),
+                    Colors.Yellow));
             }
             catch (Exception)
             {
@@ -111,6 +163,8 @@ namespace SeljukEmpire.Economy
         /// </summary>
         private void OnWeeklyTick()
         {
+            PruneStaleCrewSnapshots();
+
             try
             {
                 if (_totalSilkRoadInvestedGold <= 0 || _settlementInvestments == null || _settlementInvestments.Count == 0) return;
@@ -143,6 +197,30 @@ namespace SeljukEmpire.Economy
             catch (Exception)
             {
                 // Safety: never let a malformed investment record crash the weekly tick for everyone
+            }
+        }
+
+        /// <summary>
+        /// Drops snapshots of caravans that fought and survived (or were otherwise removed without
+        /// passing through OnMobilePartyDestroyed), so the dictionary never outgrows the player's
+        /// handful of caravans.
+        /// </summary>
+        private void PruneStaleCrewSnapshots()
+        {
+            if (_crewAtBattleStart.Count == 0) return;
+
+            var stale = new List<MobileParty>();
+            foreach (var entry in _crewAtBattleStart)
+            {
+                if (!entry.Key.IsActive || (CampaignTime.Now - entry.Value.Time).ToDays > CREW_SNAPSHOT_MAX_AGE_DAYS)
+                {
+                    stale.Add(entry.Key);
+                }
+            }
+
+            foreach (var party in stale)
+            {
+                _crewAtBattleStart.Remove(party);
             }
         }
 
@@ -228,10 +306,9 @@ namespace SeljukEmpire.Economy
                     {
                         GiveGoldAction.ApplyBetweenCharacters(Hero.MainHero, null, INVESTMENT_TIER_1, true);
                         _totalSilkRoadInvestedGold += INVESTMENT_TIER_1;
-                        
-                        if (!_settlementInvestments.ContainsKey(s.StringId))
-                            _settlementInvestments[s.StringId] = 0;
-                        _settlementInvestments[s.StringId] += INVESTMENT_TIER_1;
+
+                        _settlementInvestments.TryGetValue(s.StringId, out int alreadyInvested);
+                        _settlementInvestments[s.StringId] = alreadyInvested + INVESTMENT_TIER_1;
 
                         InformationManager.DisplayMessage(new InformationMessage(
                             new TextObject("{=seljuk_ins_invested}🪙 [Profit Partnership] 10,000 Dinars invested into {SETTLEMENT}'s caravanserai fund! You will receive regular weekly dividends.")
