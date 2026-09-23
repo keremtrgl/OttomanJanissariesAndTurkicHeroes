@@ -10,12 +10,8 @@ using SeljukEmpire.Settlements;
 using SeljukEmpire.Tactics;
 using SeljukEmpire.Tournaments;
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.Party;
-using TaleWorlds.CampaignSystem.Settlements;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
-using TaleWorlds.Localization;
 using TaleWorlds.MountAndBlade;
 
 namespace SeljukEmpire
@@ -27,16 +23,6 @@ namespace SeljukEmpire
     /// </summary>
     public class SeljukSubModule : MBSubModuleBase
     {
-        protected override void OnSubModuleLoad()
-        {
-            base.OnSubModuleLoad();
-        }
-
-        protected override void OnSubModuleUnloaded()
-        {
-            base.OnSubModuleUnloaded();
-        }
-
         protected override void InitializeGameStarter(Game game, IGameStarter starterObject)
         {
             base.InitializeGameStarter(game, starterObject);
@@ -118,9 +104,13 @@ namespace SeljukEmpire
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Mission initialization safety
+                // Same reasoning as TryRegister: this runs once per battle, before any engine-state
+                // edge case can exist, so a throw here is a code defect - and it silently removes
+                // the tactical AI and ragdoll budget from the whole battle. Report it.
+                InformationManager.DisplayMessage(new InformationMessage(
+                    $"[Seljuk Empire] Failed to set up battle behaviors: {ex.Message}", Colors.Red));
             }
         }
     }

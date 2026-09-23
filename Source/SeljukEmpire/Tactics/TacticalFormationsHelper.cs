@@ -44,8 +44,13 @@ namespace SeljukEmpire.Tactics
             if (Mission.Current?.Scene == null) return centerPos;
 
             Scene scene = Mission.Current.Scene;
-            Vec3 bestPos = centerPos;
-            float highestZ = centerPos.z;
+            // Baseline is the ground actually under centerPos, never the caller's z: a position
+            // built from a formation's Vec2 carries z = 0, and against a zero baseline every sample
+            // above sea level counted as "high ground" - so an army already standing on a hill got
+            // sent down to the highest of 8 lower points around it.
+            float groundZ = scene.GetTerrainHeight(centerPos.AsVec2);
+            Vec3 bestPos = new Vec3(centerPos.x, centerPos.y, groundZ);
+            float highestZ = groundZ;
 
             // Sample 8 radial terrain points in cardinal and diagonal directions (Zero-GC stack loop)
             float stepAngle = (float)(Math.PI / 4.0);

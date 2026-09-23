@@ -14,12 +14,12 @@ namespace SeljukEmpire.Benchmarks
     /// gathering Formation.QuerySystem data or issuing orders, which only exists inside a running
     /// mission.
     ///
-    /// Read alongside this: both TuranTacticMissionBehavior.OnMissionTick and
-    /// ByzantineTacticMissionBehavior.OnMissionTick gate the entire decision loop behind a
+    /// Read alongside this: DoctrineTacticMissionBehaviorBase.OnMissionTick (the phase engine both
+    /// culture behaviors share) gates the entire decision loop behind a
     /// _tickThrottleTimer.ElapsedSeconds > 1.25f check, so the assessor (and the QuerySystem reads
     /// that feed it) run at most ~0.8 times/second per team, not every frame - the same "throttle
-    /// the expensive path" philosophy BattlePerformanceOptimizer already uses (ragdoll budget,
-    /// LOD distance culling). The numbers below exist to confirm that even a
+    /// the expensive path" philosophy BattlePerformanceOptimizer uses for its ragdoll budget.
+    /// The numbers below exist to confirm that even a
     /// deliberately pessimistic per-call cost estimate, multiplied out at that throttled frequency
     /// and a generous formation count, stays a negligible fraction of a 60fps frame budget.
     /// </summary>
@@ -64,7 +64,7 @@ namespace SeljukEmpire.Benchmarks
             Console.WriteLine("Conclusion: the assessor's own decision logic is not a meaningful CPU cost at any");
             Console.WriteLine("plausible battle size. If a future battle-performance regression is ever reported");
             Console.WriteLine("against this mod, it is far more likely to be in Formation.QuerySystem access patterns");
-            Console.WriteLine("or order issuance inside TuranTacticMissionBehavior/ByzantineTacticMissionBehavior");
+            Console.WriteLine("or order issuance inside DoctrineTacticMissionBehaviorBase");
             Console.WriteLine("themselves (neither of which this benchmark can reach outside a running game) than in");
             Console.WriteLine("this file.");
         }
