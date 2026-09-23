@@ -1,29 +1,40 @@
 using System;
 using TaleWorlds.Core;
-using TaleWorlds.Engine;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
 namespace SeljukEmpire.Optimization
 {
     /// <summary>
-    /// Master Battlefield Performance & Frametime Optimizer.
-    /// Combines a dynamic ragdoll sleep manager and distance-based LOD AI scheduling.
-    /// Guarantees smooth frametimes and prevents CPU spikes in 500+ unit battles.
+    /// Battlefield frametime helper: keeps the number of simultaneously simulated corpse ragdolls
+    /// bounded in large battles (see <see cref="RagdollPhysicsBudgetManager"/>).
     /// </summary>
+    /// <remarks>
+    /// This class used to also run a "distance-based LOD" pass that called
+    /// Formation.ResetArrangementOrderTickTimer() every 0.4s on every formation more than 140m
+    /// from the player. That call restarts the engine's periodic arrangement-order countdown rather
+    /// than skipping a tick of it, so restarting it more often than it fires never throttled
+    /// anything: at best it did nothing, at worst it stopped those formations' arrangement upkeep
+    /// from ever running while they stayed out of the player's sight - which in a large battle is
+    /// most formations on the field, including every AI-vs-AI clash. The per-formation work it
+    /// was meant to save is negligible next to per-agent AI and physics, so it was removed rather
+    /// than kept on an unverifiable timing assumption.
+    /// </remarks>
     public class BattlePerformanceOptimizer : MissionBehavior
     {
+        private const int RagdollUpdateFrameInterval = 4;
+
         public override MissionBehaviorType BehaviorType => MissionBehaviorType.Other;
 
-        private RagdollPhysicsBudgetManager _ragdollManager;
-        private MissionTime _lodTickTimer;
+        // Created eagerly (not in AfterStart) so an agent removed before AfterStart - or a mission
+        // that never reaches it - can't make OnAgentRemoved, which has no catch of its own, throw a
+        // NullReferenceException straight into the engine's mission loop.
+        private readonly RagdollPhysicsBudgetManager _ragdollManager = new RagdollPhysicsBudgetManager();
         private int _frameCounter;
 
         public override void AfterStart()
         {
             base.AfterStart();
-            _ragdollManager = new RagdollPhysicsBudgetManager();
-            _lodTickTimer = MissionTime.Now;
+            _ragdollManager.Clear();
             _frameCounter = 0;
         }
 
@@ -45,53 +56,14 @@ namespace SeljukEmpire.Optimization
             {
                 if (Mission.Current == null || Mission.Current.Mode != MissionMode.Battle) return;
 
-                _frameCounter++;
-
-                // 1. Update ragdoll settle checks every few frames
-                if (_frameCounter % 4 == 0)
+                if (++_frameCounter % RagdollUpdateFrameInterval == 0)
                 {
-                    _ragdollManager.Update(dt);
-                }
-
-                // 2. Staggered Distance-Based AI Culling for distant formations
-                if (_lodTickTimer.ElapsedSeconds > 0.40f)
-                {
-                    OptimizeDistantFormations();
-                    _lodTickTimer = MissionTime.Now;
+                    _ragdollManager.Update();
                 }
             }
             catch (Exception)
             {
                 // Engine safety catch
-            }
-        }
-
-        /// <summary>
-        /// Optimizes AI tick frequencies based on distance from the player camera.
-        /// </summary>
-        private void OptimizeDistantFormations()
-        {
-            Agent mainAgent = Mission.Current?.MainAgent;
-            Vec3 cameraPos = mainAgent != null && mainAgent.IsActive() ? mainAgent.Position : (Mission.Current?.Scene?.LastFinalRenderCameraPosition ?? Vec3.Zero);
-
-            if (cameraPos == Vec3.Zero || Mission.Current?.Teams == null) return;
-
-            float farDistSq = 140f * 140f; // 140 meters threshold
-
-            foreach (var team in Mission.Current.Teams)
-            {
-                foreach (var formation in team.FormationsIncludingEmpty)
-                {
-                    if (formation.CountOfUnits <= 0) continue;
-
-                    float distToCameraSq = formation.OrderPosition.ToVec3().DistanceSquared(cameraPos);
-
-                    // For formations further than 140m away, optimize query update frequency
-                    if (distToCameraSq > farDistSq)
-                    {
-                        formation.ResetArrangementOrderTickTimer();
-                    }
-                }
             }
         }
 
@@ -101,20 +73,20 @@ namespace SeljukEmpire.Optimization
 
             if (Mission.Current?.Mode != MissionMode.Battle)
             {
-                _ragdollManager?.Clear();
+                _ragdollManager.Clear();
             }
         }
 
         public override void OnMissionStateFinalized()
         {
             base.OnMissionStateFinalized();
-            _ragdollManager?.Clear();
+            _ragdollManager.Clear();
         }
 
         public override void OnClearScene()
         {
             base.OnClearScene();
-            _ragdollManager?.Clear();
+            _ragdollManager.Clear();
         }
     }
 }
