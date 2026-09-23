@@ -2,9 +2,10 @@
 """
 run_all_checks.py - Single entry point for this mod's two independent test/check systems.
 
-Source/SeljukEmpire.Tests/ (xUnit, 43 tests as of v1.8.1) verifies the REACTIVE TACTICAL AI's
-own decision logic (TacticalSituationAssessor - deliberately engine-independent, zero
-TaleWorlds.* references, so it runs without the game installed). tools/verify_mod.py verifies
+Source/SeljukEmpire.Tests/ (xUnit) verifies the mod's engine-independent decision logic - the
+reactive tactical AI (TacticalSituationAssessor), volunteer-slot recruitment rules, caravan
+insurance claim rules and greeting rotation - all deliberately free of TaleWorlds.* references,
+so they run without the game installed. tools/verify_mod.py verifies
 everything else (XML validity, id collisions, localization coverage, save-compatible id
 ordering, troop/item balance signals, etc.). Until now these had to be run and read
 separately, with no single "is the mod actually clean" answer - this wraps both under one
@@ -43,7 +44,7 @@ sys.stdout.reconfigure(line_buffering=True)
 
 def run_dotnet_test():
     print("=" * 70)
-    print("dotnet test - Source/SeljukEmpire.Tests (reactive tactical AI logic)")
+    print("dotnet test - Source/SeljukEmpire.Tests (engine-independent mod logic)")
     print("=" * 70)
 
     dotnet = shutil.which("dotnet")

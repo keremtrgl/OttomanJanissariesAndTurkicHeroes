@@ -29,7 +29,22 @@ The repository also includes the mod's C# source (`Source/SeljukEmpire`) for any
 dotnet build Source/SeljukEmpire/SeljukTactics.csproj -c Release
 ```
 
-This requires the game to be installed locally, since the project references Bannerlord's managed assemblies from the game's `bin/Win64_Shipping_Client` folder.
+The build writes `bin/Win64_Shipping_Client/SeljukTactics.dll` and mirrors it into
+`bin/Win64_Shipping_wEditor/`. It finds Bannerlord's engine assemblies like this:
+
+1. **Game installed in the default Steam location** – used automatically.
+2. **Game installed elsewhere** – point the build at it:
+   `dotnet build ... -p:BannerlordGameFolder="D:\Games\Mount & Blade II Bannerlord"`
+   (or set a `BannerlordGameFolder` / `BannerlordBinPath` environment variable).
+3. **No game install at all** (Linux, macOS, CI) – the build falls back to the public
+   [`Bannerlord.ReferenceAssemblies.Core`](https://www.nuget.org/packages/Bannerlord.ReferenceAssemblies.Core)
+   NuGet package. Its default version is pinned in the `.csproj`; override it with
+   `-p:BannerlordReferenceAssembliesVersion=<version>` to match your game version.
+
+A reference-assembly build is not a lesser build. TaleWorlds assemblies are all versioned
+1.0.0.0 and bound by name, so a DLL compiled against the matching version's reference assemblies
+has exactly the same external member references as one compiled against the game's own DLLs.
+This was checked by diffing both builds' metadata tables.
 
 ## Verifying content changes
 
@@ -41,8 +56,9 @@ python tools/run_all_checks.py
 
 This is the single entry point for both of the mod's independent check systems: `tools/
 verify_mod.py` (content integrity — see below) and `dotnet test` on `Source/
-SeljukEmpire.Tests/` (the reactive tactical AI's own decision-logic unit tests — 43 as of
-v1.8.1, covering `TacticalSituationAssessor`). Either suite is skipped gracefully (not failed)
+SeljukEmpire.Tests/` (unit tests for the mod's engine-independent logic: the reactive tactical
+AI's `TacticalSituationAssessor`, the volunteer-slot recruitment rules, the caravan-insurance
+claim rules and the greeting rotation). Either suite is skipped gracefully (not failed)
 if its tool isn't available on the machine (`dotnet`, or no local Bannerlord install for
 verify_mod.py's game-dependent checks). Any flag `run_all_checks.py` doesn't recognize itself
 (`--game-path`, `--quick`, `--json`, `--check-workshop-conflicts`, `--update-baseline`) is
@@ -60,6 +76,13 @@ and troop upgrade target actually exists, that renamed Native characters keep a 
 gender flag, and several other checks documented in its own module docstring. Run with
 `--quick` to skip the game-install-dependent checks, or `--json` for machine-readable output.
 Every one of these checks has caught a real bug during this mod's development at least once.
+
+### Continuous integration
+
+`.github/workflows/ci.yml` runs on every push and pull request. It builds the mod DLL against
+the oldest and newest supported game versions' reference assemblies, into a scratch folder so
+the committed `bin/` is never touched. It then runs `tools/run_all_checks.py --quick`, which is
+the unit tests plus every `verify_mod.py` check that doesn't need a local game install.
 
 ### Automatic pre-commit check
 
@@ -127,7 +150,7 @@ dotnet run -c Release --project Source/SeljukEmpire.Benchmarks
 
 It measures nanoseconds-per-call for each stance-assessment method and reports that cost
 against the actual call frequency: both tactical mission behaviors gate their entire decision
-loop behind a 1.25-second throttle timer (`_tickThrottleTimer` in each `OnMissionTick`), the
+loop behind a 1.25-second throttle timer (`_tickThrottleTimer` in the shared `DoctrineTacticMissionBehaviorBase.OnMissionTick`), the
 same "don't do the expensive thing every frame" approach `BattlePerformanceOptimizer` already
 uses elsewhere. This can't measure the engine-side cost of reading `Formation.QuerySystem` or
 issuing orders (that only exists inside a running mission), but it does confirm the assessor's
@@ -139,11 +162,13 @@ allocation it doesn't have today; that's the kind of change this benchmark exist
 
 - `ModuleData/` — troops, heroes, kingdoms, factions, settlements, items, localization, etc.
 - `Source/SeljukEmpire/` — the mod's C# gameplay behaviors.
-- `Source/SeljukEmpire.Tests/` — xUnit unit tests for the reactive tactical AI's decision logic
-  (`TacticalSituationAssessor`); builds and runs without the game installed.
+- `Source/SeljukEmpire.Tests/` — xUnit unit tests for the mod's engine-independent logic
+  (tactical AI decisions, recruitment slot rules, insurance claim rules, greeting rotation);
+  builds and runs without the game installed.
 - `Source/SeljukEmpire.Benchmarks/` — microbenchmark for the same decision logic's raw CPU cost
   (see "Reactive tactical AI performance" below); also builds and runs without the game.
 - `tools/` — `run_all_checks.py` (single entry point for both check systems), `verify_mod.py`
   (the content integrity checker), and `install-hooks.sh`/`.ps1` (see above).
 - `.githooks/` — the tracked `pre-commit` hook that `install-hooks.sh`/`.ps1` wires up.
+- `.github/workflows/` — CI (see "Continuous integration" above).
 - `bin/` — prebuilt `SeljukTactics.dll` (already included, so building from source is optional for players).

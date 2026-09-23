@@ -8,3 +8,4 @@ Source/SeljukEmpire.Benchmarks/obj/
 *.suo
 .worktrees/
 .superpowers/
+__pycache__/
