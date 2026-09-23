@@ -19,7 +19,7 @@ detaylandırmaktadır. **Güncel sürüm: v1.9.0.**
 
 ```mermaid
 graph TD
-    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(24 C# Kaynak Dosyası)"]
+    SM["SubModule.xml<br/>(Master Manifest, 56 XmlNode)"] --> CSHARP["SeljukTactics.dll<br/>(30 C# Kaynak Dosyası)"]
     SM --> XML_CC["seljuk_character_creation_equipment.xml<br/>+ seljuk_education_*<br/>(Selçuklu 5 Aşamalı Özgeçmiş)"]
     SM --> XML_F["factions.xml + kingdoms.xml<br/>(8 Krallık: Selçuklu + 7 Rakip)"]
     SM --> XML_S["8 x *_settlements.xml<br/>(390 Şehir/Kale/Köy Yeniden Adlandırması)"]
@@ -32,17 +32,18 @@ graph TD
     SM --> XML_I["items.xml<br/>(27 Eşya: 20 Selçuklu Yadigarı<br/>+ 7 Rakip Turnuva Şampiyonu Ödülü — v1.8.2)"]
     SM --> XML_B["banner_icons.xml<br/>(13 Selçuklu Tamgası — 11'i artık her klanın/Kingdom'ın/<br/>Culture'ın gerçek banner_key'inde, v1.8.3)"]
     SM --> XML_LANG["Languages/<br/>(EN/TR/DE/FR/ES/RU/AR/CN/IT/PL/PT — 11 Dil Tam Senkron)"]
-    SM -.denetler.-> VERIFY["tools/run_all_checks.py<br/>(verify_mod.py'nin 19 kontrolü + dotnet test'in<br/>43 taktik AI testi, tek komut, v1.8.4)"]
+    SM -.denetler.-> VERIFY["tools/run_all_checks.py<br/>(verify_mod.py'nin 19 kontrolü + dotnet test'in<br/>86 birim testi, tek komut; GitHub Actions CI)"]
 
-    CSHARP --> TACTIC_AI["TuranTacticMissionBehavior<br/>(4 Doktrinli Selçuklu Taktik FSM,<br/>artık reaktif faz yürütme)"]
-    CSHARP --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans Tagma Taktik FSM,<br/>artık reaktif faz yürütme)"]
+    CSHARP --> TACTIC_BASE["DoctrineTacticMissionBehaviorBase<br/>(Ortak Faz Motoru — sadece AI kontrollü<br/>formasyonlara emir verir, oyuncununkilere asla)"]
+    TACTIC_BASE --> TACTIC_AI["TuranTacticMissionBehavior<br/>(Selçuklu doktrin adları/mesajları)"]
+    TACTIC_BASE --> TACTIC_BYZ["ByzantineTacticMissionBehavior<br/>(Bizans doktrin adları/mesajları)"]
     CSHARP --> TACTIC_ASSESS["TacticalSituationAssessor<br/>(Motordan Bağımsız Paylaşılan Karar Katmanı<br/>— 43 Birim Testi, v1.7.9-v1.8.1)"]
     CSHARP --> TACTIC_MATH["TacticalFormationsHelper<br/>(Sıfır-GC Tepe & Sınır Güvenliği<br/>+ Native Eğim Araması Tercihi — v1.8.1)"]
-    CSHARP --> PERF_OPT["BattlePerformanceOptimizer<br/>+ RagdollPhysicsBudgetManager<br/>(FPS & Frametime Dengeleyici — tarla savaşları VE kuşatmalar)"]
+    CSHARP --> PERF_OPT["BattlePerformanceOptimizer<br/>+ RagdollPhysicsBudgetManager<br/>(Ragdoll Bütçesi — tarla savaşları VE kuşatmalar)"]
     CSHARP --> ECON_INS["SeljukCaravanInsuranceBehavior<br/>(Devlet Sigortası & İpek Yolu Fonu)"]
     CSHARP --> ADMIN["SeljukAtabegTitleBehavior<br/>(Atabeglik XP — sadece Selçuklu yerleşimi yöneten valilere)"]
     CSHARP --> SETTLE["SeljukSettlementBehavior<br/>(Selçuklu mülkiyet/sahiplik runtime yönetimi)"]
-    CSHARP --> RECRUIT["SeljukRecruitmentBehavior<br/>+ LatinEmpireRecruitmentBehavior<br/>(Culture.empire paylaşımı sorunu için özel askere alma mantığı)"]
+    CSHARP --> RECRUIT["KingdomVolunteerRecruitmentBehaviorBase<br/>→ SeljukRecruitmentBehavior + LatinEmpireRecruitmentBehavior<br/>(kurallar: motordan bağımsız VolunteerSlotPolicy)"]
     CSHARP --> TAVERN["SeljukTavernBehavior<br/>(Ozan/moral sistemi)"]
     CSHARP --> DIALOG["SeljukDialogueBehavior + RivalCultureDialogueBehavior<br/>+ NewKingdomsDialogueBehavior<br/>(47+ tarihi lorda özel diyalog, v1.8.4'te tüm Bizans<br/>Kuzey+Güney rosterı tamamlandı — v1.8.2'de<br/>117 satırın yanlış diyalog durumu düzeltildi)"]
     CSHARP --> EXPLAIN["SeljukSystemsExplainerBehavior<br/>(Yeni oyuncu için sistem tanıtımı)"]
@@ -77,12 +78,17 @@ graph LR
     subgraph "1. Ragdoll Fizik Bütçe Yöneticisi"
         R1["500+ Asker Çarpışması"] --> R2["Aynı Anda Max 32 Aktif Ragdoll<br/>(32'yi Aşınca En Eski Ceset Anında Dondurulur)"]
         R2 --> R3["3.5 sn'den Eski Cesetler Uykuya Alınır<br/>(Her 4. Karede En Fazla 4 Ceset Denetlenir)"]
+        R2 -.-> R4["Bütçe Aşılsa Bile 1.5 sn'den Genç<br/>Ceset Dondurulmaz (Düşerken Donma Önlenir)"]
     end
 
-    subgraph "2. Mesafe Tabanlı Formasyon Kademelendirme (LOD)"
-        L1["Kameradan >140m Uzaktaki Formasyonlar<br/>(0.40 sn'de Bir Denetlenir)"] --> L2["ResetArrangementOrderTickTimer() Çağrılır<br/>(Uzak Formasyonun Düzen Güncellemesi Ertelenir)"]
-    end
 ```
+
+Düzeltme (yayınlanmamış): "Mesafe Tabanlı Formasyon Kademelendirme (LOD)" alt sistemi kaldırıldı. Oyuncuya
+140 m'den uzak her formasyonda 0.40 sn'de bir `ResetArrangementOrderTickTimer()` çağırıyordu. Bu çağrı motorun
+periyodik düzen güncelleme geri sayımını *yeniden başlatır*, bir turu atlamaz. Geri sayımdan daha sık yeniden
+başlatılınca en iyi ihtimalle hiçbir şey kısmıyor, en kötü ihtimalle uzak formasyonların düzen güncellemesini
+hiç çalıştırmıyordu. Büyük savaşta bu, sahanın çoğu demekti. Kazancı ihmal edilebilir olduğu için doğrulanamayan
+bir zamanlama varsayımına dayanarak tutulmadı.
 
 Düzeltme (v1.9.0): bu bölümde önceden 35 m'lik bir "2D Spatial Hash Grid" alt sistemi (O(1) en yakın düşman
 tespiti, "işlemci yükü -%85") anlatılıyordu. `BattlePerformanceOptimizer`/`RagdollPhysicsBudgetManager` kaynağında
@@ -713,6 +719,22 @@ graph LR
   engelliyordu (208e416). `verify_mod.py`'nin dil-senkron kontrolü artık IT/PL/PT'yi de izliyor; 75
   yeni companion anahtarı DE/FR/ES/RU/AR/CN'de henüz çevrilmedi (WARN). Selçuklu Ansiklopedi metni
   (`seljuk_culture_desc`) zenginleştirildi; check 18'in docstring'i düzeltildi.
+
+- **Yayınlanmamış (kod kalitesi + hata düzeltme turu):** `TuranTacticMissionBehavior`/`ByzantineTacticMissionBehavior`
+  ~780'er satırlık birbirinin kopyasıydı. Ortak `DoctrineTacticMissionBehaviorBase`'e taşındılar; alt sınıflar
+  sadece kültür/krallık id'si, süvari doktrini koşulu ve mesaj metinlerini veriyor. Bulunan hatalar: (1) oyuncu
+  kendi ordusunu komuta ederken emirleri 1.25 sn'de bir eziliyordu, artık yalnızca `Formation.IsAIControlled`
+  formasyonlara emir veriliyor; oyuncu kontrolündeki süvari de fazı sonsuza dek kilitliyordu. (2) Takım
+  merkezi, ağırlıksız *emir* konumlarından z=0 ile hesaplanıyordu. Bu yüzden `FindOptimalHighGround` deniz
+  seviyesini taban alıp tepedeki orduyu aşağı gönderebiliyordu; artık birim ağırlıklı gerçek konum ve arazi
+  yüksekliği kullanılıyor. (3) Aynı emirler her turda yeniden veriliyordu, artık yalnızca değişince
+  veriliyor. (4) Süvari hep sol kanada gidiyordu, artık yakın kanadı seçip kilitliyor. Askere almada boş gönüllü
+  yuvaları her gün ve her girişte dolduruluyordu (sonsuz asker istismarı). Kervan sigortası kadroyu yenilgiden
+  sonra ölçtüğü için gerçek kayıpları reddedebiliyordu; artık `MapEventStarted` anındaki kadro kullanılıyor.
+  `verify_mod.py` check 17 artık `IsRepeatTalkWith("X")` yoldaş id'lerini de doğruluyor. Proje oyun kurulu
+  olmadan derleniyor (`Bannerlord.ReferenceAssemblies.Core`, `PackageDownload` ile). Her iki derlemenin
+  MemberRef/TypeRef tabloları karşılaştırılarak gönderilen DLL ile birebir aynı dış API yüzeyi doğrulandı.
+  GitHub Actions CI eklendi; test sayısı 43'ten 86'ya çıktı.
 
 Tüm kritik motor bulguları ve gelecekteki oturumlar için not edilen tuzaklar için proje hafızasına
 bakınız (`project_ottoman_janissaries_mod.md`).
