@@ -7,6 +7,40 @@ contributors.
 
 [ TÜRKÇE ] için aşağı kaydırın.
 
+## Unreleased
+
+- **The tactical AI no longer overrides your own commands.** When you personally lead a Seljuk or
+  Byzantine army, the doctrine AI used to re-issue its own orders over yours every 1.25 seconds
+  for the first minute or more of the battle. It now only commands formations the game itself
+  has under AI control. You can still hand your army to it with the game's own "delegate
+  command" option. AI-led armies are unaffected.
+- **Smarter battlefield positioning.** Shock cavalry now stages on whichever flank is closer
+  instead of always riding across the enemy's front to the left wing. The army no longer walks
+  *down* off a hill looking for "high ground": the old height check compared against sea level
+  instead of the ground under the army. Formations also stop re-pathing every 1.25 seconds to the
+  spot they were already heading for.
+- **Recruitment fix:** Seljuk and Latin Empire notables no longer refill every emptied volunteer
+  slot each day and on every visit. You could previously empty a town, leave, come back and
+  recruit the whole roster again, and AI lords in those lands got a full roster every day.
+  Volunteers now come back at the game's normal pace. Foreign troops are still swapped for the
+  kingdom's own.
+- **Caravan insurance now pays out for real battle losses.** The payout checked the caravan's
+  crew *after* the defeat that had already killed or captured it, so genuine losses could be
+  rejected as "too small". The crew is now counted when the fatal battle begins. Disbanding a
+  caravan no longer counts as a loss.
+- Seljuk granaries (Atabeg system) no longer push food stocks past a settlement's storage limit.
+- Removed a battle "optimization" that kept restarting the arrangement-update timer of every
+  formation more than 140 m from the player. That could stop those updates from ever running,
+  and in large battles it covered most of the field.
+- The corpse physics budget no longer freezes a body in its first 1.5 seconds. When many
+  soldiers died at once it could previously freeze bodies mid-fall.
+- The architecture wiki's interactive map: fixed search for Turkish names typed without Turkish
+  letters ("danismend" now finds Danişmendliler), and fixed text such as `<Culture>` that
+  disappeared from node details.
+- For contributors: the mod now builds without a game install (e.g. on Linux or in CI) and
+  GitHub Actions CI checks every push. The unit tests went from 43 to 86, and the two tactical
+  AI classes now share one engine instead of two ~780-line copies.
+
 ## v1.9.0 — 2026-09-22
 
 - **Three new languages: Italian, Polish, and Brazilian Portuguese.** All ~1,900 of the mod's strings —
@@ -94,6 +128,41 @@ contributors.
 ---
 
 ## [ TÜRKÇE ]
+
+## Yayınlanmamış
+
+- **Taktik yapay zekâ artık sizin emirlerinizi ezmiyor.** Bir Selçuklu ya da Bizans ordusunu
+  bizzat komuta ettiğinizde, doktrin yapay zekâsı savaşın ilk bir dakikasından uzun süre boyunca
+  her 1,25 saniyede bir sizin emirlerinizin üzerine kendi emirlerini veriyordu. Artık yalnızca
+  oyunun kendisinin yapay zekâ denetimine verdiği formasyonlara emir veriyor. Ordunuzu yine de
+  oyunun kendi "komutayı devret" seçeneğiyle ona bırakabilirsiniz. Yapay zekâ komutanlı ordular
+  bundan etkilenmez.
+- **Daha akıllı savaş alanı konumlanması.** Ağır süvari artık düşman cephesinin önünden geçip
+  hep sol kanada gitmek yerine hangi kanat daha yakınsa orada mevzileniyor. Ordu artık "yüksek
+  tepe" ararken tepeden *aşağı* inmiyor: eski yükseklik kontrolü, ordunun durduğu zemini değil
+  deniz seviyesini esas alıyordu. Formasyonlar da zaten gittikleri noktaya her 1,25 saniyede bir
+  yeniden rota çizmeyi bıraktı.
+- **Askere alma düzeltmesi:** Selçuklu ve Latin İmparatorluğu eşrafı, boşalan gönüllü
+  yuvalarını artık her gün ve her ziyarette yeniden doldurmuyor. Önceden bir şehri boşaltıp
+  çıkar, geri girer ve bütün listeyi yeniden toplayabilirdiniz; o topraklardaki yapay zekâ
+  lordları da her gün tam liste buluyordu. Gönüllüler artık oyunun normal hızında geliyor.
+  Yabancı birlikler yine krallığın kendi birlikleriyle değiştiriliyor.
+- **Kervan sigortası artık gerçek savaş kayıplarını ödüyor.** Ödeme, kervanın mürettebatını onu
+  zaten öldürmüş ya da esir almış yenilgiden *sonra* sayıyordu; bu yüzden gerçek kayıplar
+  "çok küçük" diye reddedilebiliyordu. Mürettebat artık ölümcül savaş başlarken sayılıyor.
+  Dağıtılan bir kervan artık kayıp sayılmıyor.
+- Selçuklu tahıl ambarları (Atabeglik sistemi) artık yerleşkenin depo sınırını aşmıyor.
+- Oyuncuya 140 m'den uzak her formasyonun düzen güncelleme zamanlayıcısını sürekli yeniden
+  başlatan bir savaş "optimizasyonu" kaldırıldı. Bu, o güncellemelerin hiç çalışmamasına yol
+  açabiliyordu ve büyük savaşlarda sahanın çoğunu kapsıyordu.
+- Ceset fizik bütçesi artık bir cesedi ilk 1,5 saniyesinde dondurmuyor. Önceden çok sayıda asker
+  aynı anda öldüğünde cesetleri düşerken dondurabiliyordu.
+- Mimari vikinin etkileşimli haritası: Türkçe harf kullanmadan yazılan Türkçe isimlerin aranması
+  düzeltildi ("danismend" artık Danişmendliler'i buluyor). Düğüm ayrıntılarında kaybolan
+  `<Culture>` gibi metinler de düzeltildi.
+- Katkıcılar için: mod artık oyun kurulu olmadan da derleniyor (ör. Linux'ta veya CI'da) ve her
+  push GitHub Actions CI ile denetleniyor. Birim testleri 43'ten 86'ya çıktı; iki taktik yapay
+  zekâ sınıfı artık ~780 satırlık iki kopya yerine tek bir ortak motoru paylaşıyor.
 
 ## v1.9.0 — 2026-09-22
 
