@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build mod DLL (Bannerlord ${{ matrix.bannerlord }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Oldest and newest game versions the mod is known to compile against. The build uses the
+        # public Bannerlord.ReferenceAssemblies package (see SeljukTactics.csproj), so no game
+        # install is needed; output goes to a scratch folder so the committed bin/ is untouched.
+        bannerlord: ['1.4.5.115026', '1.4.8.119303']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build SeljukTactics.dll
+        run: >
+          dotnet build Source/SeljukEmpire/SeljukTactics.csproj -c Release
+          -p:BannerlordReferenceAssembliesVersion=${{ matrix.bannerlord }}
+          -p:OutputPath=${{ runner.temp }}/SeljukTactics/
+          -p:SeljukMirrorToEditorBin=false
+
+  checks:
+    name: Unit tests + content checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # Same single entry point as the pre-commit hook. --quick skips only the verify_mod.py
+      # checks that need a local Bannerlord install, which a CI runner doesn't have.
+      - name: run_all_checks.py
+        run: python tools/run_all_checks.py --quick

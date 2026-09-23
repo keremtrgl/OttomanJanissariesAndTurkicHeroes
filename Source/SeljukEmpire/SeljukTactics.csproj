@@ -5,15 +5,48 @@
     <AssemblyName>SeljukTactics</AssemblyName>
     <RootNamespace>SeljukEmpire</RootNamespace>
     <LangVersion>8.0</LangVersion>
-    <BannerlordBinPath>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client</BannerlordBinPath>
     <OutputPath>..\..\bin\Win64_Shipping_Client\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
 
-  <!-- Auto-deploy to Win64_Shipping_wEditor for Bannerlord Modding Kit / Editor Support -->
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y /I &quot;$(TargetDir)*.*&quot; &quot;$(ProjectDir)..\..\bin\Win64_Shipping_wEditor\&quot;" />
-  </Target>
+  <!--
+    Where the TaleWorlds.* engine assemblies come from. Resolution order:
+
+      1. An explicit BannerlordBinPath (-p:BannerlordBinPath=... or an environment variable of the
+         same name) - point it at your game's bin\Win64_Shipping_Client folder.
+      2. BannerlordGameFolder (same override mechanisms) + \bin\Win64_Shipping_Client, defaulting
+         to the standard Steam install location.
+      3. If neither resolves to a folder that actually contains TaleWorlds.Core.dll, the public
+         Bannerlord.ReferenceAssemblies.Core NuGet package (metadata-only reference assemblies
+         published by the BUTR modding community) is used instead, so the mod still builds on a
+         machine or CI runner with no game install at all.
+
+    The reference-assembly build is not a lesser build: TaleWorlds assemblies are all versioned
+    1.0.0.0 and bound by name, so a DLL compiled against the matching game version's reference
+    assemblies has exactly the same external member references as one compiled against the real
+    game DLLs (verified for this project by diffing both builds' MemberRef/TypeRef tables).
+    Override BannerlordReferenceAssembliesVersion to target a different game version.
+  -->
+  <PropertyGroup>
+    <BannerlordGameFolder Condition="'$(BannerlordGameFolder)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</BannerlordGameFolder>
+    <BannerlordBinPath Condition="'$(BannerlordBinPath)' == ''">$(BannerlordGameFolder)\bin\Win64_Shipping_Client</BannerlordBinPath>
+    <UseBannerlordReferenceAssemblies Condition="'$(UseBannerlordReferenceAssemblies)' == '' And !Exists('$(BannerlordBinPath)\TaleWorlds.Core.dll')">true</UseBannerlordReferenceAssemblies>
+    <BannerlordReferenceAssembliesVersion Condition="'$(BannerlordReferenceAssembliesVersion)' == ''">1.4.8.119303</BannerlordReferenceAssembliesVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(UseBannerlordReferenceAssemblies)' == 'true'">
+    <!-- PackageDownload, not PackageReference: the package is only fetched into the NuGet cache
+         and never becomes a dependency of this project, so (a) only the 8 assemblies explicitly
+         listed below are referenced, exactly like the game-install build - code can never start
+         depending on an engine assembly a game-install build wouldn't also reference - and (b)
+         the shipped SeljukTactics.deps.json stays byte-identical to a game-install build's. -->
+    <PackageDownload Include="Bannerlord.ReferenceAssemblies.Core" Version="[$(BannerlordReferenceAssembliesVersion)]" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(UseBannerlordReferenceAssemblies)' == 'true'">
+    <BannerlordBinPath>$(NuGetPackageRoot)bannerlord.referenceassemblies.core\$(BannerlordReferenceAssembliesVersion)\ref\netstandard2.0</BannerlordBinPath>
+  </PropertyGroup>
 
   <!-- Bannerlord Engine Assembly References -->
   <ItemGroup>
@@ -50,5 +83,17 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+
+  <!-- Mirror the build output into Win64_Shipping_wEditor for Bannerlord Modding Kit / Editor
+       support. An MSBuild Copy task instead of the previous `xcopy` Exec, so the build also works
+       on Linux/macOS (and CI) - xcopy only exists on Windows. -->
+  <!-- Pass -p:SeljukMirrorToEditorBin=false to skip this (CI builds into a scratch OutputPath
+       and must not touch the committed bin\ folders). -->
+  <Target Name="MirrorToEditorBin" AfterTargets="Build" Condition="'$(SeljukMirrorToEditorBin)' != 'false'">
+    <ItemGroup>
+      <_SeljukEditorBinFiles Include="$(TargetDir)*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_SeljukEditorBinFiles)" DestinationFolder="$(MSBuildProjectDirectory)\..\..\bin\Win64_Shipping_wEditor\" SkipUnchangedFiles="true" />
+  </Target>
 
 </Project>
